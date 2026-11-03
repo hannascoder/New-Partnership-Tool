@@ -1,0 +1,11 @@
+# ============================================================================
+# Classification rules (briefing K4). Empty for now: filled in step 4.
+#
+# Each rule says: IF an outlet has this property, THEN add these values.
+# Only ids from categories.yaml are allowed. Example (not active):
+#
+#   - if: { member_of: covering-climate-now }
+#     add: { topics: [climate] }
+#     method: membership
+# ============================================================================
+rules: []

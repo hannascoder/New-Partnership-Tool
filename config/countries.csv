@@ -1,0 +1,196 @@
+iso3,iso2,m49,name,aliases,status,region,subregion,intermediate_region
+AFG,AF,004,Afghanistan,,member,Asia,Southern Asia,
+ALB,AL,008,Albania,,member,Europe,Southern Europe,
+DZA,DZ,012,Algeria,,member,Africa,Northern Africa,
+AND,AD,020,Andorra,,member,Europe,Southern Europe,
+AGO,AO,024,Angola,,member,Africa,Sub-Saharan Africa,Middle Africa
+ATG,AG,028,Antigua and Barbuda,,member,Americas,Latin America and the Caribbean,Caribbean
+ARG,AR,032,Argentina,,member,Americas,Latin America and the Caribbean,South America
+ARM,AM,051,Armenia,,member,Asia,Western Asia,
+AUS,AU,036,Australia,,member,Oceania,Australia and New Zealand,
+AUT,AT,040,Austria,,member,Europe,Western Europe,
+AZE,AZ,031,Azerbaijan,,member,Asia,Western Asia,
+BHS,BS,044,Bahamas,,member,Americas,Latin America and the Caribbean,Caribbean
+BHR,BH,048,Bahrain,,member,Asia,Western Asia,
+BGD,BD,050,Bangladesh,,member,Asia,Southern Asia,
+BRB,BB,052,Barbados,,member,Americas,Latin America and the Caribbean,Caribbean
+BLR,BY,112,Belarus,,member,Europe,Eastern Europe,
+BEL,BE,056,Belgium,,member,Europe,Western Europe,
+BLZ,BZ,084,Belize,,member,Americas,Latin America and the Caribbean,Central America
+BEN,BJ,204,Benin,,member,Africa,Sub-Saharan Africa,Western Africa
+BTN,BT,064,Bhutan,,member,Asia,Southern Asia,
+BOL,BO,068,Bolivia (Plurinational State of),Bolivia,member,Americas,Latin America and the Caribbean,South America
+BIH,BA,070,Bosnia and Herzegovina,,member,Europe,Southern Europe,
+BWA,BW,072,Botswana,,member,Africa,Sub-Saharan Africa,Southern Africa
+BRA,BR,076,Brazil,,member,Americas,Latin America and the Caribbean,South America
+BRN,BN,096,Brunei Darussalam,Brunei,member,Asia,South-eastern Asia,
+BGR,BG,100,Bulgaria,,member,Europe,Eastern Europe,
+BFA,BF,854,Burkina Faso,,member,Africa,Sub-Saharan Africa,Western Africa
+BDI,BI,108,Burundi,,member,Africa,Sub-Saharan Africa,Eastern Africa
+CPV,CV,132,Cabo Verde,Cape Verde,member,Africa,Sub-Saharan Africa,Western Africa
+KHM,KH,116,Cambodia,,member,Asia,South-eastern Asia,
+CMR,CM,120,Cameroon,,member,Africa,Sub-Saharan Africa,Middle Africa
+CAN,CA,124,Canada,,member,Americas,Northern America,
+CAF,CF,140,Central African Republic,,member,Africa,Sub-Saharan Africa,Middle Africa
+TCD,TD,148,Chad,,member,Africa,Sub-Saharan Africa,Middle Africa
+CHL,CL,152,Chile,,member,Americas,Latin America and the Caribbean,South America
+CHN,CN,156,China,,member,Asia,Eastern Asia,
+COL,CO,170,Colombia,,member,Americas,Latin America and the Caribbean,South America
+COM,KM,174,Comoros,,member,Africa,Sub-Saharan Africa,Eastern Africa
+COG,CG,178,Congo,Republic of the Congo; Congo-Brazzaville,member,Africa,Sub-Saharan Africa,Middle Africa
+CRI,CR,188,Costa Rica,,member,Americas,Latin America and the Caribbean,Central America
+HRV,HR,191,Croatia,,member,Europe,Southern Europe,
+CUB,CU,192,Cuba,,member,Americas,Latin America and the Caribbean,Caribbean
+CYP,CY,196,Cyprus,,member,Asia,Western Asia,
+CZE,CZ,203,Czechia,Czech Republic,member,Europe,Eastern Europe,
+CIV,CI,384,Côte d'Ivoire,Ivory Coast,member,Africa,Sub-Saharan Africa,Western Africa
+PRK,KP,408,Democratic People's Republic of Korea,North Korea,member,Asia,Eastern Asia,
+COD,CD,180,Democratic Republic of the Congo,DR Congo; DRC; Congo-Kinshasa,member,Africa,Sub-Saharan Africa,Middle Africa
+DNK,DK,208,Denmark,,member,Europe,Northern Europe,
+DJI,DJ,262,Djibouti,,member,Africa,Sub-Saharan Africa,Eastern Africa
+DMA,DM,212,Dominica,,member,Americas,Latin America and the Caribbean,Caribbean
+DOM,DO,214,Dominican Republic,,member,Americas,Latin America and the Caribbean,Caribbean
+ECU,EC,218,Ecuador,,member,Americas,Latin America and the Caribbean,South America
+EGY,EG,818,Egypt,,member,Africa,Northern Africa,
+SLV,SV,222,El Salvador,,member,Americas,Latin America and the Caribbean,Central America
+GNQ,GQ,226,Equatorial Guinea,,member,Africa,Sub-Saharan Africa,Middle Africa
+ERI,ER,232,Eritrea,,member,Africa,Sub-Saharan Africa,Eastern Africa
+EST,EE,233,Estonia,,member,Europe,Northern Europe,
+SWZ,SZ,748,Eswatini,Swaziland,member,Africa,Sub-Saharan Africa,Southern Africa
+ETH,ET,231,Ethiopia,,member,Africa,Sub-Saharan Africa,Eastern Africa
+FJI,FJ,242,Fiji,,member,Oceania,Melanesia,
+FIN,FI,246,Finland,,member,Europe,Northern Europe,
+FRA,FR,250,France,,member,Europe,Western Europe,
+GAB,GA,266,Gabon,,member,Africa,Sub-Saharan Africa,Middle Africa
+GMB,GM,270,Gambia,,member,Africa,Sub-Saharan Africa,Western Africa
+GEO,GE,268,Georgia,,member,Asia,Western Asia,
+DEU,DE,276,Germany,,member,Europe,Western Europe,
+GHA,GH,288,Ghana,,member,Africa,Sub-Saharan Africa,Western Africa
+GRC,GR,300,Greece,,member,Europe,Southern Europe,
+GRD,GD,308,Grenada,,member,Americas,Latin America and the Caribbean,Caribbean
+GTM,GT,320,Guatemala,,member,Americas,Latin America and the Caribbean,Central America
+GIN,GN,324,Guinea,,member,Africa,Sub-Saharan Africa,Western Africa
+GNB,GW,624,Guinea-Bissau,,member,Africa,Sub-Saharan Africa,Western Africa
+GUY,GY,328,Guyana,,member,Americas,Latin America and the Caribbean,South America
+HTI,HT,332,Haiti,,member,Americas,Latin America and the Caribbean,Caribbean
+VAT,VA,336,Holy See,Vatican,observer,Europe,Southern Europe,
+HND,HN,340,Honduras,,member,Americas,Latin America and the Caribbean,Central America
+HUN,HU,348,Hungary,,member,Europe,Eastern Europe,
+ISL,IS,352,Iceland,,member,Europe,Northern Europe,
+IND,IN,356,India,,member,Asia,Southern Asia,
+IDN,ID,360,Indonesia,,member,Asia,South-eastern Asia,
+IRN,IR,364,Iran (Islamic Republic of),Iran,member,Asia,Southern Asia,
+IRQ,IQ,368,Iraq,,member,Asia,Western Asia,
+IRL,IE,372,Ireland,,member,Europe,Northern Europe,
+ISR,IL,376,Israel,,member,Asia,Western Asia,
+ITA,IT,380,Italy,,member,Europe,Southern Europe,
+JAM,JM,388,Jamaica,,member,Americas,Latin America and the Caribbean,Caribbean
+JPN,JP,392,Japan,,member,Asia,Eastern Asia,
+JOR,JO,400,Jordan,,member,Asia,Western Asia,
+KAZ,KZ,398,Kazakhstan,,member,Asia,Central Asia,
+KEN,KE,404,Kenya,,member,Africa,Sub-Saharan Africa,Eastern Africa
+KIR,KI,296,Kiribati,,member,Oceania,Micronesia,
+KWT,KW,414,Kuwait,,member,Asia,Western Asia,
+KGZ,KG,417,Kyrgyzstan,,member,Asia,Central Asia,
+LAO,LA,418,Lao People's Democratic Republic,Laos,member,Asia,South-eastern Asia,
+LVA,LV,428,Latvia,,member,Europe,Northern Europe,
+LBN,LB,422,Lebanon,,member,Asia,Western Asia,
+LSO,LS,426,Lesotho,,member,Africa,Sub-Saharan Africa,Southern Africa
+LBR,LR,430,Liberia,,member,Africa,Sub-Saharan Africa,Western Africa
+LBY,LY,434,Libya,,member,Africa,Northern Africa,
+LIE,LI,438,Liechtenstein,,member,Europe,Western Europe,
+LTU,LT,440,Lithuania,,member,Europe,Northern Europe,
+LUX,LU,442,Luxembourg,,member,Europe,Western Europe,
+MDG,MG,450,Madagascar,,member,Africa,Sub-Saharan Africa,Eastern Africa
+MWI,MW,454,Malawi,,member,Africa,Sub-Saharan Africa,Eastern Africa
+MYS,MY,458,Malaysia,,member,Asia,South-eastern Asia,
+MDV,MV,462,Maldives,,member,Asia,Southern Asia,
+MLI,ML,466,Mali,,member,Africa,Sub-Saharan Africa,Western Africa
+MLT,MT,470,Malta,,member,Europe,Southern Europe,
+MHL,MH,584,Marshall Islands,,member,Oceania,Micronesia,
+MRT,MR,478,Mauritania,,member,Africa,Sub-Saharan Africa,Western Africa
+MUS,MU,480,Mauritius,,member,Africa,Sub-Saharan Africa,Eastern Africa
+MEX,MX,484,Mexico,,member,Americas,Latin America and the Caribbean,Central America
+FSM,FM,583,Micronesia (Federated States of),Micronesia,member,Oceania,Micronesia,
+MCO,MC,492,Monaco,,member,Europe,Western Europe,
+MNG,MN,496,Mongolia,,member,Asia,Eastern Asia,
+MNE,ME,499,Montenegro,,member,Europe,Southern Europe,
+MAR,MA,504,Morocco,,member,Africa,Northern Africa,
+MOZ,MZ,508,Mozambique,,member,Africa,Sub-Saharan Africa,Eastern Africa
+MMR,MM,104,Myanmar,Burma,member,Asia,South-eastern Asia,
+NAM,NA,516,Namibia,,member,Africa,Sub-Saharan Africa,Southern Africa
+NRU,NR,520,Nauru,,member,Oceania,Micronesia,
+NPL,NP,524,Nepal,,member,Asia,Southern Asia,
+NLD,NL,528,Netherlands (Kingdom of the),Holland,member,Europe,Western Europe,
+NZL,NZ,554,New Zealand,,member,Oceania,Australia and New Zealand,
+NIC,NI,558,Nicaragua,,member,Americas,Latin America and the Caribbean,Central America
+NER,NE,562,Niger,,member,Africa,Sub-Saharan Africa,Western Africa
+NGA,NG,566,Nigeria,,member,Africa,Sub-Saharan Africa,Western Africa
+MKD,MK,807,North Macedonia,Macedonia,member,Europe,Southern Europe,
+NOR,NO,578,Norway,,member,Europe,Northern Europe,
+OMN,OM,512,Oman,,member,Asia,Western Asia,
+PAK,PK,586,Pakistan,,member,Asia,Southern Asia,
+PLW,PW,585,Palau,,member,Oceania,Micronesia,
+PAN,PA,591,Panama,,member,Americas,Latin America and the Caribbean,Central America
+PNG,PG,598,Papua New Guinea,,member,Oceania,Melanesia,
+PRY,PY,600,Paraguay,,member,Americas,Latin America and the Caribbean,South America
+PER,PE,604,Peru,,member,Americas,Latin America and the Caribbean,South America
+PHL,PH,608,Philippines,,member,Asia,South-eastern Asia,
+POL,PL,616,Poland,,member,Europe,Eastern Europe,
+PRT,PT,620,Portugal,,member,Europe,Southern Europe,
+QAT,QA,634,Qatar,,member,Asia,Western Asia,
+KOR,KR,410,Republic of Korea,South Korea,member,Asia,Eastern Asia,
+MDA,MD,498,Republic of Moldova,Moldova,member,Europe,Eastern Europe,
+ROU,RO,642,Romania,,member,Europe,Eastern Europe,
+RUS,RU,643,Russian Federation,Russia,member,Europe,Eastern Europe,
+RWA,RW,646,Rwanda,,member,Africa,Sub-Saharan Africa,Eastern Africa
+KNA,KN,659,Saint Kitts and Nevis,,member,Americas,Latin America and the Caribbean,Caribbean
+LCA,LC,662,Saint Lucia,,member,Americas,Latin America and the Caribbean,Caribbean
+VCT,VC,670,Saint Vincent and the Grenadines,,member,Americas,Latin America and the Caribbean,Caribbean
+WSM,WS,882,Samoa,,member,Oceania,Polynesia,
+SMR,SM,674,San Marino,,member,Europe,Southern Europe,
+STP,ST,678,Sao Tome and Principe,,member,Africa,Sub-Saharan Africa,Middle Africa
+SAU,SA,682,Saudi Arabia,,member,Asia,Western Asia,
+SEN,SN,686,Senegal,,member,Africa,Sub-Saharan Africa,Western Africa
+SRB,RS,688,Serbia,,member,Europe,Southern Europe,
+SYC,SC,690,Seychelles,,member,Africa,Sub-Saharan Africa,Eastern Africa
+SLE,SL,694,Sierra Leone,,member,Africa,Sub-Saharan Africa,Western Africa
+SGP,SG,702,Singapore,,member,Asia,South-eastern Asia,
+SVK,SK,703,Slovakia,,member,Europe,Eastern Europe,
+SVN,SI,705,Slovenia,,member,Europe,Southern Europe,
+SLB,SB,090,Solomon Islands,,member,Oceania,Melanesia,
+SOM,SO,706,Somalia,,member,Africa,Sub-Saharan Africa,Eastern Africa
+ZAF,ZA,710,South Africa,,member,Africa,Sub-Saharan Africa,Southern Africa
+SSD,SS,728,South Sudan,,member,Africa,Sub-Saharan Africa,Eastern Africa
+ESP,ES,724,Spain,,member,Europe,Southern Europe,
+LKA,LK,144,Sri Lanka,,member,Asia,Southern Asia,
+PSE,PS,275,State of Palestine,Palestine,observer,Asia,Western Asia,
+SDN,SD,729,Sudan,,member,Africa,Northern Africa,
+SUR,SR,740,Suriname,,member,Americas,Latin America and the Caribbean,South America
+SWE,SE,752,Sweden,,member,Europe,Northern Europe,
+CHE,CH,756,Switzerland,,member,Europe,Western Europe,
+SYR,SY,760,Syrian Arab Republic,Syria,member,Asia,Western Asia,
+TJK,TJ,762,Tajikistan,,member,Asia,Central Asia,
+THA,TH,764,Thailand,,member,Asia,South-eastern Asia,
+TLS,TL,626,Timor-Leste,East Timor,member,Asia,South-eastern Asia,
+TGO,TG,768,Togo,,member,Africa,Sub-Saharan Africa,Western Africa
+TON,TO,776,Tonga,,member,Oceania,Polynesia,
+TTO,TT,780,Trinidad and Tobago,,member,Americas,Latin America and the Caribbean,Caribbean
+TUN,TN,788,Tunisia,,member,Africa,Northern Africa,
+TKM,TM,795,Turkmenistan,,member,Asia,Central Asia,
+TUV,TV,798,Tuvalu,,member,Oceania,Polynesia,
+TUR,TR,792,Türkiye,Turkey,member,Asia,Western Asia,
+UGA,UG,800,Uganda,,member,Africa,Sub-Saharan Africa,Eastern Africa
+UKR,UA,804,Ukraine,,member,Europe,Eastern Europe,
+ARE,AE,784,United Arab Emirates,,member,Asia,Western Asia,
+GBR,GB,826,United Kingdom of Great Britain and Northern Ireland,United Kingdom; UK; Britain,member,Europe,Northern Europe,
+TZA,TZ,834,United Republic of Tanzania,Tanzania,member,Africa,Sub-Saharan Africa,Eastern Africa
+USA,US,840,United States of America,United States; USA; US,member,Americas,Northern America,
+URY,UY,858,Uruguay,,member,Americas,Latin America and the Caribbean,South America
+UZB,UZ,860,Uzbekistan,,member,Asia,Central Asia,
+VUT,VU,548,Vanuatu,,member,Oceania,Melanesia,
+VEN,VE,862,Venezuela (Bolivarian Republic of),Venezuela,member,Americas,Latin America and the Caribbean,South America
+VNM,VN,704,Viet Nam,Vietnam,member,Asia,South-eastern Asia,
+YEM,YE,887,Yemen,,member,Asia,Western Asia,
+ZMB,ZM,894,Zambia,,member,Africa,Sub-Saharan Africa,Eastern Africa
+ZWE,ZW,716,Zimbabwe,,member,Africa,Sub-Saharan Africa,Eastern Africa
