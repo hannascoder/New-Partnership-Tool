@@ -1,0 +1,298 @@
+# ============================================================================
+# All allowed values of the Partner Finder (briefing sections D to L).
+#
+# How to edit:
+#   - "id" is the internal name. NEVER change an id once data uses it:
+#     the pipeline, overrides.csv and rules.yaml refer to it.
+#   - "label" is what the website shows. Change it any time.
+#   - To add a value: copy an existing entry, give it a new id.
+#   - "later: true" means: planned, not used in version 1.
+# Countries are in countries.csv, languages in languages.csv.
+# ============================================================================
+
+# ---------------------------------------------------------------- D. Geography
+scope:
+  - id: local
+    label: Local
+    description: A city or district.
+  - id: national
+    label: National
+    description: One country.
+  - id: regional
+    label: Regional (multi-country)
+    description: Several countries, e.g. East Africa or the Arab world.
+  - id: international
+    label: International
+    description: Worldwide or many regions.
+
+# Why an outlet counts as reaching a country (field audience_basis).
+audience_basis:
+  - id: home_country
+    label: Based there
+  - id: language_service
+    label: Language service for this country
+  - id: manual
+    label: Added by hand (overrides.csv)
+
+# ------------------------------------------------------------ F. My material
+# What the user has. Each material is translated into channels:
+# choosing "Video" shows outlets on TV, Website or Social media.
+# "Text" also finds news agencies (an organisation type, not a channel).
+material:
+  - id: video
+    label: Video
+    channels: [tv, website, social_media]
+  - id: audio
+    label: Audio
+    channels: [radio, podcast]
+  - id: photo
+    label: Photo
+    channels: [print, website, social_media]
+  - id: graphic
+    label: Graphic / Infographic
+    channels: [print, website, social_media]
+  - id: text
+    label: Text
+    channels: [print, website, newsletter]
+    also_org_types: [news_agency]
+
+# ------------------------------------------- G. Three separate questions
+# 1) WHO is it?
+org_type:
+  - id: news_outlet
+    label: News outlet
+  - id: news_agency
+    label: News agency
+  - id: public_service_broadcaster
+    label: Public service broadcaster
+  - id: community_media
+    label: Community media
+  - id: fact_checker
+    label: Fact-checking organisation
+  - id: ngo
+    label: NGO / civil society
+    later: true
+  - id: network
+    label: Network / association
+    later: true
+  - id: academic
+    label: Academic / research
+    later: true
+  - id: creator
+    label: Creator / influencer
+    later: true
+
+# 2) WHERE do they publish?
+channel:
+  - id: tv
+    label: TV
+  - id: radio
+    label: Radio
+  - id: print
+    label: Print
+  - id: website
+    label: Website
+  - id: podcast
+    label: Podcast
+  - id: social_media
+    label: Social media
+  - id: newsletter
+    label: Newsletter
+
+# Social media platforms (fold-out under "Social media"; links per outlet).
+social_platform:
+  - id: youtube
+    label: YouTube
+  - id: facebook
+    label: Facebook
+  - id: instagram
+    label: Instagram
+  - id: tiktok
+    label: TikTok
+  - id: x
+    label: X
+  - id: whatsapp
+    label: WhatsApp
+  - id: telegram
+    label: Telegram
+
+# 3) WHO OWNS it? Always shown with the source of the information.
+ownership:
+  - id: public_service
+    label: Public service
+  - id: private
+    label: Private
+  - id: state_controlled
+    label: State-controlled
+  - id: community_nonprofit
+    label: Community / non-profit
+  - id: unknown
+    label: Unknown
+
+# ------------------------------------------------------------- H. Topics
+# Multiple choice. Topics never hide an outlet, they only change the order.
+# "general_news" is the default when nothing else is known.
+topic_groups:
+  - id: people
+    label: People
+  - id: planet
+    label: Planet
+  - id: prosperity
+    label: Prosperity
+  - id: peace
+    label: Peace
+  - id: partnership
+    label: Partnership
+  - id: beats
+    label: Beats & audiences
+
+topics:
+  # People
+  - {id: poverty,            group: people,      sdg: 1,  label: Poverty}
+  - {id: hunger_food,        group: people,      sdg: 2,  label: Hunger & food}
+  - {id: health,             group: people,      sdg: 3,  label: Health & well-being}
+  - {id: education,          group: people,      sdg: 4,  label: Quality education}
+  - {id: gender_equality,    group: people,      sdg: 5,  label: Gender equality}
+  # Planet
+  - {id: water_sanitation,   group: planet,      sdg: 6,  label: Clean water & sanitation}
+  - {id: consumption,        group: planet,      sdg: 12, label: Responsible consumption & production}
+  - {id: climate,            group: planet,      sdg: 13, label: Climate action}
+  - {id: life_below_water,   group: planet,      sdg: 14, label: Life below water}
+  - {id: life_on_land,       group: planet,      sdg: 15, label: Life on land}
+  # Prosperity
+  - {id: energy,             group: prosperity,  sdg: 7,  label: Affordable & clean energy}
+  - {id: work_economy,       group: prosperity,  sdg: 8,  label: Decent work & economic growth}
+  - {id: industry_innovation, group: prosperity, sdg: 9,  label: "Industry, innovation & infrastructure"}
+  - {id: inequalities,       group: prosperity,  sdg: 10, label: Reduced inequalities}
+  - {id: cities,             group: prosperity,  sdg: 11, label: Sustainable cities & communities}
+  # Peace
+  - {id: peace_justice,      group: peace,       sdg: 16, label: "Peace, justice & strong institutions"}
+  # Partnership
+  - {id: partnerships,       group: partnership, sdg: 17, label: Partnerships for the goals}
+  # Beats & audiences
+  - {id: general_news,       group: beats, label: General news, default: true}
+  - {id: fact_checking,      group: beats, label: Fact-checking & misinformation}
+  - {id: science,            group: beats, label: Science}
+  - {id: business_economy,   group: beats, label: Business & economy}
+  - {id: culture,            group: beats, label: Culture}
+  - {id: religion,           group: beats, label: Religion}
+  - {id: community_local,    group: beats, label: Community & local}
+  - {id: humanitarian,       group: beats, label: Humanitarian aid}
+  - {id: human_rights,       group: beats, label: Human rights}
+  - {id: migration,          group: beats, label: Migration & refugees}
+  - {id: conflict_security,  group: beats, label: Conflict & security}
+  - {id: technology,         group: beats, label: "Technology, digital & AI"}
+  - {id: agriculture,        group: beats, label: Agriculture & rural}
+  - {id: disasters,          group: beats, label: Disasters & emergencies}
+  - {id: children_youth,     group: beats, label: Children & youth}
+  - {id: indigenous,         group: beats, label: Indigenous peoples}
+  - {id: disability,         group: beats, label: Disability & inclusion}
+  - {id: media_freedom,      group: beats, label: Media freedom & journalism}
+  - {id: elections,          group: beats, label: Elections & governance}
+  - {id: sports,             group: beats, label: Sports}
+  - {id: diaspora,           group: beats, label: Diaspora}
+
+# ------------------------------------------------------------ I. UN profile
+# Multiple choice. Like topics: changes the order, never hides an outlet.
+un_profile:
+  - id: educational
+    label: Educational / explanatory
+  - id: solutions
+    label: Solutions / constructive journalism
+  - id: development
+    label: Development journalism
+  - id: open_to_partner_content
+    label: Open to partner content
+    description: Republishes third-party content.
+  - id: un_relationship
+    label: Existing UN relationship
+    description: UN News partner, UNIC, SDG Media Compact.
+  - id: public_service_mandate
+    label: Public service mandate
+  - id: storytelling
+    label: Storytelling & documentary
+  - id: fact_checking_ifcn
+    label: Fact-checking (IFCN signatory)
+  - id: underserved_audiences
+    label: Reaches underserved audiences
+    description: Rural audiences, community radio, minority languages.
+  - id: youth_audience
+    label: Youth audience
+  - id: multilingual
+    label: Multilingual
+
+# ---------------------------------------------- J. Size and checkboxes
+size:
+  - id: all
+    label: All
+    default: true
+  - id: top50
+    label: Top 50 per country
+  - id: top10
+    label: Top 10 per country
+size_note: >-
+  "Top" means the best-known outlets (prominence), not the largest, because
+  audience figures hardly exist. Prominence = number of Wikipedia language
+  versions (from Wikidata) + number of independent sources listing the outlet.
+
+checkboxes:
+  - id: only_verified
+    label: Only verified (2+ sources)
+    default: false
+  - id: hide_state_controlled
+    label: Hide state-controlled
+    default: false
+  - id: has_social_media
+    label: Has social media
+    default: false
+  - id: has_public_contact
+    label: Has public contact
+    description: Newsroom or organisation addresses only.
+    default: false
+  - id: hide_website_down
+    label: Hide outlets whose website did not answer
+    default: false
+  - id: only_new
+    label: Only new (found in the last 4 months)
+    default: false
+  - id: include_reach
+    label: Include outlets that reach this country
+    default: true
+  - id: include_no_language
+    label: Also show outlets without language information
+    default: false
+
+# Outlets count as "new" for this many months after they were first found.
+new_months: 4
+
+# ---------------------------------------------------------------- L. Sorting
+sort:
+  - id: best_match
+    label: Best match
+    description: >-
+      Number of chosen topics and UN profiles that match; ties by
+      prominence, then A-Z. Default as soon as a filter is set.
+  - id: az
+    label: A-Z
+    description: Default when no filter is set.
+  - id: country
+    label: Country
+
+# ------------------------------------------------- K4. Classification methods
+# Order = priority. When methods disagree, the one higher up wins.
+methods:
+  - id: override
+    label: Corrected by hand
+  - id: source_field
+    label: Stated by the source
+  - id: membership
+    label: Network membership
+  - id: website_check
+    label: Found on the outlet's website
+  - id: ai_classification
+    label: AI classification
+    later: true
+  - id: keyword
+    label: Keyword in name or description
+  - id: default
+    label: Default value
