@@ -1,0 +1,10 @@
+// Cloudflare settings for this website.
+// Cloudflare publishes everything in the folder "site/" and nothing else,
+// so configuration, raw data and pipeline code are never online.
+{
+  "name": "new-partnership-tool",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./site"
+  }
+}
