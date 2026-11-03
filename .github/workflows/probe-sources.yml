@@ -1,0 +1,44 @@
+# Checks once whether every planned data source answers from GitHub.
+# Run it from the Actions tab ("Run workflow"); nothing is saved.
+name: Probe data sources
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: [".github/workflows/probe-sources.yml"]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe each source
+        shell: bash
+        run: |
+          UA="UN-Partner-Finder/0.1 (internal research tool; github.com/hannascoder)"
+          probe () {
+            code=$(curl -sS -L -o /tmp/body -w '%{http_code}' -m 40 -A "$UA" "$2" 2>/tmp/err || true)
+            size=$(wc -c < /tmp/body 2>/dev/null || echo 0)
+            echo "| $1 | $code | $size bytes | $2 |"
+          }
+          echo "| Source | HTTP | Size | URL |"
+          probe "Wikidata SPARQL" "https://query.wikidata.org/sparql?format=json&query=SELECT%20(COUNT(*)%20AS%20%3Fn)%20WHERE%20%7B%20%3Fx%20wdt%3AP31%20wd%3AQ1110794%20%7D"
+          probe "Wikipedia API" "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=List%20of%20radio%20stations%20in%20Kenya&format=json"
+          probe "Radio Browser" "https://all.api.radio-browser.info/json/stations/bycountrycodeexact/KE?limit=5"
+          probe "iptv-org channels" "https://iptv-org.github.io/api/channels.json"
+          probe "ABYZ News Links" "http://www.abyznewslinks.com/allco.htm"
+          probe "SDG Media Compact" "https://www.un.org/sustainabledevelopment/sdg-media-compact-members/"
+          probe "IFCN signatories (Wikipedia)" "https://en.wikipedia.org/wiki/List_of_fact-checking_websites"
+          probe "EFCSN signatories" "https://members.efcsn.com/signatories"
+          probe "GIJN members" "https://gijn.org/membership/gijn-global-network/"
+          probe "OCCRP network" "https://www.occrp.org/en/about-us/our-global-network"
+          probe "PINA members" "https://pina.com.fj/pina-members/"
+          probe "GFMD members" "https://gfmd.info/members/"
+          probe "Earth Journalism Network" "https://earthjournalism.net/"
+          probe "Covering Climate Now" "https://coveringclimatenow.org/partners/partner-list/"
+          probe "RSF index" "https://rsf.org/en/index"
+          probe "Media Ownership Monitor" "https://www.mom-gmr.org/en/"
+          probe "State media (Wikipedia)" "https://en.wikipedia.org/wiki/List_of_state_media_by_country"
+          echo
+          echo "ABYZ: lines mentioning terms, copyright or permission:"
+          curl -sS -L -m 40 -A "$UA" "http://www.abyznewslinks.com/" | grep -i -o -E '.{0,160}(copyright|permission|terms|reproduc|commercial).{0,160}' | head -20 || true
