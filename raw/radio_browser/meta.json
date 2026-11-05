@@ -1,0 +1,9 @@
+{
+  "source": "radio_browser",
+  "fetched_at": "2026-11-05T17:50:00Z",
+  "records": 1000,
+  "url": "https://de1.api.radio-browser.info/json/stations",
+  "total_in_source": 1000,
+  "kept_in_195_countries": 1000,
+  "licence": "Radio Browser data is public domain / free to use (radio-browser.info)"
+}
