@@ -28,6 +28,9 @@ jobs:
       - name: iptv-org
         continue-on-error: true
         run: python pipeline/fetch/iptv_org.py
+      - name: Media Cloud (Zenodo snapshot)
+        continue-on-error: true
+        run: python pipeline/fetch/media_cloud.py
       - name: Wikidata
         continue-on-error: true
         timeout-minutes: 240
