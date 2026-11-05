@@ -19,7 +19,7 @@ def main():
     folder.mkdir(parents=True, exist_ok=True)
     files = {}
     for f in record.get("files", []):
-        text = get(f["links"]["self"], accept="text/csv", timeout=300)
+        text = get(f["links"]["self"], accept="*/*", timeout=300)
         with gzip.open(folder / (f["key"] + ".gz"), "wt", encoding="utf-8") as out:
             out.write(text)
         files[f["key"]] = {"bytes": f.get("size"), "rows": text.count("\n")}
