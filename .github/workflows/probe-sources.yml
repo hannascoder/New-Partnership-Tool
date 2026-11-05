@@ -57,5 +57,13 @@ jobs:
           echo "Zenodo record files:"
           curl -sS -m 40 -A "$UA" "https://zenodo.org/api/records/18189311" | python3 -c "import json,sys;d=json.load(sys.stdin);print(d.get('metadata',{}).get('title'));print(d.get('metadata',{}).get('license'));[print(f.get('key'),f.get('size'),f.get('links',{}).get('self')) for f in d.get('files',[])]" || true
           echo
+          echo "IFCN: API addresses used by the signatories page:"
+          chunk=$(curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org/signatories" | grep -oE '/_next/static/chunks/pages/signatories-[a-z0-9]+\.js' | head -1)
+          echo "chunk: $chunk"
+          curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org$chunk" | grep -oE '(https?:)?//[A-Za-z0-9./_?=&-]+|"/api/[^"]*"|`[^`]*api[^`]*`' | sort -u | head -40 || true
+          for c in $(curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org/signatories" | grep -oE '/_next/static/chunks/[0-9]+-[a-z0-9]+\.js'); do
+            curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org$c" | grep -oE 'https?://[A-Za-z0-9./_-]*(api|supabase|firebase|graphql)[A-Za-z0-9./_?=&-]*' | sort -u | head -10 || true
+          done
+          echo
           echo "ABYZ: lines mentioning terms, copyright or permission:"
           curl -sS -L -m 40 -A "$UA" "http://www.abyznewslinks.com/" | grep -i -o -E '.{0,160}(copyright|permission|terms|reproduc|commercial).{0,160}' | head -20 || true
