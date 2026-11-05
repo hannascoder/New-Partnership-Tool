@@ -158,6 +158,17 @@ Die genaue Liste „Quell-Kategorie → unser Thema“ erstelle ich aus den **ta
 
 ---
 
-## Offene Fragen an dich
+## Entscheidungen (05.11.2026, von der Projektleitung bestätigt)
 
-Siehe Nachricht im Chat. Die Antworten trage ich hier ein.
+1. **Welche Medien rein?** Nur Medien mit Informationsangebot.
+   - **Rein** (Quell-Kategorie): news, general, public, legislative, education, documentary, culture, science, business, kids, religious, weather, **sports**.
+     Ohne Kategorie: nur wenn eine zweite Quelle das Outlet als Medium bestätigt.
+   - **Raus:** shop, music, movies, series, comedy, animation, classic, relax, cooking, travel, auto, outdoor, lifestyle, entertainment, family, interactive, xxx.
+   - Für Radio gilt dasselbe sinngemäß (RB-Tags); die genaue Tag-Liste folgt nach dem Abruf.
+2. **Genau ein Organisationstyp** pro Outlet, Reihenfolge wie in Abschnitt 1.
+3. **State-controlled / Public service** wie in Abschnitt 3. Nichts wird deswegen ausgeblendet, nur markiert (Checkbox „Hide state-controlled“).
+4. **Scope ohne Beleg = unknown** (nicht automatisch National).
+5. **Podcast Index:** kostenloser Schlüssel wird später (Schritt 4) angelegt. Bis dahin Podcasts nur über WD und Website-Check.
+6. **Rundfunkunionen:** Wo die Websites automatische Abrufe sperren (EBU, ABU), werden die Mitgliederlisten aus Wikipedia genommen.
+   **Kontakte:** nur Adressen der Organisation (z. B. newsroom@…), keine persönlichen Adressen.
+   **SDG Media Compact:** öffentliche Liste; die Projektleitung versucht, die interne Liste über DGC Campaigns zu bekommen.
