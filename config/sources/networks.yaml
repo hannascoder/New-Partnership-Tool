@@ -5,6 +5,8 @@
 lists:
   - {id: sdg_media_compact,   url: "https://www.un.org/sustainabledevelopment/sdg-media-compact-members/"}
   - {id: ifcn_signatories,    url: "https://ifcncodeofprinciples.poynter.org/signatories"}
+  # the IFCN page loads its list from this address (found 05.11.2026 in the page's code)
+  - {id: ifcn_signatories_api, url: "https://ifcn-cop-prod-server-8q9x7.ondigitalocean.app/api/organization/signatories", format: json}
   - {id: fact_checking_sites, wikipedia: "List of fact-checking websites"}
   - {id: efcsn_signatories,   url: "https://members.efcsn.com/signatories"}
   - {id: covering_climate_now, url: "https://coveringclimatenow.org/partners/partner-directory/"}

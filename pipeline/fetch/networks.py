@@ -27,9 +27,11 @@ def main():
                 html = data["parse"]["text"]
                 where = f"wikipedia:{item['wikipedia']} (revision {data['parse'].get('revid')})"
             else:
-                html = get(item["url"], accept="text/html", timeout=120)
+                accept = "application/json" if item.get("format") == "json" else "text/html"
+                html = get(item["url"], accept=accept, timeout=120)
                 where = item["url"]
-            with gzip.open(folder / f"{item['id']}.html.gz", "wt", encoding="utf-8") as f:
+            ext = "json" if item.get("format") == "json" else "html"
+            with gzip.open(folder / f"{item['id']}.{ext}.gz", "wt", encoding="utf-8") as f:
                 f.write(html)
             status[item["id"]] = {"ok": True, "source": where, "bytes": len(html)}
             print("OK  ", item["id"], len(html))

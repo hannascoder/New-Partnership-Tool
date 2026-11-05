@@ -172,3 +172,10 @@ Die genaue Liste „Quell-Kategorie → unser Thema“ erstelle ich aus den **ta
 6. **Rundfunkunionen:** Wo die Websites automatische Abrufe sperren (EBU, ABU), werden die Mitgliederlisten aus Wikipedia genommen.
    **Kontakte:** nur Adressen der Organisation (z. B. newsroom@…), keine persönlichen Adressen.
    **SDG Media Compact:** öffentliche Liste; die Projektleitung versucht, die interne Liste über DGC Campaigns zu bekommen.
+
+### Notizen aus dem Datenabruf (05.11.2026)
+- **ABYZ**: Seite trägt „Copyright 2000-2022 ABYZ Web Links Inc.“, keine offene Lizenz → bleibt Reserve, wird nicht abgerufen.
+- **IFCN**: Liste wird per Programmschnittstelle geladen; diese Adresse wird jetzt direkt abgerufen.
+- **Covering Climate Now**: Verzeichnis ist eine Airtable-Tabelle ohne offene Schnittstelle → einmalig als CSV herunterladen (Snapshot in `raw/manual/`).
+- **Staatsmedien-Liste (Wikipedia)**: Hauptquelle dort ist der „State Media Monitor“ (Media and Journalism Research Center). Prüfen, ob dessen Liste direkt nutzbar ist – sie unterscheidet staatlich kontrolliert / unabhängig öffentlich.
+
