@@ -1,0 +1,23 @@
+# Network and member lists (briefing K2, docs/SOURCES.md).
+# The fetcher saves each page unchanged in raw/networks/; reading the
+# members out of each page is done in step 3 (one parser per list).
+# "wikipedia: <title>" pages are fetched through the Wikipedia API.
+lists:
+  - {id: sdg_media_compact,   url: "https://www.un.org/sustainabledevelopment/sdg-media-compact-members/"}
+  - {id: ifcn_signatories,    url: "https://ifcncodeofprinciples.poynter.org/signatories"}
+  - {id: fact_checking_sites, wikipedia: "List of fact-checking websites"}
+  - {id: efcsn_signatories,   url: "https://members.efcsn.com/signatories"}
+  - {id: covering_climate_now, url: "https://coveringclimatenow.org/partners/partner-directory/"}
+  - {id: pina_members,        url: "https://pina.com.fj/pina-members/"}
+  - {id: gfmd_members,        url: "https://gfmd.info/members/"}
+  - {id: occrp_network,       url: "https://www.occrp.org/en/about-us/our-global-network"}
+  - {id: aub_members,         url: "https://www.uar-aub.org/ours-members"}
+  - {id: ebu_members,         wikipedia: "European Broadcasting Union"}
+  - {id: ebu_members_list,    wikipedia: "List of European Broadcasting Union members"}
+  - {id: abu_members,         wikipedia: "Asia-Pacific Broadcasting Union"}
+  - {id: asbu_members,        wikipedia: "Arab States Broadcasting Union"}
+  - {id: cbu_members,         wikipedia: "Caribbean Broadcasting Union"}
+  - {id: oti_members,         wikipedia: "Organización de Telecomunicaciones de Iberoamérica"}
+  - {id: news_agencies,       wikipedia: "List of news agencies"}
+  - {id: state_media,         wikipedia: "List of state media by country"}
+  - {id: rsf_index,           url: "https://rsf.org/en/index"}

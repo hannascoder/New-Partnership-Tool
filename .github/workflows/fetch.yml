@@ -4,6 +4,11 @@
 name: Fetch sources
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Fetch slow sources (Wikidata) even if fetched in the last 7 days"
+        type: boolean
+        default: false
   push:
     branches: ["step-2-*"]
     paths: ["pipeline/fetch/**", "config/sources/**", ".github/workflows/fetch.yml"]
@@ -31,9 +36,14 @@ jobs:
       - name: Media Cloud (Zenodo snapshot)
         continue-on-error: true
         run: python pipeline/fetch/media_cloud.py
+      - name: Network and member lists
+        continue-on-error: true
+        run: python pipeline/fetch/networks.py
       - name: Wikidata
         continue-on-error: true
         timeout-minutes: 240
+        env:
+          FORCE_FETCH: ${{ inputs.force && '1' || '0' }}
         run: python pipeline/fetch/wikidata.py
       - name: Save raw data
         run: |

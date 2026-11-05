@@ -21,6 +21,21 @@ USER_AGENT = ("UN-Partner-Finder/0.1 (internal research tool of the UN DGC "
               "Partnerships unit; https://github.com/hannascoder)")
 
 
+def fresh(source, days):
+    """True if raw/<source> was fetched less than `days` days ago.
+    Lets slow sources (Wikidata takes about an hour) skip a re-run.
+    Set FORCE_FETCH=1 to fetch anyway."""
+    import os
+    if os.environ.get("FORCE_FETCH") == "1":
+        return False
+    try:
+        meta = json.load(open(RAW / source / "meta.json", encoding="utf-8"))
+        when = datetime.strptime(meta["fetched_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        return (datetime.now(timezone.utc) - when).days < days
+    except (OSError, KeyError, ValueError):
+        return False
+
+
 def countries():
     """The 195 allowed countries: {iso2: row}, from config/countries.csv."""
     with open(ROOT / "config" / "countries.csv", encoding="utf-8") as f:

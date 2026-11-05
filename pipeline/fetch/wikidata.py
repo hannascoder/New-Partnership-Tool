@@ -11,7 +11,7 @@ import time
 
 import yaml
 
-from common import ROOT, countries, get, save
+from common import ROOT, countries, fresh, get, save
 
 SPARQL = "https://query.wikidata.org/sparql"
 API = "https://www.wikidata.org/w/api.php"
@@ -90,6 +90,9 @@ def slim(entity):
 
 
 def main():
+    if fresh("wikidata", 7):
+        print("Wikidata was fetched less than 7 days ago: skipped (set FORCE_FETCH=1 to force)")
+        return
     cfg = yaml.safe_load(open(ROOT / "config" / "sources" / "wikidata.yaml", encoding="utf-8"))
     report = {"class_check": [], "class_search": {}, "countries_missing": [], "timeouts": []}
 
