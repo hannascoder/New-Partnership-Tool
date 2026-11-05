@@ -6,12 +6,14 @@
 4. downloads the details of each item (labels, website, language, owner,
    social media accounts, ...) and the English names of all linked items
 """
+import gzip
 import json
 import time
+from datetime import datetime, timezone
 
 import yaml
 
-from common import ROOT, countries, fresh, get, save
+from common import ROOT, countries, fresh, get, save  # noqa: F401
 
 SPARQL = "https://query.wikidata.org/sparql"
 API = "https://www.wikidata.org/w/api.php"
@@ -89,8 +91,51 @@ def slim(entity):
                                  if k in ("enwiki", "frwiki", "eswiki", "arwiki", "ruwiki", "zhwiki", "ptwiki")}}
 
 
+START = time.time()
+BUDGET_MIN = float(__import__("os").environ.get("WIKIDATA_MINUTES", "200"))
+FRESH_DAYS = 7
+
+
+def now():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def out_of_time():
+    return (time.time() - START) / 60 > BUDGET_MIN
+
+
+def is_fresh(stamp):
+    if not stamp or __import__("os").environ.get("FORCE_FETCH") == "1":
+        return False
+    when = datetime.strptime(stamp, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - when).days < FRESH_DAYS
+
+
+def checkpoint_fresh(path):
+    try:
+        return is_fresh(json.load(open(path, encoding="utf-8")).get("fetched_at"))
+    except (OSError, ValueError):
+        return False
+
+
+def checkpoint_fresh_record(rec):
+    return bool(rec) and is_fresh(rec.get("_fetched_at"))
+
+
+def write_cache(path, cache):
+    tmp = path.with_suffix(".tmp")
+    with gzip.open(tmp, "wt", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False)
+    tmp.replace(path)
+
+
+def chunks(seq, n):
+    for i in range(0, len(seq), n):
+        yield seq[i:i + n]
+
+
 def main():
-    if fresh("wikidata", 7):
+    if fresh("wikidata", FRESH_DAYS):
         print("Wikidata was fetched less than 7 days ago: skipped (set FORCE_FETCH=1 to force)")
         return
     cfg = yaml.safe_load(open(ROOT / "config" / "sources" / "wikidata.yaml", encoding="utf-8"))
@@ -125,44 +170,79 @@ def main():
     report["countries_missing"] = sorted(set(allowed) - set(country_qid))
     print(f"countries found in Wikidata: {len(country_qid)} of {len(allowed)}")
 
-    # 3. outlets per country
+    # 3. outlets per country (checkpoint per country in raw/wikidata/items/)
+    items_dir = ROOT / "raw" / "wikidata" / "items"
+    items_dir.mkdir(parents=True, exist_ok=True)
     found = {}  # qid -> {"countries": set(), "roots": set()}
     values = " ".join(f"wd:{q}" for q in roots)
+    complete = True
     for n, (iso, cq) in enumerate(sorted(country_qid.items()), 1):
-        try:
-            res = sparql(f"SELECT DISTINCT ?item ?root WHERE {{ VALUES ?root {{ {values} }} "
-                         f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . }}")
-        except RuntimeError:
-            res = []
-            for q in roots:  # too big at once: one class at a time
-                try:
-                    res += sparql(f"SELECT DISTINCT ?item ?root WHERE {{ VALUES ?root {{ wd:{q} }} "
-                                  f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . }}")
-                except RuntimeError:
-                    report["timeouts"].append({"country": iso, "class": q})
-        for r in res:
-            q = r["item"]["value"].rsplit("/", 1)[1]
+        cp = items_dir / f"{iso}.json"
+        rows = None
+        if checkpoint_fresh(cp):
+            rows = json.load(open(cp, encoding="utf-8"))["rows"]
+        elif out_of_time():
+            complete = False
+            print(f"time budget used up before {iso}: continue next run")
+            break
+        else:
+            res, failed = [], []
+            try:
+                res = sparql(f"SELECT DISTINCT ?item ?root WHERE {{ VALUES ?root {{ {values} }} "
+                             f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . }}")
+            except RuntimeError:
+                for q in roots:  # too big at once: one class at a time
+                    try:
+                        res += sparql(f"SELECT DISTINCT ?item ?root WHERE {{ VALUES ?root {{ wd:{q} }} "
+                                      f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . }}")
+                    except RuntimeError:
+                        failed.append(q)
+                        report["timeouts"].append({"country": iso, "class": q})
+            rows = [[r["item"]["value"].rsplit("/", 1)[1], r["root"]["value"].rsplit("/", 1)[1]] for r in res]
+            if not failed:  # only complete countries are kept as checkpoint
+                json.dump({"fetched_at": now(), "rows": rows}, open(cp, "w", encoding="utf-8"))
+        for q, root in rows:
             f = found.setdefault(q, {"countries": set(), "roots": set()})
             f["countries"].add(iso)
-            f["roots"].add(r["root"]["value"].rsplit("/", 1)[1])
-        print(f"[{n}/{len(country_qid)}] {iso}: {len(res)} rows, total items {len(found)}")
+            f["roots"].add(root)
+        print(f"[{n}/{len(country_qid)}] {iso}: {len(rows)} rows, total items {len(found)}", flush=True)
 
-    # 4. details
-    details = entities(found.keys())
-    records = []
-    linked = set()
+    # 4. details (cache in raw/wikidata/details_cache.json.gz, slimmed per batch)
+    cache_file = ROOT / "raw" / "wikidata" / "details_cache.json.gz"
+    cache = json.load(gzip.open(cache_file, "rt", encoding="utf-8")) if cache_file.exists() else {}
+    todo = sorted(q for q in found if not checkpoint_fresh_record(cache.get(q)))
+    print(f"details: {len(found) - len(todo)} from cache, {len(todo)} to fetch", flush=True)
+    for i in range(0, len(todo), 50):
+        if out_of_time():
+            complete = False
+            print("time budget used up during details: continue next run")
+            break
+        for q, e in entities(todo[i:i + 50]).items():
+            if e and "missing" not in e:
+                cache[q] = {**slim(e), "_fetched_at": now()}
+        if i % 5000 == 0:
+            print(f"details {i}/{len(todo)}", flush=True)
+            write_cache(cache_file, cache)
+    write_cache(cache_file, cache)
+
+    records, linked = [], set()
     for q, f in found.items():
-        e = details.get(q)
-        if not e or "missing" in e:
+        rec = cache.get(q)
+        if not rec:
             continue
-        rec = slim(e)
+        rec = {k: v for k, v in rec.items() if k != "_fetched_at"}
         rec["matched_countries"] = sorted(f["countries"])
         rec["matched_classes"] = sorted(f["roots"])
         records.append(rec)
         for name in (PROPS[p] for p in ITEM_VALUED):
             linked.update(v for v in rec.get(name, []) if isinstance(v, str) and v.startswith("Q"))
-    names = {q: e.get("labels", {}).get("en", {}).get("value")
-             for q, e in entities(linked, props="labels").items()}
+    if not complete:
+        print("INCOMPLETE run: checkpoints saved, data.json.gz not replaced")
+        return
+    names = {}
+    for i, chunk in enumerate(chunks(sorted(linked), 50)):
+        for q, e in entities(chunk, props="labels").items():
+            names[q] = e.get("labels", {}).get("en", {}).get("value")
     records.sort(key=lambda r: int(r["qid"][1:]))
     save("wikidata", records, {
         "url": SPARQL + " + " + API,

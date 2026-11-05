@@ -44,6 +44,7 @@ jobs:
         timeout-minutes: 240
         env:
           FORCE_FETCH: ${{ inputs.force && '1' || '0' }}
+          WIKIDATA_MINUTES: "200"  # stop in time and save checkpoints; next run continues
         run: python pipeline/fetch/wikidata.py
       - name: Save raw data
         run: |
