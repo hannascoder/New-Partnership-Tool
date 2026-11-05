@@ -14,7 +14,7 @@ root_classes:
   - {qid: Q15265344, expected_label: broadcaster}
   - {qid: Q1153191,  expected_label: online newspaper}
   - {qid: Q17232649, expected_label: news website}
-  - {qid: Q24634210, expected_label: podcast}
+  - {qid: Q24634210, expected_label: podcast show}
 
 # Not yet sure of the id: the fetcher searches Wikidata for these names and
 # writes the top hits to raw/wikidata/class_search.json for review.

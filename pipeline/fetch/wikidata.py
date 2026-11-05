@@ -38,9 +38,15 @@ ITEM_VALUED = {"P31", "P17", "P495", "P159", "P131", "P2541", "P1001", "P407", "
 
 def sparql(query):
     time.sleep(1)  # be polite: at most one query per second
-    body = get(SPARQL, {"query": query, "format": "json"},
-               accept="application/sparql-results+json", timeout=90, tries=3)
-    return json.loads(body)["results"]["bindings"]
+    for attempt in range(2):
+        body = get(SPARQL, {"query": query, "format": "json"},
+                   accept="application/sparql-results+json", timeout=90, tries=3)
+        try:
+            return json.loads(body)["results"]["bindings"]
+        except ValueError:
+            # Wikidata stopped mid-answer (query too slow): retry once, then give up
+            time.sleep(10)
+    raise RuntimeError("query result was cut off twice")
 
 
 def entities(ids, props="labels|claims|sitelinks"):

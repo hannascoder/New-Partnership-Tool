@@ -17,17 +17,26 @@ FIELDS = ["stationuuid", "name", "homepage", "countrycode", "state", "language",
 
 def main():
     allowed = countries()
-    body, used = None, None
+    stations, used = None, None
     for server in SERVERS:
         try:
-            body = get(f"{server}/json/stations", {"hidebroken": "false"}, timeout=300)
+            stations, offset, page = [], 0, 20000
+            while True:  # the API returns at most `limit` stations per call
+                batch = json.loads(get(f"{server}/json/stations", {
+                    "hidebroken": "false", "limit": page, "offset": offset,
+                    "order": "stationuuid"}, timeout=300))
+                stations += batch
+                print(f"{server}: {len(stations)} stations")
+                if len(batch) < page:
+                    break
+                offset += page
             used = server
             break
         except RuntimeError as e:
             print("server failed:", e)
-    if body is None:
+            stations = None
+    if not stations:
         raise SystemExit("Radio Browser: no server answered")
-    stations = json.loads(body)
     kept = [{k: s.get(k) for k in FIELDS} for s in stations
             if (s.get("countrycode") or "").upper() in allowed]
     save("radio_browser", kept, {
