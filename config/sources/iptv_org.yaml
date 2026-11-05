@@ -1,0 +1,31 @@
+# iptv-org: which TV channels count as information media, and which category
+# gives which topic. Decision of 05.11.2026 (docs/KATEGORIEN.md).
+# Numbers = channels per category on 05.11.2026 (30,088 channels in the 195 countries).
+include_categories: [news, general, public, legislative, education, documentary,
+                     culture, science, business, kids, religious, weather, sports]
+# general 7059, sports 2405, news 2239, religious 1918, kids 937, education 802,
+# legislative 614, culture 504, documentary 477, business 182, science 88,
+# public 62, weather 48
+exclude_categories: [shop, music, movies, series, comedy, animation, classic, relax,
+                     cooking, travel, auto, outdoor, lifestyle, entertainment, family,
+                     interactive, xxx]
+# A channel with an included AND an excluded category is kept.
+# A channel without any category (5,174) is only kept if another source confirms it.
+
+# Category -> our topic. Method: source_field.
+topics:
+  sports: [sports]
+  religion: [religious]
+  culture: [culture]
+  education: [education]
+  science: [science]
+  business_economy: [business]
+  children_youth: [kids]
+  elections: [legislative]
+  general_news: [news, general]
+
+# Category -> UN profile.
+un_profile:
+  educational: [education]
+  storytelling: [documentary]
+  youth_audience: [kids]

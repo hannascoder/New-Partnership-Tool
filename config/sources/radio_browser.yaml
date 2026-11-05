@@ -1,0 +1,118 @@
+# Radio Browser: which stations count as information media, and which tags
+# give which topic / organisation type. Decision of 05.11.2026 (docs/KATEGORIEN.md):
+# only stations with an information offer. Tags are typed freely by users,
+# in many languages, so every tag is matched EXACTLY (lower case), never as a
+# part of a word ("christmas music" must not count as "christian").
+# The numbers are how often the tag appeared on 05.11.2026 (61,396 stations).
+
+# A station is kept if it has at least ONE of these tags.
+# Stations without any tag (19,911) are only kept if another source confirms them.
+include_tags:
+  # news / talk / information
+  - news            # 3171
+  - talk            # 1846
+  - news talk       # 485
+  - information     # 488
+  - noticias        # 610
+  - local news      # 770
+  - música y noticias  # 428
+  - radio hablada   # 352
+  - noticias locales  # 312
+  - noticias en español  # 226
+  - noticias y comentarios  # 213
+  - talk & speech   # 200
+  - noticias nacionales e internacionales  # 185
+  - hablada         # 182
+  - local information  # 173
+  - talk radio      # 168
+  - local talk      # 138
+  - politics        # 134
+  - noticias y música  # 116
+  - sports news     # 110
+  - informativa     # 105
+  - información     # 99
+  - noticias y deportes  # 93
+  - noticias cortas  # 88
+  - news talk music  # 88
+  - noticias opinion  # 69
+  - world news      # 64
+  - talk show       # 62
+  - political talk  # 53
+  - international news  # 44
+  - info            # 34
+  - nachrichten     # 31
+  - cultural news   # 31
+  - noticias regionales  # 37
+  - business news   # 20
+  - economic news   # 19
+  - talks           # 25
+  - full service    # 295
+  # public service / community / campus
+  - public radio    # 1024
+  - public service  # 112
+  - public          # 131
+  - community radio  # 875
+  - community       # 211
+  - radio comunitaria  # 90
+  - comunitaria     # 45
+  - concesión comunitaria  # 20
+  - radio communautaire  # 16
+  - university radio  # 221
+  - college radio   # 212
+  - radio universitaria  # 72
+  - universitaria   # 49
+  - campus radio    # 43
+  - student radio   # 70
+  - radio universidad  # 38
+  # religion, culture, education, sports, kids (all "in" per decision)
+  - religious       # 517
+  - religion        # 368
+  - christian       # 978
+  - christian talk  # 26
+  - christian teaching  # 37
+  - christian preaching  # 88
+  - catholic        # 149
+  - catholic radio  # 25
+  - islamic         # 380
+  - islam           # 354
+  - quran           # 349
+  - culture         # 346
+  - cultural        # 128
+  - cultura         # 66
+  - education       # 105
+  - educational     # 41
+  - educativa       # 15
+  - sports          # 413
+  - sport           # 194
+  - deportes        # 146
+  - live sports     # 81
+  - sports talk     # 72
+  - kids            # 108
+  - children        # 97
+  - youth           # 125
+  - youth programming  # 42
+  - weather         # 53
+  - health          # 43
+  - agriculture     # 21
+  - science         # 15
+  - indigenous      # 45
+  - multicultural   # 50
+
+# Tag -> our topic (ids from config/categories.yaml). Method: source_field.
+topics:
+  sports: [sports, sport, deportes, live sports, sports talk, sports news, noticias y deportes, local sports, esportes, deporte]
+  religion: [religious, religion, christian, christian talk, christian teaching, christian preaching, catholic, catholic radio, islamic, islam, quran, gospel, church, orthodox christian]
+  culture: [culture, cultural, cultura, cultural news]
+  education: [education, educational, educativa, university radio, college radio, radio universitaria, campus radio]
+  children_youth: [kids, children, youth, youth programming, juvenil]
+  business_economy: [business, business news, economics, economic news]
+  health: [health]
+  agriculture: [agriculture]
+  science: [science]
+  indigenous: [indigenous]
+  elections: [politics, political talk]
+  community_local: [community radio, community, radio comunitaria, comunitaria, local news, local radio, local talk, local information, noticias locales]
+
+# Tag -> organisation type evidence (needs a second source, see KATEGORIEN.md 1).
+org_type:
+  community_media: [community radio, radio comunitaria, comunitaria, concesión comunitaria, radio communautaire]
