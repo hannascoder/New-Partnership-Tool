@@ -1,0 +1,35 @@
+# Which Wikidata items count as media outlets.
+# An item is fetched when it is an instance of one of these classes
+# (or of a sub-class of them) and its country (P17) is one of the 195.
+# "expected_label" is checked against Wikidata on every run: if the
+# label does not match, that class is skipped and reported, so a wrong
+# id can never pull in wrong data silently.
+root_classes:
+  - {qid: Q11032,    expected_label: newspaper}
+  - {qid: Q41298,    expected_label: magazine}
+  - {qid: Q192283,   expected_label: news agency}
+  - {qid: Q14350,    expected_label: radio station}
+  - {qid: Q1616075,  expected_label: television station}
+  - {qid: Q2001305,  expected_label: television channel}
+  - {qid: Q15265344, expected_label: broadcaster}
+  - {qid: Q1153191,  expected_label: online newspaper}
+  - {qid: Q17232649, expected_label: news website}
+  - {qid: Q24634210, expected_label: podcast}
+
+# Not yet sure of the id: the fetcher searches Wikidata for these names and
+# writes the top hits to raw/wikidata/class_search.json for review.
+search_classes:
+  - news website
+  - news media
+  - news outlet
+  - fact-checking organization
+  - fact-checking website
+  - community radio
+  - public broadcaster
+  - public broadcasting
+  - online magazine
+  - news magazine
+  - media company
+  - periodical
+  - radio network
+  - television network

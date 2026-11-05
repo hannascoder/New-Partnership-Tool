@@ -1,0 +1,42 @@
+# Step 2: downloads every source and saves the raw data in raw/<source>/.
+# Start by hand: Actions -> "Fetch sources" -> Run workflow.
+# (In step 9 this gets a monthly schedule, the safety brake and error mails.)
+name: Fetch sources
+on:
+  workflow_dispatch:
+  push:
+    branches: ["step-2-*"]
+    paths: ["pipeline/fetch/**", "config/sources/**", ".github/workflows/fetch.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: fetch-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Radio Browser
+        continue-on-error: true
+        run: python pipeline/fetch/radio_browser.py
+      - name: iptv-org
+        continue-on-error: true
+        run: python pipeline/fetch/iptv_org.py
+      - name: Wikidata
+        continue-on-error: true
+        timeout-minutes: 240
+        run: python pipeline/fetch/wikidata.py
+      - name: Save raw data
+        run: |
+          git config user.name "partner-finder-bot"
+          git config user.email "partner-finder-bot@users.noreply.github.com"
+          git add raw/
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Raw data: fetch $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && break; sleep 10; done

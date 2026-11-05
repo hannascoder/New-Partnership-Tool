@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
   pull_request:
     paths: [".github/workflows/probe-sources.yml"]
+  push:
+    branches: ["step-2-*"]
+    paths: [".github/workflows/probe-sources.yml"]
 permissions:
   contents: read
 jobs:
@@ -39,6 +42,20 @@ jobs:
           probe "RSF index" "https://rsf.org/en/index"
           probe "Media Ownership Monitor" "https://www.mom-gmr.org/en/"
           probe "State media (Wikipedia)" "https://en.wikipedia.org/wiki/List_of_state_media_by_country"
+          probe "Media Cloud directory" "https://www.mediacloud.org/media-cloud-directory"
+          probe "Media Cloud API (no key)" "https://search.mediacloud.org/api/sources/collections/?limit=1"
+          probe "Media Cloud Zenodo record" "https://zenodo.org/api/records/18189311"
+          probe "Podcast Index (site)" "https://podcastindex.org/"
+          probe "Podcast Index API (no key)" "https://api.podcastindex.org/api/1.0/search/byterm?q=news"
+          probe "EBU members" "https://www.ebu.ch/about/members"
+          probe "ABU members" "https://www.abu.org.my/56tt"
+          probe "AUB members" "https://www.uar-aub.org/ours-members"
+          probe "Wikipedia: news agencies" "https://en.wikipedia.org/wiki/List_of_news_agencies"
+          probe "IFCN signatories (Poynter)" "https://ifcncodeofprinciples.poynter.org/signatories"
+          probe "Covering Climate Now directory" "https://coveringclimatenow.org/partners/partner-directory/"
+          echo
+          echo "Zenodo record files:"
+          curl -sS -m 40 -A "$UA" "https://zenodo.org/api/records/18189311" | python3 -c "import json,sys;d=json.load(sys.stdin);print(d.get('metadata',{}).get('title'));print(d.get('metadata',{}).get('license'));[print(f.get('key'),f.get('size'),f.get('links',{}).get('self')) for f in d.get('files',[])]" || true
           echo
           echo "ABYZ: lines mentioning terms, copyright or permission:"
           curl -sS -L -m 40 -A "$UA" "http://www.abyznewslinks.com/" | grep -i -o -E '.{0,160}(copyright|permission|terms|reproduc|commercial).{0,160}' | head -20 || true
