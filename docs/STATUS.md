@@ -17,10 +17,14 @@ is published automatically (only the PR *preview* builds fail; harmless).
 
 ## In progress
 - **Branch `step-4-far-right`**: exclusion of very right-wing media (owner's request). Rule in
-  `config/rules.yaml` (`exclude_far_right`), code in `pipeline/classify/classify.py`, evidence fetched
-  by `pipeline/fetch/far_right.py` (workflow run started 06.11.2026 19:33 UTC). Next: pull the branch,
-  run classify, look at `reports/excluded_far_right.md`, **send the list to the owner for review before
-  merging**, then rebuild `site/data` and merge.
+  `config/rules.yaml` (`exclude_far_right`), code in `pipeline/classify/classify.py`, evidence in
+  `raw/far_right/` (988 Wikidata items with a listed ideology, 26 Wikipedia categories / 755 articles).
+  Result: **48 outlets** in `reports/excluded_far_right.md`, **sent to the owner for review on 06.11.2026
+  evening — waiting for the answer.** Questionable entries flagged to the owner: Corriere Adriatico (ITA,
+  regional daily), Kesari (IND, historic Marathi paper), Al-Manar / Al-Nour / Al-Ahed (LBN) and Al-Aqsa TV
+  (PSE) (excluded only via the owner's ideology "antisemitism", not right-wing as such). After the answer:
+  adjust rules or add `overrides.csv` lines (`<id>,far_right,no,<why>`), rebuild `site/data`
+  (pipeline/README.md), open PR, merge.
 - **Branch `ngo-sources`** (NGOs, phase 2, owner wants them in): fetchers for ECOSOC iCSO (slow server,
   paging with cookies, resumes), UN Geneva list (~1,500, parsed), IATI (1,338 NGOs);
   `pipeline/normalize/ngos.py`. ECOSOC: plan to use the lists by field of activity / country instead
