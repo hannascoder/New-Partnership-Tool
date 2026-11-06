@@ -1,0 +1,81 @@
+# How language names/codes written by the sources map to our codes (ISO 639-3,
+# config/languages.csv). Names from languages.csv and two-letter codes are
+# matched automatically; this file holds only the exceptions.
+
+# Individual languages counted under a button macrolanguage, so the
+# "Arabic", "Chinese (Mandarin)" and "Kiswahili" buttons find them.
+into_macrolanguage:
+  cmn: zho   # Mandarin Chinese
+  arb: ara   # Standard Arabic
+  swh: swa   # Swahili (individual language)
+
+# Names that differ from the ISO 639-3 names.
+names:
+  Brazilian Portuguese: por
+  European Portuguese: por
+  Chinese: zho
+  Mandarin Chinese: zho
+  Standard Mandarin: zho
+  Modern Standard Arabic: ara
+  Standard Arabic: ara
+  Swahili: swa
+  Kiswahili: swa
+  Norwegian: nor
+  Norwegian Bokmål: nob
+  Persian: fas
+  Farsi: fas
+  Malay: msa
+  Indonesian: ind
+  Greek: ell
+  Modern Greek: ell
+  Nepali: npi
+  Latvian: lav
+  Estonian: est
+  Albanian: sqi
+  Azerbaijani: aze
+  Uzbek: uzb
+  Pashto: pus
+  Kurdish: kur
+  Quechua: que
+  Serbo-Croatian: hbs
+  American English: eng
+  British English: eng
+  Canadian French: fra
+  Belgian French: fra
+  Swiss German: gsw
+  Austrian German: deu
+  Latin American Spanish: spa
+  Mexican Spanish: spa
+  Rioplatense Spanish: spa
+  Canadian English: eng
+  Australian English: eng
+  Swiss Standard German: deu
+  Simplified Chinese: zho
+  Traditional Chinese: zho
+  Standard Chinese: zho
+  Mandarin: zho
+  Malaysian Mandarin: zho
+  Levantine Arabic: ara
+  Slovene: slv
+  Bangla: ben
+  Nynorsk: nno
+  Bokmål: nob
+  Riksmål: nob
+  Occitan: oci
+  Punjabi: pan
+  Māori: mri
+  Kurdish language: kur
+  # ISO 639-2 "bibliographic" codes some sources use
+  ger: deu
+  cze: ces
+  rum: ron
+  gre: ell
+  fre: fra
+  chi: zho
+  dut: nld
+  per: fas
+  jap: jpn
+
+# Values that are not a language: ignored (but "multiple languages" is noted).
+ignore: [multiple languages, mul, und, zxx, unknown, other,
+         Latin, la, lat, Esperanto, Ottoman Turkish, pidgin]  # not living / not one language

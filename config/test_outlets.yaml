@@ -1,0 +1,24 @@
+# Step 3 check: 20 well-known outlets. Each must be found exactly ONCE
+# (no duplicate), in the right country. Add or change entries any time.
+# "name" is matched against the outlet's name and other names (exact, case-insensitive).
+outlets:
+  - {name: BBC News, country: GBR}
+  - {name: The Guardian, country: GBR}
+  - {name: Radio France Internationale, country: FRA}
+  - {name: Le Monde, country: FRA}
+  - {name: Agence France-Presse, country: FRA}
+  - {name: Deutsche Welle, country: DEU}
+  - {name: Al Jazeera, country: QAT}
+  - {name: Radio Okapi, country: COD}
+  - {name: Radio Top Congo, country: COD}
+  - {name: NHK, country: JPN}
+  - {name: Folha de S.Paulo, country: BRA}
+  - {name: The Hindu, country: IND}
+  - {name: Daily Nation, country: KEN}
+  - {name: Xinhua News Agency, country: CHN}
+  - {name: El País, country: ESP}
+  - {name: Al-Ahram, country: EGY}
+  - {name: Australian Broadcasting Corporation, country: AUS}
+  - {name: Clarín, country: ARG}
+  - {name: Mail & Guardian, country: ZAF}
+  - {name: Rappler, country: PHL}
