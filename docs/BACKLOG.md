@@ -16,6 +16,9 @@ Same filters as media (country, region, topics, language); NGOs only get a new o
 ## Model UN (owner's request, 06.11.2026)
 - Add Model UN (conferences, national associations, university clubs) as partners. Scope and sources still to be discussed.
 
+## Email contacts (owner's request, 06.11.2026)
+- Build in email contacts directly (organisation/newsroom addresses only, no personal addresses). Sources: Wikidata email, UN Geneva list, website check (contact page), later NGO profiles.
+
 ## Waiting for the owner
 - Internal SDG Media Compact member list (DGC Campaigns).
 - Podcast Index API key (free sign-up) – later.
