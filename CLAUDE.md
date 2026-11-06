@@ -1,6 +1,6 @@
 # Working on this repository
 
-Read `docs/BRIEFING.md` first. It is the full plan; its section A says how to work with the owner, section N is the step-by-step action plan. Do only one step per session, and continue only when the owner has confirmed its "done when".
+Read `docs/STATUS.md` first (where we are, what is next), then `docs/BRIEFING.md`. It is the full plan; its section A says how to work with the owner, section N is the step-by-step action plan. Do only one step per session, and continue only when the owner has confirmed its "done when".
 
 Decisions made after the briefing was written (these win over the briefing):
 
