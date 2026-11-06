@@ -6,7 +6,7 @@ on:
   pull_request:
     paths: [".github/workflows/probe-sources.yml"]
   push:
-    branches: ["step-2-*"]
+    branches: ["step-*", "ngo-*"]
     paths: [".github/workflows/probe-sources.yml"]
 permissions:
   contents: read
@@ -56,6 +56,26 @@ jobs:
           echo
           echo "Zenodo record files:"
           curl -sS -m 40 -A "$UA" "https://zenodo.org/api/records/18189311" | python3 -c "import json,sys;d=json.load(sys.stdin);print(d.get('metadata',{}).get('title'));print(d.get('metadata',{}).get('license'));[print(f.get('key'),f.get('size'),f.get('links',{}).get('self')) for f in d.get('files',[])]" || true
+          echo
+          echo "NGO sources:"
+          probe "ECOSOC iCSO login page" "https://esango.un.org/civilsociety/login.do"
+          probe "ECOSOC iCSO search (consultative status)" "https://esango.un.org/civilsociety/displayConsultativeStatusSearch.do?method=search&sessionCheck=false"
+          probe "ECOSOC iCSO advanced search" "https://esango.un.org/civilsociety/displayAdvancedSearch.do?method=search&sessionCheck=false"
+          probe "UN DESA COSP NGO list" "https://social.desa.un.org/issues/disability/cosp/list-of-non-governmental-organization-accredited-to-the-conference-of-states"
+          probe "UN Geneva NGO list" "https://www.ungeneva.org/en/engage/civil-society/ngo-list"
+          probe "IATI registry organisations" "https://iatiregistry.org/api/3/action/organization_list?all_fields=true&limit=5"
+          probe "IATI organisation types" "https://iatistandard.org/reference_downloads/203/codelists/downloads/clv3/json/en/OrganisationType.json"
+          probe "Wikidata NGO count" "https://query.wikidata.org/sparql?format=json&query=SELECT%20(COUNT(*)%20AS%20%3Fn)%20WHERE%20%7B%20%3Fx%20wdt%3AP31%20wd%3AQ79913%20.%20%3Fx%20wdt%3AP17%20%3Fc%20%7D"
+          echo "--- iCSO search page: forms, links, export words"
+          curl -sS -L -m 40 -A "$UA" "https://esango.un.org/civilsociety/displayConsultativeStatusSearch.do?method=search&sessionCheck=false" | grep -oiE '<form[^>]*>|<select[^>]*name="[^"]*"|<input[^>]*name="[^"]*"|href="[^"]*(export|excel|csv|xls|download|showProfile|profile)[^"]*"' | sort -u | head -40 || true
+          echo "--- iCSO: links mentioning lists / reports"
+          curl -sS -L -m 40 -A "$UA" "https://esango.un.org/civilsociety/login.do" | grep -oiE 'href="[^"]+"' | sort -u | head -60 || true
+          echo "--- UN Geneva list: structure"
+          curl -sS -L -m 40 -A "$UA" "https://www.ungeneva.org/en/engage/civil-society/ngo-list" | grep -oiE '<table[^>]*>|<tr[^>]*>|href="[^"]*(xls|csv|pdf|download|page=)[^"]*"' | sort | uniq -c | sort -rn | head -15 || true
+          echo "--- DESA list: structure"
+          curl -sS -L -m 40 -A "$UA" "https://social.desa.un.org/issues/disability/cosp/list-of-non-governmental-organization-accredited-to-the-conference-of-states" | grep -oiE '<table|<li>|<tr|href="[^"]*(xls|csv|pdf)[^"]*"' | sort | uniq -c | head || true
+          echo "--- IATI sample"
+          curl -sS -m 40 -A "$UA" "https://iatiregistry.org/api/3/action/organization_list?all_fields=true&limit=2" | head -c 1500 || true
           echo
           echo "IFCN: API addresses used by the signatories page:"
           chunk=$(curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org/signatories" | grep -oE '/_next/static/chunks/pages/signatories-[a-z0-9]+\.js' | head -1)
