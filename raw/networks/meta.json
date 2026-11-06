@@ -1,6 +1,6 @@
 {
   "source": "networks",
-  "fetched_at": "2026-11-06T14:49:47Z",
+  "fetched_at": "2026-11-06T14:57:01Z",
   "records": 0,
   "pages": {
     "sdg_media_compact": {
@@ -51,7 +51,7 @@
     "aub_members": {
       "ok": true,
       "source": "https://www.uar-aub.org/ours-members",
-      "bytes": 982330
+      "bytes": 983302
     },
     "ebu_members": {
       "ok": true,
