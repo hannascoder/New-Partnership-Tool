@@ -16,6 +16,11 @@ CFG = ROOT / "config"
 SOCIAL_URL = {"youtube": "https://www.youtube.com/channel/{}", "facebook": "https://www.facebook.com/{}",
               "instagram": "https://www.instagram.com/{}", "tiktok": "https://www.tiktok.com/@{}",
               "x": "https://x.com/{}", "telegram": "https://t.me/{}"}
+# Lists offered in the "Member of" filter (owner's request, 06.11.2026)
+NETWORK_FILTER = {"sdg_media_compact": "SDG Media Compact", "ebu_members": "EBU (European Broadcasting Union)",
+                  "abu_members": "ABU (Asia-Pacific Broadcasting Union)", "asbu_members": "ASBU (Arab States Broadcasting Union)",
+                  "cbu_members": "CBU (Caribbean Broadcasting Union)", "efcsn_signatories": "EFCSN (fact-checkers)",
+                  "fact_checking_sites": "Fact-checking websites (Wikipedia list)"}
 SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org": "iptv-org",
                 "radio_browser": "Radio Browser", "sdg_media_compact": "SDG Media Compact",
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
@@ -41,6 +46,10 @@ def main():
             o["_rank"] = i
 
     out, used_langs = [], set()
+    why = {}  # repeated "source of a value" texts stored once (keeps outlets.json small)
+
+    def w(text):
+        return why.setdefault(text, len(why))
     for o in outlets:
         e = {"i": o["id"], "n": o["name"], "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
         alt = [a for a in o["alt_names"] if a.isascii()][:3]
@@ -57,14 +66,21 @@ def main():
         if social:
             e["so"] = social
         if o.get("email"):
-            e["em"] = o["email"]
+            e["em"] = o["email"].replace("mailto:", "").strip()
         e["s"] = o["sources"]
         if "sdg_media_compact" in o["sources"]:
             e["un"] = ["un_relationship"]
         e["f"] = o["first_seen"]
         cat = o.get("cat", {})
         if cat.get("org_type"):
-            e["o"] = [cat["org_type"]["value"], cat["org_type"]["source"]]
+            e["o"] = [cat["org_type"]["value"], w(cat["org_type"]["source"])]
+        if cat.get("org_type_also"):
+            e["oa"] = cat["org_type_also"]
+        if cat.get("ownership"):
+            e["ow"] = [cat["ownership"]["value"], w(cat["ownership"]["source"])]
+        nets = [n for n in o.get("networks", []) if n in NETWORK_FILTER]
+        if nets:
+            e["nw"] = nets
         out.append(e)
     out.sort(key=lambda e: (e["n"] or "").lower())
 
@@ -87,7 +103,9 @@ def main():
         "size_note": cats.get("size_note"),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)
-        "pending": ["ownership", "scope", "topics", "reach", "website_check"],
+        "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
+        "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
+        "pending": ["scope", "topics", "reach", "website_check"],
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)

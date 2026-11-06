@@ -57,3 +57,54 @@ media_classes: [newspaper, daily newspaper, weekly newspaper, magazine, news mag
                 news website, television station, television channel, radio station, broadcaster,
                 public broadcaster, news agency, international broadcasting, specialty channel,
                 television network, broadcast network, radio network]
+
+# ---------------------------------------------------------------- 4b
+# Ownership: exactly ONE value, always with its source (briefing G).
+# Checked top to bottom; the first rule with evidence wins. No evidence -> unknown.
+# "owner" = the outlet's owner or parent organisation in Wikidata (P127/P749),
+# and also the owner's own owner (one level up). Classes are Wikidata labels.
+ownership:
+  - value: state_controlled
+    # 1. The Wikipedia "List of state media by country", whose main source is
+    #    the State Media Monitor (Media and Journalism Research Center): it lists
+    #    state-controlled media only (not independent public media like BBC or ARD).
+    networks: [state_media]
+    # Rules 2 and 3 do NOT apply to public broadcasters (step 4a type
+    # "public service broadcaster"): Wikidata often names a ministry as the formal
+    # owner of independent public media (BBC -> culture ministry) or calls them
+    # "state media" (DW). For them only rules 1 and 4 decide.
+    # 2. The outlet itself is classed as state media / state-owned in Wikidata.
+    wikidata_classes: [state media, state-owned enterprise, government agency, government organization,
+                       state-owned television, state broadcaster]
+    # 3. Its owner is a government body, a state, a ruling party or the military.
+    owner_classes: [government, government agency, government organization, ministry, ministry of information,
+                    executive branch, state, sovereign state, country, political party, communist party,
+                    armed forces, military, military branch, state-owned enterprise, state media,
+                    government-owned corporation, public body]
+    # 4. A public broadcaster in a country RSF rates "very serious situation"
+    #    (newest year) is counted as state-controlled (decision 3 of 05.11.2026).
+    public_broadcaster_in_rsf_categories: [5]
+  - value: public_service
+    # A public service broadcaster (step 4a) that is not state-controlled.
+    org_types: [public_service_broadcaster]
+    owner_classes: [public broadcaster, public service broadcaster, public broadcasting]
+  - value: community_nonprofit
+    org_types: [community_media]
+    owner_classes: [foundation, charitable organization, nonprofit organization, non-profit organization,
+                    non-governmental organization, association, voluntary association, cooperative,
+                    trust, religious organization, church, diocese, university, public university,
+                    private university, educational institution, community radio]
+  - value: private
+    owner_classes: [business, enterprise, company, public company, private company, media company,
+                    privately held company, media conglomerate, publishing house,
+                    conglomerate, holding company, publishing company, newspaper publisher,
+                    broadcasting company, television company, human, family business, subsidiary,
+                    limited company, joint-stock company, société anonyme, Aktiengesellschaft,
+                    Gesellschaft mit beschränkter Haftung, corporation, mass media company]
+  - value: unknown
+    default: true
+
+# A public service broadcaster (4a) whose owner is private (e.g. ITV, TV 2 Norway:
+# commercial EBU members with a public service remit) is listed under BOTH
+# types: "Public service broadcaster" and "News outlet" (owner's request, 06.11.2026).
+also_news_outlet_if_private_psb: true

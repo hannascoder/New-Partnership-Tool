@@ -13,6 +13,9 @@ Same filters as media (country, region, topics, language); NGOs only get a new o
 | Suggested: IATI registry of publishing organisations | Open data, good for development NGOs. |
 | Suggested: Wikidata (NGO / non-profit classes) | Same technique as for media; gives stable ids. |
 
+## Model UN (owner's request, 06.11.2026)
+- Add Model UN (conferences, national associations, university clubs) as partners. Scope and sources still to be discussed.
+
 ## Waiting for the owner
 - Internal SDG Media Compact member list (DGC Campaigns).
 - Podcast Index API key (free sign-up) – later.

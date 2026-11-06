@@ -13,7 +13,7 @@ on:
         type: boolean
         default: false
   push:
-    branches: ["step-2-*"]
+    branches: ["step-2-*", "step-4*", "ngo-*"]
     paths: ["pipeline/fetch/**", "config/sources/**", ".github/workflows/fetch.yml"]
 permissions:
   contents: write
@@ -42,6 +42,9 @@ jobs:
       - name: Network and member lists
         continue-on-error: true
         run: python pipeline/fetch/networks.py
+      - name: Wikidata owners (step 4b)
+        continue-on-error: true
+        run: python pipeline/fetch/wikidata_owners.py
       - name: Save raw data
         run: bash pipeline/fetch/commit_raw.sh "quick sources"
 
