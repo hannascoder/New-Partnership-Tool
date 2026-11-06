@@ -24,7 +24,7 @@ is published automatically (only the PR *preview* builds fail; harmless).
   Honest result: 28 % of outlets have no topic in any source ("General news"); most SDG topics have
   0-150 outlets; "Solutions", "Development journalism", "Open to partner content" have no open source.
   The website check (next) and Covering Climate Now (CSV) are the main ways to fill this.
-  Proposals for the owner to confirm: LGBTQ / African American media -> "Reduced inequalities";
+  Confirmed by the owner (06.11.2026): LGBTQ / African American media -> "Reduced inequalities";
   student newspapers / campus radio -> "Children & youth" + "Youth audience"; diaspora-language media
   (e.g. Vietnamese in the USA) -> "Reaches underserved audiences".
   outlets.json is now 21 MB (Cloudflare limit per file: 25 MiB) - watch this when NGOs are added.
