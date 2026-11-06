@@ -20,3 +20,16 @@ Same filters as media (country, region, topics, language); NGOs only get a new o
 ## Other
 - Misinformation Monitor.
 - Briefing section O (describe your product with AI, similar outlets, pitch tracking, reach data, material details).
+
+### NGO filters (proposal agreed in principle, 06.11.2026)
+- Organisation type gets "NGO / civil society"; choosing it shows NGOs only (or media + NGOs).
+- Shared filters: country, region, scope, language, topics (5 Ps + beats), UN profile, verified, has contact.
+- Topics for NGOs come from: ECOSOC iCSO "areas of expertise / fields of activity", IATI sector codes
+  (OECD DAC, e.g. women's rights organisations -> gender_equality), Wikidata "field of work", DESA COSP list
+  (-> disability), later the website "About" text. Mapping table per source in config/sources/, like the radio tags.
+  NGOs are specialists, so topics will be filled far more often than for general news media.
+- UN profile: ECOSOC consultative status -> "Existing UN relationship".
+- Material -> channels for NGOs: Video -> social media, website, events/screenings; Audio -> podcast;
+  Photo/Graphic -> website, social media, newsletter; Text -> website, newsletter. New channel "Events / screenings".
+- Instead of Ownership: NGO filter "Type of work" (advocacy, humanitarian/service delivery, research,
+  network/umbrella, grassroots/community, youth organisation, faith-based); media-only filters greyed out.
