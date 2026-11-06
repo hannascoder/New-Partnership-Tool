@@ -18,6 +18,7 @@ corrections and "first seen" dates survive later runs.
 """
 import json
 import re
+import urllib.parse
 import sys
 import unicodedata
 from collections import Counter, defaultdict
@@ -28,7 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "normalize"))
 from countrymatch import to_iso3  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE_ORDER = ["wikidata", "media_cloud", "iptv_org", "radio_browser"]  # who wins for name/website
+SOURCE_ORDER = ["wikidata", "media_cloud", "iptv_org", "radio_browser", "network"]  # who wins for name/website
 NAME_STOP = {"the", "la", "le", "el", "les", "los", "las", "de", "del", "du", "des", "of", "a", "an",
              "and", "et", "y", "e", "und", "di", "da", "do", "das", "dos"}
 GENERIC_TOKENS = {"radio", "tv", "television", "televisión", "fm", "am", "hd", "news", "online",
@@ -61,6 +62,15 @@ def similar(a, b):
     if not ta or not tb:
         return False
     return len(ta & tb) / min(len(ta), len(tb)) >= 0.6
+
+
+def site_stem(domain):
+    """'bbc.co.uk/x' -> 'bbc', 'news.bbc.com' -> 'bbc': the name part of a site."""
+    parts = host(domain).split(".")
+    while len(parts) > 1 and (parts[-1] in ("com", "org", "net", "co", "uk", "info", "gov", "edu", "ac", "or", "ne", "go")
+                              or len(parts[-1]) == 2):
+        parts = parts[:-1]
+    return parts[-1] if parts else ""
 
 
 def host(domain):
@@ -104,10 +114,13 @@ def link(records):
         if r["source"] in ("radio_browser", "iptv_org"):
             by_src_name[(r["source"], r["country"], clean_name(r["name"]))].append(i)
     for idx in by_src_name.values():
-        for j in idx[1:]:
-            a, b = records[idx[0]], records[j]
-            if not a["domain"] or not b["domain"] or host(a["domain"]) == host(b["domain"]):
-                g.union(idx[0], j, same_source_ok="no-wd")
+        # same name in the same country: one station with several streams, as
+        # long as the websites belong to the same site ("bbc.co.uk" = "bbc.com")
+        for x in range(len(idx)):
+            for y in range(x + 1, len(idx)):
+                a, b = records[idx[x]], records[idx[y]]
+                if not a["domain"] or not b["domain"] or site_stem(a["domain"]) == site_stem(b["domain"]):
+                    g.union(idx[x], idx[y], same_source_ok="no-wd")
     # (a) exact website
     by_domain = defaultdict(list)
     for i, r in enumerate(records):
@@ -119,6 +132,14 @@ def link(records):
                 a, b = records[idx[0]], records[j]
                 site_item = "." in a["name"] and " " not in a["name"] or "." in b["name"] and " " not in b["name"]
                 g.union(idx[0], j, same_source_ok=site_item and a["source"] == b["source"] == "wikidata")
+    # (e) same English Wikipedia article (network lists <-> Wikidata)
+    by_wiki = defaultdict(list)
+    for i, r in enumerate(records):
+        if r.get("wikipedia"):
+            by_wiki[r["wikipedia"]].append(i)
+    for idx in by_wiki.values():
+        for j in idx[1:]:
+            g.union(idx[0], j)
     # (b) same host + similar name
     by_host = defaultdict(list)
     for i, r in enumerate(records):
@@ -135,14 +156,17 @@ def link(records):
     by_name = defaultdict(list)
     for i, r in enumerate(records):
         cn = clean_name(r["name"])
-        if len(cn) >= 4:
+        if len(cn) >= 3:
             by_name[(r["country"], cn)].append(i)
     for idx in by_name.values():
         if len(idx) <= 8:
             for x in range(len(idx)):
                 for y in range(x + 1, len(idx)):
                     a, b = records[idx[x]], records[idx[y]]
-                    if a["source"] != b["source"] and (not a["domain"] or not b["domain"]
+                    netpair = a["source"].startswith("net:") or b["source"].startswith("net:")
+                    if len(clean_name(a["name"])) < 4 and not netpair:
+                        continue  # very short names ("ABC") only with a network list
+                    if a["source"] != b["source"] and (netpair or not a["domain"] or not b["domain"]
                                                        or host(a["domain"]) == host(b["domain"])):
                         g.union(idx[x], idx[y])
     # (d) similar names in the same country when at least one has no website
@@ -198,12 +222,20 @@ def verdict(members, nets=()):
     return False, members[0]["include_reason"]
 
 
+def src_kind(m):
+    return "network" if m["source"].startswith("net:") else m["source"]
+
+
 def pick(members, field):
     for src in SOURCE_ORDER:
         for m in members:
-            if m["source"] == src and m.get(field):
+            if src_kind(m) == src and m.get(field):
                 return m[field]
     return None
+
+
+def nets_in(members):
+    return sorted({m["source"][4:] for m in members if m["source"].startswith("net:")})
 
 
 def networks_of(members, country, networks_by):
@@ -219,7 +251,7 @@ def networks_of(members, country, networks_by):
 
 
 def build(members, networks_by):
-    members = sorted(members, key=lambda m: SOURCE_ORDER.index(m["source"]))
+    members = sorted(members, key=lambda m: SOURCE_ORDER.index(src_kind(m)))
     countries = Counter(m["country"] for m in members if m["country"])
     country = pick(members, "country")
     langs, chans, social = [], [], {}
@@ -232,7 +264,7 @@ def build(members, networks_by):
         chans.append("website")
     if social and "social_media" not in chans:
         chans.append("social_media")
-    nets = networks_of(members, country, networks_by)
+    nets = nets_in(members)
     return {
         "name": pick(members, "name"),
         "alt_names": sorted(({m["name"] for m in members} | {a for m in members for a in m.get("alt_names", [])})
@@ -246,7 +278,9 @@ def build(members, networks_by):
         "qid": pick(members, "qid"),
         "wikipedia_languages": max((m.get("wikipedia_languages") or 0) for m in members),
         "networks": nets,
-        "sources": sorted({m["source"] for m in members} | set(nets)),
+        "network_membership": {m["source"][4:]: m["raw"].get("membership") for m in members
+                               if m["source"].startswith("net:") and m["raw"].get("membership")},
+        "sources": sorted({m["source"] for m in members if not m["source"].startswith("net:")} | set(nets)),
         "members": [m["key"] for m in members],
         "raw": {m["key"]: {k: v for k, v in m.items() if k in ("raw", "include_reason", "region_text",
                                                                   "city", "stream_ok", "other_countries",
@@ -271,6 +305,23 @@ def main():
         if n.get("country"):
             networks_by[("name", (n["country"], clean_name(n["name"])))].append(n)
 
+    # network members become records too: members not found in any other
+    # source are kept as outlets of their own (e.g. small fact-checkers)
+    for i, n in enumerate(networks):
+        if not n.get("country") or not n.get("name"):
+            continue
+        url = n.get("website")
+        m_safe = re.search(r"safelinks\.protection\.outlook\.com/\?url=([^&]+)", url or "")
+        if m_safe:  # links pasted from Outlook: unwrap the real address
+            url = urllib.parse.unquote(m_safe.group(1))
+        dom = None
+        if url:
+            dom = re.sub(r"^(www\d?|m)\.", "", re.sub(r"^https?://", "", url).split("?")[0].rstrip("/").lower())
+        records.append({"key": f"net:{n['list']}:{clean_name(n['name'])[:60]}:{n['country']}", "source": f"net:{n['list']}",
+                        "name": n["name"], "alt_names": [], "website": url, "domain": dom, "country": n["country"],
+                        "other_countries": [], "languages": [], "channels": [], "social": {},
+                        "wikipedia": n.get("wikipedia"), "raw": {"membership": n.get("membership")},
+                        "include": True, "include_reason": f"member of {n['list']}"})
     groups, rejected = link(records)
 
     id_file = ROOT / "cache" / "id_map.json"
@@ -282,7 +333,7 @@ def main():
 
     outlets, excluded = [], Counter()
     for members in groups:
-        ok, why = verdict(members, networks_of(members, pick(members, "country"), networks_by))
+        ok, why = verdict(members, nets_in(members))
         if not ok:
             excluded[re.sub(r":.*", "", why)] += 1
             continue
@@ -305,7 +356,7 @@ def main():
 
 
 def write_report(outlets, excluded, rejected, n_records):
-    combos = Counter(" + ".join(s for s in SOURCE_ORDER if s in o["sources"]) for o in outlets)
+    combos = Counter(" + ".join(s for s in SOURCE_ORDER if s in o["sources"]) or "network list only" for o in outlets)
     dupes = Counter((o["country"], clean_name(o["name"])) for o in outlets)
     dup_list = [(k, n) for k, n in dupes.most_common() if n > 1][:40]
     lines = ["# Step 3b: merged outlets", "",

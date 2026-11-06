@@ -77,8 +77,12 @@ if buttons != list(range(1, 10)):
     errors.append(f"languages.csv: expected buttons 1-9, found {buttons}")
 
 rules = yaml.safe_load(open(CONFIG / "rules.yaml", encoding="utf-8"))
-if not isinstance(rules, dict) or not isinstance(rules.get("rules"), list):
-    errors.append("rules.yaml: must contain 'rules:' followed by a list")
+if not isinstance(rules, dict) or not isinstance(rules.get("org_type"), list):
+    errors.append("rules.yaml: must contain 'org_type:' followed by a list")
+else:
+    for r in rules["org_type"]:
+        if r.get("type") not in known.get("org_type", set()):
+            errors.append(f"rules.yaml: unknown organisation type '{r.get('type')}'")
 
 header = open(ROOT / "overrides.csv", encoding="utf-8").readline().strip()
 if header != "outlet_id,field,value,note":

@@ -19,11 +19,12 @@ SOCIAL_URL = {"youtube": "https://www.youtube.com/channel/{}", "facebook": "http
 SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org": "iptv-org",
                 "radio_browser": "Radio Browser", "sdg_media_compact": "SDG Media Compact",
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
-                "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites"}
+                "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
+                "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU"}
 
 
 def main():
-    outlets = json.load(open(ROOT / "work" / "outlets.json", encoding="utf-8"))
+    outlets = json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))
     countries = list(csv.DictReader(open(CFG / "countries.csv", encoding="utf-8")))
     langs_all = {r["code"]: r for r in csv.DictReader(open(CFG / "languages.csv", encoding="utf-8"))}
     cats = yaml.safe_load(open(CFG / "categories.yaml", encoding="utf-8"))
@@ -61,6 +62,9 @@ def main():
         if "sdg_media_compact" in o["sources"]:
             e["un"] = ["un_relationship"]
         e["f"] = o["first_seen"]
+        cat = o.get("cat", {})
+        if cat.get("org_type"):
+            e["o"] = [cat["org_type"]["value"], cat["org_type"]["source"]]
         out.append(e)
     out.sort(key=lambda e: (e["n"] or "").lower())
 
@@ -83,7 +87,7 @@ def main():
         "size_note": cats.get("size_note"),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)
-        "pending": ["org_type", "ownership", "scope", "topics", "reach", "website_check"],
+        "pending": ["ownership", "scope", "topics", "reach", "website_check"],
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)

@@ -6,7 +6,9 @@ Run in this order (from the repository root):
 python pipeline/normalize/networks.py      # members of network lists   -> work/networks.json
 python pipeline/normalize/sources.py       # all sources, one format    -> work/records.json
 python pipeline/merge/merge.py             # duplicates merged, ids     -> work/outlets.json
+python pipeline/classify/classify.py       # categories (step 4)        -> work/classified.json
 python pipeline/validate/known_outlets.py  # check: 20 known outlets    -> reports/known_outlets.md
+python pipeline/build/site_data.py         # website data               -> site/data/
 ```
 
 - `fetch/` downloads the sources (run by the "Fetch sources" workflow), raw data in `raw/`.

@@ -5,7 +5,7 @@
 (function () {
   "use strict";
   const PAGE = 50;
-  const S = { material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
+  const S = { orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
               channel: new Set(), size: "all", un: new Set(), checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
@@ -54,7 +54,8 @@
     $("f-country").addEventListener("change", (e) => { S.country = e.target.value; apply(); });
     drawCountries();
     C.scope.forEach((s) => $("f-scope").append(chip(esc(s.label), false, () => {}, { disabled: true })));
-    visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label), false, () => {}, { disabled: true })));
+    const typeCount = {}; ALL.forEach((o) => { if (o.o) typeCount[o.o[0]] = (typeCount[o.o[0]] || 0) + 1; });
+    visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label) + ` <span class="sdg">${(typeCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgType, o.id))));
     visible(C.channel).forEach((c) => $("f-channel").append(chip(esc(c.label), false, toggle(S.channel, c.id))));
     C.ownership.forEach((o) => $("f-ownership").append(chip(esc(o.label), false, () => {}, { disabled: true })));
     C.size.forEach((s) => {
@@ -119,21 +120,29 @@
   }
 
   function anyFilter() {
-    return S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.un.size || S.checks.size;
+    return S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.un.size || S.checks.size;
   }
 
   function apply() {
     const C = CFG.categories;
-    let matChannels = null;
-    if (S.material.size) { matChannels = new Set(); C.material.filter((m) => S.material.has(m.id)).forEach((m) => m.channels.forEach((c) => matChannels.add(c))); }
+    let matChannels = null, matTypes = null;
+    if (S.material.size) {
+      matChannels = new Set(); matTypes = new Set();
+      C.material.filter((m) => S.material.has(m.id)).forEach((m) => { m.channels.forEach((c) => matChannels.add(c)); (m.also_org_types || []).forEach((t) => matTypes.add(t)); });
+    }
     $("materialHint").textContent = matChannels ? "Shows outlets on: " + [...matChannels].map((c) => (C.channel.find((x) => x.id === c) || {}).label || c).join(", ") : "";
     current = ALL.filter((o) => {
       if (S.country ? o.c !== S.country : !inRegion(o.c)) return false;
       const ch = o.ch || [];
-      if (matChannels && !ch.some((c) => matChannels.has(c))) return false;
+      if (matChannels && !ch.some((c) => matChannels.has(c)) && !(matTypes && o.o && matTypes.has(o.o[0]))) return false;
       if (S.channel.size && !ch.some((c) => S.channel.has(c))) return false;
       if (S.langs.size) {
         if (!o.l) { if (!S.noLang) return false; } else if (!o.l.some((l) => S.langs.has(l))) return false;
+      }
+      if (S.orgType.size) {
+        const types = new Set(S.orgType);
+        // "Text" also finds news agencies (categories.yaml: also_org_types)
+        if (!o.o || !types.has(o.o[0])) return false;
       }
       if (S.size === "top10" && o.r > 10) return false;
       if (S.size === "top50" && o.r > 50) return false;
@@ -166,6 +175,7 @@
     return `<li class="card"><div class="card-top"><h3>${esc(o.n)}</h3>${verified}</div>
       <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")}) · Reaches: <span class="pending">step 4</span></p>
       ${o.a ? `<p class="row">Also known as: ${esc(o.a.join(", "))}</p>` : ""}
+      ${o.o ? `<p class="row"><b>Type:</b> <span title="${esc(o.o[1])}">${esc((C.org_type.find((x) => x.id === o.o[0]) || {}).label || o.o[0])}</span> <span class="pending">(${esc(o.o[1])})</span></p>` : ""}
       <p class="row"><b>Languages:</b> ${langs}</p>
       <p class="row"><b>Channels:</b> ${esc(chans) || "<span class='pending'>no information</span>"}</p>
       ${unl ? `<p class="row"><b>UN profile:</b> ${esc(unl)}</p>` : ""}
@@ -202,10 +212,10 @@
   function downloadCsv() {
     const byId = {}; ALL.forEach((o) => { byId[o.i] = o; });
     const C = CFG.categories;
-    const head = ["id", "name", "country", "region", "languages", "channels", "website", "contact", "social media", "sources", "verified"];
+    const head = ["id", "name", "type", "country", "region", "languages", "channels", "website", "contact", "social media", "sources", "verified"];
     const rows = [...exportList].map((id) => byId[id]).filter(Boolean).map((o) => {
       const k = CFG.countryName[o.c] || {};
-      return [o.i, o.n, k.name, k.subregion, (o.l || []).map((l) => CFG.langName[l] || l).join("; "),
+      return [o.i, o.n, o.o ? ((C.org_type.find((x) => x.id === o.o[0]) || {}).label || o.o[0]) : "", k.name, k.subregion, (o.l || []).map((l) => CFG.langName[l] || l).join("; "),
         (o.ch || []).map((c) => (C.channel.find((x) => x.id === c) || {}).label || c).join("; "), o.w || "", o.em || "",
         Object.values(o.so || {}).join(" "), o.s.map((s) => CFG.source_labels[s] || s).join("; "), o.s.length >= 2 ? "yes" : "no"];
     });
