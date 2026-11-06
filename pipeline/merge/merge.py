@@ -331,16 +331,20 @@ def main():
     first_seen_file = ROOT / "cache" / "first_seen.json"
     first_seen = json.load(open(first_seen_file, encoding="utf-8")) if first_seen_file.exists() else {}
 
-    outlets, excluded = [], Counter()
+    outlets, excluded, used_ids = [], Counter(), set()
     for members in groups:
         ok, why = verdict(members, nets_in(members))
         if not ok:
             excluded[re.sub(r":.*", "", why)] += 1
             continue
-        known = sorted({id_map[m["key"]] for m in members if m["key"] in id_map})
-        oid = known[0] if known else f"pf-{next_no:06d}"
-        if not known:
+        # keep an existing id, but never give the same id to two outlets: when a
+        # group split up, the part with the most members known under that id keeps it
+        known = Counter(id_map[m["key"]] for m in members if m["key"] in id_map)
+        oid = next((i for i, _ in known.most_common() if i not in used_ids), None)
+        if not oid:
+            oid = f"pf-{next_no:06d}"
             next_no += 1
+        used_ids.add(oid)
         for m in members:
             id_map[m["key"]] = oid
         first_seen.setdefault(oid, today)

@@ -5,15 +5,20 @@
 (function () {
   "use strict";
   const PAGE = 50;
-  const S = { scope: new Set(), scopeUnknown: false, reach: true, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
+  const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
               channel: new Set(), size: "all", un: new Set(), checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
+  let filterSets = loadSets();  // every distinct filter combination active when items were added
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   function loadList() { try { return JSON.parse(localStorage.getItem("pf-export") || "[]"); } catch (e) { return []; } }
-  function saveList() { try { localStorage.setItem("pf-export", JSON.stringify([...exportList])); } catch (e) { /* private window */ } }
+  function loadSets() { try { return JSON.parse(localStorage.getItem("pf-export-filters") || "[]"); } catch (e) { return []; } }
+  function saveList() {
+    try { localStorage.setItem("pf-export", JSON.stringify([...exportList])); localStorage.setItem("pf-export-filters", JSON.stringify(filterSets)); }
+    catch (e) { /* private window: the list still works until the page is closed */ }
+  }
 
   Promise.all([fetch("data/config.json").then((r) => r.json()), fetch("data/outlets.json").then((r) => r.json())])
     .then(([cfg, outlets]) => { CFG = cfg; ALL = outlets; init(); apply(); })
@@ -57,6 +62,7 @@
     C.scope.forEach((s) => $("f-scope").append(chip(esc(s.label) + ` <span class="sdg">${(scCount[s.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.scope, s.id))));
     $("f-scopeUnknown").addEventListener("change", (e) => { S.scopeUnknown = e.target.checked; apply(); });
     $("f-reach").addEventListener("change", (e) => { S.reach = e.target.checked; apply(); });
+    $("f-worldwide").addEventListener("change", (e) => { S.worldwide = e.target.checked; apply(); });
     const typeCount = {}; ALL.forEach((o) => { if (o.o) typeCount[o.o[0]] = (typeCount[o.o[0]] || 0) + 1; });
     visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label) + ` <span class="sdg">${(typeCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgType, o.id))));
     visible(C.channel).forEach((c) => $("f-channel").append(chip(esc(c.label), false, toggle(S.channel, c.id))));
@@ -95,11 +101,14 @@
 
     $("reset").addEventListener("click", () => location.reload());
     $("more").addEventListener("click", () => draw(false));
-    $("addAll").addEventListener("click", () => { current.forEach((o) => exportList.add(o.i)); saveList(); updateExportCount(); draw(true); });
-    $("openExport").addEventListener("click", openExport);
-    $("closeExport").addEventListener("click", () => $("exportDialog").close());
-    $("clearExport").addEventListener("click", () => { exportList.clear(); saveList(); updateExportCount(); openExport(); draw(true); });
-    $("downloadCsv").addEventListener("click", downloadCsv);
+    $("addAll").addEventListener("click", () => {
+      let added = 0;
+      current.forEach((o) => { if (!exportList.has(o.i)) { exportList.add(o.i); added++; } });
+      if (added) rememberFilters();
+      saveList(); syncChecks(); updateExportCount();
+    });
+    $("clearExport").addEventListener("click", () => { exportList.clear(); filterSets = []; saveList(); syncChecks(); updateExportCount(); });
+    document.querySelectorAll("#exportBar [data-format]").forEach((b) => b.addEventListener("click", () => doExport(b)));
     $("filtersToggle").addEventListener("click", (e) => {
       const open = $("filters").classList.toggle("open"); e.target.setAttribute("aria-expanded", open);
     });
@@ -126,6 +135,11 @@
     if (obs.length) { const g = document.createElement("optgroup"); g.label = "Observer states"; obs.forEach((c) => g.append(new Option(c.name, c.iso3))); sel.append(g); }
   }
 
+  function reachesTarget(o, c) {
+    if (!o.rc || !(c in o.rc)) return false;
+    return S.worldwide || CFG.why[o.rc[c]] !== "worldwide";
+  }
+
   function anyFilter() {
     return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.un.size || S.checks.size;
   }
@@ -139,7 +153,7 @@
     }
     $("materialHint").textContent = matChannels ? "Shows outlets on: " + [...matChannels].map((c) => (C.channel.find((x) => x.id === c) || {}).label || c).join(", ") : "";
     current = ALL.filter((o) => {
-      if (S.country) { if (o.c !== S.country && !(S.reach && o.rc && S.country in o.rc)) return false; }
+      if (S.country) { if (o.c !== S.country && !(S.reach && reachesTarget(o, S.country))) return false; }
       else if (!inRegion(o.c)) return false;
       if (S.scope.size) {
         const v = o.sc ? o.sc[0] : "unknown";
@@ -171,7 +185,8 @@
     });
     current.forEach((o) => { o._m = (o.un || []).filter((u) => S.un.has(u)); });
     const mode = S.sort === "auto" ? (anyFilter() ? "best_match" : "az") : S.sort;
-    const byName = (a, b) => (a.n || "").localeCompare(b.n || "");
+    const key = (o) => o._k || (o._k = (o.n || "").replace(/^[^\p{L}\p{N}]+/u, ""));  // "__STUDY__" sorts under S
+    const byName = (a, b) => key(a).localeCompare(key(b), "en", { sensitivity: "base" });
     if (mode === "best_match") current.sort((a, b) => b._m.length - a._m.length || b.p - a.p || byName(a, b));
     else if (mode === "country") current.sort((a, b) => (CFG.countryName[a.c] || {}).name.localeCompare((CFG.countryName[b.c] || {}).name) || byName(a, b));
     else current.sort(byName);
@@ -179,6 +194,7 @@
     const verified = current.filter((o) => o.s.length >= 2).length;
     $("counter").innerHTML = `<b>${current.length.toLocaleString("en")}</b> ${current.length === 1 ? "outlet" : "outlets"} in <b>${countries}</b> ${countries === 1 ? "country" : "countries"} · ${verified.toLocaleString("en")} verified`;
     draw(true);
+    updateAddAll();
   }
 
   function card(o) {
@@ -190,7 +206,7 @@
     const verified = o.s.length >= 2 ? '<span class="badge verified">verified</span>' : '<span class="badge unverified">1 source</span>';
     const unl = (o.un || []).map((u) => (C.un_profile.find((x) => x.id === u) || {}).label).join(", ");
     const inList = exportList.has(o.i);
-    return `<li class="card"><div class="card-top"><h3>${esc(o.n)}</h3>${verified}</div>
+    return `<li class="card${inList ? " selected" : ""}" data-id="${esc(o.i)}"><div class="card-top"><h3>${esc(o.n)}</h3>${verified}</div>
       <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")}) · ${reachText(o)}${o.sc && o.sc[0] !== "unknown" ? ` · Scope: ${esc((C.scope.find((x) => x.id === o.sc[0]) || {}).label || o.sc[0])} <span class="pending" title="${esc(CFG.why[o.sc[1]])}">ⓘ</span>` : ""}</p>
       ${freedomText(k)}
       ${o.a ? `<p class="row">Also known as: ${esc(o.a.join(", "))}</p>` : ""}
@@ -206,11 +222,11 @@
       ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a></p>` : ""}
       <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
       ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map((u) => (C.un_profile.find((x) => x.id === u) || {}).label).join(", "))}</span>` : ""}
-      <p><button class="btn-quiet add" data-id="${esc(o.i)}" aria-pressed="${inList}">${inList ? "✓ In export list" : "+ Add to export list"}</button></p></li>`;
+      <p><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label></p></li>`;
   }
 
   function basisText(b) {
-    return b.startsWith("language_service:") ? "via " + b.slice(17) : b === "broadcast_area" ? "broadcast area" : "international broadcaster";
+    return b.startsWith("language_service:") ? "via " + b.slice(17) : b === "broadcast_area" ? "broadcast area" : b === "worldwide" ? "worldwide broadcaster" : "international broadcaster";
   }
   function reachText(o) {
     const C = CFG.countryName;
@@ -240,34 +256,130 @@
     $("more").textContent = `Show more (${(current.length - shown).toLocaleString("en")} left)`;
   }
 
-  $("cards").addEventListener("click", (e) => {
-    const b = e.target.closest("button.add"); if (!b) return;
-    const id = b.dataset.id;
-    exportList.has(id) ? exportList.delete(id) : exportList.add(id);
-    saveList(); updateExportCount();
-    b.setAttribute("aria-pressed", exportList.has(id)); b.textContent = exportList.has(id) ? "✓ In export list" : "+ Add to export list";
+  $("cards").addEventListener("change", (e) => {
+    const box = e.target.closest("input.export-box"); if (!box) return;
+    const id = box.dataset.id;
+    if (box.checked) { exportList.add(id); rememberFilters(); } else exportList.delete(id);
+    saveList(); syncChecks(id); updateExportCount();
   });
 
-  function updateExportCount() { $("exportCount").textContent = exportList.size.toLocaleString("en"); }
-  function openExport() {
-    $("exportInfo").textContent = exportList.size ? `${exportList.size.toLocaleString("en")} outlets in the list.` : "The list is empty. Add outlets with “+ Add to export list”.";
-    $("exportDialog").showModal();
-  }
-  function downloadCsv() {
-    const byId = {}; ALL.forEach((o) => { byId[o.i] = o; });
-    const C = CFG.categories;
-    const head = ["id", "name", "type", "ownership", "country", "region", "languages", "channels", "website", "contact", "social media", "sources", "verified"];
-    const rows = [...exportList].map((id) => byId[id]).filter(Boolean).map((o) => {
-      const k = CFG.countryName[o.c] || {};
-      return [o.i, o.n, o.o ? ((C.org_type.find((x) => x.id === o.o[0]) || {}).label || o.o[0]) : "",
-        o.ow ? ((C.ownership.find((x) => x.id === o.ow[0]) || {}).label || o.ow[0]) : "", k.name, k.subregion, (o.l || []).map((l) => CFG.langName[l] || l).join("; "),
-        (o.ch || []).map((c) => (C.channel.find((x) => x.id === c) || {}).label || c).join("; "), o.w || "", o.em || "",
-        Object.values(o.so || {}).join(" "), o.s.map((s) => CFG.source_labels[s] || s).join("; "), o.s.length >= 2 ? "yes" : "no"];
+  /* every checkbox / card of the same item stays in sync (the item may be shown more than once) */
+  function syncChecks(onlyId) {
+    document.querySelectorAll(onlyId ? `input.export-box[data-id="${onlyId}"]` : "input.export-box").forEach((b) => {
+      const on = exportList.has(b.dataset.id); b.checked = on;
+      const card = b.closest(".card"); if (card) card.classList.toggle("selected", on);
     });
-    const csv = [head].concat(rows).map((r) => r.map((v) => `"${String(v == null ? "" : v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" }));
-    a.download = `partner-finder-export-${new Date().toISOString().slice(0, 10)}.csv`;
-    a.click(); URL.revokeObjectURL(a.href);
+  }
+
+  /* the active filters, read generically from the filter form: every chip group with
+     pressed chips, every select with a value, every ticked checkbox (label = group heading).
+     Filters added later appear in the export without code changes. */
+  function activeFilters() {
+    const out = [];
+    document.querySelectorAll("#filterBody .fgroup").forEach((g) => {
+      const head = g.querySelector("h2"); const label = head ? head.childNodes[0].textContent.trim() : "";
+      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
+      // a select is named by its own label ("Country: Kenya"), chips and radios by the group heading
+      g.querySelectorAll("select").forEach((sel) => {
+        const own = sel.closest("label"); const name = own ? own.childNodes[0].textContent.trim() : label;
+        if (sel.value && sel.selectedOptions[0]) out.push([name, sel.selectedOptions[0].textContent.trim()]);
+      });
+      const values = chips.slice();
+      g.querySelectorAll('input[type="radio"]:checked').forEach((r) => { if (!r.defaultChecked) values.push(r.parentElement.textContent.trim()); });
+      if (values.length) out.push([label, values.join(", ")]);
+      // ticked checkboxes (those ticked by default, like "include reach", only when changed)
+      g.querySelectorAll('input[type="checkbox"]').forEach((c) => {
+        if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("step 4", "").trim(), c.checked ? "" : "off"]);
+      });
+    });
+    const search = document.querySelector('#filterBody input[type="search"]');
+    if (search && search.value.trim()) out.unshift(["Search", search.value.trim()]);
+    return out;
+  }
+  function filterText(set) { return set.length ? set.map(([l, v]) => (v ? `${l}: ${v}` : l)).join(", ") : "None (all items)"; }
+  function rememberFilters() {
+    const set = activeFilters(), key = JSON.stringify(set);
+    if (!filterSets.some((s2) => JSON.stringify(s2) === key)) filterSets.push(set);
+  }
+  function headerFilters() {
+    if (!filterSets.length) return [];
+    if (filterSets.length === 1) return filterSets[0];
+    return filterSets.map((set, i) => [`(${i + 1})`, filterText(set)]);
+  }
+  async function doExport(btn) {
+    const fmt = btn.dataset.format, old = btn.textContent;
+    const orientation = (document.querySelector('input[name="orient"]:checked') || {}).value || "landscape";
+    $("exportError").textContent = ""; btn.textContent = "Preparing…"; btn.disabled = true;
+    try {
+      const topics = new Set();  // topics come with step 4d
+      const list = buildExportList([...exportList], headerFilters(), S.country || null, topics);
+      await window.PartnerExport.download(fmt, list, { orientation });
+    } catch (err) {
+      $("exportError").textContent = "The file could not be made (" + (err && err.message ? err.message : "unknown error") + "). Please try again.";
+    } finally { btn.textContent = old; btn.disabled = false; }
+  }
+
+  /* --------------------------------------------- export rows (finder-export.js) */
+  const lab = (list, id) => (list.find((x) => x.id === id) || {}).label || id;
+  function flags(o) {
+    const f = [];
+    if (o.ow && o.ow[0] === "state_controlled") f.push("State-controlled");
+    if (o.s.length < 2) f.push("Unverified");
+    return f.join(", ");
+  }
+  function exportRow(o, countryFilter, topicFilter) {
+    const C = CFG.categories, K = CFG.countryName, k = K[o.c] || {};
+    let reaches = "";
+    if (o.rc) {
+      if (countryFilter && countryFilter !== o.c && countryFilter in o.rc) reaches = `${(K[countryFilter] || {}).name} (${basisText(CFG.why[o.rc[countryFilter]])})`;
+      else reaches = Object.keys(o.rc).length + 1 >= 150 ? "Worldwide" : [o.c].concat(Object.keys(o.rc)).map((c) => (K[c] || {}).name || c).join(", ");
+    }
+    const types = [o.o ? lab(C.org_type, o.o[0]) : ""].concat((o.oa || []).map((t) => lab(C.org_type, t))).filter(Boolean);
+    const topics = (o.tp || []).filter((t) => !topicFilter || !topicFilter.size || topicFilter.has(t)).map((t) => lab(C.topics, t));
+    return {
+      name: o.n, type: types.join(" / "), country: k.name || o.c, reaches,
+      scope: o.sc && o.sc[0] !== "unknown" ? lab(C.scope, o.sc[0]) : "",
+      languages: (o.l || []).map((l) => CFG.langName[l] || l).join(", "),
+      channels: (o.ch || []).map((c) => lab(C.channel, c)).join(", "),
+      ownership: o.ow ? lab(C.ownership, o.ow[0]) : "Unknown",
+      topic: topics.join(", "),
+      unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
+      memberOf: (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
+      website: o.w || "", contact: o.em || "",
+      social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
+      notes: flags(o),
+    };
+  }
+  /* sections (EXPORT_SPEC): "Best UN fit" = items with a UN profile, best first;
+     then "By country & rank" = all others, country A-Z, then rank */
+  function buildExportList(ids, filterSets, countryFilter, topicFilter) {
+    const byId = {}; ALL.forEach((o) => { byId[o.i] = o; });
+    const items = [...new Set(ids)].map((id) => byId[id]).filter(Boolean);
+    const K = CFG.countryName;
+    const fit = items.filter((o) => (o.un || []).length).sort((a, b) => b.un.length - a.un.length || b.p - a.p || a.n.localeCompare(b.n));
+    const rest = items.filter((o) => !(o.un || []).length).sort((a, b) => ((K[a.c] || {}).name || "").localeCompare((K[b.c] || {}).name || "") || a.r - b.r);
+    const row = (o) => exportRow(o, countryFilter, topicFilter);
+    return {
+      sections: [
+        { title: "Best UN fit", note: "Outlets with a UN profile (e.g. existing UN relationship), best match first.", items: fit.map(row) },
+        { title: "By country & rank", note: "All other outlets, by country (A–Z), then by prominence rank within the country.", items: rest.map(row) }],
+      filters: filterSets, count: items.length, updated: CFG.data_date,
+    };
+  }
+  window.PF = { exportList: buildExportList, all: () => ALL, cfg: () => CFG };
+
+  function updateExportCount() {
+    const n = exportList.size;
+    $("exportBar").hidden = n === 0;
+    $("exportCount").textContent = `${n.toLocaleString("en")} ${n === 1 ? "outlet" : "outlets"} in the export list`;
+    $("exportFilters").textContent = filterSets.length <= 1 ? "Filters: " + filterText(filterSets[0] || [])
+      : "Filters: " + filterSets.map((set, i) => `(${i + 1}) ${filterText(set)}`).join(" · ");
+    updateAddAll();
+  }
+  function updateAddAll() {
+    const missing = current.filter((o) => !exportList.has(o.i)).length;
+    const b = $("addAll");
+    b.textContent = `Add all ${current.length.toLocaleString("en")} to export list`;
+    b.disabled = current.length === 0 || missing === 0;
   }
 })();

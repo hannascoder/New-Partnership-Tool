@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="spacer"></div>
-  <span class="preview-badge" title="Ownership, scope, reach and topics are assigned in the next parts of step 4">Preview · step 4c</span>
+  <span class="preview-badge" title="Ownership, scope, reach and topics are assigned in the next parts of step 4">Preview · step 4c + export</span>
 </header>
 
 <div class="layout">
@@ -55,7 +55,8 @@
         <div class="chips" id="f-scope"></div>
         <label class="check"><input type="checkbox" id="f-scopeUnknown"> Also show outlets without scope information</label>
         <label class="check"><input type="checkbox" id="f-reach" checked> Include outlets that reach this country</label>
-        <p class="hint">“Reach” adds outlets based elsewhere that broadcast to the chosen country, e.g. BBC Afrique for DR Congo.</p>
+        <label class="check"><input type="checkbox" id="f-worldwide"> Also show worldwide broadcasters</label>
+        <p class="hint">“Reach” adds outlets based elsewhere that broadcast to the chosen country, e.g. BBC Afrique for DR Congo. Broadcasters that are only listed as “worldwide” (no service aimed at that country) are added with the second box.</p>
       </section>
 
       <section class="fgroup">
@@ -113,8 +114,7 @@
           <select id="sort"></select>
         </label>
         <button class="btn-quiet" id="reset">Reset filters</button>
-        <button class="btn-quiet" id="addAll">Add all to export list</button>
-        <button class="btn-primary" id="openExport">Export list (<span id="exportCount">0</span>)</button>
+        <button class="btn-quiet" id="addAll" disabled>Add all to export list</button>
       </div>
     </div>
     <ol class="cards" id="cards"></ol>
@@ -122,20 +122,29 @@
   </main>
 </div>
 
-<dialog id="exportDialog" aria-labelledby="exportTitle">
-  <h2 id="exportTitle">Export list</h2>
-  <p id="exportInfo"></p>
-  <div class="actions">
-    <button class="btn-primary" id="downloadCsv">Download CSV (Excel)</button>
-    <button class="btn-quiet" id="clearExport">Empty the list</button>
-    <button class="btn-quiet" id="closeExport">Close</button>
+<div class="export-bar" id="exportBar" hidden role="region" aria-label="Export list">
+  <div class="export-info">
+    <b id="exportCount">0 outlets in the export list</b>
+    <span class="export-filters" id="exportFilters"></span>
+    <span class="export-error" id="exportError" role="alert"></span>
   </div>
-</dialog>
+  <div class="export-actions">
+    <span class="orient" role="group" aria-label="Page orientation for PDF and Word">
+      <label><input type="radio" name="orient" value="landscape" checked> Landscape</label>
+      <label><input type="radio" name="orient" value="portrait"> Portrait</label>
+    </span>
+    <button class="btn-primary" data-format="pdf">PDF</button>
+    <button class="btn-primary" data-format="xlsx">Excel</button>
+    <button class="btn-primary" data-format="docx">Word</button>
+    <button class="btn-quiet" id="clearExport">Clear list</button>
+  </div>
+</div>
 
 <footer class="site">
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an outlet</a>
 </footer>
 <script src="assets/finder.js"></script>
+<script src="assets/finder-export.js"></script>
 </body>
 </html>

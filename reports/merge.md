@@ -88,5 +88,5 @@ Often different outlets with the same name (e.g. local stations); checked by han
 - USA: 3 × "fox news"
 - ESP: 3 × "razon"
 - ESP: 3 × "vanguardia"
-- CHN: 3 × "cctv 4"
 - ARG: 3 × "cronica tv"
+- ITA: 3 × "rai radio 2"

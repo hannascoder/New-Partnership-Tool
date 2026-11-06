@@ -203,8 +203,12 @@ def scope_and_reach(o, rules, reach, intl, org):
             for c in reach.expand(service["reaches"]):
                 audience.setdefault(c, "language_service:" + service["name"])
         if not service:
-            for c in reach.expand(entry.get("reaches", [])):
-                audience.setdefault(c, "manual")
+            for item in entry.get("reaches", []):
+                basis = "worldwide" if item == "worldwide" else "manual"
+                for c in reach.expand([item]):
+                    if audience.get(c) == "worldwide" and basis == "manual":
+                        audience[c] = basis  # a specific region beats "worldwide"
+                    audience.setdefault(c, basis)
         label = (service or {}).get("name") or entry["match"][0]
         evidence.append(("international", "override", f"list of international broadcasters ({label})"))
     # 2. iptv-org broadcast areas
