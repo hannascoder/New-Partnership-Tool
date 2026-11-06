@@ -4,35 +4,129 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Partner Finder – coming soon</title>
+<title>Partner Finder</title>
 <link rel="stylesheet" href="assets/atlas.css">
-<style>
-  main { max-width: 640px; margin: 48px auto; padding: 0 16px; }
-  .card { background: var(--surface); border: 1px solid var(--border);
-          border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
-  .card h2 { margin: 0 0 8px; font-size: 22px; }
-  .card p { margin: 0 0 12px; font-size: 14px; }
-  .card p.muted { color: var(--muted); font-size: 12px; margin: 0; }
-</style>
+<link rel="stylesheet" href="assets/finder.css">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#results">Skip to results</a>
 <header class="site">
   <div class="brand">
     <img class="logo" src="assets/un_emblem.png" alt="United Nations emblem" width="40" height="33">
     <div>
-      <div class="un">United Nations</div>
+      <div class="un">United Nations · DGC Partnerships</div>
       <h1 class="title">Partner Finder</h1>
     </div>
   </div>
   <div class="spacer"></div>
+  <span class="preview-badge" title="Categories such as organisation type, ownership, scope and topics are assigned in step 4">Preview · step 3 data</span>
 </header>
-<main id="main">
-  <div class="card">
-    <h2>Coming soon</h2>
-    <p>A tool for the DGC Partnerships unit to find media partners worldwide for UN content: by material, language, country, channel and topic.</p>
-    <p class="muted">Internal tool · access restricted · under construction</p>
+
+<div class="layout">
+  <aside class="filters" id="filters" aria-label="Filters">
+    <button class="btn-quiet filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filterBody">Filters</button>
+    <div id="filterBody" class="filter-body">
+      <!-- the search bar is left out of v1 for now (decision 06.11.2026); space kept here -->
+
+      <section class="fgroup">
+        <h2 class="sect">My material</h2>
+        <div class="chips" id="f-material"></div>
+        <p class="hint" id="materialHint"></p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Language</h2>
+        <div class="chips" id="f-langButtons"></div>
+        <label class="field">Other language
+          <select id="f-otherLang"><option value="">Choose…</option></select>
+        </label>
+        <div class="chips" id="f-otherChosen"></div>
+        <label class="check"><input type="checkbox" id="f-noLang"> Also show outlets without language information</label>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Region / Country / Scope</h2>
+        <label class="field">Region
+          <select id="f-region"><option value="">All regions</option></select>
+        </label>
+        <label class="field">Country
+          <select id="f-country"><option value="">All countries</option></select>
+        </label>
+        <div class="chips" id="f-scope"></div>
+        <label class="check pending"><input type="checkbox" id="f-reach" checked disabled> Include outlets that reach this country <span class="soon">step 4</span></label>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Organisation type <span class="soon">step 4</span></h2>
+        <div class="chips" id="f-orgType"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Channel</h2>
+        <div class="chips" id="f-channel"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Ownership <span class="soon">step 4</span></h2>
+        <div class="chips" id="f-ownership"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Size</h2>
+        <div class="radios" id="f-size"></div>
+        <p class="hint" id="sizeNote"></p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Topics <span class="soon">step 4</span></h2>
+        <p class="hint">Topics never hide an outlet, they only change the order.</p>
+        <div id="f-topics"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">UN profile</h2>
+        <p class="hint">Changes the order, never hides an outlet.</p>
+        <div class="chips" id="f-unProfile"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">More</h2>
+        <div id="f-checks"></div>
+      </section>
+    </div>
+  </aside>
+
+  <main id="results" class="results" tabindex="-1">
+    <div class="results-head">
+      <p class="counter" id="counter" aria-live="polite">Loading data…</p>
+      <div class="actions">
+        <label class="sortlabel">Sort
+          <select id="sort"></select>
+        </label>
+        <button class="btn-quiet" id="reset">Reset filters</button>
+        <button class="btn-quiet" id="addAll">Add all to export list</button>
+        <button class="btn-primary" id="openExport">Export list (<span id="exportCount">0</span>)</button>
+      </div>
+    </div>
+    <ol class="cards" id="cards"></ol>
+    <button class="btn-quiet more" id="more" hidden>Show more</button>
+  </main>
+</div>
+
+<dialog id="exportDialog" aria-labelledby="exportTitle">
+  <h2 id="exportTitle">Export list</h2>
+  <p id="exportInfo"></p>
+  <div class="actions">
+    <button class="btn-primary" id="downloadCsv">Download CSV (Excel)</button>
+    <button class="btn-quiet" id="clearExport">Empty the list</button>
+    <button class="btn-quiet" id="closeExport">Close</button>
   </div>
-</main>
+</dialog>
+
+<footer class="site">
+  <span id="dataInfo"></span> ·
+  <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an outlet</a>
+</footer>
+<script src="assets/finder.js"></script>
 </body>
 </html>
