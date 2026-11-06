@@ -45,6 +45,12 @@ jobs:
       - name: NGO pages (ECOSOC, UN Geneva)
         continue-on-error: true
         run: python pipeline/fetch/ngo_pages.py
+      - name: ECOSOC iCSO (NGOs) - first run only 30 profiles to check the page structure
+        continue-on-error: true
+        timeout-minutes: 30
+        env:
+          ECOSOC_MAX_PROFILES: "30"
+        run: python pipeline/fetch/ecosoc.py
       - name: IATI (NGOs)
         continue-on-error: true
         run: python pipeline/fetch/iati.py
