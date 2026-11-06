@@ -8,7 +8,7 @@ Which ideologies/categories actually exclude an outlet is decided in config/rule
 import json
 import time
 
-from common import countries, get, save
+from common import get, save
 
 SPARQL = "https://query.wikidata.org/sparql"
 WIKI = "https://en.wikipedia.org/w/api.php"
@@ -28,23 +28,25 @@ def wiki(params):
 
 
 def main():
-    allowed = {r["iso3"] for r in countries().values()}
-    rows = sparql("SELECT ?c ?iso WHERE { ?c wdt:P298 ?iso . FILTER NOT EXISTS { ?c wdt:P576 ?e } }")
-    cq = {}
-    for r in rows:
-        if r["iso"]["value"] in allowed:
-            cq.setdefault(r["iso"]["value"], r["c"]["value"].rsplit("/", 1)[1])
-    ideology = {}
-    for iso, q in sorted(cq.items()):
+    import yaml
+    from common import ROOT
+    cfg = yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8"))["exclude_far_right"]
+    # 1. the Wikidata items of the ideologies named in config/rules.yaml (by English label)
+    ideo_q = {}
+    for label in cfg["wikidata_ideologies"]:
         try:
-            res = sparql(f'SELECT ?item ?ideoLabel WHERE {{ ?item wdt:P17 wd:{q} ; wdt:P1142 ?ideo . '
-                         f'SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}')
+            for r in sparql(f'SELECT ?i WHERE {{ ?i rdfs:label "{label}"@en . ?i wdt:P31|wdt:P279 ?x . }} LIMIT 5'):
+                ideo_q.setdefault(r["i"]["value"].rsplit("/", 1)[1], label)
         except RuntimeError as e:
-            print("failed", iso, e)
-            continue
-        for r in res:
-            ideology.setdefault(r["item"]["value"].rsplit("/", 1)[1], []).append(r["ideoLabel"]["value"])
-    print("Wikidata items with a political ideology:", len(ideology))
+            print("label lookup failed", label, e)
+    print("ideology items:", ideo_q)
+    # 2. one query: every item whose political ideology (P1142) is one of them
+    ideology = {}
+    values = " ".join("wd:" + q for q in ideo_q)
+    for r in sparql(f"SELECT ?item ?ideo WHERE {{ VALUES ?ideo {{ {values} }} ?item wdt:P1142 ?ideo . }}"):
+        q = r["item"]["value"].rsplit("/", 1)[1]
+        ideology.setdefault(q, []).append(ideo_q[r["ideo"]["value"].rsplit("/", 1)[1]])
+    print("Wikidata items with one of these ideologies:", len(ideology))
 
     cats = set()
     for term in ("far-right", "alt-right", "neo-Nazi", "white nationalist", "fascist"):

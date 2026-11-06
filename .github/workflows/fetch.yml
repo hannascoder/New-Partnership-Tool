@@ -47,6 +47,7 @@ jobs:
         run: python pipeline/fetch/atlas.py
       - name: Far-right evidence (Wikidata ideology, Wikipedia categories)
         continue-on-error: true
+        timeout-minutes: 15
         run: python pipeline/fetch/far_right.py
       - name: Wikidata owners (step 4b)
         continue-on-error: true
