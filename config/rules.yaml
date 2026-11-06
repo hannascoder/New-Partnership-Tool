@@ -73,14 +73,15 @@ ownership:
     # "public service broadcaster"): Wikidata often names a ministry as the formal
     # owner of independent public media (BBC -> culture ministry) or calls them
     # "state media" (DW). For them only rule 1 (State Media Monitor) decides.
-    # 2. The outlet itself is classed as state media / state-owned in Wikidata.
-    wikidata_classes: [state media, state-owned enterprise, government agency, government organization,
-                       state-owned television, state broadcaster]
+    # 2. The outlet itself is run as a government body (Wikidata).
+    #    NOT counted (owner's principle 06.11.2026): "state media" / "state-owned
+    #    enterprise" in Wikidata alone - state-OWNED is not state-CONTROLLED
+    #    (France 24, TV5 Monde). Only the State Media Monitor judges that.
+    wikidata_classes: [government agency, government organization]
     # 3. Its owner is a government body, a state, a ruling party or the military.
+    #    (a state-owned company or "the state" as owner is not enough, see above)
     owner_classes: [government, government agency, government organization, ministry, ministry of information,
-                    executive branch, state, sovereign state, country, political party, communist party,
-                    armed forces, military, military branch, state-owned enterprise, state media,
-                    government-owned corporation, public body]
+                    executive branch, political party, communist party, armed forces, military, military branch]
     # (Until 06.11.2026 a 4th rule made public broadcasters in countries RSF
     #  rates "very serious" state-controlled. Dropped on the owner's decision:
     #  RSF rates countries, not outlets. Press freedom is now shown as country
