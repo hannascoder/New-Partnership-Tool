@@ -6,7 +6,7 @@
   "use strict";
   const PAGE = 50;
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
-              channel: new Set(), size: "all", un: new Set(), checks: new Set(), sort: "auto" };
+              channel: new Set(), size: "all", tp: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
@@ -78,18 +78,30 @@
       $("f-size").append(l);
     });
     $("sizeNote").textContent = CFG.size_note || "";
+    const tpCount = {}; ALL.forEach((o) => topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; }));
     C.topic_groups.forEach((g) => {
       const d = document.createElement("div"); d.className = "topic-group";
       d.innerHTML = `<h3>${esc(g.label)}</h3>`;
       const ch = document.createElement("div"); ch.className = "chips";
-      C.topics.filter((t) => t.group === g.id).forEach((t) => ch.append(chip(esc(t.label) + (t.sdg ? ` <span class="sdg">SDG ${t.sdg}</span>` : ""), false, () => {}, { disabled: true })));
+      C.topics.filter((t) => t.group === g.id).forEach((t) => {
+        const n = tpCount[t.id] || 0;
+        ch.append(chip(esc(t.label) + (t.sdg ? ` <span class="sdg">SDG ${t.sdg}</span>` : "") + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.tp, t.id),
+          n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No open source names this topic for any outlet yet" }));
+      });
       d.append(ch); $("f-topics").append(d);
     });
-    const unAvailable = new Set(["un_relationship"]);
-    C.un_profile.forEach((u) => $("f-unProfile").append(chip(esc(u.label), false, toggle(S.un, u.id),
-      unAvailable.has(u.id) ? { title: u.description || "SDG Media Compact member" } : { disabled: true, title: "Available after step 4 (classification)" })));
+    const unCount = {}; ALL.forEach((o) => (o.un || []).forEach((u) => { unCount[u] = (unCount[u] || 0) + 1; }));
+    C.un_profile.forEach((u) => {
+      const n = unCount[u.id] || 0;
+      $("f-unProfile").append(chip(esc(u.label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.un, u.id),
+        n ? { title: u.description || "" } : { disabled: true, title: "No open source for this yet (hand corrections or the website check may add it later)" }));
+    });
+    const om = C.checkboxes.find((c) => c.id === "only_topic_matches") || { label: "Only show topic matches" };
+    $("onlyMatchesLabel").textContent = om.label;
+    if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
+    $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
     const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true };
-    C.checkboxes.filter((c) => !["include_reach", "include_no_language"].includes(c.id)).forEach((c) => {
+    C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches"].includes(c.id)).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
       l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> ${esc(c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">step 4</span>'}`;
@@ -141,7 +153,13 @@
   }
 
   function anyFilter() {
-    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.un.size || S.checks.size;
+    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.un.size || S.checks.size;
+  }
+  /* an outlet without any topic in the sources counts as "General news" (the default topic) */
+  function topicsOf(o) { return o.tp || ["general_news"]; }
+  function why(o, kind, id) {
+    if (kind === "tp") { if (!o.tp) return "no topic in the sources: general news"; return CFG.why[o.tw[o.tp.indexOf(id)]] || ""; }
+    return CFG.why[o.uw[o.un.indexOf(id)]] || "";
   }
 
   function apply() {
@@ -183,7 +201,10 @@
       if (S.checks.has("has_public_contact") && !o.em) return false;
       return true;
     });
-    current.forEach((o) => { o._m = (o.un || []).filter((u) => S.un.has(u)); });
+    current.forEach((o) => {
+      o._m = topicsOf(o).filter((t) => S.tp.has(t)).map((t) => ["tp", t]).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
+    });
+    if (S.onlyMatches && (S.tp.size || S.un.size)) current = current.filter((o) => o._m.length);
     const mode = S.sort === "auto" ? (anyFilter() ? "best_match" : "az") : S.sort;
     const key = (o) => o._k || (o._k = (o.n || "").replace(/^[^\p{L}\p{N}]+/u, ""));  // "__STUDY__" sorts under S
     const byName = (a, b) => key(a).localeCompare(key(b), "en", { sensitivity: "base" });
@@ -204,7 +225,9 @@
     const src = o.s.map((s) => CFG.source_labels[s] || s).join(", ");
     const social = Object.entries(o.so || {}).map(([k2, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(k2)}</a>`).join(" · ");
     const verified = o.s.length >= 2 ? '<span class="badge verified">verified</span>' : '<span class="badge unverified">1 source</span>';
-    const unl = (o.un || []).map((u) => (C.un_profile.find((x) => x.id === u) || {}).label).join(", ");
+    const tip = (kind, id, label) => `<span class="tag" title="${esc(why(o, kind, id))}">${esc(label)}</span>`;
+    const tpl = topicsOf(o).map((t) => tip("tp", t, lab(C.topics, t))).join(", ");
+    const unl = (o.un || []).map((u) => tip("un", u, lab(C.un_profile, u))).join(", ");
     const inList = exportList.has(o.i);
     return `<li class="card${inList ? " selected" : ""}" data-id="${esc(o.i)}"><div class="card-top"><h3>${esc(o.n)}</h3>${verified}</div>
       <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")}) · ${reachText(o)}${o.sc && o.sc[0] !== "unknown" ? ` · Scope: ${esc((C.scope.find((x) => x.id === o.sc[0]) || {}).label || o.sc[0])} <span class="pending" title="${esc(CFG.why[o.sc[1]])}">ⓘ</span>` : ""}</p>
@@ -216,12 +239,13 @@
       <p class="row"><b>Languages:</b> ${langs}</p>
       ${o.sv ? `<p class="row"><b>Language services:</b> ${esc(o.sv.join(", "))}</p>` : ""}
       <p class="row"><b>Channels:</b> ${esc(chans) || "<span class='pending'>no information</span>"}</p>
-      ${unl ? `<p class="row"><b>UN profile:</b> ${esc(unl)}</p>` : ""}
+      <p class="row"><b>Topics:</b> ${tpl}</p>
+      ${unl ? `<p class="row"><b>UN profile:</b> ${unl}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
       ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a></p>` : ""}
       <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
-      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map((u) => (C.un_profile.find((x) => x.id === u) || {}).label).join(", "))}</span>` : ""}
+      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id]) => lab(k2 === "tp" ? C.topics : C.un_profile, id)).join(", "))}</span>` : ""}
       <p><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label></p></li>`;
   }
 
@@ -311,7 +335,7 @@
     const orientation = (document.querySelector('input[name="orient"]:checked') || {}).value || "landscape";
     $("exportError").textContent = ""; btn.textContent = "Preparing…"; btn.disabled = true;
     try {
-      const topics = new Set();  // topics come with step 4d
+      const topics = new Set(S.tp);  // only the chosen topics are listed in the file (EXPORT_SPEC)
       const list = buildExportList([...exportList], headerFilters(), S.country || null, topics);
       await window.PartnerExport.download(fmt, list, { orientation });
     } catch (err) {
@@ -335,7 +359,7 @@
       else reaches = Object.keys(o.rc).length + 1 >= 150 ? "Worldwide" : [o.c].concat(Object.keys(o.rc)).map((c) => (K[c] || {}).name || c).join(", ");
     }
     const types = [o.o ? lab(C.org_type, o.o[0]) : ""].concat((o.oa || []).map((t) => lab(C.org_type, t))).filter(Boolean);
-    const topics = (o.tp || []).filter((t) => !topicFilter || !topicFilter.size || topicFilter.has(t)).map((t) => lab(C.topics, t));
+    const topics = topicsOf(o).filter((t) => !topicFilter || !topicFilter.size || topicFilter.has(t)).map((t) => lab(C.topics, t));
     return {
       name: o.n, type: types.join(" / "), country: k.name || o.c, reaches,
       scope: o.sc && o.sc[0] !== "unknown" ? lab(C.scope, o.sc[0]) : "",

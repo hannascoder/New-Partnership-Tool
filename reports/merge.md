@@ -1,42 +1,42 @@
 # Step 3b: merged outlets
 
-- Records read: 204916
-- **Outlets after merging and inclusion rules: 70938**
-- in 2+ sources (verified): 13930
-- merges refused because two different entries of the same source would have been joined: 21761
+- Records read: 205172
+- **Outlets after merging and inclusion rules: 71035**
+- in 2+ sources (verified): 13992
+- merges refused because two different entries of the same source would have been joined: 21783
 - with a country conflict between sources: 215
 
 ## Which sources each outlet comes from
 
 | Sources | Outlets |
 |---|---|
-| media_cloud | 20096 |
-| wikidata | 15561 |
+| media_cloud | 20095 |
+| wikidata | 15562 |
 | iptv_org | 13324 |
-| radio_browser | 7766 |
+| radio_browser | 7782 |
 | wikidata + media_cloud | 6194 |
 | wikidata + iptv_org | 2861 |
-| wikidata + radio_browser | 2598 |
-| network list only | 651 |
-| wikidata + media_cloud + iptv_org | 458 |
+| wikidata + radio_browser | 2604 |
+| network list only | 726 |
+| wikidata + media_cloud + iptv_org | 457 |
 | wikidata + media_cloud + radio_browser | 347 |
 | media_cloud + iptv_org | 274 |
 | iptv_org + radio_browser | 252 |
-| media_cloud + radio_browser | 233 |
-| wikidata + iptv_org + radio_browser | 200 |
-| wikidata + media_cloud + iptv_org + radio_browser | 80 |
+| media_cloud + radio_browser | 234 |
+| wikidata + iptv_org + radio_browser | 199 |
+| wikidata + media_cloud + iptv_org + radio_browser | 81 |
 
 ## Merged groups that were left out
 
 | Reason | Groups |
 |---|---|
-| radio/TV only in Wikidata, no content information | 29985 |
-| no information tag | 26674 |
+| radio/TV only in Wikidata, no content information | 29978 |
+| no information tag | 26692 |
 | class excluded | 17012 |
-| no tags | 13935 |
-| category not included | 7218 |
+| no tags | 13952 |
+| category not included | 7222 |
 | closed according to Wikidata | 5527 |
-| no category | 3729 |
+| no category | 3728 |
 | closed 2012-01-01 (iptv-org) | 25 |
 | closed 2023-08-14 (iptv-org) | 20 |
 | closed 2020-01-01 (iptv-org) | 19 |

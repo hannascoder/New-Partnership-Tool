@@ -264,6 +264,11 @@ checkboxes:
   - id: include_no_language
     label: Also show outlets without language information
     default: false
+  # decision 06.11.2026: switch, default off. Shown under "UN profile".
+  - id: only_topic_matches
+    label: Only show topic and UN profile matches
+    description: Hides outlets that match none of the chosen topics or UN profiles.
+    default: false
 
 # Outlets count as "new" for this many months after they were first found.
 new_months: 4

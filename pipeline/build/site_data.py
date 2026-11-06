@@ -20,10 +20,11 @@ SOCIAL_URL = {"youtube": "https://www.youtube.com/channel/{}", "facebook": "http
 # Lists offered in the "Member of" filter (owner's request, 06.11.2026)
 NETWORK_FILTER = {"sdg_media_compact": "SDG Media Compact", "ebu_members": "EBU (European Broadcasting Union)",
                   "abu_members": "ABU (Asia-Pacific Broadcasting Union)", "asbu_members": "ASBU (Arab States Broadcasting Union)",
-                  "cbu_members": "CBU (Caribbean Broadcasting Union)", "efcsn_signatories": "EFCSN (fact-checkers)",
+                  "cbu_members": "CBU (Caribbean Broadcasting Union)", "ifcn_signatories": "IFCN (fact-checkers)",
+                  "efcsn_signatories": "EFCSN (fact-checkers)",
                   "fact_checking_sites": "Fact-checking websites (Wikipedia list)"}
 SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org": "iptv-org",
-                "radio_browser": "Radio Browser", "sdg_media_compact": "SDG Media Compact",
+                "radio_browser": "Radio Browser", "sdg_media_compact": "SDG Media Compact", "ifcn_signatories": "IFCN",
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
                 "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
                 "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU"}
@@ -70,10 +71,17 @@ def main():
         if o.get("email"):
             e["em"] = o["email"].replace("mailto:", "").strip()
         e["s"] = o["sources"]
-        if "sdg_media_compact" in o["sources"]:
-            e["un"] = ["un_relationship"]
         e["f"] = o["first_seen"]
         cat = o.get("cat", {})
+        # topics (step 4d): ids in "tp", the reason of each in "tw" (same order).
+        # Left out when the only topic is the default "general news" (no evidence).
+        tps = [t for t in cat.get("topics", []) if t["method"] != "default"]
+        if tps:
+            e["tp"] = [t["value"] for t in tps]
+            e["tw"] = [w(t["source"]) for t in tps]
+        if cat.get("un_profile"):
+            e["un"] = [u["value"] for u in cat["un_profile"]]
+            e["uw"] = [w(u["source"]) for u in cat["un_profile"]]
         if cat.get("org_type"):
             e["o"] = [cat["org_type"]["value"], w(cat["org_type"]["source"])]
         if cat.get("org_type_also"):
@@ -120,7 +128,7 @@ def main():
         # filters that get values in step 4 (classification)
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
-        "pending": ["topics", "website_check"],
+        "pending": ["website_check"],
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)

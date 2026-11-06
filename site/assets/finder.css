@@ -67,3 +67,4 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .export-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .orient { font-size: 12px; color: var(--muted); display: inline-flex; gap: 8px; }
 #addAll:disabled { opacity: .5; cursor: not-allowed; }
+.tag[title]:not([title=""]) { border-bottom: 1px dotted var(--muted); cursor: help; }

@@ -9,7 +9,7 @@
 | Radio France Internationale (FRA) | ✅ once | Radio France Internationale [pf-000035] | abu_members, ebu_members, media_cloud, radio_browser, wikidata | http://www.rfi.fr/ | radio, tv, website, social_media | fra |
 | Le Monde (FRA) | ⚠️ 2 times (duplicate) | Le Monde [pf-000018] | media_cloud, wikidata | https://www.lemonde.fr | website, social_media | fra, eng |
 | Agence France-Presse (FRA) | ✅ once | Agence France-Presse [pf-000057] | efcsn_signatories, fact_checking_sites, media_cloud, news_agencies, wikidata | https://www.afp.com | website, social_media | fra |
-| Deutsche Welle (DEU) | ✅ once | Deutsche Welle [pf-000136] | abu_members, ebu_members, fact_checking_sites, radio_browser, sdg_media_compact, wikidata | https://www.dw.com | tv, website, radio, social_media | eng |
+| Deutsche Welle (DEU) | ✅ once | Deutsche Welle [pf-000136] | abu_members, ebu_members, fact_checking_sites, ifcn_signatories, radio_browser, sdg_media_compact, wikidata | https://www.dw.com | tv, website, radio, social_media | eng |
 | Al Jazeera (QAT) | ✅ once | Al Jazeera [pf-000021] | iptv_org, radio_browser, sdg_media_compact, state_media, wikidata | https://www.aljazeera.com/ | tv, website, radio, social_media | ara |
 | Radio Okapi (COD) | ✅ once | Radio Okapi [pf-000761] | media_cloud, wikidata | http://www.radiookapi.net/ | radio, tv, website, social_media | fra |
 | Radio Top Congo (COD) | ✅ once | Radio Top Congo [pf-024753] | radio_browser, wikidata | http://www.topcongoinfo.com/ | radio, website | fra |
@@ -23,4 +23,4 @@
 | Australian Broadcasting Corporation (AUS) | ✅ once | Australian Broadcasting Corporation [pf-000915] | abu_members, ebu_members, media_cloud, radio_browser, wikidata | https://www.abc.net.au/ | tv, website, radio, social_media | eng |
 | Clarín (ARG) | ✅ once | Clarín [pf-001097] | media_cloud, wikidata | https://www.clarin.com/ | print, website, social_media | spa |
 | Mail & Guardian (ZAF) | ✅ once | Mail & Guardian [pf-001878] | media_cloud, wikidata | http://mg.co.za/ | print, website, social_media | eng |
-| Rappler (PHL) | ✅ once | Rappler [pf-013724] | fact_checking_sites, wikidata | https://www.rappler.com/ | website, social_media |  |
+| Rappler (PHL) | ✅ once | Rappler [pf-013724] | fact_checking_sites, ifcn_signatories, wikidata | https://www.rappler.com/ | website, social_media |  |

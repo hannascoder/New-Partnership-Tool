@@ -1,4 +1,4 @@
-# Status and next steps (handover, 06.11.2026 evening)
+# Status and next steps (handover, 06.11.2026 late evening)
 
 Read this together with `CLAUDE.md`, `docs/BRIEFING.md`, `docs/KATEGORIEN.md`, `docs/BACKLOG.md`.
 
@@ -16,19 +16,27 @@ is published automatically (only the PR *preview* builds fail; harmless).
   (`.github/workflows/fetch.yml`, runs on pushes to `step-*` / `ngo-*` branches and by hand).
 
 ## In progress
+- **Step 4d topics + UN profile: built, waiting for the owner's check** (branch `claude/nice-bell-ois6qp`).
+  Mapping tables per source in `config/sources/*.yaml` (`topics:` / `un_profile:`), rules in
+  `config/rules.yaml` (section 4d), minority languages via `config/official_languages.csv` (Unicode CLDR).
+  IFCN list is now read. Website: topic buttons, "Matches", switch "Only show topic and UN profile
+  matches" (default off). Numbers and reasons: `reports/topics.md`.
+  Honest result: 28 % of outlets have no topic in any source ("General news"); most SDG topics have
+  0-150 outlets; "Solutions", "Development journalism", "Open to partner content" have no open source.
+  The website check (next) and Covering Climate Now (CSV) are the main ways to fill this.
+  Proposals for the owner to confirm: LGBTQ / African American media -> "Reduced inequalities";
+  student newspapers / campus radio -> "Children & youth" + "Youth audience"; diaspora-language media
+  (e.g. Vietnamese in the USA) -> "Reaches underserved audiences".
+  outlets.json is now 21 MB (Cloudflare limit per file: 25 MiB) - watch this when NGOs are added.
 - **Far-right exclusion: done (merged 06.11.2026).** Rule `exclude_far_right` in `config/rules.yaml`,
-  evidence `raw/far_right/` (Wikidata political ideology incl. the owner's, Wikipedia far-right media
-  categories). 46 outlets not shown, list with reasons in `reports/excluded_far_right.md`. Brought back by
-  hand (`overrides.csv`): Corriere Adriatico, Kesari (historic categories). Hezbollah/Hamas outlets stay
-  excluded (owner's ideology "antisemitism"); the owner can still reverse any entry.
+  evidence `raw/far_right/`. 46 outlets not shown (`reports/excluded_far_right.md`).
 - **Branch `ngo-sources`** (NGOs, phase 2, owner wants them in): fetchers for ECOSOC iCSO (slow server,
   paging with cookies, resumes), UN Geneva list (~1,500, parsed), IATI (1,338 NGOs);
   `pipeline/normalize/ngos.py`. ECOSOC: plan to use the lists by field of activity / country instead
   of 6,000 profile pages. NGO filter design: `docs/BACKLOG.md`.
 
 ## Next steps (agreed order)
-1. **4d topics + UN profile** (mapping tables per source → `config/`; "Only show topic matches" switch,
-   default off).
+1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
    reachable?, contact email/page (owner wants email contacts), social links, podcast/newsletter,
    language, owner from imprint/about text.

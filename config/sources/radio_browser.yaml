@@ -100,18 +100,34 @@ include_tags:
 
 # Tag -> our topic (ids from config/categories.yaml). Method: source_field.
 topics:
+  general_news: [news, noticias, information, news talk, música y noticias, noticias en español, noticias y comentarios,
+                 noticias nacionales e internacionales, noticias y música, informativa, información, informacion,
+                 noticias cortas, news talk music, noticias opinion, world news, noticieros, international news,
+                 national news, regional news, nachrichten, info, politics & current affairs]
   sports: [sports, sport, deportes, live sports, sports talk, sports news, noticias y deportes, local sports, esportes, deporte]
   religion: [religious, religion, christian, christian talk, christian teaching, christian preaching, catholic, catholic radio, islamic, islam, quran, gospel, church, orthodox christian]
   culture: [culture, cultural, cultura, cultural news]
-  education: [education, educational, educativa, university radio, college radio, radio universitaria, campus radio]
-  children_youth: [kids, children, youth, youth programming, juvenil]
-  business_economy: [business, business news, economics, economic news]
-  health: [health]
+  education: [education, educational, educativa, educación, radio educación, university radio, college radio, radio universitaria, campus radio]
+  children_youth: [kids, children, youth, youth programming, youth programs, juvenil, student radio, student, students]
+  business_economy: [business, business news, economics, economic news, economia, economic, finance]
+  health: [health, public health, health programming, salud]
   agriculture: [agriculture]
   science: [science]
+  technology: [technology]
   indigenous: [indigenous]
-  elections: [politics, political talk]
-  community_local: [community radio, community, radio comunitaria, comunitaria, local news, local radio, local talk, local information, noticias locales]
+  elections: [politics, political talk, political, government, local government]
+  gender_equality: [feminist, feminista]
+  human_rights: [derechos humanos]
+  peace_justice: [peace]
+  diaspora: [ethnic, ethnic programming]
+  community_local: [community radio, community, radio comunitaria, comunitaria, local news, local radio, local talk,
+                    local information, noticias locales, community news, noticias regionales]
+
+# Tag -> UN profile (step 4d). Method: source_field.
+un_profile:
+  educational: [education, educational, educativa]
+  youth_audience: [kids, children, youth, youth programming, youth programs, juvenil, university radio, college radio,
+                   radio universitaria, campus radio, student radio]
 
 # Tag -> organisation type evidence (needs a second source, see KATEGORIEN.md 1).
 org_type:

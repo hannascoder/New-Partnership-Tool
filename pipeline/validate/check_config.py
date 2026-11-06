@@ -84,6 +84,32 @@ else:
         if r.get("type") not in known.get("org_type", set()):
             errors.append(f"rules.yaml: unknown organisation type '{r.get('type')}'")
 
+# step 4d: every topic / UN profile named in a mapping table must exist in categories.yaml
+topic_ids, un_ids = known.get("topics", set()), known.get("un_profile", set())
+for f in ("iptv_org.yaml", "radio_browser.yaml", "wikidata.yaml"):
+    m = yaml.safe_load(open(CONFIG / "sources" / f, encoding="utf-8")) or {}
+    for t in (m.get("topics") or {}):
+        if t not in topic_ids:
+            errors.append(f"sources/{f}: unknown topic '{t}' under 'topics:'")
+    for u in (m.get("un_profile") or {}):
+        if u not in un_ids:
+            errors.append(f"sources/{f}: unknown UN profile '{u}' under 'un_profile:'")
+if isinstance(rules, dict):
+    tr, ur = rules.get("topics") or {}, rules.get("un_profile") or {}
+    for part in ("networks", "org_types", "scopes", "name_keywords"):
+        for t in (tr.get(part) or {}):
+            if t not in topic_ids:
+                errors.append(f"rules.yaml: unknown topic '{t}' in topics -> {part}")
+    for part in ("networks", "org_types", "topics"):
+        for u in (ur.get(part) or {}):
+            if u not in un_ids:
+                errors.append(f"rules.yaml: unknown UN profile '{u}' in un_profile -> {part}")
+        if part == "topics":
+            for lst in (ur.get("topics") or {}).values():
+                errors += [f"rules.yaml: unknown topic '{t}' in un_profile -> topics" for t in lst if t not in topic_ids]
+    if ur.get("minority_language") and ur["minority_language"] not in un_ids:
+        errors.append(f"rules.yaml: unknown UN profile '{ur['minority_language']}' in un_profile -> minority_language")
+
 header = open(ROOT / "overrides.csv", encoding="utf-8").readline().strip()
 if header != "outlet_id,field,value,note":
     errors.append(f"overrides.csv: first line must be 'outlet_id,field,value,note', found '{header}'")

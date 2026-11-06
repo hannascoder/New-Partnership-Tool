@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-11-06 (evening): step 4d topics + UN profile
+- **Topics** (several per outlet) from the sources' own categories, tags and subjects
+  (mapping tables in `config/sources/iptv_org.yaml`, `radio_browser.yaml`, `wikidata.yaml`),
+  network lists (fact-checkers), organisation type / scope, and clear words in the outlet's name
+  (`config/rules.yaml`). No evidence = "General news". Every topic shows its reason as a tooltip.
+- **UN profile** from SDG Media Compact, IFCN, organisation type, iptv-org / Radio Browser /
+  Wikidata, minority languages (`config/official_languages.csv`, from Unicode CLDR) and 2+ languages.
+- **IFCN signatories** are now read (from the list's own data address): 183 fact-checkers;
+  new filter value "IFCN" under "Member of".
+- Website: topic buttons work (with counts), "Matches: ..." shows topics and UN profiles,
+  switch **"Only show topic and UN profile matches"** (default off), export lists the chosen topics.
+- Report `reports/topics.md`: how many outlets have each topic / profile and why.
+- `check_config.py` also checks the topic / UN profile names in the mapping tables.
+
 ## 2026-11-06
 - **Export list (PDF, Excel, Word).** Tick "Export" on any result card, or "Add all N to export list"
   for every outlet matching the current filters. The list is kept when filters change, so several

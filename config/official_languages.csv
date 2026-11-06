@@ -1,0 +1,196 @@
+iso3,name,official_languages
+AFG,Afghanistan,fas;pes;prs;pus;tuk;uzb
+ALB,Albania,sqi
+DZA,Algeria,ara;fra
+AND,Andorra,cat
+AGO,Angola,por
+ATG,Antigua and Barbuda,eng
+ARG,Argentina,spa
+ARM,Armenia,hye
+AUS,Australia,eng
+AUT,Austria,deu;hrv;hun;slv
+AZE,Azerbaijan,aze
+BHS,Bahamas,eng
+BHR,Bahrain,ara
+BGD,Bangladesh,ben
+BRB,Barbados,eng
+BLR,Belarus,bel;rus
+BEL,Belgium,deu;fra;nld
+BLZ,Belize,eng
+BEN,Benin,fra
+BTN,Bhutan,dzo
+BOL,Bolivia (Plurinational State of),aym;que;spa
+BIH,Bosnia and Herzegovina,bos;cnr;hrv;srp
+BWA,Botswana,eng;tsn
+BRA,Brazil,por;vec
+BRN,Brunei Darussalam,msa;zsm
+BGR,Bulgaria,bul
+BFA,Burkina Faso,fra
+BDI,Burundi,eng;fra;run
+CPV,Cabo Verde,por
+KHM,Cambodia,khm
+CMR,Cameroon,eng;fra
+CAN,Canada,chp;crk;den;dgr;eng;fra;gwi;iku
+CAF,Central African Republic,fra;sag
+TCD,Chad,ara;fra
+CHL,Chile,spa
+CHN,China,bod;cmn;kor;mon;uig;yue;zha;zho
+COL,Colombia,spa
+COM,Comoros,ara;fra;wni;zdj
+COG,Congo,fra
+CRI,Costa Rica,spa
+HRV,Croatia,hrv;ita;vec
+CUB,Cuba,spa
+CYP,Cyprus,ell;tur
+CZE,Czechia,ces
+CIV,Côte d'Ivoire,fra
+PRK,Democratic People's Republic of Korea,kor
+COD,Democratic Republic of the Congo,fra;kon;lin;lua;swa
+DNK,Denmark,dan;deu;kal
+DJI,Djibouti,ara;fra
+DMA,Dominica,eng
+DOM,Dominican Republic,spa
+ECU,Ecuador,que;spa
+EGY,Egypt,ara
+SLV,El Salvador,spa
+GNQ,Equatorial Guinea,fra;por;spa
+ERI,Eritrea,ara;eng;tir
+EST,Estonia,est
+SWZ,Eswatini,eng;ssw
+ETH,Ethiopia,amh
+FJI,Fiji,eng;fij;hif
+FIN,Finland,fin;sms;swe
+FRA,France,fra
+GAB,Gabon,fra
+GMB,Gambia,eng
+GEO,Georgia,abk;kat;oss
+DEU,Germany,deu;frr
+GHA,Ghana,aka;eng;ewe;gaa
+GRC,Greece,ell
+GRD,Grenada,eng
+GTM,Guatemala,caa;cak;ixl;quc;quv;spa;usp
+GIN,Guinea,fra
+GNB,Guinea-Bissau,por
+GUY,Guyana,eng
+HTI,Haiti,fra;hat
+VAT,Holy See,ita
+HND,Honduras,spa
+HUN,Hungary,hun
+ISL,Iceland,isl
+IND,India,asm;ben;eng;guj;hin;kan;kas;kha;kok;mai;mal;mar;nep;npi;ori;ory;pan;sat;snd;tam;tel;urd
+IDN,Indonesia,ind
+IRN,Iran (Islamic Republic of),fas;pes;prs
+IRQ,Iraq,ara;aze;ckb;kur
+IRL,Ireland,eng;gle
+ISR,Israel,ara;heb
+ITA,Italy,fra;ita;vec
+JAM,Jamaica,eng
+JPN,Japan,jpn
+JOR,Jordan,ara
+KAZ,Kazakhstan,kaz;rus
+KEN,Kenya,eng;swa
+KIR,Kiribati,eng;gil
+KWT,Kuwait,ara
+KGZ,Kyrgyzstan,kir;rus
+LAO,Lao People's Democratic Republic,lao
+LVA,Latvia,lav
+LBN,Lebanon,ara
+LSO,Lesotho,eng;sot
+LBR,Liberia,eng
+LBY,Libya,ara
+LIE,Liechtenstein,deu;gsw
+LTU,Lithuania,lit
+LUX,Luxembourg,deu;fra;ltz
+MDG,Madagascar,eng;fra;mlg
+MWI,Malawi,eng;nya
+MYS,Malaysia,msa;zsm
+MDV,Maldives,div
+MLI,Mali,fra
+MLT,Malta,eng;mlt
+MHL,Marshall Islands,eng;mah
+MRT,Mauritania,ara
+MUS,Mauritius,eng;fra
+MEX,Mexico,spa
+FSM,Micronesia (Federated States of),eng
+MCO,Monaco,fra
+MNG,Mongolia,mon
+MNE,Montenegro,cnr;srp
+MAR,Morocco,ara;fra;tzm
+MOZ,Mozambique,por
+MMR,Myanmar,mya
+NAM,Namibia,eng
+NRU,Nauru,eng;nau
+NPL,Nepal,nep;npi
+NLD,Netherlands (Kingdom of the),fry;nld
+NZL,New Zealand,eng;mri
+NIC,Nicaragua,spa
+NER,Niger,fra
+NGA,Nigeria,eng;yor
+MKD,North Macedonia,mkd;sqi
+NOR,Norway,nno;nob;nor;sme
+OMN,Oman,ara
+PAK,Pakistan,eng;urd
+PLW,Palau,eng;pau
+PAN,Panama,spa
+PNG,Papua New Guinea,eng;hmo;tpi
+PRY,Paraguay,grn;spa
+PER,Peru,que;spa
+PHL,Philippines,ceb;eng;fil;hil;ilo;mdh;pag;tgl;tsg;war
+POL,Poland,csb;deu;lit;pol
+PRT,Portugal,por
+QAT,Qatar,ara
+KOR,Republic of Korea,kor
+MDA,Republic of Moldova,ron
+ROU,Romania,ron
+RUS,Russian Federation,ady;ava;aze;bak;bua;che;inh;kbd;koi;kom;krc;kum;lbe;lez;mdf;myv;rus;sah;tat;tyv;udm
+RWA,Rwanda,eng;fra;kin
+KNA,Saint Kitts and Nevis,eng
+LCA,Saint Lucia,eng
+VCT,Saint Vincent and the Grenadines,eng
+WSM,Samoa,eng;smo
+SMR,San Marino,ita
+STP,Sao Tome and Principe,por
+SAU,Saudi Arabia,ara
+SEN,Senegal,bjt;bsc;dyo;fra;ful;knf;mey;mfv;sav;snf;srr;tnr;wol
+SRB,Serbia,cnr;hrv;hun;ron;slk;srp;ukr
+SYC,Seychelles,eng;fra
+SLE,Sierra Leone,eng
+SGP,Singapore,cmn;eng;msa;tam;yue;zho;zsm
+SVK,Slovakia,slk
+SVN,Slovenia,slv;vec
+SLB,Solomon Islands,eng
+SOM,Somalia,ara;som
+ZAF,South Africa,afr;eng;nbl;nso;sot;ssw;tsn;tso;ven;xho;zul
+SSD,South Sudan,eng
+ESP,Spain,ast;cat;eus;glg;oci;spa
+LKA,Sri Lanka,sin;tam
+PSE,State of Palestine,ara
+SDN,Sudan,ara;eng
+SUR,Suriname,nld
+SWE,Sweden,fin;swe
+CHE,Switzerland,deu;fra;gsw;ita;roh
+SYR,Syrian Arab Republic,ara
+TJK,Tajikistan,tgk
+THA,Thailand,tha
+TLS,Timor-Leste,por;tet
+TGO,Togo,fra
+TON,Tonga,eng;ton
+TTO,Trinidad and Tobago,eng
+TUN,Tunisia,ara;fra
+TKM,Turkmenistan,tuk
+TUV,Tuvalu,eng;tvl
+TUR,Türkiye,tur
+UGA,Uganda,eng;swa
+UKR,Ukraine,rus;ukr
+ARE,United Arab Emirates,ara
+GBR,United Kingdom of Great Britain and Northern Ireland,cym;eng;gla;gle
+TZA,United Republic of Tanzania,eng;swa
+USA,United States of America,eng;haw;spa
+URY,Uruguay,spa
+UZB,Uzbekistan,uzb
+VUT,Vanuatu,bis;eng;fra
+VEN,Venezuela (Bolivarian Republic of),spa
+VNM,Viet Nam,vie
+YEM,Yemen,ara
+ZMB,Zambia,eng
+ZWE,Zimbabwe,eng;nde;sna
