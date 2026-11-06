@@ -1,0 +1,17 @@
+# Pipeline
+
+Run in this order (from the repository root):
+
+```
+python pipeline/normalize/networks.py      # members of network lists   -> work/networks.json
+python pipeline/normalize/sources.py       # all sources, one format    -> work/records.json
+python pipeline/merge/merge.py             # duplicates merged, ids     -> work/outlets.json
+python pipeline/validate/known_outlets.py  # check: 20 known outlets    -> reports/known_outlets.md
+```
+
+- `fetch/` downloads the sources (run by the "Fetch sources" workflow), raw data in `raw/`.
+- `work/` holds intermediate files; they are rebuilt on every run and not stored in git.
+- `cache/id_map.json` gives every outlet a stable id (pf-000001 ...): never delete it,
+  corrections and "first seen" dates depend on it. `cache/first_seen.json` stores when
+  an outlet was found the first time.
+- `reports/` explains every run in plain words.
