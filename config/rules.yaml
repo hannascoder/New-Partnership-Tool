@@ -129,3 +129,22 @@ scope:
   # Community media without other evidence are local
   org_types:
     local: [community_media]
+
+# ---------------------------------------------------------------- exclusion
+# Very right-wing (far-right) media are NOT shown (owner's request, 06.11.2026:
+# "das bringt nichts"). Only open, documented evidence counts; every excluded
+# outlet is listed with its reason in reports/excluded_far_right.md so the owner
+# can check. A hand correction in overrides.csv (field "far_right", value "no")
+# brings an outlet back.
+exclude_far_right:
+  # Wikidata "political ideology" (P1142) of the outlet or of its owner
+  wikidata_ideologies: [far-right politics, alt-right, neo-Nazism, neo-fascism, fascism, Nazism,
+                        white nationalism, white supremacy, ultranationalism, neo-Confederate,
+                        identitarian movement, Great Replacement, antisemitism, Holocaust denial,
+                        clerical fascism, national socialism]
+  # NOT used on their own (too broad, would catch mainstream conservative media):
+  # right-wing populism, conservatism, nationalism, national conservatism.
+  # Wikipedia categories: every category whose title contains "far-right",
+  # "alt-right", "neo-Nazi", "white nationalist" or "fascist" and a media word
+  # (fetched by pipeline/fetch/far_right.py), and their direct subcategories.
+  wikipedia_categories: true
