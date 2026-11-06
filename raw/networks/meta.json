@@ -1,6 +1,6 @@
 {
   "source": "networks",
-  "fetched_at": "2026-11-05T21:17:04Z",
+  "fetched_at": "2026-11-06T00:34:16Z",
   "records": 0,
   "pages": {
     "sdg_media_compact": {
@@ -41,17 +41,17 @@
     "occrp_network": {
       "ok": true,
       "source": "https://www.occrp.org/en/about-us/our-global-network",
-      "bytes": 394721
+      "bytes": 394722
     },
     "aub_members": {
       "ok": true,
       "source": "https://www.uar-aub.org/ours-members",
-      "bytes": 983302
+      "bytes": 982330
     },
     "ebu_members": {
       "ok": true,
       "source": "wikipedia:European Broadcasting Union (revision 1383082173)",
-      "bytes": 565430
+      "bytes": 565419
     },
     "ebu_members_list": {
       "ok": false,
