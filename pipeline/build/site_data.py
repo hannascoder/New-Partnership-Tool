@@ -31,6 +31,7 @@ SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org"
 
 def main():
     outlets = json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))
+    outlets = [o for o in outlets if not (o.get("cat") or {}).get("excluded")]  # far-right: not shown (rules.yaml)
     countries = list(csv.DictReader(open(CFG / "countries.csv", encoding="utf-8")))
     langs_all = {r["code"]: r for r in csv.DictReader(open(CFG / "languages.csv", encoding="utf-8"))}
     cats = yaml.safe_load(open(CFG / "categories.yaml", encoding="utf-8"))

@@ -16,26 +16,25 @@ is published automatically (only the PR *preview* builds fail; harmless).
   (`.github/workflows/fetch.yml`, runs on pushes to `step-*` / `ngo-*` branches and by hand).
 
 ## In progress
-- **Branch `step-4-far-right`**: exclusion of very right-wing media (owner's request). Rule in
-  `config/rules.yaml` (`exclude_far_right`), code in `pipeline/classify/classify.py`, evidence fetched
-  by `pipeline/fetch/far_right.py` (workflow run started 06.11.2026 19:33 UTC). Next: pull the branch,
-  run classify, look at `reports/excluded_far_right.md`, **send the list to the owner for review before
-  merging**, then rebuild `site/data` and merge.
+- **Far-right exclusion: done (merged 06.11.2026).** Rule `exclude_far_right` in `config/rules.yaml`,
+  evidence `raw/far_right/` (Wikidata political ideology incl. the owner's, Wikipedia far-right media
+  categories). 46 outlets not shown, list with reasons in `reports/excluded_far_right.md`. Brought back by
+  hand (`overrides.csv`): Corriere Adriatico, Kesari (historic categories). Hezbollah/Hamas outlets stay
+  excluded (owner's ideology "antisemitism"); the owner can still reverse any entry.
 - **Branch `ngo-sources`** (NGOs, phase 2, owner wants them in): fetchers for ECOSOC iCSO (slow server,
   paging with cookies, resumes), UN Geneva list (~1,500, parsed), IATI (1,338 NGOs);
   `pipeline/normalize/ngos.py`. ECOSOC: plan to use the lists by field of activity / country instead
   of 6,000 profile pages. NGO filter design: `docs/BACKLOG.md`.
 
 ## Next steps (agreed order)
-1. Finish far-right exclusion (above).
-2. **4d topics + UN profile** (mapping tables per source → `config/`; "Only show topic matches" switch,
+1. **4d topics + UN profile** (mapping tables per source → `config/`; "Only show topic matches" switch,
    default off).
-3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
+2. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
    reachable?, contact email/page (owner wants email contacts), social links, podcast/newsletter,
    language, owner from imprint/about text.
-4. **4e**: all filters finished, "Also show outlets without this information" everywhere.
-5. NGOs into the pipeline and the site (same filters + "NGO" type, "Type of work", "Events/screenings").
-6. Step 5 reports, 6–7 website v1, 8 Atlas link, 9 automation **every 2 months** (see CLAUDE.md), 10 test.
+3. **4e**: all filters finished, "Also show outlets without this information" everywhere.
+4. NGOs into the pipeline and the site (same filters + "NGO" type, "Type of work", "Events/screenings").
+5. Step 5 reports, 6–7 website v1, 8 Atlas link, 9 automation **every 2 months** (see CLAUDE.md), 10 test.
 
 ## Waiting for the owner
 - Covering Climate Now: CSV download from the Airtable view (guide given 06.11.2026).

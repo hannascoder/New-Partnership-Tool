@@ -279,6 +279,28 @@ def match_international(outlets, reach):
     return found, missing
 
 
+def far_right(o, rules, evidence, owners):
+    """Reason string if the outlet counts as far-right (config/rules.yaml), else None."""
+    if not evidence:
+        return None
+    ideos = set(rules["wikidata_ideologies"])
+    qids = [m.split(":", 1)[1] for m in o["members"] if m.startswith("wd:")]
+    for q in qids:
+        hit = ideos & set(evidence["ideology"].get(q, []))
+        if hit:
+            return "Wikidata political ideology: " + sorted(hit)[0]
+    for m in o["raw"].values():  # owners' ideology
+        for q in m.get("raw", {}).get("owned_by_qid", []) + m.get("raw", {}).get("parent_qid", []):
+            hit = ideos & set(evidence["ideology"].get(q, []))
+            if hit:
+                return f"Wikidata political ideology of the owner {(owners.get(q) or {}).get('label') or q}: " + sorted(hit)[0]
+    if rules.get("wikipedia_categories") and o.get("wikipedia"):
+        for cat, titles in evidence["categories"].items():
+            if o["wikipedia"] in titles:
+                return "Wikipedia " + cat
+    return None
+
+
 def load_overrides():
     out = {}
     path = ROOT / "overrides.csv"
@@ -296,6 +318,8 @@ def main():
     owners_file = ROOT / "raw" / "wikidata_owners" / "data.json.gz"
     owners = json.load(gzip.open(owners_file, "rt", encoding="utf-8")) if owners_file.exists() else {}
     rsf = json.load(open(ROOT / "work" / "rsf.json", encoding="utf-8"))
+    fr_file = ROOT / "raw" / "far_right" / "data.json.gz"
+    fr_evidence = json.load(gzip.open(fr_file, "rt", encoding="utf-8")) if fr_file.exists() else None
     reach = Reach()
     oidx = owner_index(owners, None)
     intl, intl_missing = match_international(outlets, reach)
@@ -313,6 +337,10 @@ def main():
                 and cat["ownership"]["value"] == "private":
             also.append("news_outlet")
         cat["org_type_also"] = also
+        fr = far_right(o, rules["exclude_far_right"], fr_evidence, owners)
+        if fr and (overrides.get(o["id"], {}).get("far_right") or {}).get("value") == "no":
+            fr = None
+        cat["excluded"] = fr
         cat["scope"], audience = scope_and_reach(o, rules["scope"], reach, intl.get(o["id"], []), cat["org_type"]["value"])
         cat["audience"] = audience
         extra_langs = [l for e, s, _ in intl.get(o["id"], []) if s for l in s["languages"]]
@@ -324,6 +352,14 @@ def main():
         o["cat"] = cat
     json.dump(outlets, open(ROOT / "work" / "classified.json", "w", encoding="utf-8"), ensure_ascii=False)
     report(outlets, intl_missing)
+    ex = sorted((o for o in outlets if o["cat"].get("excluded")), key=lambda o: (o["country"] or "", o["name"] or ""))
+    lines = ["# Excluded as far-right (not shown on the website)", "",
+             f"{len(ex)} outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).",
+             "To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.", "",
+             "| Id | Name | Country | Reason |", "|---|---|---|---|"]
+    lines += [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['excluded']} |" for o in ex]
+    (ROOT / "reports" / "excluded_far_right.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"excluded as far-right: {len(ex)}")
 
 
 def report(outlets, intl_missing=()):
