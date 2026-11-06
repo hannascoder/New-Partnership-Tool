@@ -1,6 +1,6 @@
 {
   "source": "networks",
-  "fetched_at": "2026-11-06T18:08:42Z",
+  "fetched_at": "2026-11-06T18:45:37Z",
   "records": 0,
   "pages": {
     "sdg_media_compact": {
@@ -46,7 +46,7 @@
     "occrp_network": {
       "ok": true,
       "source": "https://www.occrp.org/en/about-us/our-global-network",
-      "bytes": 394722
+      "bytes": 394721
     },
     "aub_members": {
       "ok": true,
