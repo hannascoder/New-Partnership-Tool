@@ -69,6 +69,10 @@ ownership:
     #    the State Media Monitor (Media and Journalism Research Center): it lists
     #    state-controlled media only (not independent public media like BBC or ARD).
     networks: [state_media]
+    # Rules 2 and 3 do NOT apply to public broadcasters (step 4a type
+    # "public service broadcaster"): Wikidata often names a ministry as the formal
+    # owner of independent public media (BBC -> culture ministry) or calls them
+    # "state media" (DW). For them only rules 1 and 4 decide.
     # 2. The outlet itself is classed as state media / state-owned in Wikidata.
     wikidata_classes: [state media, state-owned enterprise, government agency, government organization,
                        state-owned television, state broadcaster]
@@ -92,6 +96,7 @@ ownership:
                     private university, educational institution, community radio]
   - value: private
     owner_classes: [business, enterprise, company, public company, private company, media company,
+                    privately held company, media conglomerate, publishing house,
                     conglomerate, holding company, publishing company, newspaper publisher,
                     broadcasting company, television company, human, family business, subsidiary,
                     limited company, joint-stock company, société anonyme, Aktiengesellschaft,

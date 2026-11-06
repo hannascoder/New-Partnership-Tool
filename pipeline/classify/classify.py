@@ -96,10 +96,11 @@ def ownership(o, rules, owners, rsf, org):
         nets = [n for n in r.get("networks", []) if n in o["networks"]]
         if nets:
             return val(v, "membership", NET_LABEL.get(nets[0], nets[0]) + " (State Media Monitor)")
+        psb_exempt = v == "state_controlled" and org == "public_service_broadcaster"
         hit = classes & set(r.get("wikidata_classes", []))
-        if hit:
+        if hit and not psb_exempt:
             return val(v, "source_field", "Wikidata: " + sorted(hit)[0])
-        for label, oc, depth in info:
+        for label, oc, depth in ([] if psb_exempt else info):
             hit = oc & set(r.get("owner_classes", []))
             if hit:
                 who = "owner" if depth == 1 else "owner's owner"
