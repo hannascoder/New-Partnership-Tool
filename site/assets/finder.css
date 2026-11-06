@@ -54,3 +54,16 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
   .filter-body { display: none; }
   .filters.open .filter-body { display: block; }
 }
+
+/* export list: highlighted cards and the sticky bar at the bottom */
+.card.selected { border-color: var(--un-blue); box-shadow: 0 0 0 2px var(--accent-soft), var(--shadow); }
+.card .export-check { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; font-weight: 600; color: var(--un-blue-ink); cursor: pointer; }
+.export-bar { position: sticky; bottom: 0; z-index: 50; background: var(--surface); border-top: 2px solid var(--un-blue);
+  box-shadow: var(--shadow-lg); padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.export-bar[hidden] { display: none; }
+.export-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1 1 320px; }
+.export-filters { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.export-error { font-size: 12px; color: var(--danger); }
+.export-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.orient { font-size: 12px; color: var(--muted); display: inline-flex; gap: 8px; }
+#addAll:disabled { opacity: .5; cursor: not-allowed; }
