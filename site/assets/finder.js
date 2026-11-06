@@ -248,6 +248,55 @@
     b.setAttribute("aria-pressed", exportList.has(id)); b.textContent = exportList.has(id) ? "✓ In export list" : "+ Add to export list";
   });
 
+  /* --------------------------------------------- export rows (finder-export.js) */
+  const lab = (list, id) => (list.find((x) => x.id === id) || {}).label || id;
+  function flags(o) {
+    const f = [];
+    if (o.ow && o.ow[0] === "state_controlled") f.push("State-controlled");
+    if (o.s.length < 2) f.push("Unverified");
+    return f.join(", ");
+  }
+  function exportRow(o, countryFilter, topicFilter) {
+    const C = CFG.categories, K = CFG.countryName, k = K[o.c] || {};
+    let reaches = "";
+    if (o.rc) {
+      if (countryFilter && countryFilter !== o.c && countryFilter in o.rc) reaches = `${(K[countryFilter] || {}).name} (${basisText(CFG.why[o.rc[countryFilter]])})`;
+      else reaches = Object.keys(o.rc).length + 1 >= 150 ? "Worldwide" : [o.c].concat(Object.keys(o.rc)).map((c) => (K[c] || {}).name || c).join(", ");
+    }
+    const types = [o.o ? lab(C.org_type, o.o[0]) : ""].concat((o.oa || []).map((t) => lab(C.org_type, t))).filter(Boolean);
+    const topics = (o.tp || []).filter((t) => !topicFilter || !topicFilter.size || topicFilter.has(t)).map((t) => lab(C.topics, t));
+    return {
+      name: o.n, type: types.join(" / "), country: k.name || o.c, reaches,
+      scope: o.sc && o.sc[0] !== "unknown" ? lab(C.scope, o.sc[0]) : "",
+      languages: (o.l || []).map((l) => CFG.langName[l] || l).join(", "),
+      channels: (o.ch || []).map((c) => lab(C.channel, c)).join(", "),
+      ownership: o.ow ? lab(C.ownership, o.ow[0]) : "Unknown",
+      topic: topics.join(", "),
+      unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
+      memberOf: (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
+      website: o.w || "", contact: o.em || "",
+      social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
+      notes: flags(o),
+    };
+  }
+  /* sections (EXPORT_SPEC): "Best UN fit" = items with a UN profile, best first;
+     then "By country & rank" = all others, country A-Z, then rank */
+  function buildExportList(ids, filterSets, countryFilter, topicFilter) {
+    const byId = {}; ALL.forEach((o) => { byId[o.i] = o; });
+    const items = [...new Set(ids)].map((id) => byId[id]).filter(Boolean);
+    const K = CFG.countryName;
+    const fit = items.filter((o) => (o.un || []).length).sort((a, b) => b.un.length - a.un.length || b.p - a.p || a.n.localeCompare(b.n));
+    const rest = items.filter((o) => !(o.un || []).length).sort((a, b) => ((K[a.c] || {}).name || "").localeCompare((K[b.c] || {}).name || "") || a.r - b.r);
+    const row = (o) => exportRow(o, countryFilter, topicFilter);
+    return {
+      sections: [
+        { title: "Best UN fit", note: "Outlets with a UN profile (e.g. existing UN relationship), best match first.", items: fit.map(row) },
+        { title: "By country & rank", note: "All other outlets, by country (A–Z), then by prominence rank within the country.", items: rest.map(row) }],
+      filters: filterSets, count: items.length, updated: CFG.data_date,
+    };
+  }
+  window.PF = { exportList: buildExportList, all: () => ALL, cfg: () => CFG };
+
   function updateExportCount() { $("exportCount").textContent = exportList.size.toLocaleString("en"); }
   function openExport() {
     $("exportInfo").textContent = exportList.size ? `${exportList.size.toLocaleString("en")} outlets in the list.` : "The list is empty. Add outlets with “+ Add to export list”.";
