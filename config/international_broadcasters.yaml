@@ -1,0 +1,171 @@
+# International broadcasters and agencies: where they are heard/read beyond
+# their home country (briefing D: "Sitz vs. Publikum", basis "language_service").
+#
+# PROPOSAL of 06.11.2026 for the owner to check: add, remove or change freely.
+# - "match": outlet names as they appear in the data (first match in the home country wins)
+# - "scope": international unless stated
+# - "reaches": groups from config/audience_groups.yaml or ISO alpha-3 codes
+# - "services": language services; each adds countries and the language. A
+#   separate outlet with the same name (e.g. "BBC Hausa") gets that service's reach too.
+broadcasters:
+  - match: [BBC World Service]
+    country: GBR
+    reaches: [worldwide]
+    services:
+      - {name: BBC Afrique, languages: [fra], reaches: [francophone_africa]}
+      - {name: BBC Hausa, languages: [hau], reaches: [hausa]}
+      - {name: BBC News Swahili, languages: [swa], reaches: [swahili]}
+      - {name: BBC Somali, languages: [som], reaches: [somali]}
+      - {name: BBC Amharic, languages: [amh], reaches: [ethiopia_eritrea]}
+      - {name: BBC Gahuza, languages: [kin, run], reaches: [great_lakes]}
+      - {name: BBC Pidgin, languages: [pcm], reaches: [nigeria_west_africa]}
+      - {name: BBC Arabic, languages: [ara], reaches: [arab_world]}
+      - {name: BBC Persian, languages: [fas], reaches: [persian]}
+      - {name: BBC Mundo, languages: [spa], reaches: [hispanic_america]}
+      - {name: BBC News Brasil, languages: [por], reaches: [BRA]}
+      - {name: BBC Russian, languages: [rus], reaches: [russian_speaking]}
+      - {name: BBC Hindi, languages: [hin], reaches: [IND]}
+      - {name: BBC Urdu, languages: [urd], reaches: [PAK]}
+      - {name: BBC Bangla, languages: [ben], reaches: [BGD]}
+      - {name: BBC Indonesia, languages: [ind], reaches: [IDN]}
+  - match: [BBC News]
+    country: GBR
+    reaches: [worldwide]
+  - match: [Radio France Internationale]
+    country: FRA
+    reaches: [worldwide, francophone_africa]
+    services:
+      - {name: RFI Hausa, languages: [hau], reaches: [hausa]}
+      - {name: RFI Kiswahili, languages: [swa], reaches: [swahili]}
+      - {name: RFI Mandenkan, languages: [man], reaches: [manding_fula]}
+      - {name: RFI Fulfulde, languages: [ful], reaches: [manding_fula]}
+      - {name: RFI Português, languages: [por], reaches: [lusophone_africa]}
+      - {name: RFI Español, languages: [spa], reaches: [hispanic_america]}
+  - match: [France 24]
+    country: FRA
+    reaches: [worldwide, francophone_africa]
+    services:
+      - {name: France 24 Arabic, languages: [ara], reaches: [arab_world]}
+      - {name: France 24 Español, languages: [spa], reaches: [hispanic_america]}
+  - match: [TV5 Monde, TV5Monde]
+    country: FRA
+    reaches: [worldwide, francophone_africa]
+  - match: [Deutsche Welle]
+    country: DEU
+    reaches: [worldwide]
+    services:
+      - {name: DW Français, languages: [fra], reaches: [francophone_africa]}
+      - {name: DW Hausa, languages: [hau], reaches: [hausa]}
+      - {name: DW Kiswahili, languages: [swa], reaches: [swahili]}
+      - {name: DW Amharic, languages: [amh], reaches: [ethiopia_eritrea]}
+      - {name: DW Português para África, languages: [por], reaches: [lusophone_africa]}
+      - {name: DW Arabic, languages: [ara], reaches: [arab_world]}
+      - {name: DW Persian, languages: [fas], reaches: [persian]}
+      - {name: DW Español, languages: [spa], reaches: [hispanic_america]}
+      - {name: DW Russian, languages: [rus], reaches: [russian_speaking]}
+      - {name: DW Hindi, languages: [hin], reaches: [IND]}
+      - {name: DW Urdu, languages: [urd], reaches: [PAK]}
+      - {name: Deutsche Welle Bengali, languages: [ben], reaches: [BGD]}
+      - {name: DW Indonesia, languages: [ind], reaches: [IDN]}
+  - match: [Voice of America]
+    country: USA
+    reaches: [worldwide]
+    services:
+      - {name: VOA Afrique, languages: [fra], reaches: [francophone_africa]}
+      - {name: VOA Hausa, languages: [hau], reaches: [hausa]}
+      - {name: VOA Swahili, languages: [swa], reaches: [swahili]}
+      - {name: VOA Somali, languages: [som], reaches: [somali]}
+      - {name: VOA Amharic, languages: [amh], reaches: [ethiopia_eritrea]}
+      - {name: VOA Central Africa, languages: [kin, run], reaches: [great_lakes]}
+      - {name: VOA Português, languages: [por], reaches: [lusophone_africa]}
+      - {name: VOA Persian, languages: [fas], reaches: [persian]}
+      - {name: VOA Urdu, languages: [urd], reaches: [PAK]}
+      - {name: VOA Spanish, languages: [spa], reaches: [hispanic_america]}
+  - match: [Al Jazeera]
+    country: QAT
+    reaches: [arab_world, worldwide]
+  - match: [Al Jazeera English]
+    country: QAT
+    reaches: [worldwide]
+  - match: [CGTN]
+    country: CHN
+    reaches: [worldwide]
+    services:
+      - {name: CGTN Français, languages: [fra], reaches: [francophone_africa]}
+      - {name: CGTN Arabic, languages: [ara], reaches: [arab_world]}
+      - {name: CGTN Español, languages: [spa], reaches: [hispanic_america]}
+      - {name: CGTN Russian, languages: [rus], reaches: [russian_speaking]}
+  - match: [CGTN Africa]
+    country: KEN
+    reaches: [africa]
+  - match: [China Radio International]
+    country: CHN
+    reaches: [worldwide]
+  - match: [TRT World]
+    country: TUR
+    reaches: [worldwide]
+  - match: [RT]
+    country: RUS
+    reaches: [worldwide, russian_speaking]
+  - match: [RT Arabic]
+    country: RUS
+    reaches: [arab_world]
+  - match: [RT en Español]
+    country: RUS
+    reaches: [hispanic_america]
+  - match: [NHK World-Japan]
+    country: JPN
+    reaches: [worldwide]
+  - match: [KBS World]
+    country: KOR
+    reaches: [worldwide]
+  - match: [Africanews]
+    country: COG
+    reaches: [africa]
+  - match: [Euronews]
+    country: BEL
+    reaches: [europe, worldwide]
+  - match: [Vatican News, Vatican Radio]
+    country: VAT
+    reaches: [worldwide]
+  - match: [Sky News Arabia, Al Arabiya, Al Mayadeen]
+    reaches: [arab_world]
+  - match: [teleSUR]
+    country: VEN
+    reaches: [latin_america]
+  - match: [Radio Exterior de España]
+    country: ESP
+    reaches: [worldwide, hispanic_america]
+  - match: [RTP África]
+    country: PRT
+    reaches: [lusophone_africa]
+  - match: [Channel Africa]
+    country: ZAF
+    reaches: [africa]
+  - match: [Press TV]
+    country: IRN
+    reaches: [worldwide]
+  - match: [Radio Free Europe/Radio Liberty]
+    country: CZE
+    reaches: [russian_speaking, balkans, persian, afghanistan_pakistan]
+  - match: [Radio Free Asia]
+    country: USA
+    reaches: [CHN, VNM, LAO, KHM, MMR, PRK]
+  - match: [Alhurra, Middle East Broadcasting Networks]
+    country: USA
+    reaches: [arab_world]
+  - match: [Radio Martí]
+    country: USA
+    reaches: [CUB]
+  - match: [All India Radio]
+    country: IND
+    reaches: [south_asia, worldwide]
+  - match: [RNZ Pacific]
+    country: NZL
+    reaches: [pacific_islands]
+  - match: [ABC Australia]
+    country: AUS
+    reaches: [asia_pacific, pacific_islands]
+  # news agencies serve media worldwide
+  - match: [Agence France-Presse, Reuters, Associated Press, Xinhua News Agency, Anadolu Agency]
+    reaches: [worldwide]

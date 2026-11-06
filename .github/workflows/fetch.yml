@@ -42,6 +42,9 @@ jobs:
       - name: Network and member lists
         continue-on-error: true
         run: python pipeline/fetch/networks.py
+      - name: Atlas country context (press freedom)
+        continue-on-error: true
+        run: python pipeline/fetch/atlas.py
       - name: Wikidata owners (step 4b)
         continue-on-error: true
         run: python pipeline/fetch/wikidata_owners.py

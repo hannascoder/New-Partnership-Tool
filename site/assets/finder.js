@@ -5,7 +5,7 @@
 (function () {
   "use strict";
   const PAGE = 50;
-  const S = { own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
+  const S = { scope: new Set(), scopeUnknown: false, reach: true, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
               channel: new Set(), size: "all", un: new Set(), checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
@@ -53,7 +53,10 @@
     $("f-region").addEventListener("change", (e) => { S.region = e.target.value; S.country = ""; drawCountries(); apply(); });
     $("f-country").addEventListener("change", (e) => { S.country = e.target.value; apply(); });
     drawCountries();
-    C.scope.forEach((s) => $("f-scope").append(chip(esc(s.label), false, () => {}, { disabled: true })));
+    const scCount = {}; ALL.forEach((o) => { if (o.sc) scCount[o.sc[0]] = (scCount[o.sc[0]] || 0) + 1; });
+    C.scope.forEach((s) => $("f-scope").append(chip(esc(s.label) + ` <span class="sdg">${(scCount[s.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.scope, s.id))));
+    $("f-scopeUnknown").addEventListener("change", (e) => { S.scopeUnknown = e.target.checked; apply(); });
+    $("f-reach").addEventListener("change", (e) => { S.reach = e.target.checked; apply(); });
     const typeCount = {}; ALL.forEach((o) => { if (o.o) typeCount[o.o[0]] = (typeCount[o.o[0]] || 0) + 1; });
     visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label) + ` <span class="sdg">${(typeCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgType, o.id))));
     visible(C.channel).forEach((c) => $("f-channel").append(chip(esc(c.label), false, toggle(S.channel, c.id))));
@@ -124,7 +127,7 @@
   }
 
   function anyFilter() {
-    return S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.un.size || S.checks.size;
+    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.un.size || S.checks.size;
   }
 
   function apply() {
@@ -136,7 +139,12 @@
     }
     $("materialHint").textContent = matChannels ? "Shows outlets on: " + [...matChannels].map((c) => (C.channel.find((x) => x.id === c) || {}).label || c).join(", ") : "";
     current = ALL.filter((o) => {
-      if (S.country ? o.c !== S.country : !inRegion(o.c)) return false;
+      if (S.country) { if (o.c !== S.country && !(S.reach && o.rc && S.country in o.rc)) return false; }
+      else if (!inRegion(o.c)) return false;
+      if (S.scope.size) {
+        const v = o.sc ? o.sc[0] : "unknown";
+        if (!(S.scope.has(v) || (v === "unknown" && S.scopeUnknown))) return false;
+      }
       const ch = o.ch || [];
       if (matChannels && !ch.some((c) => matChannels.has(c)) && !(matTypes && o.o && matTypes.has(o.o[0]))) return false;
       if (S.channel.size && !ch.some((c) => S.channel.has(c))) return false;
@@ -183,12 +191,14 @@
     const unl = (o.un || []).map((u) => (C.un_profile.find((x) => x.id === u) || {}).label).join(", ");
     const inList = exportList.has(o.i);
     return `<li class="card"><div class="card-top"><h3>${esc(o.n)}</h3>${verified}</div>
-      <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")}) · Reaches: <span class="pending">step 4</span></p>
+      <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")}) · ${reachText(o)}${o.sc && o.sc[0] !== "unknown" ? ` · Scope: ${esc((C.scope.find((x) => x.id === o.sc[0]) || {}).label || o.sc[0])} <span class="pending" title="${esc(CFG.why[o.sc[1]])}">ⓘ</span>` : ""}</p>
+      ${freedomText(k)}
       ${o.a ? `<p class="row">Also known as: ${esc(o.a.join(", "))}</p>` : ""}
       ${o.o ? `<p class="row"><b>Type:</b> ${esc((C.org_type.find((x) => x.id === o.o[0]) || {}).label || o.o[0])} <span class="pending">(${esc(CFG.why[o.o[1]])})</span></p>` : ""}
-      ${o.ow && o.ow[0] !== "unknown" ? `<p class="row"><b>Ownership:</b> ${esc((C.ownership.find((x) => x.id === o.ow[0]) || {}).label || o.ow[0])} <span class="pending">(${esc(CFG.why[o.ow[1]])})</span></p>` : ""}
+      ${o.ow && o.ow[0] !== "unknown" ? `<p class="row"><b>Ownership:</b> ${esc((C.ownership.find((x) => x.id === o.ow[0]) || {}).label || o.ow[0])} <span class="pending">(${esc(CFG.why[o.ow[1]])})</span></p>` : `<p class="row"><b>Ownership:</b> Unknown <span class="pending" title="No open source says who owns this outlet. This does not mean it is independent or state-run.">ⓘ</span></p>`}
       ${o.oa ? `<p class="row"><b>Also listed as:</b> ${esc(o.oa.map((t) => (C.org_type.find((x) => x.id === t) || {}).label || t).join(", "))}</p>` : ""}
       <p class="row"><b>Languages:</b> ${langs}</p>
+      ${o.sv ? `<p class="row"><b>Language services:</b> ${esc(o.sv.join(", "))}</p>` : ""}
       <p class="row"><b>Channels:</b> ${esc(chans) || "<span class='pending'>no information</span>"}</p>
       ${unl ? `<p class="row"><b>UN profile:</b> ${esc(unl)}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
@@ -197,6 +207,28 @@
       <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
       ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map((u) => (C.un_profile.find((x) => x.id === u) || {}).label).join(", "))}</span>` : ""}
       <p><button class="btn-quiet add" data-id="${esc(o.i)}" aria-pressed="${inList}">${inList ? "✓ In export list" : "+ Add to export list"}</button></p></li>`;
+  }
+
+  function basisText(b) {
+    return b.startsWith("language_service:") ? "via " + b.slice(17) : b === "broadcast_area" ? "broadcast area" : "international broadcaster";
+  }
+  function reachText(o) {
+    const C = CFG.countryName;
+    if (!o.rc) return "Reaches: " + esc((C[o.c] || {}).name || o.c);
+    const n = Object.keys(o.rc).length + 1;
+    if (S.country && S.country !== o.c && S.country in o.rc) {
+      return `Reaches: <b>${esc((C[S.country] || {}).name)}</b> (${esc(basisText(CFG.why[o.rc[S.country]]))}) and ${n - 1} other countries`;
+    }
+    if (n >= 150) return "Reaches: worldwide";
+    return "Reaches: " + esc([o.c].concat(Object.keys(o.rc)).slice(0, 6).map((c) => (C[c] || {}).name || c).join(", ")) + (n > 6 ? ` and ${n - 6} more` : "");
+  }
+  function freedomText(k) {
+    const f = k.freedom; if (!f || f.press_freedom_rank == null) return "";
+    const src = (f.press_freedom_source || "").split("|")[0].trim();
+    return `<p class="row pending">Press freedom in ${esc(k.name)}: rank ${esc(f.press_freedom_rank)} of 180, score ${esc(f.press_freedom_score)} (${esc(src)})`
+      + (f.political_freedom_status ? ` · Political freedom: ${esc(f.political_freedom_status)}` : "")
+      + (f.internet_freedom_status ? ` · Internet freedom: ${esc(f.internet_freedom_status)}` : "")
+      + (f.political_freedom_status || f.internet_freedom_status ? " (Freedom House)" : "") + "</p>";
   }
 
   function draw(fromStart) {

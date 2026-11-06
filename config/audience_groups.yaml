@@ -1,0 +1,36 @@
+# Groups of countries used for the reach of international broadcasters
+# (config/international_broadcasters.yaml). ISO alpha-3, only the 195 allowed countries.
+#
+# Two kinds:
+#  - "iptv: CODE" = the region list of iptv-org (raw/iptv_org/regions.csv), e.g. ARAB, HISPAM
+#  - countries listed here by hand, by where the language is an official or
+#    widely used language. PROPOSAL of 06.11.2026 - please check (owner).
+groups:
+  worldwide: {all: true}
+  arab_world: {iptv: ARAB}
+  hispanic_america: {iptv: HISPAM}
+  latin_america: {iptv: LATAM}
+  africa: {iptv: AFR}
+  europe: {iptv: EUR}
+  asia_pacific: {iptv: APAC}
+  south_asia: {iptv: SAS}
+  southeast_asia: {iptv: SEA}
+  oceania: {iptv: OCE}
+  balkans: {iptv: BALKAN}
+  caribbean: {iptv: CARIB}
+  # French official/widely used in Africa (incl. Maghreb, where French is widely used in media)
+  francophone_africa: {countries: [BEN, BFA, BDI, CMR, CAF, TCD, COM, COG, COD, CIV, DJI, GNQ, GAB, GIN, MDG,
+                                    MLI, NER, RWA, SEN, SYC, TGO, MAR, DZA, TUN, MRT]}
+  lusophone_africa: {countries: [AGO, CPV, GNB, MOZ, STP, GNQ]}
+  hausa: {countries: [NGA, NER, GHA, CMR, TCD]}
+  swahili: {countries: [KEN, TZA, UGA, RWA, BDI, COD]}
+  somali: {countries: [SOM, DJI, ETH, KEN]}
+  ethiopia_eritrea: {countries: [ETH, ERI]}
+  great_lakes: {countries: [RWA, BDI, COD, UGA]}
+  nigeria_west_africa: {countries: [NGA, GHA, CMR, LBR, SLE, GMB]}
+  manding_fula: {countries: [MLI, SEN, GIN, GMB, GNB, BFA, CIV, NER, MRT, CMR, NGA]}
+  persian: {countries: [IRN, AFG, TJK]}
+  afghanistan_pakistan: {countries: [AFG, PAK]}
+  russian_speaking: {countries: [RUS, BLR, UKR, KAZ, KGZ, UZB, TJK, TKM, MDA, ARM, AZE, GEO]}
+  chinese_speaking: {countries: [CHN, SGP, MYS]}
+  pacific_islands: {countries: [FJI, PNG, SLB, VUT, WSM, TON, KIR, TUV, NRU, FSM, MHL, PLW]}

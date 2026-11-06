@@ -88,8 +88,35 @@ def owner_info(o, owners):
     return out
 
 
-def ownership(o, rules, owners, rsf, org):
+def iptv_owner_names(o):
+    names = []
+    for m in o["raw"].values():
+        names += m.get("raw", {}).get("owners", []) or []
+    return names
+
+
+def owner_index(owners, outlets_known):
+    """name of an organisation -> (classes, label) from Wikidata owners, and
+    name -> ownership of outlets/companies already classified, for matching the
+    owner NAMES that iptv-org gives (step 4b-a)."""
+    import sys
+    sys.path.insert(0, str(ROOT / "pipeline" / "merge"))
+    from merge import clean_name
+    idx = {}
+    for q, v in owners.items():
+        if v.get("label"):
+            idx.setdefault(clean_name(v["label"]), (set(v["classes"]), v["label"]))
+    return idx, clean_name
+
+
+def ownership(o, rules, owners, rsf, org, owner_idx=None):
     info = owner_info(o, owners)
+    if owner_idx:  # iptv-org owner names matched to Wikidata organisations
+        idx, clean = owner_idx
+        for n in iptv_owner_names(o):
+            hit = idx.get(clean(n))
+            if hit:
+                info.append((f"{hit[1]} (named by iptv-org)", hit[0], 1))
     classes = wd_classes(o)
     for r in rules:
         v = r["value"]
@@ -116,6 +143,138 @@ def ownership(o, rules, owners, rsf, org):
     return None
 
 
+SCOPE_ORDER = ["international", "regional", "national", "local"]
+
+
+class Reach:
+    """Country groups (config/audience_groups.yaml + iptv-org regions) and the
+    international broadcasters list."""
+
+    def __init__(self):
+        groups = yaml.safe_load(open(ROOT / "config" / "audience_groups.yaml", encoding="utf-8"))["groups"]
+        countries = {r["iso2"]: r["iso3"] for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
+        self.all = set(countries.values())
+        self.iptv = {}
+        regions = ROOT / "raw" / "iptv_org" / "regions.csv"
+        if regions.exists():
+            for r in csv.DictReader(open(regions, encoding="utf-8")):
+                self.iptv[r["code"]] = {countries[c] for c in r["countries"].split(";") if c in countries}
+        self.groups = {}
+        for name, g in groups.items():
+            if g.get("all"):
+                self.groups[name] = set(self.all)
+            elif g.get("iptv"):
+                self.groups[name] = self.iptv.get(g["iptv"], set())
+            else:
+                self.groups[name] = {c for c in g["countries"] if c in self.all}
+        self.iso2 = countries
+        cfg = yaml.safe_load(open(ROOT / "config" / "international_broadcasters.yaml", encoding="utf-8"))
+        self.broadcasters = cfg["broadcasters"]
+
+    def expand(self, items):
+        out = set()
+        for it in items:
+            out |= self.groups.get(it, {it} if it in self.all else set())
+        return out
+
+
+def iptv_areas(o):
+    areas = set()
+    for m in o["raw"].values():
+        areas.update(m.get("raw", {}).get("broadcast_area", []))
+    return areas
+
+
+def mc_collections(o):
+    cols = []
+    for m in o["raw"].values():
+        cols += m.get("raw", {}).get("collections", [])
+    return cols
+
+
+def scope_and_reach(o, rules, reach, intl, org):
+    """Returns (scope value-dict, {country: basis})."""
+    home = o["country"]
+    audience = {home: "home_country"} if home else {}
+    evidence = []  # (scope, method, source)
+    # 1. international broadcasters list (language services)
+    for entry, service, own_outlet in sorted(intl, key=lambda x: x[1] is None):  # services first
+        if service:
+            for c in reach.expand(service["reaches"]):
+                audience.setdefault(c, "language_service:" + service["name"])
+        if not service:
+            for c in reach.expand(entry.get("reaches", [])):
+                audience.setdefault(c, "manual")
+        label = (service or {}).get("name") or entry["match"][0]
+        evidence.append(("international", "override", f"list of international broadcasters ({label})"))
+    # 2. iptv-org broadcast areas
+    areas = iptv_areas(o)
+    if areas:
+        regions = {a[2:] for a in areas if a.startswith("r/")}
+        cs = {reach.iso2.get(a[2:]) for a in areas if a.startswith("c/")} - {None}
+        for r in regions:
+            cs |= reach.iptv.get(r, set())
+        if "WW" in regions or len(regions) >= 2:
+            evidence.append(("international", "source_field", "iptv-org broadcast area " + ", ".join(sorted(regions))))
+        elif regions or len(cs - {home}) >= 1 and len(cs) >= 2:
+            evidence.append(("regional", "source_field", "iptv-org broadcast area " + ", ".join(sorted(regions) or sorted(cs))))
+        elif cs == {home}:
+            evidence.append(("national", "source_field", "iptv-org broadcast area: whole country"))
+        elif any(a.startswith(("s/", "ct/")) for a in areas):
+            evidence.append(("local", "source_field", "iptv-org broadcast area: city / region"))
+        if len(cs) <= 60:  # worldwide feeds do not list every country as "reached"
+            for c in cs:
+                audience.setdefault(c, "broadcast_area")
+    # 3. Media Cloud collections
+    for col in mc_collections(o):
+        if col.endswith(" - National"):
+            evidence.append(("national", "source_field", f"Media Cloud collection \"{col}\""))
+        elif col.endswith(" - State & Local"):
+            evidence.append(("local", "source_field", f"Media Cloud collection \"{col}\""))
+    # 4. Wikidata classes, organisation type
+    classes = wd_classes(o)
+    for sc, cl in rules["wikidata_classes"].items():
+        hit = classes & set(cl)
+        if hit:
+            evidence.append((sc, "source_field", "Wikidata: " + sorted(hit)[0]))
+    for sc, types in rules.get("org_types", {}).items():
+        if org in types:
+            evidence.append((sc, "rule", "organisation type " + org.replace("_", " ")))
+    if not evidence:
+        return val("unknown", "default", "no scope information in the sources"), audience
+    methods = ["override", "source_field", "membership", "rule"]
+    evidence.sort(key=lambda e: (SCOPE_ORDER.index(e[0]), methods.index(e[1])))
+    best = evidence[0]
+    return val(best[0], best[1], best[2]), audience
+
+
+def match_international(outlets, reach):
+    """outlet id -> [(entry, service or None)] from config/international_broadcasters.yaml"""
+    import sys
+    sys.path.insert(0, str(ROOT / "pipeline" / "merge"))
+    from merge import clean_name
+    by_name = {}
+    for o in outlets:
+        for n in [o["name"]] + o["alt_names"]:
+            by_name.setdefault(clean_name(n), []).append(o)
+    found, missing = {}, []
+    for e in reach.broadcasters:
+        hit = False
+        for n in e["match"]:
+            cands = [o for o in by_name.get(clean_name(n), []) if not e.get("country") or o["country"] == e["country"]]
+            for o in cands[:1]:
+                found.setdefault(o["id"], []).append((e, None, False))
+                for s in e.get("services", []):
+                    found[o["id"]].append((e, s, False))
+                hit = True
+        for s in e.get("services", []):  # a separate outlet for the language service: only its own reach
+            for o in by_name.get(clean_name(s["name"]), [])[:1]:
+                found.setdefault(o["id"], []).append((e, s, True))
+        if not hit:
+            missing.append(e["match"][0])
+    return found, missing
+
+
 def load_overrides():
     out = {}
     path = ROOT / "overrides.csv"
@@ -133,9 +292,15 @@ def main():
     owners_file = ROOT / "raw" / "wikidata_owners" / "data.json.gz"
     owners = json.load(gzip.open(owners_file, "rt", encoding="utf-8")) if owners_file.exists() else {}
     rsf = json.load(open(ROOT / "work" / "rsf.json", encoding="utf-8"))
+    reach = Reach()
+    oidx = owner_index(owners, None)
+    intl, intl_missing = match_international(outlets, reach)
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
-        cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"])
+        cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
+        ov = overrides.get(o["id"], {}).get("ownership")
+        if ov:
+            cat["ownership"] = val(ov["value"], "override", ov.get("note") or "hand correction")
         if cat["ownership"]["value"] == "state_controlled" and cat["org_type"]["value"] == "public_service_broadcaster":
             # state-controlled broadcasters are not public service (decision 3): plain broadcaster
             cat["org_type"] = val("news_outlet", "rule", "public broadcaster that is state-controlled (" + cat["ownership"]["source"] + ")")
@@ -144,15 +309,20 @@ def main():
                 and cat["ownership"]["value"] == "private":
             also.append("news_outlet")
         cat["org_type_also"] = also
+        cat["scope"], audience = scope_and_reach(o, rules["scope"], reach, intl.get(o["id"], []), cat["org_type"]["value"])
+        cat["audience"] = audience
+        extra_langs = [l for e, s, _ in intl.get(o["id"], []) if s for l in s["languages"]]
+        cat["service_languages"] = sorted(set(extra_langs) - set(o["languages"]))
+        cat["services"] = sorted({s["name"] for e, s, _ in intl.get(o["id"], []) if s})
         for field, row in overrides.get(o["id"], {}).items():
             if field in cat:
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")
         o["cat"] = cat
     json.dump(outlets, open(ROOT / "work" / "classified.json", "w", encoding="utf-8"), ensure_ascii=False)
-    report(outlets)
+    report(outlets, intl_missing)
 
 
-def report(outlets):
+def report(outlets, intl_missing=()):
     lines = ["# Step 4: classification", "", "## 4a Organisation type", "",
              "| Type | Outlets | of which by membership | by Wikidata class | by Radio Browser tag | default |", "|---|---|---|---|---|---|"]
     by = Counter((o["cat"]["org_type"]["value"], o["cat"]["org_type"]["method"], o["cat"]["org_type"]["source"].startswith("Radio Browser")) for o in outlets)
@@ -170,6 +340,14 @@ def report(outlets):
         lines.append(f"| {v} | {len(rows)} | " + "; ".join(f"{k} {n}" for k, n in src) + " |")
     lines.append(f"\nListed as public service broadcaster AND news outlet (private owner): "
                  f"{sum(1 for o in outlets if o['cat']['org_type_also'])}")
+    lines += ["", "## 4c Scope and reach", "", "| Scope | Outlets | Main sources |", "|---|---|---|"]
+    for v in SCOPE_ORDER + ["unknown"]:
+        rows = [o for o in outlets if o["cat"]["scope"]["value"] == v]
+        src = Counter(re.sub(r"\".*\"|\(.*\)|broadcast area .*", "", o["cat"]["scope"]["source"]).strip() for o in rows).most_common(4)
+        lines.append(f"| {v} | {len(rows)} | " + "; ".join(f"{k} {n}" for k, n in src) + " |")
+    multi = [o for o in outlets if len(o["cat"]["audience"]) > 1]
+    lines.append(f"\nOutlets that reach more than their home country: {len(multi)}")
+    lines.append("International broadcasters not found in the data: " + (", ".join(intl_missing) or "none"))
     (ROOT / "reports" / "classification.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 

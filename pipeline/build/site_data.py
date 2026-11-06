@@ -4,6 +4,7 @@
                  never hard-codes a category, country or language
 The website only reads these two files (briefing K1)."""
 import csv
+import gzip
 import json
 from collections import defaultdict
 from datetime import date, datetime, timezone
@@ -78,12 +79,24 @@ def main():
             e["oa"] = cat["org_type_also"]
         if cat.get("ownership"):
             e["ow"] = [cat["ownership"]["value"], w(cat["ownership"]["source"])]
+        if cat.get("scope"):
+            e["sc"] = [cat["scope"]["value"], w(cat["scope"]["source"])]
+        aud = {c: b for c, b in (cat.get("audience") or {}).items() if c != o["country"]}
+        if aud:
+            e["rc"] = {c: w(b) for c, b in aud.items()}
+        if cat.get("service_languages"):
+            e["l"] = (e.get("l") or []) + cat["service_languages"]
+            used_langs.update(cat["service_languages"])
+        if cat.get("services"):
+            e["sv"] = cat["services"]
         nets = [n for n in o.get("networks", []) if n in NETWORK_FILTER]
         if nets:
             e["nw"] = nets
         out.append(e)
     out.sort(key=lambda e: (e["n"] or "").lower())
 
+    atlas_file = ROOT / "raw" / "atlas" / "data.json.gz"
+    atlas = json.load(gzip.open(atlas_file, "rt", encoding="utf-8")) if atlas_file.exists() else {}
     regions = {}
     for c in countries:
         regions.setdefault(c["region"], set()).add(c["intermediate_region"] or c["subregion"])
@@ -91,7 +104,8 @@ def main():
         "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "data_date": max(o["first_seen"] for o in outlets) if outlets else str(date.today()),
         "countries": [{"iso3": c["iso3"], "name": c["name"], "aliases": c["aliases"], "status": c["status"],
-                       "region": c["region"], "subregion": c["intermediate_region"] or c["subregion"]}
+                       "region": c["region"], "subregion": c["intermediate_region"] or c["subregion"],
+                       "freedom": atlas.get(c["iso3"])}
                       for c in countries],
         "regions": {k: sorted(v) for k, v in sorted(regions.items())},
         "language_buttons": sorted(({"code": r["code"], "name": r["name"], "order": int(r["button"])}
@@ -105,7 +119,7 @@ def main():
         # filters that get values in step 4 (classification)
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
-        "pending": ["scope", "topics", "reach", "website_check"],
+        "pending": ["topics", "website_check"],
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)

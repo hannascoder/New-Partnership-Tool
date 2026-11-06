@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="spacer"></div>
-  <span class="preview-badge" title="Ownership, scope, reach and topics are assigned in the next parts of step 4">Preview · step 4b</span>
+  <span class="preview-badge" title="Ownership, scope, reach and topics are assigned in the next parts of step 4">Preview · step 4c</span>
 </header>
 
 <div class="layout">
@@ -53,7 +53,9 @@
           <select id="f-country"><option value="">All countries</option></select>
         </label>
         <div class="chips" id="f-scope"></div>
-        <label class="check pending"><input type="checkbox" id="f-reach" checked disabled> Include outlets that reach this country <span class="soon">step 4</span></label>
+        <label class="check"><input type="checkbox" id="f-scopeUnknown"> Also show outlets without scope information</label>
+        <label class="check"><input type="checkbox" id="f-reach" checked> Include outlets that reach this country</label>
+        <p class="hint">“Reach” adds outlets based elsewhere that broadcast to the chosen country, e.g. BBC Afrique for DR Congo.</p>
       </section>
 
       <section class="fgroup">
@@ -70,7 +72,7 @@
         <h2 class="sect">Ownership</h2>
         <div class="chips" id="f-ownership"></div>
         <label class="check"><input type="checkbox" id="f-ownUnknown"> Also show outlets without this information</label>
-        <p class="hint">Every value names its source (State Media Monitor, Wikidata, EBU …).</p>
+        <p class="hint">Every value names its source (State Media Monitor, Wikidata, EBU …). <b>Unknown</b>: no open source says who owns the outlet. This does not mean it is independent or state-run.</p>
       </section>
 
       <section class="fgroup">
