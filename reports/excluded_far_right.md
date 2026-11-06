@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-48 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+46 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -26,8 +26,6 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-024714 | The Light Paper | GBR | Wikipedia Category:Far-right periodicals published in the United Kingdom |
 | pf-024837 | Golden Dawn | GRC | Wikidata political ideology: neo-Nazism |
 | pf-027635 | Golden Dawn | GRC | Wikidata political ideology: neo-Nazism |
-| pf-008151 | Kesari | IND | Wikipedia Category:Fascist newspapers |
-| pf-004368 | Corriere Adriatico | ITA | Wikipedia Category:Far-right periodicals published in Italy |
 | pf-004068 | Secolo d'Italia | ITA | Wikipedia Category:Far-right periodicals published in Italy |
 | pf-023678 | Al-Ahed | LBN | Wikidata political ideology of the owner Hezbollah: antisemitism |
 | pf-000297 | Al-Manar | LBN | Wikidata political ideology of the owner Hezbollah: antisemitism |
