@@ -15,4 +15,6 @@ Decisions made after the briefing was written (these win over the briefing):
 - **Category rules:** `docs/KATEGORIEN.md` (decisions of 05.11.2026 at the end). The search bar is left out of v1 for now.
 - **REMIND THE OWNER (open to-dos they asked to be reminded of):** (1) add NGOs as a new organisation type (phase 2); (2) add the internal SDG Media Compact member list once the owner gets it from DGC Campaigns; (3) sign up for a free Podcast Index API key (owner: later, not necessarily in step 4); (4) download the Covering Climate Now Airtable table as CSV once (guide the owner click by click). NGO sources: see docs/BACKLOG.md. Mention these at the end of each step summary until they are done.
 
+- **Export feature (queued by the owner):** after step 4 and the NGOs are done, follow `docs/EXPORT_SPEC.md` exactly (read code, ask for columns, show sample PDF + Excel for approval, then build on a new branch with PR, README + CHANGELOG in English).
+
 Rules: the website interface is English. Explanations to the owner are in German, simple, without jargon. All allowed values (categories, countries, languages) live in config files, not in code.
