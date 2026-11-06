@@ -1,0 +1,45 @@
+# Extra spellings of country names used by the sources, mapped to ISO alpha-3.
+# Add a line here when the "unmatched countries" report shows a new spelling.
+names:
+  BOL: [Bolivia]
+  BRN: [Brunei Darussalam]
+  CIV: [Cote d'Ivoire, Côte d’Ivoire]
+  COD: [Congo DR, Congo (Kinshasa), Democratic Republic of Congo, Congo Democratic Republic, Zaire]
+  COG: [Congo, Congo (Brazzaville), Republic of Congo, Congo Republic]
+  CPV: [Cabo Verde]
+  CZE: [Czech]
+  FSM: [Micronesia Federated States of]
+  GBR: [England, Scotland, Wales, Northern Ireland, Great Britain, U.K.]
+  GMB: [The Gambia, Gambia The]
+  BHS: [The Bahamas, Bahamas The]
+  IRN: [Iran Islamic Republic]
+  KOR: [Korea, Korea South, Republic of Korea South Korea, Korea Republic of]
+  PRK: [Korea North, DPRK, Democratic People's Republic of Korea]
+  LAO: [Lao, Lao PDR]
+  MDA: [Moldova Republic of]
+  NLD: [The Netherlands, Netherlands]
+  PSE: [Palestinian Territories, Palestinian territories, Palestine State of, Gaza, West Bank]
+  RUS: [Russian Federation]
+  SWZ: [Eswatini Swaziland]
+  SYR: [Syrian Arab Republic]
+  TLS: [Timor Leste]
+  TZA: [Tanzania United Republic of]
+  USA: [U.S., U.S.A., United States of America, America]
+  VAT: [Holy See (Vatican City State), Vatican City]
+  VEN: [Venezuela Bolivarian Republic of]
+  VNM: [Viet Nam]
+  MKD: [Republic of North Macedonia]
+  ARE: [UAE, Emirates]
+  STP: [Sao Tome and Principe, São Tomé and Príncipe]
+  KNA: [St Kitts and Nevis, St. Kitts and Nevis]
+  LCA: [St Lucia, St. Lucia]
+  VCT: [St Vincent and the Grenadines, St. Vincent and the Grenadines]
+  TUR: [Turkiye]
+# Places that are NOT one of the 195: outlets based there are left out.
+not_allowed: [Hong Kong, Macau, Macao, Taiwan, Kosovo, Puerto Rico, Greenland, Faroe Islands,
+              Guam, Bermuda, Cayman Islands, Gibraltar, Jersey, Guernsey, Isle of Man,
+              New Caledonia, French Polynesia, Northern Cyprus, Western Sahara, Somaliland,
+              Abkhazia, South Ossetia, Transnistria, Curacao, Curaçao, Aruba, Sint Maarten,
+              American Samoa, US Virgin Islands, British Virgin Islands, Anguilla, Montserrat,
+              Martinique, Guadeloupe, Reunion, Réunion, Mayotte, French Guiana, Cook Islands, Niue,
+              Tokelau, Wallis and Futuna, Falkland Islands, Saint Helena, Northern Mariana Islands]

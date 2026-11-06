@@ -1,0 +1,69 @@
+# Checks once whether every planned data source answers from GitHub.
+# Run it from the Actions tab ("Run workflow"); nothing is saved.
+name: Probe data sources
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: [".github/workflows/probe-sources.yml"]
+  push:
+    branches: ["step-2-*"]
+    paths: [".github/workflows/probe-sources.yml"]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe each source
+        shell: bash
+        run: |
+          UA="UN-Partner-Finder/0.1 (internal research tool; github.com/hannascoder)"
+          probe () {
+            code=$(curl -sS -L -o /tmp/body -w '%{http_code}' -m 40 -A "$UA" "$2" 2>/tmp/err || true)
+            size=$(wc -c < /tmp/body 2>/dev/null || echo 0)
+            echo "| $1 | $code | $size bytes | $2 |"
+          }
+          echo "| Source | HTTP | Size | URL |"
+          probe "Wikidata SPARQL" "https://query.wikidata.org/sparql?format=json&query=SELECT%20(COUNT(*)%20AS%20%3Fn)%20WHERE%20%7B%20%3Fx%20wdt%3AP31%20wd%3AQ1110794%20%7D"
+          probe "Wikipedia API" "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=List%20of%20radio%20stations%20in%20Kenya&format=json"
+          probe "Radio Browser" "https://all.api.radio-browser.info/json/stations/bycountrycodeexact/KE?limit=5"
+          probe "iptv-org channels" "https://iptv-org.github.io/api/channels.json"
+          probe "ABYZ News Links" "http://www.abyznewslinks.com/allco.htm"
+          probe "SDG Media Compact" "https://www.un.org/sustainabledevelopment/sdg-media-compact-members/"
+          probe "IFCN signatories (Wikipedia)" "https://en.wikipedia.org/wiki/List_of_fact-checking_websites"
+          probe "EFCSN signatories" "https://members.efcsn.com/signatories"
+          probe "GIJN members" "https://gijn.org/membership/gijn-global-network/"
+          probe "OCCRP network" "https://www.occrp.org/en/about-us/our-global-network"
+          probe "PINA members" "https://pina.com.fj/pina-members/"
+          probe "GFMD members" "https://gfmd.info/members/"
+          probe "Earth Journalism Network" "https://earthjournalism.net/"
+          probe "Covering Climate Now" "https://coveringclimatenow.org/partners/partner-list/"
+          probe "RSF index" "https://rsf.org/en/index"
+          probe "Media Ownership Monitor" "https://www.mom-gmr.org/en/"
+          probe "State media (Wikipedia)" "https://en.wikipedia.org/wiki/List_of_state_media_by_country"
+          probe "Media Cloud directory" "https://www.mediacloud.org/media-cloud-directory"
+          probe "Media Cloud API (no key)" "https://search.mediacloud.org/api/sources/collections/?limit=1"
+          probe "Media Cloud Zenodo record" "https://zenodo.org/api/records/18189311"
+          probe "Podcast Index (site)" "https://podcastindex.org/"
+          probe "Podcast Index API (no key)" "https://api.podcastindex.org/api/1.0/search/byterm?q=news"
+          probe "EBU members" "https://www.ebu.ch/about/members"
+          probe "ABU members" "https://www.abu.org.my/56tt"
+          probe "AUB members" "https://www.uar-aub.org/ours-members"
+          probe "Wikipedia: news agencies" "https://en.wikipedia.org/wiki/List_of_news_agencies"
+          probe "IFCN signatories (Poynter)" "https://ifcncodeofprinciples.poynter.org/signatories"
+          probe "Covering Climate Now directory" "https://coveringclimatenow.org/partners/partner-directory/"
+          echo
+          echo "Zenodo record files:"
+          curl -sS -m 40 -A "$UA" "https://zenodo.org/api/records/18189311" | python3 -c "import json,sys;d=json.load(sys.stdin);print(d.get('metadata',{}).get('title'));print(d.get('metadata',{}).get('license'));[print(f.get('key'),f.get('size'),f.get('links',{}).get('self')) for f in d.get('files',[])]" || true
+          echo
+          echo "IFCN: API addresses used by the signatories page:"
+          chunk=$(curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org/signatories" | grep -oE '/_next/static/chunks/pages/signatories-[a-z0-9]+\.js' | head -1)
+          echo "chunk: $chunk"
+          curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org$chunk" | grep -oE '(https?:)?//[A-Za-z0-9./_?=&-]+|"/api/[^"]*"|`[^`]*api[^`]*`' | sort -u | head -40 || true
+          for c in $(curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org/signatories" | grep -oE '/_next/static/chunks/[0-9]+-[a-z0-9]+\.js'); do
+            curl -sS -m 40 -A "$UA" "https://ifcncodeofprinciples.poynter.org$c" | grep -oE 'https?://[A-Za-z0-9./_-]*(api|supabase|firebase|graphql)[A-Za-z0-9./_?=&-]*' | sort -u | head -10 || true
+          done
+          echo
+          echo "ABYZ: lines mentioning terms, copyright or permission:"
+          curl -sS -L -m 40 -A "$UA" "http://www.abyznewslinks.com/" | grep -i -o -E '.{0,160}(copyright|permission|terms|reproduc|commercial).{0,160}' | head -20 || true

@@ -1,0 +1,554 @@
+{
+  "source": "wikidata",
+  "fetched_at": "2026-11-06T00:33:10Z",
+  "records": 87874,
+  "url": "https://query.wikidata.org/sparql + https://www.wikidata.org/w/api.php",
+  "root_classes_used": [
+    "Q11032",
+    "Q41298",
+    "Q192283",
+    "Q14350",
+    "Q1616075",
+    "Q2001305",
+    "Q15265344",
+    "Q1153191",
+    "Q17232649",
+    "Q24634210"
+  ],
+  "country_items": {
+    "CAN": "Q16",
+    "JPN": "Q17",
+    "NOR": "Q20",
+    "IRL": "Q27",
+    "USA": "Q30",
+    "BEL": "Q31",
+    "HUN": "Q28",
+    "ESP": "Q29",
+    "SWE": "Q34",
+    "DNK": "Q35",
+    "LUX": "Q32",
+    "FIN": "Q33",
+    "ITA": "Q38",
+    "CHE": "Q39",
+    "POL": "Q36",
+    "LTU": "Q37",
+    "TUR": "Q43",
+    "AUT": "Q40",
+    "GRC": "Q41",
+    "PRT": "Q45",
+    "EGY": "Q79",
+    "URY": "Q77",
+    "MEX": "Q96",
+    "KEN": "Q114",
+    "ETH": "Q115",
+    "GHA": "Q117",
+    "FRA": "Q142",
+    "GBR": "Q145",
+    "CHN": "Q148",
+    "BRA": "Q155",
+    "RUS": "Q159",
+    "DEU": "Q183",
+    "BLR": "Q184",
+    "EST": "Q191",
+    "ISL": "Q189",
+    "LVA": "Q211",
+    "SVK": "Q214",
+    "SVN": "Q215",
+    "UKR": "Q212",
+    "CZE": "Q213",
+    "ROU": "Q218",
+    "BGR": "Q219",
+    "MDA": "Q217",
+    "ALB": "Q222",
+    "MKD": "Q221",
+    "AZE": "Q227",
+    "HRV": "Q224",
+    "BIH": "Q225",
+    "GEO": "Q230",
+    "AND": "Q228",
+    "CYP": "Q229",
+    "MCO": "Q235",
+    "KAZ": "Q232",
+    "MLT": "Q233",
+    "SMR": "Q238",
+    "MNE": "Q236",
+    "VAT": "Q237",
+    "BLZ": "Q242",
+    "CUB": "Q241",
+    "BRB": "Q244",
+    "IDN": "Q252",
+    "QAT": "Q846",
+    "SAU": "Q851",
+    "LKA": "Q854",
+    "SYR": "Q858",
+    "TJK": "Q863",
+    "THA": "Q869",
+    "TKM": "Q874",
+    "ARE": "Q878",
+    "VNM": "Q881",
+    "KOR": "Q884",
+    "AFG": "Q889",
+    "BGD": "Q902",
+    "MLI": "Q912",
+    "AGO": "Q916",
+    "BTN": "Q917",
+    "BRN": "Q921",
+    "TZA": "Q924",
+    "PHL": "Q928",
+    "CAF": "Q929",
+    "TGO": "Q945",
+    "TUN": "Q948",
+    "ZWE": "Q954",
+    "ZMB": "Q953",
+    "SSD": "Q958",
+    "BEN": "Q962",
+    "BWA": "Q963",
+    "BDI": "Q967",
+    "BFA": "Q965",
+    "COM": "Q970",
+    "COG": "Q971",
+    "COD": "Q974",
+    "DJI": "Q977",
+    "GNQ": "Q983",
+    "ERI": "Q986",
+    "GAB": "Q1000",
+    "GIN": "Q1006",
+    "GNB": "Q1007",
+    "GMB": "Q1005",
+    "CPV": "Q1011",
+    "CIV": "Q1008",
+    "CMR": "Q1009",
+    "LBR": "Q1014",
+    "LSO": "Q1013",
+    "MDG": "Q1019",
+    "LBY": "Q1016",
+    "MWI": "Q1020",
+    "MUS": "Q1027",
+    "MRT": "Q1025",
+    "NAM": "Q1030",
+    "MAR": "Q1028",
+    "MOZ": "Q1029",
+    "NER": "Q1032",
+    "NGA": "Q1033",
+    "STP": "Q1039",
+    "UGA": "Q1036",
+    "RWA": "Q1037",
+    "SYC": "Q1042",
+    "SEN": "Q1041",
+    "SLE": "Q1044",
+    "SOM": "Q1045",
+    "SWZ": "Q1050",
+    "SDN": "Q1049",
+    "NLD": "Q29999",
+    "PSE": "Q219060",
+    "ZAF": "Q258",
+    "DZA": "Q262",
+    "UZB": "Q265",
+    "CHL": "Q298",
+    "SGP": "Q334",
+    "LIE": "Q347",
+    "BHR": "Q398",
+    "ARM": "Q399",
+    "SRB": "Q403",
+    "AUS": "Q408",
+    "ARG": "Q414",
+    "PER": "Q419",
+    "PRK": "Q423",
+    "KHM": "Q424",
+    "TLS": "Q574",
+    "TCD": "Q657",
+    "NZL": "Q664",
+    "IND": "Q668",
+    "TUV": "Q672",
+    "TON": "Q678",
+    "WSM": "Q683",
+    "VUT": "Q686",
+    "SLB": "Q685",
+    "PNG": "Q691",
+    "PLW": "Q695",
+    "NRU": "Q697",
+    "FSM": "Q702",
+    "KIR": "Q710",
+    "MNG": "Q711",
+    "MHL": "Q709",
+    "FJI": "Q712",
+    "VEN": "Q717",
+    "SUR": "Q730",
+    "GUY": "Q734",
+    "PRY": "Q733",
+    "COL": "Q739",
+    "ECU": "Q736",
+    "BOL": "Q750",
+    "TTO": "Q754",
+    "VCT": "Q757",
+    "KNA": "Q763",
+    "LCA": "Q760",
+    "JAM": "Q766",
+    "GRD": "Q769",
+    "GTM": "Q774",
+    "BHS": "Q778",
+    "HND": "Q783",
+    "ATG": "Q781",
+    "DOM": "Q786",
+    "DMA": "Q784",
+    "HTI": "Q790",
+    "IRN": "Q794",
+    "SLV": "Q792",
+    "IRQ": "Q796",
+    "CRI": "Q800",
+    "ISR": "Q801",
+    "PAN": "Q804",
+    "YEM": "Q805",
+    "JOR": "Q810",
+    "NIC": "Q811",
+    "KGZ": "Q813",
+    "LAO": "Q819",
+    "KWT": "Q817",
+    "LBN": "Q822",
+    "MDV": "Q826",
+    "MYS": "Q833",
+    "MMR": "Q836",
+    "NPL": "Q837",
+    "OMN": "Q842",
+    "PAK": "Q843"
+  },
+  "licence": "Wikidata: CC0 (public domain)",
+  "class_check": [
+    {
+      "qid": "Q11032",
+      "expected_label": "newspaper",
+      "wikidata_label": "newspaper",
+      "ok": true
+    },
+    {
+      "qid": "Q41298",
+      "expected_label": "magazine",
+      "wikidata_label": "magazine",
+      "ok": true
+    },
+    {
+      "qid": "Q192283",
+      "expected_label": "news agency",
+      "wikidata_label": "news agency",
+      "ok": true
+    },
+    {
+      "qid": "Q14350",
+      "expected_label": "radio station",
+      "wikidata_label": "radio station",
+      "ok": true
+    },
+    {
+      "qid": "Q1616075",
+      "expected_label": "television station",
+      "wikidata_label": "television station",
+      "ok": true
+    },
+    {
+      "qid": "Q2001305",
+      "expected_label": "television channel",
+      "wikidata_label": "television channel",
+      "ok": true
+    },
+    {
+      "qid": "Q15265344",
+      "expected_label": "broadcaster",
+      "wikidata_label": "broadcaster",
+      "ok": true
+    },
+    {
+      "qid": "Q1153191",
+      "expected_label": "online newspaper",
+      "wikidata_label": "online newspaper",
+      "ok": true
+    },
+    {
+      "qid": "Q17232649",
+      "expected_label": "news website",
+      "wikidata_label": "news website",
+      "ok": true
+    },
+    {
+      "qid": "Q24634210",
+      "expected_label": "podcast show",
+      "wikidata_label": "podcast show",
+      "ok": true
+    }
+  ],
+  "class_search": {
+    "news website": [
+      {
+        "qid": "Q1153191",
+        "label": "online newspaper",
+        "description": "newspaper in digital format"
+      },
+      {
+        "qid": "Q17232649",
+        "label": "news website",
+        "description": "website which publishes news stories"
+      },
+      {
+        "qid": "Q141840671",
+        "label": "مراسلون",
+        "description": "Algerian multilingual news publication"
+      },
+      {
+        "qid": "Q105987883",
+        "label": "news website tag",
+        "description": "metadata used by news websites for classifications of articles"
+      },
+      {
+        "qid": "Q126793560",
+        "label": "News website personalisation: the co-creation of content, audiences and services by online journalists and marketers",
+        "description": "scholarly article"
+      }
+    ],
+    "news media": [
+      {
+        "qid": "Q1193236",
+        "label": "news media",
+        "description": "forms of mass media that focus on delivering news, current events, analysis, and journalistic reports to the general public"
+      },
+      {
+        "qid": "Q16529366",
+        "label": "News Media",
+        "description": "Russian company"
+      },
+      {
+        "qid": "Q3579160",
+        "label": "newspaper publisher",
+        "description": "company that publishes newspapers or other periodical publications"
+      },
+      {
+        "qid": "Q106590970",
+        "label": "News Media",
+        "description": null
+      },
+      {
+        "qid": "Q11892410",
+        "label": "News Media Finland",
+        "description": "Finnish trade association for newspaper and free newspaper publishers"
+      }
+    ],
+    "news outlet": [
+      {
+        "qid": "Q1193236",
+        "label": "news media",
+        "description": "forms of mass media that focus on delivering news, current events, analysis, and journalistic reports to the general public"
+      }
+    ],
+    "fact-checking organization": [
+      {
+        "qid": "Q95155801",
+        "label": "fact-checking organisation",
+        "description": "organisation engaging in scrutinizing the veracity of information circulating in public"
+      }
+    ],
+    "fact-checking website": [],
+    "community radio": [
+      {
+        "qid": "Q1179112",
+        "label": "community radio",
+        "description": "community-owned and operated radio service"
+      },
+      {
+        "qid": "Q647462",
+        "label": "Radiofabrik",
+        "description": "community radio station in Salzburg"
+      },
+      {
+        "qid": "Q48784183",
+        "label": "Community Radio Awards",
+        "description": "British awards"
+      },
+      {
+        "qid": "Q54680467",
+        "label": "Community Radio for Northern Colorado",
+        "description": "American nonprofit organization"
+      },
+      {
+        "qid": "Q106646298",
+        "label": "Community Radio Award",
+        "description": "British competitive award for achievements in community radio"
+      }
+    ],
+    "public broadcaster": [
+      {
+        "qid": "Q1126006",
+        "label": "public broadcaster",
+        "description": "broadcasting organization whose primary mission is public service"
+      },
+      {
+        "qid": "Q12494372",
+        "label": "Lembaga Penyiaran Publik",
+        "description": "Indonesian public service broadcaster legal form, fully or partially funded by the government"
+      },
+      {
+        "qid": "Q138286659",
+        "label": "Public Broadcasters, the Internet, and Democracy. Comparing Policy and Exploring Public Service Media Online",
+        "description": "dissertation"
+      }
+    ],
+    "public broadcasting": [
+      {
+        "qid": "Q26398",
+        "label": "public broadcasting",
+        "description": "electronic media outlets whose primary mission is public service"
+      },
+      {
+        "qid": "Q215616",
+        "label": "PBS",
+        "description": "American public broadcaster and television network"
+      },
+      {
+        "qid": "Q2280893",
+        "label": "Radio and Television of Bosnia and Herzegovina",
+        "description": "national public broadcaster of Bosnia and Herzegovina"
+      },
+      {
+        "qid": "Q731913",
+        "label": "Public Broadcasting Services",
+        "description": "public broadcaster of Malta"
+      },
+      {
+        "qid": "Q7257331",
+        "label": "Public Broadcasting Act of 1967",
+        "description": "Statute in US law"
+      }
+    ],
+    "online magazine": [
+      {
+        "qid": "Q847906",
+        "label": "online magazine",
+        "description": "website-based magazine (different from E-zine, which is sent to the subscribers)"
+      },
+      {
+        "qid": "Q95601978",
+        "label": "Online magazine combines culture with medicine",
+        "description": "scientific article published on March 10, 2015"
+      }
+    ],
+    "news magazine": [
+      {
+        "qid": "Q1684600",
+        "label": "news magazine",
+        "description": "magazine about current events"
+      },
+      {
+        "qid": "Q5401282",
+        "label": "magazine format program",
+        "description": "television and radio genre"
+      },
+      {
+        "qid": "Q11084167",
+        "label": "News Magazine",
+        "description": null
+      },
+      {
+        "qid": "Q17016701",
+        "label": "News Magazine",
+        "description": "Australian TV series or program"
+      },
+      {
+        "qid": "Q11089189",
+        "label": "News Magazine",
+        "description": null
+      }
+    ],
+    "media company": [
+      {
+        "qid": "Q1331793",
+        "label": "media company",
+        "description": "business that focuses primarily on mass media"
+      },
+      {
+        "qid": "Q18357407",
+        "label": "online media cooperative",
+        "description": null
+      }
+    ],
+    "periodical": [
+      {
+        "qid": "Q1002697",
+        "label": "periodical",
+        "description": "publication type, serial publication that appears in a new edition on a regular schedule"
+      },
+      {
+        "qid": "Q191067",
+        "label": "article",
+        "description": "written work forming an independent part of a publication such as a journal, newspaper, or magazine"
+      },
+      {
+        "qid": "Q28869365",
+        "label": "issue",
+        "description": "issue of a newspaper, a scientific journal or magazine for reference purpose"
+      },
+      {
+        "qid": "Q15275719",
+        "label": "recurring event",
+        "description": "event recurring at generally regular intervals"
+      },
+      {
+        "qid": "Q21995230",
+        "label": "periodical issue",
+        "description": "single publication of a periodical"
+      }
+    ],
+    "radio network": [
+      {
+        "qid": "Q1061197",
+        "label": "radio network",
+        "description": "type of audio-only broadcast network"
+      },
+      {
+        "qid": "Q1858908",
+        "label": "Radio Network Controller",
+        "description": "governing element in the UMTS radio access network"
+      },
+      {
+        "qid": "Q2126206",
+        "label": "radio network subsystem",
+        "description": "part of Universal Mobile Telecommunications System"
+      },
+      {
+        "qid": "Q119285669",
+        "label": "Radio network node, a wireless device and methods therein for transmission and reception of positioning system information",
+        "description": "US patent 11425685"
+      },
+      {
+        "qid": "Q119399292",
+        "label": "Radio network node, user equipment and methods performed in a wireless communication network",
+        "description": "US patent 11252668"
+      }
+    ],
+    "television network": [
+      {
+        "qid": "Q1254874",
+        "label": "television network",
+        "description": "telecommunications network for distribution of television program content"
+      },
+      {
+        "qid": "Q7697087",
+        "label": "television networks preceding ABC Family",
+        "description": "historical aspect of the American cable television network"
+      },
+      {
+        "qid": "Q8837656",
+        "label": "Category:Television stations in Michigan",
+        "description": "Wikimedia category"
+      },
+      {
+        "qid": "Q8837720",
+        "label": "Category:Television stations in New Jersey",
+        "description": "Wikimedia category"
+      },
+      {
+        "qid": "Q8838039",
+        "label": "Category:Television stations in Washington, D.C.",
+        "description": "Wikimedia category"
+      }
+    ]
+  },
+  "countries_missing": [],
+  "timeouts": []
+}

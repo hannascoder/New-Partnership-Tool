@@ -1,0 +1,68 @@
+# Step 2: downloads every source and saves the raw data in raw/<source>/.
+# Start by hand: Actions -> "Fetch sources" -> Run workflow.
+# Two jobs: the quick sources are saved after a few minutes; Wikidata
+# (about 1-3 hours) is saved separately, with checkpoints, so a run that
+# hits the time limit continues where it stopped.
+# (In step 9 this gets a monthly schedule, the safety brake and error mails.)
+name: Fetch sources
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Fetch slow sources (Wikidata) even if fetched in the last 7 days"
+        type: boolean
+        default: false
+  push:
+    branches: ["step-2-*"]
+    paths: ["pipeline/fetch/**", "config/sources/**", ".github/workflows/fetch.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: fetch-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Radio Browser
+        continue-on-error: true
+        run: python pipeline/fetch/radio_browser.py
+      - name: iptv-org
+        continue-on-error: true
+        run: python pipeline/fetch/iptv_org.py
+      - name: Media Cloud (Zenodo snapshot)
+        continue-on-error: true
+        run: python pipeline/fetch/media_cloud.py
+      - name: Network and member lists
+        continue-on-error: true
+        run: python pipeline/fetch/networks.py
+      - name: Save raw data
+        run: bash pipeline/fetch/commit_raw.sh "quick sources"
+
+  wikidata:
+    needs: quick
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Wikidata
+        continue-on-error: true
+        timeout-minutes: 240
+        env:
+          FORCE_FETCH: ${{ inputs.force && '1' || '0' }}
+          WIKIDATA_MINUTES: "200"  # stop in time and save checkpoints; next run continues
+        run: python pipeline/fetch/wikidata.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "Wikidata"

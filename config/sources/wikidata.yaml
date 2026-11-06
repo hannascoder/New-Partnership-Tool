@@ -1,0 +1,93 @@
+# Which Wikidata items count as media outlets.
+# An item is fetched when it is an instance of one of these classes
+# (or of a sub-class of them) and its country (P17) is one of the 195.
+# "expected_label" is checked against Wikidata on every run: if the
+# label does not match, that class is skipped and reported, so a wrong
+# id can never pull in wrong data silently.
+root_classes:
+  - {qid: Q11032,    expected_label: newspaper}
+  - {qid: Q41298,    expected_label: magazine}
+  - {qid: Q192283,   expected_label: news agency}
+  - {qid: Q14350,    expected_label: radio station}
+  - {qid: Q1616075,  expected_label: television station}
+  - {qid: Q2001305,  expected_label: television channel}
+  - {qid: Q15265344, expected_label: broadcaster}
+  - {qid: Q1153191,  expected_label: online newspaper}
+  - {qid: Q17232649, expected_label: news website}
+  - {qid: Q24634210, expected_label: podcast show}
+  # found 06.11.2026 via the class search below; used from the next full run
+  - {qid: Q95155801, expected_label: fact-checking organisation}
+
+# Ids found on 06.11.2026 (for the classification rules): community radio Q1179112,
+# public broadcaster Q1126006, news media Q1193236, news magazine Q1684600,
+# online magazine Q847906, state media Q2324556, international broadcasting Q779239.
+# Not yet sure of the id: the fetcher searches Wikidata for these names and
+# writes the top hits to raw/wikidata/class_search.json for review.
+search_classes:
+  - news website
+  - news media
+  - news outlet
+  - fact-checking organization
+  - fact-checking website
+  - community radio
+  - public broadcaster
+  - public broadcasting
+  - online magazine
+  - news magazine
+  - media company
+  - periodical
+  - radio network
+  - television network
+
+# Wikidata items of these classes are NOT media outlets for our purpose
+# (scientific journals, comics, music, film/TV production, technical relays ...).
+# Decision of 05.11.2026: only media with an information offer. Numbers = items on 06.11.2026.
+exclude_classes:
+  - {qid: Q737498, label: "academic journal"}  # 11366
+  - {qid: Q773668, label: "open-access journal"}  # 10525
+  - {qid: Q5633421, label: "scientific journal"}  # 7658
+  - {qid: Q73364223, label: "society journal"}  # 1065
+  - {qid: Q108440863, label: "diamond open-access journal"}  # 845
+  - {qid: Q73365499, label: "APC-free journal"}  # 541
+  - {qid: Q73365221, label: "APC-funded journal"}  # 335
+  - {qid: Q16024164, label: "medical journal"}  # 436
+  - {qid: Q627517, label: "history journal"}  # 162
+  - {qid: Q73897617, label: "toll-access journal"}  # 94
+  - {qid: Q746654, label: "law review"}  # 73
+  - {qid: Q5953270, label: "hybrid open access journal"}  # 72
+  - {qid: Q1327300, label: "electronic journal"}  # 63
+  - {qid: Q21834496, label: "archaeology journal"}  # 46
+  - {qid: Q124435065, label: "geospatial journal"}  # 23
+  - {qid: Q5253501, label: "delayed open access journal"}  # 22
+  - {qid: Q120548212, label: "data journal"}  # 18
+  - {qid: Q2740804, label: "quarterly journal"}  # 14
+  - {qid: Q2065227, label: "government gazette"}  # 650
+  - {qid: Q114359721, label: "NOAA Weather Radio station"}  # 1032
+  - {qid: Q1760610, label: "comic book"}  # 99
+  - {qid: Q867242, label: "comics anthology"}  # 51
+  - {qid: Q3185361, label: "comic magazine"}  # 34
+  - {qid: Q15296520, label: "manga magazine"}  # 20
+  - {qid: Q14406742, label: "comic book series"}  # 13
+  - {qid: Q24897257, label: "webcomic website"}  # 16
+  - {qid: Q1824338, label: "music magazine"}  # 39
+  - {qid: Q9397629, label: "fashion magazine"}  # 14
+  - {qid: Q3399338, label: "science fiction magazine"}  # 20
+  - {qid: Q181298, label: "fanzine"}  # 17
+  - {qid: Q18127, label: "record label"}  # 22
+  - {qid: Q1762059, label: "film production company"}  # 20
+  - {qid: Q368290, label: "film distributor"}  # 15
+  - {qid: Q11396960, label: "production company"}  # 49
+  - {qid: Q10689397, label: "television production company"}  # 49
+  - {qid: Q72398691, label: "video game news website"}  # 216
+  - {qid: Q55341040, label: "video game database"}  # 13
+  - {qid: Q7094076, label: "online database"}  # 14
+  - {qid: Q620615, label: "mobile app"}  # 24
+  - {qid: Q357742, label: "broadcast relay station"}  # 54
+  - {qid: Q3331189, label: "version, edition or translation"}  # 13
+  - {qid: Q15416, label: "television program"}  # 16
+  - {qid: Q1320047, label: "book publisher"}  # 14
+  - {qid: Q59152282, label: "video streaming service"}  # 48
+  - {qid: Q723685, label: "video on demand"}  # 33
+  - {qid: Q63241860, label: "streaming service"}  # 16
+  - {qid: Q829548, label: "over-the-top media service"}  # 15
+  - {qid: Q45400320, label: "open-access publisher"}  # 21

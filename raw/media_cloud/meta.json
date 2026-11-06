@@ -1,0 +1,23 @@
+{
+  "source": "media_cloud",
+  "fetched_at": "2026-11-06T00:34:03Z",
+  "records": 0,
+  "url": "https://zenodo.org/api/records/18189311",
+  "title": "Media Cloud Geographic Collections",
+  "version_date": "2026-01-08",
+  "licence": "cc-zero",
+  "files": {
+    "media_sources.csv": {
+      "bytes": 2798558,
+      "rows": 28386
+    },
+    "geographic_collection_to_media_source.csv": {
+      "bytes": 826684,
+      "rows": 51979
+    },
+    "geographic_collections.csv": {
+      "bytes": 153187,
+      "rows": 1529
+    }
+  }
+}
