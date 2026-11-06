@@ -1,11 +1,59 @@
 # ============================================================================
-# Classification rules (briefing K4). Empty for now: filled in step 4.
+# Classification rules (briefing K4, docs/KATEGORIEN.md).
+# Read by pipeline/classify/classify.py. Every value an outlet gets stores
+# WHY (method + source), shown on the website as a tooltip.
 #
-# Each rule says: IF an outlet has this property, THEN add these values.
-# Only ids from categories.yaml are allowed. Example (not active):
-#
-#   - if: { member_of: covering-climate-now }
-#     add: { topics: [climate] }
-#     method: membership
+# Names of Wikidata classes are the English labels as Wikidata writes them.
+# Network ids are the lists in config/sources/networks.yaml.
+# Hand corrections in overrides.csv always win over these rules.
 # ============================================================================
-rules: []
+
+# ---------------------------------------------------------------- 4a
+# Organisation type: exactly ONE per outlet. Checked top to bottom, the first
+# type with evidence wins (decision 2 of 05.11.2026). No evidence -> news_outlet.
+org_type:
+  - type: fact_checker
+    # Wikidata class counts only when the outlet is not also a news agency /
+    # broadcaster / newspaper (Wikidata marks AFP, DW and dpa as fact-checkers too).
+    wikidata_classes_if_no_media_class: [fact-checking organisation]
+    # Membership of a fact-checking network alone is not enough when the
+    # outlet is also a newspaper, broadcaster or news agency (AFP, DW, India
+    # Today run fact-checking units): those keep their own type and get the
+    # topic "Fact-checking" and the UN profile instead.
+    networks_if_no_media_class: [efcsn_signatories, ifcn_signatories, fact_checking_sites]
+  - type: news_agency
+    wikidata_classes: [news agency]
+    # ... unless the outlet is also a broadcaster (Wikidata lists Deutsche Welle
+    # as a news agency too): broadcasters are checked by the next rule.
+    unless_wikidata_classes: [public broadcaster, broadcaster, television station, radio station,
+                              international broadcasting, television channel]
+    networks_if_no_media_class: [news_agencies]
+  - type: public_service_broadcaster
+    wikidata_classes: [public broadcaster, German public state broadcaster, public radio station,
+                       public broadcasting, public television, public service broadcaster]
+    # EBU full/associate members are public service media by EBU statute;
+    # ASBU full members are the national broadcasters of the Arab states.
+    # (ABU and CBU also admit commercial broadcasters: not used for this type.)
+    # Whether such a broadcaster is "state-controlled" instead is decided in
+    # step 4b (ownership); it then stays a broadcaster but not public service.
+    # Only FULL members count (EBU associate members include commercial and
+    # non-European broadcasters).
+    networks_full_members: [ebu_members, asbu_members]
+  - type: community_media
+    wikidata_classes: [community radio, community newspaper, campus radio, community television,
+                       student newspaper, school newspaper]
+    # Radio Browser tags are typed freely by users: they count only when the
+    # outlet is also confirmed by a second source.
+    radio_browser_tags_with_second_source: [community radio, radio comunitaria, comunitaria,
+                                            concesión comunitaria, radio communautaire,
+                                            university radio, college radio, radio universitaria,
+                                            campus radio, student radio]
+  - type: news_outlet
+    default: true
+
+# Wikidata classes that make an outlet a "media outlet" for the rule above
+# (a fact-checking or agency network membership alone does not change its type).
+media_classes: [newspaper, daily newspaper, weekly newspaper, magazine, news magazine, online newspaper,
+                news website, television station, television channel, radio station, broadcaster,
+                public broadcaster, news agency, international broadcasting, specialty channel,
+                television network, broadcast network, radio network]

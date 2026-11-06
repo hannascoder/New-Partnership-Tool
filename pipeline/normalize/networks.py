@@ -8,6 +8,7 @@ country names). Lists whose page is built by JavaScript (IFCN, Covering
 Climate Now) are not readable from the saved page and are reported as such.
 """
 import gzip
+import html as htmllib
 import json
 import re
 import sys
@@ -105,12 +106,57 @@ def wikipedia_list(list_id, item_must_link=False):
     return out
 
 
+MEMBER_SECTIONS = {"full members", "additional full members", "associate members", "participating members",
+                   "ancillary members", "approved participant members", "institutional members"}
+
+
+def union_members(list_id):
+    """Broadcasting unions on Wikipedia: tables under "Full members",
+    "Associate members" ... (former / past / suspended members are skipped).
+    Row = country cell (flag + link) and one or more member links; a row
+    without a country cell belongs to the country above (rowspan)."""
+    root = page(list_id)
+    if root is None:
+        return []
+    out, section, country = [], None, None
+    for node in walk(root):
+        if node.tag in ("h2", "h3", "h4"):
+            t = node.text().strip().lower()
+            section = t if t in MEMBER_SECTIONS else None
+            continue
+        if section is None or node.tag != "tr":
+            continue
+        cells = [c for c in node.children if not isinstance(c, str) and c.tag in ("td", "th")]
+        if not cells or all(c.tag == "th" for c in cells):
+            continue
+        first_title, first_text = wiki_link(cells[0])
+        has_flag = any("flagicon" in n.classes() for n in walk(cells[0]))
+        if has_flag or (first_title and known(first_title)) or known(cells[0].text()):
+            country = cells[0].text() or first_title  # may be a place outside the 195 -> no country
+            rest = cells[1:]
+        else:
+            rest = cells
+        for c in rest:
+            for a in c.find_all("a"):
+                href = a.attrs.get("href") or ""
+                title = htmllib.unescape(a.attrs.get("title") or "")
+                if not href.startswith("/wiki/") or ":" in href[6:] or known(title):
+                    continue
+                out.append({**entry(list_id, a.text() or title, country, wikipedia=title),
+                            "membership": section})
+    return out
+
+
 PARSERS = {
     "sdg_media_compact": sdg_media_compact,
     "efcsn_signatories": efcsn,
     "news_agencies": lambda: wikipedia_list("news_agencies"),
     "state_media": lambda: wikipedia_list("state_media"),
     "fact_checking_sites": lambda: wikipedia_list("fact_checking_sites"),
+    "ebu_members": lambda: union_members("ebu_members"),
+    "abu_members": lambda: union_members("abu_members"),
+    "asbu_members": lambda: union_members("asbu_members"),
+    "cbu_members": lambda: union_members("cbu_members"),
 }
 NOT_READABLE = {
     "ifcn_signatories": "page is built by JavaScript; data address being looked for",
