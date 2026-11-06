@@ -1,10 +1,10 @@
 {
   "source": "iptv_org",
-  "fetched_at": "2026-11-06T00:33:54Z",
-  "records": 30088,
+  "fetched_at": "2026-11-06T14:49:25Z",
+  "records": 30091,
   "url": "https://iptv-org.github.io/api/channels.json + feeds.json",
-  "total_in_source": 31744,
-  "kept_in_195_countries": 30088,
+  "total_in_source": 31747,
+  "kept_in_195_countries": 30091,
   "categories_in_source": [
     "auto",
     "animation",
