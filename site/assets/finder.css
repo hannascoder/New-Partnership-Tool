@@ -1,0 +1,56 @@
+/* Partner Finder page layout. Uses the Atlas tokens from atlas.css only. */
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; max-width: 1400px; margin: 0 auto; padding: 16px; }
+.filters { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+           padding: 12px 16px; align-self: start; position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow: auto; }
+.filters-toggle { display: none; width: 100%; }
+.fgroup { border-bottom: 1px solid var(--border-soft); padding: 12px 0; }
+.fgroup:last-child { border-bottom: 0; }
+.fgroup h2.sect { font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); margin: 0 0 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--border); background: var(--surface); color: var(--ink); border-radius: var(--r-pill);
+        padding: 4px 10px; font: inherit; font-size: 12px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--un-blue-dark); border-color: var(--un-blue-dark); color: #fff; }
+.chip:disabled { opacity: .45; cursor: not-allowed; }
+.chip .sdg { font-size: 11px; opacity: .8; }
+.field { display: block; font-size: 12px; color: var(--muted); margin: 8px 0 4px; }
+.field select { display: block; width: 100%; margin-top: 4px; padding: 6px; border: 1px solid var(--border);
+                border-radius: var(--r-sm); font: inherit; font-size: 13px; background: var(--surface); }
+.check { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; margin: 6px 0; }
+.check.pending, .pending { color: var(--muted); }
+.radios label { display: block; font-size: 13px; margin: 4px 0; }
+.hint { font-size: 11px; color: var(--muted); margin: 6px 0 0; }
+.soon { font-size: 11px; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--warn);
+        border: 1px solid currentColor; border-radius: var(--r-pill); padding: 0 6px; margin-left: 4px; }
+.topic-group { margin: 6px 0 10px; }
+.topic-group h3 { font-size: 12px; margin: 4px 0; }
+.preview-badge { font-size: 12px; color: var(--warn); border: 1px solid var(--warn); border-radius: var(--r-pill); padding: 2px 10px; }
+
+.results-head { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.counter { font-size: 14px; margin: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.sortlabel { font-size: 12px; color: var(--muted); }
+.sortlabel select { margin-left: 4px; padding: 4px; border: 1px solid var(--border); border-radius: var(--r-sm); font: inherit; }
+.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 12px 16px; }
+.card-top { display: flex; gap: 8px; align-items: baseline; justify-content: space-between; }
+.card h3 { font-size: 16px; margin: 0; }
+.card .meta { font-size: 13px; color: var(--muted); margin: 4px 0; }
+.card .row { font-size: 13px; margin: 3px 0; }
+.card .row b { font-weight: 600; }
+.card a { color: var(--un-blue-dark); }
+.badge.verified { background: #E8F7EE; color: var(--positive); }
+.badge.unverified { background: var(--border-soft); color: var(--muted); }
+.matches { font-size: 12px; color: var(--un-blue-ink); background: var(--accent-soft); border-radius: var(--r-sm); padding: 2px 8px; display: inline-block; margin-top: 4px; }
+.card .add { font-size: 12px; }
+.card .add[aria-pressed="true"] { background: var(--accent-soft); }
+.more { margin: 16px auto; display: block; }
+footer.site { text-align: center; padding: 16px; font-size: 12px; color: var(--muted); }
+dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); max-width: 480px; }
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; padding: 12px; }
+  .filters { position: static; max-height: none; }
+  .filters-toggle { display: block; }
+  .filter-body { display: none; }
+  .filters.open .filter-body { display: block; }
+}
