@@ -1,17 +1,22 @@
 {
   "source": "networks",
-  "fetched_at": "2026-11-06T00:34:16Z",
+  "fetched_at": "2026-11-06T18:08:42Z",
   "records": 0,
   "pages": {
     "sdg_media_compact": {
       "ok": true,
       "source": "https://www.un.org/sustainabledevelopment/sdg-media-compact-members/",
-      "bytes": 238298
+      "bytes": 238487
     },
     "ifcn_signatories": {
       "ok": true,
       "source": "https://ifcncodeofprinciples.poynter.org/signatories",
       "bytes": 7849
+    },
+    "ifcn_signatories_api": {
+      "ok": true,
+      "source": "https://ifcn-cop-prod-server-8q9x7.ondigitalocean.app/api/organization/signatories",
+      "bytes": 348038
     },
     "fact_checking_sites": {
       "ok": true,
@@ -31,7 +36,7 @@
     "pina_members": {
       "ok": true,
       "source": "https://pina.com.fj/pina-members/",
-      "bytes": 160567
+      "bytes": 160174
     },
     "gfmd_members": {
       "ok": true,
@@ -46,12 +51,12 @@
     "aub_members": {
       "ok": true,
       "source": "https://www.uar-aub.org/ours-members",
-      "bytes": 982330
+      "bytes": 983302
     },
     "ebu_members": {
       "ok": true,
       "source": "wikipedia:European Broadcasting Union (revision 1383082173)",
-      "bytes": 565419
+      "bytes": 565452
     },
     "ebu_members_list": {
       "ok": false,
@@ -65,7 +70,7 @@
     "asbu_members": {
       "ok": true,
       "source": "wikipedia:Arab States Broadcasting Union (revision 1383199998)",
-      "bytes": 61770
+      "bytes": 61776
     },
     "cbu_members": {
       "ok": true,
@@ -75,7 +80,7 @@
     "oti_members": {
       "ok": true,
       "source": "wikipedia:Organización de Telecomunicaciones de Iberoamérica (revision 1380822253)",
-      "bytes": 92479
+      "bytes": 92481
     },
     "news_agencies": {
       "ok": true,
@@ -85,7 +90,7 @@
     "state_media": {
       "ok": true,
       "source": "wikipedia:List of state media by country (revision 1383334150)",
-      "bytes": 208398
+      "bytes": 208390
     },
     "rsf_index": {
       "ok": true,
