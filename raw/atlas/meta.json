@@ -1,0 +1,20 @@
+{
+  "source": "atlas",
+  "fetched_at": "2026-11-06T18:39:07Z",
+  "records": 195,
+  "url": "https://raw.githubusercontent.com/hannascoder/UN-Media-Consumption-Map-copy-2/main/data/countries.json",
+  "fields": [
+    "press_freedom_rank",
+    "press_freedom_score",
+    "press_freedom_source",
+    "press_freedom_edition",
+    "press_freedom_rank_prev",
+    "political_freedom_status",
+    "political_freedom_score",
+    "political_freedom_source",
+    "internet_freedom_status",
+    "internet_freedom_score",
+    "internet_freedom_source"
+  ],
+  "licence": "Audience Intelligence Atlas data (public); sources named per value"
+}

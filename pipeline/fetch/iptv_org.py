@@ -7,7 +7,7 @@ content. Closed channels are kept but marked, the pipeline decides later.
 """
 import json
 
-from common import countries, get, save
+from common import RAW, countries, get, save
 
 API = "https://iptv-org.github.io/api"
 
@@ -32,6 +32,9 @@ def main():
                                       "launched", "closed", "replaced_by", "website")}
         rec["feeds"] = feeds_by_channel.get(c.get("id"), [])
         kept.append(rec)
+    # region lists (code -> countries), used for reach (config/audience_groups.yaml)
+    regions = get("https://raw.githubusercontent.com/iptv-org/database/master/data/regions.csv", accept="text/csv")
+    (RAW / "iptv_org" / "regions.csv").write_text(regions, encoding="utf-8")
     save("iptv_org", kept, {
         "url": f"{API}/channels.json + feeds.json",
         "total_in_source": len(channels),

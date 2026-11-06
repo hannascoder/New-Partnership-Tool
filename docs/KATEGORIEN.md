@@ -179,3 +179,12 @@ Die genaue Liste „Quell-Kategorie → unser Thema“ erstelle ich aus den **ta
 - **Covering Climate Now**: Verzeichnis ist eine Airtable-Tabelle ohne offene Schnittstelle → einmalig als CSV herunterladen (Snapshot in `raw/manual/`).
 - **Staatsmedien-Liste (Wikipedia)**: Hauptquelle dort ist der „State Media Monitor“ (Media and Journalism Research Center). Prüfen, ob dessen Liste direkt nutzbar ist – sie unterscheidet staatlich kontrolliert / unabhängig öffentlich.
 
+### Entscheidungen 06.11.2026
+- **RSF entscheidet nicht mehr über „state-controlled“.** Nur der State Media Monitor (über die Wikipedia-Liste der Staatsmedien) stuft öffentliche Sender als staatlich kontrolliert ein. Unabhängige öffentlich-rechtliche Sender sind nie „state-controlled“.
+- **Pressefreiheit als Länder-Info** auf jeder Karte, wie im Atlas: RSF-Rang/Punktzahl, Freedom House (politische Freiheit, Internetfreiheit), jeweils mit Quelle. Daten direkt aus dem öffentlichen Atlas.
+- **„Unknown“ wird erklärt:** „No open source says who owns this outlet. This does not mean it is independent or state-run.“
+- **Ownership-Lücken:** (a) Eigentümernamen aus iptv-org abgleichen – jetzt; (c) Website-Check – nach 4d, zuerst Top 50 pro Land, ohne KI; (b) Media Ownership Monitor – vorerst nicht (wenige Länder, Lizenz CC BY-ND).
+- **„Only show topic matches“** (Schalter, Standard aus) und **„Also show outlets without this information“** bei allen harten Filtern.
+- **Filter „Member of“** (SDG Media Compact, Rundfunkunionen, Faktenchecker-Netzwerke).
+- **EBU-Vollmitglieder mit privatem Eigentümer** (ITV, TV 2) erscheinen unter beiden Typen.
+

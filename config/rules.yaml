@@ -72,7 +72,7 @@ ownership:
     # Rules 2 and 3 do NOT apply to public broadcasters (step 4a type
     # "public service broadcaster"): Wikidata often names a ministry as the formal
     # owner of independent public media (BBC -> culture ministry) or calls them
-    # "state media" (DW). For them only rules 1 and 4 decide.
+    # "state media" (DW). For them only rule 1 (State Media Monitor) decides.
     # 2. The outlet itself is classed as state media / state-owned in Wikidata.
     wikidata_classes: [state media, state-owned enterprise, government agency, government organization,
                        state-owned television, state broadcaster]
@@ -81,9 +81,10 @@ ownership:
                     executive branch, state, sovereign state, country, political party, communist party,
                     armed forces, military, military branch, state-owned enterprise, state media,
                     government-owned corporation, public body]
-    # 4. A public broadcaster in a country RSF rates "very serious situation"
-    #    (newest year) is counted as state-controlled (decision 3 of 05.11.2026).
-    public_broadcaster_in_rsf_categories: [5]
+    # (Until 06.11.2026 a 4th rule made public broadcasters in countries RSF
+    #  rates "very serious" state-controlled. Dropped on the owner's decision:
+    #  RSF rates countries, not outlets. Press freedom is now shown as country
+    #  context on every card, taken from the Atlas.)
   - value: public_service
     # A public service broadcaster (step 4a) that is not state-controlled.
     org_types: [public_service_broadcaster]
@@ -108,3 +109,22 @@ ownership:
 # commercial EBU members with a public service remit) is listed under BOTH
 # types: "Public service broadcaster" and "News outlet" (owner's request, 06.11.2026).
 also_news_outlet_if_private_psb: true
+
+# ---------------------------------------------------------------- 4c
+# Scope: exactly ONE value. The widest scope with evidence wins
+# (international > regional > national > local). No evidence -> unknown.
+# Reach (audience countries): home country + every country with evidence,
+# each with its basis (home_country, language_service, broadcast_area, manual).
+scope:
+  # config/international_broadcasters.yaml (language services) -> international
+  # iptv-org broadcast areas: worldwide or 2+ regions -> international;
+  #   one region or 2+ countries -> regional; the home country -> national;
+  #   a city or subdivision -> local
+  # Media Cloud collections: "<Country> - National" -> national, "... - State & Local" -> local
+  wikidata_classes:
+    international: [international broadcasting]
+    local: [local newspaper, local radio station, local TV channel, community newspaper, regional weekly,
+            community radio, campus radio, student newspaper, school newspaper, local television station]
+  # Community media without other evidence are local
+  org_types:
+    local: [community_media]
