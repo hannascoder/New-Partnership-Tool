@@ -28,11 +28,11 @@ opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
 opener.addheaders = [("User-Agent", USER_AGENT), ("Accept", "text/html")]
 
 
-def fetch(path, tries=4):
+def fetch(path, tries=3):
     for attempt in range(tries):
         try:
             time.sleep(0.5)
-            with opener.open(BASE + path, timeout=120) as r:
+            with opener.open(BASE + path, timeout=60) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception as e:
             last = e
@@ -59,14 +59,28 @@ def main():
         html = fetch(f"withOutLogin.do?method=getOrgsByConsultativeCode&orgByConsCode={code}&orgByConsName={status}")
         pages = int((re.search(r"Page \d+ of (\d+)", html) or [0, 1])[1])
         found = rows(html)
+        failed_pages = []
         for i in range(1, pages):
-            found += rows(fetch(f"displayConsultativeStatusSearch.do?method=list&show=25&from=list&col=&order=&searchType=$searchType&index={i * 25}"))
+            try:
+                found += rows(fetch(f"displayConsultativeStatusSearch.do?method=list&show=25&from=list&col=&order=&searchType=$searchType&index={i * 25}"))
+            except RuntimeError:
+                failed_pages.append(i + 1)  # the server is slow at times: skip, next run fills the gap
+            if (time.time() - START) / 60 > BUDGET_MIN:
+                print("time budget reached while reading lists")
+                break
+        if failed_pages:
+            print(f"{status}: pages not read this time: {failed_pages}")
         for r in found:
             ngos.setdefault(r["code"], {**r, "status": status})
         print(f"{status}: {pages} pages, {len(found)} rows, total {len(ngos)}", flush=True)
 
-    with gzip.open(folder / "list.json.gz", "wt", encoding="utf-8") as f:
-        json.dump(sorted(ngos.values(), key=lambda r: int(r["code"])), f, ensure_ascii=False)
+        # save after every status, and keep NGOs found in earlier runs
+        old = {}
+        if (folder / "list.json.gz").exists():
+            old = {r["code"]: r for r in json.load(gzip.open(folder / "list.json.gz", "rt", encoding="utf-8"))}
+        old.update(ngos)
+        with gzip.open(folder / "list.json.gz", "wt", encoding="utf-8") as f:
+            json.dump(sorted(old.values(), key=lambda r: int(r["code"])), f, ensure_ascii=False)
 
     # profiles (country, areas of expertise, website ...)
     done = skipped = 0
