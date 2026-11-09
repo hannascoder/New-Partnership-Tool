@@ -126,7 +126,15 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   content, owner from imprint, each with a short reason. Open: owner asked whether it can run "over this
   account" (the Claude chat subscription) -> explained it needs an API account (console.anthropic.com),
   cost estimate ~300-500 $ for all with Opus 5.5 (batch); test with 100 outlets first.
-- Owner thought buttons did not work: soft filters did not change the counter -> counter + divider added.
+- Owner thought buttons did not work: soft filters did not change the counter -> counter + divider added;
+  owner: "Only show matches" ON by default.
+- Owner (09.11.2026, later): no paid API for now ("erstmal nichts zahlen"; maybe another plan later).
+  Instead Claude classifies the top 50 per country IN THE CHAT, country by country (pipeline/ai/README.md,
+  cache/ai_classification.json). Done: COD (DR Congo, 50). Next: continue country by country (~9,750
+  outlets in total; several sessions). Finds websites taken over by others (casino, travel guides).
+- Full website check v2 in (59,436 sites): public contact 37 %, active 24 %, open to partner content 1,713,
+  outlets without topic 13 %.
+- Open question to the owner: clearer names for the organisation types (proposal sent).
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
 
