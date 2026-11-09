@@ -15,6 +15,8 @@ Decisions made after the briefing was written (these win over the briefing):
 - **Category rules:** `docs/KATEGORIEN.md` (decisions of 05.11.2026 at the end). The search bar is left out of v1 for now.
 - **REMIND THE OWNER (open to-dos they asked to be reminded of):** (1) add NGOs as a new organisation type (phase 2); (2) add the internal SDG Media Compact member list once the owner gets it from DGC Campaigns; (3) sign up for a free Podcast Index API key (owner: later, not necessarily in step 4); (4) download the Covering Climate Now Airtable table as CSV once (guide the owner click by click); (5) add Model UN (owner's request 06.11.2026; scope to be discussed: e.g. Model UN conferences/associations as partners); (6) build in email contacts directly (owner's request 06.11.2026: contact addresses of outlets/organisations in the tool, e.g. from the website check; organisation addresses only, as decided). NGO sources: see docs/BACKLOG.md. Mention these at the end of each step summary until they are done.
 
+- **Topic keywords** (owner, 09.11.2026): every topic button must work. Hidden keyword lists per topic (`config/topic_keywords.yaml`, 9 UN News languages only), three strengths Focus / Desk / Covers; plan T1-T6 in docs/STATUS.md.
+
 - **Export feature:** built 06.11.2026 after the owner approved sample files (all 15 columns; PDF/Word landscape + portrait). Spec: `docs/EXPORT_SPEC.md`.
 
 - **Principle (owner, 06.11.2026): everything open source, self-maintaining and completely free.** Only open data sources, no paid services or keys that cost money, no server; GitHub Actions free tier + Cloudflare free plan.

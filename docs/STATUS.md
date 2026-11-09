@@ -35,9 +35,28 @@ is published automatically (only the PR *preview* builds fail; harmless).
   `pipeline/normalize/ngos.py`. ECOSOC: plan to use the lists by field of activity / country instead
   of 6,000 profile pages. NGO filter design: `docs/BACKLOG.md`.
 
+## Topic keywords (owner's decision 09.11.2026) - replaces "website check" as next step
+The owner wants EVERY topic button to work: clicking e.g. SDG 5 must find media and NGOs connected
+to the topic. Plan agreed, one step per session:
+- **T1** keyword lists for all 38 topics in `config/topic_keywords.yaml` (hidden, not shown on the site),
+  broad but specific, with exclusion words; only the **9 UN News languages** (Arabic, Chinese, English,
+  French, Russian, Spanish, Hindi, Portuguese, Kiswahili). Owner reviews the English list.
+  Status: questions to the owner asked 09.11.2026, waiting for answers before writing the lists.
+- **T2** Wikipedia intro + Wikidata description for ~13,500 outlets, matched with the lists.
+- **T3** website check part 1 (top 50 per country): menu/sections, About page, meta description
+  -> keywords; also email contacts, social links, podcast, newsletter.
+- **T4** specialist network lists (Covering Climate Now CSV, Earth Journalism Network, women in
+  journalism, health, solutions journalism ... only open lists).
+- **T5** NGOs: ECOSOC / IATI fields of work -> topics, same lists for NGO websites.
+- **T6** website: order by strength, card shows the reason ("Climate section: .../environment").
+Three strengths (agreed): **Focus** (topic is the main subject: name, About text), **Desk / section**
+(own section in the menu), **Covers** (topic appears repeatedly in the text). One single word somewhere
+does not count. Honest limits told to the owner: only coverage can be measured, not interest;
+~20-30 % of websites block or need JavaScript; small topics (water, oceans, SDG 17) stay small.
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
-2. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
+2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
    reachable?, contact email/page (owner wants email contacts), social links, podcast/newsletter,
    language, owner from imprint/about text.
 3. **4e**: all filters finished, "Also show outlets without this information" everywhere.
