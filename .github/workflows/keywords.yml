@@ -1,0 +1,30 @@
+# Keyword lists for all languages (owner, 09.11.2026): names of the same concepts
+# in every language from Wikidata -> raw/keyword_labels/. About 10-20 minutes.
+# Runs when the word lists or the script change, or by hand (Actions -> "Fetch keyword labels").
+name: Fetch keyword labels
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**", "step-*"]
+    paths: ["pipeline/fetch/keyword_labels.py", "config/topic_keywords.yaml", "config/audience_keywords.yaml",
+            ".github/workflows/keywords.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: keywords-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Names of the keyword concepts in all languages (Wikidata)
+        continue-on-error: true
+        run: python pipeline/fetch/keyword_labels.py
+      - name: Save raw data
+        run: bash pipeline/fetch/commit_raw.sh "keyword labels (Wikidata)"

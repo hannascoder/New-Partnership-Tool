@@ -42,7 +42,7 @@ def norm(text):
 
 
 class Matcher:
-    def __init__(self, path=ROOT / "config" / "topic_keywords.yaml"):
+    def __init__(self, path=ROOT / "config" / "topic_keywords.yaml", auto_kind=None):
         cfg = yaml.safe_load(open(path, encoding="utf-8"))["topics"]  # also used for config/audience_keywords.yaml
         self.strong, self.context, self.section = {}, {}, {}
         self.prefix, self.cjk = [], {}
@@ -62,7 +62,23 @@ class Matcher:
             for terms in (t.get("exclude") or {}).values():
                 exclude.update(norm(str(w)) for w in terms)
         self.exclude = sorted(exclude, key=len, reverse=True)
-        self.maxlen = max(len(k.split()) for k in list(self.strong) + list(self.context))
+        # words in all other languages from Wikidata (pipeline/fetch/keyword_labels.py):
+        # they count at most as COVERS ("Reports on it"), nobody checked them by hand
+        self.auto = {}
+        auto_file = ROOT / "raw" / "keyword_labels" / "data.json.gz"
+        if auto_kind and auto_file.exists():
+            import gzip
+            import json
+            data = json.load(gzip.open(auto_file, "rt", encoding="utf-8"))
+            for en, v in (data.get("terms") or {}).items():
+                if v.get("kind") != auto_kind or v.get("topic") not in cfg:
+                    continue
+                for lang, names in (v.get("labels") or {}).items():
+                    for n in names:
+                        k = norm(n)
+                        if k and (CJK.search(k) or len(k) >= 4) and k not in self.strong:
+                            self._add(self.auto, n, (v["topic"], v.get("sub")))
+        self.maxlen = max(len(k.split()) for k in list(self.strong) + list(self.context) + list(self.auto))
         self.subtopics = {tid: [s["id"] for s in (t.get("subtopics") or [])] for tid, t in cfg.items()}
         self.sub_labels = {tid: {s["id"]: s["label"] for s in (t.get("subtopics") or [])} for tid, t in cfg.items()}
 
@@ -171,6 +187,24 @@ class Matcher:
                 for part in segs:  # a whole address part must be a section word: /climate/, /category/food-security/
                     for topic in self.section.get(self._clean(part), ()):
                         add(topic, None, DESK, f'website section /{"/".join(segs)}/', path)
+        # other languages (Wikidata names): at most COVERS
+        if self.auto:
+            def auto_hits(texts):
+                out = []
+                for text in texts:
+                    out += self._hits(text, self.auto)
+                return out
+            for label, texts, need in (("name", [name], 1), ("description", list(descriptions), 1),
+                                       ("About text", [t for _, t in abouts], 1),
+                                       ("website section", [t for t, _ in menu], 1), ("website headlines", list(headlines), 2)):
+                per = {}
+                for term, hs in auto_hits(texts):
+                    for topic, sub in hs:
+                        per.setdefault(topic, []).append((term, sub))
+                for topic, lst in per.items():
+                    if len(lst) >= need:
+                        for term, sub in lst:
+                            add(topic, sub, COVERS, f'{label}: "{term}" (other language, via Wikidata)')
         # COVERS: headlines / home page
         if headlines:
             per_topic = {}

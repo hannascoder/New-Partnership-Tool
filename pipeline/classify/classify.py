@@ -567,8 +567,8 @@ def main():
             (("iptv", "iptv_org.yaml"), ("rb", "radio_browser.yaml"), ("wd", "wikidata.yaml"))}
     sys.path.insert(0, str(ROOT / "pipeline" / "classify"))
     from topic_text import Matcher
-    kw = Matcher()
-    aud_matcher = Matcher(ROOT / "config" / "audience_keywords.yaml")
+    kw = Matcher(auto_kind="topic")
+    aud_matcher = Matcher(ROOT / "config" / "audience_keywords.yaml", auto_kind="audience")
     tf = ROOT / "raw" / "texts" / "data.json.gz"
     wd_texts = json.load(gzip.open(tf, "rt", encoding="utf-8")) if tf.exists() else {}
     web = {}

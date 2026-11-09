@@ -146,6 +146,7 @@
       $("f-size").append(l);
     });
     $("sizeNote").textContent = CFG.size_note || "";
+    if ($("strengthNote")) $("strengthNote").textContent = CFG.topic_strength_note || "";
     const tpCount = {}, subCount = {};
     ALL.forEach((o) => {
       topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; });
@@ -277,7 +278,7 @@
     const off = S.subOff[t]; if (!off || !off.size) return e;
     return (e[3] || []).some((s) => !off.has(s)) ? e : null;  // narrowed: only outlets with a chosen sub-topic
   }
-  const STRENGTH = new Proxy({}, { get: (_, k) => ((CFG && CFG.topic_strength) || { 1: "main focus", 2: "own section", 3: "covers it" })[k] });
+  const STRENGTH = new Proxy({}, { get: (_, k) => ((CFG && CFG.topic_strength) || { 1: "Specialist", 2: "Has a section on it", 3: "Reports on it" })[k] });
   function why(o, kind, id) {
     if (kind === "tp") {
       const e = tpEntry(o, id); if (!e || e[2] < 0) return "no topic in the sources: general news";

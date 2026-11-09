@@ -324,10 +324,14 @@ active_months: 3
 feedback_email: stevenshanna20@gmail.com
 
 # How strongly an outlet is connected to a topic (shown on the cards, in this order).
+# Wording chosen by the owner on 09.11.2026 (option A).
 topic_strength:
-  1: main focus
-  2: own section
-  3: covers it
+  1: Specialist
+  2: Has a section on it
+  3: Reports on it
+topic_strength_note: >-
+  Specialist = the topic is the outlet's main subject · Has a section on it = its own section
+  on the outlet's website · Reports on it = appears repeatedly in its recent headlines or description.
 
 # ---------------------------------------------------------------- L. Sorting
 sort:

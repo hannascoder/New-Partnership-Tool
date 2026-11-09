@@ -228,6 +228,7 @@ def main():
         "active_months": cats.get("active_months", 3),
         "feedback_email": cats.get("feedback_email"),
         "topic_strength": cats.get("topic_strength"),
+        "topic_strength_note": cats.get("topic_strength_note"),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
