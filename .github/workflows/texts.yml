@@ -1,0 +1,53 @@
+# Plan T2 + T3: texts for the topic keyword lists.
+#   texts:   Wikidata descriptions + Wikipedia introductions (~30 min)
+#   website: website check of the best-known outlets per country (up to ~2.5 h,
+#            continues where it stopped on the next run)
+# Runs when the fetchers change on a working branch, or by hand (Actions -> "Fetch texts").
+name: Fetch texts
+on:
+  workflow_dispatch:
+    inputs:
+      max_rank:
+        description: "Check websites of the top N outlets per country"
+        default: "100"
+  push:
+    branches: ["claude/**", "step-*"]
+    paths: ["pipeline/fetch/texts.py", "pipeline/fetch/website_check.py", ".github/workflows/texts.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: texts-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  texts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Wikidata descriptions and Wikipedia introductions
+        continue-on-error: true
+        run: python pipeline/fetch/texts.py
+      - name: Save raw data
+        run: bash pipeline/fetch/commit_raw.sh "texts (Wikidata, Wikipedia)"
+
+  website:
+    runs-on: ubuntu-latest
+    timeout-minutes: 200
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Website check
+        continue-on-error: true
+        timeout-minutes: 175
+        env:
+          WEBSITE_MAX_RANK: ${{ inputs.max_rank || '100' }}
+          WEBSITE_MINUTES: "160"
+        run: python pipeline/fetch/website_check.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "website check"
