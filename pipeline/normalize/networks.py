@@ -172,7 +172,34 @@ def ifcn():
     return out
 
 
+def occrp():
+    """OCCRP member centres: COUNTRY heading (upper case), then outlet name, then a description.
+    Region headings and the "regional partners" part (networks, not outlets) are skipped."""
+    path = RAW / "occrp_network.html.gz"
+    if not path.exists():
+        return []
+    raw = gzip.open(path, "rt", encoding="utf-8").read()
+    raw = re.sub(r"<script.*?</script>|<style.*?</style>", "", raw, flags=re.S)
+    lines = [htmllib.unescape(" ".join(t.split())) for t in re.sub(r"<[^>]+>", "\n", raw).split("\n")]
+    lines = [t for t in lines if t]
+    out, country = [], None
+    for i, t in enumerate(lines):
+        if "REGIONAL PARTNERS" in t:
+            break
+        if t.isupper() and known(t.title()):
+            country = t.title()
+            continue
+        if t.isupper():
+            country = None if not known(t.title()) else country
+            continue
+        nxt = lines[i + 1] if i + 1 < len(lines) else ""
+        if country and len(t) <= 80 and len(nxt) > 120 and not t.endswith("."):
+            out.append(entry("occrp_network", t, country))
+    return out
+
+
 PARSERS = {
+    "occrp_network": occrp,
     "sdg_media_compact": sdg_media_compact,
     "ifcn_signatories": ifcn,
     "efcsn_signatories": efcsn,

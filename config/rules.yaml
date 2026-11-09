@@ -143,6 +143,8 @@ scope:
 topics:
   networks:
     fact_checking: [ifcn_signatories, efcsn_signatories, fact_checking_sites]
+    peace_justice: [occrp_network]     # OCCRP: investigative media on corruption and organised crime
+    media_freedom: [occrp_network]
     climate: [covering_climate_now]          # as soon as the CSV snapshot is in raw/manual/
   org_types:
     fact_checking: [fact_checker]
@@ -271,3 +273,23 @@ open_to_partner_content:
   - 投稿
   - अपनी खबर भेजें
   - tuma habari yako
+
+# UN profiles found in how outlets describe themselves (point 8, 09.11.2026: no open
+# member lists exist for these). "phrases" = in the name, description, Wikipedia
+# introduction or About page; "sections" = a whole menu entry on the outlet's website.
+un_profile_words:
+  solutions:
+    phrases: [solutions journalism, solutions-focused journalism, solutions-oriented journalism, constructive journalism,
+              constructive news, solutions reporting, positive news, journalisme de solutions, journalisme constructif,
+              journalisme d'impact, periodismo de soluciones, periodismo constructivo, jornalismo de soluções,
+              jornalismo construtivo, конструктивная журналистика, صحافة الحلول, الصحافة البناءة, 建设性新闻,
+              समाधान पत्रकारिता, uandishi wa suluhisho]
+    sections: [solutions, solutions journalism, good news, positive news, constructive, solutions reporting]
+  development:
+    phrases: [development journalism, development reporting, global development, international development,
+              development news, development issues, journalisme de développement, information pour le développement,
+              periodismo para el desarrollo, periodismo de desarrollo, jornalismo de desenvolvimento,
+              журналистика развития, الصحافة التنموية, صحافة التنمية, 发展新闻, विकास पत्रकारिता,
+              uandishi wa habari za maendeleo]
+    sections: [development, global development, international development, développement, desarrollo,
+               desenvolvimento, التنمية, maendeleo]

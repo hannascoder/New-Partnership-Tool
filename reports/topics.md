@@ -1,8 +1,8 @@
 # Step 4d: topics, target audience and UN profile
 
-Topic matches by strength: main focus 70,554 · own section 24,802 · covers it 20,866
+Topic matches by strength: main focus 70,671 · own section 24,799 · covers it 20,859
 
-70,989 outlets shown on the website. An outlet can have several topics and profiles.
+71,030 outlets shown on the website. An outlet can have several topics and profiles.
 Topics and UN profiles never hide an outlet; they only change the order (unless the user
 switches on "Only show topic matches").
 
@@ -27,9 +27,9 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Industry, innovation & infrastructure (SDG 9) | 1,551 | 0 | 0 | 0 | 257 | 0 | website About page: "innovation" (68); website About page: "infrastructure" (54); website headlines: "innovation" (43) |
 | Reduced inequalities (SDG 10) | 526 | 142 | 0 | 0 | 128 | 0 | Wikidata: African American newspaper (56); Wikidata: LGBTQ magazine (55); Wikipedia: "african american" (33) |
 | Sustainable cities & communities (SDG 11) | 401 | 0 | 0 | 0 | 25 | 0 | website section "Transport" (37); website section "Housing" (25); website section "Cidades" (17) |
-| Peace, justice & strong institutions (SDG 16) | 1,248 | 24 | 0 | 0 | 109 | 0 | website section "Justice" (78); website section "Investigations" (47); website section "Transparencia" (40) |
+| Peace, justice & strong institutions (SDG 16) | 1,300 | 24 | 60 | 0 | 106 | 0 | website section "Justice" (78); OCCRP network (investigative journalism) (60); website section "Investigations" (46) |
 | Partnerships for the goals (SDG 17) | 520 | 0 | 0 | 0 | 26 | 0 | website headlines: "onu" (59); website section "Development" (20); website About page: "united nations" (19) |
-| General news | 40,939 | 27,075 | 0 | 0 | 0 | 0 | no topic in the sources: general news (13,864); Wikidata: newspaper (9,810); iptv-org category "general" (6,941) |
+| General news | 40,936 | 27,075 | 0 | 0 | 0 | 0 | no topic in the sources: general news (13,861); Wikidata: newspaper (9,810); iptv-org category "general" (6,941) |
 | Fact-checking & misinformation | 646 | 40 | 267 | 0 | 85 | 0 | IFCN (150); Wikipedia list of fact-checking websites (96); Wikidata: fact-checking organisation (40) |
 | Science | 2,223 | 153 | 0 | 0 | 577 | 0 | website section "Science" (117); Wikipedia: "research" (100); Wikipedia: "science" (88) |
 | Business & economy | 6,881 | 580 | 0 | 0 | 2,453 | 0 | description mentions "business" (542); website section "Business" (518); Wikipedia: "business" (308) |
@@ -46,29 +46,29 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Children & youth | 4,299 | 1,779 | 0 | 0 | 590 | 0 | iptv-org category "kids" (835); Wikidata: student newspaper (452); Wikipedia: "students" (149) |
 | Indigenous peoples | 292 | 37 | 0 | 0 | 74 | 0 | Radio Browser tag "indigenous" (37); website headlines: "indigenous" (23); website About page: "indigenous" (20) |
 | Disability & inclusion | 278 | 0 | 0 | 0 | 25 | 0 | website headlines: "discapacidad", "personas con discapacidad" (52); website headlines: "blind" (14); website About page: "blind", "disabilities" (12) |
-| Media freedom & journalism | 392 | 23 | 0 | 0 | 172 | 0 | Wikipedia: "investigative journalism" (40); website About page: "independent journalism" (23); Wikipedia: "censorship" (22) |
-| Elections & governance | 3,731 | 962 | 0 | 0 | 386 | 0 | iptv-org category "legislative" (610); Wikidata subject: politics (107); Radio Browser tag "politics" (105) |
+| Media freedom & journalism | 445 | 23 | 58 | 0 | 169 | 0 | OCCRP network (investigative journalism) (58); Wikipedia: "investigative journalism" (39); website About page: "independent journalism" (23) |
+| Elections & governance | 3,733 | 962 | 0 | 0 | 388 | 0 | iptv-org category "legislative" (610); Wikidata subject: politics (107); Radio Browser tag "politics" (105) |
 | Sports | 10,352 | 3,116 | 0 | 0 | 2,430 | 0 | iptv-org category "sports" (2,175); website section "Sport" (1,193); description mentions "sport" (655) |
 | Diaspora | 373 | 15 | 0 | 0 | 100 | 0 | website section "Diaspora" (47); website About page: "diaspora" (44); Wikipedia: "diaspora" (41) |
 | Older persons & ageing | 327 | 0 | 0 | 0 | 26 | 0 | website headlines: "jubilados" (19); website headlines: "adultos mayores" (19); website headlines: "retraite" (17) |
 
-Outlets with no topic in any source (shown as "General news" by default): 13,864 (20 %)
+Outlets with no topic in any source (shown as "General news" by default): 13,861 (20 %)
 
 ## UN profile
 
 | Profile | Outlets | source | network | rule | hand | Most frequent reasons |
 |---|---|---|---|---|---|---|
 | Educational / explanatory | 957 | 957 | 0 | 0 | 0 | iptv-org category "education" (781); Radio Browser tag "education" (91); Radio Browser tag "educational" (35) |
-| Solutions / constructive journalism | 0 | 0 | 0 | 0 | 0 | no open source yet |
-| Development journalism | 0 | 0 | 0 | 0 | 0 | no open source yet |
+| Solutions / constructive journalism | 32 | 0 | 0 | 0 | 0 | website section "Good News" (12); website section "Solutions" (4); description mentions "periodismo de soluciones" (3) |
+| Development journalism | 42 | 0 | 0 | 0 | 0 | website section "Development" (19); website section "Développement" (7); website section "Desarrollo" (2) |
 | Open to partner content | 30 | 0 | 0 | 0 | 0 | website About page mentions "creative commons" (12); website About page mentions "syndication" (10); website About page mentions "envoyez nous" (3) |
 | Existing UN relationship | 329 | 0 | 329 | 0 | 0 | SDG Media Compact (329) |
 | Public service mandate | 136 | 0 | 0 | 136 | 0 | organisation type public service broadcaster (136) |
 | Storytelling & documentary | 450 | 450 | 0 | 0 | 0 | iptv-org category "documentary" (445); Wikidata subject: investigative journalism (4); Wikidata subject: documentary film (1) |
 | Fact-checking (IFCN signatory) | 175 | 0 | 175 | 0 | 0 | IFCN (175) |
-| Multilingual | 2,922 | 0 | 0 | 2,922 | 0 | N languages (2,922) |
+| Multilingual | 2,923 | 0 | 0 | 2,923 | 0 | N languages (2,923) |
 
-Outlets with at least one UN profile: 4,824
+Outlets with at least one UN profile: 4,892
 
 ## Target audience
 

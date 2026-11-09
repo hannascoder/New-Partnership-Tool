@@ -23,7 +23,8 @@ ROOT = Path(__file__).resolve().parents[2]
 NET_LABEL = {"efcsn_signatories": "EFCSN", "ifcn_signatories": "IFCN", "fact_checking_sites": "Wikipedia list of fact-checking websites",
              "news_agencies": "Wikipedia list of news agencies", "ebu_members": "EBU membership", "asbu_members": "ASBU membership",
              "abu_members": "ABU membership", "cbu_members": "CBU membership", "sdg_media_compact": "SDG Media Compact",
-             "state_media": "Wikipedia list of state media", "covering_climate_now": "Covering Climate Now"}
+             "state_media": "Wikipedia list of state media", "covering_climate_now": "Covering Climate Now",
+             "occrp_network": "OCCRP network (investigative journalism)"}
 
 
 def val(value, method, source):
@@ -432,6 +433,27 @@ def add_website_channels_language(o, w, rules, iso1):
             o["language_source"] = "website"
 
 
+def profile_words(o, txt, cfg):
+    """UN profiles from how the outlet describes itself (rules.yaml un_profile_words)."""
+    from topic_text import norm
+    out = {}
+    texts = [("name", o["name"] or "")] + [("description", d) for d in txt.get("descriptions") or []] + \
+            [(label, t) for label, t in txt.get("abouts") or []]
+    for prof, d in cfg.items():
+        for label, t in texts:
+            hay = " " + norm(t) + " "
+            hit = next((x for x in d["phrases"] if " " + x + " " in hay), None)
+            if hit:
+                out[prof] = f'{label} mentions "{hit}"'
+                break
+        if prof not in out:
+            for text, _ in txt.get("menu") or []:
+                if norm(text) in d["sections"]:
+                    out[prof] = f'website section "{text}"'
+                    break
+    return out
+
+
 def partner_content(w, words):
     """Reason text if the website shows the outlet takes content from others, else None."""
     if not w or w.get("status") != "ok" or not words:
@@ -583,6 +605,8 @@ def main():
     iso1 = {r["iso639_1"]: r["code"] for r in lang_rows if r["iso639_1"]}
     from topic_text import norm
     partner_words = [norm(x) for x in rules.get("open_to_partner_content") or []]
+    profile_cfg = {p: {"phrases": [norm(x) for x in d.get("phrases") or []], "sections": {norm(x) for x in d.get("sections") or []}}
+                   for p, d in (rules.get("un_profile_words") or {}).items()}
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
         cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
@@ -628,6 +652,9 @@ def main():
             add_website_channels_language(o, w, rules, iso1)
         cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
                                        {t["value"] for t in cat["topics"]})
+        for prof, why in profile_words(o, txt, profile_cfg).items():
+            if not any(u["value"] == prof for u in cat["un_profile"]):
+                cat["un_profile"].append(val(prof, "website_check" if "website" in why else "keyword", why))
         hint = partner_content(w, partner_words)
         if hint and not any(u["value"] == "open_to_partner_content" for u in cat["un_profile"]):
             cat["un_profile"].append(val("open_to_partner_content", "website_check", hint))

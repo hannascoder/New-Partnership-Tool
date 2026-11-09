@@ -25,12 +25,14 @@ NETWORK_FILTER = {"un_relationship": "Existing UN relationship (SDG Media Compac
                   "abu_members": "ABU (Asia-Pacific Broadcasting Union)", "asbu_members": "ASBU (Arab States Broadcasting Union)",
                   "cbu_members": "CBU (Caribbean Broadcasting Union)", "ifcn_signatories": "IFCN (fact-checkers)",
                   "efcsn_signatories": "EFCSN (fact-checkers)",
-                  "fact_checking_sites": "Fact-checking websites (Wikipedia list)"}
+                  "fact_checking_sites": "Fact-checking websites (Wikipedia list)",
+                  "occrp_network": "OCCRP (investigative journalism)"}
 SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org": "iptv-org",
                 "radio_browser": "Radio Browser", "sdg_media_compact": "SDG Media Compact", "ifcn_signatories": "IFCN",
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
                 "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
-                "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU"}
+                "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU",
+                "occrp_network": "OCCRP"}
 
 
 def fix_text(s):

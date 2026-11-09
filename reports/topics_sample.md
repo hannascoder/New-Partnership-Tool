@@ -168,16 +168,16 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-027042 | Meteored Portugal | PRT | covers it | website About page: "urbanismo" |
 | pf-021565 | VPItv | VEN | covers it | website headlines: "ciudades inteligentes" |
 
-## Peace, justice & strong institutions (SDG 16) — 1,248 outlets
+## Peace, justice & strong institutions (SDG 16) — 1,300 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-015660 | The Tower Magazine | USA | main focus | Wikidata subject: international relations |
-| pf-050176 | WRM TV | TZA | main focus | description mentions "reconciliation" |
-| pf-068314 | kewoulo.info | SEN | own section | website section "Justice" |
-| pf-014917 | XHUJED-TDT | MEX | own section | website section "_Transparencia" |
-| pf-040999 | Faiz TV Network | PAK | covers it | website headlines: "mediation" |
-| pf-003629 | La Prensa | NIC | covers it | website headlines: "lavado de dinero", "sistema judicial" |
+| pf-027854 | The Beiruter | LBN | main focus | website About page: "investigative reporting" |
+| pf-071507 | Shomrim - the Center for Media and Democracy | ISR | main focus | OCCRP network (investigative journalism) |
+| pf-068333 | timisactu.net | SEN | own section | website section "Justice" |
+| pf-015024 | The Inverness Courier | GBR | own section | website section "Courts" |
+| pf-041437 | Getembe TV | KEN | covers it | website headlines: "accountability", "reconciliation" |
+| pf-003906 | Aaj Tak | IND | covers it | website About page: "न्यायपालिका" |
 
 ## Partnerships for the goals (SDG 17) — 520 outlets
 
@@ -366,18 +366,18 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-065459 | Canal 14 | CRI | covers it | website headlines: "discapacidad", "personas con discapacidad" |
 | pf-003348 | Fakir | FRA | covers it | website headlines: "handicap" |
 
-## Media freedom & journalism — 392 outlets
+## Media freedom & journalism — 445 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-006300 | Epigram | GBR | main focus | description mentions "independent journalism" |
-| pf-027993 | Rockland Review News | USA | main focus | Wikidata subject: journalism |
+| pf-013724 | Rappler | PHL | main focus | description mentions "investigative journalism" |
+| pf-071495 | Public Record | ROU | main focus | OCCRP network (investigative journalism) |
 | pf-040403 | Duende Tv | ECU | own section | website section "Periodismo" |
 | pf-054368 | hypermediamagazine.com | CUB | own section | website section /seccion/periodismo/pinky-filosofia/ |
-| pf-003826 | N'Radio | FRA | covers it | Wikipedia: "media development" |
-| pf-006725 | Herald & Review | USA | covers it | Wikipedia: "investigative journalism" |
+| pf-003846 | Notre Voie | CIV | covers it | Wikipedia: "press freedom" |
+| pf-006994 | Baba Shamal | IRN | covers it | Wikipedia: "censorship" |
 
-## Elections & governance — 3,731 outlets
+## Elections & governance — 3,733 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
