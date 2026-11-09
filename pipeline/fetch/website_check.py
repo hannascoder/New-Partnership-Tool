@@ -12,7 +12,8 @@ Per website (home page + the "About" page if one is linked):
 robots.txt is respected. One visit per site, at most 2 pages.
 
 Output: raw/website_check/<ISO3>.json.gz  {outlet id: {...}} and meta.json.
-Already checked sites are kept and skipped for WEBSITE_RECHECK_DAYS (default 50),
+Already checked sites are kept and skipped for WEBSITE_RECHECK_DAYS (default 50; the owner
+chose all websites on 09.11.2026),
 so a run that hits the time limit continues where it stopped.
 """
 import gzip
