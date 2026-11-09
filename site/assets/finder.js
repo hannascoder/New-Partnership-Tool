@@ -6,7 +6,7 @@
   "use strict";
   const PAGE = 50;
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
-              channel: new Set(), size: "all", tp: new Set(), subOff: {}, au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
+              channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
@@ -48,7 +48,7 @@
     const b = document.createElement("button");
     b.type = "button"; b.className = "chip"; b.innerHTML = label;
     b.setAttribute("aria-pressed", pressed ? "true" : "false");
-    if (opts.disabled) { b.disabled = true; b.title = opts.title || "Available after step 4 (classification)"; }
+    if (opts.disabled) { b.disabled = true; b.title = opts.title || "No data for this yet"; }
     if (opts.title && !opts.disabled) b.title = opts.title;
     b.addEventListener("click", () => { onClick(b); });
     if (onClick._v !== undefined) { b.dataset.f = SETNAME.get(onClick._set) || ""; b.dataset.v = onClick._v; }
@@ -60,9 +60,9 @@
     fn._set = set; fn._v = value; return fn;
   }
   /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
-  const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", ck: "checks" };
+  const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", ck: "checks", pl: "platforms" };
   const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
-  const FLAGS = { nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", ou: "f-ownUnknown", om: "f-onlyMatches" };
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", ou: "f-ownUnknown", om: "f-onlyMatches" };
   let restoring = false;
   function saveHash() {
     if (restoring) return;
@@ -133,7 +133,26 @@
     $("f-worldwide").addEventListener("change", (e) => { S.worldwide = e.target.checked; apply(); });
     const typeCount = {}; ALL.forEach((o) => { if (o.o) typeCount[o.o[0]] = (typeCount[o.o[0]] || 0) + 1; });
     visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label) + ` <span class="sdg">${(typeCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgType, o.id))));
-    visible(C.channel).forEach((c) => $("f-channel").append(chip(esc(c.label), false, toggle(S.channel, c.id))));
+    const chCount = {}; ALL.forEach((o) => (o.ch || []).forEach((c) => { chCount[c] = (chCount[c] || 0) + 1; }));
+    visible(C.channel).forEach((c) => {
+      const t = toggle(S.channel, c.id);
+      const fn = (b) => {
+        t(b);
+        if (c.id === "social_media") {  // fold-out: social media platforms (categories.yaml social_platform)
+          $("f-platformBox").hidden = !S.channel.has("social_media");
+          if (!S.channel.has("social_media")) { S.platforms.clear(); $("f-platform").querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "false")); apply(); }
+        }
+      };
+      fn._set = t._set; fn._v = t._v;
+      $("f-channel").append(chip(esc(c.label) + ` <span class="sdg">${(chCount[c.id] || 0).toLocaleString("en")}</span>`, false, fn));
+    });
+    const plCount = {}; ALL.forEach((o) => Object.keys(o.so || {}).forEach((k) => { plCount[k] = (plCount[k] || 0) + 1; }));
+    (C.social_platform || []).forEach((pl) => {
+      const n = plCount[pl.id] || 0;
+      $("f-platform").append(chip(esc(pl.label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.platforms, pl.id),
+        n ? {} : { disabled: true, title: "No outlet with this platform found yet" }));
+    });
+    $("f-chUnknown").addEventListener("change", (e) => { S.chUnknown = e.target.checked; apply(); });
     const ownCount = {}; ALL.forEach((o) => { if (o.ow) ownCount[o.ow[0]] = (ownCount[o.ow[0]] || 0) + 1; });
     C.ownership.filter((o) => o.id !== "unknown").forEach((o) => $("f-ownership").append(chip(esc(o.label) + ` <span class="sdg">${(ownCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.own, o.id))));
     $("f-ownUnknown").addEventListener("change", (e) => { S.ownUnknown = e.target.checked; apply(); });
@@ -208,7 +227,7 @@
     C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches"].includes(c.id)).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
-      l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> ${esc(c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">step 4</span>'}`;
+      l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> ${esc(c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">no data yet</span>'}`;
       l.querySelector("input").dataset.v = c.id;
       l.querySelector("input").addEventListener("change", (e) => { e.target.checked ? S.checks.add(c.id) : S.checks.delete(c.id); apply(); });
       $("f-checks").append(l);
@@ -267,7 +286,7 @@
     return d.toISOString().slice(0, 10);
   }
   function anyFilter() {
-    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size;
+    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size || S.platforms.size;
   }
   /* an outlet without any topic in the sources counts as "General news" (the default topic) */
   function topicsOf(o) { return o.tp ? o.tp.map((e) => e[0]) : ["general_news"]; }
@@ -308,8 +327,10 @@
         if (!(S.scope.has(v) || (v === "unknown" && S.scopeUnknown))) return false;
       }
       const ch = o.ch || [];
-      if (matChannels && !ch.some((c) => matChannels.has(c)) && !(matTypes && o.o && matTypes.has(o.o[0]))) return false;
-      if (S.channel.size && !ch.some((c) => S.channel.has(c))) return false;
+      const noCh = !ch.length && S.chUnknown;  // "Also show outlets without channel information"
+      if (matChannels && !noCh && !ch.some((c) => matChannels.has(c)) && !(matTypes && o.o && matTypes.has(o.o[0]))) return false;
+      if (S.channel.size && !noCh && !ch.some((c) => S.channel.has(c))) return false;
+      if (S.platforms.size && !Object.keys(o.so || {}).some((k) => S.platforms.has(k))) return false;
       if (S.langs.size) {
         if (!o.l) { if (!S.noLang) return false; } else if (!o.l.some((l) => S.langs.has(l))) return false;
       }
@@ -464,7 +485,7 @@
       if (values.length) out.push([label, values.join(", ")]);
       // ticked checkboxes (those ticked by default, like "include reach", only when changed)
       g.querySelectorAll('input[type="checkbox"]').forEach((c) => {
-        if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("step 4", "").trim(), c.checked ? "" : "off"]);
+        if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("no data yet", "").trim(), c.checked ? "" : "off"]);
       });
     });
     Object.entries(S.subOff).forEach(([t, off]) => {

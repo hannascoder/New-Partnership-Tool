@@ -222,7 +222,7 @@ def main():
         "languages": sorted(({"code": c, "name": langs_all[c]["name"]} for c in used_langs if c in langs_all),
                             key=lambda x: x["name"]),
         "categories": {k: cats[k] for k in ("material", "org_type", "channel", "ownership", "scope",
-                                             "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort")},
+                                             "topic_groups", "topics", "audience", "un_profile", "social_platform", "size", "checkboxes", "sort")},
         "size_note": cats.get("size_note"),
         "new_months": cats.get("new_months", 4),
         "active_months": cats.get("active_months", 3),
@@ -234,7 +234,6 @@ def main():
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
         "codes": codes,
-        "pending": ["website_check"],
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)

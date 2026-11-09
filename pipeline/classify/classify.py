@@ -617,6 +617,8 @@ def main():
                 o["email_source"] = "website"
             for k, u in (w.get("social") or {}).items():
                 o.setdefault("social_urls", {}).setdefault(k, u)
+            if w.get("social") and "social_media" not in o["channels"]:
+                o["channels"].append("social_media")
         cat["website_status"] = w.get("status")
         if w.get("contact_url"):
             o["contact_page"] = w["contact_url"]
