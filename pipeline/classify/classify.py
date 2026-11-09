@@ -536,6 +536,8 @@ def apply_ai(o, cat, ai, un_order, aud_order):
         cat["hidden"] = "no longer published: " + a["closed"]
     if a.get("country_hint"):
         cat["country_hint"] = a["country_hint"]
+    if a.get("review"):
+        cat["review"] = a["review"]
 
 
 def outlet_texts(o, wd_texts, web):
@@ -632,6 +634,10 @@ def main():
     media_classes = set(rules["media_classes"])
     outlets = json.load(open(ROOT / "work" / "outlets.json", encoding="utf-8"))
     overrides = load_overrides()
+    for o in outlets:  # hand correction of the country (overrides.csv, field "country")
+        row = overrides.get(o["id"], {}).get("country")
+        if row and row.get("value"):
+            o["country_before"], o["country"] = o["country"], row["value"].strip().upper()
     owners_file = ROOT / "raw" / "wikidata_owners" / "data.json.gz"
     owners = json.load(gzip.open(owners_file, "rt", encoding="utf-8")) if owners_file.exists() else {}
     rsf = json.load(open(ROOT / "work" / "rsf.json", encoding="utf-8"))

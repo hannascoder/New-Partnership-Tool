@@ -37,6 +37,39 @@
    ]
   ]
  },
+ "pf-000007": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily"
+   ]
+  ]
+ },
+ "pf-000008": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Berlin"
+   ]
+  ]
+ },
+ "pf-000010": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-000017": {
   "date": "2026-11-09",
   "not_media": "news aggregator of Google, does not publish its own content",
@@ -80,6 +113,33 @@
    ]
   ]
  },
+ "pf-000029": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster for Berlin and Brandenburg"
+   ]
+  ]
+ },
+ "pf-000045": {
+  "date": "2026-11-10",
+  "owner": "Axel Springer SE",
+  "ownership": [
+   "private",
+   "Wikipedia: published by Axel Springer SE"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily"
+   ]
+  ]
+ },
  "pf-000048": {
   "date": "2026-11-09",
   "topics": [
@@ -109,6 +169,23 @@
    ]
   ]
  },
+ "pf-000051": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Barcelona"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "separate Spanish and Catalan editions"
+   ]
+  ]
+ },
  "pf-000053": {
   "date": "2026-11-09",
   "owner": "USA Today Co.",
@@ -118,6 +195,17 @@
     null,
     1,
     "national daily newspaper"
+   ]
+  ]
+ },
+ "pf-000054": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international news photo agency"
    ]
   ]
  },
@@ -218,6 +306,94 @@
    ]
   ]
  },
+ "pf-000071": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV broadcaster"
+   ],
+   [
+    "children_youth",
+    null,
+    2,
+    "website section Kinder"
+   ]
+  ]
+ },
+ "pf-000072": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "association of regional public broadcasters"
+   ]
+  ]
+ },
+ "pf-000073": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ARD public broadcasting"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "flagship channel of ARD"
+   ]
+  ]
+ },
+ "pf-000075": {
+  "date": "2026-11-10",
+  "owner": "PRISA",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section Climate"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Science"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English edition"
+   ]
+  ]
+ },
+ "pf-000078": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Spanish public radio and television corporation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster of Spain"
+   ]
+  ]
+ },
  "pf-000084": {
   "audience": [
    [
@@ -241,6 +417,64 @@
   "not_media": "erotic magazine (adult content is excluded, KATEGORIEN 0.4)",
   "topics": []
  },
+ "pf-000117": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section Klimakonferenz"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "investigative magazine journalism"
+   ]
+  ]
+ },
+ "pf-000118": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily tabloid in British Columbia"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "many sports sections"
+   ]
+  ]
+ },
+ "pf-000136": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "programmes in many languages"
+   ]
+  ]
+ },
  "pf-000137": {
   "audience": [
    [
@@ -256,6 +490,159 @@
     null,
     1,
     "fashion and lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-000139": {
+  "date": "2026-11-10",
+  "owner": "RTL Deutschland",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by RTL Deutschland"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment channel"
+   ]
+  ]
+ },
+ "pf-000140": {
+  "date": "2026-11-10",
+  "owner": "Axel Springer SE",
+  "ownership": [
+   "private",
+   "Wikipedia: published by Axel Springer SE"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ]
+  ]
+ },
+ "pf-000141": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national weekly newspaper"
+   ]
+  ]
+ },
+ "pf-000142": {
+  "date": "2026-11-10",
+  "review": "Wikipedia describes it as right-wing; please check against the far-right rule (rules.yaml)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly on politics and culture"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "political weekly"
+   ]
+  ]
+ },
+ "pf-000143": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly current affairs magazine"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section Klima & Nachhaltigkeit"
+   ]
+  ]
+ },
+ "pf-000144": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing daily"
+   ]
+  ]
+ },
+ "pf-000145": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ]
+  ]
+ },
+ "pf-000146": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster for Thuringia, Saxony, Saxony-Anhalt"
+   ]
+  ]
+ },
+ "pf-000150": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: taz is owned by a readers' cooperative"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section Weltklimakonferenz"
+   ]
+  ]
+ },
+ "pf-000152": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: owned by a cooperative (Genossenschaft)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing daily"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "Marxist political daily"
    ]
   ]
  },
@@ -283,6 +670,22 @@
     null,
     1,
     "commercial broadcast network"
+   ]
+  ]
+ },
+ "pf-000168": {
+  "date": "2026-11-10",
+  "owner": "ProSiebenSat.1 Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by ProSiebenSat.1 Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment channel"
    ]
   ]
  },
@@ -398,6 +801,28 @@
    ]
   ]
  },
+ "pf-000194": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000198": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster in Northern Germany"
+   ]
+  ]
+ },
  "pf-000206": {
   "date": "2026-11-09",
   "topics": [
@@ -490,6 +915,23 @@
    ]
   ]
  },
+ "pf-000224": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "news on anime, manga, games and Japanese pop culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and French"
+   ]
+  ]
+ },
  "pf-000234": {
   "date": "2026-11-09",
   "owner": "United States federal government",
@@ -505,6 +947,33 @@
    [
     "multilingual",
     "content in 48 languages"
+   ]
+  ]
+ },
+ "pf-000235": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public channel with cultural focus"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Wissenschaft"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries"
    ]
   ]
  },
@@ -525,6 +994,22 @@
    ]
   ]
  },
+ "pf-000260": {
+  "date": "2026-11-10",
+  "owner": "RTL Deutschland",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by RTL Deutschland"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV news channel"
+   ]
+  ]
+ },
  "pf-000272": {
   "date": "2026-11-09",
   "owner": "People Inc.",
@@ -537,6 +1022,66 @@
    ]
   ]
  },
+ "pf-000278": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website of Der Spiegel"
+   ]
+  ]
+ },
+ "pf-000281": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster of Bavaria"
+   ]
+  ]
+ },
+ "pf-000282": {
+  "date": "2026-11-10",
+  "owner": "Funke Mediengruppe",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hamburg daily"
+   ]
+  ]
+ },
+ "pf-000283": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV of Madrid"
+   ]
+  ]
+ },
+ "pf-000300": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily, newspaper of record"
+   ]
+  ]
+ },
  "pf-000301": {
   "date": "2026-11-09",
   "owner": "The Walt Disney Company (ABC)",
@@ -546,6 +1091,59 @@
     null,
     1,
     "news division of ABC"
+   ]
+  ]
+ },
+ "pf-000321": {
+  "date": "2026-11-10",
+  "owner": "Mediaset España",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by Mediaset España"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-000341": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by German media companies"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major news agency"
+   ]
+  ]
+ },
+ "pf-000342": {
+  "audience": [
+   [
+    "persons_with_disabilities",
+    "section Barrierefrei (accessible programmes)"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "ProSiebenSat.1 Media",
+  "ownership": [
+   "private",
+   "Wikipedia: part of ProSiebenSat.1 Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment channel"
    ]
   ]
  },
@@ -567,6 +1165,17 @@
     null,
     1,
     "German-language newspaper in Buenos Aires"
+   ]
+  ]
+ },
+ "pf-000355": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -727,7 +1336,6 @@
   ]
  },
  "pf-000483": {
-  "country_hint": "USA (runnersworld.com is the US edition)",
   "date": "2026-11-09",
   "owner": "Hearst",
   "topics": [
@@ -767,6 +1375,17 @@
    ]
   ]
  },
+ "pf-000495": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football magazine"
+   ]
+  ]
+ },
  "pf-000496": {
   "date": "2026-11-09",
   "owner": "Grupo América",
@@ -792,6 +1411,63 @@
     null,
     1,
     "music magazine"
+   ]
+  ]
+ },
+ "pf-000519": {
+  "country_hint": "USA (American news agency)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international news agency"
+   ]
+  ]
+ },
+ "pf-000540": {
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by Televisión Española"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public cultural TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries and culture"
+   ]
+  ]
+ },
+ "pf-000541": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "cities",
+    "urban_mobility",
+    2,
+    "website section Movilidad"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Spanish and Catalan editions"
    ]
   ]
  },
@@ -825,6 +1501,165 @@
     null,
     1,
     "technology magazine: impact on culture, economy and politics"
+   ]
+  ]
+ },
+ "pf-000570": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Catalan-language daily"
+   ]
+  ]
+ },
+ "pf-000571": {
+  "date": "2026-11-10",
+  "owner": "Funke Mediengruppe",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial, published by Funke Mediengruppe"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily (Ruhr area)"
+   ]
+  ]
+ },
+ "pf-000587": {
+  "date": "2026-11-10",
+  "owner": "Atresmedia",
+  "ownership": [
+   "private",
+   "Wikipedia: flagship of Atresmedia"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist TV channel"
+   ]
+  ]
+ },
+ "pf-000614": {
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by TVE"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports TV channel"
+   ]
+  ]
+ },
+ "pf-000628": {
+  "audience": [
+   [
+    "youth_students",
+    "teen magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "largest teen magazine"
+   ]
+  ]
+ },
+ "pf-000630": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment channel"
+   ]
+  ]
+ },
+ "pf-000646": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "most widely read newspaper in Canada"
+   ]
+  ]
+ },
+ "pf-000671": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-000713": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "computer and communications magazine"
+   ]
+  ]
+ },
+ "pf-000717": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Winnipeg"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "link 'Submit a News Tip'"
+   ]
+  ]
+ },
+ "pf-000739": {
+  "date": "2026-11-10",
+  "owner": "Bell Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel in Toronto"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section GTA Elections 2026"
    ]
   ]
  },
@@ -887,6 +1722,28 @@
    ]
   ]
  },
+ "pf-000766": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Spanish international channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by TVE"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international feed of TVE"
+   ]
+  ]
+ },
  "pf-000767": {
   "date": "2026-11-09",
   "ownership": [
@@ -932,6 +1789,101 @@
   ],
   "website_warning": "the website shows shopping and lifestyle adverts, not the newspaper"
  },
+ "pf-000792": {
+  "date": "2026-11-10",
+  "owner": "RTL Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by RTL Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "documentaries and TV shows"
+   ]
+  ]
+ },
+ "pf-000805": {
+  "audience": [
+   [
+    "persons_with_disabilities",
+    "website section Barrierefrei"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster of Bremen"
+   ]
+  ]
+ },
+ "pf-000807": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio for news and current affairs"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Wissen"
+   ]
+  ]
+ },
+ "pf-000811": {
+  "date": "2026-11-10",
+  "owner": "Hubert Burda Media",
+  "ownership": [
+   "private",
+   "Wikipedia: published by Hubert Burda Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "FOCUS GESUNDHEIT"
+   ]
+  ]
+ },
+ "pf-000812": {
+  "date": "2026-11-10",
+  "owner": "Funke Mediengruppe",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Berlin daily"
+   ]
+  ]
+ },
+ "pf-000814": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public radio"
+   ]
+  ]
+ },
  "pf-000821": {
   "audience": [
    [
@@ -954,6 +1906,17 @@
    ]
   ]
  },
+ "pf-000829": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
+   ]
+  ]
+ },
  "pf-000832": {
   "date": "2026-11-09",
   "owner": "Condé Nast",
@@ -966,6 +1929,53 @@
    ]
   ]
  },
+ "pf-000869": {
+  "audience": [
+   [
+    "minority_language",
+    "French-speaking minority in Ontario"
+   ],
+   [
+    "children",
+    "animations for children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the Ontario French-language educational authority"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "French-language educational TV"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational channel"
+   ]
+  ]
+ },
+ "pf-000892": {
+  "date": "2026-11-10",
+  "owner": "BCE Inc. (Bell Media)",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by BCE Inc."
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest private TV network"
+   ]
+  ]
+ },
  "pf-000910": {
   "audience": [
    [
@@ -974,6 +1984,24 @@
    ]
   ],
   "date": "2026-11-09",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "daily business newspaper"
+   ]
+  ]
+ },
+ "pf-000966": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Handelsblatt Media Group",
   "topics": [
    [
     "business_economy",
@@ -1006,6 +2034,41 @@
    ]
   ]
  },
+ "pf-000977": {
+  "audience": [
+   [
+    "minority_language",
+    "Basque-language daily"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "only daily wholly in Basque"
+   ]
+  ]
+ },
+ "pf-001075": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "animated programming"
+   ]
+  ]
+ },
  "pf-001097": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín",
@@ -1018,6 +2081,45 @@
    ]
   ]
  },
+ "pf-001169": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily of Gipuzkoa"
+   ]
+  ]
+ },
+ "pf-001172": {
+  "date": "2026-11-10",
+  "owner": "Unidad Editorial",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Unidad Editorial"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "national sports daily, mainly football"
+   ]
+  ]
+ },
+ "pf-001176": {
+  "date": "2026-11-10",
+  "owner": "Unidad Editorial",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "second largest daily"
+   ]
+  ]
+ },
  "pf-001184": {
   "date": "2026-11-09",
   "topics": [
@@ -1026,6 +2128,21 @@
     null,
     1,
     "daily newspaper of Córdoba"
+   ]
+  ]
+ },
+ "pf-001199": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Catalan public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main channel of Catalan public TV"
    ]
   ]
  },
@@ -1050,6 +2167,24 @@
    ]
   ]
  },
+ "pf-001210": {
+  "audience": [
+   [
+    "children",
+    "preschool children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "preschool channel"
+   ]
+  ]
+ },
  "pf-001229": {
   "audience": [
    [
@@ -1071,6 +2206,22 @@
     null,
     2,
     "website section Energia"
+   ]
+  ]
+ },
+ "pf-001235": {
+  "date": "2026-11-10",
+  "owner": "Mediaset España",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Mediaset España"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist TV channel"
    ]
   ]
  },
@@ -1107,6 +2258,68 @@
    ]
   ]
  },
+ "pf-001269": {
+  "date": "2026-11-10",
+  "owner": "CBC/Radio-Canada",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public TV network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language public TV network"
+   ]
+  ]
+ },
+ "pf-001293": {
+  "country_hint": "DNK (Nordic network, website gamereactor.dk)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "video game news"
+   ]
+  ]
+ },
+ "pf-001296": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Bell Media",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and financial news channel"
+   ]
+  ]
+ },
+ "pf-001303": {
+  "date": "2026-11-10",
+  "owner": "Canadian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the national public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster's TV network"
+   ]
+  ]
+ },
  "pf-001310": {
   "audience": [
    [
@@ -1126,6 +2339,24 @@
     null,
     1,
     "business news channel"
+   ]
+  ]
+ },
+ "pf-001316": {
+  "date": "2026-11-10",
+  "owner": "PRISA",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Ocio y cultura"
    ]
   ]
  },
@@ -1152,6 +2383,76 @@
    ]
   ]
  },
+ "pf-001338": {
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by Televisión Española"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public 24-hour news channel"
+   ]
+  ]
+ },
+ "pf-001364": {
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by Televisión Española"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public TV channel"
+   ]
+  ]
+ },
+ "pf-001376": {
+  "date": "2026-11-10",
+  "owner": "Torstar Corporation",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Torstar, acquired by private investment"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-001389": {
+  "date": "2026-11-10",
+  "owner": "Real Madrid CF",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by Real Madrid"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "TV channel of Real Madrid football club"
+   ],
+   [
+    "gender_equality",
+    "women_sport",
+    2,
+    "website section Primer Equipo Femenino"
+   ]
+  ]
+ },
  "pf-001433": {
   "date": "2026-11-09",
   "owner": "Telefônica Brasil",
@@ -1165,6 +2466,22 @@
     null,
     1,
     "web portal"
+   ]
+  ]
+ },
+ "pf-001457": {
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "series and entertainment"
    ]
   ]
  },
@@ -1192,6 +2509,77 @@
     null,
     2,
     "entertainment programmes (shows, reality TV)"
+   ]
+  ]
+ },
+ "pf-001518": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Corus Entertainment"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "animated programming for children"
+   ]
+  ]
+ },
+ "pf-001520": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine: politics, culture, current events"
+   ]
+  ]
+ },
+ "pf-001525": {
+  "date": "2026-11-10",
+  "owner": "Groupe TVA (Quebecor Media)",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned, subsidiary of Quebecor Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language TV network"
+   ]
+  ]
+ },
+ "pf-001531": {
+  "date": "2026-11-10",
+  "owner": "Canadian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: service of the public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international service of CBC"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "international broadcasting in several languages"
    ]
   ]
  },
@@ -1223,6 +2611,46 @@
    ]
   ]
  },
+ "pf-001629": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international news agency, largest in Spanish"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Spanish and English services"
+   ]
+  ]
+ },
+ "pf-001686": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily in Bilbao"
+   ]
+  ]
+ },
+ "pf-001694": {
+  "closed": "no longer published under this name (now El Punt Avui)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Catalan daily"
+   ]
+  ]
+ },
  "pf-001723": {
   "date": "2026-11-09",
   "topics": [
@@ -1235,7 +2663,6 @@
   ]
  },
  "pf-001731": {
-  "country_hint": "MOZ (Mozambican station: website miramar.co.mz, sections Moçambique)",
   "date": "2026-11-09",
   "owner": "Grupo Record",
   "topics": [
@@ -1244,6 +2671,18 @@
     null,
     1,
     "open TV station"
+   ]
+  ]
+ },
+ "pf-001762": {
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "general entertainment, drama series"
    ]
   ]
  },
@@ -1265,6 +2704,63 @@
    ]
   ]
  },
+ "pf-001825": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "national daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-001859": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Basque daily"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "political journalism, Basque nationalist"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Basque and Spanish"
+   ]
+  ]
+ },
+ "pf-001870": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Éducation"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environnement"
+   ]
+  ]
+ },
  "pf-001874": {
   "date": "2026-11-09",
   "topics": [
@@ -1273,6 +2769,52 @@
     null,
     1,
     "leading daily newspaper"
+   ]
+  ]
+ },
+ "pf-001898": {
+  "date": "2026-11-10",
+  "owner": "Rogers Sports & Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Rogers Communications"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV network"
+   ]
+  ]
+ },
+ "pf-001925": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Montreal"
+   ]
+  ]
+ },
+ "pf-001995": {
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "history programming"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "history programmes"
    ]
   ]
  },
@@ -1302,6 +2844,18 @@
    ]
   ]
  },
+ "pf-002002": {
+  "date": "2026-11-10",
+  "owner": "Grupo Hola",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "celebrity, royalty and lifestyle magazine"
+   ]
+  ]
+ },
  "pf-002009": {
   "date": "2026-11-09",
   "owner": "Grupo Estado",
@@ -1311,6 +2865,22 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-002010": {
+  "date": "2026-11-10",
+  "owner": "Rogers Sports & Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Rogers"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
    ]
   ]
  },
@@ -1386,6 +2956,100 @@
    ]
   ]
  },
+ "pf-002247": {
+  "audience": [
+   [
+    "children",
+    "kids channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "ownership": [
+   "private",
+   "Wikipedia: subsidiary of Corus Entertainment"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "kids channel"
+   ]
+  ]
+ },
+ "pf-002287": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "ownership": [
+   "private",
+   "Wikipedia: flagship of Postmedia Network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national newspaper"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Crime & Justice"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "website section Defence"
+   ]
+  ]
+ },
+ "pf-002290": {
+  "audience": [
+   [
+    "minority_language",
+    "in Galician"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public regional TV of Galicia"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Galician public TV"
+   ]
+  ]
+ },
+ "pf-002306": {
+  "date": "2026-11-10",
+  "owner": "Display Connectors",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
+   ]
+  ]
+ },
+ "pf-002309": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "ice hockey magazine"
+   ]
+  ]
+ },
  "pf-002330": {
   "date": "2026-11-09",
   "owner": "Grupo Abril",
@@ -1408,10 +3072,186 @@
    ]
   ]
  },
+ "pf-002368": {
+  "date": "2026-11-10",
+  "owner": "Axel Springer SE",
+  "ownership": [
+   "private",
+   "Wikipedia: subsidiary of Axel Springer"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV news channel"
+   ]
+  ]
+ },
+ "pf-002408": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Vancouver"
+   ]
+  ]
+ },
+ "pf-002425": {
+  "date": "2026-11-10",
+  "not_media": "official state gazette (laws and notices), not a media outlet",
+  "topics": []
+ },
+ "pf-002455": {
+  "date": "2026-11-10",
+  "owner": "Canadian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by CBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "all-news channel"
+   ]
+  ]
+ },
+ "pf-002520": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "radio for Spaniards abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RNE (RTVE)",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by RNE"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
+   ]
+  ]
+ },
+ "pf-002649": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily tabloid"
+   ]
+  ]
+ },
+ "pf-002652": {
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-owned public service radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public radio"
+   ]
+  ]
+ },
+ "pf-002676": {
+  "closed": "published until December 2024, merged with a sister magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "Formula One magazine"
+   ]
+  ]
+ },
+ "pf-002697": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Mediaset España and Skydance",
+  "ownership": [
+   "private",
+   "Wikipedia: joint venture of Mediaset España and Skydance"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
+ "pf-002733": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and French (La Presse canadienne)"
+   ]
+  ]
+ },
  "pf-002778": {
   "date": "2026-11-09",
   "not_media": "a magazine paper size (Wikidata error), not a media outlet",
   "topics": []
+ },
+ "pf-002802": {
+  "audience": [
+   [
+    "children",
+    "preschool and children's programmes"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RTVE",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by TVE"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public children's channel"
+   ]
+  ]
  },
  "pf-002818": {
   "date": "2026-11-09",
@@ -1447,6 +3287,36 @@
    ]
   ]
  },
+ "pf-002920": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: publicly funded"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Balearic public TV"
+   ]
+  ]
+ },
+ "pf-002921": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster of Andalusia"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Andalusian public TV"
+   ]
+  ]
+ },
  "pf-002924": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín",
@@ -1459,6 +3329,50 @@
    ]
   ]
  },
+ "pf-002928": {
+  "date": "2026-11-10",
+  "owner": "Atresmedia",
+  "ownership": [
+   "private",
+   "Wikipedia: part of Atresmedia"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national generalist radio"
+   ]
+  ]
+ },
+ "pf-002929": {
+  "audience": [
+   [
+    "religious",
+    "Catholic radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Spanish Catholic Church",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: radio of the Catholic Church"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national radio"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "radio of the Spanish Catholic Church"
+   ]
+  ]
+ },
  "pf-002931": {
   "date": "2026-11-09",
   "topics": [
@@ -1467,6 +3381,33 @@
     null,
     1,
     "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-002972": {
+  "audience": [
+   [
+    "indigenous",
+    "Aboriginal peoples' network"
+   ],
+   [
+    "minority_language",
+    "programmes in Indigenous languages"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "indigenous",
+    null,
+    1,
+    "television network of Aboriginal peoples"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "'Our Stories. Our Voices.'"
    ]
   ]
  },
@@ -1498,6 +3439,43 @@
     null,
     1,
     "general television channel"
+   ]
+  ]
+ },
+ "pf-003119": {
+  "date": "2026-11-10",
+  "owner": "Canadian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: division of the public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news division of CBC"
+   ]
+  ]
+ },
+ "pf-003165": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliamentary channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: owned by a consortium of cable companies, non-commercial"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliamentary broadcaster (House, Senate)"
    ]
   ]
  },
@@ -1583,6 +3561,21 @@
    ]
   ]
  },
+ "pf-003337": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency, 3,000 articles a day"
+   ]
+  ]
+ },
  "pf-003359": {
   "date": "2026-11-09",
   "owner": "Fundação Padre Anchieta",
@@ -1631,6 +3624,62 @@
     null,
     2,
     "website section Sport"
+   ]
+  ]
+ },
+ "pf-003417": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: owned by an independent nonprofit trust"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily in Montreal"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Affaires"
+   ]
+  ]
+ },
+ "pf-003420": {
+  "date": "2026-11-10",
+  "owner": "Québecor",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest French-language daily"
+   ]
+  ]
+ },
+ "pf-003429": {
+  "audience": [
+   [
+    "lgbtq",
+    "LGBTQ+ magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "inequalities",
+    "discrimination",
+    1,
+    "LGBTQ+ magazine"
+   ],
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "gay magazine"
    ]
   ]
  },
@@ -1692,6 +3741,18 @@
    ]
   ]
  },
+ "pf-003674": {
+  "date": "2026-11-10",
+  "owner": "Québecor",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily in Quebec City"
+   ]
+  ]
+ },
  "pf-003693": {
   "date": "2026-11-09",
   "topics": [
@@ -1749,6 +3810,23 @@
    ]
   ]
  },
+ "pf-003712": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily in Quebec City"
+   ]
+  ],
+  "un_profile": [
+   [
+    "solutions",
+    "website section La bonne nouvelle"
+   ]
+  ]
+ },
  "pf-003740": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín (Artear)",
@@ -1789,6 +3867,23 @@
    ]
   ]
  },
+ "pf-003797": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "third-largest general-interest newspaper"
+   ],
+   [
+    "cities",
+    "housing",
+    2,
+    "website section Vivienda"
+   ]
+  ]
+ },
  "pf-003818": {
   "date": "2026-11-09",
   "topics": [
@@ -1824,6 +3919,77 @@
     null,
     1,
     "major daily newspaper in Rio"
+   ]
+  ]
+ },
+ "pf-003869": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "programmes in Arabic, Cantonese, Filipino, Italian, Mandarin, Portuguese, Punjabi"
+   ],
+   [
+    "ethnic_minorities",
+    "ethnic television"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Rogers Sports & Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Rogers"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "multilingual ethnic TV"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "programmes in many languages"
+   ]
+  ]
+ },
+ "pf-003878": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Ottawa"
+   ]
+  ]
+ },
+ "pf-003891": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by ARD and ZDF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news and documentary channel"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "broadcasts political events"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries"
    ]
   ]
  },
@@ -1936,6 +4102,23 @@
    ]
   ]
  },
+ "pf-004044": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV of Barcelona in Catalan"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "programme Vides en primera persona"
+   ]
+  ]
+ },
  "pf-004060": {
   "date": "2026-11-09",
   "ownership": [
@@ -1996,6 +4179,34 @@
    ]
   ]
  },
+ "pf-004227": {
+  "audience": [
+   [
+    "religious",
+    "Catholic channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Salt and Light Catholic Media Foundation",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: not-for-profit foundation"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Roman Catholic TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "multi-lingual channel"
+   ]
+  ]
+ },
  "pf-004242": {
   "date": "2026-11-09",
   "topics": [
@@ -2004,6 +4215,18 @@
     null,
     1,
     "men's lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-004348": {
+  "date": "2026-11-10",
+  "owner": "Postmedia Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper in Brantford"
    ]
   ]
  },
@@ -2161,6 +4384,29 @@
    ]
   ]
  },
+ "pf-005508": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "heavy metal music website"
+   ]
+  ]
+ },
+ "pf-005773": {
+  "date": "2026-11-10",
+  "owner": "Bell Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news division of CTV"
+   ]
+  ]
+ },
  "pf-005805": {
   "date": "2026-11-09",
   "topics": [
@@ -2275,6 +4521,25 @@
    ]
   ]
  },
+ "pf-006436": {
+  "country_hint": "USA (American radio network)",
+  "date": "2026-11-10",
+  "owner": "Fox News",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "talk shows"
+   ]
+  ]
+ },
  "pf-006485": {
   "date": "2026-11-09",
   "owner": "Grupo Globo",
@@ -2296,6 +4561,18 @@
    [
     "multilingual",
     "English and Spanish versions"
+   ]
+  ]
+ },
+ "pf-006545": {
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news division of Global TV"
    ]
   ]
  },
@@ -2355,6 +4632,23 @@
     null,
     1,
     "city cable TV channel"
+   ]
+  ]
+ },
+ "pf-006865": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "specialises in economic, financial and political news"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Elecciones"
    ]
   ]
  },
@@ -2456,6 +4750,29 @@
    ]
   ]
  },
+ "pf-008722": {
+  "audience": [
+   [
+    "lgbtq",
+    "section Queer & Now"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "alternative news, entertainment and culture"
+   ],
+   [
+    "inequalities",
+    "discrimination",
+    2,
+    "website section Queer & Now"
+   ]
+  ]
+ },
  "pf-008820": {
   "audience": [
    [
@@ -2526,7 +4843,6 @@
   ]
  },
  "pf-009317": {
-  "country_hint": "ARG (Latin American channel headquartered in Buenos Aires)",
   "date": "2026-11-09",
   "owner": "Skydance",
   "topics": [
@@ -2555,6 +4871,38 @@
    ]
   ],
   "website_warning": "the website shows a recipe site, not the TV channel"
+ },
+ "pf-010297": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-commercial website"
+  ],
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "space and astronomy news"
+   ]
+  ]
+ },
+ "pf-011504": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "emphasis on political news"
+   ]
+  ]
  },
  "pf-011530": {
   "date": "2026-11-09",
@@ -2686,6 +5034,39 @@
    ]
   ]
  },
+ "pf-013525": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster of the Basque Country"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Basque public broadcaster"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Hauteskundeak (elections)"
+   ],
+   [
+    "health",
+    "health_systems",
+    2,
+    "website section Osasuna eta ongizatea"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Basque and Spanish"
+   ]
+  ]
+ },
  "pf-014131": {
   "audience": [
    [
@@ -2747,6 +5128,24 @@
     "environment_general",
     2,
     "website section Environment"
+   ]
+  ]
+ },
+ "pf-015602": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Corus Entertainment",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
    ]
   ]
  },
@@ -3270,6 +5669,78 @@
     null,
     1,
     "business newspaper (journal des affaires)"
+   ]
+  ]
+ },
+ "pf-070536": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "European public cultural channel"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Science"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries and reportage"
+   ],
+   [
+    "multilingual",
+    "French, German and other languages"
+   ]
+  ]
+ },
+ "pf-070540": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster of Saarland"
+   ]
+  ]
+ },
+ "pf-070541": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public broadcaster"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Kultur"
+   ]
+  ]
+ },
+ "pf-071243": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multilingual TV news network of Deutsche Welle"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "multilingual news network"
    ]
   ]
  },

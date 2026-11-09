@@ -136,10 +136,12 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   outlets without topic 13 %.
 - Organisation types renamed (owner, 09.11.2026): "Newspaper, TV, radio or news site", "News agency
   (supplies other media)", "Public broadcaster (independent)", "Community radio & local media", "Fact-checker".
-- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG (200 outlets).
-  Next: CAN, ESP, DEU, MEX, CHN, IND, FRA, AUS, GBR, RUS, ITA, JPN ... (order of outlet count).
+- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU (350 outlets).
+  Next: MEX, CHN, IND, FRA, AUS, GBR, RUS, ITA, JPN ... (order of outlet count).
   The AI reading also hides entries that are not media or no longer published (reports/hidden_ai.md)
   and lists outlets that are probably in another country (reports/contradictions.md).
+  Country corrections confirmed by the owner go into overrides.csv (field "country"): Miramar MOZ,
+  Runner's World USA, Space ARG. Owner asked WHY non-media are hidden (answer: KATEGORIEN 0) - decision open.
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
 

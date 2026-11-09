@@ -48,7 +48,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-001643 | Radio Notre-Dame | FRA | CAF, FRA |
 | pf-001648 | Sport 1 | CZE | CZE, HUN |
 | pf-001697 | Elbe-Jeetzel-Zeitung | DEU | AUT, DEU |
-| pf-001731 | Miramar | BRA | BRA, MOZ |
+| pf-001731 | Miramar | MOZ | BRA, MOZ |
 | pf-001745 | European Radio for Belarus | POL | BLR, POL |
 | pf-001890 | Romance TV | DEU | DEU, POL |
 | pf-001967 | Libya Al Ahrar TV | LBY | LBY, QAT |
@@ -116,7 +116,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-008597 | Inner Mongolia Radio and Television | CHN | CHN, MNG |
 | pf-008727 | Nunatsiaq News | CAN | CAN, USA |
 | pf-008987 | Sukan+ | MYS | MYS, TUV |
-| pf-009317 | Space | BRA | ARG, BRA |
+| pf-009317 | Space | ARG | ARG, BRA |
 | pf-009363 | Enlace TV | CRI | CRI, ECU |
 | pf-009441 | TV Asia | IND | IND, USA |
 | pf-009835 | The Irish Post | GBR | GBR, IRL |
@@ -226,10 +226,16 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 
 | Id | Name | Country now | AI reading says |
 |---|---|---|---|
-| pf-000483 | Runner's World | BRA | USA (runnersworld.com is the US edition) |
-| pf-001731 | Miramar | BRA | MOZ (Mozambican station: website miramar.co.mz, sections Moçambique) |
-| pf-009317 | Space | BRA | ARG (Latin American channel headquartered in Buenos Aires) |
+| pf-000519 | United Press International | ESP | USA (American news agency) |
+| pf-001293 | Gamereactor | DEU | DNK (Nordic network, website gamereactor.dk) |
+| pf-006436 | Fox News Radio | CAN | USA (American radio network) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
+
+## AI reading: please check (1)
+
+| Id | Name | Country | Note |
+|---|---|---|---|
+| pf-000142 | Junge Freiheit | DEU | Wikipedia describes it as right-wing; please check against the far-right rule (rules.yaml) |
 
 ## Possible duplicates: same website, several entries (2926)
 

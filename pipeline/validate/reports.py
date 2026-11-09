@@ -176,6 +176,9 @@ def main():
             "The tool keeps the country from Wikidata / the sources; tell Claude if one should change.", "",
             "| Id | Name | Country now | AI reading says |", "|---|---|---|---|"]
     con += [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['country_hint']} |" for o in hint]
+    rev = [o for o in outlets if o["cat"].get("review")]
+    con += ["", f"## AI reading: please check ({len(rev)})", "", "| Id | Name | Country | Note |", "|---|---|---|---|"]
+    con += [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['review']} |" for o in rev]
     dom = defaultdict(list)
     import re
     for o in outlets:
