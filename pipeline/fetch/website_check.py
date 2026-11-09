@@ -47,6 +47,15 @@ ABOUT = re.compile(r"about|who-we-are|qui-sommes|a-propos|apropos|quienes-somos|
                    r"quem-somos|chi-siamo|о нас|о-нас|o-nas|من نحن|عن |关于|हमारे बारे|kuhusu|mission|our-story", re.I)
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 NAV_HINT = re.compile(r"nav|menu|header|topbar|sections?", re.I)
+VERSION = 2  # 2 = also contact page, partner-content hints, date of the latest article (09.11.2026)
+CONTACT = re.compile(r"contact|kontakt|contacto|contato|contactez|nous joindre|cont[aá]ctenos|fale conosco|"
+                     r"контакт|اتصل بنا|联系我们|संपर्क|wasiliana", re.I)
+# links that may show the outlet takes content from others (rules.yaml: open_to_partner_content)
+INTEREST = re.compile(r"republish|syndicat|creative ?commons|creativecommons|submit|contribut|write for us|"
+                      r"pitch|press release|partner|tip|send us|soumettre|proposer|envoyez|republier|communiqu|"
+                      r"colabor|env[ií]a|publica tu|comunicado|envie|seja|投稿|прислать|предложить|стать автором|"
+                      r"أرسل|शेयर|भेजें|tuma habari", re.I)
+DATE_TAGS = re.compile(r"<(?:pubDate|updated|published|dc:date)>\s*([^<]{8,40})\s*<", re.I)
 
 
 class Page(HTMLParser):
@@ -57,6 +66,7 @@ class Page(HTMLParser):
         self.stack = []  # (tag, is_nav)
         self.cur_a, self.cur_text, self.in_title, self.skip = None, [], False, 0
         self.cur_h, self.cur_p = None, None
+        self.dates = []  # <time datetime="..."> on the page
 
     def in_nav(self):
         return any(n for _, n in self.stack)
@@ -75,6 +85,10 @@ class Page(HTMLParser):
             self.feeds.append(a.get("href", ""))
         if tag == "title":
             self.in_title = True
+        if tag == "time" and a.get("datetime"):
+            self.dates.append(a["datetime"][:10])
+        if tag == "meta" and (a.get("property") or a.get("name") or "").lower() in ("article:published_time", "article:modified_time"):
+            self.dates.append(a.get("content", "")[:10])
         if tag not in ("br", "img", "meta", "link", "input", "hr"):
             is_nav = tag in ("nav", "header") or bool(NAV_HINT.search(a.get("class", "") + " " + a.get("id", "") + " " + a.get("role", "")))
             self.stack.append((tag, is_nav))
@@ -189,6 +203,7 @@ def _check(outlet):
     res.update({"status": "ok", "final_url": final, "lang": p.lang, "title": " ".join(p.title.split())[:200],
                 "desc": " ".join(p.desc.split())})
     nav, seen, social, emails, about = [], set(), {}, [], None
+    extra, contact = [], None
     for text, href, is_nav in p.links:
         try:
             full = urllib.parse.urljoin(final, href)
@@ -203,6 +218,9 @@ def _check(outlet):
         for dom, name in SOCIAL.items():
             if h == dom or h.endswith("." + dom):
                 social.setdefault(name, full)
+        if (INTEREST.search(text or "") or INTEREST.search(full)) and len(extra) < 25 \
+                and (h == home or "creativecommons.org" in h):
+            extra.append([" ".join((text or "").split())[:60], full[:200]])
         if h != home:
             continue
         path = urllib.parse.urlsplit(full).path
@@ -211,11 +229,36 @@ def _check(outlet):
             nav.append([text, path])
         if about is None and (ABOUT.search(text) or ABOUT.search(path)) and path not in ("", "/"):
             about = full
+        if contact is None and (CONTACT.search(text or "") or CONTACT.search(path)) and path not in ("", "/"):
+            contact = full
     for e in EMAIL.findall(" ".join(p.paras[-30:])):
         if e not in emails and not e.lower().endswith((".png", ".jpg")):
             emails.append(e)
     res.update({"nav": nav, "heads": p.heads[:60], "emails": emails[:8], "social": social,
-                "feeds": [urllib.parse.urljoin(final, f) for f in p.feeds[:5]], "home_text": " ".join(p.paras[:6])[:800]})
+                "feeds": [urllib.parse.urljoin(final, f) for f in p.feeds[:5]], "home_text": " ".join(p.paras[:6])[:800],
+                "v": VERSION, "extra": extra})
+    if contact:
+        res["contact_url"] = contact
+    dates = [d for d in p.dates if re.match(r"\d{4}-\d{2}-\d{2}$", d)]
+    if res["feeds"]:  # date of the latest article from the RSS / Atom feed
+        try:
+            req = urllib.request.Request(res["feeds"][0], headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=10) as r:
+                xml = r.read(600_000).decode("utf-8", errors="replace")
+            from email.utils import parsedate_to_datetime
+            for raw in DATE_TAGS.findall(xml)[:50]:
+                try:
+                    d = parsedate_to_datetime(raw.strip()).date().isoformat()
+                except Exception:
+                    d = raw.strip()[:10]
+                if re.match(r"\d{4}-\d{2}-\d{2}$", d):
+                    dates.append(d)
+        except Exception:
+            pass
+    today = date.today().isoformat()
+    dates = [d for d in dates if "2000-01-01" <= d <= today]
+    if dates:
+        res["last_post"] = max(dates)
     if about:
         try:
             if allowed(about):
@@ -246,7 +289,7 @@ def main():
     for f in OUT.glob("*.json.gz"):
         shards[f.name[:3]] = json.load(gzip.open(f, "rt", encoding="utf-8"))
     cutoff = (date.today() - timedelta(days=RECHECK_DAYS)).isoformat()
-    done = {i for s in shards.values() for i, v in s.items() if v.get("checked", "") >= cutoff}
+    done = {i for s in shards.values() for i, v in s.items() if v.get("checked", "") >= cutoff and v.get("v", 1) >= VERSION}
     todo = [o for o in todo if o["i"] not in done]
     country = {o["i"]: o["c"] for o in outlets}
     print(f"to check: {len(todo)} websites (rank <= {MAX_RANK}), already done: {len(done)}")
