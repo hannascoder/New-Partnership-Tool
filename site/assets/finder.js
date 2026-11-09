@@ -91,7 +91,7 @@
       d.append(ch); $("f-topics").append(d);
     });
     const unCount = {}; ALL.forEach((o) => (o.un || []).forEach((u) => { unCount[u] = (unCount[u] || 0) + 1; }));
-    C.un_profile.forEach((u) => {
+    C.un_profile.filter((u) => !u.shown_in).forEach((u) => {
       const n = unCount[u.id] || 0;
       $("f-unProfile").append(chip(esc(u.label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.un, u.id),
         n ? { title: u.description || "" } : { disabled: true, title: "No open source for this yet (hand corrections or the website check may add it later)" }));

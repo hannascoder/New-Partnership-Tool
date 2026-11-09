@@ -210,6 +210,9 @@ un_profile:
   - id: un_relationship
     label: Existing UN relationship
     description: UN News partner, UNIC, SDG Media Compact.
+    # owner, 09.11.2026: offered as the first value of the "Member of" filter
+    # (a hard filter), not as a UN profile button
+    shown_in: member_of
   - id: public_service_mandate
     label: Public service mandate
   - id: storytelling

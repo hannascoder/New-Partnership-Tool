@@ -42,6 +42,17 @@ to the topic. Plan agreed, one step per session:
   broad but specific, with exclusion words; only the **9 UN News languages** (Arabic, Chinese, English,
   French, Russian, Spanish, Hindi, Portuguese, Kiswahili). Owner reviews the English list.
   Status: questions to the owner asked 09.11.2026, waiting for answers before writing the lists.
+  Owner's answers 09.11.2026:
+  - Topics may always overlap. Women's sport -> Sports AND SDG 5. Gender identity -> SDG 5 too.
+  - **The 169 SDG targets are the long-term reference** (owner sent the UN overview; official list:
+    UN Statistics SDG API, unstats.un.org/SDGAPI, fetch via the workflow - blocked in the dev sandbox).
+    Proposal: every SDG topic gets its targets as sub-topics (e.g. 5.2 violence against women),
+    each with its own keyword list; owner asked about a fold-out sub-topic list and a typo-tolerant search.
+  - New topic **Older persons / ageing** (to add in T1).
+  - **All world languages matter** ("nothing may fall behind"); no colleague can proofread translations.
+    Proposal: 9 hand-made languages + automatic labels in all languages from Wikidata (concept items).
+  - Idea from the owner: a **Target audience** section (women, youth, farmers ...), see questions.
+  - Done: "Existing UN relationship" is now the first value of "Member of" (not a UN profile button).
 - **T2** Wikipedia intro + Wikidata description for ~13,500 outlets, matched with the lists.
 - **T3** website check part 1 (top 50 per country): menu/sections, About page, meta description
   -> keywords; also email contacts, social links, podcast, newsletter.

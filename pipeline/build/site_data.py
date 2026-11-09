@@ -18,7 +18,8 @@ SOCIAL_URL = {"youtube": "https://www.youtube.com/channel/{}", "facebook": "http
               "instagram": "https://www.instagram.com/{}", "tiktok": "https://www.tiktok.com/@{}",
               "x": "https://x.com/{}", "telegram": "https://t.me/{}"}
 # Lists offered in the "Member of" filter (owner's request, 06.11.2026)
-NETWORK_FILTER = {"sdg_media_compact": "SDG Media Compact", "ebu_members": "EBU (European Broadcasting Union)",
+# "un_relationship" = every outlet with the UN profile "Existing UN relationship" (owner, 09.11.2026)
+NETWORK_FILTER = {"un_relationship": "Existing UN relationship (SDG Media Compact)", "ebu_members": "EBU (European Broadcasting Union)",
                   "abu_members": "ABU (Asia-Pacific Broadcasting Union)", "asbu_members": "ASBU (Arab States Broadcasting Union)",
                   "cbu_members": "CBU (Caribbean Broadcasting Union)", "ifcn_signatories": "IFCN (fact-checkers)",
                   "efcsn_signatories": "EFCSN (fact-checkers)",
@@ -98,7 +99,8 @@ def main():
             used_langs.update(cat["service_languages"])
         if cat.get("services"):
             e["sv"] = cat["services"]
-        nets = [n for n in o.get("networks", []) if n in NETWORK_FILTER]
+        nets = (["un_relationship"] if any(u["value"] == "un_relationship" for u in cat.get("un_profile", [])) else []) \
+            + [n for n in o.get("networks", []) if n in NETWORK_FILTER and n != "sdg_media_compact"]
         if nets:
             e["nw"] = nets
         out.append(e)
