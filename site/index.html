@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Partner Finder</title>
-<link rel="stylesheet" href="assets/atlas.css">
-<link rel="stylesheet" href="assets/finder.css">
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-092112UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-092112UTC">
 </head>
 <body>
 <a class="skip-link" href="#results">Skip to results</a>
@@ -62,6 +62,7 @@
       <section class="fgroup">
         <h2 class="sect">Organisation type</h2>
         <div class="chips" id="f-orgType"></div>
+        <details class="explain"><summary>What do these types mean?</summary><dl id="orgTypeHelp"></dl></details>
       </section>
 
       <section class="fgroup">
@@ -74,12 +75,8 @@
         <label class="check"><input type="checkbox" id="f-chUnknown"> Also show outlets without channel information</label>
       </section>
 
-      <section class="fgroup">
-        <h2 class="sect">Ownership</h2>
-        <div class="chips" id="f-ownership"></div>
-        <label class="check"><input type="checkbox" id="f-ownUnknown"> Also show outlets without this information</label>
-        <p class="hint">Every value names its source (State Media Monitor, Wikidata, EBU …). <b>Unknown</b>: no open source says who owns the outlet. This does not mean it is independent or state-run.</p>
-      </section>
+      <!-- Ownership buttons removed (owner, 09.11.2026): only 11 % of outlets have a known owner.
+           The owner is shown on every card; "Hide state-controlled" is under "More". -->
 
       <section class="fgroup">
         <h2 class="sect">Member of</h2>
@@ -157,7 +154,7 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an outlet</a>
 </footer>
-<script src="assets/finder.js"></script>
-<script src="assets/finder-export.js"></script>
+<script src="assets/finder.js?v=2026-11-092112UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-092112UTC"></script>
 </body>
 </html>

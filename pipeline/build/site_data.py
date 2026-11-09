@@ -152,6 +152,8 @@ def main():
         for k, u in (o.get("social_urls") or {}).items():  # from the website check
             if k in SOCIAL_URL or k == "linkedin":
                 e.setdefault("so", {}).setdefault(k, u)
+        if o.get("owner_names"):
+            e["on"] = o["owner_names"][:3]
         if o.get("contact_page"):
             e["cp"] = o["contact_page"]
         if o.get("last_post"):
@@ -249,6 +251,13 @@ def main():
         files.append(name)
     config["outlet_files"] = files
     json.dump(config, open(data / "config.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # scripts and styles get the build time as version, so browsers load the new ones after an update
+    import re as _re
+    idx = ROOT / "site" / "index.html"
+    html = idx.read_text(encoding="utf-8")
+    ver = config["built"].replace(" ", "").replace(":", "")
+    html = _re.sub(r'(assets/[a-z\-]+\.(?:js|css))(\?v=[^"]*)?"', lambda m: f'{m.group(1)}?v={ver}"', html)
+    idx.write_text(html, encoding="utf-8")
     sizes = ", ".join(f"{f} {(data / f).stat().st_size / 1e6:.1f} MB" for f in files)
     print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes})")
 

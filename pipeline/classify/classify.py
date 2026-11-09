@@ -111,6 +111,18 @@ def owner_index(owners, outlets_known):
     return idx, clean_name
 
 
+def owner_names(o, owners):
+    """names of the outlet's owners (Wikidata owner / parent, iptv-org owner names), for the card"""
+    out = []
+    for label, _, depth in owner_info(o, owners):
+        if depth == 1 and label and not label.startswith("Q") and label not in out:
+            out.append(label)
+    for n in iptv_owner_names(o):
+        if n and n not in out:
+            out.append(n)
+    return out[:3]
+
+
 def ownership(o, rules, owners, rsf, org, owner_idx=None):
     info = owner_info(o, owners)
     if owner_idx:  # iptv-org owner names matched to Wikidata organisations
@@ -619,6 +631,7 @@ def main():
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
         cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
+        o["owner_names"] = owner_names(o, owners)
         ov = overrides.get(o["id"], {}).get("ownership")
         if ov:
             cat["ownership"] = val(ov["value"], "override", ov.get("note") or "hand correction")
