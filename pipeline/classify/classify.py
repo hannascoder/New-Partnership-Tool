@@ -392,7 +392,9 @@ def topics(o, cat, rules, maps, kw, order, ov, texts=None):
     name = o["name"] or ""
     if name.count(",") > rules.get("name_keywords_max_commas", 99):
         name = ""  # a tagline listing sections, not a name
-    hits = kw.match(name=name, **(texts or {}))
+    texts = dict(texts or {})
+    base = texts.pop("base_url", None)
+    hits = kw.match(name=name, **texts)
     for topic, h in hits.items():
         old = ev.best.get(topic)
         method = "website_check" if h["why"].startswith("website") else "keyword"
@@ -400,6 +402,9 @@ def topics(o, cat, rules, maps, kw, order, ov, texts=None):
             ev.best[topic] = {**val(topic, method, h["why"]), "strength": h["s"]}
         if h["subs"]:
             ev.best[topic]["subs"] = sorted(h["subs"])
+        if h.get("url") and base and ev.best[topic].get("strength") == 2:
+            import urllib.parse
+            ev.best[topic]["url"] = urllib.parse.urljoin(base, h["url"])
     apply_list_overrides(ev, ov, "topics", "topic")
     for v in ev.best.values():
         v.setdefault("strength", 1)
@@ -407,6 +412,24 @@ def topics(o, cat, rules, maps, kw, order, ov, texts=None):
         ev.add("general_news", "default", "no topic in the sources: general news")
         ev.best["general_news"]["strength"] = 3
     return ev.result(order)
+
+
+def add_website_channels_language(o, w, rules, iso1):
+    """Podcast / newsletter from the website menu or feeds; page language if no source has one."""
+    from topic_text import norm
+    words = {ch: {norm(x) for x in lst} for ch, lst in (rules.get("website_channels") or {}).items()}
+    texts = [norm(t) for t, _ in (w.get("nav") or [])] + [norm(f) for f in (w.get("feeds") or [])]
+    for ch, ws in words.items():
+        if ch in o["channels"]:
+            continue
+        if any(t in ws or any((" " + x + " ") in (" " + t + " ") for x in ws) for t in texts):
+            o["channels"].append(ch)
+            o.setdefault("channel_source", {})[ch] = "website"
+    if rules.get("website_language") and not o["languages"] and w.get("lang"):
+        code = iso1.get(w["lang"].split("-")[0].split("_")[0].lower())
+        if code:
+            o["languages"] = [code]
+            o["language_source"] = "website"
 
 
 ORG_MAIL = re.compile(r"^(info|contact|contacto|contato|kontakt|redac|redaction|redaccion|redacao|newsroom|news|noticias|"
@@ -430,10 +453,11 @@ def outlet_texts(o, wd_texts, web):
             abouts.append(("website About page", w["about"]))
         menu = [tuple(x) for x in w.get("nav") or []]
         heads = (w.get("heads") or []) + ([w["home_text"]] if w.get("home_text") else [])
-    return {"descriptions": desc, "abouts": abouts, "menu": menu, "headlines": heads}
+    return {"descriptions": desc, "abouts": abouts, "menu": menu, "headlines": heads,
+            "base_url": w.get("final_url") if w.get("status") == "ok" else None}
 
 
-def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids):
+def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids, aud_matcher=None, texts=None):
     """Target audience (owner's idea, 09.11.2026): who the outlet is made for."""
     ev = Evidence()
     source_mappings(o, maps, "audience", ev)
@@ -456,6 +480,12 @@ def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_
         for aud, word, rx in kw:
             if aud not in ev.best and rx.search(name):
                 ev.add(aud, "keyword", f"name contains \"{word}\"")
+    if aud_matcher and texts:  # config/audience_keywords.yaml on name, descriptions, About texts
+        hits = aud_matcher.match(name=o["name"] or "", descriptions=texts.get("descriptions") or [],
+                                 abouts=texts.get("abouts") or [])
+        for aud, h in hits.items():
+            if aud not in ev.best:
+                ev.add(aud, "website_check" if "website" in h["why"] else "keyword", h["why"])
     apply_list_overrides(ev, ov, "audience", "target audience")
     return ev.result(order)
 
@@ -521,6 +551,7 @@ def main():
     sys.path.insert(0, str(ROOT / "pipeline" / "classify"))
     from topic_text import Matcher
     kw = Matcher()
+    aud_matcher = Matcher(ROOT / "config" / "audience_keywords.yaml")
     tf = ROOT / "raw" / "texts" / "data.json.gz"
     wd_texts = json.load(gzip.open(tf, "rt", encoding="utf-8")) if tf.exists() else {}
     web = {}
@@ -532,6 +563,7 @@ def main():
     lang_rows = list(csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")))
     buttons = {r["code"] for r in lang_rows if r["button"]}
     lang_names = {r["code"]: r["name"] for r in lang_rows}
+    iso1 = {r["iso639_1"]: r["code"] for r in lang_rows if r["iso639_1"]}
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
         cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
@@ -567,10 +599,12 @@ def main():
             for k, u in (w.get("social") or {}).items():
                 o.setdefault("social_urls", {}).setdefault(k, u)
         cat["website_status"] = w.get("status")
+        if w.get("status") == "ok":
+            add_website_channels_language(o, w, rules, iso1)
         cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
                                        {t["value"] for t in cat["topics"]})
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
-                                          lang_names, {t["value"] for t in cat["topics"]})
+                                          lang_names, {t["value"] for t in cat["topics"]}, aud_matcher, txt)
         for field, row in overrides.get(o["id"], {}).items():
             if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")

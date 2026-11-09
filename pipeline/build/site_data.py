@@ -31,6 +31,21 @@ SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org"
                 "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU"}
 
 
+def fix_text(s):
+    """Repairs names whose letters were mis-read by a source ("Rock â€“ News" -> "Rock – News"):
+    the text is re-read as UTF-8 if that removes the typical broken characters."""
+    if not s or not any(m in s for m in ("â€", "Ã", "‚Ä", "Â", "Ð", "Ø§", "„Å", "„Ç", "„É", "„Ä")):
+        return s
+    for enc in ("cp1252", "latin-1", "mac_roman"):
+        try:
+            t = s.encode(enc).decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            continue
+        if t != s:
+            return t
+    return s
+
+
 def compact(out):
     """Keeps outlets.json under Cloudflare's 25 MiB per-file limit: values that repeat
     (channels, sources, type, ownership, scope) become numbers, the most common
@@ -98,7 +113,7 @@ def main():
     def w(text):
         return why.setdefault(text, len(why))
     for o in outlets:
-        e = {"i": o["id"], "n": o["name"], "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
+        e = {"i": o["id"], "n": fix_text(o["name"]), "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
         alt = [a for a in o["alt_names"] if a.isascii()][:3]
         if alt:
             e["a"] = alt
@@ -127,9 +142,14 @@ def main():
         # [topic, strength (1 focus, 2 desk, 3 covers), reason, [sub-topics]]
         tps = [t for t in cat.get("topics", []) if t["method"] != "default"]
         if tps:
+            # 5th value: link to the website section ("own section" only)
             e["tp"] = [[t["value"], t.get("strength", 1), w(t["source"])]
-                       + ([t.get("subs") or [general[t["value"]]]] if t["value"] in general else [])
+                       + ([t.get("subs") or [general[t["value"]]]] if t["value"] in general else [[]])
+                       + ([t["url"]] if t.get("url") else [])
                        for t in tps]
+            for x in e["tp"]:
+                if len(x) == 4 and x[3] == []:
+                    x.pop()
         if cat.get("audience_groups"):
             e["au"] = [a["value"] for a in cat["audience_groups"]]
             e["aw"] = [w(a["source"]) for a in cat["audience_groups"]]

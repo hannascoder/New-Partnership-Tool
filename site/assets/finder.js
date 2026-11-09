@@ -298,7 +298,11 @@
     const social = Object.entries(o.so || {}).map(([k2, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(k2)}</a>`).join(" · ");
     const verified = o.s.length >= 2 ? '<span class="badge verified">verified</span>' : '<span class="badge unverified">1 source</span>';
     const tip = (kind, id, label) => `<span class="tag" title="${esc(why(o, kind, id))}">${esc(label)}</span>`;
-    const tpl = topicsOf(o).map((t) => { const e = tpEntry(o, t); return tip("tp", t, lab(C.topics, t)) + (o.tp ? ` <span class="pending">(${STRENGTH[e[1]]})</span>` : ""); }).join(", ");
+    const tpl = topicsOf(o).map((t) => {
+      const e = tpEntry(o, t);
+      const link = e && e[4] && /^https?:/.test(e[4]) ? ` <a href="${esc(e[4])}" target="_blank" rel="noopener" title="Open this section of the website">section ↗</a>` : "";
+      return tip("tp", t, lab(C.topics, t)) + (o.tp ? ` <span class="pending">(${STRENGTH[e[1]]}${link ? "" : ""})</span>` : "") + link;
+    }).join(", ");
     const aul = (o.au || []).map((a) => tip("au", a, lab(C.audience, a))).join(", ");
     const unl = (o.un || []).map((u) => tip("un", u, lab(C.un_profile, u))).join(", ");
     const inList = exportList.has(o.i);

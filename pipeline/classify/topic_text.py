@@ -43,7 +43,7 @@ def norm(text):
 
 class Matcher:
     def __init__(self, path=ROOT / "config" / "topic_keywords.yaml"):
-        cfg = yaml.safe_load(open(path, encoding="utf-8"))["topics"]
+        cfg = yaml.safe_load(open(path, encoding="utf-8"))["topics"]  # also used for config/audience_keywords.yaml
         self.strong, self.context, self.section = {}, {}, {}
         self.prefix, self.cjk = [], {}
         exclude = set()
@@ -120,8 +120,10 @@ class Matcher:
         """Returns {topic: {"s": strength, "subs": set(sub ids), "why": text}}"""
         res = {}
 
-        def add(topic, sub, strength, why):
+        def add(topic, sub, strength, why, url=None):
             r = res.setdefault(topic, {"s": 9, "subs": set(), "why": ""})
+            if url and not r.get("url"):
+                r["url"] = url  # address of the website section (shown as a link on the card)
             if sub:
                 r["subs"].add(sub)
             if strength < r["s"]:
@@ -158,17 +160,17 @@ class Matcher:
             t = self._clean(text)
             found = False
             for topic in self.section.get(t, ()):
-                add(topic, None, DESK, f'website section "{text}"')
+                add(topic, None, DESK, f'website section "{text}"', path)
                 found = True
             for term, hits in self._strong_hits(text):
                 for topic, sub in hits:
-                    add(topic, sub, DESK, f'website section "{text}"')
+                    add(topic, sub, DESK, f'website section "{text}"', path)
                     found = True
             segs = [x for x in (path or "").strip("/").split("/") if x]
             if not found and 1 <= len(segs) <= 3 and not any(ch.isdigit() for ch in "".join(segs)):
                 for part in segs:  # a whole address part must be a section word: /climate/, /category/food-security/
                     for topic in self.section.get(self._clean(part), ()):
-                        add(topic, None, DESK, f'website section /{"/".join(segs)}/')
+                        add(topic, None, DESK, f'website section /{"/".join(segs)}/', path)
         # COVERS: headlines / home page
         if headlines:
             per_topic = {}

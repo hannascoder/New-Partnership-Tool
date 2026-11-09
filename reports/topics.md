@@ -66,28 +66,28 @@ Outlets with no topic in any source (shown as "General news" by default): 15,873
 | Public service mandate | 136 | 0 | 0 | 136 | 0 | organisation type public service broadcaster (136) |
 | Storytelling & documentary | 450 | 450 | 0 | 0 | 0 | iptv-org category "documentary" (445); Wikidata subject: investigative journalism (4); Wikidata subject: documentary film (1) |
 | Fact-checking (IFCN signatory) | 175 | 0 | 175 | 0 | 0 | IFCN (175) |
-| Multilingual | 2,921 | 0 | 0 | 2,921 | 0 | N languages (2,921) |
+| Multilingual | 2,922 | 0 | 0 | 2,922 | 0 | N languages (2,922) |
 
-Outlets with at least one UN profile: 4,795
+Outlets with at least one UN profile: 4,796
 
 ## Target audience
 
 | Audience | Outlets | source | rule | name | hand | Most frequent reasons |
 |---|---|---|---|---|---|---|
-| Women | 93 | 44 | 0 | 49 | 0 | Wikidata subject: list of women's magazines (22); name contains "women" (19); Wikidata subject: women's magazine (11) |
-| Youth & students | 1,240 | 1,110 | 0 | 130 | 0 | Wikidata: student newspaper (451); Radio Browser tag "college radio" (191); Radio Browser tag "juvenil" (131) |
-| Children | 1,043 | 1,019 | 0 | 24 | 0 | iptv-org category "kids" (835); Radio Browser tag "children" (89); Radio Browser tag "kids" (58) |
-| Older persons | 15 | 0 | 0 | 15 | 0 | name contains "senior" (14); name contains "seniors" (1) |
-| Rural communities & farmers | 761 | 20 | 712 | 29 | 0 | topic agriculture (712); Radio Browser tag "agriculture" (20); name contains "farmer" (16) |
-| Local communities | 944 | 0 | 944 | 0 | 0 | organisation type community media (944) |
-| Persons with disabilities | 13 | 10 | 0 | 3 | 0 | Radio Browser tag "blind" (7); Radio Browser tag "blind radio" (3); name contains "blind" (1) |
-| Indigenous peoples | 183 | 43 | 140 | 0 | 0 | topic indigenous (140); Radio Browser tag "indigenous" (37); Radio Browser tag "aboriginal" (4) |
-| Minority-language speakers | 1,689 | 0 | 1,689 | 0 | 0 | in X: not an official language of the country (1,689) |
-| Ethnic & minority communities | 126 | 126 | 0 | 0 | 0 | Wikidata: African American newspaper (56); Radio Browser tag "latino" (26); Radio Browser tag "ethnic" (9) |
-| Diaspora & migrants | 276 | 15 | 259 | 2 | 0 | topic diaspora (259); Radio Browser tag "ethnic" (9); Radio Browser tag "ethnic programming" (6) |
-| LGBTQ+ communities | 94 | 89 | 0 | 5 | 0 | Wikidata: LGBTQ magazine (55); Wikidata: gay newspaper (10); Wikidata: LGBTQI online newspaper (8) |
-| Religious communities | 3,605 | 3,605 | 0 | 0 | 0 | iptv-org category "religious" (1,902); Radio Browser tag "christian" (820); Radio Browser tag "islam" (236) |
-| Business & professionals | 692 | 431 | 0 | 261 | 0 | name contains "business" (226); Wikidata: trade magazine (214); iptv-org category "business" (173) |
-| Policy makers & decision makers | 622 | 622 | 0 | 0 | 0 | iptv-org category "legislative" (610); Wikidata: government gazette (8); Wikidata: legislature broadcaster (4) |
+| Women | 151 | 44 | 0 | 102 | 0 | Wikidata subject: list of women's magazines (22); name contains "women" (19); description mentions "women s magazine" (12) |
+| Youth & students | 1,388 | 1,110 | 0 | 269 | 0 | Wikidata: student newspaper (451); Radio Browser tag "college radio" (191); Radio Browser tag "juvenil" (131) |
+| Children | 1,151 | 1,019 | 0 | 124 | 0 | iptv-org category "kids" (835); Radio Browser tag "children" (89); Radio Browser tag "kids" (58) |
+| Older persons | 27 | 0 | 0 | 23 | 0 | name contains "senior" (14); website About page: "adultos mayores" (3); Wikipedia: "tercera edad" (2) |
+| Rural communities & farmers | 776 | 20 | 712 | 37 | 0 | topic agriculture (712); Radio Browser tag "agriculture" (20); name contains "farmer" (16) |
+| Local communities | 1,386 | 0 | 944 | 427 | 0 | organisation type community media (944); Wikipedia: "community radio" (86); Wikipedia: "community newspaper" (76) |
+| Persons with disabilities | 28 | 10 | 0 | 10 | 0 | Radio Browser tag "blind" (7); website About page: "persons with disabilities" (3); Radio Browser tag "blind radio" (3) |
+| Indigenous peoples | 184 | 43 | 140 | 1 | 0 | topic indigenous (140); Radio Browser tag "indigenous" (37); Radio Browser tag "aboriginal" (4) |
+| Minority-language speakers | 1,714 | 0 | 1,714 | 0 | 0 | in X: not an official language of the country (1,714) |
+| Ethnic & minority communities | 174 | 126 | 0 | 46 | 0 | Wikidata: African American newspaper (56); Radio Browser tag "latino" (26); Wikipedia: "jewish community" (14) |
+| Diaspora & migrants | 279 | 15 | 259 | 5 | 0 | topic diaspora (259); Radio Browser tag "ethnic" (9); Radio Browser tag "ethnic programming" (6) |
+| LGBTQ+ communities | 109 | 89 | 0 | 20 | 0 | Wikidata: LGBTQ magazine (55); Wikidata: gay newspaper (10); Wikidata: LGBTQI online newspaper (8) |
+| Religious communities | 3,701 | 3,605 | 0 | 94 | 0 | iptv-org category "religious" (1,902); Radio Browser tag "christian" (820); Radio Browser tag "islam" (236) |
+| Business & professionals | 961 | 431 | 0 | 477 | 0 | name contains "business" (226); Wikidata: trade magazine (214); iptv-org category "business" (173) |
+| Policy makers & decision makers | 697 | 622 | 0 | 41 | 0 | iptv-org category "legislative" (610); Wikipedia: "think tank" (12); website About page: "decision makers" (9) |
 
-Outlets with at least one target audience: 10,147
+Outlets with at least one target audience: 11,259

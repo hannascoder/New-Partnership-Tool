@@ -1,0 +1,163 @@
+# ============================================================================
+# Target audience words (owner's to-do 7, 09.11.2026). Same format and rules as
+# config/topic_keywords.yaml, but only matched on the outlet's NAME, DESCRIPTION
+# and the Wikipedia / website About text (not on headlines: a headline says what
+# is reported, not who it is made for). So the words describe WHO the outlet is
+# for ("radio des femmes", "for young people"), not a topic.
+# Ids = the target audience ids in config/categories.yaml (audience:).
+# ============================================================================
+topics:
+  women:
+    strong:
+      en: [for women, women's magazine, women's radio, magazine for women, women readers, women's voices, by and for women, women journalists network]
+      fr: [radio des femmes, pour les femmes, magazine féminin, presse féminine, par et pour les femmes]
+      es: [para mujeres, para las mujeres, revista femenina, radio de mujeres, voces de mujeres]
+      pt: [para mulheres, para as mulheres, revista feminina, rádio das mulheres]
+      ar: [مجلة نسائية, للمرأة, إذاعة المرأة]
+      ru: [женский журнал, для женщин]
+      zh: [女性杂志, 妇女报, 女性读者]
+      hi: [महिलाओं के लिए, महिला पत्रिका]
+      sw: [kwa wanawake, redio ya wanawake]
+  youth_students:
+    strong:
+      en: [for young people, youth radio, youth magazine, young audience, young readers, student newspaper, student radio, student-run, campus radio, college radio, run by students, for students, teen magazine, millennials, gen z]
+      fr: [pour les jeunes, radio jeunesse, magazine jeunesse, jeunes lecteurs, journal étudiant, radio étudiante, radio campus]
+      es: [para jóvenes, para los jóvenes, radio juvenil, revista juvenil, periódico estudiantil, radio universitaria, público joven]
+      pt: [para jovens, para os jovens, rádio jovem, revista jovem, jornal estudantil, rádio universitária, público jovem]
+      ar: [للشباب, إذاعة الشباب, مجلة شبابية, صحيفة طلابية]
+      ru: [для молодёжи, для молодежи, молодёжный журнал, молодежный журнал, студенческая газета, студенческое радио]
+      zh: [青年报, 青年杂志, 校园电台, 大学生, 青少年读者]
+      hi: [युवाओं के लिए, युवा पत्रिका, छात्र समाचार पत्र]
+      sw: [kwa vijana, redio ya vijana, gazeti la wanafunzi]
+  children:
+    strong:
+      en: [for children, for kids, children's magazine, children's channel, children's television, children's programming, young children, for families with children]
+      fr: [pour les enfants, magazine pour enfants, chaîne pour enfants, émissions jeunesse]
+      es: [para niños, para los niños, revista infantil, canal infantil, programación infantil]
+      pt: [para crianças, revista infantil, canal infantil, programação infantil]
+      ar: [للأطفال, قناة أطفال, مجلة أطفال]
+      ru: [для детей, детский журнал, детский канал]
+      zh: [少儿频道, 儿童杂志, 儿童读物, 少儿节目]
+      hi: [बच्चों के लिए, बाल पत्रिका]
+      sw: [kwa watoto, vipindi vya watoto]
+  older_persons:
+    strong:
+      en: [for seniors, for older people, for the elderly, senior citizens, older readers, retirees, over 50s, over-50s, 50 plus]
+      fr: [pour les seniors, pour les aînés, pour les retraités]
+      es: [para mayores, adultos mayores, tercera edad, para jubilados]
+      pt: [para idosos, terceira idade, para aposentados]
+      ar: [لكبار السن, للمسنين]
+      ru: [для пенсионеров, для пожилых]
+      zh: [老年报, 老年人, 银发]
+      hi: [वरिष्ठ नागरिकों के लिए, बुजुर्गों के लिए]
+      sw: [kwa wazee]
+  rural_farmers:
+    strong:
+      en: [for farmers, farmers' radio, farm radio, rural radio, rural communities, rural audience, rural listeners, farming community, agricultural community]
+      fr: [radio rurale, pour les agriculteurs, monde rural, paysans, radio paysanne, communautés rurales]
+      es: [radio rural, para agricultores, para el campo, campesinos, comunidades rurales]
+      pt: [rádio rural, para agricultores, homem do campo, comunidades rurais, produtores rurais]
+      ar: [إذاعة ريفية, للمزارعين, المجتمعات الريفية]
+      ru: [для фермеров, сельская газета, сельских жителей]
+      zh: [农民日报, 农村广播, 三农, 农民]
+      hi: [किसानों के लिए, ग्रामीण रेडियो, ग्रामीण समुदाय]
+      sw: [kwa wakulima, redio ya vijijini, jamii za vijijini]
+  local_communities:
+    strong:
+      en: [community radio, community newspaper, community media, local community, hyperlocal, serving the community]
+      fr: [radio communautaire, radio associative, radio de proximité, médias communautaires]
+      es: [radio comunitaria, medios comunitarios, comunidad local]
+      pt: [rádio comunitária, comunidade local]
+      ar: [إذاعة مجتمعية, المجتمع المحلي]
+      ru: [местное сообщество, районная газета]
+      zh: [社区电台, 社区报]
+      hi: [सामुदायिक रेडियो]
+      sw: [redio ya jamii, jamii ya eneo]
+  persons_with_disabilities:
+    strong:
+      en: [for the deaf, for deaf people, for the blind, for blind people, visually impaired listeners, sign language news, people with disabilities, persons with disabilities, accessible news]
+      fr: [pour les sourds, pour les aveugles, en langue des signes, personnes handicapées]
+      es: [para sordos, para ciegos, en lengua de señas, personas con discapacidad]
+      pt: [para surdos, para cegos, em libras, língua brasileira de sinais, pessoas com deficiência]
+      ar: [للصم, للمكفوفين, بلغة الإشارة, ذوي الإعاقة]
+      ru: [для глухих, для слепых, на жестовом языке, для людей с инвалидностью]
+      zh: [手语新闻, 残疾人, 盲人, 聋人]
+      hi: [सांकेतिक भाषा में, दिव्यांगों के लिए]
+      sw: [kwa viziwi, kwa vipofu, lugha ya alama]
+  indigenous:
+    strong:
+      en: [indigenous community, indigenous communities, indigenous radio, first nations community, aboriginal community, indigenous audience, indigenous peoples]
+      fr: [radio autochtone, communautés autochtones, peuples autochtones]
+      es: [radio indígena, comunidades indígenas, pueblos indígenas, pueblos originarios]
+      pt: [rádio indígena, comunidades indígenas, povos indígenas]
+      ar: [الشعوب الأصلية]
+      ru: [коренных народов]
+      zh: [原住民, 少数民族语言]
+      hi: [आदिवासी समुदाय, आदिवासियों के लिए]
+      sw: [jamii za asili]
+  ethnic_minorities:
+    strong:
+      en: [ethnic community, ethnic minority, ethnic minorities, minority community, african american community, black community, latino community, hispanic community, asian american community, jewish community, roma community, multicultural audience]
+      fr: [communauté ethnique, minorités ethniques, communauté noire, communauté juive]
+      es: [comunidad latina, comunidad hispana, minorías étnicas, comunidad afrodescendiente]
+      pt: [comunidade negra, minorias étnicas]
+      ar: [الأقليات العرقية]
+      ru: [национальных меньшинств, этнических меньшинств]
+      zh: [少数民族]
+      hi: [अल्पसंख्यक समुदाय]
+      sw: [makundi madogo ya kikabila]
+  diaspora_migrants:
+    strong:
+      en: [diaspora, for migrants, for immigrants, immigrant community, expatriate community, expatriates, overseas community, community abroad, refugees in]
+      fr: [diaspora, pour les migrants, communauté immigrée, expatriés, communauté à l'étranger]
+      es: [diáspora, para migrantes, comunidad inmigrante, comunidad migrante, connacionales en el exterior]
+      pt: [diáspora, para imigrantes, comunidade imigrante, comunidade brasileira no exterior]
+      ar: [المغتربين, الجالية, للجاليات]
+      ru: [диаспора, соотечественников за рубежом, для мигрантов]
+      zh: [华侨, 侨胞, 海外华人]
+      hi: [प्रवासी भारतीयों के लिए, अनिवासी भारतीय]
+      sw: [diaspora, wanaoishi nje ya nchi]
+  lgbtq:
+    strong:
+      en: [lgbt community, lgbtq community, lgbtq+ community, gay community, lgbt audience, queer community, lgbt magazine, gay magazine, lgbtq media]
+      fr: [communauté lgbt, communauté lgbtq, magazine gay]
+      es: [comunidad lgbt, comunidad lgbtiq, comunidad gay, revista gay]
+      pt: [comunidade lgbt, comunidade lgbtqia, revista gay]
+      ar: [مجتمع الميم]
+      ru: [лгбт сообщество, лгбт сообщества]
+      zh: [同志社群, 性少数群体]
+      hi: [एलजीबीटी समुदाय]
+      sw: [jamii ya lgbt]
+  religious:
+    strong:
+      en: [christian radio, christian station, catholic radio, islamic radio, quran radio, gospel radio, faith-based, religious broadcaster, church newspaper, catholic newspaper, christian community, muslim community, catholic community, jewish community]
+      fr: [radio chrétienne, radio catholique, radio islamique, communauté catholique, communauté musulmane]
+      es: [radio cristiana, radio católica, radio evangélica, comunidad católica, comunidad cristiana]
+      pt: [rádio cristã, rádio católica, rádio evangélica, rádio gospel, comunidade católica]
+      ar: [إذاعة القرآن الكريم, إذاعة إسلامية, قناة دينية, إذاعة مسيحية]
+      ru: [православное радио, православная газета, христианское радио]
+      zh: [宗教电台, 基督教电台]
+      hi: [धार्मिक चैनल, भक्ति चैनल]
+      sw: [redio ya kikristo, redio ya kiislamu, redio ya kikatoliki]
+  business_professionals:
+    strong:
+      en: [business newspaper, business magazine, business community, business leaders, for professionals, trade magazine, trade publication, b2b, executives, investors, financial newspaper, business daily]
+      fr: [journal économique, quotidien économique, magazine économique, chefs d'entreprise, décideurs économiques]
+      es: [diario económico, periódico económico, revista de negocios, empresarios, ejecutivos]
+      pt: [jornal econômico, revista de negócios, empresários, executivos]
+      ar: [صحيفة اقتصادية, رجال الأعمال, مجلة اقتصادية]
+      ru: [деловая газета, деловой журнал, для бизнеса, предпринимателей]
+      zh: [财经报, 经济日报, 商报, 企业家]
+      hi: [व्यापार समाचार पत्र, कारोबारियों]
+      sw: [gazeti la biashara, wafanyabiashara]
+  policy_makers:
+    strong:
+      en: [policy makers, policymakers, decision makers, decision-makers, parliamentary channel, parliament tv, legislature channel, government officials, diplomats, diplomatic community, think tank, policy analysis]
+      fr: [décideurs, chaîne parlementaire, diplomates, responsables politiques]
+      es: [tomadores de decisión, canal del congreso, canal legislativo, diplomáticos, funcionarios públicos]
+      pt: [tomadores de decisão, tv câmara, tv senado, canal legislativo, diplomatas, gestores públicos]
+      ar: [صناع القرار, قناة البرلمان]
+      ru: [лиц принимающих решения, парламентский канал, дипломатов]
+      zh: [决策者, 政府官员]
+      hi: [नीति निर्माता, संसद टीवी]
+      sw: [watunga sera, bunge tv]

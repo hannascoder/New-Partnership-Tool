@@ -212,3 +212,12 @@ exclude_far_right:
   # "alt-right", "neo-Nazi", "white nationalist" or "fascist" and a media word
   # (fetched by pipeline/fetch/far_right.py), and their direct subcategories.
   wikipedia_categories: true
+
+# ---------------------------------------------------------------- website check
+# Channels found on the outlet's own website (menu entries, feed addresses).
+# Whole menu entry or a word in it; 9 UN News languages.
+website_channels:
+  podcast: [podcast, podcasts, balado, balados, pódcast, pódcasts, подкаст, подкасты, بودكاست, 播客, पॉडकास्ट, podikasti]
+  newsletter: [newsletter, newsletters, infolettre, lettre d'information, boletín, boletim, рассылка, النشرة البريدية, न्यूज़लेटर, jarida la barua pepe]
+# The page language (<html lang="fr">) is used when no source names a language.
+website_language: true
