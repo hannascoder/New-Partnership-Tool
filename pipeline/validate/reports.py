@@ -83,7 +83,7 @@ def previous_site_data():
 
 def main():
     outlets = [o for o in json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))
-               if not o["cat"].get("excluded")]
+               if not o["cat"].get("excluded") and not o["cat"].get("hidden")]
     countries = {r["iso3"]: r for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
     rep = ROOT / "reports"
     n = len(outlets)
@@ -171,6 +171,11 @@ def main():
             "The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is listed.", "",
             "| Id | Name | Used | Sources say |", "|---|---|---|---|"]
     con += [f"| {o['id']} | {o['name']} | {o['country']} | {', '.join(o['country_conflict'])} |" for o in cc[:300]]
+    hint = [o for o in outlets if o["cat"].get("country_hint")]
+    con += ["", f"## AI reading: probably in another country ({len(hint)})", "",
+            "The tool keeps the country from Wikidata / the sources; tell Claude if one should change.", "",
+            "| Id | Name | Country now | AI reading says |", "|---|---|---|---|"]
+    con += [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['country_hint']} |" for o in hint]
     dom = defaultdict(list)
     import re
     for o in outlets:

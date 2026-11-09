@@ -4,6 +4,590 @@
   "format": "topics [topic, sub-topic or null, strength 1/2/3, reason]; audience [id, reason]; un_profile [id, reason]; ownership [value, reason]; owner name; website_warning reason",
   "how": "reads the profile from pipeline/ai/prepare.py (name, Wikidata/Wikipedia text, website title/description/menu/About/headlines) and chooses only from the fixed lists; nothing is guessed from general knowledge"
  },
+ "pf-000001": {
+  "date": "2026-11-09",
+  "not_media": "social media platform and forum, not a media outlet",
+  "topics": []
+ },
+ "pf-000002": {
+  "date": "2026-11-09",
+  "owner": "Grupo Globo",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network of Grupo Globo"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial TV network"
+   ]
+  ]
+ },
+ "pf-000006": {
+  "date": "2026-11-09",
+  "owner": "The New York Times Company",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper: domestic, national and international news"
+   ]
+  ]
+ },
+ "pf-000017": {
+  "date": "2026-11-09",
+  "not_media": "news aggregator of Google, does not publish its own content",
+  "topics": []
+ },
+ "pf-000024": {
+  "date": "2026-11-09",
+  "owner": "Versant",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Versant"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "cable news channel"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "opinion journalism"
+   ]
+  ]
+ },
+ "pf-000025": {
+  "date": "2026-11-09",
+  "owner": "Comcast (NBCUniversal)",
+  "ownership": [
+   "private",
+   "Wikipedia: subsidiary of Comcast"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    3,
+    "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-000048": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "magazine on music and popular culture"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "Wikipedia: also focuses on politics"
+   ]
+  ]
+ },
+ "pf-000049": {
+  "date": "2026-11-09",
+  "owner": "People Inc.",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "celebrity and human-interest magazine"
+   ]
+  ]
+ },
+ "pf-000053": {
+  "date": "2026-11-09",
+  "owner": "USA Today Co.",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
+ },
+ "pf-000058": {
+  "date": "2026-11-09",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: not-for-profit cooperative of its member newspapers"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ]
+  ]
+ },
+ "pf-000061": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news magazine"
+   ]
+  ]
+ },
+ "pf-000062": {
+  "date": "2026-11-09",
+  "owner": "Skydance",
+  "ownership": [
+   "private",
+   "Wikipedia: property of Skydance"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial broadcast network with CBS News"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "CBS Sports in the menu"
+   ]
+  ]
+ },
+ "pf-000063": {
+  "date": "2026-11-09",
+  "owner": "Skydance",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Skydance"
+  ],
+  "topics": [
+   [
+    "life_on_land",
+    "biodiversity",
+    1,
+    "channel about wild and domestic animals"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries about animals"
+   ]
+  ]
+ },
+ "pf-000069": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000070": {
+  "date": "2026-11-09",
+  "owner": "CNN Worldwide (Skydance)",
+  "ownership": [
+   "private",
+   "Wikipedia: division of Skydance"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour cable news channel"
+   ]
+  ]
+ },
+ "pf-000084": {
+  "audience": [
+   [
+    "business_professionals",
+    "entertainment industry trade magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Penske Media Corporation",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "film, TV and entertainment industry"
+   ]
+  ]
+ },
+ "pf-000103": {
+  "date": "2026-11-09",
+  "not_media": "erotic magazine (adult content is excluded, KATEGORIEN 0.4)",
+  "topics": []
+ },
+ "pf-000137": {
+  "audience": [
+   [
+    "women",
+    "fashion and beauty magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Condé Nast",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "fashion and lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-000161": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper of record"
+   ]
+  ]
+ },
+ "pf-000163": {
+  "date": "2026-11-09",
+  "owner": "Fox Corporation",
+  "ownership": [
+   "private",
+   "Wikipedia: property of Fox Corporation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial broadcast network"
+   ]
+  ]
+ },
+ "pf-000169": {
+  "date": "2026-11-09",
+  "owner": "The Walt Disney Company",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by the Walt Disney Company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial broadcast network"
+   ]
+  ]
+ },
+ "pf-000175": {
+  "audience": [
+   [
+    "lgbtq",
+    "for the gay community"
+   ]
+  ],
+  "closed": "published from 1997 until 2013",
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "inequalities",
+    "discrimination",
+    1,
+    "magazine for the gay community"
+   ],
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "gay men's magazine"
+   ]
+  ]
+ },
+ "pf-000177": {
+  "audience": [
+   [
+    "children",
+    "channel for children and young people"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "The Walt Disney Company",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by the Walt Disney Company"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "youth-targeted TV channel"
+   ]
+  ]
+ },
+ "pf-000187": {
+  "date": "2026-11-09",
+  "owner": "Fox Corporation",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Fox Corporation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "cable news and political commentary channel"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "Wikipedia: political commentary"
+   ]
+  ]
+ },
+ "pf-000192": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ]
+  ]
+ },
+ "pf-000193": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "cities",
+    "housing",
+    2,
+    "website section Housing & Homelessness"
+   ]
+  ]
+ },
+ "pf-000206": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily tabloid newspaper"
+   ]
+  ]
+ },
+ "pf-000208": {
+  "date": "2026-11-09",
+  "owner": "Nexstar Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: controlled by Nexstar Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    3,
+    "entertainment network"
+   ]
+  ]
+ },
+ "pf-000211": {
+  "date": "2026-11-09",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: nonprofit organisation"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "most prominent provider of educational programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "provider of educational programmes"
+   ],
+   [
+    "storytelling",
+    "documentaries"
+   ]
+  ]
+ },
+ "pf-000216": {
+  "date": "2026-11-09",
+  "owner": "Condé Nast",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "journalism, criticism, fiction, cartoons"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "journalism and commentary"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "long-form journalism and essays"
+   ]
+  ]
+ },
+ "pf-000221": {
+  "date": "2026-11-09",
+  "owner": "The Walt Disney Company",
+  "ownership": [
+   "private",
+   "Wikipedia: joint venture led by the Walt Disney Company"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports network"
+   ]
+  ]
+ },
+ "pf-000234": {
+  "date": "2026-11-09",
+  "owner": "United States federal government",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "content in 48 languages"
+   ]
+  ]
+ },
+ "pf-000246": {
+  "audience": [
+   [
+    "business_professionals",
+    "economic newspaper"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "main economic newspaper"
+   ]
+  ]
+ },
+ "pf-000272": {
+  "date": "2026-11-09",
+  "owner": "People Inc.",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment magazine"
+   ]
+  ]
+ },
+ "pf-000301": {
+  "date": "2026-11-09",
+  "owner": "The Walt Disney Company (ABC)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news division of ABC"
+   ]
+  ]
+ },
+ "pf-000354": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "German-speaking community"
+   ],
+   [
+    "minority_language",
+    "in German"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "German-language newspaper in Buenos Aires"
+   ]
+  ]
+ },
+ "pf-000366": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Hearst Communications",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's fashion and entertainment magazine"
+   ]
+  ]
+ },
  "pf-000368": {
   "date": "2026-11-09",
   "topics": [
@@ -15,6 +599,56 @@
    ]
   ],
   "website_warning": "the website shows a blog about Kinshasa life, not the newspaper"
+ },
+ "pf-000404": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "general-interest family magazine"
+   ]
+  ]
+ },
+ "pf-000408": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Fortune Media Group Holdings",
+  "ownership": [
+   "private",
+   "Wikipedia: published by Fortune Media Group Holdings"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business magazine"
+   ]
+  ]
+ },
+ "pf-000424": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "international signal of Telefe"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "telenovelas, series, comedies"
+   ]
+  ]
  },
  "pf-000435": {
   "date": "2026-11-09",
@@ -92,6 +726,108 @@
    ]
   ]
  },
+ "pf-000483": {
+  "country_hint": "USA (runnersworld.com is the US edition)",
+  "date": "2026-11-09",
+  "owner": "Hearst",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "magazine for runners"
+   ],
+   [
+    "health",
+    "ncd_mental_health",
+    2,
+    "website section Health - Injuries"
+   ]
+  ]
+ },
+ "pf-000485": {
+  "audience": [
+   [
+    "business_professionals",
+    "trade magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Penske Media Corporation",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Penske Media Corporation"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment trade magazine"
+   ]
+  ]
+ },
+ "pf-000496": {
+  "date": "2026-11-09",
+  "owner": "Grupo América",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "one of five national TV networks"
+   ]
+  ]
+ },
+ "pf-000504": {
+  "date": "2026-11-09",
+  "owner": "Penske Media Corporation",
+  "ownership": [
+   "private",
+   "Wikipedia: published by Penske Media Corporation"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music magazine"
+   ]
+  ]
+ },
+ "pf-000549": {
+  "date": "2026-11-09",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-owned international broadcaster, part of the public media system"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    3,
+    "music programmes (folk, classical, rock)"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "international broadcaster in several languages"
+   ]
+  ]
+ },
+ "pf-000551": {
+  "date": "2026-11-09",
+  "owner": "Condé Nast",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "technology magazine: impact on culture, economy and politics"
+   ]
+  ]
+ },
  "pf-000761": {
   "date": "2026-11-09",
   "topics": [
@@ -151,6 +887,27 @@
    ]
   ]
  },
+ "pf-000767": {
+  "date": "2026-11-09",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: nonprofit media organisation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "national syndicator to more than 1,000 public radio stations"
+   ]
+  ]
+ },
  "pf-000779": {
   "audience": [
    [
@@ -175,6 +932,560 @@
   ],
   "website_warning": "the website shows shopping and lifestyle adverts, not the newspaper"
  },
+ "pf-000821": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Skydance",
+  "ownership": [
+   "private",
+   "Wikipedia: property of Skydance"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "channel mainly for children (animated series)"
+   ]
+  ]
+ },
+ "pf-000832": {
+  "date": "2026-11-09",
+  "owner": "Condé Nast",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "online music magazine"
+   ]
+  ]
+ },
+ "pf-000910": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "daily business newspaper"
+   ]
+  ]
+ },
+ "pf-000973": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "gender_equality",
+    "women_sport",
+    2,
+    "website section Women's Sports"
+   ],
+   [
+    "education",
+    "school_access",
+    2,
+    "website section Education"
+   ]
+  ]
+ },
+ "pf-001097": {
+  "date": "2026-11-09",
+  "owner": "Grupo Clarín",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest newspaper in Argentina"
+   ]
+  ]
+ },
+ "pf-001184": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper of Córdoba"
+   ]
+  ]
+ },
+ "pf-001202": {
+  "audience": [
+   [
+    "policy_makers",
+    "Senate news"
+   ]
+  ],
+  "date": "2026-11-09",
+  "ownership": [
+   "public_service",
+   "Wikipedia: news agency of the Brazilian Senate"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "news agency of the Federal Senate"
+   ]
+  ]
+ },
+ "pf-001229": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial newspaper"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Grupo Globo and Grupo Folha",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "largest financial newspaper"
+   ],
+   [
+    "energy",
+    null,
+    2,
+    "website section Energia"
+   ]
+  ]
+ },
+ "pf-001240": {
+  "date": "2026-11-09",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-001251": {
+  "date": "2026-11-09",
+  "owner": "Grupo Globo",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading daily newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Eleições 2026"
+   ]
+  ]
+ },
+ "pf-001310": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Versant",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Versant"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business news channel"
+   ]
+  ]
+ },
+ "pf-001336": {
+  "date": "2026-11-09",
+  "owner": "Grupo Clarín (Artear)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-001337": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "programming centred on general entertainment"
+   ]
+  ]
+ },
+ "pf-001433": {
+  "date": "2026-11-09",
+  "owner": "Telefônica Brasil",
+  "ownership": [
+   "private",
+   "Wikipedia: subsidiary of Telefônica"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "web portal"
+   ]
+  ]
+ },
+ "pf-001460": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "live news channel"
+   ]
+  ]
+ },
+ "pf-001463": {
+  "date": "2026-11-09",
+  "owner": "Grupo Televisión Litoral",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Televisión Litoral"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment programmes (shows, reality TV)"
+   ]
+  ]
+ },
+ "pf-001555": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website now mostly about football"
+   ]
+  ]
+ },
+ "pf-001556": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Junín"
+   ]
+  ]
+ },
+ "pf-001723": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music magazine"
+   ]
+  ]
+ },
+ "pf-001731": {
+  "country_hint": "MOZ (Mozambican station: website miramar.co.mz, sections Moçambique)",
+  "date": "2026-11-09",
+  "owner": "Grupo Record",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "open TV station"
+   ]
+  ]
+ },
+ "pf-001798": {
+  "date": "2026-11-09",
+  "owner": "Grupo Folha",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Spanish editions"
+   ]
+  ]
+ },
+ "pf-001874": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading daily newspaper"
+   ]
+  ]
+ },
+ "pf-001997": {
+  "date": "2026-11-09",
+  "owner": "A+E Global Media (Hearst Communications)",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Hearst Communications"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "history channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "history documentaries"
+   ],
+   [
+    "educational",
+    "history knowledge"
+   ]
+  ]
+ },
+ "pf-002009": {
+  "date": "2026-11-09",
+  "owner": "Grupo Estado",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-002017": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Campo"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "website section Tecnología"
+   ]
+  ]
+ },
+ "pf-002115": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Cultura"
+   ]
+  ]
+ },
+ "pf-002241": {
+  "date": "2026-11-09",
+  "owner": "Grupo Folha",
+  "ownership": [
+   "private",
+   "Wikipedia: belongs to Grupo Folha"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest Portuguese-language web portal"
+   ]
+  ]
+ },
+ "pf-002244": {
+  "date": "2026-11-09",
+  "owner": "Empresa Brasil de Comunicação (EBC)",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public TV network owned by EBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV network"
+   ]
+  ]
+ },
+ "pf-002330": {
+  "date": "2026-11-09",
+  "owner": "Grupo Abril",
+  "ownership": [
+   "private",
+   "Wikipedia: media conglomerate Grupo Abril"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Política"
+   ]
+  ]
+ },
+ "pf-002778": {
+  "date": "2026-11-09",
+  "not_media": "a magazine paper size (Wikidata error), not a media outlet",
+  "topics": []
+ },
+ "pf-002818": {
+  "date": "2026-11-09",
+  "owner": "Editora JB",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Ciência"
+   ]
+  ]
+ },
+ "pf-002907": {
+  "date": "2026-11-09",
+  "owner": "Grupo Bandeirantes",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-002924": {
+  "date": "2026-11-09",
+  "owner": "Grupo Clarín",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "national daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-002931": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-002989": {
+  "date": "2026-11-09",
+  "owner": "Empresa Brasil de Comunicação (EBC)",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public news agency run by the Brazilian government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news agency"
+   ]
+  ]
+ },
  "pf-003029": {
   "date": "2026-11-09",
   "ownership": [
@@ -190,6 +1501,37 @@
    ]
   ]
  },
+ "pf-003262": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "closed": "defunct Brazilian channel (2001-2025)",
+  "country_hint": "BRA (Brazilian version of Disney Channel)",
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
+ "pf-003289": {
+  "date": "2026-11-09",
+  "owner": "ESPN (The Walt Disney Company)",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports network"
+   ]
+  ]
+ },
  "pf-003318": {
   "date": "2026-11-09",
   "topics": [
@@ -198,6 +1540,68 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-003329": {
+  "date": "2026-11-09",
+  "owner": "Grupo Record",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Record"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour free-to-air news channel"
+   ]
+  ]
+ },
+ "pf-003335": {
+  "date": "2026-11-09",
+  "owner": "Diários Associados",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Belo Horizonte"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Educação"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Direito & Justiça"
+   ]
+  ]
+ },
+ "pf-003359": {
+  "date": "2026-11-09",
+  "owner": "Fundação Padre Anchieta",
+  "ownership": [
+   "public_service",
+   "Wikipedia: non-profit foundation, public television"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "non-commercial public TV network"
+   ],
+   [
+    "education",
+    null,
+    3,
+    "public educational and cultural broadcaster"
    ]
   ]
  },
@@ -345,6 +1749,46 @@
    ]
   ]
  },
+ "pf-003740": {
+  "date": "2026-11-09",
+  "owner": "Grupo Clarín (Artear)",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by the Clarín Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-003765": {
+  "date": "2026-11-09",
+  "owner": "Diários Associados",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Brasília"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website sections Política, Congresso"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Judiciário"
+   ]
+  ]
+ },
  "pf-003818": {
   "date": "2026-11-09",
   "topics": [
@@ -368,6 +1812,35 @@
     null,
     1,
     "TV and radio station"
+   ]
+  ]
+ },
+ "pf-003857": {
+  "date": "2026-11-09",
+  "owner": "Grupo Record",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper in Rio"
+   ]
+  ]
+ },
+ "pf-003901": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper of La Plata"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Educación"
    ]
   ]
  },
@@ -430,6 +1903,39 @@
    ]
   ]
  },
+ "pf-003963": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and talk radio"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website sections La Rural, Expoagro"
+   ]
+  ]
+ },
+ "pf-003986": {
+  "date": "2026-11-09",
+  "owner": "Grupo Clarín",
+  "ownership": [
+   "private",
+   "Wikipedia: owned and operated by Clarín Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
+ },
  "pf-004060": {
   "date": "2026-11-09",
   "ownership": [
@@ -442,6 +1948,832 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-004071": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest daily in Latin America"
+   ],
+   [
+    "cities",
+    "urban_mobility",
+    2,
+    "website section Vida Urbana"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "website section Tecnologia"
+   ]
+  ]
+ },
+ "pf-004086": {
+  "date": "2026-11-09",
+  "owner": "Grupo Globo",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Canais Globo, Grupo Globo"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports network"
+   ],
+   [
+    "gender_equality",
+    "women_sport",
+    2,
+    "website section Copa do Brasil Feminina"
+   ]
+  ]
+ },
+ "pf-004242": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "men's lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-004581": {
+  "audience": [
+   [
+    "business_professionals",
+    "entertainment industry news"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Penske Media Corporation",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "news on Hollywood and the entertainment industry"
+   ]
+  ]
+ },
+ "pf-005196": {
+  "date": "2026-11-09",
+  "owner": "Grupo América",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Pymes"
+   ]
+  ]
+ },
+ "pf-005262": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest Argentine newspaper still in circulation"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Agro"
+   ]
+  ]
+ },
+ "pf-005288": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in Tucumán"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "website section Iglesia"
+   ]
+  ]
+ },
+ "pf-005377": {
+  "date": "2026-11-09",
+  "owner": "Grupo Bandeirantes",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Bandeirantes"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "all-news radio network"
+   ]
+  ]
+ },
+ "pf-005378": {
+  "date": "2026-11-09",
+  "owner": "Grupo Bandeirantes",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Bandeirantes"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-005439": {
+  "audience": [
+   [
+    "children",
+    "children's magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "oldest Spanish-language magazine for young people"
+   ],
+   [
+    "education",
+    "school_access",
+    1,
+    "educational content for pupils and teachers"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "school content by subject"
+   ]
+  ]
+ },
+ "pf-005505": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper and radio agency"
+   ],
+   [
+    "inequalities",
+    "income_inequality",
+    3,
+    "'a popular view of Brazil'"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "runs a radio agency (Radioagência) distributing content"
+   ]
+  ]
+ },
+ "pf-005805": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
+ "pf-005806": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station in Tucumán"
+   ]
+  ]
+ },
+ "pf-005858": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV station in General Roca"
+   ]
+  ]
+ },
+ "pf-005861": {
+  "date": "2026-11-09",
+  "ownership": [
+   "private",
+   "Wikipedia: private TV station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV station in Bariloche"
+   ]
+  ]
+ },
+ "pf-005863": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station in Mendoza (América TV affiliate)"
+   ]
+  ]
+ },
+ "pf-005865": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV station in Bahía Blanca"
+   ]
+  ]
+ },
+ "pf-006260": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper of Santa Fe"
+   ]
+  ]
+ },
+ "pf-006276": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "only newspaper of Salta province"
+   ]
+  ]
+ },
+ "pf-006293": {
+  "date": "2026-11-09",
+  "owner": "Ministry of Education (Argentina)",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned and operated by the Ministry of Education"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational channel of the Ministry of Education"
+   ]
+  ]
+ },
+ "pf-006485": {
+  "date": "2026-11-09",
+  "owner": "Grupo Globo",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Globo Rural"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Spanish versions"
+   ]
+  ]
+ },
+ "pf-006613": {
+  "date": "2026-11-09",
+  "owner": "Torneos",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Torneos"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
+ "pf-006742": {
+  "date": "2026-11-09",
+  "owner": "National University of Córdoba",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the National University"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station in Córdoba"
+   ]
+  ]
+ },
+ "pf-006753": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station in Mendoza (Telefe affiliate)"
+   ]
+  ]
+ },
+ "pf-006794": {
+  "date": "2026-11-09",
+  "owner": "Government of the City of Buenos Aires",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: financed by the city government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "city cable TV channel"
+   ]
+  ]
+ },
+ "pf-006972": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international online newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "local editions in several countries"
+   ]
+  ]
+ },
+ "pf-007189": {
+  "date": "2026-11-09",
+  "owner": "Workers' Party (Partido Obrero)",
+  "topics": [
+   [
+    "work_economy",
+    "decent_jobs",
+    1,
+    "newspaper of the Workers' Party"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "party newspaper"
+   ]
+  ]
+ },
+ "pf-007307": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliamentary channel"
+   ]
+  ],
+  "date": "2026-11-09",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public network of the Chamber of Deputies"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "TV of the Chamber of Deputies"
+   ]
+  ]
+ },
+ "pf-008200": {
+  "date": "2026-11-09",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of the national public media system"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public radio"
+   ]
+  ]
+ },
+ "pf-008204": {
+  "date": "2026-11-09",
+  "owner": "National University of Tucumán",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the National University of Tucumán"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel in Tucumán"
+   ]
+  ]
+ },
+ "pf-008616": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV network"
+   ]
+  ]
+ },
+ "pf-008820": {
+  "audience": [
+   [
+    "children",
+    "children aged 2 to 12 and their families"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "programmes for children aged 2 to 12"
+   ],
+   [
+    "education",
+    null,
+    1,
+    "public children's channel with educational content"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational children's channel"
+   ]
+  ]
+ },
+ "pf-009061": {
+  "date": "2026-11-09",
+  "owner": "Sistema Verdes Mares",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station in Fortaleza"
+   ]
+  ]
+ },
+ "pf-009062": {
+  "date": "2026-11-09",
+  "owner": "Fundação Cásper Líbero",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV network"
+   ]
+  ]
+ },
+ "pf-009132": {
+  "date": "2026-11-09",
+  "owner": "Sistema Globo de Rádio (Grupo Globo)",
+  "ownership": [
+   "private",
+   "Wikipedia: Grupo Globo's radio division"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio network"
+   ]
+  ]
+ },
+ "pf-009317": {
+  "country_hint": "ARG (Latin American channel headquartered in Buenos Aires)",
+  "date": "2026-11-09",
+  "owner": "Skydance",
+  "topics": [
+   [
+    "culture",
+    null,
+    3,
+    "movies and TV series"
+   ],
+   [
+    "sports",
+    null,
+    3,
+    "boxing events"
+   ]
+  ]
+ },
+ "pf-009442": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international Portuguese-language TV"
+   ]
+  ],
+  "website_warning": "the website shows a recipe site, not the TV channel"
+ },
+ "pf-011530": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "full-service radio"
+   ]
+  ]
+ },
+ "pf-011641": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and political analysis website"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "political analysis"
+   ]
+  ]
+ },
+ "pf-011702": {
+  "date": "2026-11-09",
+  "ownership": [
+   "public_service",
+   "Wikipedia: federal public media conglomerate for public broadcasting"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "federal public media company"
+   ]
+  ]
+ },
+ "pf-011735": {
+  "date": "2026-11-09",
+  "owner": "Grupo Paranaense de Comunicação",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper (digital)"
+   ]
+  ]
+ },
+ "pf-011835": {
+  "date": "2026-11-09",
+  "owner": "Grupo Liberal",
+  "ownership": [
+   "private",
+   "Wikipedia: part of Grupo Liberal since 1966"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Belém and Pará"
+   ]
+  ]
+ },
+ "pf-011893": {
+  "date": "2026-11-09",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial media conglomerate"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV network focused on journalism"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Eleições 2026"
+   ]
+  ]
+ },
+ "pf-011940": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network in Minas Gerais"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Agro"
+   ]
+  ]
+ },
+ "pf-012447": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Japanese immigrant community"
+   ],
+   [
+    "minority_language",
+    "in Japanese"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "Japanese-language newspaper of the Japanese-Brazilian community"
+   ]
+  ]
+ },
+ "pf-014131": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "for Brazilians living abroad"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Grupo Bandeirantes",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "pay-TV channel for Brazilians living abroad"
+   ]
+  ]
+ },
+ "pf-014292": {
+  "date": "2026-11-09",
+  "not_media": "online chess platform, not a media outlet",
+  "topics": []
+ },
+ "pf-014965": {
+  "country_hint": "MEX (channel of Mexican origin)",
+  "date": "2026-11-09",
+  "owner": "América Móvil",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
+ "pf-014998": {
+  "date": "2026-11-09",
+  "owner": "BuzzFeed",
+  "ownership": [
+   "private",
+   "Wikipedia: a division of BuzzFeed"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "inequalities",
+    "discrimination",
+    2,
+    "website section Social Justice"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environment"
+   ]
+  ]
+ },
+ "pf-016215": {
+  "date": "2026-11-09",
+  "not_media": "search engine for scientific papers, not a media outlet",
+  "topics": []
+ },
+ "pf-016427": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-09",
+  "owner": "Integrated Whale Media Investments",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by an investment group"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business magazine"
    ]
   ]
  },
@@ -459,6 +2791,134 @@
     null,
     1,
     "name: Radio Maria, a Catholic radio network"
+   ]
+  ]
+ },
+ "pf-017095": {
+  "date": "2026-11-09",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: independent journalism agency founded by reporters"
+  ],
+  "topics": [
+   [
+    "media_freedom",
+    null,
+    1,
+    "investigative and independent journalism agency"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section Clima"
+   ],
+   [
+    "gender_equality",
+    "women_rights",
+    2,
+    "website section Gênero e Diversidade"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Justiça"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "investigative reporting"
+   ],
+   [
+    "open_to_partner_content",
+    "agency: its reports are republished by other media"
+   ]
+  ]
+ },
+ "pf-021455": {
+  "date": "2026-11-09",
+  "owner": "Grupo Perfil",
+  "ownership": [
+   "private",
+   "Wikipedia: property of Grupo Perfil"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    2,
+    "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-021693": {
+  "date": "2026-11-09",
+  "owner": "Novus Mídia",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Novus Mídia, a joint venture"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel and website"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Agro"
+   ]
+  ]
+ },
+ "pf-022009": {
+  "date": "2026-11-09",
+  "owner": "Socialist Workers' Party (PTS)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper network"
+   ],
+   [
+    "elections",
+    null,
+    1,
+    "created by the Socialist Workers' Party"
+   ]
+  ]
+ },
+ "pf-023479": {
+  "audience": [
+   [
+    "business_professionals",
+    "economic newspaper"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "economic daily since 1951"
+   ],
+   [
+    "energy",
+    null,
+    2,
+    "website section Energía"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Agroindustria"
    ]
   ]
  },
@@ -483,6 +2943,18 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-024446": {
+  "date": "2026-11-09",
+  "owner": "Mediapro",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channels"
+   ]
+  ]
  },
  "pf-024753": {
   "date": "2026-11-09",

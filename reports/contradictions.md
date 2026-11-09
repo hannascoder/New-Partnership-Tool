@@ -1,6 +1,6 @@
 # Contradictions and things to check (step 5)
 
-## Sources disagree on the country (214)
+## Sources disagree on the country (213)
 
 The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is listed.
 
@@ -67,7 +67,6 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-002875 | ANT1 | CYP | CYP, GRC |
 | pf-002947 | Urdu 1 | PAK | ARE, PAK |
 | pf-003164 | CNN Türk | USA | TUR, USA |
-| pf-003262 | Disney Channel | ARG | ARG, BRA |
 | pf-003263 | Disney Channel India | BGD | BGD, IND |
 | pf-003265 | Disney Channel | USA | ARG, USA |
 | pf-003266 | Disney Channel | GBR | GBR, POL |
@@ -221,7 +220,18 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## Possible duplicates: same website, several entries (2927)
+## AI reading: probably in another country (4)
+
+The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
+
+| Id | Name | Country now | AI reading says |
+|---|---|---|---|
+| pf-000483 | Runner's World | BRA | USA (runnersworld.com is the US edition) |
+| pf-001731 | Miramar | BRA | MOZ (Mozambican station: website miramar.co.mz, sections Moçambique) |
+| pf-009317 | Space | BRA | ARG (Latin American channel headquartered in Buenos Aires) |
+| pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
+
+## Possible duplicates: same website, several entries (2926)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 
