@@ -1,7 +1,7 @@
 /* Partner Finder export: builds PDF, Excel and Word files in the browser.
    Exposes window.PartnerExport.download(format, list) where
      list = { sections: [{title, note, items}], filters: [[label, value]], topics, updated, count }
-     item = { name, type, country, reaches, scope, languages, channels, ownership, topic,
+     item = { name, type, country, reaches, scope, languages, channels, ownership, topic, audience,
               unProfile, memberOf, website, contact, social: [[label, url]], notes }
    The libraries (assets/vendor/) are loaded only when someone exports. */
 (function () {
@@ -14,13 +14,13 @@
   const COLS = [
     ["name", "Name", 24], ["type", "Type", 18], ["country", "Country", 16], ["reaches", "Reaches", 20],
     ["scope", "Scope", 17], ["languages", "Languages", 18], ["channels", "Channels", 16], ["ownership", "Ownership", 19],
-    ["topic", "Topic", 14], ["unProfile", "UN profile", 15], ["memberOf", "Member of", 16], ["website", "Website", 20],
+    ["topic", "Topic", 14], ["audience", "Target audience", 14], ["unProfile", "UN profile", 13], ["memberOf", "Member of", 14], ["website", "Website", 20],
     ["contact", "Contact", 19], ["social", "Social media", 16], ["notes", "Notes", 20]];
   // portrait: the same fields grouped into five columns (labels inside the cell)
   const GROUPS = {
     outlet: [["name", ""], ["type", "Type"], ["country", "Country"], ["scope", "Scope"], ["ownership", "Ownership"]],
     reach: [["reaches", "Reaches"], ["languages", "Languages"], ["channels", "Channels"], ["topic", "Topic"],
-            ["unProfile", "UN profile"], ["memberOf", "Member of"]],
+            ["audience", "Target audience"], ["unProfile", "UN profile"], ["memberOf", "Member of"]],
     more: [["social", "Social media"], ["notes", "Notes"]]};
   const COLS_PORTRAIT = [["outlet", "Outlet", 52], ["reach", "Reach & content", 64], ["website", "Website", 26],
                          ["contact", "Contact", 26], ["more", "Social media & notes", 26]];

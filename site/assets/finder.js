@@ -6,7 +6,7 @@
   "use strict";
   const PAGE = 50;
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
-              channel: new Set(), size: "all", tp: new Set(), au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
+              channel: new Set(), size: "all", tp: new Set(), subOff: {}, au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
@@ -78,17 +78,45 @@
       $("f-size").append(l);
     });
     $("sizeNote").textContent = CFG.size_note || "";
-    const tpCount = {}; ALL.forEach((o) => topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; }));
+    const tpCount = {}, subCount = {};
+    ALL.forEach((o) => {
+      topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; });
+      (o.tp || []).forEach((e) => (e[3] || []).forEach((s) => { const k = e[0] + "/" + s; subCount[k] = (subCount[k] || 0) + 1; }));
+    });
     C.topic_groups.forEach((g) => {
       const d = document.createElement("div"); d.className = "topic-group";
       d.innerHTML = `<h3>${esc(g.label)}</h3>`;
       const ch = document.createElement("div"); ch.className = "chips";
+      const subBoxes = [];
       C.topics.filter((t) => t.group === g.id).forEach((t) => {
         const n = tpCount[t.id] || 0;
-        ch.append(chip(esc(t.label) + (t.sdg ? ` <span class="sdg">SDG ${t.sdg}</span>` : "") + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.tp, t.id),
-          n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No open source names this topic for any outlet yet" }));
+        let box = null;
+        if (t.subtopics) {  // sub-topics: shown when the topic is chosen, all included until unticked
+          box = document.createElement("div"); box.className = "subtopics"; box.hidden = true;
+          box.innerHTML = `<p class="hint">${esc(t.label)}: all sub-topics are included. Untick to be more specific.</p>`;
+          const sc = document.createElement("div"); sc.className = "chips";
+          t.subtopics.forEach((s) => {
+            const b = chip(esc(s.label) + ` <span class="sdg">${(subCount[t.id + "/" + s.id] || 0).toLocaleString("en")}</span>`, true, (btn) => {
+              const off = S.subOff[t.id] || (S.subOff[t.id] = new Set());
+              off.has(s.id) ? off.delete(s.id) : off.add(s.id);
+              btn.setAttribute("aria-pressed", off.has(s.id) ? "false" : "true"); apply();
+            });
+            b.classList.add("sub"); sc.append(b);
+          });
+          box.append(sc); subBoxes.push(box);
+        }
+        const label = (t.sdg ? `SDG ${t.sdg} ` : "") + t.label;
+        ch.append(chip(esc(label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, (b) => {
+          S.tp.has(t.id) ? S.tp.delete(t.id) : S.tp.add(t.id);
+          b.setAttribute("aria-pressed", S.tp.has(t.id));
+          if (box) {
+            box.hidden = !S.tp.has(t.id);
+            if (!S.tp.has(t.id)) { delete S.subOff[t.id]; box.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "true")); }
+          }
+          apply();
+        }, n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No outlet found for this topic yet" }));
       });
-      d.append(ch); $("f-topics").append(d);
+      d.append(ch); subBoxes.forEach((b) => d.append(b)); $("f-topics").append(d);
     });
     const auCount = {}; ALL.forEach((o) => (o.au || []).forEach((a) => { auCount[a] = (auCount[a] || 0) + 1; }));
     C.audience.forEach((a) => {
@@ -162,9 +190,22 @@
     return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size;
   }
   /* an outlet without any topic in the sources counts as "General news" (the default topic) */
-  function topicsOf(o) { return o.tp || ["general_news"]; }
+  function topicsOf(o) { return o.tp ? o.tp.map((e) => e[0]) : ["general_news"]; }
+  /* o.tp entries: [topic, strength (1 main focus, 2 own section, 3 covers it), reason, [sub-topics]] */
+  function tpEntry(o, t) { return o.tp ? o.tp.find((e) => e[0] === t) : (t === "general_news" ? ["general_news", 3, -1] : null); }
+  function topicMatch(o, t) {
+    const e = tpEntry(o, t); if (!e) return null;
+    const off = S.subOff[t]; if (!off || !off.size) return e;
+    return (e[3] || []).some((s) => !off.has(s)) ? e : null;  // narrowed: only outlets with a chosen sub-topic
+  }
+  const STRENGTH = { 1: "main focus", 2: "own section", 3: "covers it" };
   function why(o, kind, id) {
-    if (kind === "tp") { if (!o.tp) return "no topic in the sources: general news"; return CFG.why[o.tw[o.tp.indexOf(id)]] || ""; }
+    if (kind === "tp") {
+      const e = tpEntry(o, id); if (!e || e[2] < 0) return "no topic in the sources: general news";
+      const t = CFG.categories.topics.find((x) => x.id === id) || {};
+      const subs = (e[3] || []).map((s) => ((t.subtopics || []).find((x) => x.id === s) || {}).label).filter(Boolean);
+      return STRENGTH[e[1]] + ": " + (CFG.why[e[2]] || "") + (subs.length ? " · " + subs.join("; ") : "");
+    }
     if (kind === "au") return CFG.why[o.aw[o.au.indexOf(id)]] || "";
     return CFG.why[o.uw[o.un.indexOf(id)]] || "";
   }
@@ -209,13 +250,16 @@
       return true;
     });
     current.forEach((o) => {
-      o._m = topicsOf(o).filter((t) => S.tp.has(t)).map((t) => ["tp", t]).concat((o.au || []).filter((a) => S.au.has(a)).map((a) => ["au", a])).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
+      o._m = [...S.tp].map((t) => [t, topicMatch(o, t)]).filter((x) => x[1]).map(([t, e]) => ["tp", t, e[1]]).concat((o.au || []).filter((a) => S.au.has(a)).map((a) => ["au", a])).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
     });
     if (S.onlyMatches && (S.tp.size || S.au.size || S.un.size)) current = current.filter((o) => o._m.length);
     const mode = S.sort === "auto" ? (anyFilter() ? "best_match" : "az") : S.sort;
     const key = (o) => o._k || (o._k = (o.n || "").replace(/^[^\p{L}\p{N}]+/u, ""));  // "__STUDY__" sorts under S
     const byName = (a, b) => key(a).localeCompare(key(b), "en", { sensitivity: "base" });
-    if (mode === "best_match") current.sort((a, b) => b._m.length - a._m.length || b.p - a.p || byName(a, b));
+    // best match: topics count by strength (main focus 3, own section 2, covers it 1), audiences and UN profiles 1 each
+    const score = (o) => o._s != null ? o._s : (o._s = o._m.reduce((n, m) => n + (m[0] === "tp" ? 4 - m[2] : 1), 0));
+    current.forEach((o) => { o._s = null; });
+    if (mode === "best_match") current.sort((a, b) => score(b) - score(a) || b.p - a.p || byName(a, b));
     else if (mode === "country") current.sort((a, b) => (CFG.countryName[a.c] || {}).name.localeCompare((CFG.countryName[b.c] || {}).name) || byName(a, b));
     else current.sort(byName);
     const countries = new Set(current.map((o) => o.c)).size;
@@ -233,7 +277,7 @@
     const social = Object.entries(o.so || {}).map(([k2, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(k2)}</a>`).join(" · ");
     const verified = o.s.length >= 2 ? '<span class="badge verified">verified</span>' : '<span class="badge unverified">1 source</span>';
     const tip = (kind, id, label) => `<span class="tag" title="${esc(why(o, kind, id))}">${esc(label)}</span>`;
-    const tpl = topicsOf(o).map((t) => tip("tp", t, lab(C.topics, t))).join(", ");
+    const tpl = topicsOf(o).map((t) => { const e = tpEntry(o, t); return tip("tp", t, lab(C.topics, t)) + (o.tp ? ` <span class="pending">(${STRENGTH[e[1]]})</span>` : ""); }).join(", ");
     const aul = (o.au || []).map((a) => tip("au", a, lab(C.audience, a))).join(", ");
     const unl = (o.un || []).map((u) => tip("un", u, lab(C.un_profile, u))).join(", ");
     const inList = exportList.has(o.i);
@@ -254,7 +298,7 @@
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
       ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a></p>` : ""}
       <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
-      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id)).join(", "))}</span>` : ""}
+      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id, s]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id) + (k2 === "tp" && s ? ` (${STRENGTH[s]})` : "")).join(", "))}</span>` : ""}
       <p><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label></p></li>`;
   }
 
@@ -311,7 +355,7 @@
     const out = [];
     document.querySelectorAll("#filterBody .fgroup").forEach((g) => {
       const head = g.querySelector("h2"); const label = head ? head.childNodes[0].textContent.trim() : "";
-      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
+      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub)')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
       // a select is named by its own label ("Country: Kenya"), chips and radios by the group heading
       g.querySelectorAll("select").forEach((sel) => {
         const own = sel.closest("label"); const name = own ? own.childNodes[0].textContent.trim() : label;
@@ -324,6 +368,11 @@
       g.querySelectorAll('input[type="checkbox"]').forEach((c) => {
         if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("step 4", "").trim(), c.checked ? "" : "off"]);
       });
+    });
+    Object.entries(S.subOff).forEach(([t, off]) => {
+      if (!off.size || !S.tp.has(t)) return;
+      const tt = CFG.categories.topics.find((x) => x.id === t) || {};
+      out.push([tt.label + " – only", (tt.subtopics || []).filter((s) => !off.has(s.id)).map((s) => s.label).join("; ")]);
     });
     const search = document.querySelector('#filterBody input[type="search"]');
     if (search && search.value.trim()) out.unshift(["Search", search.value.trim()]);
@@ -376,6 +425,7 @@
       channels: (o.ch || []).map((c) => lab(C.channel, c)).join(", "),
       ownership: o.ow ? lab(C.ownership, o.ow[0]) : "Unknown",
       topic: topics.join(", "),
+      audience: (o.au || []).map((a) => lab(C.audience, a)).join(", "),
       unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
       memberOf: (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
       website: o.w || "", contact: o.em || "",

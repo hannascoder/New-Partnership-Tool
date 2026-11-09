@@ -37,6 +37,13 @@ def main():
     countries = list(csv.DictReader(open(CFG / "countries.csv", encoding="utf-8")))
     langs_all = {r["code"]: r for r in csv.DictReader(open(CFG / "languages.csv", encoding="utf-8"))}
     cats = yaml.safe_load(open(CFG / "categories.yaml", encoding="utf-8"))
+    # sub-topics (config/topic_keywords.yaml) shown under a chosen topic; the words stay hidden
+    kw = yaml.safe_load(open(CFG / "topic_keywords.yaml", encoding="utf-8"))["topics"]
+    general = {k: v["general_subtopic"] for k, v in kw.items() if v.get("subtopics")}
+    for t in cats["topics"]:
+        subs = (kw.get(t["id"]) or {}).get("subtopics") or []
+        if subs:
+            t["subtopics"] = [{"id": s["id"], "label": s["label"]} for s in subs]
 
     # prominence and rank within the country (briefing J)
     for o in outlets:
@@ -69,6 +76,9 @@ def main():
         social = {k: SOCIAL_URL[k].format(v) for k, v in (o.get("social") or {}).items() if k in SOCIAL_URL}
         if social:
             e["so"] = social
+        for k, u in (o.get("social_urls") or {}).items():  # from the website check
+            if k in SOCIAL_URL or k == "linkedin":
+                e.setdefault("so", {}).setdefault(k, u)
         if o.get("email"):
             e["em"] = o["email"].replace("mailto:", "").strip()
         e["s"] = o["sources"]
@@ -76,10 +86,12 @@ def main():
         cat = o.get("cat", {})
         # topics (step 4d): ids in "tp", the reason of each in "tw" (same order).
         # Left out when the only topic is the default "general news" (no evidence).
+        # [topic, strength (1 focus, 2 desk, 3 covers), reason, [sub-topics]]
         tps = [t for t in cat.get("topics", []) if t["method"] != "default"]
         if tps:
-            e["tp"] = [t["value"] for t in tps]
-            e["tw"] = [w(t["source"]) for t in tps]
+            e["tp"] = [[t["value"], t.get("strength", 1), w(t["source"])]
+                       + ([t.get("subs") or [general[t["value"]]]] if t["value"] in general else [])
+                       for t in tps]
         if cat.get("audience_groups"):
             e["au"] = [a["value"] for a in cat["audience_groups"]]
             e["aw"] = [w(a["source"]) for a in cat["audience_groups"]]

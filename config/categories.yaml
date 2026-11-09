@@ -194,6 +194,7 @@ topics:
   - {id: elections,          group: beats, label: Elections & governance}
   - {id: sports,             group: beats, label: Sports}
   - {id: diaspora,           group: beats, label: Diaspora}
+  - {id: older_persons,      group: beats, label: Older persons & ageing}   # owner, 09.11.2026
 
 # ------------------------------------------------------------ I. UN profile
 # Multiple choice. Like topics: changes the order, never hides an outlet.

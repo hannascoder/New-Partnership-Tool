@@ -149,33 +149,12 @@ topics:
     community_local: [community_media]
   scopes:
     community_local: [local]
-  # Words in the outlet's name. Whole words only, upper/lower case ignored
-  # ("Sport" matches "Sky Sport News", not "Sportschau"). Kept short on purpose:
-  # a word must be clear in every country. Add words here, never in code.
-  # Only the main name counts, and not names that list sections like a
-  # tagline ("Noticias, Deportes, Economía, ..."): those are general news sites.
+  # Words: since 09.11.2026 all topic words (name, descriptions, Wikipedia,
+  # website menu, About page, headlines) are in config/topic_keywords.yaml,
+  # with the three strengths Focus / Desk / Covers.
+  # A "name" that lists sections like a tagline ("Noticias, Deportes, Economía, ...")
+  # is not used: those are general news sites.
   name_keywords_max_commas: 1
-  # Expressions in which a keyword does NOT mean the topic
-  name_keywords_ignore: [science fiction, christian science, falls church, medicine hat, sports illustrated swimsuit]
-  name_keywords:
-    sports: [sport, sports, deporte, deportes, esporte, esportes, desporto, спорт, رياضة]
-    business_economy: [business, economy, economic, economics, finance, financial, economía, economia, économie,
-                       wirtschaft, финансы, экономика, اقتصاد, bourse, markets]
-    health: [health, salud, santé, saúde, medical, medicine, médica, здоровье, صحة]
-    science: [science, sciences, scientific, ciencia, ciência, wissenschaft, наука]
-    climate: [climate, climat, klima]   # not "clima": in Spanish it also means weather
-    technology: [tech, technology, tecnología, tecnologia, technologie]
-    agriculture: [agriculture, agricultural, farm, farmer, farmers, farming, agro, agricultura, agricole, rural]
-    religion: [christian, catholic, catholique, católica, católico, gospel, church, iglesia, islamic, islam, quran,
-               evangelical, bible, biblical, sunnah, orthodox]
-    children_youth: [kids, children, enfants, niños, kinder, junior, youth, juvenil]
-    education: [education, educational, educación, educação, éducation, school, university, universidad,
-                universidade, université, campus, college]
-    culture: [culture, cultural, cultura, kultur, arts]
-    indigenous: [indigenous, indígena, indígenas, aboriginal, first nations, tribal]
-    human_rights: [human rights, derechos humanos, droits humains, droits de l'homme]
-    migration: [migrant, migrants, refugee, refugees, migración, migrantes]
-    diaspora: [diaspora]
 
 # UN profile: SEVERAL per outlet; like topics, only changes the order.
 # "Solutions / constructive journalism", "Development journalism" and

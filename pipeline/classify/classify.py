@@ -15,6 +15,7 @@ from collections import Counter
 from pathlib import Path
 
 import re
+import sys
 
 import yaml
 
@@ -370,7 +371,7 @@ def apply_list_overrides(ev, ov, field, label):
         ev.best.pop(v, None)
 
 
-def topics(o, cat, rules, maps, kw, order, ov):
+def topics(o, cat, rules, maps, kw, order, ov, texts=None):
     ev = Evidence()
     source_mappings(o, maps, "topics", ev)
     for topic, nets in (rules.get("networks") or {}).items():
@@ -384,17 +385,52 @@ def topics(o, cat, rules, maps, kw, order, ov):
     for topic, scs in (rules.get("scopes") or {}).items():
         if cat["scope"]["value"] in scs:
             ev.add(topic, "rule", "scope " + cat["scope"]["value"])
-    name = (o["name"] or "").casefold()
-    if name.count(",") <= rules.get("name_keywords_max_commas", 99):
-        for phrase in rules.get("name_keywords_ignore") or []:
-            name = name.replace(phrase.casefold(), " ")
-        for topic, word, rx in kw:
-            if topic not in ev.best and rx.search(name):
-                ev.add(topic, "keyword", f"name contains \"{word}\"")
+    # every value so far comes from a source / network / rule: strength FOCUS
+    for v in ev.best.values():
+        v["strength"] = 1
+    # keyword lists (config/topic_keywords.yaml) on name, descriptions, website
+    name = o["name"] or ""
+    if name.count(",") > rules.get("name_keywords_max_commas", 99):
+        name = ""  # a tagline listing sections, not a name
+    hits = kw.match(name=name, **(texts or {}))
+    for topic, h in hits.items():
+        old = ev.best.get(topic)
+        method = "website_check" if h["why"].startswith("website") else "keyword"
+        if not old or h["s"] < old.get("strength", 9):
+            ev.best[topic] = {**val(topic, method, h["why"]), "strength": h["s"]}
+        if h["subs"]:
+            ev.best[topic]["subs"] = sorted(h["subs"])
     apply_list_overrides(ev, ov, "topics", "topic")
+    for v in ev.best.values():
+        v.setdefault("strength", 1)
     if not ev.best:
         ev.add("general_news", "default", "no topic in the sources: general news")
+        ev.best["general_news"]["strength"] = 3
     return ev.result(order)
+
+
+ORG_MAIL = re.compile(r"^(info|contact|contacto|contato|kontakt|redac|redaction|redaccion|redacao|newsroom|news|noticias|"
+                      r"editor|editors|editorial|desk|hello|hola|office|admin|press|presse|prensa|imprensa|mail|"
+                      r"communication|comunicacion|media|secretariat|reception|support|webmaster|tips|letters|studio|"
+                      r"programs|programmes|radio|tv|online)", re.I)
+
+
+def outlet_texts(o, wd_texts, web):
+    """texts for the keyword lists: Wikidata/Wikipedia (raw/texts) + website check"""
+    desc, abouts, menu, heads = [], [], [], []
+    for q in [m[3:] for m in o["members"] if m.startswith("wd:")]:
+        t = wd_texts.get(q) or {}
+        desc += list((t.get("desc") or {}).values())
+        if t.get("intro"):
+            abouts.append(("Wikipedia", t["intro"]))
+    w = web.get(o["id"]) or {}
+    if w.get("status") == "ok":
+        desc += [x for x in (w.get("desc"), w.get("title")) if x]
+        if w.get("about"):
+            abouts.append(("website About page", w["about"]))
+        menu = [tuple(x) for x in w.get("nav") or []]
+        heads = (w.get("heads") or []) + ([w["home_text"]] if w.get("home_text") else [])
+    return {"descriptions": desc, "abouts": abouts, "menu": menu, "headlines": heads}
 
 
 def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids):
@@ -482,7 +518,15 @@ def main():
     src = ROOT / "config" / "sources"
     maps = {k: yaml.safe_load(open(src / f, encoding="utf-8")) for k, f in
             (("iptv", "iptv_org.yaml"), ("rb", "radio_browser.yaml"), ("wd", "wikidata.yaml"))}
-    kw = keyword_patterns(rules["topics"])
+    sys.path.insert(0, str(ROOT / "pipeline" / "classify"))
+    from topic_text import Matcher
+    kw = Matcher()
+    tf = ROOT / "raw" / "texts" / "data.json.gz"
+    wd_texts = json.load(gzip.open(tf, "rt", encoding="utf-8")) if tf.exists() else {}
+    web = {}
+    for f in sorted((ROOT / "raw" / "website_check").glob("*.json.gz")):
+        web.update(json.load(gzip.open(f, "rt", encoding="utf-8")))
+    print(f"texts: {len(wd_texts)} Wikidata items, {len(web)} websites checked")
     official = {r["iso3"]: set(filter(None, r["official_languages"].split(";")))
                 for r in csv.DictReader(open(ROOT / "config" / "official_languages.csv", encoding="utf-8"))}
     lang_rows = list(csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")))
@@ -512,7 +556,17 @@ def main():
         cat["service_languages"] = sorted(set(extra_langs) - set(o["languages"]))
         cat["services"] = sorted({s["name"] for e, s, _ in intl.get(o["id"], []) if s})
         ov = overrides.get(o["id"], {})
-        cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov)
+        txt = outlet_texts(o, wd_texts, web)
+        cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov, txt)
+        w = web.get(o["id"]) or {}
+        if w.get("status") == "ok":  # contacts and social links from the website (owner's to-do 6)
+            mails = [e for e in w.get("emails") or [] if ORG_MAIL.match(e)]
+            if mails and not o.get("email"):
+                o["email"] = mails[0]
+                o["email_source"] = "website"
+            for k, u in (w.get("social") or {}).items():
+                o.setdefault("social_urls", {}).setdefault(k, u)
+        cat["website_status"] = w.get("status")
         cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
                                        {t["value"] for t in cat["topics"]})
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
