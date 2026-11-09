@@ -121,7 +121,12 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   Owner 09.11.2026: keep all filters (ownership: explained again, decision open). AI (5b): allowed NOW
   ("until February it may cost money, long-term it must be free") -> build with AI now, results stored
   in the repo so nothing costs after February; new outlets later get keyword matching only.
-  Questions to the owner: model (Opus 5.5 vs Haiku 5.5), which outlets, what the AI classifies, API key.
+  Owner's answers: ownership buttons removed (only "Hide state-controlled" + owner names on cards);
+  AI with Claude Opus 5.5, for ALL outlets, classifying topics/sub-topics, audiences, open to partner
+  content, owner from imprint, each with a short reason. Open: owner asked whether it can run "over this
+  account" (the Claude chat subscription) -> explained it needs an API account (console.anthropic.com),
+  cost estimate ~300-500 $ for all with Opus 5.5 (batch); test with 100 outlets first.
+- Owner thought buttons did not work: soft filters did not change the counter -> counter + divider added.
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
 
