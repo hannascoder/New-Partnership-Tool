@@ -316,7 +316,7 @@ def far_right(o, rules, evidence, owners):
 
 
 # ---------------------------------------------------------------- 4d
-METHOD_RANK = ["override", "source_field", "membership", "rule", "website_check", "keyword", "default"]
+METHOD_RANK = ["override", "source_field", "membership", "rule", "website_check", "ai_classification", "keyword", "default"]
 
 
 class Evidence:
@@ -489,6 +489,48 @@ ORG_MAIL = re.compile(r"^(info|contact|contacto|contato|kontakt|redac|redaction|
                       r"programs|programmes|radio|tv|online)", re.I)
 
 
+def apply_ai(o, cat, ai, un_order, aud_order):
+    """AI classification (cache/ai_classification.json, made by Claude in a chat session from the
+    outlet's own texts): adds what the other methods did not find; never replaces stronger evidence."""
+    a = ai.get(o["id"])
+    if not a:
+        return
+    tag = "AI reading: "
+    best = {t["value"]: t for t in cat["topics"]}
+    for topic, sub, strength, why in a.get("topics") or []:
+        old = best.get(topic)
+        if old and old["method"] != "default" and old.get("strength", 9) <= strength:
+            if sub and sub not in (old.get("subs") or []):
+                old.setdefault("subs", []).append(sub)
+            continue
+        if old and old["method"] == "default":
+            cat["topics"].remove(old)
+        e = {**val(topic, "ai_classification", tag + why), "strength": strength}
+        if sub:
+            e["subs"] = [sub]
+        if old and old.get("subs") and not sub:
+            e["subs"] = old["subs"]
+        if old in cat["topics"]:
+            cat["topics"].remove(old)
+        cat["topics"].append(e)
+        best[topic] = e
+    if not cat["topics"]:
+        cat["topics"].append({**val("general_news", "default", "no topic in the sources: general news"), "strength": 3})
+    for key, order in (("audience", aud_order), ("un_profile", un_order)):
+        field = "audience_groups" if key == "audience" else "un_profile"
+        have = {x["value"] for x in cat[field]}
+        for v, why in a.get(key) or []:
+            if v not in have:
+                cat[field].append(val(v, "ai_classification", tag + why))
+        cat[field].sort(key=lambda x: order.index(x["value"]) if x["value"] in order else 999)
+    if a.get("ownership") and cat["ownership"]["value"] == "unknown":
+        cat["ownership"] = val(a["ownership"][0], "ai_classification", tag + a["ownership"][1])
+    if a.get("owner") and a["owner"] not in (o.get("owner_names") or []):
+        o["owner_names"] = [a["owner"]] + (o.get("owner_names") or [])
+    if a.get("website_warning"):
+        cat["website_warning"] = a["website_warning"]
+
+
 def outlet_texts(o, wd_texts, web):
     """texts for the keyword lists: Wikidata/Wikipedia (raw/texts) + website check"""
     desc, abouts, menu, heads = [], [], [], []
@@ -592,6 +634,8 @@ def main():
     oidx = owner_index(owners, None)
     intl, intl_missing = match_international(outlets, reach)
     cats_cfg = yaml.safe_load(open(ROOT / "config" / "categories.yaml", encoding="utf-8"))
+    aif = ROOT / "cache" / "ai_classification.json"
+    ai = {k: v for k, v in json.load(open(aif, encoding="utf-8")).items() if not k.startswith("_")} if aif.exists() else {}
     topic_order = [t["id"] for t in cats_cfg["topics"]]
     un_order = [u["id"] for u in cats_cfg["un_profile"]]
     aud_order = [a["id"] for a in cats_cfg["audience"]]
@@ -653,9 +697,11 @@ def main():
         cat["service_languages"] = sorted(set(extra_langs) - set(o["languages"]))
         cat["services"] = sorted({s["name"] for e, s, _ in intl.get(o["id"], []) if s})
         ov = overrides.get(o["id"], {})
-        txt = outlet_texts(o, wd_texts, web)
+        # a website that no longer belongs to the outlet (AI reading) is not used at all
+        taken_over = bool((ai.get(o["id"]) or {}).get("website_warning"))
+        txt = outlet_texts(o, wd_texts, {} if taken_over else web)
         cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov, txt)
-        w = web.get(o["id"]) or {}
+        w = {} if taken_over else (web.get(o["id"]) or {})
         if w.get("status") == "ok":  # contacts and social links from the website (owner's to-do 6)
             mails = [e for e in w.get("emails") or [] if ORG_MAIL.match(e)]
             if mails and not o.get("email"):
@@ -683,6 +729,7 @@ def main():
             cat["un_profile"].sort(key=lambda v: un_order.index(v["value"]) if v["value"] in un_order else 999)
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
                                           lang_names, {t["value"] for t in cat["topics"]}, aud_matcher, txt)
+        apply_ai(o, cat, ai, un_order, aud_order)
         for field, row in overrides.get(o["id"], {}).items():
             if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")

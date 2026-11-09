@@ -62,7 +62,7 @@
   /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
   const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", ck: "checks", pl: "platforms" };
   const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
-  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", om: "f-onlyMatches" };
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", om: "f-onlyMatches" };  // saved when different from the default
   let restoring = false;
   function saveHash() {
     if (restoring) return;
@@ -75,7 +75,7 @@
     if (S.size !== "all") p.set("size", S.size);
     if (S.sort !== "auto") p.set("sort", S.sort);
     if (!S.reach) p.set("rch", "0");
-    Object.entries(FLAGS).forEach(([k, id]) => { if ($(id) && $(id).checked) p.set(k, "1"); });
+    Object.entries(FLAGS).forEach(([k, id]) => { const el = $(id); if (el && el.checked !== el.defaultChecked) p.set(k, el.checked ? "1" : "0"); });
     const h = p.toString();
     history.replaceState(null, "", h ? "#" + h : location.pathname + location.search);
   }
@@ -99,7 +99,7 @@
     if (p.get("size")) { const r = document.querySelector(`input[name="size"][value="${CSS.escape(p.get("size"))}"]`); if (r) { r.checked = true; fire(r, "change"); } }
     if (p.get("sort")) { $("sort").value = p.get("sort"); fire($("sort"), "change"); }
     if (p.get("rch") === "0") { $("f-reach").checked = false; fire($("f-reach"), "change"); }
-    Object.entries(FLAGS).forEach(([k, id]) => { if (p.get(k) && $(id)) { $(id).checked = true; fire($(id), "change"); } });
+    Object.entries(FLAGS).forEach(([k, id]) => { if (p.get(k) && $(id)) { $(id).checked = p.get(k) !== "0"; fire($(id), "change"); } });
     restoring = false;
   }
   const visible = (list) => list.filter((x) => !x.later && !x.hidden);
@@ -221,6 +221,7 @@
     });
     const om = C.checkboxes.find((c) => c.id === "only_topic_matches") || { label: "Only show topic matches" };
     $("onlyMatchesLabel").textContent = om.label;
+    S.onlyMatches = !!om.default; $("f-onlyMatches").checked = S.onlyMatches; $("f-onlyMatches").defaultChecked = S.onlyMatches;
     if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
     $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
     const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
@@ -352,7 +353,7 @@
       if (S.checks.has("has_social_media") && !o.so) return false;
       if (S.checks.has("has_public_contact") && !o.em && !o.cp) return false;
       if (S.checks.has("only_active") && !(o.lp && o.lp >= activeSince())) return false;
-      if (S.checks.has("hide_website_down") && o.wd) return false;  // website did not answer at the last check
+      if (S.checks.has("hide_website_down") && (o.wd || o.ww)) return false;  // website did not answer at the last check
       if (S.checks.has("only_new") && o.f < newSince()) return false;
       return true;
     });
@@ -411,6 +412,7 @@
       <p class="row"><b>Topics:</b> ${tpl}</p>
       ${aul ? `<p class="row"><b>Target audience:</b> ${aul}</p>` : ""}
       ${unl ? `<p class="row"><b>UN profile:</b> ${unl}</p>` : ""}
+      ${o.ww ? `<p class="row warn">⚠ Website may no longer belong to this outlet: ${esc(o.ww)}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
       ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a>${o.cp ? ` · <a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : ""}</p>`
@@ -537,6 +539,7 @@
     if (o.ow && o.ow[0] === "state_controlled") f.push("State-controlled");
     if (o.s.length < 2) f.push("Unverified");
     if (o.wd) f.push("Website not reachable");
+    if (o.ww) f.push("Website may no longer belong to the outlet");
     if (o.lp && o.lp < activeSince()) f.push("No recent article (last " + o.lp + ")");
     return f.join(", ");
   }

@@ -77,3 +77,4 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .explain summary { cursor: pointer; color: var(--un-blue-ink); }
 .explain dt { font-weight: 600; margin-top: 6px; }
 .explain dd { margin: 0 0 0 0; color: var(--muted); }
+.row.warn { color: #9a5b00; }

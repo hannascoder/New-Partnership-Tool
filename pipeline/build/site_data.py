@@ -164,6 +164,8 @@ def main():
         e["f"] = o["first_seen"]
         if (o.get("cat") or {}).get("website_status") == "error":
             e["wd"] = 1  # website did not answer at the last website check
+        if (o.get("cat") or {}).get("website_warning"):
+            e["ww"] = o["cat"]["website_warning"]  # website seems to belong to someone else now
         cat = o.get("cat", {})
         # topics (step 4d): ids in "tp", the reason of each in "tw" (same order).
         # Left out when the only topic is the default "general news" (no evidence).

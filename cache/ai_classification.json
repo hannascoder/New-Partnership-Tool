@@ -1,0 +1,863 @@
+{
+ "_meta": {
+  "by": "Claude (in a chat session, no paid API)",
+  "format": "topics [topic, sub-topic or null, strength 1/2/3, reason]; audience [id, reason]; un_profile [id, reason]; ownership [value, reason]; owner name; website_warning reason",
+  "how": "reads the profile from pipeline/ai/prepare.py (name, Wikidata/Wikipedia text, website title/description/menu/About/headlines) and chooses only from the fixed lists; nothing is guessed from general knowledge"
+ },
+ "pf-000368": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general daily newspaper"
+   ]
+  ],
+  "website_warning": "the website shows a blog about Kinshasa life, not the newspaper"
+ },
+ "pf-000435": {
+  "date": "2026-11-09",
+  "owner": "Ministry of Communication and Media (DRC)",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned public institution under the Ministry of Communication and Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ],
+   [
+    "gender_equality",
+    "women_rights",
+    2,
+    "website section Genre"
+   ],
+   [
+    "fact_checking",
+    null,
+    2,
+    "website section Débunkage"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website sections Économie, Business"
+   ],
+   [
+    "cities",
+    "urban_mobility",
+    2,
+    "website section Urbain"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Science-Santé-Environnement"
+   ],
+   [
+    "health",
+    "health_systems",
+    2,
+    "website section Science-Santé-Environnement"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Science-Santé-Environnement"
+   ],
+   [
+    "partnerships",
+    "global_cooperation",
+    2,
+    "website section Diplomatie"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sports"
+   ]
+  ]
+ },
+ "pf-000761": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network providing news and information"
+   ],
+   [
+    "gender_equality",
+    "women_rights",
+    2,
+    "website section Parité"
+   ],
+   [
+    "human_rights",
+    "civil_political_rights",
+    2,
+    "website section Droits et Citoyenneté"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environnement"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Économie"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Politique"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sport"
+   ],
+   [
+    "peace_justice",
+    "violence_peace",
+    3,
+    "programme Dialogue entre Congolais"
+   ]
+  ]
+ },
+ "pf-000779": {
+  "audience": [
+   [
+    "religious",
+    "Christian weekly"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Wikipedia: independent Christian weekly"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "weekly on politics and society"
+   ]
+  ],
+  "website_warning": "the website shows shopping and lifestyle adverts, not the newspaper"
+ },
+ "pf-003029": {
+  "date": "2026-11-09",
+  "ownership": [
+   "private",
+   "Wikipedia: first privately owned, commercial TV channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general television channel"
+   ]
+  ]
+ },
+ "pf-003318": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-003376": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general daily newspaper"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Forum éco"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sport"
+   ]
+  ]
+ },
+ "pf-003570": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ],
+  "website_warning": "the website shows unrelated content (streaming, wine, blog adverts), not the newspaper"
+ },
+ "pf-003583": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ],
+  "website_warning": "the website now shows online casino and betting reviews, not the newspaper"
+ },
+ "pf-003634": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ],
+  "website_warning": "the website address only shows a hosting company page"
+ },
+ "pf-003635": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general daily newspaper"
+   ]
+  ]
+ },
+ "pf-003641": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general daily newspaper"
+   ]
+  ]
+ },
+ "pf-003693": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general daily newspaper"
+   ]
+  ]
+ },
+ "pf-003700": {
+  "date": "2026-11-09",
+  "owner": "Groupe Media 7",
+  "ownership": [
+   "private",
+   "Wikipedia: part of the Media 7 press group, founded by journalist Modeste Mutinga"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website sections Politique, Sénat, Assemblée nationale"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Économie"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Justice"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "website section Sécurité"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sport"
+   ]
+  ]
+ },
+ "pf-003818": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper in Lubumbashi"
+   ]
+  ]
+ },
+ "pf-003851": {
+  "date": "2026-11-09",
+  "ownership": [
+   "private",
+   "Wikipedia: private commercial TV and radio station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV and radio station"
+   ]
+  ]
+ },
+ "pf-003948": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster: news and current affairs"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website sections Politique, Institutions"
+   ],
+   [
+    "health",
+    "health_systems",
+    2,
+    "website section Santé"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environnement"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Justice"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "website section Sécurité"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sport"
+   ],
+   [
+    "education",
+    "school_access",
+    3,
+    "Wikipedia: programming includes education"
+   ],
+   [
+    "culture",
+    null,
+    3,
+    "Wikipedia: programming includes culture"
+   ]
+  ]
+ },
+ "pf-004060": {
+  "date": "2026-11-09",
+  "ownership": [
+   "private",
+   "Wikipedia: Salongo is a private company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-016563": {
+  "audience": [
+   [
+    "religious",
+    "Catholic radio"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "name: Radio Maria, a Catholic radio network"
+   ]
+  ]
+ },
+ "pf-023760": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general bi-weekly"
+   ],
+   [
+    "elections",
+    null,
+    3,
+    "Wikipedia: critical analysis of government and opposition politicians"
+   ]
+  ]
+ },
+ "pf-024127": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-024753": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "popular radio with about 200 affiliated stations"
+   ]
+  ],
+  "website_warning": "the website now shows a travel guide, not the radio"
+ },
+ "pf-024758": {
+  "audience": [
+   [
+    "women",
+    "defends women"
+   ],
+   [
+    "youth_students",
+    "founded by young people, defends youth"
+   ],
+   [
+    "ethnic_minorities",
+    "defends minorities in Kivu"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "human_rights",
+    "rights_defenders",
+    1,
+    "Wikipedia: independent organisation defending young people, women and minorities"
+   ],
+   [
+    "gender_equality",
+    "women_rights",
+    1,
+    "defends women"
+   ],
+   [
+    "inequalities",
+    "discrimination",
+    1,
+    "defends minorities"
+   ],
+   [
+    "children_youth",
+    null,
+    1,
+    "defends young people"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "tells the story of the Kivu region from Kivu"
+   ]
+  ]
+ },
+ "pf-026657": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Wikipedia: digital media on Congolese urban culture and music"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sports"
+   ],
+   [
+    "technology",
+    null,
+    3,
+    "Wikipedia: also covers technology"
+   ],
+   [
+    "business_economy",
+    null,
+    3,
+    "Wikipedia: also covers business"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "Wikipedia: interviews, videos and podcasts"
+   ]
+  ]
+ },
+ "pf-036750": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-036950": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037078": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037277": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037443": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037579": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Economie"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Politique"
+   ],
+   [
+    "health",
+    "health_systems",
+    2,
+    "website section Santé"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "website section Sécurité"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sport"
+   ]
+  ]
+ },
+ "pf-037628": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037874": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037982": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038028": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038318": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038319": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038365": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038437": {
+  "audience": [
+   [
+    "business_professionals",
+    "business TV"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "name: Business Life TV"
+   ]
+  ]
+ },
+ "pf-038496": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038907": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038918": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038943": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038953": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038967": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-039724": {
+  "date": "2026-11-09",
+  "topics": [],
+  "website_warning": "the website shows tourism pages, not news"
+ },
+ "pf-039812": {
+  "date": "2026-11-09",
+  "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-060695": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news site on the DRC"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Politique"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Economie"
+   ],
+   [
+    "health",
+    "health_systems",
+    2,
+    "website section Santé"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Sport"
+   ]
+  ]
+ },
+ "pf-060699": {
+  "date": "2026-11-09",
+  "topics": [],
+  "website_warning": "this address is a lifestyle blog, not the Congolese Press Agency (see pf-000435)"
+ },
+ "pf-064443": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper (journal des affaires)"
+   ]
+  ]
+ },
+ "pf-071318": {
+  "date": "2026-11-09",
+  "topics": [
+   [
+    "fact_checking",
+    null,
+    1,
+    "fact-checking site against fake news"
+   ],
+   [
+    "media_freedom",
+    null,
+    1,
+    "trains journalists and teaches media literacy"
+   ],
+   [
+    "human_rights",
+    "rights_defenders",
+    1,
+    "fights hate messages"
+   ],
+   [
+    "gender_equality",
+    "women_rights",
+    2,
+    "website section Fem'Check"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Balobaki Elections"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environnement"
+   ],
+   [
+    "health",
+    "health_systems",
+    2,
+    "website section Santé"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "website section Sécurité et défense"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "media literacy education and journalist training"
+   ]
+  ]
+ }
+}

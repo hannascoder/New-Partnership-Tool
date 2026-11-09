@@ -297,7 +297,7 @@ checkboxes:
     description: Newsroom or organisation addresses only.
     default: false
   - id: hide_website_down
-    label: Hide outlets whose website did not answer
+    label: Hide outlets whose website did not answer (or no longer belongs to them)
     default: false
   - id: only_new
     label: Only new (found in the last 4 months)
@@ -316,7 +316,7 @@ checkboxes:
   - id: only_topic_matches
     label: Only show topic, audience and UN profile matches
     description: Hides outlets that match none of the chosen topics, target audiences or UN profiles.
-    default: false
+    default: true   # owner, 09.11.2026 (was off)
 
 # Outlets count as "new" for this many months after they were first found.
 new_months: 4
