@@ -118,6 +118,10 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
 ## Step 5 (reports): built 09.11.2026, owner's decision pending
 - `pipeline/validate/reports.py` -> reports/coverage.md (+ coverage_by_country.csv), sample.md,
   contradictions.md, changes.md. Owner decides which filters stay in v1 and whether AI (5b) is needed.
+  Owner 09.11.2026: keep all filters (ownership: explained again, decision open). AI (5b): allowed NOW
+  ("until February it may cost money, long-term it must be free") -> build with AI now, results stored
+  in the repo so nothing costs after February; new outlets later get keyword matching only.
+  Questions to the owner: model (Opus 5.5 vs Haiku 5.5), which outlets, what the AI classifies, API key.
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
 
