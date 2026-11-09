@@ -621,7 +621,9 @@ def report(outlets, intl_missing=()):
 def report_4d(outlets, cats_cfg):
     shown = [o for o in outlets if not o["cat"].get("excluded")]
     n = len(shown)
+    by_strength = Counter(v.get("strength") for o in shown for v in o["cat"]["topics"] if v["method"] != "default")
     lines = ["# Step 4d: topics, target audience and UN profile", "",
+             f"Topic matches by strength: main focus {by_strength[1]:,} · own section {by_strength[2]:,} · covers it {by_strength[3]:,}", "",
              f"{n:,} outlets shown on the website. An outlet can have several topics and profiles.",
              "Topics and UN profiles never hide an outlet; they only change the order (unless the user",
              "switches on \"Only show topic matches\").", "",
@@ -660,6 +662,27 @@ def report_4d(outlets, cats_cfg):
                      f"{by['override']:,} | " + ("; ".join(f"{k} ({c:,})" for k, c in why) or "no open source yet") + " |")
     lines.append(f"\nOutlets with at least one target audience: {sum(1 for o in shown if o['cat']['audience_groups']):,}")
     (ROOT / "reports" / "topics.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    # sample for checking by hand: per topic up to 6 random outlets, with strength and reason
+    import random
+    rnd = random.Random(42)
+    names = {1: "main focus", 2: "own section", 3: "covers it"}
+    sm = ["# Topics: random sample to check by hand", "",
+          "Per topic up to 6 random outlets (2 per strength where possible). Wrong? Tell Claude the id,",
+          "or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.", ""]
+    for t in cats_cfg["topics"]:
+        if t["id"] == "general_news":
+            continue
+        rows = [(o, v) for o in shown for v in o["cat"]["topics"] if v["value"] == t["id"]]
+        pick = []
+        for s in (1, 2, 3):
+            grp = [r for r in rows if r[1].get("strength") == s]
+            pick += rnd.sample(grp, min(2, len(grp)))
+        sm += [f"## {t['label']}" + (f" (SDG {t['sdg']})" if t.get("sdg") else "") + f" — {len(rows):,} outlets", "",
+               "| Id | Name | Country | Strength | Reason |", "|---|---|---|---|---|"]
+        sm += [f"| {o['id']} | {(o['name'] or '')[:60]} | {o['country']} | {names.get(v.get('strength'), '')} | {v['source'][:120]} |"
+               for o, v in pick] or ["| | none yet | | | |"]
+        sm.append("")
+    (ROOT / "reports" / "topics_sample.md").write_text("\n".join(sm) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
 

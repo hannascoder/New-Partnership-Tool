@@ -79,6 +79,18 @@ Three strengths (agreed): **Focus** (topic is the main subject: name, About text
 does not count. Honest limits told to the owner: only coverage can be measured, not interest;
 ~20-30 % of websites block or need JavaScript; small topics (water, oceans, SDG 17) stay small.
 
+## 09.11.2026 (evening): all topic buttons active (owner: "goal: all buttons active today")
+- `config/topic_keywords.yaml`: 39 topics, 63 sub-topics in plain language (the SDG targets are only the
+  reference, owner's decision: merged, no numbers), ~4,700 words in the 9 UN News languages, exclusions.
+  Matcher `pipeline/classify/topic_text.py`: strengths main focus / own section / covers it.
+- Texts: `raw/texts/` (Wikidata descriptions + Wikipedia intros, 28,409 items, 16,537 intros) and
+  `raw/website_check/` (top 100 per country, ~11,500 sites; menu, About page, headlines, e-mails,
+  social links, feeds). Workflow "Fetch texts" (`.github/workflows/texts.yml`).
+- Website: button "SDG 5 Gender equality"; choosing it opens its sub-topics, all included until
+  unticked; best match counts strength (focus 3, section 2, covers 1). Export: column "Target audience".
+- Checking: `reports/topics.md` (numbers) and `reports/topics_sample.md` (random examples per topic).
+- Older persons & ageing added as a topic. Search bar: later (BACKLOG).
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:

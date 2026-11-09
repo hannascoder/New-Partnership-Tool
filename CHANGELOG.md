@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-09 (evening)
+- **All topic buttons work.** Hidden keyword lists per topic (`config/topic_keywords.yaml`, 9 UN News
+  languages) compared with outlet names, Wikidata descriptions, Wikipedia introductions and the
+  outlets' own websites (menu sections, About page, headlines). Three strengths: main focus, own
+  section, covers it. Sub-topics (based on the SDG targets, in plain language) open under a chosen
+  topic and can be unticked to be more specific.
+- Website check (top 100 per country): also public organisation e-mail addresses and social media links.
+- New topic "Older persons & ageing"; export column "Target audience".
+
 ## 2026-11-09
 - **Target audience** (new filter section, soft like topics): women, youth & students, children, older
   persons, rural communities & farmers, local communities, persons with disabilities, indigenous peoples,

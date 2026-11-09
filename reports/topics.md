@@ -1,5 +1,7 @@
 # Step 4d: topics, target audience and UN profile
 
+Topic matches by strength: main focus 63,320 · own section 0 · covers it 6,979
+
 70,989 outlets shown on the website. An outlet can have several topics and profiles.
 Topics and UN profiles never hide an outlet; they only change the order (unless the user
 switches on "Only show topic matches").
@@ -19,7 +21,7 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Responsible consumption & production (SDG 12) | 6 | 0 | 0 | 0 | 6 | 0 | Wikipedia: "rse" (1); Wikipedia: "recycling" (1); Wikipedia: "sustainable business" (1) |
 | Climate action (SDG 13) | 145 | 8 | 0 | 0 | 137 | 0 | Wikipedia: "environment" (40); Wikipedia: "environmental" (30); Wikipedia: "environnement" (9) |
 | Life below water (SDG 14) | 11 | 0 | 0 | 0 | 11 | 0 | Wikipedia: "pesca" (2); Wikipedia: "fishermen" (2); Wikipedia: "fisheries" (2) |
-| Life on land (SDG 15) | 39 | 0 | 0 | 0 | 39 | 0 | Wikipedia: "conservation" (13); Wikipedia: "wildlife" (11); Wikipedia: "extincao" (3) |
+| Life on land (SDG 15) | 36 | 0 | 0 | 0 | 36 | 0 | Wikipedia: "conservation" (13); Wikipedia: "wildlife" (11); Wikipedia: "extinction" (2) |
 | Affordable & clean energy (SDG 7) | 9 | 3 | 0 | 0 | 6 | 0 | Wikidata subject: renewable energy (3); Wikipedia: "irena" (1); Wikipedia: "solar energy" (1) |
 | Decent work & economic growth (SDG 8) | 100 | 0 | 0 | 0 | 100 | 0 | Wikipedia: "entrepreneurs" (12); Wikipedia: "employment" (11); Wikipedia: "trade union" (9) |
 | Industry, innovation & infrastructure (SDG 9) | 189 | 0 | 0 | 0 | 189 | 0 | Wikipedia: "innovation" (20); Wikipedia: "roads" (15); Wikipedia: "railway" (12) |
