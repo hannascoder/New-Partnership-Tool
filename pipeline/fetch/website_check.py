@@ -159,6 +159,15 @@ def host(u):
 
 
 def check(outlet):
+    """never raises: a problem with one site is stored as status "error" """
+    try:
+        return _check(outlet)
+    except Exception as e:  # e.g. a malformed link on the page
+        return outlet["i"], {"url": outlet["w"], "checked": date.today().isoformat(), "status": "error",
+                             "error": ("parse: " + str(e))[:120]}
+
+
+def _check(outlet):
     url = outlet["w"] if outlet["w"].startswith("http") else "http://" + outlet["w"]
     res = {"url": url, "checked": date.today().isoformat()}
     try:
@@ -180,7 +189,10 @@ def check(outlet):
                 "desc": " ".join(p.desc.split())})
     nav, seen, social, emails, about = [], set(), {}, [], None
     for text, href, is_nav in p.links:
-        full = urllib.parse.urljoin(final, href)
+        try:
+            full = urllib.parse.urljoin(final, href)
+        except ValueError:
+            continue
         h = host(full)
         if href.startswith("mailto:"):
             e = href[7:].split("?")[0].strip()
@@ -219,6 +231,12 @@ def check(outlet):
     return outlet["i"], res
 
 
+def save_shards(shards):
+    for c, s in list(shards.items()):
+        with gzip.open(OUT / f"{c}.json.gz", "wt", encoding="utf-8") as f:
+            json.dump(s, f, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
 def main():
     outlets = json.load(open(ROOT / "site" / "data" / "outlets.json", encoding="utf-8"))
     todo = sorted((o for o in outlets if o.get("w") and o["r"] <= MAX_RANK), key=lambda o: (o["r"], o["i"]))
@@ -237,20 +255,24 @@ def main():
         for o in todo:
             futures.append(ex.submit(check, o))
         for fut in as_completed(futures):
-            oid, res = fut.result()
+            try:
+                oid, res = fut.result()
+            except Exception as e:
+                print("unexpected:", e)
+                continue
             shards.setdefault(country[oid], {})[oid] = res
             n += 1
             ok += res.get("status") == "ok"
             if n % 500 == 0:
                 print(f"{n} checked, {ok} answered, {time.time() - t0:.0f}s")
+            if n % 3000 == 0:
+                save_shards(shards)  # keep progress if the run stops
             if time.time() - t0 > MINUTES * 60:
                 print("time limit reached: stopping, the next run continues")
                 for f in futures:
                     f.cancel()
                 break
-    for c, s in shards.items():
-        with gzip.open(OUT / f"{c}.json.gz", "wt", encoding="utf-8") as f:
-            json.dump(s, f, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    save_shards(shards)
     total = sum(len(s) for s in shards.values())
     answered = sum(1 for s in shards.values() for v in s.values() if v.get("status") == "ok")
     meta = {"source": "website_check", "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

@@ -216,8 +216,8 @@ topics:
         strong:
           en: [epidemic, pandemic, hiv, hiv/aids, malaria, tuberculosis, cholera, ebola, mpox, covid-19, covid, measles, polio,
                hepatitis, dengue, vaccine, vaccines, vaccination, neglected tropical diseases, outbreak, world health organization]
-          fr: [épidémie, pandémie, vih, sida, paludisme, tuberculose, choléra, ebola, rougeole, vaccin, vaccins, vaccination, oms]
-          es: [epidemia, pandemia, vih, sida, malaria, paludismo, tuberculosis, cólera, ébola, sarampión, vacuna, vacunas, vacunación, dengue, oms]
+          fr: [épidémie, pandémie, vih, paludisme, tuberculose, choléra, ebola, rougeole, vaccin, vaccins, vaccination, oms]
+          es: [epidemia, pandemia, vih, malaria, paludismo, tuberculosis, cólera, ébola, sarampión, vacuna, vacunas, vacunación, dengue, oms]
           pt: [epidemia, pandemia, hiv, aids, malária, tuberculose, cólera, ebola, sarampo, vacina, vacinas, vacinação, dengue, oms]
           ar: [وباء, جائحة, الإيدز, الملاريا, السل, الكوليرا, الإيبولا, لقاح, اللقاحات, منظمة الصحة العالمية]
           ru: [эпидемия, пандемия, вич, спид, малярия, туберкулёз, туберкулез, холера, вакцина, вакцинация, воз]
@@ -246,7 +246,7 @@ topics:
                essential medicines, health workers, nurses, sexual and reproductive health, family planning, contraception]
           fr: [couverture santé universelle, système de santé, soins de santé, médicaments essentiels, personnel de santé, planification familiale, contraception]
           es: [cobertura sanitaria universal, sistema de salud, atención médica, atención primaria, medicamentos esenciales, personal sanitario, planificación familiar, anticoncepción]
-          pt: [cobertura universal de saúde, sistema de saúde, atenção primária, medicamentos essenciais, profissionais de saúde, planejamento familiar, contracepção, sus]
+          pt: [cobertura universal de saúde, sistema de saúde, atenção primária, medicamentos essenciais, profissionais de saúde, planejamento familiar, contracepção, sistema único de saúde]
           ar: [التغطية الصحية الشاملة, النظام الصحي, الرعاية الصحية, الأدوية الأساسية, تنظيم الأسرة]
           ru: [всеобщий охват услугами здравоохранения, система здравоохранения, медицинская помощь, планирование семьи]
           zh: [全民健康覆盖, 医疗体系, 医疗服务, 基本药物, 计划生育]
@@ -708,10 +708,10 @@ topics:
         targets: ["15.4", "15.5", "15.6", "15.7", "15.8", "15.9", "15.a", "15.c"]
         strong:
           en: [biodiversity, wildlife, endangered species, extinction, poaching, wildlife trafficking, national parks, protected areas,
-               conservation, nature conservation, invasive species, rewilding, cbd, cites]
+               conservation, nature conservation, invasive species, rewilding, convention on biological diversity, cites]
           fr: [biodiversité, faune sauvage, espèces menacées, extinction, braconnage, trafic d'espèces sauvages, parcs nationaux, aires protégées, conservation de la nature]
-          es: [biodiversidad, fauna silvestre, vida silvestre, especies en peligro, extinción, caza furtiva, tráfico de fauna, parques nacionales, áreas protegidas, conservación]
-          pt: [biodiversidade, vida selvagem, fauna silvestre, espécies ameaçadas, extinção, caça ilegal, tráfico de animais silvestres, parques nacionais, áreas protegidas]
+          es: [biodiversidad, fauna silvestre, vida silvestre, especies en peligro, caza furtiva, tráfico de fauna, parques nacionales, áreas protegidas, conservación]
+          pt: [biodiversidade, vida selvagem, fauna silvestre, espécies ameaçadas, caça ilegal, tráfico de animais silvestres, parques nacionais, áreas protegidas]
           ar: [التنوع البيولوجي, الحياة البرية, الأنواع المهددة بالانقراض, الصيد غير المشروع, المحميات الطبيعية]
           ru: [биоразнообразие, дикая природа, исчезающие виды, браконьерство, заповедники, национальные парки]
           zh: [生物多样性, 野生动物, 濒危物种, 偷猎, 自然保护区, 国家公园]
@@ -849,7 +849,7 @@ topics:
         label: Industry and manufacturing (industrialisation, factories)
         targets: ["9.2", "9.3", "9.4"]
         strong:
-          en: [industrialisation, industrialization, manufacturing, factories, industrial policy, industrial development, value chains, unido, green industry]
+          en: [industrialisation, industrialization, manufacturing, factories, industrial policy, industrial development, value chains, green industry]
           fr: [industrialisation, industrie manufacturière, usines, politique industrielle, chaînes de valeur]
           es: [industrialización, manufactura, fábricas, política industrial, cadenas de valor]
           pt: [industrialização, indústria, manufatura, fábricas, política industrial, cadeias de valor]
@@ -1003,7 +1003,7 @@ topics:
         targets: ["16.3", "16.4", "16.9"]
         strong:
           en: [rule of law, access to justice, justice system, judiciary, judicial reform, legal aid, organised crime, organized crime, illicit financial flows,
-               money laundering, arms trafficking, human trafficking, birth registration, international criminal court, icc]
+               money laundering, arms trafficking, human trafficking, birth registration, international criminal court]
           fr: [état de droit, accès à la justice, système judiciaire, réforme judiciaire, aide juridique, crime organisé, blanchiment d'argent, cour pénale internationale]
           es: [estado de derecho, acceso a la justicia, sistema judicial, reforma judicial, crimen organizado, lavado de dinero, trata de personas, corte penal internacional]
           pt: [estado de direito, acesso à justiça, sistema judiciário, crime organizado, lavagem de dinheiro, tráfico de pessoas, tribunal penal internacional]
@@ -1372,15 +1372,15 @@ topics:
       - id: war_conflict
         label: Wars and armed conflict (military, terrorism, weapons)
         strong:
-          en: [war, armed conflict, conflict zone, military, airstrikes, airstrike, ceasefire, rebels, insurgency, terrorism, terrorist, militants, armed groups, weapons, landmines, nuclear weapons, civilian casualties]
-          fr: [guerre, conflit armé, militaire, frappes aériennes, cessez-le-feu, rebelles, insurrection, terrorisme, terroriste, groupes armés, armes, mines antipersonnel]
-          es: [guerra, conflicto armado, militar, bombardeos, alto el fuego, rebeldes, insurgencia, terrorismo, terrorista, grupos armados, armas, minas antipersona]
-          pt: [guerra, conflito armado, militar, bombardeios, cessar-fogo, rebeldes, terrorismo, terrorista, grupos armados, armas, minas terrestres]
-          ar: [الحرب, النزاع المسلح, الصراع المسلح, غارات جوية, وقف إطلاق النار, المتمردين, الإرهاب, إرهابي, الجماعات المسلحة, الأسلحة]
-          ru: [война, вооружённый конфликт, военные, авиаудары, перемирие, прекращение огня, повстанцы, терроризм, вооружённые группировки, оружие]
-          zh: [战争, 武装冲突, 军事, 空袭, 停火, 叛军, 恐怖主义, 武装团体, 武器]
-          hi: [युद्ध, सशस्त्र संघर्ष, सैन्य, हवाई हमले, युद्धविराम, आतंकवाद, आतंकवादी, हथियार]
-          sw: [vita, mzozo wa kivita, kijeshi, mashambulizi ya anga, usitishaji mapigano, waasi, ugaidi, magaidi, makundi yenye silaha, silaha]
+          en: [war crimes, war zone, armed conflict, conflict zone, military, airstrikes, airstrike, ceasefire, rebels, insurgency, terrorism, terrorist, militants, armed groups, weapons, landmines, nuclear weapons, civilian casualties]
+          fr: [crimes de guerre, zone de guerre, conflit armé, militaire, frappes aériennes, cessez-le-feu, rebelles, insurrection, terrorisme, terroriste, groupes armés, armes, mines antipersonnel]
+          es: [crímenes de guerra, zona de guerra, conflicto armado, militar, bombardeos, alto el fuego, rebeldes, insurgencia, terrorismo, terrorista, grupos armados, armas, minas antipersona]
+          pt: [crimes de guerra, zona de guerra, conflito armado, militar, bombardeios, cessar-fogo, rebeldes, terrorismo, terrorista, grupos armados, armas, minas terrestres]
+          ar: [جرائم الحرب, النزاع المسلح, الصراع المسلح, غارات جوية, وقف إطلاق النار, المتمردين, الإرهاب, إرهابي, الجماعات المسلحة, الأسلحة]
+          ru: [военные преступления, вооружённый конфликт, военные, авиаудары, перемирие, прекращение огня, повстанцы, терроризм, вооружённые группировки, оружие]
+          zh: [战争罪, 武装冲突, 军事, 空袭, 停火, 叛军, 恐怖主义, 武装团体, 武器]
+          hi: [युद्ध अपराध, सशस्त्र संघर्ष, सैन्य, हवाई हमले, युद्धविराम, आतंकवाद, आतंकवादी, हथियार]
+          sw: [uhalifu wa kivita, mzozo wa kivita, kijeshi, mashambulizi ya anga, usitishaji mapigano, waasi, ugaidi, magaidi, makundi yenye silaha, silaha]
       - id: peace_operations
         label: Peace talks and peacekeeping (UN peacekeeping, ceasefires, mediation)
         strong:
@@ -1407,14 +1407,14 @@ topics:
       sw: [teknolojia]
     strong:
       en: [technology, tech, artificial intelligence, cybersecurity, data protection, digital rights, smartphones, social media platforms, software, startups, digital transformation]
-      fr: [technologie, technologies, intelligence artificielle, numérique, cybersécurité, protection des données]
+      fr: [technologie, technologies, intelligence artificielle, cybersécurité, protection des données]
       es: [tecnología, inteligencia artificial, ciberseguridad, protección de datos]
       pt: [tecnologia, inteligência artificial, cibersegurança, proteção de dados]
-      ar: [التكنولوجيا, الذكاء الاصطناعي, الرقمي, الإنترنت, الأمن السيبراني]
-      ru: [технологии, искусственный интеллект, цифровой, интернет, кибербезопасность]
-      zh: [科技, 人工智能, 数字化, 互联网, 网络安全]
-      hi: [तकनीक, प्रौद्योगिकी, आर्टिफिशियल इंटेलिजेंस, डिजिटल, इंटरनेट, साइबर सुरक्षा]
-      sw: [teknolojia, akili bandia, kidijitali, intaneti, usalama wa mtandao]
+      ar: [التكنولوجيا, الذكاء الاصطناعي, الأمن السيبراني]
+      ru: [технологии, искусственный интеллект, кибербезопасность]
+      zh: [科技, 人工智能, 网络安全]
+      hi: [तकनीक, प्रौद्योगिकी, आर्टिफिशियल इंटेलिजेंस, साइबर सुरक्षा]
+      sw: [teknolojia, akili bandia, usalama wa mtandao]
 
   agriculture:
     sections:
@@ -1511,7 +1511,7 @@ topics:
       hi: [आदिवासी]
       sw: [jamii za asili]
     strong:
-      en: [indigenous, indigenous peoples, first nations, aboriginal, native american, inuit, métis, maori, māori, sámi, saami, adivasi, tribal communities, pastoralist communities,
+      en: [indigenous, indigenous peoples, first nations, aboriginal, native american, inuit, métis, maori, māori, sámi people, saami, adivasi, tribal communities, pastoralist communities,
            maasai, batwa, pygmy, san people, amazigh, quechua, aymara, mapuche, mayan, nahuatl, wayuu, yanomami, torres strait islander]
       fr: [autochtones, peuples autochtones, premières nations, amérindiens, kanak, peuples pygmées, batwa, touaregs, amazighs, berbères]
       es: [indígenas, pueblos indígenas, pueblos originarios, comunidades indígenas, quechua, aymara, mapuche, pueblo maya, wayuu, nahua, mixteco, zapoteco]
@@ -1646,7 +1646,7 @@ topics:
       hi: [वरिष्ठ नागरिक, बुजुर्ग]
       sw: [wazee]
     strong:
-      en: [older persons, older people, elderly, seniors, senior citizens, ageing, aging, pensioners, pensions, retirement, dementia, alzheimer's, long-term care, elder abuse]
+      en: [older persons, older people, elderly, seniors, senior citizens, ageing, aging, pensioners, pensions, retirement homes, dementia, alzheimer's, long-term care, elder abuse]
       fr: [personnes âgées, seniors, aînés, retraités, retraite, vieillissement, dépendance, démence, alzheimer, ehpad]
       es: [personas mayores, adultos mayores, tercera edad, jubilados, pensiones, envejecimiento, demencia, alzheimer]
       pt: [idosos, pessoa idosa, terceira idade, aposentados, aposentadoria, envelhecimento, demência, alzheimer]
