@@ -115,6 +115,12 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
 - 4e done: social media platform fold-out, "Also show outlets without channel information",
   no "step 4" notices left on the site; every filter button has data except WhatsApp.
 
+## Step 5 (reports): built 09.11.2026, owner's decision pending
+- `pipeline/validate/reports.py` -> reports/coverage.md (+ coverage_by_country.csv), sample.md,
+  contradictions.md, changes.md. Owner decides which filters stay in v1 and whether AI (5b) is needed.
+- PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
+  languages = "Has a section on it", step 5 reports, data of the full website check (still running).
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
