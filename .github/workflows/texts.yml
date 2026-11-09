@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
     inputs:
       max_rank:
-        description: "Check websites of the top N outlets per country"
-        default: "100"
+        description: "Check websites of the top N outlets per country (100000 = all)"
+        default: "100000"
   push:
     branches: ["claude/**", "step-*"]
     paths: ["pipeline/fetch/texts.py", "pipeline/fetch/website_check.py", ".github/workflows/texts.yml"]
@@ -20,6 +20,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   texts:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[texts]')
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -45,8 +46,10 @@ jobs:
         continue-on-error: true
         timeout-minutes: 175
         env:
-          WEBSITE_MAX_RANK: ${{ inputs.max_rank || '100' }}
-          WEBSITE_MINUTES: "160"
+          # owner, 09.11.2026: all websites (~59,000); sites checked in the last 50 days are skipped,
+          # so a run that hits the time limit continues on the next run
+          WEBSITE_MAX_RANK: ${{ inputs.max_rank || '100000' }}
+          WEBSITE_MINUTES: "165"
         run: python pipeline/fetch/website_check.py
       - name: Save raw data
         if: always()
