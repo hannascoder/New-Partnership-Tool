@@ -123,6 +123,20 @@ if isinstance(rules, dict):
     if ur.get("minority_language") and ur["minority_language"] not in un_ids:
         errors.append(f"rules.yaml: unknown UN profile '{ur['minority_language']}' in un_profile -> minority_language")
 
+# topic keyword lists (config/topic_keywords.yaml)
+kwf = yaml.safe_load(open(CONFIG / "topic_keywords.yaml", encoding="utf-8")) or {}
+for tid, t in (kwf.get("topics") or {}).items():
+    if tid not in topic_ids:
+        errors.append(f"topic_keywords.yaml: unknown topic '{tid}'")
+    subs = [x.get("id") for x in t.get("subtopics") or []]
+    for x in t.get("subtopics") or []:
+        if not x.get("id") or not x.get("label") or not x.get("strong"):
+            errors.append(f"topic_keywords.yaml: sub-topic in '{tid}' needs id, label and strong words")
+    if subs and t.get("general_subtopic") not in subs:
+        errors.append(f"topic_keywords.yaml: '{tid}' needs general_subtopic, one of {subs}")
+    if not subs and not t.get("strong"):
+        errors.append(f"topic_keywords.yaml: '{tid}' has no strong words")
+
 header = open(ROOT / "overrides.csv", encoding="utf-8").readline().strip()
 if header != "outlet_id,field,value,note":
     errors.append(f"overrides.csv: first line must be 'outlet_id,field,value,note', found '{header}'")

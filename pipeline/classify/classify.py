@@ -15,6 +15,7 @@ from collections import Counter
 from pathlib import Path
 
 import re
+import sys
 
 import yaml
 
@@ -22,7 +23,8 @@ ROOT = Path(__file__).resolve().parents[2]
 NET_LABEL = {"efcsn_signatories": "EFCSN", "ifcn_signatories": "IFCN", "fact_checking_sites": "Wikipedia list of fact-checking websites",
              "news_agencies": "Wikipedia list of news agencies", "ebu_members": "EBU membership", "asbu_members": "ASBU membership",
              "abu_members": "ABU membership", "cbu_members": "CBU membership", "sdg_media_compact": "SDG Media Compact",
-             "state_media": "Wikipedia list of state media", "covering_climate_now": "Covering Climate Now"}
+             "state_media": "Wikipedia list of state media", "covering_climate_now": "Covering Climate Now",
+             "occrp_network": "OCCRP network (investigative journalism)"}
 
 
 def val(value, method, source):
@@ -370,7 +372,7 @@ def apply_list_overrides(ev, ov, field, label):
         ev.best.pop(v, None)
 
 
-def topics(o, cat, rules, maps, kw, order, ov):
+def topics(o, cat, rules, maps, kw, order, ov, texts=None):
     ev = Evidence()
     source_mappings(o, maps, "topics", ev)
     for topic, nets in (rules.get("networks") or {}).items():
@@ -384,20 +386,117 @@ def topics(o, cat, rules, maps, kw, order, ov):
     for topic, scs in (rules.get("scopes") or {}).items():
         if cat["scope"]["value"] in scs:
             ev.add(topic, "rule", "scope " + cat["scope"]["value"])
-    name = (o["name"] or "").casefold()
-    if name.count(",") <= rules.get("name_keywords_max_commas", 99):
-        for phrase in rules.get("name_keywords_ignore") or []:
-            name = name.replace(phrase.casefold(), " ")
-        for topic, word, rx in kw:
-            if topic not in ev.best and rx.search(name):
-                ev.add(topic, "keyword", f"name contains \"{word}\"")
+    # every value so far comes from a source / network / rule: strength FOCUS
+    for v in ev.best.values():
+        v["strength"] = 1
+    # keyword lists (config/topic_keywords.yaml) on name, descriptions, website
+    name = o["name"] or ""
+    if name.count(",") > rules.get("name_keywords_max_commas", 99):
+        name = ""  # a tagline listing sections, not a name
+    texts = dict(texts or {})
+    base = texts.pop("base_url", None)
+    hits = kw.match(name=name, **texts)
+    for topic, h in hits.items():
+        old = ev.best.get(topic)
+        method = "website_check" if h["why"].startswith("website") else "keyword"
+        if not old or h["s"] < old.get("strength", 9):
+            ev.best[topic] = {**val(topic, method, h["why"]), "strength": h["s"]}
+        if h["subs"]:
+            ev.best[topic]["subs"] = sorted(h["subs"])
+        if h.get("url") and base and ev.best[topic].get("strength") == 2:
+            import urllib.parse
+            ev.best[topic]["url"] = urllib.parse.urljoin(base, h["url"])
     apply_list_overrides(ev, ov, "topics", "topic")
+    for v in ev.best.values():
+        v.setdefault("strength", 1)
     if not ev.best:
         ev.add("general_news", "default", "no topic in the sources: general news")
+        ev.best["general_news"]["strength"] = 3
     return ev.result(order)
 
 
-def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids):
+def add_website_channels_language(o, w, rules, iso1):
+    """Podcast / newsletter from the website menu or feeds; page language if no source has one."""
+    from topic_text import norm
+    words = {ch: {norm(x) for x in lst} for ch, lst in (rules.get("website_channels") or {}).items()}
+    texts = [norm(t) for t, _ in (w.get("nav") or [])] + [norm(f) for f in (w.get("feeds") or [])]
+    for ch, ws in words.items():
+        if ch in o["channels"]:
+            continue
+        if any(t in ws or any((" " + x + " ") in (" " + t + " ") for x in ws) for t in texts):
+            o["channels"].append(ch)
+            o.setdefault("channel_source", {})[ch] = "website"
+    if rules.get("website_language") and not o["languages"] and w.get("lang"):
+        code = iso1.get(w["lang"].split("-")[0].split("_")[0].lower())
+        if code:
+            o["languages"] = [code]
+            o["language_source"] = "website"
+
+
+def profile_words(o, txt, cfg):
+    """UN profiles from how the outlet describes itself (rules.yaml un_profile_words)."""
+    from topic_text import norm
+    out = {}
+    texts = [("name", o["name"] or "")] + [("description", d) for d in txt.get("descriptions") or []] + \
+            [(label, t) for label, t in txt.get("abouts") or []]
+    for prof, d in cfg.items():
+        for label, t in texts:
+            hay = " " + norm(t) + " "
+            hit = next((x for x in d["phrases"] if " " + x + " " in hay), None)
+            if hit:
+                out[prof] = f'{label} mentions "{hit}"'
+                break
+        if prof not in out:
+            for text, _ in txt.get("menu") or []:
+                if norm(text) in d["sections"]:
+                    out[prof] = f'website section "{text}"'
+                    break
+    return out
+
+
+def partner_content(w, words):
+    """Reason text if the website shows the outlet takes content from others, else None."""
+    if not w or w.get("status") != "ok" or not words:
+        return None
+    from topic_text import norm
+    for text, url in w.get("extra") or []:
+        hay = " " + norm(text) + " " + norm(url) + " "
+        for x in words:
+            if " " + x + " " in hay:
+                return f'website link "{text or url}"'
+    about = " " + norm(w.get("about") or "") + " "
+    for x in words:
+        if " " + x + " " in about:
+            return f'website About page mentions "{x}"'
+    return None
+
+
+ORG_MAIL = re.compile(r"^(info|contact|contacto|contato|kontakt|redac|redaction|redaccion|redacao|newsroom|news|noticias|"
+                      r"editor|editors|editorial|desk|hello|hola|office|admin|press|presse|prensa|imprensa|mail|"
+                      r"communication|comunicacion|media|secretariat|reception|support|webmaster|tips|letters|studio|"
+                      r"programs|programmes|radio|tv|online)", re.I)
+
+
+def outlet_texts(o, wd_texts, web):
+    """texts for the keyword lists: Wikidata/Wikipedia (raw/texts) + website check"""
+    desc, abouts, menu, heads = [], [], [], []
+    for q in [m[3:] for m in o["members"] if m.startswith("wd:")]:
+        t = wd_texts.get(q) or {}
+        desc += list((t.get("desc") or {}).values())
+        if t.get("intro"):
+            abouts.append(("Wikipedia", t["intro"]))
+    w = web.get(o["id"]) or {}
+    if w.get("status") == "ok":
+        desc += [x for x in (w.get("desc"), w.get("title")) if x]
+        if w.get("about"):
+            abouts.append(("website About page", w["about"]))
+        menu = [tuple(x) for x in w.get("nav") or []]
+        heads = (w.get("heads") or []) + ([w["home_text"]] if w.get("home_text") else [])
+    return {"descriptions": desc, "abouts": abouts, "menu": menu, "headlines": heads,
+            "base_url": w.get("final_url") if w.get("status") == "ok" else None}
+
+
+def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids, aud_matcher=None, texts=None):
     """Target audience (owner's idea, 09.11.2026): who the outlet is made for."""
     ev = Evidence()
     source_mappings(o, maps, "audience", ev)
@@ -420,6 +519,12 @@ def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_
         for aud, word, rx in kw:
             if aud not in ev.best and rx.search(name):
                 ev.add(aud, "keyword", f"name contains \"{word}\"")
+    if aud_matcher and texts:  # config/audience_keywords.yaml on name, descriptions, About texts
+        hits = aud_matcher.match(name=o["name"] or "", descriptions=texts.get("descriptions") or [],
+                                 abouts=texts.get("abouts") or [])
+        for aud, h in hits.items():
+            if aud not in ev.best:
+                ev.add(aud, "website_check" if "website" in h["why"] else "keyword", h["why"])
     apply_list_overrides(ev, ov, "audience", "target audience")
     return ev.result(order)
 
@@ -482,12 +587,35 @@ def main():
     src = ROOT / "config" / "sources"
     maps = {k: yaml.safe_load(open(src / f, encoding="utf-8")) for k, f in
             (("iptv", "iptv_org.yaml"), ("rb", "radio_browser.yaml"), ("wd", "wikidata.yaml"))}
-    kw = keyword_patterns(rules["topics"])
+    sys.path.insert(0, str(ROOT / "pipeline" / "classify"))
+    from topic_text import Matcher
+    kw = Matcher(auto_kind="topic")
+    aud_matcher = Matcher(ROOT / "config" / "audience_keywords.yaml", auto_kind="audience")
+    tf = ROOT / "raw" / "texts" / "data.json.gz"
+    wd_texts = json.load(gzip.open(tf, "rt", encoding="utf-8")) if tf.exists() else {}
+    web = {}
+    for f in sorted((ROOT / "raw" / "website_check").glob("*.json.gz")):
+        web.update(json.load(gzip.open(f, "rt", encoding="utf-8")))
+    print(f"texts: {len(wd_texts)} Wikidata items, {len(web)} websites checked")
+    # other-language words (Wikidata) that are everyday words: dropped by frequency
+    if kw.auto:
+        cnt = Counter()
+        for o in outlets:
+            t = outlet_texts(o, wd_texts, web)
+            cnt.update(kw.auto_terms([o["name"] or ""] + t["descriptions"] + [x for _, x in t["abouts"]]
+                                     + [x for x, _ in t["menu"]] + t["headlines"]))
+        dropped = kw.prune_auto(cnt, len(outlets), rules["topics"].get("auto_words_max_share", 0.003))
+        print(f"other-language words dropped as too common: {len(dropped)} ({', '.join(dropped[:15])} ...)")
     official = {r["iso3"]: set(filter(None, r["official_languages"].split(";")))
                 for r in csv.DictReader(open(ROOT / "config" / "official_languages.csv", encoding="utf-8"))}
     lang_rows = list(csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")))
     buttons = {r["code"] for r in lang_rows if r["button"]}
     lang_names = {r["code"]: r["name"] for r in lang_rows}
+    iso1 = {r["iso639_1"]: r["code"] for r in lang_rows if r["iso639_1"]}
+    from topic_text import norm
+    partner_words = [norm(x) for x in rules.get("open_to_partner_content") or []]
+    profile_cfg = {p: {"phrases": [norm(x) for x in d.get("phrases") or []], "sections": {norm(x) for x in d.get("sections") or []}}
+                   for p, d in (rules.get("un_profile_words") or {}).items()}
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
         cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
@@ -512,11 +640,36 @@ def main():
         cat["service_languages"] = sorted(set(extra_langs) - set(o["languages"]))
         cat["services"] = sorted({s["name"] for e, s, _ in intl.get(o["id"], []) if s})
         ov = overrides.get(o["id"], {})
-        cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov)
+        txt = outlet_texts(o, wd_texts, web)
+        cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov, txt)
+        w = web.get(o["id"]) or {}
+        if w.get("status") == "ok":  # contacts and social links from the website (owner's to-do 6)
+            mails = [e for e in w.get("emails") or [] if ORG_MAIL.match(e)]
+            if mails and not o.get("email"):
+                o["email"] = mails[0]
+                o["email_source"] = "website"
+            for k, u in (w.get("social") or {}).items():
+                o.setdefault("social_urls", {}).setdefault(k, u)
+            if w.get("social") and "social_media" not in o["channels"]:
+                o["channels"].append("social_media")
+        cat["website_status"] = w.get("status")
+        if w.get("contact_url"):
+            o["contact_page"] = w["contact_url"]
+        if w.get("last_post"):
+            o["last_post"] = w["last_post"]
+        if w.get("status") == "ok":
+            add_website_channels_language(o, w, rules, iso1)
         cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
                                        {t["value"] for t in cat["topics"]})
+        for prof, why in profile_words(o, txt, profile_cfg).items():
+            if not any(u["value"] == prof for u in cat["un_profile"]):
+                cat["un_profile"].append(val(prof, "website_check" if "website" in why else "keyword", why))
+        hint = partner_content(w, partner_words)
+        if hint and not any(u["value"] == "open_to_partner_content" for u in cat["un_profile"]):
+            cat["un_profile"].append(val("open_to_partner_content", "website_check", hint))
+            cat["un_profile"].sort(key=lambda v: un_order.index(v["value"]) if v["value"] in un_order else 999)
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
-                                          lang_names, {t["value"] for t in cat["topics"]})
+                                          lang_names, {t["value"] for t in cat["topics"]}, aud_matcher, txt)
         for field, row in overrides.get(o["id"], {}).items():
             if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")
@@ -567,7 +720,9 @@ def report(outlets, intl_missing=()):
 def report_4d(outlets, cats_cfg):
     shown = [o for o in outlets if not o["cat"].get("excluded")]
     n = len(shown)
+    by_strength = Counter(v.get("strength") for o in shown for v in o["cat"]["topics"] if v["method"] != "default")
     lines = ["# Step 4d: topics, target audience and UN profile", "",
+             f"Topic matches by strength: main focus {by_strength[1]:,} · own section {by_strength[2]:,} · covers it {by_strength[3]:,}", "",
              f"{n:,} outlets shown on the website. An outlet can have several topics and profiles.",
              "Topics and UN profiles never hide an outlet; they only change the order (unless the user",
              "switches on \"Only show topic matches\").", "",
@@ -606,6 +761,27 @@ def report_4d(outlets, cats_cfg):
                      f"{by['override']:,} | " + ("; ".join(f"{k} ({c:,})" for k, c in why) or "no open source yet") + " |")
     lines.append(f"\nOutlets with at least one target audience: {sum(1 for o in shown if o['cat']['audience_groups']):,}")
     (ROOT / "reports" / "topics.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    # sample for checking by hand: per topic up to 6 random outlets, with strength and reason
+    import random
+    rnd = random.Random(42)
+    names = {1: "main focus", 2: "own section", 3: "covers it"}
+    sm = ["# Topics: random sample to check by hand", "",
+          "Per topic up to 6 random outlets (2 per strength where possible). Wrong? Tell Claude the id,",
+          "or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.", ""]
+    for t in cats_cfg["topics"]:
+        if t["id"] == "general_news":
+            continue
+        rows = [(o, v) for o in shown for v in o["cat"]["topics"] if v["value"] == t["id"]]
+        pick = []
+        for s in (1, 2, 3):
+            grp = [r for r in rows if r[1].get("strength") == s]
+            pick += rnd.sample(grp, min(2, len(grp)))
+        sm += [f"## {t['label']}" + (f" (SDG {t['sdg']})" if t.get("sdg") else "") + f" — {len(rows):,} outlets", "",
+               "| Id | Name | Country | Strength | Reason |", "|---|---|---|---|---|"]
+        sm += [f"| {o['id']} | {(o['name'] or '')[:60]} | {o['country']} | {names.get(v.get('strength'), '')} | {v['source'][:120]} |"
+               for o, v in pick] or ["| | none yet | | | |"]
+        sm.append("")
+    (ROOT / "reports" / "topics_sample.md").write_text("\n".join(sm) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
 

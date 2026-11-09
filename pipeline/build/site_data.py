@@ -1,11 +1,13 @@
 """Builds the files the website reads (site/data/):
-  outlets.json   one compact entry per outlet (short keys, empty fields left out)
+  outlets-N.json one compact entry per outlet (short keys, empty fields left out),
+                 split into files of 25,000 outlets (Cloudflare limit: 25 MiB per file)
   config.json    allowed values for the filters (from config/), so the page
                  never hard-codes a category, country or language
 The website only reads these two files (briefing K1)."""
 import csv
 import gzip
 import json
+import re
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -23,12 +25,83 @@ NETWORK_FILTER = {"un_relationship": "Existing UN relationship (SDG Media Compac
                   "abu_members": "ABU (Asia-Pacific Broadcasting Union)", "asbu_members": "ASBU (Arab States Broadcasting Union)",
                   "cbu_members": "CBU (Caribbean Broadcasting Union)", "ifcn_signatories": "IFCN (fact-checkers)",
                   "efcsn_signatories": "EFCSN (fact-checkers)",
-                  "fact_checking_sites": "Fact-checking websites (Wikipedia list)"}
+                  "fact_checking_sites": "Fact-checking websites (Wikipedia list)",
+                  "occrp_network": "OCCRP (investigative journalism)"}
 SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org": "iptv-org",
                 "radio_browser": "Radio Browser", "sdg_media_compact": "SDG Media Compact", "ifcn_signatories": "IFCN",
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
                 "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
-                "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU"}
+                "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU",
+                "occrp_network": "OCCRP"}
+
+
+def fix_text(s):
+    """Repairs names whose letters were mis-read by a source ("Rock â€“ News" -> "Rock – News"):
+    the text is re-read as UTF-8 if that removes the typical broken characters."""
+    if not s or not any(m in s for m in ("â€", "Ã", "‚Ä", "Â", "Ð", "Ø§", "„Å", "„Ç", "„É", "„Ä")):
+        return s
+    for enc in ("cp1252", "latin-1", "mac_roman"):
+        try:
+            t = s.encode(enc).decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            continue
+        if t != s:
+            return t
+    return s
+
+
+def compact(out):
+    """Keeps outlets.json under Cloudflare's 25 MiB per-file limit: values that repeat
+    (channels, sources, type, ownership, scope) become numbers, the most common
+    "first seen" date is left out, social links are stored as the account name when
+    they follow the usual address pattern. finder.js expand() restores everything."""
+    from collections import Counter
+    codes = {}
+    for key, pos in (("ch", None), ("s", None), ("o", 0), ("ow", 0), ("sc", 0), ("oa", None), ("nw", None)):
+        vals = sorted({(v if pos is None else e[key][pos]) for e in out if key in e
+                       for v in (e[key] if pos is None else [None])} - {None})
+        if pos is not None:
+            vals = sorted({e[key][pos] for e in out if key in e})
+        idx = {v: i for i, v in enumerate(vals)}
+        codes[key] = vals
+        for e in out:
+            if key in e:
+                if pos is None:
+                    e[key] = [idx[v] for v in e[key]]
+                else:
+                    e[key] = [idx[e[key][0]]] + e[key][1:]
+    common = Counter(e["f"] for e in out).most_common(1)[0][0]
+    codes["f"] = common
+    for e in out:
+        if e["f"] == common:
+            del e["f"]
+    # links on the outlet's own website: stored without "https://www.example.org"
+    import urllib.parse
+    for e in out:
+        base = e.get("w")
+        if not base:
+            continue
+        host = re.sub(r"^www\.", "", urllib.parse.urlsplit(base if "//" in base else "http://" + base).netloc.lower())
+
+        def rel(u):
+            p = urllib.parse.urlsplit(u)
+            if re.sub(r"^www\.", "", p.netloc.lower()) == host and p.path.startswith("/"):
+                return p.path + ("?" + p.query if p.query else "")
+            return u
+        if e.get("cp"):
+            e["cp"] = rel(e["cp"])
+        for t in e.get("tp") or []:
+            if len(t) >= 5:
+                t[4] = rel(t[4])
+    codes["so"] = SOCIAL_URL
+    for e in out:
+        for k, u in list((e.get("so") or {}).items()):
+            tpl = SOCIAL_URL.get(k)
+            if tpl:
+                pre = tpl.split("{}")[0]
+                if u.startswith(pre) and "/" not in u[len(pre):].rstrip("/"):
+                    e["so"][k] = u[len(pre):].rstrip("/")
+    return codes
 
 
 def main():
@@ -37,6 +110,13 @@ def main():
     countries = list(csv.DictReader(open(CFG / "countries.csv", encoding="utf-8")))
     langs_all = {r["code"]: r for r in csv.DictReader(open(CFG / "languages.csv", encoding="utf-8"))}
     cats = yaml.safe_load(open(CFG / "categories.yaml", encoding="utf-8"))
+    # sub-topics (config/topic_keywords.yaml) shown under a chosen topic; the words stay hidden
+    kw = yaml.safe_load(open(CFG / "topic_keywords.yaml", encoding="utf-8"))["topics"]
+    general = {k: v["general_subtopic"] for k, v in kw.items() if v.get("subtopics")}
+    for t in cats["topics"]:
+        subs = (kw.get(t["id"]) or {}).get("subtopics") or []
+        if subs:
+            t["subtopics"] = [{"id": s["id"], "label": s["label"]} for s in subs]
 
     # prominence and rank within the country (briefing J)
     for o in outlets:
@@ -55,7 +135,7 @@ def main():
     def w(text):
         return why.setdefault(text, len(why))
     for o in outlets:
-        e = {"i": o["id"], "n": o["name"], "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
+        e = {"i": o["id"], "n": fix_text(o["name"]), "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
         alt = [a for a in o["alt_names"] if a.isascii()][:3]
         if alt:
             e["a"] = alt
@@ -69,17 +149,33 @@ def main():
         social = {k: SOCIAL_URL[k].format(v) for k, v in (o.get("social") or {}).items() if k in SOCIAL_URL}
         if social:
             e["so"] = social
+        for k, u in (o.get("social_urls") or {}).items():  # from the website check
+            if k in SOCIAL_URL or k == "linkedin":
+                e.setdefault("so", {}).setdefault(k, u)
+        if o.get("contact_page"):
+            e["cp"] = o["contact_page"]
+        if o.get("last_post"):
+            e["lp"] = o["last_post"]
         if o.get("email"):
             e["em"] = o["email"].replace("mailto:", "").strip()
         e["s"] = o["sources"]
         e["f"] = o["first_seen"]
+        if (o.get("cat") or {}).get("website_status") == "error":
+            e["wd"] = 1  # website did not answer at the last website check
         cat = o.get("cat", {})
         # topics (step 4d): ids in "tp", the reason of each in "tw" (same order).
         # Left out when the only topic is the default "general news" (no evidence).
+        # [topic, strength (1 focus, 2 desk, 3 covers), reason, [sub-topics]]
         tps = [t for t in cat.get("topics", []) if t["method"] != "default"]
         if tps:
-            e["tp"] = [t["value"] for t in tps]
-            e["tw"] = [w(t["source"]) for t in tps]
+            # 5th value: link to the website section ("own section" only)
+            e["tp"] = [[t["value"], t.get("strength", 1), w(t["source"])]
+                       + ([t.get("subs") or [general[t["value"]]]] if t["value"] in general else [[]])
+                       + ([t["url"]] if t.get("url") else [])
+                       for t in tps]
+            for x in e["tp"]:
+                if len(x) == 4 and x[3] == []:
+                    x.pop()
         if cat.get("audience_groups"):
             e["au"] = [a["value"] for a in cat["audience_groups"]]
             e["aw"] = [w(a["source"]) for a in cat["audience_groups"]]
@@ -108,6 +204,7 @@ def main():
             e["nw"] = nets
         out.append(e)
     out.sort(key=lambda e: (e["n"] or "").lower())
+    codes = compact(out)  # repeated values -> short codes; the page expands them (finder.js expand())
 
     atlas_file = ROOT / "raw" / "atlas" / "data.json.gz"
     atlas = json.load(gzip.open(atlas_file, "rt", encoding="utf-8")) if atlas_file.exists() else {}
@@ -127,19 +224,33 @@ def main():
         "languages": sorted(({"code": c, "name": langs_all[c]["name"]} for c in used_langs if c in langs_all),
                             key=lambda x: x["name"]),
         "categories": {k: cats[k] for k in ("material", "org_type", "channel", "ownership", "scope",
-                                             "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort")},
+                                             "topic_groups", "topics", "audience", "un_profile", "social_platform", "size", "checkboxes", "sort")},
         "size_note": cats.get("size_note"),
+        "new_months": cats.get("new_months", 4),
+        "active_months": cats.get("active_months", 3),
+        "feedback_email": cats.get("feedback_email"),
+        "topic_strength": cats.get("topic_strength"),
+        "topic_strength_note": cats.get("topic_strength_note"),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
-        "pending": ["website_check"],
+        "codes": codes,
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)
-    json.dump(out, open(data / "outlets.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # split into several files of at most 25,000 outlets (Cloudflare: max 25 MiB per file)
+    for f in data.glob("outlets*.json"):
+        f.unlink()
+    files = []
+    for i in range(0, len(out), 25000):
+        name = f"outlets-{i // 25000 + 1}.json"
+        json.dump(out[i:i + 25000], open(data / name, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        files.append(name)
+    config["outlet_files"] = files
     json.dump(config, open(data / "config.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    print(f"site/data/outlets.json: {len(out)} outlets, {(data / 'outlets.json').stat().st_size / 1e6:.1f} MB")
+    sizes = ", ".join(f"{f} {(data / f).stat().st_size / 1e6:.1f} MB" for f in files)
+    print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes})")
 
 
 if __name__ == "__main__":

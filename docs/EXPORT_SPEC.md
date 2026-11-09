@@ -46,6 +46,7 @@ text), so filters added later automatically appear in the export without code ch
   website and contact links are clickable; a "Topic" column shows only the topics that were
   filtered on (all topics if no topic filter was set); a "Notes" column for flags
   (e.g. State-controlled, Unverified, Website not reachable, New).
+  Partner Finder: 16 columns since 09.11.2026 (owner added "Target audience" after "Topic").
 - PDF and Word: A4 landscape, table header repeated on every page, rows never split across
   pages, footer "<Tool name> · DGC Partnerships   Page x of y".
 - Excel: ONE sheet; logo and header rows on top, then a dark header row (frozen when

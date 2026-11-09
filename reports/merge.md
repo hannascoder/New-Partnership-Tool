@@ -1,8 +1,8 @@
 # Step 3b: merged outlets
 
-- Records read: 205172
-- **Outlets after merging and inclusion rules: 71035**
-- in 2+ sources (verified): 13992
+- Records read: 205232
+- **Outlets after merging and inclusion rules: 71076**
+- in 2+ sources (verified): 14002
 - merges refused because two different entries of the same source would have been joined: 21783
 - with a country conflict between sources: 215
 
@@ -10,14 +10,14 @@
 
 | Sources | Outlets |
 |---|---|
-| media_cloud | 20095 |
-| wikidata | 15562 |
+| media_cloud | 20094 |
+| wikidata | 15561 |
 | iptv_org | 13324 |
 | radio_browser | 7782 |
-| wikidata + media_cloud | 6194 |
+| wikidata + media_cloud | 6195 |
 | wikidata + iptv_org | 2861 |
 | wikidata + radio_browser | 2604 |
-| network list only | 726 |
+| network list only | 768 |
 | wikidata + media_cloud + iptv_org | 457 |
 | wikidata + media_cloud + radio_browser | 347 |
 | media_cloud + iptv_org | 274 |

@@ -1,4 +1,4 @@
-/* Partner Finder: filters the outlets in data/outlets.json in the browser.
+/* Partner Finder: filters the outlets in data/outlets-N.json in the browser.
    All allowed values come from data/config.json (built from config/).
    Filter logic (briefing L): hard filters must match; within one filter OR,
    between filters AND. Topics and UN profile only change the order. */
@@ -6,7 +6,7 @@
   "use strict";
   const PAGE = 50;
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
-              channel: new Set(), size: "all", tp: new Set(), au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
+              channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
@@ -20,20 +20,88 @@
     catch (e) { /* private window: the list still works until the page is closed */ }
   }
 
-  Promise.all([fetch("data/config.json").then((r) => r.json()), fetch("data/outlets.json").then((r) => r.json())])
-    .then(([cfg, outlets]) => { CFG = cfg; ALL = outlets; init(); apply(); })
+  fetch("data/config.json").then((r) => r.json())
+    .then((cfg) => Promise.all((cfg.outlet_files || ["outlets.json"]).map((f) => fetch("data/" + f).then((r) => r.json())))
+      .then((parts) => [cfg, [].concat(...parts)]))
+    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); })
     .catch(() => { $("counter").textContent = "The data could not be loaded. Please reload the page."; });
+
+  /* outlets.json stores repeated values as short codes (pipeline/build/site_data.py compact()) */
+  function expand(list, codes) {
+    const arr = ["ch", "s", "oa", "nw"], first = ["o", "ow", "sc"];
+    list.forEach((o) => {
+      arr.forEach((k) => { if (o[k] && codes[k]) o[k] = o[k].map((v) => (typeof v === "number" ? codes[k][v] : v)); });
+      first.forEach((k) => { if (o[k] && codes[k] && typeof o[k][0] === "number") o[k][0] = codes[k][o[k][0]]; });
+      if (!o.f && codes.f) o.f = codes.f;
+      if (!o.s) o.s = [];
+      if (o.w) {  // links on the outlet's own website are stored as "/path"
+        const origin = (/^https?:\/\//.test(o.w) ? o.w : "http://" + o.w).replace(/^(https?:\/\/[^/]+).*$/, "$1");
+        if (o.cp && o.cp[0] === "/") o.cp = origin + o.cp;
+        (o.tp || []).forEach((e) => { if (e[4] && e[4][0] === "/") e[4] = origin + e[4]; });
+      }
+      if (o.so && codes.so) Object.keys(o.so).forEach((k) => { const v = o.so[k]; if (codes.so[k] && !/^https?:/.test(v)) o.so[k] = codes.so[k].replace("{}", v); });
+    });
+    return list;
+  }
 
   function chip(label, pressed, onClick, opts = {}) {
     const b = document.createElement("button");
     b.type = "button"; b.className = "chip"; b.innerHTML = label;
     b.setAttribute("aria-pressed", pressed ? "true" : "false");
-    if (opts.disabled) { b.disabled = true; b.title = opts.title || "Available after step 4 (classification)"; }
+    if (opts.disabled) { b.disabled = true; b.title = opts.title || "No data for this yet"; }
     if (opts.title && !opts.disabled) b.title = opts.title;
     b.addEventListener("click", () => { onClick(b); });
+    if (onClick._v !== undefined) { b.dataset.f = SETNAME.get(onClick._set) || ""; b.dataset.v = onClick._v; }
+    if (opts.f) { b.dataset.f = opts.f; b.dataset.v = opts.v; }
     return b;
   }
-  function toggle(set, value) { return (b) => { set.has(value) ? set.delete(value) : set.add(value); b.setAttribute("aria-pressed", set.has(value)); apply(); }; }
+  function toggle(set, value) {
+    const fn = (b) => { set.has(value) ? set.delete(value) : set.add(value); b.setAttribute("aria-pressed", set.has(value)); apply(); };
+    fn._set = set; fn._v = value; return fn;
+  }
+  /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
+  const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", ck: "checks", pl: "platforms" };
+  const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", ou: "f-ownUnknown", om: "f-onlyMatches" };
+  let restoring = false;
+  function saveHash() {
+    if (restoring) return;
+    const p = new URLSearchParams();
+    Object.entries(SETS).forEach(([k, v]) => { if (S[v].size) p.set(k, [...S[v]].join(",")); });
+    const off = Object.entries(S.subOff).filter(([t, o]) => o.size && S.tp.has(t)).map(([t, o]) => t + ":" + [...o].join("|"));
+    if (off.length) p.set("off", off.join(";"));
+    if (S.region) p.set("rg", S.region);
+    if (S.country) p.set("c", S.country);
+    if (S.size !== "all") p.set("size", S.size);
+    if (S.sort !== "auto") p.set("sort", S.sort);
+    if (!S.reach) p.set("rch", "0");
+    Object.entries(FLAGS).forEach(([k, id]) => { if ($(id) && $(id).checked) p.set(k, "1"); });
+    const h = p.toString();
+    history.replaceState(null, "", h ? "#" + h : location.pathname + location.search);
+  }
+  function restoreHash() {
+    const p = new URLSearchParams(location.hash.slice(1));
+    if (![...p.keys()].length) return;
+    restoring = true;
+    const fire = (el, ev) => el && el.dispatchEvent(new Event(ev));
+    if (p.get("rg")) { $("f-region").value = p.get("rg"); fire($("f-region"), "change"); }
+    if (p.get("c")) { $("f-country").value = p.get("c"); fire($("f-country"), "change"); }
+    Object.keys(SETS).forEach((k) => (p.get(k) || "").split(",").filter(Boolean).forEach((v) => {
+      const b = document.querySelector(`.chip[data-f="${k}"][data-v="${CSS.escape(v)}"]`);
+      if (b && !b.disabled) b.click();
+      else if (k === "l") { S.langs.add(v); drawOtherLangs(); }
+      else if (k === "ck") { const c = document.querySelector(`#f-checks input[data-v="${CSS.escape(v)}"]`); if (c && !c.disabled) { c.checked = true; fire(c, "change"); } }
+    }));
+    (p.get("off") || "").split(";").filter(Boolean).forEach((x) => {
+      const [t, subs] = x.split(":");
+      (subs || "").split("|").forEach((s) => { const b = document.querySelector(`.chip[data-f="sub:${CSS.escape(t)}"][data-v="${CSS.escape(s)}"]`); if (b) b.click(); });
+    });
+    if (p.get("size")) { const r = document.querySelector(`input[name="size"][value="${CSS.escape(p.get("size"))}"]`); if (r) { r.checked = true; fire(r, "change"); } }
+    if (p.get("sort")) { $("sort").value = p.get("sort"); fire($("sort"), "change"); }
+    if (p.get("rch") === "0") { $("f-reach").checked = false; fire($("f-reach"), "change"); }
+    Object.entries(FLAGS).forEach(([k, id]) => { if (p.get(k) && $(id)) { $(id).checked = true; fire($(id), "change"); } });
+    restoring = false;
+  }
   const visible = (list) => list.filter((x) => !x.later && !x.hidden);
 
   function init() {
@@ -65,7 +133,26 @@
     $("f-worldwide").addEventListener("change", (e) => { S.worldwide = e.target.checked; apply(); });
     const typeCount = {}; ALL.forEach((o) => { if (o.o) typeCount[o.o[0]] = (typeCount[o.o[0]] || 0) + 1; });
     visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label) + ` <span class="sdg">${(typeCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgType, o.id))));
-    visible(C.channel).forEach((c) => $("f-channel").append(chip(esc(c.label), false, toggle(S.channel, c.id))));
+    const chCount = {}; ALL.forEach((o) => (o.ch || []).forEach((c) => { chCount[c] = (chCount[c] || 0) + 1; }));
+    visible(C.channel).forEach((c) => {
+      const t = toggle(S.channel, c.id);
+      const fn = (b) => {
+        t(b);
+        if (c.id === "social_media") {  // fold-out: social media platforms (categories.yaml social_platform)
+          $("f-platformBox").hidden = !S.channel.has("social_media");
+          if (!S.channel.has("social_media")) { S.platforms.clear(); $("f-platform").querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "false")); apply(); }
+        }
+      };
+      fn._set = t._set; fn._v = t._v;
+      $("f-channel").append(chip(esc(c.label) + ` <span class="sdg">${(chCount[c.id] || 0).toLocaleString("en")}</span>`, false, fn));
+    });
+    const plCount = {}; ALL.forEach((o) => Object.keys(o.so || {}).forEach((k) => { plCount[k] = (plCount[k] || 0) + 1; }));
+    (C.social_platform || []).forEach((pl) => {
+      const n = plCount[pl.id] || 0;
+      $("f-platform").append(chip(esc(pl.label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.platforms, pl.id),
+        n ? {} : { disabled: true, title: "No outlet with this platform found yet" }));
+    });
+    $("f-chUnknown").addEventListener("change", (e) => { S.chUnknown = e.target.checked; apply(); });
     const ownCount = {}; ALL.forEach((o) => { if (o.ow) ownCount[o.ow[0]] = (ownCount[o.ow[0]] || 0) + 1; });
     C.ownership.filter((o) => o.id !== "unknown").forEach((o) => $("f-ownership").append(chip(esc(o.label) + ` <span class="sdg">${(ownCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.own, o.id))));
     $("f-ownUnknown").addEventListener("change", (e) => { S.ownUnknown = e.target.checked; apply(); });
@@ -78,17 +165,46 @@
       $("f-size").append(l);
     });
     $("sizeNote").textContent = CFG.size_note || "";
-    const tpCount = {}; ALL.forEach((o) => topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; }));
+    if ($("strengthNote")) $("strengthNote").textContent = CFG.topic_strength_note || "";
+    const tpCount = {}, subCount = {};
+    ALL.forEach((o) => {
+      topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; });
+      (o.tp || []).forEach((e) => (e[3] || []).forEach((s) => { const k = e[0] + "/" + s; subCount[k] = (subCount[k] || 0) + 1; }));
+    });
     C.topic_groups.forEach((g) => {
       const d = document.createElement("div"); d.className = "topic-group";
       d.innerHTML = `<h3>${esc(g.label)}</h3>`;
       const ch = document.createElement("div"); ch.className = "chips";
+      const subBoxes = [];
       C.topics.filter((t) => t.group === g.id).forEach((t) => {
         const n = tpCount[t.id] || 0;
-        ch.append(chip(esc(t.label) + (t.sdg ? ` <span class="sdg">SDG ${t.sdg}</span>` : "") + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.tp, t.id),
-          n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No open source names this topic for any outlet yet" }));
+        let box = null;
+        if (t.subtopics) {  // sub-topics: shown when the topic is chosen, all included until unticked
+          box = document.createElement("div"); box.className = "subtopics"; box.hidden = true;
+          box.innerHTML = `<p class="hint">${esc(t.label)}: all sub-topics are included. Untick to be more specific.</p>`;
+          const sc = document.createElement("div"); sc.className = "chips";
+          t.subtopics.forEach((s) => {
+            const b = chip(esc(s.label) + ` <span class="sdg">${(subCount[t.id + "/" + s.id] || 0).toLocaleString("en")}</span>`, true, (btn) => {
+              const off = S.subOff[t.id] || (S.subOff[t.id] = new Set());
+              off.has(s.id) ? off.delete(s.id) : off.add(s.id);
+              btn.setAttribute("aria-pressed", off.has(s.id) ? "false" : "true"); apply();
+            });
+            b.classList.add("sub"); b.dataset.f = "sub:" + t.id; b.dataset.v = s.id; sc.append(b);
+          });
+          box.append(sc); subBoxes.push(box);
+        }
+        const label = (t.sdg ? `SDG ${t.sdg} ` : "") + t.label;
+        ch.append(chip(esc(label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, (b) => {
+          S.tp.has(t.id) ? S.tp.delete(t.id) : S.tp.add(t.id);
+          b.setAttribute("aria-pressed", S.tp.has(t.id));
+          if (box) {
+            box.hidden = !S.tp.has(t.id);
+            if (!S.tp.has(t.id)) { delete S.subOff[t.id]; box.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "true")); }
+          }
+          apply();
+        }, Object.assign({ f: "tp", v: t.id }, n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No outlet found for this topic yet" })));
       });
-      d.append(ch); $("f-topics").append(d);
+      d.append(ch); subBoxes.forEach((b) => d.append(b)); $("f-topics").append(d);
     });
     const auCount = {}; ALL.forEach((o) => (o.au || []).forEach((a) => { auCount[a] = (auCount[a] || 0) + 1; }));
     C.audience.forEach((a) => {
@@ -106,11 +222,13 @@
     $("onlyMatchesLabel").textContent = om.label;
     if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
     $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
-    const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true };
+    const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
+                         hide_website_down: true, only_new: true, only_active: true };
     C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches"].includes(c.id)).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
-      l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> ${esc(c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">step 4</span>'}`;
+      l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> ${esc(c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">no data yet</span>'}`;
+      l.querySelector("input").dataset.v = c.id;
       l.querySelector("input").addEventListener("change", (e) => { e.target.checked ? S.checks.add(c.id) : S.checks.delete(c.id); apply(); });
       $("f-checks").append(l);
     });
@@ -158,18 +276,42 @@
     return S.worldwide || CFG.why[o.rc[c]] !== "worldwide";
   }
 
+  /* "new" = first found less than new_months (categories.yaml) before the data date */
+  function activeSince() {
+    const d = new Date(CFG.data_date); d.setMonth(d.getMonth() - (CFG.active_months || 3));
+    return d.toISOString().slice(0, 10);
+  }
+  function newSince() {
+    const d = new Date(CFG.data_date); d.setMonth(d.getMonth() - (CFG.new_months || 4));
+    return d.toISOString().slice(0, 10);
+  }
   function anyFilter() {
-    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size;
+    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size || S.platforms.size;
   }
   /* an outlet without any topic in the sources counts as "General news" (the default topic) */
-  function topicsOf(o) { return o.tp || ["general_news"]; }
+  function topicsOf(o) { return o.tp ? o.tp.map((e) => e[0]) : ["general_news"]; }
+  /* o.tp entries: [topic, strength (1 main focus, 2 own section, 3 covers it), reason, [sub-topics]] */
+  function tpEntry(o, t) { return o.tp ? o.tp.find((e) => e[0] === t) : (t === "general_news" ? ["general_news", 3, -1] : null); }
+  function topicMatch(o, t) {
+    const e = tpEntry(o, t); if (!e) return null;
+    const off = S.subOff[t]; if (!off || !off.size) return e;
+    return (e[3] || []).some((s) => !off.has(s)) ? e : null;  // narrowed: only outlets with a chosen sub-topic
+  }
+  const STRENGTH = new Proxy({}, { get: (_, k) => ((CFG && CFG.topic_strength) || { 1: "Specialist", 2: "Has a section on it", 3: "Reports on it" })[k] });
   function why(o, kind, id) {
-    if (kind === "tp") { if (!o.tp) return "no topic in the sources: general news"; return CFG.why[o.tw[o.tp.indexOf(id)]] || ""; }
+    if (kind === "tp") {
+      const e = tpEntry(o, id); if (!e || e[2] < 0) return "no topic in the sources: general news";
+      const t = CFG.categories.topics.find((x) => x.id === id) || {};
+      const subs = (e[3] || []).map((s) => ((t.subtopics || []).find((x) => x.id === s) || {}).label).filter(Boolean);
+      return STRENGTH[e[1]] + ": " + (CFG.why[e[2]] || "") + (subs.length ? " · " + subs.join("; ") : "");
+    }
     if (kind === "au") return CFG.why[o.aw[o.au.indexOf(id)]] || "";
     return CFG.why[o.uw[o.un.indexOf(id)]] || "";
   }
 
   function apply() {
+    if (restoring) return;
+    saveHash();
     const C = CFG.categories;
     let matChannels = null, matTypes = null;
     if (S.material.size) {
@@ -185,8 +327,10 @@
         if (!(S.scope.has(v) || (v === "unknown" && S.scopeUnknown))) return false;
       }
       const ch = o.ch || [];
-      if (matChannels && !ch.some((c) => matChannels.has(c)) && !(matTypes && o.o && matTypes.has(o.o[0]))) return false;
-      if (S.channel.size && !ch.some((c) => S.channel.has(c))) return false;
+      const noCh = !ch.length && S.chUnknown;  // "Also show outlets without channel information"
+      if (matChannels && !noCh && !ch.some((c) => matChannels.has(c)) && !(matTypes && o.o && matTypes.has(o.o[0]))) return false;
+      if (S.channel.size && !noCh && !ch.some((c) => S.channel.has(c))) return false;
+      if (S.platforms.size && !Object.keys(o.so || {}).some((k) => S.platforms.has(k))) return false;
       if (S.langs.size) {
         if (!o.l) { if (!S.noLang) return false; } else if (!o.l.some((l) => S.langs.has(l))) return false;
       }
@@ -205,17 +349,25 @@
       if (S.size === "top50" && o.r > 50) return false;
       if (S.checks.has("only_verified") && o.s.length < 2) return false;
       if (S.checks.has("has_social_media") && !o.so) return false;
-      if (S.checks.has("has_public_contact") && !o.em) return false;
+      if (S.checks.has("has_public_contact") && !o.em && !o.cp) return false;
+      if (S.checks.has("only_active") && !(o.lp && o.lp >= activeSince())) return false;
+      if (S.checks.has("hide_website_down") && o.wd) return false;  // website did not answer at the last check
+      if (S.checks.has("only_new") && o.f < newSince()) return false;
       return true;
     });
     current.forEach((o) => {
-      o._m = topicsOf(o).filter((t) => S.tp.has(t)).map((t) => ["tp", t]).concat((o.au || []).filter((a) => S.au.has(a)).map((a) => ["au", a])).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
+      o._m = [...S.tp].map((t) => [t, topicMatch(o, t)]).filter((x) => x[1]).map(([t, e]) => ["tp", t, e[1]]).concat((o.au || []).filter((a) => S.au.has(a)).map((a) => ["au", a])).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
     });
     if (S.onlyMatches && (S.tp.size || S.au.size || S.un.size)) current = current.filter((o) => o._m.length);
     const mode = S.sort === "auto" ? (anyFilter() ? "best_match" : "az") : S.sort;
     const key = (o) => o._k || (o._k = (o.n || "").replace(/^[^\p{L}\p{N}]+/u, ""));  // "__STUDY__" sorts under S
     const byName = (a, b) => key(a).localeCompare(key(b), "en", { sensitivity: "base" });
-    if (mode === "best_match") current.sort((a, b) => b._m.length - a._m.length || b.p - a.p || byName(a, b));
+    // best match: topics count by strength (main focus 3, own section 2, covers it 1), audiences and UN profiles 1 each
+    const score = (o) => o._s != null ? o._s : (o._s = o._m.reduce((n, m) => n + (m[0] === "tp" ? 4 - m[2] : 1), 0));
+    current.forEach((o) => { o._s = null; });
+    // equal match: outlets based in the chosen country before outlets that only reach it (owner, 09.11.2026)
+    const home = (o) => (S.country && o.c === S.country ? 1 : 0);
+    if (mode === "best_match") current.sort((a, b) => score(b) - score(a) || home(b) - home(a) || b.p - a.p || byName(a, b));
     else if (mode === "country") current.sort((a, b) => (CFG.countryName[a.c] || {}).name.localeCompare((CFG.countryName[b.c] || {}).name) || byName(a, b));
     else current.sort(byName);
     const countries = new Set(current.map((o) => o.c)).size;
@@ -233,7 +385,11 @@
     const social = Object.entries(o.so || {}).map(([k2, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(k2)}</a>`).join(" · ");
     const verified = o.s.length >= 2 ? '<span class="badge verified">verified</span>' : '<span class="badge unverified">1 source</span>';
     const tip = (kind, id, label) => `<span class="tag" title="${esc(why(o, kind, id))}">${esc(label)}</span>`;
-    const tpl = topicsOf(o).map((t) => tip("tp", t, lab(C.topics, t))).join(", ");
+    const tpl = topicsOf(o).map((t) => {
+      const e = tpEntry(o, t);
+      const link = e && e[4] && /^https?:/.test(e[4]) ? ` <a href="${esc(e[4])}" target="_blank" rel="noopener" title="Open this section of the website">section ↗</a>` : "";
+      return tip("tp", t, lab(C.topics, t)) + (o.tp ? ` <span class="pending">(${STRENGTH[e[1]]}${link ? "" : ""})</span>` : "") + link;
+    }).join(", ");
     const aul = (o.au || []).map((a) => tip("au", a, lab(C.audience, a))).join(", ");
     const unl = (o.un || []).map((u) => tip("un", u, lab(C.un_profile, u))).join(", ");
     const inList = exportList.has(o.i);
@@ -252,12 +408,19 @@
       ${unl ? `<p class="row"><b>UN profile:</b> ${unl}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
-      ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a></p>` : ""}
-      <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
-      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id)).join(", "))}</span>` : ""}
+      ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a>${o.cp ? ` · <a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : ""}</p>`
+        : o.cp ? `<p class="row"><b>Contact:</b> <a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a></p>` : ""}
+      ${o.lp ? `<p class="row pending">Latest article seen on the website: ${esc(o.lp)}${o.lp < activeSince() ? " (no recent article found)" : ""}</p>` : ""}
+      <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}${CFG.feedback_email ? ` · <a href="${esc(reportLink(o))}">Report an error</a>` : ""}</p>
+      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id, s]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id) + (k2 === "tp" && s ? ` (${STRENGTH[s]})` : "")).join(", "))}</span>` : ""}
       <p><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label></p></li>`;
   }
 
+  function reportLink(o) {
+    const k = CFG.countryName[o.c] || {};
+    const body = `Outlet: ${o.n} (${k.name || o.c}), id ${o.i}\nWebsite: ${o.w || "-"}\n\nWhat is wrong (e.g. topic, type, ownership, contact, outlet closed)?\n\n\nFilters used: ${location.href}`;
+    return `mailto:${CFG.feedback_email}?subject=${encodeURIComponent("Partner Finder: error report " + o.i)}&body=${encodeURIComponent(body)}`;
+  }
   function basisText(b) {
     return b.startsWith("language_service:") ? "via " + b.slice(17) : b === "broadcast_area" ? "broadcast area" : b === "worldwide" ? "worldwide broadcaster" : "international broadcaster";
   }
@@ -311,7 +474,7 @@
     const out = [];
     document.querySelectorAll("#filterBody .fgroup").forEach((g) => {
       const head = g.querySelector("h2"); const label = head ? head.childNodes[0].textContent.trim() : "";
-      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
+      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub)')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
       // a select is named by its own label ("Country: Kenya"), chips and radios by the group heading
       g.querySelectorAll("select").forEach((sel) => {
         const own = sel.closest("label"); const name = own ? own.childNodes[0].textContent.trim() : label;
@@ -322,8 +485,13 @@
       if (values.length) out.push([label, values.join(", ")]);
       // ticked checkboxes (those ticked by default, like "include reach", only when changed)
       g.querySelectorAll('input[type="checkbox"]').forEach((c) => {
-        if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("step 4", "").trim(), c.checked ? "" : "off"]);
+        if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("no data yet", "").trim(), c.checked ? "" : "off"]);
       });
+    });
+    Object.entries(S.subOff).forEach(([t, off]) => {
+      if (!off.size || !S.tp.has(t)) return;
+      const tt = CFG.categories.topics.find((x) => x.id === t) || {};
+      out.push([tt.label + " – only", (tt.subtopics || []).filter((s) => !off.has(s.id)).map((s) => s.label).join("; ")]);
     });
     const search = document.querySelector('#filterBody input[type="search"]');
     if (search && search.value.trim()) out.unshift(["Search", search.value.trim()]);
@@ -358,6 +526,8 @@
     const f = [];
     if (o.ow && o.ow[0] === "state_controlled") f.push("State-controlled");
     if (o.s.length < 2) f.push("Unverified");
+    if (o.wd) f.push("Website not reachable");
+    if (o.lp && o.lp < activeSince()) f.push("No recent article (last " + o.lp + ")");
     return f.join(", ");
   }
   function exportRow(o, countryFilter, topicFilter) {
@@ -376,9 +546,10 @@
       channels: (o.ch || []).map((c) => lab(C.channel, c)).join(", "),
       ownership: o.ow ? lab(C.ownership, o.ow[0]) : "Unknown",
       topic: topics.join(", "),
+      audience: (o.au || []).map((a) => lab(C.audience, a)).join(", "),
       unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
       memberOf: (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
-      website: o.w || "", contact: o.em || "",
+      website: o.w || "", contact: o.em || o.cp || "",
       social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
       notes: flags(o),
     };

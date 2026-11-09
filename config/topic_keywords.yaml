@@ -1,0 +1,1663 @@
+# ============================================================================
+# Topic keyword lists (owner's decision 09.11.2026, plan T1).
+# NOT shown on the website. The pipeline (pipeline/classify/topic_text.py)
+# compares them with what is known about each outlet / NGO:
+#   name, Wikidata description, Wikipedia introduction (raw/texts/),
+#   website: title, description, menu / section names, headlines, About page
+#   (raw/website_check/).
+#
+# Three strengths (agreed 09.11.2026):
+#   FOCUS  the topic is the outlet's main subject: a "strong" word in its name
+#          or description, or 2+ strong words (or strong + context) in its
+#          Wikipedia introduction / About page, or a source / network says so
+#   DESK   the website has its own section for it: a "sections" word (or a
+#          strong word) is a menu entry
+#   COVERS the topic appears repeatedly: 2+ strong words in the headlines /
+#          home page, or 1 strong word in the Wikipedia introduction / About page
+#   One single word somewhere does not count.
+#
+# Per topic:
+#   sections   menu / section names (-> DESK); also matched in the address, e.g. /climate/
+#   context    words that only count together with a strong word
+#   exclude    expressions in which a word means something else; removed
+#              from the text before matching (they apply to all topics)
+#   subtopics  plain-language sub-topics (orientation: the official SDG
+#              targets, see "targets"); each has its own "strong" words.
+#              Selecting a topic on the website includes all its sub-topics;
+#              the user can untick some to be more specific.
+#   general_subtopic  the sub-topic that a general match counts for (e.g. a
+#              "Climate" section or a source category without more detail)
+#   strong     (topics without sub-topics) words that count on their own
+#
+# Languages: the 9 UN News languages (en fr es pt ar ru zh hi sw).
+# Matching ignores upper/lower case and accents, whole words only;
+# a word ending in * also matches longer words (femini* = feminism, feminist ...).
+# Chinese has no spaces: Chinese words are matched anywhere in the text.
+# To add a word: put it in the right list. Run check_config.py afterwards.
+# ============================================================================
+
+topics:
+
+  # ------------------------------------------------------------ PEOPLE
+  poverty:
+    sections:
+      en: [poverty, development, social protection, inequality and poverty]
+      fr: [pauvreté, développement, protection sociale]
+      es: [pobreza, desarrollo, protección social]
+      pt: [pobreza, desenvolvimento, proteção social]
+      ar: [الفقر, التنمية]
+      ru: [бедность, социальная защита]
+      zh: [扶贫, 脱贫, 贫困]
+      hi: [गरीबी, विकास]
+      sw: [umaskini, maendeleo]
+    context:
+      en: [poor, poorest, vulnerable, households, income, livelihoods]
+      fr: [pauvres, ménages, revenus, moyens de subsistance]
+      es: [pobres, hogares, ingresos, medios de vida]
+      pt: [pobres, famílias, renda]
+      ar: [الفقراء, الأسر]
+      ru: [бедные, доходы]
+      zh: [低收入]
+      hi: [गरीब]
+      sw: [maskini]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: extreme_poverty
+    subtopics:
+      - id: extreme_poverty
+        label: Extreme poverty and living conditions
+        targets: ["1.1", "1.2"]
+        strong:
+          en: [poverty, extreme poverty, poverty line, poverty rate, poverty reduction, poverty eradication, end poverty,
+               anti-poverty, living in poverty, slum dwellers, destitution, deprivation, multidimensional poverty]
+          fr: [pauvreté, extrême pauvreté, seuil de pauvreté, lutte contre la pauvreté, précarité, misère]
+          es: [pobreza, pobreza extrema, línea de pobreza, lucha contra la pobreza, indigencia, miseria]
+          pt: [pobreza, pobreza extrema, linha da pobreza, combate à pobreza, miséria]
+          ar: [الفقر, الفقر المدقع, خط الفقر, مكافحة الفقر]
+          ru: [бедность, крайняя бедность, черта бедности, борьба с бедностью, нищета]
+          zh: [贫困, 极端贫困, 贫困线, 扶贫, 脱贫, 减贫]
+          hi: [गरीबी, अत्यधिक गरीबी, गरीबी रेखा, गरीबी उन्मूलन]
+          sw: [umaskini, umaskini uliokithiri, kupunguza umaskini]
+      - id: social_protection
+        label: Social protection and safety nets (cash transfers, pensions, welfare)
+        targets: ["1.3"]
+        strong:
+          en: [social protection, safety net, safety nets, cash transfer, cash transfers, social assistance, welfare benefits,
+               social security, basic income, universal basic income, food stamps, social grants]
+          fr: [protection sociale, filets sociaux, transferts monétaires, aide sociale, sécurité sociale, revenu de base]
+          es: [protección social, transferencias monetarias, asistencia social, seguridad social, renta básica, bono social]
+          pt: [proteção social, transferência de renda, bolsa família, assistência social, seguridade social, renda básica]
+          ar: [الحماية الاجتماعية, التحويلات النقدية, الضمان الاجتماعي, شبكات الأمان]
+          ru: [социальная защита, социальная помощь, социальное обеспечение, пособия]
+          zh: [社会保障, 社会保护, 低保, 现金转移]
+          hi: [सामाजिक सुरक्षा, नकद हस्तांतरण]
+          sw: [hifadhi ya jamii, msaada wa fedha]
+      - id: resilience_poor
+        label: Rights, resources and resilience of the poor (land, microfinance, shocks)
+        targets: ["1.4", "1.5", "1.a", "1.b"]
+        strong:
+          en: [microfinance, microcredit, financial inclusion, land rights, pro-poor, livelihoods, economic shocks, informal settlements]
+          fr: [microfinance, microcrédit, inclusion financière, droits fonciers, moyens de subsistance]
+          es: [microfinanzas, microcrédito, inclusión financiera, derechos sobre la tierra, medios de vida]
+          pt: [microfinanças, microcrédito, inclusão financeira, direito à terra, meios de subsistência]
+          ar: [التمويل الأصغر, الشمول المالي, سبل العيش]
+          ru: [микрофинансирование, финансовая доступность]
+          zh: [小额信贷, 普惠金融]
+          hi: [सूक्ष्म वित्त, वित्तीय समावेशन, आजीविका]
+          sw: [mikopo midogo, ujumuishaji wa kifedha, riziki]
+
+  hunger_food:
+    sections:
+      en: [food security, food crisis, hunger, nutrition]
+      fr: [sécurité alimentaire, faim, nutrition]
+      es: [seguridad alimentaria, hambre, nutrición]
+      pt: [segurança alimentar, fome, nutrição]
+      ar: [الأمن الغذائي, الغذاء, التغذية]
+      ru: [продовольствие, питание, голод]
+      zh: [粮食, 粮食安全, 营养]
+      hi: [खाद्य सुरक्षा, पोषण, भूख]
+      sw: [chakula, usalama wa chakula, lishe]
+    context:
+      en: [food, crops, harvest, diet, meals]
+      fr: [nourriture, récoltes, repas]
+      es: [alimentos, cosechas, comida]
+      pt: [alimentos, colheita, comida]
+      ar: [الغذاء, المحاصيل]
+      ru: [еда, урожай]
+      zh: [食物, 粮食]
+      hi: [भोजन, फसल]
+      sw: [chakula, mavuno]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: hunger_famine
+    subtopics:
+      - id: hunger_famine
+        label: Hunger, famine and food insecurity
+        targets: ["2.1"]
+        strong:
+          en: [hunger, famine, food insecurity, food security, food crisis, starvation, zero hunger, food aid, food prices,
+               food shortage, world food programme, wfp, fao, food bank, food banks]
+          fr: [faim, famine, insécurité alimentaire, sécurité alimentaire, crise alimentaire, aide alimentaire, prix alimentaires, banque alimentaire]
+          es: [hambre, hambruna, inseguridad alimentaria, seguridad alimentaria, crisis alimentaria, ayuda alimentaria, banco de alimentos]
+          pt: [fome, insegurança alimentar, segurança alimentar, crise alimentar, ajuda alimentar, banco de alimentos]
+          ar: [الجوع, المجاعة, انعدام الأمن الغذائي, الأمن الغذائي, أزمة الغذاء, برنامج الأغذية العالمي]
+          ru: [голод, продовольственная безопасность, продовольственный кризис, нехватка продовольствия]
+          zh: [饥饿, 饥荒, 粮食安全, 粮食危机, 粮食援助]
+          hi: [भूख, अकाल, खाद्य सुरक्षा, खाद्य संकट, खाद्य असुरक्षा]
+          sw: [njaa, baa la njaa, usalama wa chakula, uhaba wa chakula, msaada wa chakula]
+      - id: nutrition
+        label: Malnutrition and healthy nutrition (stunting, child and maternal nutrition)
+        targets: ["2.2"]
+        strong:
+          en: [malnutrition, undernutrition, stunting, wasting, nutrition, malnourished, micronutrients, breastfeeding, obesity, anaemia]
+          fr: [malnutrition, sous-nutrition, retard de croissance, nutrition, allaitement, obésité, anémie]
+          es: [desnutrición, malnutrición, nutrición, retraso del crecimiento, lactancia materna, obesidad, anemia]
+          pt: [desnutrição, má nutrição, nutrição, aleitamento materno, obesidade, anemia]
+          ar: [سوء التغذية, التقزم, الرضاعة الطبيعية, السمنة]
+          ru: [недоедание, истощение, грудное вскармливание, ожирение]
+          zh: [营养不良, 发育迟缓, 母乳喂养, 肥胖]
+          hi: [कुपोषण, पोषण, स्तनपान, मोटापा]
+          sw: [utapiamlo, lishe duni, unyonyeshaji, unene]
+      - id: food_systems
+        label: Small farmers and sustainable food production (food systems, seeds, food markets)
+        targets: ["2.3", "2.4", "2.5", "2.a", "2.b", "2.c"]
+        strong:
+          en: [food systems, smallholder, smallholders, small-scale farmers, family farming, agroecology, sustainable agriculture,
+               food production, seed banks, food sovereignty, food waste, food loss]
+          fr: [systèmes alimentaires, petits exploitants, agriculture familiale, agroécologie, agriculture durable, souveraineté alimentaire, gaspillage alimentaire]
+          es: [sistemas alimentarios, pequeños productores, agricultura familiar, agroecología, agricultura sostenible, soberanía alimentaria, desperdicio de alimentos]
+          pt: [sistemas alimentares, pequenos agricultores, agricultura familiar, agroecologia, agricultura sustentável, soberania alimentar, desperdício de alimentos]
+          ar: [النظم الغذائية, صغار المزارعين, الزراعة المستدامة, هدر الطعام]
+          ru: [продовольственные системы, мелкие фермеры, устойчивое сельское хозяйство, пищевые отходы]
+          zh: [粮食体系, 小农户, 可持续农业, 食物浪费]
+          hi: [खाद्य प्रणाली, छोटे किसान, टिकाऊ कृषि, खाद्य अपव्यय]
+          sw: [mifumo ya chakula, wakulima wadogo, kilimo endelevu, upotevu wa chakula]
+
+  health:
+    sections:
+      en: [health, healthcare, medicine, wellbeing, health & wellbeing, public health, global health, mental health]
+      fr: [santé, médecine, santé publique]
+      es: [salud, sanidad, medicina, salud pública]
+      pt: [saúde, medicina, saúde pública]
+      ar: [صحة, الصحة]
+      ru: [здоровье, медицина, здравоохранение]
+      zh: [健康, 医疗, 卫生]
+      hi: [स्वास्थ्य, सेहत]
+      sw: [afya]
+    context:
+      en: [patients, hospital, doctors, nurses, treatment, disease, clinic]
+      fr: [patients, hôpital, médecins, maladie, soins]
+      es: [pacientes, hospital, médicos, enfermedad]
+      pt: [pacientes, hospital, médicos, doença]
+      ar: [المرضى, مستشفى, الأطباء]
+      ru: [пациенты, больница, врачи]
+      zh: [医院, 患者, 医生]
+      hi: [अस्पताल, मरीज, डॉक्टर]
+      sw: [hospitali, wagonjwa, madaktari]
+    exclude:
+      en: [health and beauty, health & beauty, men's health, women's health magazine, health food store]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: health_systems
+    subtopics:
+      - id: maternal_child_health
+        label: Health of mothers, newborns and children
+        targets: ["3.1", "3.2"]
+        strong:
+          en: [maternal health, maternal mortality, child mortality, newborn, newborns, neonatal, midwife, midwives, childbirth, prenatal, antenatal, immunization]
+          fr: [santé maternelle, mortalité maternelle, mortalité infantile, nouveau-nés, sages-femmes, accouchement, vaccination des enfants]
+          es: [salud materna, mortalidad materna, mortalidad infantil, recién nacidos, parteras, parto, control prenatal]
+          pt: [saúde materna, mortalidade materna, mortalidade infantil, recém-nascidos, parteiras, parto, pré-natal]
+          ar: [صحة الأم, وفيات الأمهات, وفيات الأطفال, حديثي الولادة, القابلات]
+          ru: [материнское здоровье, материнская смертность, детская смертность, новорождённые, акушерки]
+          zh: [孕产妇, 婴儿死亡率, 新生儿, 助产士]
+          hi: [मातृ स्वास्थ्य, मातृ मृत्यु, शिशु मृत्यु, नवजात]
+          sw: [afya ya mama, vifo vya akina mama, vifo vya watoto, watoto wachanga, wakunga]
+      - id: infectious_diseases
+        label: Epidemics and infectious diseases (HIV/AIDS, malaria, TB, cholera, vaccines)
+        targets: ["3.3", "3.b", "3.d"]
+        strong:
+          en: [epidemic, pandemic, hiv, hiv/aids, malaria, tuberculosis, cholera, ebola, mpox, covid-19, covid, measles, polio,
+               hepatitis, dengue, vaccine, vaccines, vaccination, neglected tropical diseases, outbreak, world health organization]
+          fr: [épidémie, pandémie, vih, paludisme, tuberculose, choléra, ebola, rougeole, vaccin, vaccins, vaccination, oms]
+          es: [epidemia, pandemia, vih, malaria, paludismo, tuberculosis, cólera, ébola, sarampión, vacuna, vacunas, vacunación, dengue, oms]
+          pt: [epidemia, pandemia, hiv, aids, malária, tuberculose, cólera, ebola, sarampo, vacina, vacinas, vacinação, dengue, oms]
+          ar: [وباء, جائحة, الإيدز, الملاريا, السل, الكوليرا, الإيبولا, لقاح, اللقاحات, منظمة الصحة العالمية]
+          ru: [эпидемия, пандемия, вич, спид, малярия, туберкулёз, туберкулез, холера, вакцина, вакцинация, воз]
+          zh: [流行病, 疫情, 艾滋病, 疟疾, 结核病, 霍乱, 埃博拉, 疫苗, 世界卫生组织]
+          hi: [महामारी, एचआईवी, एड्स, मलेरिया, तपेदिक, टीबी, हैजा, टीका, टीकाकरण]
+          sw: [janga, ukimwi, virusi vya ukimwi, malaria, kifua kikuu, kipindupindu, ebola, chanjo, surua]
+      - id: ncd_mental_health
+        label: Chronic diseases, mental health, addiction and road safety
+        targets: ["3.4", "3.5", "3.6", "3.a"]
+        strong:
+          en: [mental health, depression, suicide prevention, cancer, diabetes, heart disease, non-communicable diseases,
+               addiction, drug abuse, substance abuse, alcoholism, tobacco, smoking, road safety, road accidents]
+          fr: [santé mentale, dépression, cancer, diabète, maladies cardiaques, addiction, toxicomanie, alcoolisme, tabac, tabagisme, sécurité routière]
+          es: [salud mental, depresión, cáncer, diabetes, enfermedades cardíacas, adicciones, drogadicción, alcoholismo, tabaquismo, seguridad vial]
+          pt: [saúde mental, depressão, câncer, cancro, diabetes, doenças cardíacas, dependência química, alcoolismo, tabagismo, segurança rodoviária]
+          ar: [الصحة النفسية, الاكتئاب, السرطان, السكري, الإدمان, التدخين, السلامة على الطرق]
+          ru: [психическое здоровье, депрессия, рак, диабет, зависимость, наркомания, алкоголизм, курение, безопасность дорожного движения]
+          zh: [心理健康, 精神健康, 抑郁症, 癌症, 糖尿病, 吸烟, 道路安全]
+          hi: [मानसिक स्वास्थ्य, अवसाद, कैंसर, मधुमेह, नशा, तंबाकू, सड़क सुरक्षा]
+          sw: [afya ya akili, msongo wa mawazo, saratani, kisukari, uraibu, dawa za kulevya, tumbaku, usalama barabarani]
+      - id: health_systems
+        label: Access to health care (health coverage, medicines, health workers, sexual and reproductive health)
+        targets: ["3.7", "3.8", "3.c"]
+        strong:
+          en: [universal health coverage, health care, healthcare, health system, health services, primary health care,
+               essential medicines, health workers, nurses, sexual and reproductive health, family planning, contraception]
+          fr: [couverture santé universelle, système de santé, soins de santé, médicaments essentiels, personnel de santé, planification familiale, contraception]
+          es: [cobertura sanitaria universal, sistema de salud, atención médica, atención primaria, medicamentos esenciales, personal sanitario, planificación familiar, anticoncepción]
+          pt: [cobertura universal de saúde, sistema de saúde, atenção primária, medicamentos essenciais, profissionais de saúde, planejamento familiar, contracepção, sistema único de saúde]
+          ar: [التغطية الصحية الشاملة, النظام الصحي, الرعاية الصحية, الأدوية الأساسية, تنظيم الأسرة]
+          ru: [всеобщий охват услугами здравоохранения, система здравоохранения, медицинская помощь, планирование семьи]
+          zh: [全民健康覆盖, 医疗体系, 医疗服务, 基本药物, 计划生育]
+          hi: [सार्वभौमिक स्वास्थ्य कवरेज, स्वास्थ्य सेवा, स्वास्थ्य प्रणाली, परिवार नियोजन]
+          sw: [huduma za afya, mfumo wa afya, dawa muhimu, wahudumu wa afya, uzazi wa mpango]
+      - id: pollution_health
+        label: Health risks from pollution and chemicals
+        targets: ["3.9"]
+        strong:
+          en: [air pollution, toxic chemicals, contamination, lead poisoning, pesticide poisoning]
+          fr: [pollution de l'air, produits chimiques toxiques, contamination]
+          es: [contaminación del aire, químicos tóxicos, contaminación]
+          pt: [poluição do ar, produtos químicos tóxicos, contaminação]
+          ar: [تلوث الهواء, المواد الكيميائية السامة]
+          ru: [загрязнение воздуха, токсичные химикаты]
+          zh: [空气污染, 有毒化学品]
+          hi: [वायु प्रदूषण, जहरीले रसायन]
+          sw: [uchafuzi wa hewa, kemikali za sumu]
+
+  education:
+    sections:
+      en: [education, schools, learning, higher education, campus]
+      fr: [éducation, enseignement, école]
+      es: [educación, enseñanza, escuela]
+      pt: [educação, ensino, escola]
+      ar: [التعليم, تعليم]
+      ru: [образование]
+      zh: [教育]
+      hi: [शिक्षा]
+      sw: [elimu]
+    context:
+      en: [students, pupils, teachers, classroom, curriculum]
+      fr: [élèves, étudiants, enseignants]
+      es: [alumnos, estudiantes, docentes, maestros]
+      pt: [alunos, estudantes, professores]
+      ar: [الطلاب, المعلمين]
+      ru: [ученики, студенты, учителя]
+      zh: [学生, 教师]
+      hi: [छात्र, शिक्षक]
+      sw: [wanafunzi, walimu]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: school_access
+    subtopics:
+      - id: school_access
+        label: School for every child (access, early childhood, girls' education, out-of-school children)
+        targets: ["4.1", "4.2", "4.5"]
+        strong:
+          en: [education, primary education, secondary education, early childhood education, preschool, school enrolment,
+               out-of-school children, girls' education, inclusive education, school dropout, schooling, education for all, unesco]
+          fr: [éducation, enseignement primaire, enseignement secondaire, scolarisation, éducation des filles, décrochage scolaire, éducation inclusive, préscolaire]
+          es: [educación, educación primaria, educación secundaria, escolarización, educación de las niñas, deserción escolar, educación inclusiva, educación inicial]
+          pt: [educação, ensino fundamental, ensino médio, educação infantil, evasão escolar, educação inclusiva, escolarização]
+          ar: [التعليم, التعليم الابتدائي, التعليم الثانوي, تعليم الفتيات, التسرب المدرسي, التعليم الشامل]
+          ru: [образование, начальное образование, среднее образование, дошкольное образование, инклюзивное образование]
+          zh: [教育, 义务教育, 学前教育, 女童教育, 辍学, 全纳教育]
+          hi: [शिक्षा, प्राथमिक शिक्षा, बालिका शिक्षा, स्कूली शिक्षा, समावेशी शिक्षा]
+          sw: [elimu, elimu ya msingi, elimu ya sekondari, elimu ya awali, elimu ya wasichana, elimu jumuishi]
+      - id: skills_higher_ed
+        label: Skills, vocational training, universities and lifelong learning
+        targets: ["4.3", "4.4", "4.6", "4.b"]
+        strong:
+          en: [vocational training, technical education, tvet, higher education, university education, scholarships, literacy,
+               adult education, lifelong learning, digital skills, e-learning, edtech]
+          fr: [formation professionnelle, enseignement supérieur, bourses d'études, alphabétisation, éducation des adultes, apprentissage tout au long de la vie]
+          es: [formación profesional, educación superior, becas, alfabetización, educación de adultos, aprendizaje permanente]
+          pt: [formação profissional, ensino técnico, ensino superior, bolsas de estudo, alfabetização, educação de adultos]
+          ar: [التدريب المهني, التعليم العالي, المنح الدراسية, محو الأمية, تعليم الكبار]
+          ru: [профессиональное образование, высшее образование, стипендии, грамотность, обучение взрослых]
+          zh: [职业教育, 职业培训, 高等教育, 奖学金, 扫盲, 终身学习]
+          hi: [व्यावसायिक प्रशिक्षण, उच्च शिक्षा, छात्रवृत्ति, साक्षरता, कौशल विकास]
+          sw: [mafunzo ya ufundi, elimu ya juu, ufadhili wa masomo, kusoma na kuandika, elimu ya watu wazima]
+      - id: teachers_quality
+        label: Teachers, schools and quality of learning (incl. education for peace and sustainability)
+        targets: ["4.7", "4.a", "4.c"]
+        strong:
+          en: [teachers, teacher training, quality education, learning outcomes, school buildings, school meals, education policy,
+               global citizenship education, education for sustainable development, curriculum reform]
+          fr: [enseignants, formation des enseignants, qualité de l'éducation, politique éducative, cantines scolaires]
+          es: [docentes, maestros, formación docente, calidad educativa, política educativa, comedores escolares]
+          pt: [professores, formação de professores, qualidade da educação, política educacional, merenda escolar]
+          ar: [المعلمون, تدريب المعلمين, جودة التعليم, السياسة التعليمية]
+          ru: [учителя, подготовка учителей, качество образования, образовательная политика]
+          zh: [教师, 教师培训, 教育质量, 教育政策]
+          hi: [शिक्षक, शिक्षक प्रशिक्षण, गुणवत्तापूर्ण शिक्षा, शिक्षा नीति]
+          sw: [walimu, mafunzo ya walimu, ubora wa elimu, sera ya elimu]
+
+  gender_equality:
+    sections:
+      en: [women, gender, women & girls, women and girls, equality, feminism, women's rights]
+      fr: [femmes, genre, égalité, droits des femmes, elles]
+      es: [mujeres, mujer, género, igualdad, feminismos, ellas]
+      pt: [mulheres, mulher, gênero, género, igualdade, elas]
+      ar: [المرأة, مرأة, نساء, النساء]
+      ru: [женщины, гендер]
+      zh: [女性, 妇女, 性别]
+      hi: [महिला, महिलाएं, नारी]
+      sw: [wanawake, jinsia]
+    context:
+      en: [women, woman, girls, gender, female, mothers, widows, wives]
+      fr: [femmes, filles, genre]
+      es: [mujeres, niñas, género]
+      pt: [mulheres, meninas, gênero]
+      ar: [النساء, الفتيات]
+      ru: [женщины, девочки]
+      zh: [妇女, 女孩]
+      hi: [महिलाएं, लड़कियां]
+      sw: [wanawake, wasichana]
+    exclude:
+      en: [women's fashion, beauty tips, landslide victory, landslide win, accessibility help, accessibility statement]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: women_rights
+    subtopics:
+      - id: women_rights
+        label: Women's rights and equal treatment (discrimination, gender equality laws)
+        targets: ["5.1", "5.c"]
+        strong:
+          en: [gender equality, women's rights, girls' rights, women's empowerment, feminism, feminist, femini*, gender discrimination,
+               gender gap, gender parity, gender justice, sexism, misogyny, un women, cedaw, international women's day, women's day]
+          fr: [égalité femmes-hommes, égalité hommes-femmes, égalité des sexes, égalité de genre, droits des femmes, autonomisation des femmes, féminisme, féministe, sexisme, journée internationale des droits des femmes]
+          es: [igualdad de género, derechos de las mujeres, empoderamiento de las mujeres, feminismo, feminista, sexismo, machismo, día internacional de la mujer, 8m]
+          pt: [igualdade de gênero, igualdade de género, direitos das mulheres, empoderamento feminino, feminismo, feminista, machismo, dia internacional da mulher]
+          ar: [المساواة بين الجنسين, حقوق المرأة, تمكين المرأة, النسوية, التمييز ضد المرأة, يوم المرأة العالمي]
+          ru: [гендерное равенство, права женщин, расширение прав женщин, феминизм, феминистка, дискриминация женщин, международный женский день]
+          zh: [性别平等, 妇女权利, 女性权益, 妇女赋权, 女权, 女性主义, 性别歧视, 国际妇女节]
+          hi: [लैंगिक समानता, महिला अधिकार, महिला सशक्तिकरण, नारीवाद, लैंगिक भेदभाव, अंतरराष्ट्रीय महिला दिवस]
+          sw: [usawa wa kijinsia, haki za wanawake, uwezeshaji wa wanawake, ubaguzi wa kijinsia, siku ya wanawake duniani]
+      - id: gender_violence
+        label: Violence against women and girls (domestic violence, femicide, sexual violence, trafficking)
+        targets: ["5.2"]
+        strong:
+          en: [violence against women, gender-based violence, gbv, domestic violence, femicide, intimate partner violence, sexual violence,
+               sexual harassment, rape, metoo, "#metoo", trafficking of women, 16 days of activism, orange the world]
+          fr: [violences faites aux femmes, violences sexistes, violences conjugales, violence conjugale, féminicide, violences sexuelles, harcèlement sexuel, viol]
+          es: [violencia contra las mujeres, violencia de género, violencia machista, violencia doméstica, feminicidio, femicidio, violencia sexual, acoso sexual, violación, ni una menos]
+          pt: [violência contra a mulher, violência de gênero, violência doméstica, feminicídio, violência sexual, assédio sexual, estupro, lei maria da penha]
+          ar: [العنف ضد المرأة, العنف القائم على النوع الاجتماعي, العنف الأسري, العنف المنزلي, قتل النساء, التحرش الجنسي, العنف الجنسي]
+          ru: [насилие в отношении женщин, гендерное насилие, домашнее насилие, фемицид, сексуальное насилие, сексуальные домогательства]
+          zh: [针对妇女的暴力, 性别暴力, 家庭暴力, 家暴, 性暴力, 性骚扰, 杀害女性]
+          hi: [महिलाओं के खिलाफ हिंसा, घरेलू हिंसा, लैंगिक हिंसा, यौन हिंसा, यौन उत्पीड़न, दहेज]
+          sw: [ukatili dhidi ya wanawake, ukatili wa kijinsia, ukatili wa majumbani, unyanyasaji wa kijinsia, ubakaji]
+      - id: harmful_practices
+        label: Child marriage and female genital mutilation (FGM)
+        targets: ["5.3"]
+        strong:
+          en: [child marriage, early marriage, forced marriage, child brides, female genital mutilation, fgm, female circumcision]
+          fr: [mariage d'enfants, mariage précoce, mariage forcé, mutilations génitales féminines, excision]
+          es: [matrimonio infantil, matrimonio precoz, matrimonio forzado, mutilación genital femenina, ablación]
+          pt: [casamento infantil, casamento precoce, casamento forçado, mutilação genital feminina]
+          ar: [زواج الأطفال, زواج القاصرات, الزواج المبكر, الزواج القسري, ختان الإناث, تشويه الأعضاء التناسلية]
+          ru: [детские браки, ранние браки, принудительный брак, калечащие операции на женских половых органах]
+          zh: [童婚, 早婚, 强迫婚姻, 女性生殖器切割]
+          hi: [बाल विवाह, जबरन विवाह, महिला खतना]
+          sw: [ndoa za utotoni, ndoa za mapema, ndoa za lazima, ukeketaji]
+      - id: care_work
+        label: Unpaid care and domestic work (childcare, parental leave)
+        targets: ["5.4"]
+        strong:
+          en: [unpaid care work, care work, domestic work, parental leave, maternity leave, paternity leave, childcare, care economy, gender pay gap, equal pay]
+          fr: [travail domestique, travail de soins non rémunéré, congé maternité, congé paternité, garde d'enfants, écart salarial, égalité salariale]
+          es: [trabajo de cuidados, trabajo doméstico, economía del cuidado, licencia de maternidad, licencia de paternidad, brecha salarial, igualdad salarial]
+          pt: [trabalho de cuidado, trabalho doméstico, licença-maternidade, licença-paternidade, economia do cuidado, desigualdade salarial]
+          ar: [أعمال الرعاية غير مدفوعة الأجر, العمل المنزلي, إجازة الأمومة, الفجوة في الأجور]
+          ru: [неоплачиваемый труд по уходу, домашний труд, декретный отпуск, разрыв в оплате труда]
+          zh: [无偿照料, 家务劳动, 产假, 育儿假, 同工同酬, 性别薪酬差距]
+          hi: [अवैतनिक देखभाल, घरेलू काम, मातृत्व अवकाश, समान वेतन]
+          sw: [kazi za matunzo, kazi za nyumbani, likizo ya uzazi, malipo sawa]
+      - id: women_leadership
+        label: Women in leadership, politics and the economy (incl. land, credit, digital skills)
+        targets: ["5.5", "5.a", "5.b"]
+        strong:
+          en: [women in leadership, women leaders, women in politics, women's political participation, women's representation, female leaders,
+               women entrepreneurs, women in business, women in tech, women in science, women's economic empowerment, gender quota]
+          fr: [femmes leaders, femmes en politique, participation politique des femmes, représentation des femmes, femmes entrepreneures, parité]
+          es: [liderazgo femenino, mujeres líderes, mujeres en la política, participación política de las mujeres, paridad, mujeres emprendedoras]
+          pt: [liderança feminina, mulheres na política, participação política das mulheres, empreendedorismo feminino, paridade]
+          ar: [القيادات النسائية, مشاركة المرأة في السياسة, تمثيل المرأة, رائدات الأعمال]
+          ru: [женщины-лидеры, женщины в политике, представительство женщин, женское предпринимательство]
+          zh: [女性领导, 妇女参政, 女性创业, 女企业家]
+          hi: [महिला नेतृत्व, राजनीति में महिलाएं, महिला उद्यमी, महिला आरक्षण]
+          sw: [uongozi wa wanawake, wanawake katika siasa, wajasiriamali wanawake]
+      - id: srhr
+        label: Sexual and reproductive health and rights (incl. menstrual health)
+        targets: ["5.6"]
+        strong:
+          en: [reproductive rights, sexual and reproductive health, reproductive health, abortion, contraception, menstrual health, menstruation, period poverty, bodily autonomy]
+          fr: [droits reproductifs, santé sexuelle et reproductive, avortement, contraception, menstruations, précarité menstruelle]
+          es: [derechos reproductivos, salud sexual y reproductiva, aborto, anticoncepción, menstruación, pobreza menstrual]
+          pt: [direitos reprodutivos, saúde sexual e reprodutiva, aborto, contracepção, menstruação, pobreza menstrual]
+          ar: [الحقوق الإنجابية, الصحة الجنسية والإنجابية, الإجهاض, منع الحمل, الصحة الإنجابية]
+          ru: [репродуктивные права, репродуктивное здоровье, аборт, контрацепция, менструация]
+          zh: [生殖权利, 生殖健康, 堕胎, 避孕, 月经]
+          hi: [प्रजनन अधिकार, प्रजनन स्वास्थ्य, गर्भपात, गर्भनिरोधक, मासिक धर्म]
+          sw: [haki za uzazi, afya ya uzazi, utoaji mimba, uzazi wa mpango, hedhi]
+      - id: gender_identity
+        label: Gender identity and sexual orientation (LGBTQ+ rights)
+        targets: ["5.1", "10.2"]
+        strong:
+          en: [lgbt, lgbtq, lgbtqi, lgbtqia, lgbti, transgender, trans rights, non-binary, gender identity, sexual orientation, homophobia, transphobia, queer, gay rights, same-sex marriage, pride month]
+          fr: [lgbt, lgbtqi, transgenre, identité de genre, orientation sexuelle, homophobie, transphobie, mariage pour tous]
+          es: [lgbt, lgbtiq, transgénero, identidad de género, orientación sexual, homofobia, transfobia, matrimonio igualitario, diversidad sexual]
+          pt: [lgbt, lgbtqia, transgênero, identidade de gênero, orientação sexual, homofobia, transfobia, diversidade sexual]
+          ar: [مجتمع الميم, المثليين, الهوية الجندرية, التوجه الجنسي]
+          ru: [лгбт, трансгендер, гендерная идентичность, сексуальная ориентация, гомофобия]
+          zh: [性少数, 跨性别, 性别认同, 性取向, 同性婚姻, 恐同]
+          hi: [एलजीबीटी, ट्रांसजेंडर, लैंगिक पहचान, यौन अभिविन्यास, समलैंगिक]
+          sw: [mashoga, jinsia mbili, utambulisho wa kijinsia, mwelekeo wa kimapenzi]
+      - id: women_sport
+        label: Women's sport and equality in sport
+        targets: ["5.1", "5.5"]
+        strong:
+          en: [women's football, women's soccer, women's sport, women's sports, women's cricket, women's basketball, wsl, wnba, women's world cup, female athletes]
+          fr: [football féminin, sport féminin, coupe du monde féminine, sportives]
+          es: [fútbol femenino, deporte femenino, liga femenina, mundial femenino]
+          pt: [futebol feminino, esporte feminino, desporto feminino, copa do mundo feminina]
+          ar: [كرة القدم النسائية, الرياضة النسائية]
+          ru: [женский футбол, женский спорт]
+          zh: [女足, 女子足球, 女子体育]
+          hi: [महिला क्रिकेट, महिला खेल, महिला फुटबॉल]
+          sw: [soka la wanawake, michezo ya wanawake]
+
+  # ------------------------------------------------------------ PLANET
+  water_sanitation:
+    sections:
+      en: [water, water & sanitation]
+      fr: [eau, eau et assainissement]
+      es: [agua]
+      pt: [água]
+      ar: [المياه]
+      ru: [вода]
+      zh: [水资源]
+      hi: [जल]
+      sw: [maji]
+    context:
+      en: [water, rivers, wells]
+      fr: [eau, rivières]
+      es: [agua, ríos]
+      pt: [água, rios]
+      ar: [المياه]
+      ru: [вода]
+      zh: [水]
+      hi: [पानी]
+      sw: [maji]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: drinking_water
+    subtopics:
+      - id: drinking_water
+        label: Safe drinking water and sanitation (toilets, hygiene, wastewater)
+        targets: ["6.1", "6.2", "6.3", "6.b"]
+        strong:
+          en: [drinking water, clean water, safe water, water access, access to water, sanitation, toilets, open defecation, hygiene,
+               handwashing, wastewater, sewage, water supply, water crisis, world water day, world toilet day]
+          fr: [eau potable, accès à l'eau, assainissement, toilettes, hygiène, eaux usées, approvisionnement en eau]
+          es: [agua potable, acceso al agua, saneamiento, letrinas, higiene, aguas residuales, abastecimiento de agua]
+          pt: [água potável, acesso à água, saneamento, saneamento básico, esgoto, higiene, abastecimento de água]
+          ar: [مياه الشرب, المياه النظيفة, الصرف الصحي, النظافة, مياه الصرف]
+          ru: [питьевая вода, чистая вода, санитария, водоснабжение, сточные воды]
+          zh: [饮用水, 清洁水, 卫生设施, 厕所, 污水, 供水]
+          hi: [पेयजल, स्वच्छ पानी, स्वच्छता, शौचालय, जल आपूर्ति, नल जल]
+          sw: [maji safi, maji ya kunywa, usafi wa mazingira, vyoo, maji taka]
+      - id: water_resources
+        label: Water resources, rivers and water scarcity
+        targets: ["6.4", "6.5", "6.6", "6.a"]
+        strong:
+          en: [water scarcity, water stress, water management, groundwater, freshwater, wetlands, water resources, water security, dams, irrigation]
+          fr: [pénurie d'eau, gestion de l'eau, nappes phréatiques, eau douce, zones humides, ressources en eau]
+          es: [escasez de agua, estrés hídrico, gestión del agua, aguas subterráneas, humedales, recursos hídricos, crisis hídrica]
+          pt: [escassez de água, crise hídrica, gestão da água, águas subterrâneas, recursos hídricos]
+          ar: [ندرة المياه, الموارد المائية, المياه الجوفية, الأمن المائي]
+          ru: [нехватка воды, водные ресурсы, подземные воды, водная безопасность]
+          zh: [缺水, 水资源, 地下水, 湿地, 水安全]
+          hi: [जल संकट, जल प्रबंधन, भूजल, जल संसाधन]
+          sw: [uhaba wa maji, rasilimali za maji, maji ya ardhini]
+
+  consumption:
+    sections:
+      en: [sustainability, circular economy, waste]
+      fr: [développement durable, économie circulaire]
+      es: [sostenibilidad, economía circular]
+      pt: [sustentabilidade, economia circular]
+      ar: [الاستدامة]
+      ru: [устойчивое развитие]
+      zh: [可持续发展, 循环经济]
+      hi: [स्थिरता]
+      sw: [uendelevu]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: sustainable_consumption
+    subtopics:
+      - id: waste_plastic
+        label: Waste, plastic pollution and recycling
+        targets: ["12.4", "12.5"]
+        strong:
+          en: [plastic pollution, plastic waste, single-use plastic, recycling, waste management, zero waste, e-waste, landfill, upcycling, circular economy]
+          fr: [pollution plastique, déchets plastiques, recyclage, gestion des déchets, zéro déchet, économie circulaire]
+          es: [contaminación por plásticos, residuos plásticos, reciclaje, gestión de residuos, basura cero, economía circular]
+          pt: [poluição plástica, resíduos plásticos, reciclagem, gestão de resíduos, lixo zero, economia circular]
+          ar: [التلوث البلاستيكي, النفايات البلاستيكية, إعادة التدوير, إدارة النفايات]
+          ru: [пластиковое загрязнение, переработка отходов, утилизация отходов]
+          zh: [塑料污染, 垃圾分类, 回收利用, 废物管理, 循环经济]
+          hi: [प्लास्टिक प्रदूषण, पुनर्चक्रण, कचरा प्रबंधन]
+          sw: [uchafuzi wa plastiki, urejelezaji, udhibiti wa taka]
+      - id: sustainable_consumption
+        label: Sustainable consumption, business and lifestyles (incl. food waste, sustainable tourism)
+        targets: ["12.1", "12.2", "12.3", "12.6", "12.7", "12.8", "12.a", "12.b", "12.c"]
+        strong:
+          en: [sustainable consumption, sustainable lifestyle, sustainable fashion, ethical consumption, fair trade, sustainability reporting,
+               esg, sustainable tourism, ecotourism, food waste, green consumer, sustainable business]
+          fr: [consommation durable, mode durable, commerce équitable, tourisme durable, écotourisme, gaspillage alimentaire, rse]
+          es: [consumo sostenible, moda sostenible, comercio justo, turismo sostenible, ecoturismo, desperdicio de alimentos, responsabilidad social empresarial]
+          pt: [consumo sustentável, moda sustentável, comércio justo, turismo sustentável, ecoturismo, desperdício de alimentos]
+          ar: [الاستهلاك المستدام, السياحة المستدامة, التجارة العادلة]
+          ru: [устойчивое потребление, экотуризм, справедливая торговля]
+          zh: [可持续消费, 绿色消费, 生态旅游, 公平贸易]
+          hi: [सतत उपभोग, इको पर्यटन]
+          sw: [matumizi endelevu, utalii endelevu, biashara ya haki]
+
+  climate:
+    sections:
+      en: [climate, climate change, climate crisis, climate & environment, climate and environment, environment, planet, green, earth, sustainability, energy & climate]
+      fr: [climat, environnement, planète, écologie]
+      es: [clima, medio ambiente, medioambiente, cambio climático, planeta, ecología]
+      pt: [clima, meio ambiente, ambiente, planeta, ecologia]
+      ar: [المناخ, البيئة, تغير المناخ]
+      ru: [климат, экология, окружающая среда]
+      zh: [气候, 环境, 生态]
+      hi: [जलवायु, पर्यावरण]
+      sw: [tabianchi, mazingira]
+    context:
+      en: [climate, carbon, emissions, warming, environment]
+      fr: [climat, carbone, émissions, environnement]
+      es: [clima, carbono, emisiones, ambiente]
+      pt: [clima, carbono, emissões, ambiente]
+      ar: [المناخ, الانبعاثات, الكربون]
+      ru: [климат, выбросы, углерод]
+      zh: [气候, 排放, 碳]
+      hi: [जलवायु, उत्सर्जन, कार्बन]
+      sw: [tabianchi, hewa ukaa]
+    exclude:
+      en: [business climate, investment climate, political climate, economic climate, climate control]
+      fr: [climat des affaires, climat politique, climat social]
+      es: [clima de negocios, clima político, clima de inversión, clima laboral, pronóstico del clima, el clima de hoy, clima hoy]
+      pt: [clima de negócios, clima político, previsão do tempo, clima hoje]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: climate_change
+    subtopics:
+      - id: climate_change
+        label: Climate change, emissions and climate policy (incl. COP, Paris Agreement, net zero)
+        targets: ["13.2", "13.a"]
+        strong:
+          en: [climate change, climate crisis, climate emergency, global warming, climate action, greenhouse gas, greenhouse gases, carbon emissions,
+               co2 emissions, net zero, net-zero, decarbonisation, decarbonization, paris agreement, cop28, cop29, cop30, cop31, ipcc, unfccc,
+               climate finance, climate justice, carbon tax, carbon market, climate policy, climate activists, fridays for future, climate desk]
+          fr: [changement climatique, dérèglement climatique, réchauffement climatique, crise climatique, gaz à effet de serre, émissions de co2, neutralité carbone, accord de paris, giec, justice climatique, finance climatique]
+          es: [cambio climático, crisis climática, calentamiento global, emergencia climática, gases de efecto invernadero, emisiones de carbono, cero emisiones netas, acuerdo de parís, ipcc, justicia climática, financiamiento climático]
+          pt: [mudanças climáticas, mudança climática, alterações climáticas, crise climática, aquecimento global, gases de efeito estufa, emissões de carbono, acordo de paris, justiça climática]
+          ar: [تغير المناخ, التغير المناخي, الاحتباس الحراري, الأزمة المناخية, غازات الاحتباس الحراري, انبعاثات الكربون, اتفاق باريس, الحياد الكربوني, مؤتمر الأطراف]
+          ru: [изменение климата, климатический кризис, глобальное потепление, парниковые газы, выбросы углерода, парижское соглашение, углеродная нейтральность]
+          zh: [气候变化, 全球变暖, 气候危机, 温室气体, 碳排放, 碳中和, 碳达峰, 巴黎协定, 净零]
+          hi: [जलवायु परिवर्तन, ग्लोबल वार्मिंग, जलवायु संकट, ग्रीनहाउस गैस, कार्बन उत्सर्जन, नेट जीरो, पेरिस समझौता]
+          sw: [mabadiliko ya tabianchi, mabadiliko ya hali ya hewa, ongezeko la joto duniani, gesi joto, hewa ukaa]
+      - id: climate_adaptation
+        label: Adapting to climate impacts (heat, drought, floods, sea level rise, resilience)
+        targets: ["13.1", "13.3", "13.b"]
+        strong:
+          en: [climate adaptation, climate resilience, climate impacts, sea level rise, heatwave, heatwaves, extreme heat, extreme weather,
+               loss and damage, climate migration, climate refugees, early warning]
+          fr: [adaptation au climat, adaptation climatique, résilience climatique, montée des eaux, canicule, vagues de chaleur, phénomènes extrêmes, pertes et dommages]
+          es: [adaptación climática, adaptación al cambio climático, resiliencia climática, aumento del nivel del mar, ola de calor, olas de calor, fenómenos extremos, pérdidas y daños]
+          pt: [adaptação climática, resiliência climática, elevação do nível do mar, onda de calor, eventos extremos, perdas e danos]
+          ar: [التكيف مع المناخ, التكيف المناخي, الصمود المناخي, ارتفاع مستوى سطح البحر, موجة حر, الظواهر المتطرفة, الخسائر والأضرار]
+          ru: [адаптация к изменению климата, повышение уровня моря, аномальная жара, экстремальные погодные явления]
+          zh: [气候适应, 适应气候变化, 海平面上升, 热浪, 极端天气, 损失与损害]
+          hi: [जलवायु अनुकूलन, समुद्र का बढ़ता स्तर, लू, हीटवेव, चरम मौसम]
+          sw: [kukabiliana na mabadiliko ya tabianchi, kuongezeka kwa kina cha bahari, joto kali, hali mbaya ya hewa]
+      - id: environment_general
+        label: Environment and ecology in general (environmental journalism)
+        targets: ["13.3", "12.8"]
+        strong:
+          en: [environment, environmental, environmental news, environmental journalism, ecology, green news, sustainability, earth day, world environment day, unep]
+          fr: [environnement, environnemental, écologie, écologique, journée de la terre]
+          es: [medio ambiente, medioambiente, medioambiental, ambiental, ecología, ecológico, sostenibilidad, día de la tierra]
+          pt: [meio ambiente, ambiental, ecologia, sustentabilidade, dia da terra]
+          ar: [البيئة, بيئي, البيئية, الاستدامة]
+          ru: [экология, окружающая среда, экологический]
+          zh: [环境保护, 环保, 生态环境, 生态]
+          hi: [पर्यावरण, पारिस्थितिकी]
+          sw: [mazingira, uhifadhi wa mazingira]
+
+  life_below_water:
+    sections:
+      en: [oceans, ocean, marine, fisheries, sea]
+      fr: [océans, mer, pêche]
+      es: [océanos, mar, pesca]
+      pt: [oceanos, mar, pesca]
+      ar: [المحيطات, البحار, الصيد]
+      ru: [океаны, рыболовство]
+      zh: [海洋, 渔业]
+      hi: [महासागर, मत्स्य]
+      sw: [bahari, uvuvi]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: ocean_health
+    subtopics:
+      - id: ocean_health
+        label: Oceans, coasts and marine life (pollution, coral reefs, protected areas)
+        targets: ["14.1", "14.2", "14.3", "14.5", "14.a", "14.c"]
+        strong:
+          en: [ocean conservation, ocean protection, ocean science, ocean health, marine life, marine conservation, marine protected areas, coral reef, coral reefs, ocean acidification, marine pollution,
+               plastic in the ocean, coastal ecosystems, mangroves, blue economy, high seas treaty, world oceans day]
+          fr: [protection des océans, vie marine, conservation marine, aires marines protégées, récifs coralliens, acidification des océans, pollution marine, mangroves, économie bleue]
+          es: [protección de los océanos, vida marina, conservación marina, áreas marinas protegidas, arrecifes de coral, acidificación del océano, contaminación marina, manglares, economía azul]
+          pt: [proteção dos oceanos, vida marinha, conservação marinha, áreas marinhas protegidas, recifes de coral, poluição marinha, manguezais, economia azul]
+          ar: [حماية المحيطات, الحياة البحرية, الشعاب المرجانية, التلوث البحري, المحميات البحرية, الاقتصاد الأزرق]
+          ru: [защита океана, морская жизнь, коралловые рифы, загрязнение моря, морские охраняемые районы]
+          zh: [海洋生物, 珊瑚礁, 海洋污染, 海洋保护, 蓝色经济]
+          hi: [महासागर संरक्षण, समुद्री जीवन, प्रवाल भित्ति, समुद्री प्रदूषण]
+          sw: [uhifadhi wa bahari, viumbe wa baharini, matumbawe, uchafuzi wa bahari, uchumi wa buluu]
+      - id: fisheries
+        label: Fishing and fisheries (overfishing, small-scale fishers)
+        targets: ["14.4", "14.6", "14.7", "14.b"]
+        strong:
+          en: [fisheries, fishing industry, overfishing, illegal fishing, small-scale fishers, fishermen, fishers, aquaculture, fish stocks, seafood]
+          fr: [pêche, pêcheries, surpêche, pêche illégale, pêcheurs, aquaculture]
+          es: [pesca, pesquerías, sobrepesca, pesca ilegal, pescadores, acuicultura, pesca artesanal]
+          pt: [pesca, sobrepesca, pesca ilegal, pescadores, aquicultura, pesca artesanal]
+          ar: [صيد الأسماك, الصيد الجائر, الصيادين, الاستزراع السمكي]
+          ru: [рыболовство, рыбный промысел, браконьерство, рыбаки, аквакультура]
+          zh: [渔业, 过度捕捞, 非法捕捞, 渔民, 水产养殖]
+          hi: [मत्स्य पालन, मछुआरे, अत्यधिक मछली पकड़ना]
+          sw: [uvuvi, wavuvi, uvuvi haramu, ufugaji wa samaki]
+
+  life_on_land:
+    sections:
+      en: [nature, wildlife, biodiversity, conservation, forests, animals]
+      fr: [nature, biodiversité, faune, forêts]
+      es: [naturaleza, biodiversidad, fauna, bosques]
+      pt: [natureza, biodiversidade, fauna, florestas]
+      ar: [الطبيعة, التنوع البيولوجي, الحياة البرية]
+      ru: [природа, биоразнообразие]
+      zh: [自然, 生物多样性, 野生动物]
+      hi: [प्रकृति, वन्यजीव, जैव विविधता]
+      sw: [mazingira asilia, wanyamapori]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: biodiversity
+    subtopics:
+      - id: forests
+        label: Forests, deforestation and land degradation (desertification, soil)
+        targets: ["15.1", "15.2", "15.3", "15.b"]
+        strong:
+          en: [deforestation, reforestation, afforestation, forest conservation, rainforest, amazon rainforest, forest fires, wildfires, desertification, land degradation, soil erosion, land restoration, tree planting]
+          fr: [déforestation, reforestation, forêt tropicale, incendies de forêt, désertification, dégradation des terres, érosion des sols]
+          es: [deforestación, reforestación, selva tropical, incendios forestales, desertificación, degradación de la tierra, erosión del suelo]
+          pt: [desmatamento, reflorestamento, floresta amazônica, queimadas, incêndios florestais, desertificação, degradação do solo]
+          ar: [إزالة الغابات, التشجير, حرائق الغابات, التصحر, تدهور الأراضي]
+          ru: [вырубка лесов, лесовосстановление, лесные пожары, опустынивание, деградация земель]
+          zh: [森林砍伐, 植树造林, 森林火灾, 荒漠化, 土地退化, 水土流失]
+          hi: [वनों की कटाई, वनीकरण, जंगल की आग, मरुस्थलीकरण, भूमि क्षरण]
+          sw: [ukataji miti, upandaji miti, moto wa misitu, kuenea kwa jangwa, uharibifu wa ardhi]
+      - id: biodiversity
+        label: Biodiversity and wildlife (endangered species, poaching, protected areas)
+        targets: ["15.4", "15.5", "15.6", "15.7", "15.8", "15.9", "15.a", "15.c"]
+        strong:
+          en: [biodiversity, wildlife, endangered species, extinction, poaching, wildlife trafficking, national parks, protected areas,
+               conservation, nature conservation, invasive species, rewilding, convention on biological diversity, cites]
+          fr: [biodiversité, faune sauvage, espèces menacées, extinction, braconnage, trafic d'espèces sauvages, parcs nationaux, aires protégées, conservation de la nature]
+          es: [biodiversidad, fauna silvestre, vida silvestre, especies en peligro, caza furtiva, tráfico de fauna, parques nacionales, áreas protegidas, conservación]
+          pt: [biodiversidade, vida selvagem, fauna silvestre, espécies ameaçadas, caça ilegal, tráfico de animais silvestres, parques nacionais, áreas protegidas]
+          ar: [التنوع البيولوجي, الحياة البرية, الأنواع المهددة بالانقراض, الصيد غير المشروع, المحميات الطبيعية]
+          ru: [биоразнообразие, дикая природа, исчезающие виды, браконьерство, заповедники, национальные парки]
+          zh: [生物多样性, 野生动物, 濒危物种, 偷猎, 自然保护区, 国家公园]
+          hi: [जैव विविधता, वन्यजीव, लुप्तप्राय प्रजातियां, अवैध शिकार, राष्ट्रीय उद्यान]
+          sw: [bioanuwai, wanyamapori, viumbe walio hatarini, ujangili, hifadhi za taifa]
+
+  # -------------------------------------------------------- PROSPERITY
+  energy:
+    sections:
+      en: [energy, renewables, clean energy]
+      fr: [énergie, énergies renouvelables]
+      es: [energía, energías renovables]
+      pt: [energia, energias renováveis]
+      ar: [الطاقة]
+      ru: [энергетика]
+      zh: [能源, 新能源]
+      hi: [ऊर्जा]
+      sw: [nishati]
+    exclude:
+      en: [energy drink, energy drinks]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: renewable_energy
+    subtopics:
+      - id: energy_access
+        label: Access to electricity and clean cooking (energy poverty)
+        targets: ["7.1"]
+        strong:
+          en: [energy access, access to electricity, electrification, rural electrification, energy poverty, clean cooking, off-grid, mini-grid, power outages, load shedding]
+          fr: [accès à l'énergie, accès à l'électricité, électrification, électrification rurale, précarité énergétique, délestage, coupures d'électricité]
+          es: [acceso a la energía, acceso a la electricidad, electrificación, electrificación rural, pobreza energética, apagones]
+          pt: [acesso à energia, acesso à eletricidade, eletrificação, eletrificação rural, pobreza energética, apagões]
+          ar: [الوصول إلى الكهرباء, الكهرباء, فقر الطاقة, انقطاع الكهرباء]
+          ru: [доступ к электроэнергии, электрификация, энергетическая бедность]
+          zh: [电力供应, 农村电气化, 能源贫困, 停电]
+          hi: [बिजली की पहुंच, विद्युतीकरण, ग्रामीण विद्युतीकरण, बिजली कटौती]
+          sw: [upatikanaji wa umeme, usambazaji wa umeme vijijini, kukatika kwa umeme]
+      - id: renewable_energy
+        label: Renewable energy and energy transition (solar, wind, efficiency)
+        targets: ["7.2", "7.3", "7.a", "7.b"]
+        strong:
+          en: [renewable energy, renewables, clean energy, solar energy, solar power, wind energy, wind power, hydropower, geothermal, green hydrogen,
+               energy transition, energy efficiency, electric vehicles, irena]
+          fr: [énergies renouvelables, énergie renouvelable, énergie propre, énergie solaire, énergie éolienne, éolien, hydroélectricité, transition énergétique, efficacité énergétique]
+          es: [energías renovables, energía renovable, energía limpia, energía solar, energía eólica, hidroeléctrica, transición energética, eficiencia energética]
+          pt: [energias renováveis, energia renovável, energia limpa, energia solar, energia eólica, hidrelétrica, transição energética, eficiência energética]
+          ar: [الطاقة المتجددة, الطاقة النظيفة, الطاقة الشمسية, طاقة الرياح, التحول الطاقي, كفاءة الطاقة]
+          ru: [возобновляемая энергия, возобновляемые источники энергии, солнечная энергия, ветровая энергия, энергетический переход, энергоэффективность]
+          zh: [可再生能源, 清洁能源, 太阳能, 风能, 风电, 光伏, 能源转型, 新能源汽车]
+          hi: [नवीकरणीय ऊर्जा, स्वच्छ ऊर्जा, सौर ऊर्जा, पवन ऊर्जा, ऊर्जा दक्षता]
+          sw: [nishati jadidifu, nishati safi, nishati ya jua, nishati ya upepo]
+
+  work_economy:
+    sections:
+      en: [labour, labor, workers, labour rights]
+      fr: [travail, monde du travail]
+      es: [trabajo, laboral]
+      pt: [trabalho]
+      ar: [العمل, التوظيف, وظائف]
+      ru: [работа, занятость, труд]
+      zh: [就业, 劳动]
+      hi: [रोजगार, नौकरी]
+      sw: [ajira, kazi]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: decent_jobs
+    subtopics:
+      - id: decent_jobs
+        label: Jobs, wages and workers' rights (unemployment, trade unions, informal work)
+        targets: ["8.3", "8.5", "8.6", "8.8", "8.b"]
+        strong:
+          en: [unemployment, decent work, workers' rights, labour rights, labor rights, trade unions, trade union, minimum wage, wages, informal economy,
+               informal sector, youth unemployment, job creation, ilo, gig economy, occupational safety]
+          fr: [chômage, travail décent, droits des travailleurs, syndicats, salaire minimum, économie informelle, chômage des jeunes, grève, oit]
+          es: [desempleo, trabajo decente, derechos laborales, sindicatos, salario mínimo, economía informal, informalidad, desempleo juvenil, huelga, oit]
+          pt: [desemprego, trabalho decente, direitos trabalhistas, sindicatos, salário mínimo, economia informal, informalidade, greve, oit]
+          ar: [البطالة, التوظيف, العمل اللائق, حقوق العمال, النقابات, الحد الأدنى للأجور, الاقتصاد غير الرسمي, منظمة العمل الدولية]
+          ru: [безработица, занятость, достойный труд, права работников, профсоюзы, минимальная зарплата, неформальная экономика, забастовка]
+          zh: [失业, 就业, 体面劳动, 劳工权益, 工会, 最低工资, 非正规经济, 青年失业]
+          hi: [बेरोजगारी, रोजगार, श्रमिक अधिकार, मजदूर, ट्रेड यूनियन, न्यूनतम मजदूरी, असंगठित क्षेत्र]
+          sw: [ukosefu wa ajira, ajira, haki za wafanyakazi, vyama vya wafanyakazi, kima cha chini cha mshahara, sekta isiyo rasmi]
+      - id: forced_child_labour
+        label: Child labour, forced labour and modern slavery
+        targets: ["8.7"]
+        strong:
+          en: [child labour, child labor, forced labour, forced labor, modern slavery, human trafficking, bonded labour, migrant workers' rights]
+          fr: [travail des enfants, travail forcé, esclavage moderne, traite des êtres humains]
+          es: [trabajo infantil, trabajo forzoso, esclavitud moderna, trata de personas]
+          pt: [trabalho infantil, trabalho forçado, trabalho escravo, escravidão moderna, tráfico de pessoas]
+          ar: [عمالة الأطفال, العمل القسري, العبودية الحديثة, الاتجار بالبشر]
+          ru: [детский труд, принудительный труд, современное рабство, торговля людьми]
+          zh: [童工, 强迫劳动, 现代奴役, 人口贩卖]
+          hi: [बाल श्रम, बंधुआ मजदूरी, जबरन श्रम, मानव तस्करी]
+          sw: [ajira kwa watoto, kazi za kulazimishwa, utumwa wa kisasa, usafirishaji haramu wa binadamu]
+      - id: growth
+        label: Economic growth, small businesses and access to finance
+        targets: ["8.1", "8.2", "8.4", "8.9", "8.10", "8.a"]
+        strong:
+          en: [economic growth, gdp, small businesses, smes, msmes, entrepreneurship, entrepreneurs, access to finance, productivity, economic development, livelihoods]
+          fr: [croissance économique, pib, pme, entrepreneuriat, entrepreneurs, accès au financement, développement économique]
+          es: [crecimiento económico, pib, pymes, emprendimiento, emprendedores, acceso al financiamiento, desarrollo económico]
+          pt: [crescimento econômico, pib, pequenas empresas, empreendedorismo, empreendedores, acesso a crédito, desenvolvimento econômico]
+          ar: [النمو الاقتصادي, الناتج المحلي الإجمالي, المشاريع الصغيرة, ريادة الأعمال, التنمية الاقتصادية]
+          ru: [экономический рост, ввп, малый бизнес, предпринимательство, экономическое развитие]
+          zh: [经济增长, 国内生产总值, 中小企业, 创业, 经济发展]
+          hi: [आर्थिक विकास, जीडीपी, लघु उद्योग, उद्यमिता, स्टार्टअप]
+          sw: [ukuaji wa uchumi, pato la taifa, biashara ndogo, ujasiriamali, maendeleo ya kiuchumi]
+
+  industry_innovation:
+    sections:
+      en: [infrastructure, industry, innovation, transport, construction, startups]
+      fr: [infrastructures, industrie, innovation, transports]
+      es: [infraestructura, industria, innovación, transporte]
+      pt: [infraestrutura, indústria, inovação, transportes]
+      ar: [البنية التحتية, الصناعة, الابتكار]
+      ru: [инфраструктура, промышленность, инновации, транспорт]
+      zh: [基础设施, 工业, 创新, 交通]
+      hi: [बुनियादी ढांचा, उद्योग, नवाचार]
+      sw: [miundombinu, viwanda, ubunifu]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: industry
+    subtopics:
+      - id: infrastructure
+        label: Infrastructure and transport (roads, railways, ports, internet access)
+        targets: ["9.1", "9.a", "9.c"]
+        strong:
+          en: [infrastructure, roads, railways, railway, ports, bridges, highways, transport infrastructure, broadband, internet access, connectivity, digital divide]
+          fr: [infrastructures, routes, chemins de fer, ports, ponts, connectivité, fracture numérique, accès à internet]
+          es: [infraestructura, carreteras, ferrocarriles, puertos, puentes, conectividad, brecha digital, acceso a internet]
+          pt: [infraestrutura, rodovias, ferrovias, portos, pontes, conectividade, exclusão digital, acesso à internet]
+          ar: [البنية التحتية, الطرق, السكك الحديدية, الموانئ, الجسور, الفجوة الرقمية]
+          ru: [инфраструктура, дороги, железные дороги, порты, мосты, цифровой разрыв]
+          zh: [基础设施, 公路, 铁路, 港口, 桥梁, 宽带, 数字鸿沟]
+          hi: [बुनियादी ढांचा, सड़कें, रेलवे, बंदरगाह, पुल, डिजिटल विभाजन]
+          sw: [miundombinu, barabara, reli, bandari, madaraja]
+      - id: industry
+        label: Industry and manufacturing (industrialisation, factories)
+        targets: ["9.2", "9.3", "9.4"]
+        strong:
+          en: [industrialisation, industrialization, manufacturing, factories, industrial policy, industrial development, value chains, green industry]
+          fr: [industrialisation, industrie manufacturière, usines, politique industrielle, chaînes de valeur]
+          es: [industrialización, manufactura, fábricas, política industrial, cadenas de valor]
+          pt: [industrialização, indústria, manufatura, fábricas, política industrial, cadeias de valor]
+          ar: [التصنيع, الصناعة التحويلية, المصانع, السياسة الصناعية]
+          ru: [индустриализация, обрабатывающая промышленность, заводы, промышленная политика]
+          zh: [工业化, 制造业, 工厂, 产业政策, 产业链]
+          hi: [औद्योगीकरण, विनिर्माण, कारखाने, मेक इन इंडिया]
+          sw: [ukuaji wa viwanda, viwanda, uzalishaji viwandani]
+      - id: innovation
+        label: Research, innovation and start-ups
+        targets: ["9.5", "9.b"]
+        strong:
+          en: [innovation, research and development, r&d, startups, start-ups, startup ecosystem, tech hubs, innovation hub, venture capital, patents]
+          fr: [innovation, recherche et développement, start-up, startups, jeunes pousses]
+          es: [innovación, investigación y desarrollo, startups, emprendimiento tecnológico]
+          pt: [inovação, pesquisa e desenvolvimento, startups]
+          ar: [الابتكار, البحث والتطوير, الشركات الناشئة]
+          ru: [инновации, исследования и разработки, стартапы]
+          zh: [创新, 研发, 初创企业, 科技创新]
+          hi: [नवाचार, अनुसंधान और विकास, स्टार्टअप]
+          sw: [ubunifu, utafiti na maendeleo, kampuni changa]
+
+  inequalities:
+    sections:
+      en: [inequality, equality, diversity, inclusion, race, identity, lgbtq]
+      fr: [inégalités, diversité, discriminations]
+      es: [desigualdad, diversidad, inclusión]
+      pt: [desigualdade, diversidade, inclusão]
+      ar: [عدم المساواة, التنوع]
+      ru: [неравенство]
+      zh: [不平等, 多元]
+      hi: [असमानता]
+      sw: [ukosefu wa usawa]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: discrimination
+    subtopics:
+      - id: income_inequality
+        label: Income inequality and social inclusion
+        targets: ["10.1", "10.4", "10.5", "10.6"]
+        strong:
+          en: [inequality, inequalities, income inequality, wealth gap, social inclusion, social exclusion, marginalised communities, marginalized communities, oxfam]
+          fr: [inégalités, inégalités de revenus, inclusion sociale, exclusion sociale, communautés marginalisées]
+          es: [desigualdad, desigualdades, desigualdad de ingresos, inclusión social, exclusión social, comunidades marginadas]
+          pt: [desigualdade, desigualdades, desigualdade de renda, inclusão social, exclusão social]
+          ar: [عدم المساواة, التفاوت, الإدماج الاجتماعي, الإقصاء الاجتماعي, المهمشين]
+          ru: [неравенство, неравенство доходов, социальная интеграция, социальная изоляция]
+          zh: [不平等, 贫富差距, 收入差距, 社会包容, 弱势群体]
+          hi: [असमानता, आय असमानता, सामाजिक समावेशन, वंचित समुदाय]
+          sw: [ukosefu wa usawa, pengo la kipato, ujumuishaji wa kijamii]
+      - id: discrimination
+        label: Discrimination and minorities (racism, ethnic minorities, LGBTQ+, caste)
+        targets: ["10.2", "10.3"]
+        strong:
+          en: [discrimination, racism, anti-racism, racial justice, racial equality, minorities, minority rights, ethnic minorities, xenophobia, caste discrimination,
+               black lives matter, lgbtq, lgbt, diversity and inclusion, equal opportunities, african american, roma people, romani]
+          fr: [discrimination, discriminations, racisme, antiracisme, minorités, droits des minorités, xénophobie, égalité des chances, roms]
+          es: [discriminación, racismo, antirracismo, minorías, derechos de las minorías, xenofobia, igualdad de oportunidades, afrodescendientes]
+          pt: [discriminação, racismo, antirracismo, minorias, xenofobia, igualdade racial, igualdade de oportunidades, afrodescendentes]
+          ar: [التمييز, العنصرية, الأقليات, حقوق الأقليات, كراهية الأجانب]
+          ru: [дискриминация, расизм, меньшинства, права меньшинств, ксенофобия]
+          zh: [歧视, 种族主义, 少数民族, 少数群体, 仇外]
+          hi: [भेदभाव, जातिवाद, नस्लवाद, अल्पसंख्यक, दलित, जातिगत भेदभाव]
+          sw: [ubaguzi, ubaguzi wa rangi, walio wachache, haki za walio wachache]
+      - id: remittances
+        label: Remittances and safe migration (money sent home, migration policy)
+        targets: ["10.7", "10.c"]
+        strong:
+          en: [remittances, safe migration, migration policy, regular migration, migrant workers]
+          fr: [transferts de fonds, envois de fonds, migration sûre, politique migratoire, travailleurs migrants]
+          es: [remesas, migración segura, política migratoria, trabajadores migrantes]
+          pt: [remessas, migração segura, política migratória, trabalhadores migrantes]
+          ar: [التحويلات المالية, الهجرة الآمنة, العمال المهاجرين]
+          ru: [денежные переводы, трудовые мигранты, миграционная политика]
+          zh: [侨汇, 汇款, 移民政策, 外籍劳工]
+          hi: [प्रेषण, प्रवासी मजदूर]
+          sw: [fedha kutoka nje, wafanyakazi wahamiaji]
+
+  cities:
+    sections:
+      en: [cities, city, urban, housing, mobility, transport]
+      fr: [villes, urbanisme, logement, mobilité]
+      es: [ciudades, urbanismo, vivienda, movilidad]
+      pt: [cidades, urbanismo, habitação, moradia, mobilidade]
+      ar: [المدن, الإسكان]
+      ru: [города, жильё]
+      zh: [城市, 住房]
+      hi: [शहर, आवास]
+      sw: [miji, makazi]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: urban_mobility
+    subtopics:
+      - id: housing
+        label: Housing, slums and homelessness
+        targets: ["11.1"]
+        strong:
+          en: [affordable housing, housing crisis, slums, informal settlements, homelessness, homeless, evictions, social housing, un-habitat]
+          fr: [logement abordable, crise du logement, bidonvilles, sans-abri, sans-abris, expulsions, logement social]
+          es: [vivienda asequible, crisis de vivienda, asentamientos informales, barrios marginales, personas sin hogar, desalojos, vivienda social]
+          pt: [habitação acessível, moradia popular, favelas, sem-teto, pessoas em situação de rua, despejos, minha casa minha vida]
+          ar: [الإسكان الميسر, أزمة السكن, العشوائيات, المشردين]
+          ru: [доступное жильё, жилищный кризис, бездомные, трущобы]
+          zh: [保障性住房, 住房危机, 贫民窟, 无家可归]
+          hi: [किफायती आवास, झुग्गी, बेघर, प्रधानमंत्री आवास]
+          sw: [nyumba nafuu, makazi duni, wasio na makazi]
+      - id: urban_mobility
+        label: Urban planning, public transport and green cities (air quality, waste, public spaces)
+        targets: ["11.2", "11.3", "11.4", "11.6", "11.7", "11.a", "11.b", "11.c"]
+        strong:
+          en: [urban planning, urbanisation, urbanization, public transport, urban mobility, smart cities, sustainable cities, green cities, cycling infrastructure,
+               public spaces, urban development, city planning, heritage protection, new urban agenda]
+          fr: [urbanisme, urbanisation, transports en commun, mobilité urbaine, villes durables, villes intelligentes, espaces publics]
+          es: [urbanismo, urbanización, transporte público, movilidad urbana, ciudades sostenibles, ciudades inteligentes, espacio público]
+          pt: [urbanismo, urbanização, transporte público, mobilidade urbana, cidades sustentáveis, cidades inteligentes, espaços públicos]
+          ar: [التخطيط العمراني, التحضر, النقل العام, المدن المستدامة, المدن الذكية]
+          ru: [градостроительство, урбанизация, общественный транспорт, устойчивые города, умный город]
+          zh: [城市规划, 城镇化, 公共交通, 智慧城市, 可持续城市]
+          hi: [शहरी नियोजन, शहरीकरण, सार्वजनिक परिवहन, स्मार्ट सिटी]
+          sw: [mipango miji, ukuaji wa miji, usafiri wa umma, miji endelevu]
+
+  # ------------------------------------------------------------- PEACE
+  peace_justice:
+    sections:
+      en: [justice, law, courts, rule of law, corruption, peace, investigations]
+      fr: [justice, droit, corruption, paix]
+      es: [justicia, corrupción, paz, tribunales]
+      pt: [justiça, corrupção, paz]
+      ar: [العدالة, القضاء, الفساد, السلام]
+      ru: [правосудие, суд, коррупция]
+      zh: [法治, 司法, 反腐]
+      hi: [न्याय, भ्रष्टाचार]
+      sw: [haki, rushwa, amani]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: justice_rule_of_law
+    subtopics:
+      - id: violence_peace
+        label: Reducing violence and building peace (peacebuilding, violence against children)
+        targets: ["16.1", "16.2", "16.a"]
+        strong:
+          en: [peacebuilding, peace building, peace process, reconciliation, violence prevention, conflict resolution, armed violence, gun violence,
+               violence against children, child abuse, mediation, social cohesion, culture of peace]
+          fr: [consolidation de la paix, processus de paix, réconciliation, prévention de la violence, résolution des conflits, maltraitance des enfants, cohésion sociale]
+          es: [construcción de paz, proceso de paz, reconciliación, prevención de la violencia, resolución de conflictos, maltrato infantil, cultura de paz]
+          pt: [construção da paz, processo de paz, reconciliação, prevenção da violência, resolução de conflitos, violência contra crianças, cultura de paz]
+          ar: [بناء السلام, عملية السلام, المصالحة, منع العنف, حل النزاعات, التماسك الاجتماعي]
+          ru: [миростроительство, мирный процесс, примирение, предотвращение насилия, урегулирование конфликтов]
+          zh: [建设和平, 和平进程, 和解, 预防暴力, 冲突解决]
+          hi: [शांति निर्माण, शांति प्रक्रिया, सुलह, हिंसा की रोकथाम]
+          sw: [ujenzi wa amani, mchakato wa amani, maridhiano, kuzuia ghasia, utatuzi wa migogoro]
+      - id: justice_rule_of_law
+        label: Justice and the rule of law (courts, access to justice, human trafficking, organised crime)
+        targets: ["16.3", "16.4", "16.9"]
+        strong:
+          en: [rule of law, access to justice, justice system, judiciary, judicial reform, legal aid, organised crime, organized crime, illicit financial flows,
+               money laundering, arms trafficking, human trafficking, birth registration, international criminal court]
+          fr: [état de droit, accès à la justice, système judiciaire, réforme judiciaire, aide juridique, crime organisé, blanchiment d'argent, cour pénale internationale]
+          es: [estado de derecho, acceso a la justicia, sistema judicial, reforma judicial, crimen organizado, lavado de dinero, trata de personas, corte penal internacional]
+          pt: [estado de direito, acesso à justiça, sistema judiciário, crime organizado, lavagem de dinheiro, tráfico de pessoas, tribunal penal internacional]
+          ar: [سيادة القانون, الوصول إلى العدالة, القضاء, الجريمة المنظمة, غسل الأموال, الاتجار بالبشر, المحكمة الجنائية الدولية]
+          ru: [верховенство права, доступ к правосудию, судебная система, организованная преступность, отмывание денег, международный уголовный суд]
+          zh: [法治, 司法公正, 司法改革, 有组织犯罪, 洗钱, 国际刑事法院]
+          hi: [कानून का शासन, न्याय तक पहुंच, न्यायपालिका, संगठित अपराध, धन शोधन]
+          sw: [utawala wa sheria, upatikanaji wa haki, mahakama, uhalifu wa kupangwa, utakatishaji fedha]
+      - id: corruption_institutions
+        label: Corruption, transparency and accountable institutions (access to information)
+        targets: ["16.5", "16.6", "16.7", "16.8", "16.10", "16.b"]
+        strong:
+          en: [corruption, anti-corruption, bribery, transparency, accountability, good governance, open government, access to information, freedom of information,
+               whistleblower, whistleblowers, public procurement, investigative reporting, transparency international]
+          fr: [corruption, lutte contre la corruption, pots-de-vin, transparence, redevabilité, bonne gouvernance, accès à l'information, lanceurs d'alerte]
+          es: [corrupción, anticorrupción, soborno, transparencia, rendición de cuentas, buen gobierno, acceso a la información, denunciantes]
+          pt: [corrupção, combate à corrupção, suborno, propina, transparência, prestação de contas, boa governança, acesso à informação, lava jato]
+          ar: [الفساد, مكافحة الفساد, الرشوة, الشفافية, المساءلة, الحكم الرشيد, الحق في الوصول إلى المعلومات]
+          ru: [коррупция, борьба с коррупцией, взяточничество, прозрачность, подотчётность, доступ к информации]
+          zh: [腐败, 反腐败, 贿赂, 透明度, 问责, 善治, 信息公开]
+          hi: [भ्रष्टाचार, भ्रष्टाचार विरोधी, रिश्वत, पारदर्शिता, जवाबदेही, सूचना का अधिकार]
+          sw: [rushwa, kupambana na rushwa, uwazi, uwajibikaji, utawala bora, upatikanaji wa habari]
+
+  # ------------------------------------------------------- PARTNERSHIP
+  partnerships:
+    sections:
+      en: [development, global development, sdgs, united nations, international cooperation, aid]
+      fr: [développement, coopération, nations unies, odd]
+      es: [desarrollo, cooperación, naciones unidas, ods]
+      pt: [desenvolvimento, cooperação, nações unidas, ods]
+      ar: [التنمية, الأمم المتحدة, التعاون الدولي]
+      ru: [развитие, оон, международное сотрудничество]
+      zh: [发展, 联合国, 国际合作]
+      hi: [विकास, संयुक्त राष्ट्र]
+      sw: [maendeleo, umoja wa mataifa]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: global_cooperation
+    subtopics:
+      - id: development_finance
+        label: Development aid, financing and debt (ODA, debt relief, tax)
+        targets: ["17.1", "17.2", "17.3", "17.4", "17.5"]
+        strong:
+          en: [development aid, foreign aid, official development assistance, oda, development finance, financing for development, debt relief, debt crisis,
+               debt restructuring, world bank, imf, international monetary fund, tax justice, illicit financial flows]
+          fr: [aide au développement, aide publique au développement, apd, financement du développement, allègement de la dette, crise de la dette, banque mondiale, fmi]
+          es: [ayuda al desarrollo, ayuda oficial al desarrollo, aod, financiamiento para el desarrollo, alivio de la deuda, crisis de deuda, banco mundial, fmi]
+          pt: [ajuda ao desenvolvimento, ajuda oficial ao desenvolvimento, financiamento do desenvolvimento, alívio da dívida, banco mundial, fmi]
+          ar: [المساعدات الإنمائية, المساعدة الإنمائية الرسمية, تمويل التنمية, تخفيف الديون, البنك الدولي, صندوق النقد الدولي]
+          ru: [помощь в целях развития, официальная помощь развитию, финансирование развития, списание долга, всемирный банк, мвф]
+          zh: [发展援助, 官方发展援助, 发展融资, 债务减免, 世界银行, 国际货币基金组织]
+          hi: [विकास सहायता, विकास वित्त, ऋण राहत, विश्व बैंक, अंतरराष्ट्रीय मुद्रा कोष]
+          sw: [misaada ya maendeleo, ufadhili wa maendeleo, msamaha wa madeni, benki ya dunia, shirika la fedha la kimataifa]
+      - id: global_cooperation
+        label: International cooperation, the UN and the SDGs (multilateralism, South-South cooperation)
+        targets: ["17.6", "17.9", "17.14", "17.15", "17.16", "17.17"]
+        strong:
+          en: [sustainable development goals, sdgs, sdg, agenda 2030, 2030 agenda, multilateralism, international cooperation, development cooperation,
+               south-south cooperation, global partnership, united nations, un general assembly, public-private partnership, undp]
+          fr: [objectifs de développement durable, agenda 2030, multilatéralisme, coopération internationale, coopération au développement, coopération sud-sud, nations unies, onu]
+          es: [objetivos de desarrollo sostenible, ods, agenda 2030, multilateralismo, cooperación internacional, cooperación al desarrollo, cooperación sur-sur, naciones unidas, onu]
+          pt: [objetivos de desenvolvimento sustentável, ods, agenda 2030, multilateralismo, cooperação internacional, cooperação sul-sul, nações unidas, onu]
+          ar: [أهداف التنمية المستدامة, خطة 2030, التعددية, التعاون الدولي, التعاون بين بلدان الجنوب, الأمم المتحدة]
+          ru: [цели устойчивого развития, повестка дня на период до 2030 года, многосторонность, международное сотрудничество, сотрудничество юг-юг, оон]
+          zh: [可持续发展目标, 2030年议程, 多边主义, 国际合作, 南南合作, 联合国]
+          hi: [सतत विकास लक्ष्य, एजेंडा 2030, बहुपक्षवाद, अंतरराष्ट्रीय सहयोग, दक्षिण-दक्षिण सहयोग, संयुक्त राष्ट्र]
+          sw: [malengo ya maendeleo endelevu, ajenda 2030, ushirikiano wa kimataifa, umoja wa mataifa]
+      - id: trade_tech_data
+        label: Fair trade rules, technology transfer and development data
+        targets: ["17.7", "17.8", "17.10", "17.11", "17.12", "17.13", "17.18", "17.19"]
+        strong:
+          en: [world trade organization, wto, trade agreement, trade agreements, technology transfer, least developed countries, ldcs, small island developing states, sids, development data]
+          fr: [organisation mondiale du commerce, omc, accord commercial, transfert de technologie, pays les moins avancés]
+          es: [organización mundial del comercio, omc, acuerdo comercial, transferencia de tecnología, países menos adelantados]
+          pt: [organização mundial do comércio, omc, acordo comercial, transferência de tecnologia, países menos desenvolvidos]
+          ar: [منظمة التجارة العالمية, اتفاقية تجارية, نقل التكنولوجيا, أقل البلدان نموا]
+          ru: [всемирная торговая организация, вто, торговое соглашение, передача технологий, наименее развитые страны]
+          zh: [世界贸易组织, 世贸组织, 贸易协定, 技术转让, 最不发达国家]
+          hi: [विश्व व्यापार संगठन, व्यापार समझौता, प्रौद्योगिकी हस्तांतरण]
+          sw: [shirika la biashara duniani, mkataba wa biashara, uhamishaji wa teknolojia]
+
+  # ---------------------------------------------- BEATS & AUDIENCES
+  # (general_news has no list: it is the default when nothing else is found)
+  fact_checking:
+    sections:
+      en: [fact check, fact-check, fact checks, factcheck, fact checking, verification, debunk, misinformation, disinformation]
+      fr: [fact-checking, vérification, désinformation, les décodeurs, vrai ou faux, intox]
+      es: [verificación, chequeo, fact-checking, desinformación, bulos, falso o verdadero]
+      pt: [checagem, verificação, fato ou fake, desinformação]
+      ar: [تدقيق الحقائق, التحقق, تضليل]
+      ru: [фактчекинг, проверка фактов, фейки]
+      zh: [事实核查, 辟谣]
+      hi: [फैक्ट चेक, सच या झूठ]
+      sw: [uhakiki wa ukweli]
+    strong:
+      en: [fact-checking, fact checking, fact-check, fact check, fact-checker, fact checkers, misinformation, disinformation, fake news, debunking,
+           verification, hoax, hoaxes, media literacy, information integrity, deepfake, deepfakes, ifcn]
+      fr: [fact-checking, vérification des faits, désinformation, fausses informations, infox, fake news, éducation aux médias, hypertrucage]
+      es: [verificación de datos, chequeo de datos, desinformación, noticias falsas, bulos, alfabetización mediática]
+      pt: [checagem de fatos, verificação de fatos, desinformação, notícias falsas, fake news, educação midiática]
+      ar: [تدقيق الحقائق, التحقق من الأخبار, الأخبار الكاذبة, التضليل الإعلامي, المعلومات المضللة]
+      ru: [проверка фактов, фактчекинг, дезинформация, фейковые новости, медиаграмотность]
+      zh: [事实核查, 虚假信息, 假新闻, 谣言, 媒体素养]
+      hi: [तथ्य जांच, फैक्ट चेक, फर्जी खबर, फेक न्यूज, भ्रामक जानकारी]
+      sw: [uhakiki wa ukweli, habari za uongo, upotoshaji]
+
+  science:
+    sections:
+      en: [science, research, space, science & tech, science and technology]
+      fr: [sciences, science, recherche, espace]
+      es: [ciencia, investigación]
+      pt: [ciência, pesquisa]
+      ar: [علوم, العلوم]
+      ru: [наука]
+      zh: [科学, 科技]
+      hi: [विज्ञान]
+      sw: [sayansi]
+    exclude:
+      en: [science fiction, christian science, political science, falls church, medicine hat]
+      fr: [science-fiction]
+      es: [ciencia ficción]
+    strong:
+      en: [science, scientific, scientists, research, researchers, space exploration, astronomy, physics, biology, chemistry, genetics, nasa, popular science]
+      fr: [science, sciences, scientifique, scientifiques, chercheurs, recherche scientifique, astronomie, physique, biologie]
+      es: [ciencia, científico, científicos, investigadores, investigación científica, astronomía, física, biología]
+      pt: [ciência, científico, cientistas, pesquisadores, pesquisa científica, astronomia, física, biologia]
+      ar: [العلوم, علمي, العلماء, البحث العلمي, الفضاء]
+      ru: [наука, учёные, ученые, научный, исследования, космос]
+      zh: [科学, 科学家, 科研, 航天]
+      hi: [विज्ञान, वैज्ञानिक, अनुसंधान, अंतरिक्ष]
+      sw: [sayansi, wanasayansi, utafiti]
+
+  business_economy:
+    sections:
+      en: [business, economy, markets, finance, money, companies]
+      fr: [économie, entreprises, marchés, finance, bourse]
+      es: [economía, negocios, mercados, finanzas, empresas]
+      pt: [economia, negócios, mercados, finanças, empresas]
+      ar: [اقتصاد, الاقتصاد, أعمال, مال]
+      ru: [экономика, бизнес, финансы]
+      zh: [财经, 经济, 商业, 金融]
+      hi: [व्यापार, अर्थव्यवस्था, कारोबार]
+      sw: [biashara, uchumi]
+    strong:
+      en: [business, economy, economic, economics, finance, financial, markets, stock market, stocks, investment, investors, banking, trade, commerce]
+      fr: [économie, économique, entreprises, finance, finances, bourse, marchés, investissement, banques, commerce]
+      es: [economía, económico, negocios, empresas, finanzas, bolsa, mercados, inversión, banca, comercio]
+      pt: [economia, econômico, negócios, empresas, finanças, bolsa, mercados, investimento, bancos, comércio]
+      ar: [الاقتصاد, اقتصادي, الأعمال, المال, البورصة, الأسواق, الاستثمار]
+      ru: [экономика, экономический, бизнес, финансы, биржа, рынки, инвестиции]
+      zh: [经济, 财经, 商业, 金融, 股市, 投资]
+      hi: [व्यापार, अर्थव्यवस्था, कारोबार, शेयर बाजार, निवेश]
+      sw: [biashara, uchumi, fedha, soko la hisa, uwekezaji]
+
+  culture:
+    sections:
+      en: [culture, arts, books, music, film, entertainment, heritage]
+      fr: [culture, arts, livres, musique, cinéma]
+      es: [cultura, artes, libros, música, cine]
+      pt: [cultura, artes, livros, música, cinema]
+      ar: [ثقافة, الثقافة, فنون]
+      ru: [культура, искусство]
+      zh: [文化, 艺术]
+      hi: [संस्कृति, कला]
+      sw: [utamaduni, sanaa]
+    exclude:
+      en: [pop culture news, celebrity news, celebrity gossip, gossip]
+    strong:
+      en: [culture, cultural, arts, art, literature, music, cinema, film, theatre, theater, heritage, cultural heritage, museums, festival, festivals, unesco world heritage]
+      fr: [culture, culturel, culturelle, arts, littérature, musique, cinéma, théâtre, patrimoine, musées, festival]
+      es: [cultura, cultural, artes, literatura, música, cine, teatro, patrimonio, museos, festival]
+      pt: [cultura, cultural, artes, literatura, música, cinema, teatro, patrimônio, património, museus, festival]
+      ar: [الثقافة, ثقافي, الفنون, الأدب, الموسيقى, السينما, المسرح, التراث]
+      ru: [культура, культурный, искусство, литература, музыка, кино, театр, наследие]
+      zh: [文化, 艺术, 文学, 音乐, 电影, 戏剧, 文化遗产]
+      hi: [संस्कृति, सांस्कृतिक, कला, साहित्य, संगीत, सिनेमा, रंगमंच, विरासत]
+      sw: [utamaduni, sanaa, fasihi, muziki, filamu, urithi]
+
+  religion:
+    sections:
+      en: [religion, faith, church, belief, spirituality]
+      fr: [religion, religions, foi, église]
+      es: [religión, fe, iglesia]
+      pt: [religião, fé, igreja]
+      ar: [دين, الدين, إسلاميات]
+      ru: [религия, вера, церковь]
+      zh: [宗教]
+      hi: [धर्म, आस्था]
+      sw: [dini, imani]
+    strong:
+      en: [religion, religious, faith, christian, christianity, catholic, church, churches, islam, islamic, muslim, muslims, mosque, quran, jewish, judaism, hindu, hinduism, buddhist, buddhism, gospel, bible, evangelical, pope, interfaith]
+      fr: [religion, religieux, chrétien, chrétienne, catholique, église, islam, islamique, musulman, musulmans, mosquée, coran, juif, bouddhisme, évangélique, pape]
+      es: [religión, religioso, cristiano, cristiana, católico, católica, iglesia, islam, musulmán, musulmanes, mezquita, judío, evangélico, papa francisco]
+      pt: [religião, religioso, cristão, cristã, católico, católica, igreja, islã, muçulmano, mesquita, judeu, evangélico]
+      ar: [الدين, الإسلام, إسلامي, المسلمين, المسيحية, القرآن, المسجد, الكنيسة, الفتاوى]
+      ru: [религия, религиозный, православие, православный, церковь, ислам, мусульмане, христианство, католический]
+      zh: [宗教, 佛教, 基督教, 天主教, 伊斯兰教, 道教]
+      hi: [धर्म, धार्मिक, हिंदू, इस्लाम, मुस्लिम, ईसाई, बौद्ध, सिख, मंदिर]
+      sw: [dini, kikristo, ukristo, uislamu, kiislamu, waislamu, kanisa, msikiti, katoliki]
+
+  community_local:
+    sections:
+      en: [local, local news, community, my town, neighbourhood, neighborhood, region]
+      fr: [local, régions, ma région, communauté]
+      es: [local, regionales, comunidad, municipios]
+      pt: [local, regional, comunidade, cidades]
+      ar: [محليات, محلي]
+      ru: [местные новости, регион]
+      zh: [本地, 地方]
+      hi: [स्थानीय, शहर]
+      sw: [habari za ndani, jamii]
+    strong:
+      en: [community radio, community media, local news, community news, hyperlocal, local journalism, citizen journalism, grassroots]
+      fr: [radio communautaire, médias communautaires, information locale, presse locale, journalisme citoyen, radio associative]
+      es: [radio comunitaria, medios comunitarios, noticias locales, periodismo local, periodismo ciudadano, radio comunitaria indígena]
+      pt: [rádio comunitária, mídia comunitária, notícias locais, jornalismo local, jornalismo cidadão]
+      ar: [إذاعة مجتمعية, الإعلام المجتمعي, الأخبار المحلية]
+      ru: [местные новости, местная газета, гражданская журналистика]
+      zh: [社区电台, 本地新闻, 地方新闻]
+      hi: [सामुदायिक रेडियो, स्थानीय समाचार]
+      sw: [redio ya jamii, vyombo vya habari vya jamii, habari za ndani]
+
+  humanitarian:
+    sections:
+      en: [humanitarian, aid, crisis, emergencies, humanitarian news]
+      fr: [humanitaire, crises]
+      es: [humanitaria, ayuda humanitaria, crisis]
+      pt: [humanitária, ajuda humanitária, crises]
+      ar: [إنساني, الإغاثة]
+      ru: [гуманитарная помощь]
+      zh: [人道主义, 救援]
+      hi: [मानवीय सहायता, राहत]
+      sw: [misaada ya kibinadamu]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: humanitarian_crises
+    subtopics:
+      - id: humanitarian_crises
+        label: Humanitarian crises and aid (relief, aid workers, access)
+        strong:
+          en: [humanitarian, humanitarian aid, humanitarian crisis, humanitarian assistance, relief, emergency relief, aid workers, aid agencies, ocha, red cross, red crescent, unicef, wfp, msf, doctors without borders]
+          fr: [humanitaire, aide humanitaire, crise humanitaire, secours, travailleurs humanitaires, croix-rouge, croissant-rouge, médecins sans frontières]
+          es: [humanitaria, humanitario, ayuda humanitaria, crisis humanitaria, trabajadores humanitarios, cruz roja, media luna roja, médicos sin fronteras]
+          pt: [humanitária, humanitário, ajuda humanitária, crise humanitária, cruz vermelha, médicos sem fronteiras]
+          ar: [إنساني, المساعدات الإنسانية, الأزمة الإنسانية, الإغاثة, الهلال الأحمر, الصليب الأحمر, أطباء بلا حدود]
+          ru: [гуманитарный, гуманитарная помощь, гуманитарный кризис, красный крест, красный полумесяц]
+          zh: [人道主义, 人道援助, 人道危机, 救援, 红十字会, 红新月会, 无国界医生]
+          hi: [मानवीय, मानवीय सहायता, मानवीय संकट, राहत कार्य, रेड क्रॉस]
+          sw: [kibinadamu, misaada ya kibinadamu, mgogoro wa kibinadamu, msalaba mwekundu, hilali nyekundu]
+      - id: displacement_camps
+        label: People displaced by crises (refugee camps, internally displaced people)
+        strong:
+          en: [refugee camp, refugee camps, displaced people, internally displaced, idps, displacement, unhcr, shelter, famine relief]
+          fr: [camp de réfugiés, camps de réfugiés, déplacés internes, personnes déplacées, déplacement forcé, hcr]
+          es: [campo de refugiados, campamento de refugiados, desplazados internos, personas desplazadas, desplazamiento forzado, acnur]
+          pt: [campo de refugiados, deslocados internos, pessoas deslocadas, deslocamento forçado, acnur]
+          ar: [مخيم اللاجئين, مخيمات اللاجئين, النازحين, النزوح, النازحون داخليا, المفوضية السامية لشؤون اللاجئين]
+          ru: [лагерь беженцев, внутренне перемещённые лица, вынужденные переселенцы]
+          zh: [难民营, 流离失所者, 国内流离失所, 联合国难民署]
+          hi: [शरणार्थी शिविर, विस्थापित]
+          sw: [kambi ya wakimbizi, wakimbizi wa ndani, watu waliokimbia makazi]
+
+  human_rights:
+    sections:
+      en: [human rights, rights, rights & freedoms, civil liberties]
+      fr: [droits humains, droits de l'homme, libertés]
+      es: [derechos humanos]
+      pt: [direitos humanos]
+      ar: [حقوق الإنسان]
+      ru: [права человека]
+      zh: [人权]
+      hi: [मानवाधिकार]
+      sw: [haki za binadamu]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: civil_political_rights
+    subtopics:
+      - id: civil_political_rights
+        label: Civil and political rights (freedom of expression, protest, torture, death penalty, detention)
+        strong:
+          en: [human rights, civil rights, civil liberties, freedom of expression, freedom of speech, right to protest, political prisoners, torture,
+               death penalty, capital punishment, arbitrary detention, enforced disappearances, amnesty international, human rights watch, ohchr, human rights council]
+          fr: [droits humains, droits de l'homme, libertés civiles, liberté d'expression, prisonniers politiques, torture, peine de mort, détention arbitraire, disparitions forcées]
+          es: [derechos humanos, libertades civiles, libertad de expresión, presos políticos, tortura, pena de muerte, detención arbitraria, desapariciones forzadas]
+          pt: [direitos humanos, liberdades civis, liberdade de expressão, presos políticos, tortura, pena de morte, detenção arbitrária, desaparecimentos forçados]
+          ar: [حقوق الإنسان, الحريات المدنية, حرية التعبير, المعتقلين السياسيين, التعذيب, عقوبة الإعدام, الاختفاء القسري]
+          ru: [права человека, гражданские свободы, свобода слова, политзаключённые, пытки, смертная казнь]
+          zh: [人权, 公民权利, 言论自由, 政治犯, 酷刑, 死刑]
+          hi: [मानवाधिकार, नागरिक अधिकार, अभिव्यक्ति की स्वतंत्रता, यातना, मृत्युदंड]
+          sw: [haki za binadamu, uhuru wa kujieleza, wafungwa wa kisiasa, mateso, adhabu ya kifo]
+      - id: social_rights
+        label: Social, economic and cultural rights (right to food, housing, health, land)
+        strong:
+          en: [right to food, right to housing, right to health, right to education, land rights, economic and social rights, social justice, dignity]
+          fr: [droit à l'alimentation, droit au logement, droit à la santé, droits économiques et sociaux, justice sociale]
+          es: [derecho a la alimentación, derecho a la vivienda, derecho a la salud, derechos económicos y sociales, justicia social]
+          pt: [direito à alimentação, direito à moradia, direito à saúde, direitos sociais, justiça social]
+          ar: [الحق في الغذاء, الحق في السكن, الحق في الصحة, العدالة الاجتماعية]
+          ru: [право на жильё, право на здоровье, социальная справедливость]
+          zh: [食物权, 住房权, 健康权, 社会正义]
+          hi: [भोजन का अधिकार, आवास का अधिकार, सामाजिक न्याय]
+          sw: [haki ya chakula, haki ya makazi, haki ya afya, haki ya kijamii]
+      - id: rights_defenders
+        label: Human rights defenders and civil society (activists, hate speech, shrinking civic space)
+        strong:
+          en: [human rights defenders, activists, civil society, civic space, hate speech, hate crimes, persecution, minority rights, transitional justice]
+          fr: [défenseurs des droits humains, militants, société civile, espace civique, discours de haine, crimes de haine, persécution]
+          es: [defensores de derechos humanos, activistas, sociedad civil, espacio cívico, discurso de odio, delitos de odio, persecución, justicia transicional]
+          pt: [defensores de direitos humanos, ativistas, sociedade civil, espaço cívico, discurso de ódio, crimes de ódio, perseguição]
+          ar: [المدافعين عن حقوق الإنسان, الناشطين, المجتمع المدني, خطاب الكراهية, جرائم الكراهية, الاضطهاد]
+          ru: [правозащитники, активисты, гражданское общество, язык вражды, преступления на почве ненависти, преследование]
+          zh: [人权捍卫者, 维权人士, 公民社会, 仇恨言论, 仇恨犯罪]
+          hi: [मानवाधिकार कार्यकर्ता, नागरिक समाज, नफरत भरे भाषण, घृणा अपराध]
+          sw: [watetezi wa haki za binadamu, wanaharakati, asasi za kiraia, matamshi ya chuki]
+
+  migration:
+    sections:
+      en: [migration, immigration, refugees, migrants]
+      fr: [migrations, immigration, réfugiés, migrants]
+      es: [migración, inmigración, refugiados, migrantes]
+      pt: [migração, imigração, refugiados, migrantes]
+      ar: [الهجرة, اللاجئين]
+      ru: [миграция, беженцы]
+      zh: [移民, 难民]
+      hi: [प्रवासन, शरणार्थी]
+      sw: [uhamiaji, wakimbizi]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: migrants
+    subtopics:
+      - id: refugees_asylum
+        label: Refugees and asylum seekers
+        strong:
+          en: [refugees, refugee, asylum seekers, asylum, refugee rights, unhcr, resettlement, stateless, statelessness, world refugee day]
+          fr: [réfugiés, réfugié, demandeurs d'asile, droit d'asile, apatrides, apatridie, hcr]
+          es: [refugiados, refugiado, solicitantes de asilo, asilo, apátridas, acnur]
+          pt: [refugiados, refugiado, solicitantes de refúgio, asilo, apátridas, acnur]
+          ar: [اللاجئين, اللاجئون, لاجئ, طالبي اللجوء, اللجوء, عديمي الجنسية]
+          ru: [беженцы, беженец, просители убежища, убежище, лица без гражданства]
+          zh: [难民, 寻求庇护者, 庇护, 无国籍]
+          hi: [शरणार्थी, शरण चाहने वाले, शरण]
+          sw: [wakimbizi, mkimbizi, wanaotafuta hifadhi, hifadhi ya ukimbizi]
+      - id: migrants
+        label: Migrants and migration routes (labour migration, irregular migration, border deaths)
+        strong:
+          en: [migrants, migration, immigration, immigrants, irregular migration, undocumented, deportation, deportations, border crossings, mediterranean crossings, migrant smuggling, iom, migrant workers]
+          fr: [migrants, migration, migrations, immigration, immigrés, sans-papiers, expulsions, traversées, passeurs, oim]
+          es: [migrantes, migración, inmigración, inmigrantes, indocumentados, deportaciones, deportación, caravana migrante, oim]
+          pt: [migrantes, migração, imigração, imigrantes, indocumentados, deportações, oim]
+          ar: [المهاجرين, المهاجرون, الهجرة, الهجرة غير النظامية, الترحيل, تهريب المهاجرين, المنظمة الدولية للهجرة]
+          ru: [мигранты, миграция, иммиграция, иммигранты, депортация, нелегальная миграция]
+          zh: [移民, 非法移民, 偷渡, 遣返, 国际移民组织]
+          hi: [प्रवासी, प्रवासन, आप्रवासन, निर्वासन]
+          sw: [wahamiaji, uhamiaji, wahamiaji haramu, kurudishwa makwao]
+
+  conflict_security:
+    sections:
+      en: [conflict, conflicts, war, defence, defense, military, world conflicts]
+      fr: [conflits, guerre, défense]
+      es: [conflicto, guerra, defensa]
+      pt: [conflito, guerra, defesa]
+      ar: [الحرب, الصراع, الأمن, الدفاع, عسكري]
+      ru: [война, конфликт, безопасность, оборона]
+      zh: [军事, 战争, 冲突, 国防]
+      hi: [युद्ध, सुरक्षा, रक्षा]
+      sw: [vita, migogoro, usalama, ulinzi]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: war_conflict
+    subtopics:
+      - id: war_conflict
+        label: Wars and armed conflict (military, terrorism, weapons)
+        strong:
+          en: [war crimes, war zone, armed conflict, conflict zone, military, airstrikes, airstrike, ceasefire, rebels, insurgency, terrorism, terrorist, militants, armed groups, weapons, landmines, nuclear weapons, civilian casualties]
+          fr: [crimes de guerre, zone de guerre, conflit armé, militaire, frappes aériennes, cessez-le-feu, rebelles, insurrection, terrorisme, terroriste, groupes armés, armes, mines antipersonnel]
+          es: [crímenes de guerra, zona de guerra, conflicto armado, militar, bombardeos, alto el fuego, rebeldes, insurgencia, terrorismo, terrorista, grupos armados, armas, minas antipersona]
+          pt: [crimes de guerra, zona de guerra, conflito armado, militar, bombardeios, cessar-fogo, rebeldes, terrorismo, terrorista, grupos armados, armas, minas terrestres]
+          ar: [جرائم الحرب, النزاع المسلح, الصراع المسلح, غارات جوية, وقف إطلاق النار, المتمردين, الإرهاب, إرهابي, الجماعات المسلحة, الأسلحة]
+          ru: [военные преступления, вооружённый конфликт, военные, авиаудары, перемирие, прекращение огня, повстанцы, терроризм, вооружённые группировки, оружие]
+          zh: [战争罪, 武装冲突, 军事, 空袭, 停火, 叛军, 恐怖主义, 武装团体, 武器]
+          hi: [युद्ध अपराध, सशस्त्र संघर्ष, सैन्य, हवाई हमले, युद्धविराम, आतंकवाद, आतंकवादी, हथियार]
+          sw: [uhalifu wa kivita, mzozo wa kivita, kijeshi, mashambulizi ya anga, usitishaji mapigano, waasi, ugaidi, magaidi, makundi yenye silaha, silaha]
+      - id: peace_operations
+        label: Peace talks and peacekeeping (UN peacekeeping, ceasefires, mediation)
+        strong:
+          en: [peacekeeping, peacekeepers, blue helmets, peace talks, peace agreement, peace deal, ceasefire talks, mediation, monusco, minusma, unmiss, security council]
+          fr: [maintien de la paix, casques bleus, pourparlers de paix, accord de paix, médiation, monusco, conseil de sécurité]
+          es: [mantenimiento de la paz, cascos azules, conversaciones de paz, acuerdo de paz, mediación, consejo de seguridad]
+          pt: [manutenção da paz, capacetes azuis, negociações de paz, acordo de paz, mediação, conselho de segurança]
+          ar: [حفظ السلام, قوات حفظ السلام, القبعات الزرق, محادثات السلام, اتفاق السلام, مجلس الأمن]
+          ru: [миротворцы, миротворческая миссия, мирные переговоры, мирное соглашение, совет безопасности]
+          zh: [维和, 维和部队, 蓝盔, 和平谈判, 和平协议, 安理会]
+          hi: [शांति स्थापना, शांति सैनिक, शांति वार्ता, शांति समझौता, सुरक्षा परिषद]
+          sw: [ulinzi wa amani, walinda amani, mazungumzo ya amani, mkataba wa amani, baraza la usalama]
+
+  technology:
+    exclude:
+      en: [privacy policy, data protection policy, cookie policy]
+      fr: [politique de confidentialité, protection des données personnelles]
+      es: [política de privacidad, protección de datos personales]
+      pt: [política de privacidade]
+      other: [datenschutzerklärung, datenschutzhinweise, datenschutz, gizlilik politikası, polityka prywatności, privacybeleid]   # privacy pages in other languages
+    sections:
+      en: [tech, technology, digital, ai, science & tech, gadgets, innovation]
+      fr: [tech, technologie, numérique, high-tech]
+      es: [tecnología, tecno, digital]
+      pt: [tecnologia, tec, digital]
+      ar: [تكنولوجيا, التقنية, تقنية]
+      ru: [технологии, хайтек]
+      zh: [科技, 数码, 互联网]
+      hi: [टेक, तकनीक, प्रौद्योगिकी]
+      sw: [teknolojia]
+    strong:
+      en: [technology, tech, artificial intelligence, cybersecurity, data protection, digital rights, smartphones, social media platforms, software, startups, digital transformation]
+      fr: [technologie, technologies, intelligence artificielle, cybersécurité, protection des données]
+      es: [tecnología, inteligencia artificial, ciberseguridad, protección de datos]
+      pt: [tecnologia, inteligência artificial, cibersegurança, proteção de dados]
+      ar: [التكنولوجيا, الذكاء الاصطناعي, الأمن السيبراني]
+      ru: [технологии, искусственный интеллект, кибербезопасность]
+      zh: [科技, 人工智能, 网络安全]
+      hi: [तकनीक, प्रौद्योगिकी, आर्टिफिशियल इंटेलिजेंस, साइबर सुरक्षा]
+      sw: [teknolojia, akili bandia, usalama wa mtandao]
+
+  agriculture:
+    sections:
+      en: [agriculture, farming, rural, agribusiness, farm]
+      fr: [agriculture, monde rural, agro]
+      es: [agro, agricultura, campo, rural]
+      pt: [agro, agronegócio, agricultura, rural]
+      ar: [الزراعة, زراعة]
+      ru: [сельское хозяйство, агро]
+      zh: [农业, 三农, 农村]
+      hi: [कृषि, खेती, किसान]
+      sw: [kilimo]
+    strong:
+      en: [agriculture, agricultural, farmers, farming, farm, livestock, crops, harvest, agribusiness, rural development, irrigation, fertilizer, pastoralists, agronomy]
+      fr: [agriculture, agricole, agriculteurs, paysans, élevage, récoltes, cultures, développement rural, irrigation, éleveurs]
+      es: [agricultura, agrícola, agricultores, campesinos, ganadería, cosechas, cultivos, desarrollo rural, riego, agro]
+      pt: [agricultura, agrícola, agricultores, camponeses, pecuária, colheita, lavoura, desenvolvimento rural, irrigação, agronegócio, agro]
+      ar: [الزراعة, زراعي, المزارعين, الفلاحين, الثروة الحيوانية, المحاصيل, التنمية الريفية, الري]
+      ru: [сельское хозяйство, аграрный, фермеры, животноводство, урожай, посевы, сельский]
+      zh: [农业, 农民, 畜牧, 农作物, 粮食生产, 乡村振兴, 三农]
+      hi: [कृषि, किसान, खेती, पशुपालन, फसल, ग्रामीण विकास, सिंचाई]
+      sw: [kilimo, wakulima, mifugo, mazao, mavuno, maendeleo vijijini, umwagiliaji]
+
+  disasters:
+    sections:
+      en: [disasters, emergencies, weather alerts, severe weather]
+      fr: [catastrophes, intempéries, alertes]
+      es: [desastres, emergencias, alertas]
+      pt: [desastres, emergências, alertas]
+      ar: [الكوارث, الطوارئ]
+      ru: [чрезвычайные ситуации, стихийные бедствия]
+      zh: [灾害, 应急]
+      hi: [आपदा]
+      sw: [maafa, dharura]
+    # matches from a source / section without a sub-topic count here
+    general_subtopic: natural_disasters
+    subtopics:
+      - id: natural_disasters
+        label: Natural disasters and extreme weather (floods, earthquakes, cyclones, drought)
+        strong:
+          en: [natural disaster, natural disasters, floods, flooding, flood, earthquake, earthquakes, cyclone, hurricane, typhoon, tsunami, drought, landslide, landslides, volcano, wildfire, wildfires, severe weather, storm warning]
+          fr: [catastrophe naturelle, catastrophes naturelles, inondations, inondation, séisme, tremblement de terre, cyclone, ouragan, typhon, tsunami, sécheresse, glissement de terrain, éruption volcanique, incendies]
+          es: [desastre natural, desastres naturales, inundaciones, inundación, terremoto, sismo, ciclón, huracán, tifón, tsunami, sequía, deslave, deslizamiento de tierra, erupción volcánica, incendios forestales]
+          pt: [desastre natural, desastres naturais, enchentes, inundações, terremoto, sismo, ciclone, furacão, tufão, tsunami, seca, deslizamento de terra, erupção vulcânica]
+          ar: [الكوارث الطبيعية, كارثة طبيعية, الفيضانات, فيضان, زلزال, إعصار, تسونامي, الجفاف, انهيار أرضي]
+          ru: [стихийное бедствие, стихийные бедствия, наводнение, землетрясение, ураган, тайфун, цунами, засуха, оползень]
+          zh: [自然灾害, 洪水, 洪灾, 地震, 台风, 飓风, 海啸, 干旱, 山体滑坡, 泥石流]
+          hi: [प्राकृतिक आपदा, बाढ़, भूकंप, चक्रवात, तूफान, सुनामी, सूखा, भूस्खलन]
+          sw: [maafa ya asili, mafuriko, tetemeko la ardhi, kimbunga, tsunami, ukame, maporomoko ya ardhi]
+      - id: disaster_risk
+        label: Early warning and disaster preparedness (disaster risk reduction, civil protection)
+        strong:
+          en: [disaster risk reduction, disaster preparedness, early warning, early warning systems, emergency management, civil protection, evacuation, disaster response, disaster resilience, sendai framework]
+          fr: [réduction des risques de catastrophe, préparation aux catastrophes, alerte précoce, protection civile, évacuation, gestion des urgences]
+          es: [reducción del riesgo de desastres, gestión de riesgos, alerta temprana, protección civil, evacuación, gestión de emergencias]
+          pt: [redução de riscos de desastres, alerta precoce, defesa civil, proteção civil, evacuação, gestão de emergências]
+          ar: [الحد من مخاطر الكوارث, الإنذار المبكر, الدفاع المدني, الإخلاء, التأهب للكوارث]
+          ru: [снижение риска бедствий, раннее предупреждение, гражданская оборона, эвакуация, мчс]
+          zh: [防灾减灾, 预警, 应急管理, 疏散]
+          hi: [आपदा जोखिम न्यूनीकरण, पूर्व चेतावनी, आपदा प्रबंधन, एनडीआरएफ]
+          sw: [kupunguza hatari za maafa, tahadhari ya mapema, udhibiti wa maafa]
+
+  children_youth:
+    sections:
+      en: [kids, children, youth, young people, students, teens, family]
+      fr: [enfants, jeunes, jeunesse, ados]
+      es: [niños, niñez, jóvenes, juventud, infancia]
+      pt: [crianças, jovens, juventude, infância]
+      ar: [أطفال, الأطفال, شباب, الشباب]
+      ru: [дети, молодёжь, молодежь]
+      zh: [儿童, 青年, 青少年]
+      hi: [बच्चे, युवा]
+      sw: [watoto, vijana]
+    strong:
+      en: [children, child rights, children's rights, child protection, youth, young people, adolescents, teenagers, youth employment, child welfare, unicef, students, kids]
+      fr: [enfants, droits de l'enfant, protection de l'enfance, jeunes, jeunesse, adolescents, étudiants]
+      es: [niños, niñas, derechos de la niñez, derechos del niño, protección infantil, jóvenes, juventud, adolescentes, estudiantes]
+      pt: [crianças, direitos da criança, proteção infantil, jovens, juventude, adolescentes, estudantes]
+      ar: [الأطفال, حقوق الطفل, حماية الطفل, الشباب, المراهقين, الطلاب]
+      ru: [дети, права ребёнка, защита детей, молодёжь, молодежь, подростки, студенты]
+      zh: [儿童, 儿童权利, 未成年人保护, 青年, 青少年, 学生]
+      hi: [बच्चे, बाल अधिकार, बाल संरक्षण, युवा, किशोर, छात्र]
+      sw: [watoto, haki za watoto, ulinzi wa watoto, vijana, wanafunzi]
+
+  indigenous:
+    sections:
+      en: [indigenous, first nations, aboriginal]
+      fr: [autochtones, peuples autochtones]
+      es: [indígenas, pueblos originarios, pueblos indígenas]
+      pt: [indígenas, povos indígenas, povos originários]
+      ar: [الشعوب الأصلية]
+      ru: [коренные народы]
+      zh: [原住民]
+      hi: [आदिवासी]
+      sw: [jamii za asili]
+    strong:
+      en: [indigenous, indigenous peoples, first nations, aboriginal, native american, inuit, métis, maori, māori, sámi people, saami, adivasi, tribal communities, pastoralist communities,
+           maasai, batwa, pygmy, san people, amazigh, quechua, aymara, mapuche, mayan, nahuatl, wayuu, yanomami, torres strait islander]
+      fr: [autochtones, peuples autochtones, premières nations, amérindiens, kanak, peuples pygmées, batwa, touaregs, amazighs, berbères]
+      es: [indígenas, pueblos indígenas, pueblos originarios, comunidades indígenas, quechua, aymara, mapuche, pueblo maya, wayuu, nahua, mixteco, zapoteco]
+      pt: [indígenas, povos indígenas, povos originários, comunidades indígenas, quilombolas, yanomami, terras indígenas]
+      ar: [الشعوب الأصلية, السكان الأصليين, الأمازيغ]
+      ru: [коренные народы, коренные малочисленные народы]
+      zh: [原住民, 土著]
+      hi: [आदिवासी, जनजाति, जनजातीय]
+      sw: [jamii za asili, wamasai, wafugaji, wabatwa]
+
+  disability:
+    sections:
+      en: [disability, disabilities]
+      fr: [handicap]
+      es: [discapacidad]
+      pt: [deficiência]
+      ar: [الإعاقة, ذوي الاحتياجات الخاصة]
+      ru: [инвалидность, доступная среда]
+      zh: [残疾人, 无障碍]
+      hi: [दिव्यांग, विकलांगता]
+      sw: [ulemavu]
+    strong:
+      en: [disability, disabilities, persons with disabilities, people with disabilities, disabled, sign language, deaf, blind, visually impaired,
+           wheelchair, autism, inclusion of persons with disabilities, crpd, international day of persons with disabilities]
+      fr: [handicap, handicapés, personnes handicapées, personnes en situation de handicap, langue des signes, sourds, aveugles, malvoyants, autisme]
+      es: [discapacidad, personas con discapacidad, lengua de señas, lenguaje de señas, sordos, ciegos, autismo]
+      pt: [deficiência, pessoas com deficiência, língua de sinais, surdos, cegos, autismo]
+      ar: [الإعاقة, ذوي الإعاقة, الأشخاص ذوي الإعاقة, لغة الإشارة, الصم, المكفوفين, التوحد]
+      ru: [инвалидность, люди с инвалидностью, инвалиды, доступная среда, жестовый язык, глухие, слепые, аутизм]
+      zh: [残疾, 残疾人, 无障碍, 手语, 聋人, 盲人, 自闭症]
+      hi: [दिव्यांग, विकलांग, विकलांगता, सांकेतिक भाषा, बधिर, नेत्रहीन, ऑटिज़्म]
+      sw: [ulemavu, watu wenye ulemavu, lugha ya alama, viziwi, vipofu, usonji]
+
+  media_freedom:
+    sections:
+      en: [press freedom, journalism, media freedom]
+      fr: [liberté de la presse, journalisme]
+      es: [libertad de prensa, periodismo]
+      pt: [liberdade de imprensa, jornalismo]
+      ar: [إعلام, الإعلام, حرية الصحافة]
+      ru: [медиа, свобода прессы]
+      zh: [传媒, 新闻自由]
+      hi: [मीडिया, प्रेस की स्वतंत्रता]
+      sw: [vyombo vya habari, uhuru wa habari]
+    strong:
+      en: [press freedom, media freedom, freedom of the press, journalist safety, safety of journalists, journalists killed, journalists arrested, censorship,
+           media development, journalism training, independent journalism, investigative journalism, rsf, reporters without borders, cpj, world press freedom day]
+      fr: [liberté de la presse, liberté des médias, sécurité des journalistes, journalistes tués, censure, journalisme indépendant, journalisme d'investigation, reporters sans frontières, rsf]
+      es: [libertad de prensa, libertad de expresión periodística, seguridad de los periodistas, periodistas asesinados, censura, periodismo independiente, periodismo de investigación]
+      pt: [liberdade de imprensa, segurança dos jornalistas, jornalistas mortos, censura, jornalismo independente, jornalismo investigativo]
+      ar: [حرية الصحافة, حرية الإعلام, سلامة الصحفيين, الرقابة, الصحافة المستقلة, الصحافة الاستقصائية, مراسلون بلا حدود]
+      ru: [свобода прессы, свобода сми, безопасность журналистов, цензура, независимая журналистика, журналистские расследования]
+      zh: [新闻自由, 记者安全, 审查, 独立新闻, 调查报道]
+      hi: [प्रेस की स्वतंत्रता, पत्रकारों की सुरक्षा, सेंसरशिप, खोजी पत्रकारिता]
+      sw: [uhuru wa vyombo vya habari, usalama wa waandishi wa habari, udhibiti wa habari, uandishi huru]
+
+  elections:
+    sections:
+      en: [elections, election, parliament, governance, government, votes]
+      fr: [élections, parlement, gouvernance]
+      es: [elecciones, congreso, parlamento, gobernanza]
+      pt: [eleições, congresso, parlamento]
+      ar: [الانتخابات, البرلمان]
+      ru: [выборы, парламент]
+      zh: [选举, 人大, 两会]
+      hi: [चुनाव, संसद]
+      sw: [uchaguzi, bunge]
+    strong:
+      en: [elections, election, electoral, voting, voters, ballot, polls, parliament, parliamentary, legislature, congress, senate, governance, democracy, political parties, campaign trail]
+      fr: [élections, élection, électoral, vote, électeurs, scrutin, parlement, assemblée nationale, sénat, gouvernance, démocratie, partis politiques]
+      es: [elecciones, electoral, votación, votantes, comicios, parlamento, congreso, senado, asamblea nacional, gobernanza, democracia, partidos políticos]
+      pt: [eleições, eleitoral, votação, eleitores, parlamento, congresso, senado, assembleia, governança, democracia, partidos políticos]
+      ar: [الانتخابات, انتخابات, الناخبين, التصويت, البرلمان, مجلس النواب, الديمقراطية, الأحزاب السياسية]
+      ru: [выборы, избиратели, голосование, парламент, госдума, демократия, политические партии]
+      zh: [选举, 投票, 议会, 人大, 民主, 政党]
+      hi: [चुनाव, मतदान, मतदाता, संसद, विधानसभा, लोकतंत्र, राजनीतिक दल]
+      sw: [uchaguzi, wapiga kura, kupiga kura, bunge, demokrasia, vyama vya siasa]
+
+  sports:
+    sections:
+      en: [sport, sports, football, soccer, cricket]
+      fr: [sport, sports, football]
+      es: [deportes, deporte, fútbol]
+      pt: [esportes, esporte, desporto, futebol]
+      ar: [رياضة, الرياضة]
+      ru: [спорт]
+      zh: [体育]
+      hi: [खेल]
+      sw: [michezo]
+    strong:
+      en: [sport, sports, football, soccer, cricket, rugby, basketball, athletics, tennis, olympics, olympic, paralympics, world cup, premier league, afcon, fifa]
+      fr: [sport, sports, football, rugby, basket, athlétisme, jeux olympiques, coupe du monde, ligue 1, coupe d'afrique des nations]
+      es: [deporte, deportes, fútbol, baloncesto, atletismo, juegos olímpicos, mundial, liga, copa libertadores]
+      pt: [esporte, esportes, desporto, futebol, basquete, atletismo, jogos olímpicos, copa do mundo, brasileirão]
+      ar: [الرياضة, رياضي, كرة القدم, الدوري, كأس العالم, الألعاب الأولمبية]
+      ru: [спорт, футбол, хоккей, олимпийские игры, чемпионат мира]
+      zh: [体育, 足球, 篮球, 奥运会, 世界杯]
+      hi: [खेल, क्रिकेट, फुटबॉल, ओलंपिक, विश्व कप]
+      sw: [michezo, soka, kandanda, riadha, kombe la dunia]
+
+  diaspora:
+    sections:
+      en: [diaspora, community abroad, expats]
+      fr: [diaspora]
+      es: [diáspora, migrantes]
+      pt: [diáspora, comunidades]
+      ar: [المغتربين, الجالية]
+      ru: [диаспора, соотечественники]
+      zh: [华侨, 侨胞]
+      hi: [प्रवासी भारतीय]
+      sw: [diaspora]
+    strong:
+      en: [diaspora, expatriates, expats, overseas community, community abroad, remittances, diaspora community, returnees]
+      fr: [diaspora, expatriés, communauté à l'étranger, transferts de fonds]
+      es: [diáspora, expatriados, comunidad en el exterior, remesas, connacionales]
+      pt: [diáspora, expatriados, comunidade no exterior, remessas]
+      ar: [المغتربين, الجالية, الجاليات, التحويلات]
+      ru: [диаспора, соотечественники за рубежом, эмигранты]
+      zh: [华侨, 侨胞, 海外华人, 侨汇]
+      hi: [प्रवासी भारतीय, अनिवासी भारतीय, एनआरआई]
+      sw: [diaspora, wanaoishi nje ya nchi]
+
+  older_persons:
+    sections:
+      en: [seniors, older people, ageing, aging, retirement]
+      fr: [seniors, retraite, aînés]
+      es: [mayores, adultos mayores, tercera edad, jubilados]
+      pt: [idosos, terceira idade, aposentados]
+      ar: [كبار السن, المسنين]
+      ru: [пенсионеры, старшее поколение]
+      zh: [老年, 养老]
+      hi: [वरिष्ठ नागरिक, बुजुर्ग]
+      sw: [wazee]
+    strong:
+      en: [older persons, older people, elderly, seniors, senior citizens, ageing, aging, pensioners, pensions, retirement homes, dementia, alzheimer's, long-term care, elder abuse]
+      fr: [personnes âgées, seniors, aînés, retraités, retraite, vieillissement, dépendance, démence, alzheimer, ehpad]
+      es: [personas mayores, adultos mayores, tercera edad, jubilados, pensiones, envejecimiento, demencia, alzheimer]
+      pt: [idosos, pessoa idosa, terceira idade, aposentados, aposentadoria, envelhecimento, demência, alzheimer]
+      ar: [كبار السن, المسنين, المتقاعدين, الشيخوخة, الخرف]
+      ru: [пожилые люди, пенсионеры, пенсии, старение, деменция]
+      zh: [老年人, 养老, 退休, 老龄化, 失智]
+      hi: [वरिष्ठ नागरिक, बुजुर्ग, पेंशन, बुढ़ापा]
+      sw: [wazee, wastaafu, pensheni, uzee]

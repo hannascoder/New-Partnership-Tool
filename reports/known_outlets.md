@@ -22,5 +22,5 @@
 | Al-Ahram (EGY) | ✅ once | الاهرام [pf-000296] | media_cloud, wikidata | https://ahram.org.eg | print, website, social_media | ara |
 | Australian Broadcasting Corporation (AUS) | ✅ once | Australian Broadcasting Corporation [pf-000915] | abu_members, ebu_members, media_cloud, radio_browser, wikidata | https://www.abc.net.au/ | tv, website, radio, social_media | eng |
 | Clarín (ARG) | ✅ once | Clarín [pf-001097] | media_cloud, wikidata | https://www.clarin.com/ | print, website, social_media | spa |
-| Mail & Guardian (ZAF) | ✅ once | Mail & Guardian [pf-001878] | media_cloud, wikidata | http://mg.co.za/ | print, website, social_media | eng |
+| Mail & Guardian (ZAF) | ✅ once | Mail & Guardian [pf-001878] | media_cloud, occrp_network, wikidata | http://mg.co.za/ | print, website, social_media | eng |
 | Rappler (PHL) | ✅ once | Rappler [pf-013724] | fact_checking_sites, ifcn_signatories, wikidata | https://www.rappler.com/ | website, social_media |  |

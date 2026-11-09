@@ -143,39 +143,23 @@ scope:
 topics:
   networks:
     fact_checking: [ifcn_signatories, efcsn_signatories, fact_checking_sites]
+    peace_justice: [occrp_network]     # OCCRP: investigative media on corruption and organised crime
+    media_freedom: [occrp_network]
     climate: [covering_climate_now]          # as soon as the CSV snapshot is in raw/manual/
   org_types:
     fact_checking: [fact_checker]
     community_local: [community_media]
   scopes:
     community_local: [local]
-  # Words in the outlet's name. Whole words only, upper/lower case ignored
-  # ("Sport" matches "Sky Sport News", not "Sportschau"). Kept short on purpose:
-  # a word must be clear in every country. Add words here, never in code.
-  # Only the main name counts, and not names that list sections like a
-  # tagline ("Noticias, Deportes, Economía, ..."): those are general news sites.
+  # Words: since 09.11.2026 all topic words (name, descriptions, Wikipedia,
+  # website menu, About page, headlines) are in config/topic_keywords.yaml,
+  # with the three strengths Focus / Desk / Covers.
+  # A "name" that lists sections like a tagline ("Noticias, Deportes, Economía, ...")
+  # is not used: those are general news sites.
   name_keywords_max_commas: 1
-  # Expressions in which a keyword does NOT mean the topic
-  name_keywords_ignore: [science fiction, christian science, falls church, medicine hat, sports illustrated swimsuit]
-  name_keywords:
-    sports: [sport, sports, deporte, deportes, esporte, esportes, desporto, спорт, رياضة]
-    business_economy: [business, economy, economic, economics, finance, financial, economía, economia, économie,
-                       wirtschaft, финансы, экономика, اقتصاد, bourse, markets]
-    health: [health, salud, santé, saúde, medical, medicine, médica, здоровье, صحة]
-    science: [science, sciences, scientific, ciencia, ciência, wissenschaft, наука]
-    climate: [climate, climat, klima]   # not "clima": in Spanish it also means weather
-    technology: [tech, technology, tecnología, tecnologia, technologie]
-    agriculture: [agriculture, agricultural, farm, farmer, farmers, farming, agro, agricultura, agricole, rural]
-    religion: [christian, catholic, catholique, católica, católico, gospel, church, iglesia, islamic, islam, quran,
-               evangelical, bible, biblical, sunnah, orthodox]
-    children_youth: [kids, children, enfants, niños, kinder, junior, youth, juvenil]
-    education: [education, educational, educación, educação, éducation, school, university, universidad,
-                universidade, université, campus, college]
-    culture: [culture, cultural, cultura, kultur, arts]
-    indigenous: [indigenous, indígena, indígenas, aboriginal, first nations, tribal]
-    human_rights: [human rights, derechos humanos, droits humains, droits de l'homme]
-    migration: [migrant, migrants, refugee, refugees, migración, migrantes]
-    diaspora: [diaspora]
+  # Words in other languages (from Wikidata) found in more than this share of all outlets
+  # are everyday words, not topic words, and are not used (0.003 = 0.3 % = ~210 outlets).
+  auto_words_max_share: 0.003
 
 # UN profile: SEVERAL per outlet; like topics, only changes the order.
 # "Solutions / constructive journalism", "Development journalism" and
@@ -233,3 +217,82 @@ exclude_far_right:
   # "alt-right", "neo-Nazi", "white nationalist" or "fascist" and a media word
   # (fetched by pipeline/fetch/far_right.py), and their direct subcategories.
   wikipedia_categories: true
+
+# ---------------------------------------------------------------- website check
+# Channels found on the outlet's own website (menu entries, feed addresses).
+# Whole menu entry or a word in it; 9 UN News languages.
+website_channels:
+  podcast: [podcast, podcasts, balado, balados, pódcast, pódcasts, подкаст, подкасты, بودكاست, 播客, पॉडकास्ट, podikasti]
+  newsletter: [newsletter, newsletters, infolettre, lettre d'information, boletín, boletim, рассылка, النشرة البريدية, न्यूज़लेटर, jarida la barua pepe]
+# The page language (<html lang="fr">) is used when no source names a language.
+website_language: true
+
+# "Open to partner content" (UN profile; suggestion 1, owner's go 09.11.2026):
+# the outlet's website shows it publishes content from others. Words in link texts /
+# addresses on the website and in its About page. 9 UN News languages.
+open_to_partner_content:
+  - creativecommons.org
+  - creative commons
+  - republish
+  - republishing
+  - syndication
+  - content syndication
+  - submit a story
+  - submit your story
+  - submit news
+  - submit an article
+  - send us your story
+  - send us your news
+  - write for us
+  - become a contributor
+  - contributors wanted
+  - pitch us
+  - submit a press release
+  - submit press release
+  - partner with us
+  - content partnership
+  - content partners
+  - republier
+  - proposer un article
+  - envoyez vos articles
+  - envoyez-nous
+  - devenir contributeur
+  - publiez votre communiqué
+  - republicar
+  - envía tu nota
+  - envíanos tu noticia
+  - publica tu noticia
+  - escribe para nosotros
+  - colabora con nosotros
+  - envie sua notícia
+  - envie sua pauta
+  - seja colaborador
+  - colabore conosco
+  - прислать новость
+  - предложить новость
+  - стать автором
+  - أرسل خبرك
+  - شارك بمقال
+  - 投稿
+  - अपनी खबर भेजें
+  - tuma habari yako
+
+# UN profiles found in how outlets describe themselves (point 8, 09.11.2026: no open
+# member lists exist for these). "phrases" = in the name, description, Wikipedia
+# introduction or About page; "sections" = a whole menu entry on the outlet's website.
+un_profile_words:
+  solutions:
+    phrases: [solutions journalism, solutions-focused journalism, solutions-oriented journalism, constructive journalism,
+              constructive news, solutions reporting, positive news, journalisme de solutions, journalisme constructif,
+              journalisme d'impact, periodismo de soluciones, periodismo constructivo, jornalismo de soluções,
+              jornalismo construtivo, конструктивная журналистика, صحافة الحلول, الصحافة البناءة, 建设性新闻,
+              समाधान पत्रकारिता, uandishi wa suluhisho]
+    sections: [solutions, solutions journalism, good news, positive news, constructive, solutions reporting]
+  development:
+    phrases: [development journalism, development reporting, global development, international development,
+              development news, development issues, journalisme de développement, information pour le développement,
+              periodismo para el desarrollo, periodismo de desarrollo, jornalismo de desenvolvimento,
+              журналистика развития, الصحافة التنموية, صحافة التنمية, 发展新闻, विकास पत्रकारिता,
+              uandishi wa habari za maendeleo]
+    sections: [development, global development, international development, développement, desarrollo,
+               desenvolvimento, التنمية, maendeleo]

@@ -8,7 +8,7 @@
 | news_agency | 581 | 31 | 550 | 0 | 0 |
 | public_service_broadcaster | 136 | 57 | 79 | 0 | 0 |
 | community_media | 944 | 0 | 601 | 343 | 0 |
-| news_outlet | 69143 | 0 | 0 | 0 | 69084 |
+| news_outlet | 69184 | 0 | 0 | 0 | 69125 |
 
 ## 4b Ownership
 
@@ -18,7 +18,7 @@
 | public_service | 374 | Wikidata: owner (public broadcaster) 211; organisation type public service broadcaster 127; Wikidata: owner (public broadcasting) 27; Wikidata: owner's owner (public broadcaster) 7 |
 | community_nonprofit | 1298 | organisation type community media 808; Wikidata: owner (university) 135; Wikidata: owner (nonprofit organization) 119; Wikidata: owner (public university) 74 |
 | private | 5069 | Wikidata: owner (business) 3128; Wikidata: owner (media company) 505; Wikidata: owner (human) 403; Wikidata: owner (publishing house) 287 |
-| unknown | 63126 | no ownership information in the sources 63126 |
+| unknown | 63167 | no ownership information in the sources 63167 |
 
 Listed as public service broadcaster AND news outlet (private owner): 2
 
@@ -30,7 +30,7 @@ Listed as public service broadcaster AND news outlet (private owner): 2
 | regional | 790 | iptv-org 790 |
 | national | 27451 | iptv-org broadcast area: whole country 14211; Media Cloud collection 13240 |
 | local | 16544 | Media Cloud collection 13649; iptv-org broadcast area: city / region 2070; organisation type community media 312; Wikidata: student newspaper 250 |
-| unknown | 26068 | no scope information in the sources 26068 |
+| unknown | 26109 | no scope information in the sources 26109 |
 
 Outlets that reach more than their home country: 1128
 International broadcasters not found in the data: none

@@ -194,6 +194,7 @@ topics:
   - {id: elections,          group: beats, label: Elections & governance}
   - {id: sports,             group: beats, label: Sports}
   - {id: diaspora,           group: beats, label: Diaspora}
+  - {id: older_persons,      group: beats, label: Older persons & ageing}   # owner, 09.11.2026
 
 # ------------------------------------------------------------ I. UN profile
 # Multiple choice. Like topics: changes the order, never hides an outlet.
@@ -296,6 +297,10 @@ checkboxes:
   - id: only_new
     label: Only new (found in the last 4 months)
     default: false
+  - id: only_active
+    label: Only active (article in the last 3 months)
+    description: The outlet's website showed an article from the last 3 months at the last website check.
+    default: false
   - id: include_reach
     label: Include outlets that reach this country
     default: true
@@ -310,6 +315,23 @@ checkboxes:
 
 # Outlets count as "new" for this many months after they were first found.
 new_months: 4
+
+# "Active": the website showed an article from the last ... months (website check:
+# RSS feed or dates on the home page). Checkbox "Only active outlets".
+active_months: 3
+
+# "Report an error" link on every card opens an e-mail to this address (owner, 09.11.2026).
+feedback_email: stevenshanna20@gmail.com
+
+# How strongly an outlet is connected to a topic (shown on the cards, in this order).
+# Wording chosen by the owner on 09.11.2026 (option A).
+topic_strength:
+  1: Specialist
+  2: Has a section on it
+  3: Reports on it
+topic_strength_note: >-
+  Specialist = the topic is the outlet's main subject · Has a section on it = its own section
+  on the outlet's website · Reports on it = appears repeatedly in its recent headlines or description.
 
 # ---------------------------------------------------------------- L. Sorting
 sort:
