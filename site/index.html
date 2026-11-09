@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="spacer"></div>
-  <span class="preview-badge" title="Ownership, scope, reach and topics are assigned in the next parts of step 4">Preview · step 4c + export</span>
+  <span class="preview-badge" title="Topics and UN profile are assigned (step 4d); the website check comes next">Preview · step 4d + export</span>
 </header>
 
 <div class="layout">
@@ -88,15 +88,22 @@
       </section>
 
       <section class="fgroup">
-        <h2 class="sect">Topics <span class="soon">step 4</span></h2>
-        <p class="hint">Topics never hide an outlet, they only change the order.</p>
+        <h2 class="sect">Topics</h2>
+        <p class="hint">Topics never hide an outlet, they only change the order. Outlets without any topic in the sources count as "General news". The number on each button = outlets with this topic.</p>
         <div id="f-topics"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Target audience</h2>
+        <p class="hint">Who the outlet is made for, as the outlet or a source describes it. Changes the order, never hides an outlet.</p>
+        <div class="chips" id="f-audience"></div>
       </section>
 
       <section class="fgroup">
         <h2 class="sect">UN profile</h2>
         <p class="hint">Changes the order, never hides an outlet.</p>
         <div class="chips" id="f-unProfile"></div>
+        <label class="check"><input type="checkbox" id="f-onlyMatches"> <span id="onlyMatchesLabel"></span></label>
       </section>
 
       <section class="fgroup">

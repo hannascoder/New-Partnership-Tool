@@ -91,3 +91,118 @@ exclude_classes:
   - {qid: Q63241860, label: "streaming service"}  # 16
   - {qid: Q829548, label: "over-the-top media service"}  # 15
   - {qid: Q45400320, label: "open-access publisher"}  # 21
+
+# ------------------------------------------------------------------ step 4d
+# Wikidata -> our topics (ids from config/categories.yaml). Method: source_field.
+# "classes"  = what the item IS (P31), e.g. "sports newspaper".
+# "subjects" = its main subject (P921) or genre (P136), e.g. "health".
+# Labels are matched exactly. Made from the values that really occur
+# (06.11.2026); the numbers of outlets per value are in reports/topics.md.
+# NOT used on purpose: class "business" (in Wikidata that means "a company",
+# not the business topic); "women's magazine" / "fashion" (lifestyle, not
+# gender equality).
+topics:
+  general_news:
+    classes: [newspaper, daily newspaper, online newspaper, news website, news agency, news magazine,
+              news media, news portal, newspaper of record, generalist television channel, news broadcasting,
+              digital newspaper, evening newspaper, morning paper, weekly newspaper, regional newspaper]
+    subjects: [news, information, current affairs, news broadcasting, news program, news commentary podcast, local news]
+  sports:
+    classes: [sports newspaper, sports magazine, sports news website, sports website, Regional sports network]
+    subjects: [sport, association football, basketball, motorsport, sports journalism, physical fitness]
+  business_economy:
+    classes: [business newspaper, business channel, business periodical, trade magazine]
+    subjects: [economics, economy, business activity, finance, financial market, business journalism,
+               business and finance podcast, entrepreneurship, personal finance, marketing]
+  culture:
+    classes: [cultural magazine, literary magazine, art magazine, film magazine]
+    subjects: [culture, art, arts, literature, theatre, film, poetry, cultural studies, visual arts, fine art,
+               arts podcast, society and culture podcast, history, study of history, cultural history, music]
+  science:
+    classes: [popular science magazine]
+    subjects: [science, popularisation of science, natural science, life sciences, astronomy, science podcast,
+               mathematics, social science]
+  technology:
+    classes: [computer magazine]
+    subjects: [technology, artificial intelligence, information technology, technology journalism, technology podcast,
+               computing, software, computer security, innovation, blockchain, biotechnology]
+  health:
+    classes: [medical newspaper]
+    subjects: [health, medicine, pharmacy, public health]
+  education:
+    classes: [educational television]
+    subjects: [education, educational podcast]
+  religion:
+    classes: [Catholic newspaper, Catholic magazine, Jewish newspaper, diocesan magazine, rabbinical periodical,
+              Christian media, religious broadcaster]
+    subjects: [religion, Christianity, Catholic Church, Islam]
+  children_youth:
+    classes: [children's magazine, teen magazine, youth radio, youth media, children's interest channel, student newspaper,
+              school newspaper, high school newspaper, university newspaper, campus radio]
+    subjects: [children's literature, parenting]
+  community_local:
+    classes: [local newspaper, community newspaper, community radio, local radio station, local TV channel,
+              regional weekly, papur bro, municipal newsletter, citizen radio, street newspaper]
+    subjects: [local news]
+  elections:
+    classes: [legislature broadcaster, party newspaper]
+    subjects: [politics, political podcast, political science, government, politics of the United States]
+  conflict_security:
+    classes: [military newspaper]
+    subjects: [war, military, military history]
+  climate:
+    subjects: [climate change, sustainability, environmentalism, environment]
+  energy:
+    subjects: [renewable energy, energy]
+  agriculture:
+    subjects: [agriculture, farming, garden]
+  gender_equality:
+    subjects: [feminism, gender equality, women's rights]
+  inequalities:
+    # LGBTQ media: proposal (reduced inequalities, SDG 10), the owner may move it
+    classes: [LGBTQ magazine, LGBTI+ related media, LGBTQI online newspaper, gay newspaper, African American newspaper,
+              Asian American newspaper]
+    subjects: [LGBTQ, LGBTI+ related media, lesbianism, LGBTQ podcast]
+  human_rights:
+    subjects: [human rights, justice]
+  peace_justice:
+    subjects: [law, international relations]
+  media_freedom:
+    classes: [independent media]
+    subjects: [journalism, investigative journalism, digital journalism]
+  fact_checking:
+    classes: [fact-checking organisation]
+
+# Wikidata -> UN profile. Method: source_field.
+un_profile:
+  storytelling:
+    subjects: [documentary film, documentary, investigative journalism]
+  educational:
+    classes: [educational television, popular science magazine]
+    subjects: [education, educational podcast, popularisation of science]
+
+# Wikidata -> target audience. Method: source_field.
+# (Later: Wikidata "intended public" P2360, once the fetcher asks for it.)
+audience:
+  women:
+    classes: [women's magazine]
+    subjects: [list of women's magazines, women's magazine, woman]
+  youth_students:
+    classes: [teen magazine, youth radio, youth media, student newspaper, school newspaper, high school newspaper,
+              university newspaper, campus radio, college student newspapers and periodicals]
+  children:
+    classes: [children's magazine, children's interest channel]
+    subjects: [children's literature, child]
+  lgbtq:
+    classes: [LGBTQ magazine, LGBTI+ related media, LGBTQI online newspaper, gay newspaper]
+    subjects: [LGBTQ, LGBTI+ related media, lesbianism, LGBTQ podcast]
+  ethnic_minorities:
+    classes: [African American newspaper, Asian American newspaper, Jewish newspaper]
+  religious:
+    classes: [Catholic newspaper, Catholic magazine, Jewish newspaper, diocesan magazine, rabbinical periodical,
+              Christian media, religious broadcaster]
+  business_professionals:
+    classes: [business newspaper, business channel, business periodical, trade magazine, legal newspaper, medical newspaper]
+  policy_makers:
+    classes: [legislature broadcaster, government gazette]
+  # "Public service mandate" comes from the organisation type (config/rules.yaml), not from here.

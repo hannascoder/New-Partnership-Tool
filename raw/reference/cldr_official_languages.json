@@ -1,0 +1,1001 @@
+{
+"official_status": {
+"AD": {
+"ca": "official"
+},
+"AE": {
+"ar": "official"
+},
+"AF": {
+"fa": "official",
+"ps": "official",
+"tk": "official_regional",
+"uz_Arab": "official_regional"
+},
+"AG": {
+"en": "official"
+},
+"AI": {
+"en": "official"
+},
+"AL": {
+"sq": "official"
+},
+"AM": {
+"hy": "official"
+},
+"AO": {
+"pt": "official"
+},
+"AR": {
+"es": "official"
+},
+"AS": {
+"en": "de_facto_official",
+"sm": "official"
+},
+"AT": {
+"de": "official",
+"hr": "official_regional",
+"hu": "official_regional",
+"sl": "official_regional"
+},
+"AU": {
+"en": "de_facto_official"
+},
+"AW": {
+"nl": "official",
+"pap": "official"
+},
+"AX": {
+"sv": "official"
+},
+"AZ": {
+"az": "official",
+"az_Cyrl": "official"
+},
+"BA": {
+"bs": "official",
+"bs_Cyrl": "official",
+"hr": "official",
+"sr": "official",
+"sr_Latn": "official"
+},
+"BB": {
+"en": "official"
+},
+"BD": {
+"bn": "official"
+},
+"BE": {
+"de": "official",
+"fr": "official",
+"nl": "official"
+},
+"BF": {
+"fr": "official"
+},
+"BG": {
+"bg": "official"
+},
+"BH": {
+"ar": "official"
+},
+"BI": {
+"en": "official",
+"fr": "official",
+"rn": "official"
+},
+"BJ": {
+"fr": "official"
+},
+"BL": {
+"fr": "official"
+},
+"BM": {
+"en": "official"
+},
+"BN": {
+"ms": "official",
+"ms_Arab": "official"
+},
+"BO": {
+"ay": "official",
+"es": "official",
+"qu": "official"
+},
+"BQ": {
+"nl": "official"
+},
+"BR": {
+"pt": "official",
+"vec": "official_regional"
+},
+"BS": {
+"en": "official"
+},
+"BT": {
+"dz": "official"
+},
+"BW": {
+"en": "official",
+"tn": "official"
+},
+"BY": {
+"be": "official",
+"ru": "official"
+},
+"BZ": {
+"en": "official"
+},
+"CA": {
+"chp": "official_regional",
+"crk": "official_regional",
+"den": "official_regional",
+"dgr": "official_regional",
+"en": "official",
+"fr": "official",
+"gwi": "official_regional",
+"iu": "official_regional",
+"iu_Latn": "official_regional"
+},
+"CC": {
+"en": "de_facto_official"
+},
+"CD": {
+"fr": "official",
+"kg": "official_regional",
+"ln": "official_regional",
+"lua": "official_regional",
+"sw": "official_regional"
+},
+"CF": {
+"fr": "official",
+"sg": "official"
+},
+"CG": {
+"fr": "official"
+},
+"CH": {
+"de": "official",
+"fr": "official",
+"gsw": "de_facto_official",
+"it": "official",
+"rm": "official_regional"
+},
+"CI": {
+"fr": "official"
+},
+"CK": {
+"en": "official"
+},
+"CL": {
+"es": "official"
+},
+"CM": {
+"en": "official",
+"fr": "official"
+},
+"CN": {
+"bo": "official_regional",
+"ko": "official_regional",
+"mn_Mong": "official_regional",
+"ug": "official_regional",
+"za": "official_regional",
+"zh": "official"
+},
+"CO": {
+"es": "official"
+},
+"CQ": {
+"en": "official"
+},
+"CR": {
+"es": "official"
+},
+"CU": {
+"es": "official"
+},
+"CV": {
+"pt": "official"
+},
+"CW": {
+"nl": "official",
+"pap": "de_facto_official"
+},
+"CX": {
+"en": "official"
+},
+"CY": {
+"el": "official",
+"tr": "official"
+},
+"CZ": {
+"cs": "official"
+},
+"DE": {
+"de": "official",
+"frr": "official_regional"
+},
+"DG": {
+"en": "de_facto_official"
+},
+"DJ": {
+"ar": "official",
+"fr": "official"
+},
+"DK": {
+"da": "official",
+"de": "official_regional",
+"kl": "official_regional"
+},
+"DM": {
+"en": "official"
+},
+"DO": {
+"es": "official"
+},
+"DZ": {
+"ar": "official",
+"fr": "official"
+},
+"EA": {
+"es": "official"
+},
+"EC": {
+"es": "official",
+"qu": "official"
+},
+"EE": {
+"et": "official"
+},
+"EG": {
+"ar": "official"
+},
+"EH": {
+"ar": "official"
+},
+"ER": {
+"ar": "official",
+"en": "official",
+"ti": "de_facto_official"
+},
+"ES": {
+"ast": "official_regional",
+"ca": "official_regional",
+"es": "official",
+"eu": "official_regional",
+"gl": "official_regional",
+"oc": "official_regional"
+},
+"ET": {
+"am": "official"
+},
+"FI": {
+"fi": "official",
+"sms": "official_regional",
+"sv": "official"
+},
+"FJ": {
+"en": "official",
+"fj": "official",
+"hif": "official"
+},
+"FK": {
+"en": "official"
+},
+"FM": {
+"en": "official"
+},
+"FO": {
+"fo": "official"
+},
+"FR": {
+"fr": "official"
+},
+"GA": {
+"fr": "official"
+},
+"GB": {
+"cy": "official_regional",
+"en": "official",
+"ga": "official_regional",
+"gd": "official_regional"
+},
+"GD": {
+"en": "official"
+},
+"GE": {
+"ab": "official_regional",
+"ka": "official",
+"os": "official_regional"
+},
+"GF": {
+"fr": "official"
+},
+"GG": {
+"en": "official"
+},
+"GH": {
+"ak": "official_regional",
+"ee": "official_regional",
+"en": "official",
+"gaa": "official_regional"
+},
+"GI": {
+"en": "official"
+},
+"GL": {
+"kl": "official"
+},
+"GM": {
+"en": "official"
+},
+"GN": {
+"fr": "official"
+},
+"GP": {
+"fr": "official"
+},
+"GQ": {
+"es": "official",
+"fr": "official",
+"pt": "official"
+},
+"GR": {
+"el": "official"
+},
+"GS": {
+"en": "official"
+},
+"GT": {
+"caa": "official_regional",
+"cak": "official_regional",
+"es": "official",
+"ixl": "official_regional",
+"quc": "official_regional",
+"quv": "official_regional",
+"usp": "official_regional",
+"xin": "official_regional"
+},
+"GU": {
+"ch": "official",
+"en": "de_facto_official"
+},
+"GW": {
+"pt": "official"
+},
+"GY": {
+"en": "official"
+},
+"HK": {
+"en": "official",
+"zh_Hant": "official"
+},
+"HN": {
+"es": "official"
+},
+"HR": {
+"hr": "official",
+"it": "official_regional",
+"vec": "official_regional"
+},
+"HT": {
+"fr": "official",
+"ht": "official"
+},
+"HU": {
+"hu": "official"
+},
+"IC": {
+"es": "official"
+},
+"ID": {
+"id": "official"
+},
+"IE": {
+"en": "official",
+"ga": "official"
+},
+"IL": {
+"ar": "official",
+"he": "official"
+},
+"IM": {
+"en": "official",
+"gv": "official"
+},
+"IN": {
+"as": "official_regional",
+"bn": "official_regional",
+"en": "official",
+"gu": "official_regional",
+"hi": "official",
+"kha": "official_regional",
+"kn": "official_regional",
+"kok": "official_regional",
+"ks": "official_regional",
+"mai": "official_regional",
+"ml": "official_regional",
+"mr": "official_regional",
+"ne": "official_regional",
+"or": "official_regional",
+"pa": "official_regional",
+"sa": "official_regional",
+"sat": "official_regional",
+"sd": "official_regional",
+"sd_Deva": "official_regional",
+"ta": "official_regional",
+"te": "official_regional",
+"ur": "official_regional"
+},
+"IO": {
+"en": "official"
+},
+"IQ": {
+"ar": "official",
+"az_Arab": "official_regional",
+"ckb": "official_regional"
+},
+"IR": {
+"fa": "official"
+},
+"IS": {
+"is": "official"
+},
+"IT": {
+"fr": "official_regional",
+"it": "official",
+"vec": "official_regional"
+},
+"JE": {
+"en": "official"
+},
+"JM": {
+"en": "official"
+},
+"JO": {
+"ar": "official"
+},
+"JP": {
+"ja": "official"
+},
+"KE": {
+"en": "official",
+"sw": "official"
+},
+"KG": {
+"ky": "official",
+"ru": "official"
+},
+"KH": {
+"km": "official"
+},
+"KI": {
+"en": "official",
+"gil": "official"
+},
+"KM": {
+"ar": "official",
+"fr": "official",
+"wni": "official",
+"zdj": "official"
+},
+"KN": {
+"en": "official"
+},
+"KP": {
+"ko": "official"
+},
+"KR": {
+"ko": "official"
+},
+"KW": {
+"ar": "official"
+},
+"KY": {
+"en": "official"
+},
+"KZ": {
+"kk": "official",
+"ru": "official"
+},
+"LA": {
+"lo": "official"
+},
+"LB": {
+"ar": "official"
+},
+"LC": {
+"en": "official"
+},
+"LI": {
+"de": "official",
+"gsw": "de_facto_official"
+},
+"LK": {
+"si": "official",
+"ta": "official"
+},
+"LR": {
+"en": "official"
+},
+"LS": {
+"en": "official",
+"st": "official"
+},
+"LT": {
+"lt": "official"
+},
+"LU": {
+"de": "official",
+"fr": "official",
+"lb": "official"
+},
+"LV": {
+"lv": "official"
+},
+"LY": {
+"ar": "official"
+},
+"MA": {
+"ar": "official",
+"fr": "de_facto_official",
+"tzm": "official"
+},
+"MC": {
+"fr": "official"
+},
+"MD": {
+"ro": "official"
+},
+"ME": {
+"sr_Latn": "official"
+},
+"MF": {
+"fr": "official"
+},
+"MG": {
+"en": "official",
+"fr": "official",
+"mg": "official"
+},
+"MH": {
+"en": "official",
+"mh": "official"
+},
+"MK": {
+"mk": "official",
+"sq": "official_regional"
+},
+"ML": {
+"fr": "official"
+},
+"MM": {
+"my": "official"
+},
+"MN": {
+"mn": "official"
+},
+"MO": {
+"pt": "official",
+"yue": "de_facto_official",
+"zh_Hant": "official"
+},
+"MP": {
+"en": "de_facto_official"
+},
+"MQ": {
+"fr": "official"
+},
+"MR": {
+"ar": "official"
+},
+"MS": {
+"en": "official"
+},
+"MT": {
+"en": "official",
+"mt": "official"
+},
+"MU": {
+"en": "official",
+"fr": "official"
+},
+"MV": {
+"dv": "official"
+},
+"MW": {
+"en": "official",
+"ny": "official"
+},
+"MX": {
+"es": "de_facto_official"
+},
+"MY": {
+"ms": "official"
+},
+"MZ": {
+"pt": "official"
+},
+"NA": {
+"en": "official"
+},
+"NC": {
+"fr": "official"
+},
+"NE": {
+"fr": "official"
+},
+"NF": {
+"en": "official"
+},
+"NG": {
+"en": "official",
+"yo": "official"
+},
+"NI": {
+"es": "official"
+},
+"NL": {
+"fy": "official_regional",
+"nl": "official"
+},
+"NO": {
+"nb": "official",
+"nn": "official",
+"no": "official",
+"se": "official_regional"
+},
+"NP": {
+"ne": "official"
+},
+"NR": {
+"en": "official",
+"na": "official"
+},
+"NU": {
+"en": "official",
+"niu": "official"
+},
+"NZ": {
+"en": "de_facto_official",
+"mi": "official"
+},
+"OM": {
+"ar": "official"
+},
+"PA": {
+"es": "official"
+},
+"PE": {
+"es": "official",
+"qu": "official"
+},
+"PF": {
+"fr": "official",
+"ty": "official"
+},
+"PG": {
+"en": "official",
+"ho": "official",
+"tpi": "official"
+},
+"PH": {
+"ceb": "official_regional",
+"en": "official",
+"fil": "official",
+"hil": "official_regional",
+"ilo": "official_regional",
+"mdh": "official_regional",
+"pag": "official_regional",
+"tsg": "official_regional",
+"war": "official_regional"
+},
+"PK": {
+"en": "official",
+"ur": "official"
+},
+"PL": {
+"csb": "official_regional",
+"de": "official_regional",
+"lt": "official_regional",
+"pl": "official"
+},
+"PM": {
+"fr": "official"
+},
+"PN": {
+"en": "official"
+},
+"PR": {
+"en": "de_facto_official",
+"es": "official"
+},
+"PS": {
+"ar": "official"
+},
+"PT": {
+"pt": "official"
+},
+"PW": {
+"en": "official",
+"pau": "official"
+},
+"PY": {
+"es": "official",
+"gn": "official"
+},
+"QA": {
+"ar": "official"
+},
+"RE": {
+"fr": "official"
+},
+"RO": {
+"ro": "official"
+},
+"RS": {
+"hr": "official_regional",
+"hu": "official_regional",
+"ro": "official_regional",
+"sk": "official_regional",
+"sr": "official",
+"sr_Latn": "official",
+"uk": "official_regional"
+},
+"RU": {
+"ady": "official_regional",
+"av": "official_regional",
+"az_Cyrl": "official_regional",
+"ba": "official_regional",
+"bua": "official_regional",
+"ce": "official_regional",
+"inh": "official_regional",
+"kbd": "official_regional",
+"koi": "official_regional",
+"krc": "official_regional",
+"kum": "official_regional",
+"kv": "official_regional",
+"lbe": "official_regional",
+"lez": "official_regional",
+"mdf": "official_regional",
+"myv": "official_regional",
+"ru": "official",
+"sah": "official_regional",
+"tt": "official_regional",
+"tyv": "official_regional",
+"udm": "official_regional"
+},
+"RW": {
+"en": "official",
+"fr": "official",
+"rw": "official"
+},
+"SA": {
+"ar": "official"
+},
+"SB": {
+"en": "official"
+},
+"SC": {
+"en": "official",
+"fr": "official"
+},
+"SD": {
+"ar": "official",
+"en": "official"
+},
+"SE": {
+"fi": "official_regional",
+"sv": "official"
+},
+"SG": {
+"en": "official",
+"ms": "official",
+"ta": "official",
+"zh": "official"
+},
+"SH": {
+"en": "official"
+},
+"SI": {
+"sl": "official",
+"vec": "official_regional"
+},
+"SJ": {
+"nb": "official"
+},
+"SK": {
+"sk": "official"
+},
+"SL": {
+"en": "official"
+},
+"SM": {
+"it": "official"
+},
+"SN": {
+"bjt": "official_regional",
+"bsc": "official_regional",
+"dyo": "official_regional",
+"ff": "official_regional",
+"fr": "official",
+"knf": "official_regional",
+"mey_Latn": "official_regional",
+"mfv": "official_regional",
+"sav": "official_regional",
+"snf": "official_regional",
+"srr": "official_regional",
+"tnr": "official_regional",
+"wo": "de_facto_official"
+},
+"SO": {
+"ar": "official",
+"so": "official"
+},
+"SR": {
+"nl": "official"
+},
+"SS": {
+"en": "official"
+},
+"ST": {
+"pt": "official"
+},
+"SV": {
+"es": "official"
+},
+"SX": {
+"en": "official",
+"nl": "official"
+},
+"SY": {
+"ar": "official"
+},
+"SZ": {
+"en": "official",
+"ss": "official"
+},
+"TC": {
+"en": "official"
+},
+"TD": {
+"ar": "official",
+"fr": "official"
+},
+"TG": {
+"fr": "official"
+},
+"TH": {
+"th": "official"
+},
+"TJ": {
+"tg": "official"
+},
+"TK": {
+"en": "official",
+"tkl": "official"
+},
+"TL": {
+"pt": "official",
+"tet": "official"
+},
+"TM": {
+"tk": "official"
+},
+"TN": {
+"ar": "official",
+"fr": "official"
+},
+"TO": {
+"en": "official",
+"to": "official"
+},
+"TR": {
+"tr": "official"
+},
+"TT": {
+"en": "official"
+},
+"TV": {
+"en": "official",
+"tvl": "official"
+},
+"TW": {
+"hak_Hant": "official",
+"nan_Hant": "official",
+"zh_Hant": "official"
+},
+"TZ": {
+"en": "official",
+"sw": "official"
+},
+"UA": {
+"ru": "de_facto_official",
+"uk": "official"
+},
+"UG": {
+"en": "official",
+"sw": "official"
+},
+"UM": {
+"en": "de_facto_official"
+},
+"US": {
+"en": "de_facto_official",
+"es": "official_regional",
+"haw": "official_regional"
+},
+"UY": {
+"es": "official"
+},
+"UZ": {
+"uz": "official",
+"uz_Cyrl": "official"
+},
+"VA": {
+"it": "de_facto_official"
+},
+"VC": {
+"en": "official"
+},
+"VE": {
+"es": "official"
+},
+"VG": {
+"en": "official"
+},
+"VI": {
+"en": "de_facto_official"
+},
+"VN": {
+"vi": "official"
+},
+"VU": {
+"bi": "official",
+"en": "official",
+"fr": "official"
+},
+"WF": {
+"fr": "official"
+},
+"WS": {
+"en": "official",
+"sm": "official"
+},
+"XK": {
+"sq": "official",
+"sr": "official",
+"sr_Latn": "official"
+},
+"YE": {
+"ar": "official"
+},
+"YT": {
+"fr": "official"
+},
+"ZA": {
+"af": "official_regional",
+"en": "official",
+"nr": "official_regional",
+"nso": "official_regional",
+"ss": "official_regional",
+"st": "official_regional",
+"tn": "official_regional",
+"ts": "official_regional",
+"ve": "official_regional",
+"xh": "official_regional",
+"zu": "official_regional"
+},
+"ZM": {
+"en": "official"
+},
+"ZW": {
+"en": "official",
+"nd": "official",
+"sn": "official"
+}
+},
+"source": "Unicode CLDR 48 (npm package cldr-core 48.0.0), supplemental/territoryInfo.json, Unicode License v3"
+}

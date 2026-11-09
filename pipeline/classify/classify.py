@@ -6,7 +6,7 @@ Output: work/classified.json (outlets + categories), reports/classification.md
 Every value is stored as {"value": ..., "method": ..., "source": ...}
 (briefing K3/K4). Methods, strongest first: override, source_field,
 membership, website_check, keyword, default.
-Done so far: 4a organisation type.
+Done: 4a organisation type, 4b ownership, 4c scope/reach, 4d topics + UN profile.
 """
 import csv
 import gzip
@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[2]
 NET_LABEL = {"efcsn_signatories": "EFCSN", "ifcn_signatories": "IFCN", "fact_checking_sites": "Wikipedia list of fact-checking websites",
              "news_agencies": "Wikipedia list of news agencies", "ebu_members": "EBU membership", "asbu_members": "ASBU membership",
              "abu_members": "ABU membership", "cbu_members": "CBU membership", "sdg_media_compact": "SDG Media Compact",
-             "state_media": "Wikipedia list of state media"}
+             "state_media": "Wikipedia list of state media", "covering_climate_now": "Covering Climate Now"}
 
 
 def val(value, method, source):
@@ -301,6 +301,157 @@ def far_right(o, rules, evidence, owners):
     return None
 
 
+# ---------------------------------------------------------------- 4d
+METHOD_RANK = ["override", "source_field", "membership", "rule", "website_check", "keyword", "default"]
+
+
+class Evidence:
+    """Collects {value, method, source} per value; the strongest method wins."""
+
+    def __init__(self):
+        self.best = {}
+
+    def add(self, value, method, source):
+        old = self.best.get(value)
+        if not old or METHOD_RANK.index(method) < METHOD_RANK.index(old["method"]):
+            self.best[value] = val(value, method, source)
+
+    def result(self, order):
+        return sorted(self.best.values(), key=lambda v: (order.index(v["value"]) if v["value"] in order else 999))
+
+
+def raw_values(o, key, prefix=None):
+    out = set()
+    for k, m in o["raw"].items():
+        if prefix is None or k.startswith(prefix):
+            out.update(m.get("raw", {}).get(key, []) or [])
+    return out
+
+
+def source_mappings(o, maps, kind, ev):
+    """kind = "topics" or "un_profile": adds evidence from the per-source tables
+    in config/sources/ (iptv-org categories, Radio Browser tags, Wikidata)."""
+    cats = raw_values(o, "categories")
+    tags = raw_values(o, "tags")
+    classes = wd_classes(o)
+    subjects = raw_values(o, "main_subject") | raw_values(o, "genre")
+    for value, lst in (maps["iptv"].get(kind) or {}).items():
+        hit = cats & set(lst)
+        if hit:
+            ev.add(value, "source_field", f"iptv-org category \"{sorted(hit)[0]}\"")
+    for value, lst in (maps["rb"].get(kind) or {}).items():
+        hit = tags & set(lst)
+        if hit:
+            ev.add(value, "source_field", f"Radio Browser tag \"{sorted(hit)[0]}\"")
+    for value, d in (maps["wd"].get(kind) or {}).items():
+        hit = classes & set(d.get("classes", []))
+        if hit:
+            ev.add(value, "source_field", "Wikidata: " + sorted(hit)[0])
+        hit = subjects & set(d.get("subjects", []))
+        if hit:
+            ev.add(value, "source_field", "Wikidata subject: " + sorted(hit)[0])
+
+
+def keyword_patterns(rules):
+    out = []
+    for topic, words in (rules.get("name_keywords") or {}).items():
+        for w in words:
+            out.append((topic, w, re.compile(r"(?<!\w)" + re.escape(w.casefold()) + r"(?!\w)")))
+    return out
+
+
+def apply_list_overrides(ev, ov, field, label):
+    """overrides.csv: <id>,<field>_add,climate;health,<why>  /  <id>,<field>_remove,general_news,<why>"""
+    add = (ov.get(field + "_add") or {})
+    for v in [x.strip() for x in (add.get("value") or "").split(";") if x.strip()]:
+        ev.best[v] = val(v, "override", add.get("note") or "hand correction")
+    rem = (ov.get(field + "_remove") or {})
+    for v in [x.strip() for x in (rem.get("value") or "").split(";") if x.strip()]:
+        ev.best.pop(v, None)
+
+
+def topics(o, cat, rules, maps, kw, order, ov):
+    ev = Evidence()
+    source_mappings(o, maps, "topics", ev)
+    for topic, nets in (rules.get("networks") or {}).items():
+        hit = [n for n in nets if n in o["networks"]]
+        if hit:
+            ev.add(topic, "membership", NET_LABEL.get(hit[0], hit[0]))
+    types = {cat["org_type"]["value"]} | set(cat.get("org_type_also") or [])
+    for topic, ts in (rules.get("org_types") or {}).items():
+        if types & set(ts):
+            ev.add(topic, "rule", "organisation type " + sorted(types & set(ts))[0].replace("_", " "))
+    for topic, scs in (rules.get("scopes") or {}).items():
+        if cat["scope"]["value"] in scs:
+            ev.add(topic, "rule", "scope " + cat["scope"]["value"])
+    name = (o["name"] or "").casefold()
+    if name.count(",") <= rules.get("name_keywords_max_commas", 99):
+        for phrase in rules.get("name_keywords_ignore") or []:
+            name = name.replace(phrase.casefold(), " ")
+        for topic, word, rx in kw:
+            if topic not in ev.best and rx.search(name):
+                ev.add(topic, "keyword", f"name contains \"{word}\"")
+    apply_list_overrides(ev, ov, "topics", "topic")
+    if not ev.best:
+        ev.add("general_news", "default", "no topic in the sources: general news")
+    return ev.result(order)
+
+
+def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids):
+    """Target audience (owner's idea, 09.11.2026): who the outlet is made for."""
+    ev = Evidence()
+    source_mappings(o, maps, "audience", ev)
+    types = {cat["org_type"]["value"]} | set(cat.get("org_type_also") or [])
+    for aud, ts in (rules.get("org_types") or {}).items():
+        if types & set(ts):
+            ev.add(aud, "rule", "organisation type " + sorted(types & set(ts))[0].replace("_", " "))
+    for aud, ts in (rules.get("topics") or {}).items():
+        hit = topic_ids & set(ts)
+        if hit:
+            ev.add(aud, "rule", "topic " + sorted(hit)[0].replace("_", " "))
+    off = official.get(o["country"])
+    if rules.get("minority_language") and off:
+        minority = [l for l in o["languages"] if l not in buttons and l not in off]
+        if minority:
+            names = ", ".join(lang_names.get(l, l) for l in minority[:3])
+            ev.add(rules["minority_language"], "rule", f"in {names}: not an official language of the country")
+    name = (o["name"] or "").casefold()
+    if name.count(",") <= 1:
+        for aud, word, rx in kw:
+            if aud not in ev.best and rx.search(name):
+                ev.add(aud, "keyword", f"name contains \"{word}\"")
+    apply_list_overrides(ev, ov, "audience", "target audience")
+    return ev.result(order)
+
+
+def un_profile(o, cat, rules, maps, order, ov, official, buttons, lang_names, topic_ids):
+    ev = Evidence()
+    source_mappings(o, maps, "un_profile", ev)
+    for prof, nets in (rules.get("networks") or {}).items():
+        hit = [n for n in nets if n in o["networks"]]
+        if hit:
+            ev.add(prof, "membership", NET_LABEL.get(hit[0], hit[0]))
+    types = {cat["org_type"]["value"]} | set(cat.get("org_type_also") or [])
+    for prof, ts in (rules.get("org_types") or {}).items():
+        if types & set(ts):
+            ev.add(prof, "rule", "organisation type " + sorted(types & set(ts))[0].replace("_", " "))
+    for prof, ts in (rules.get("topics") or {}).items():
+        hit = topic_ids & set(ts)
+        if hit:
+            ev.add(prof, "rule", "topic " + sorted(hit)[0].replace("_", " "))
+    off = official.get(o["country"])
+    if rules.get("minority_language") and off:
+        minority = [l for l in o["languages"] if l not in buttons and l not in off]
+        if minority:
+            names = ", ".join(lang_names.get(l, l) for l in minority[:3])
+            ev.add(rules["minority_language"], "rule", f"in {names}: not an official language of the country")
+    langs = set(o["languages"]) | set(cat.get("service_languages") or [])
+    if rules.get("multilingual_min_languages") and len(langs) >= rules["multilingual_min_languages"]:
+        ev.add("multilingual", "rule", f"{len(langs)} languages")
+    apply_list_overrides(ev, ov, "un_profile", "UN profile")
+    return ev.result(order)
+
+
 def load_overrides():
     out = {}
     path = ROOT / "overrides.csv"
@@ -323,6 +474,20 @@ def main():
     reach = Reach()
     oidx = owner_index(owners, None)
     intl, intl_missing = match_international(outlets, reach)
+    cats_cfg = yaml.safe_load(open(ROOT / "config" / "categories.yaml", encoding="utf-8"))
+    topic_order = [t["id"] for t in cats_cfg["topics"]]
+    un_order = [u["id"] for u in cats_cfg["un_profile"]]
+    aud_order = [a["id"] for a in cats_cfg["audience"]]
+    aud_kw = keyword_patterns(rules["audience"])
+    src = ROOT / "config" / "sources"
+    maps = {k: yaml.safe_load(open(src / f, encoding="utf-8")) for k, f in
+            (("iptv", "iptv_org.yaml"), ("rb", "radio_browser.yaml"), ("wd", "wikidata.yaml"))}
+    kw = keyword_patterns(rules["topics"])
+    official = {r["iso3"]: set(filter(None, r["official_languages"].split(";")))
+                for r in csv.DictReader(open(ROOT / "config" / "official_languages.csv", encoding="utf-8"))}
+    lang_rows = list(csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")))
+    buttons = {r["code"] for r in lang_rows if r["button"]}
+    lang_names = {r["code"]: r["name"] for r in lang_rows}
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
         cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
@@ -346,12 +511,19 @@ def main():
         extra_langs = [l for e, s, _ in intl.get(o["id"], []) if s for l in s["languages"]]
         cat["service_languages"] = sorted(set(extra_langs) - set(o["languages"]))
         cat["services"] = sorted({s["name"] for e, s, _ in intl.get(o["id"], []) if s})
+        ov = overrides.get(o["id"], {})
+        cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov)
+        cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
+                                       {t["value"] for t in cat["topics"]})
+        cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
+                                          lang_names, {t["value"] for t in cat["topics"]})
         for field, row in overrides.get(o["id"], {}).items():
-            if field in cat:
+            if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")
         o["cat"] = cat
     json.dump(outlets, open(ROOT / "work" / "classified.json", "w", encoding="utf-8"), ensure_ascii=False)
     report(outlets, intl_missing)
+    report_4d(outlets, cats_cfg)
     ex = sorted((o for o in outlets if o["cat"].get("excluded")), key=lambda o: (o["country"] or "", o["name"] or ""))
     lines = ["# Excluded as far-right (not shown on the website)", "",
              f"{len(ex)} outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).",
@@ -389,6 +561,51 @@ def report(outlets, intl_missing=()):
     lines.append(f"\nOutlets that reach more than their home country: {len(multi)}")
     lines.append("International broadcasters not found in the data: " + (", ".join(intl_missing) or "none"))
     (ROOT / "reports" / "classification.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("\n".join(lines))
+
+
+def report_4d(outlets, cats_cfg):
+    shown = [o for o in outlets if not o["cat"].get("excluded")]
+    n = len(shown)
+    lines = ["# Step 4d: topics, target audience and UN profile", "",
+             f"{n:,} outlets shown on the website. An outlet can have several topics and profiles.",
+             "Topics and UN profiles never hide an outlet; they only change the order (unless the user",
+             "switches on \"Only show topic matches\").", "",
+             "Methods: **source** = the source's own category/tag/subject (config/sources/*.yaml), "
+             "**network** = member of a list, **rule** = from organisation type / scope / language, "
+             "**name** = a clear word in the name (config/rules.yaml), **hand** = overrides.csv.", "",
+             "## Topics", "", "| Topic | Outlets | source | network | rule | name | hand | Most frequent reasons |",
+             "|---|---|---|---|---|---|---|---|"]
+    for t in cats_cfg["topics"]:
+        vs = [v for o in shown for v in o["cat"]["topics"] if v["value"] == t["id"]]
+        by = Counter(v["method"] for v in vs)
+        why = Counter(re.sub(r"\d+ languages", "N languages", v["source"]) for v in vs).most_common(3)
+        label = t["label"] + (f" (SDG {t['sdg']})" if t.get("sdg") else "")
+        lines.append(f"| {label} | {len(vs):,} | {by['source_field']:,} | {by['membership']:,} | {by['rule']:,} | "
+                     f"{by['keyword']:,} | {by['override']:,} | " + "; ".join(f"{k} ({c:,})" for k, c in why) + " |")
+    only_default = sum(1 for o in shown if [v["method"] for v in o["cat"]["topics"]] == ["default"])
+    lines += ["", f"Outlets with no topic in any source (shown as \"General news\" by default): {only_default:,} "
+              f"({100 * only_default / max(n, 1):.0f} %)", "",
+              "## UN profile", "", "| Profile | Outlets | source | network | rule | hand | Most frequent reasons |",
+              "|---|---|---|---|---|---|---|"]
+    for u in cats_cfg["un_profile"]:
+        vs = [v for o in shown for v in o["cat"]["un_profile"] if v["value"] == u["id"]]
+        by = Counter(v["method"] for v in vs)
+        why = Counter(re.sub(r"in .*: not an official", "in X: not an official", re.sub(r"\d+ languages", "N languages", v["source"]))
+                      for v in vs).most_common(3)
+        lines.append(f"| {u['label']} | {len(vs):,} | {by['source_field']:,} | {by['membership']:,} | {by['rule']:,} | "
+                     f"{by['override']:,} | " + ("; ".join(f"{k} ({c:,})" for k, c in why) or "no open source yet") + " |")
+    lines.append(f"\nOutlets with at least one UN profile: {sum(1 for o in shown if o['cat']['un_profile']):,}")
+    lines += ["", "## Target audience", "", "| Audience | Outlets | source | rule | name | hand | Most frequent reasons |",
+              "|---|---|---|---|---|---|---|"]
+    for a in cats_cfg["audience"]:
+        vs = [v for o in shown for v in o["cat"]["audience_groups"] if v["value"] == a["id"]]
+        by = Counter(v["method"] for v in vs)
+        why = Counter(re.sub(r"in .*: not an official", "in X: not an official", v["source"]) for v in vs).most_common(3)
+        lines.append(f"| {a['label']} | {len(vs):,} | {by['source_field']:,} | {by['rule']:,} | {by['keyword']:,} | "
+                     f"{by['override']:,} | " + ("; ".join(f"{k} ({c:,})" for k, c in why) or "no open source yet") + " |")
+    lines.append(f"\nOutlets with at least one target audience: {sum(1 for o in shown if o['cat']['audience_groups']):,}")
+    (ROOT / "reports" / "topics.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
 

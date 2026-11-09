@@ -2,7 +2,8 @@
 
 | List | Members read | Matched to one of the 195 | Not matched |
 |---|---|---|---|
-| sdg_media_compact | 330 | 330 | 0 |
+| sdg_media_compact | 331 | 331 | 0 |
+| ifcn_signatories | 183 | 175 | 8 |
 | efcsn_signatories | 62 | 60 | 2 |
 | news_agencies | 195 | 193 | 2 |
 | state_media | 911 | 859 | 52 |
@@ -14,10 +15,10 @@
 
 Not readable from the saved page:
 
-- **ifcn_signatories**: page is built by JavaScript; data address being looked for
 - **covering_climate_now**: directory is an Airtable embed; needs a CSV export (manual snapshot)
 
 Country names not recognised (add them to config/sources/country_names.yaml):
 
+- None (8)
 - MENA (1)
 - Turks and Caicos Islands (1)

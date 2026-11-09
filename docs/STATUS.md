@@ -1,4 +1,4 @@
-# Status and next steps (handover, 06.11.2026 evening)
+# Status and next steps (handover, 06.11.2026 late evening)
 
 Read this together with `CLAUDE.md`, `docs/BRIEFING.md`, `docs/KATEGORIEN.md`, `docs/BACKLOG.md`.
 
@@ -16,20 +16,72 @@ is published automatically (only the PR *preview* builds fail; harmless).
   (`.github/workflows/fetch.yml`, runs on pushes to `step-*` / `ngo-*` branches and by hand).
 
 ## In progress
+- **Step 4d topics + UN profile: built, waiting for the owner's check** (branch `claude/nice-bell-ois6qp`).
+  Mapping tables per source in `config/sources/*.yaml` (`topics:` / `un_profile:`), rules in
+  `config/rules.yaml` (section 4d), minority languages via `config/official_languages.csv` (Unicode CLDR).
+  IFCN list is now read. Website: topic buttons, "Matches", switch "Only show topic and UN profile
+  matches" (default off). Numbers and reasons: `reports/topics.md`.
+  Honest result: 28 % of outlets have no topic in any source ("General news"); most SDG topics have
+  0-150 outlets; "Solutions", "Development journalism", "Open to partner content" have no open source.
+  The website check (next) and Covering Climate Now (CSV) are the main ways to fill this.
+  Confirmed by the owner (06.11.2026): LGBTQ / African American media -> "Reduced inequalities";
+  student newspapers / campus radio -> "Children & youth" + "Youth audience"; diaspora-language media
+  (e.g. Vietnamese in the USA) -> "Reaches underserved audiences".
+  outlets.json is now 21 MB (Cloudflare limit per file: 25 MiB) - watch this when NGOs are added.
 - **Far-right exclusion: done (merged 06.11.2026).** Rule `exclude_far_right` in `config/rules.yaml`,
-  evidence `raw/far_right/` (Wikidata political ideology incl. the owner's, Wikipedia far-right media
-  categories). 46 outlets not shown, list with reasons in `reports/excluded_far_right.md`. Brought back by
-  hand (`overrides.csv`): Corriere Adriatico, Kesari (historic categories). Hezbollah/Hamas outlets stay
-  excluded (owner's ideology "antisemitism"); the owner can still reverse any entry.
+  evidence `raw/far_right/`. 46 outlets not shown (`reports/excluded_far_right.md`).
 - **Branch `ngo-sources`** (NGOs, phase 2, owner wants them in): fetchers for ECOSOC iCSO (slow server,
   paging with cookies, resumes), UN Geneva list (~1,500, parsed), IATI (1,338 NGOs);
   `pipeline/normalize/ngos.py`. ECOSOC: plan to use the lists by field of activity / country instead
   of 6,000 profile pages. NGO filter design: `docs/BACKLOG.md`.
 
+## Topic keywords (owner's decision 09.11.2026) - replaces "website check" as next step
+The owner wants EVERY topic button to work: clicking e.g. SDG 5 must find media and NGOs connected
+to the topic. Plan agreed, one step per session:
+- **T1** keyword lists for all 38 topics in `config/topic_keywords.yaml` (hidden, not shown on the site),
+  broad but specific, with exclusion words; only the **9 UN News languages** (Arabic, Chinese, English,
+  French, Russian, Spanish, Hindi, Portuguese, Kiswahili). Owner reviews the English list.
+  Status: questions to the owner asked 09.11.2026, waiting for answers before writing the lists.
+  Owner's answers 09.11.2026:
+  - Topics may always overlap. Women's sport -> Sports AND SDG 5. Gender identity -> SDG 5 too.
+  - **The 169 SDG targets are the long-term reference** (owner sent the UN overview; official list:
+    UN Statistics SDG API, unstats.un.org/SDGAPI, fetch via the workflow - blocked in the dev sandbox).
+    Proposal: every SDG topic gets its targets as sub-topics (e.g. 5.2 violence against women),
+    each with its own keyword list; owner asked about a fold-out sub-topic list and a typo-tolerant search.
+  - New topic **Older persons / ageing** (to add in T1).
+  - **All world languages matter** ("nothing may fall behind"); no colleague can proofread translations.
+    Proposal: 9 hand-made languages + automatic labels in all languages from Wikidata (concept items).
+  - Idea from the owner: a **Target audience** section (women, youth, farmers ...), see questions.
+  - Done: "Existing UN relationship" is now the first value of "Member of" (not a UN profile button).
+  Owner's answers 09.11.2026 (second round):
+  - Sub-topics: NO bare numbers and no vague short names. Every sub-topic must say specifically what
+    it is about, in plain language (away from the official wording, but complete). Keep the targets
+    as the reference behind it. -> T1a: label proposal per target, owner reviews.
+  - Sub-topics also for Human rights, Conflict & security, Migration, Humanitarian aid, Disasters,
+    health-related beats; not for Sports, Religion, Culture.
+  - Search bar: NOT now ("we develop that later"); precise filters instead. Kept in docs/BACKLOG.md.
+  - LGBTQ+ (incl. sexual orientation) -> SDG 5, SDG 10, Human rights. Earlier proposals 1-36 accepted;
+    no separate "Environment" button; "Member of" stays where it is.
+  - **Target audience: built (first version)**, soft filter, section under Topics; replaces the UN
+    profiles "Youth audience" and "Reaches underserved audiences". Owner wants it expanded long-term.
+    Sources: iptv-org / Radio Browser / Wikidata (audience: tables), community media, minority languages,
+    names (config/rules.yaml audience:). Later: Wikidata "intended public" (P2360), About pages (T3).
+    Not yet in the export file (owner to decide: new column "Target audience"?).
+- **T2** Wikipedia intro + Wikidata description for ~13,500 outlets, matched with the lists.
+- **T3** website check part 1 (top 50 per country): menu/sections, About page, meta description
+  -> keywords; also email contacts, social links, podcast, newsletter.
+- **T4** specialist network lists (Covering Climate Now CSV, Earth Journalism Network, women in
+  journalism, health, solutions journalism ... only open lists).
+- **T5** NGOs: ECOSOC / IATI fields of work -> topics, same lists for NGO websites.
+- **T6** website: order by strength, card shows the reason ("Climate section: .../environment").
+Three strengths (agreed): **Focus** (topic is the main subject: name, About text), **Desk / section**
+(own section in the menu), **Covers** (topic appears repeatedly in the text). One single word somewhere
+does not count. Honest limits told to the owner: only coverage can be measured, not interest;
+~20-30 % of websites block or need JavaScript; small topics (water, oceans, SDG 17) stay small.
+
 ## Next steps (agreed order)
-1. **4d topics + UN profile** (mapping tables per source → `config/`; "Only show topic matches" switch,
-   default off).
-2. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
+1. ~~4d topics + UN profile~~ (built, owner checks it).
+2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
    reachable?, contact email/page (owner wants email contacts), social links, podcast/newsletter,
    language, owner from imprint/about text.
 3. **4e**: all filters finished, "Also show outlets without this information" everywhere.

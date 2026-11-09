@@ -147,8 +147,34 @@ def union_members(list_id):
     return out
 
 
+def ifcn():
+    """IFCN signatories from the list's own data address (raw/networks/ifcn_signatories_api.json.gz).
+    Kept: "Verified Signatory" and "In Renewal" (still listed by IFCN); "Expired Signatory" is left out.
+    Countries are UN M49 numbers."""
+    path = RAW / "ifcn_signatories_api.json.gz"
+    if not path.exists():
+        return []
+    import csv
+    m49 = {int(r["m49"]): r for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
+    out = []
+    for o in json.load(gzip.open(path, "rt", encoding="utf-8"))["organizations"]:
+        if o.get("expired") or o.get("signatory_status") not in ("Verified Signatory", "In Renewal"):
+            continue
+        own = o.get("organization_owner") or {}
+        country = next((m49[c] for c in own.get("countries") or [] if c in m49), None)
+        web = (own.get("website") or "").strip() or None
+        if web and not web.lower().startswith("http"):
+            web = "https://" + web
+        e = entry("ifcn_signatories", o.get("name"), country["name"] if country else None, website=web)
+        if country:
+            e["country"] = country["iso3"]
+        out.append(e)
+    return out
+
+
 PARSERS = {
     "sdg_media_compact": sdg_media_compact,
+    "ifcn_signatories": ifcn,
     "efcsn_signatories": efcsn,
     "news_agencies": lambda: wikipedia_list("news_agencies"),
     "state_media": lambda: wikipedia_list("state_media"),
@@ -159,7 +185,6 @@ PARSERS = {
     "cbu_members": lambda: union_members("cbu_members"),
 }
 NOT_READABLE = {
-    "ifcn_signatories": "page is built by JavaScript; data address being looked for",
     "covering_climate_now": "directory is an Airtable embed; needs a CSV export (manual snapshot)",
 }
 

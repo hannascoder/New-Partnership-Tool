@@ -210,19 +210,57 @@ un_profile:
   - id: un_relationship
     label: Existing UN relationship
     description: UN News partner, UNIC, SDG Media Compact.
+    # owner, 09.11.2026: offered as the first value of the "Member of" filter
+    # (a hard filter), not as a UN profile button
+    shown_in: member_of
   - id: public_service_mandate
     label: Public service mandate
   - id: storytelling
     label: Storytelling & documentary
   - id: fact_checking_ifcn
     label: Fact-checking (IFCN signatory)
-  - id: underserved_audiences
-    label: Reaches underserved audiences
-    description: Rural audiences, community radio, minority languages.
-  - id: youth_audience
-    label: Youth audience
   - id: multilingual
     label: Multilingual
+
+# ------------------------------------------------------ Target audience
+# WHO an outlet is made for (the topic says what it reports on). Owner's
+# idea, 09.11.2026; replaces the UN profiles "Youth audience" and "Reaches
+# underserved audiences". Soft filter: changes the order, never hides an
+# outlet. Only what the outlet says about itself or what a source states;
+# there is no open data on real audience figures. To be extended over time.
+audience:
+  - id: women
+    label: Women
+  - id: youth_students
+    label: Youth & students
+  - id: children
+    label: Children
+  - id: older_persons
+    label: Older persons
+  - id: rural_farmers
+    label: Rural communities & farmers
+  - id: local_communities
+    label: Local communities
+    description: Community media made by and for a local community.
+  - id: persons_with_disabilities
+    label: Persons with disabilities
+  - id: indigenous
+    label: Indigenous peoples
+  - id: minority_language
+    label: Minority-language speakers
+    description: The outlet uses a language that is not official in its country.
+  - id: ethnic_minorities
+    label: Ethnic & minority communities
+  - id: diaspora_migrants
+    label: Diaspora & migrants
+  - id: lgbtq
+    label: LGBTQ+ communities
+  - id: religious
+    label: Religious communities
+  - id: business_professionals
+    label: Business & professionals
+  - id: policy_makers
+    label: Policy makers & decision makers
 
 # ---------------------------------------------- J. Size and checkboxes
 size:
@@ -263,6 +301,11 @@ checkboxes:
     default: true
   - id: include_no_language
     label: Also show outlets without language information
+    default: false
+  # decision 06.11.2026: switch, default off. Shown under "UN profile".
+  - id: only_topic_matches
+    label: Only show topic, audience and UN profile matches
+    description: Hides outlets that match none of the chosen topics, target audiences or UN profiles.
     default: false
 
 # Outlets count as "new" for this many months after they were first found.

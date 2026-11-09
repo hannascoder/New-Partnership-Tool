@@ -130,6 +130,91 @@ scope:
   org_types:
     local: [community_media]
 
+# ---------------------------------------------------------------- 4d
+# Topics: SEVERAL per outlet. Topics never hide an outlet, they only change
+# the order (briefing H, L). Every topic stores where it comes from.
+# Evidence, strongest first (briefing K4):
+#   source_field  the source's own categories/tags/subjects, mapped in
+#                 config/sources/iptv_org.yaml, radio_browser.yaml, wikidata.yaml (topics:)
+#   membership    member of a network list (below)
+#   rule          organisation type / scope (below)
+#   keyword       a clear word in the outlet's NAME (below)
+#   default       "general_news" when nothing else is known
+topics:
+  networks:
+    fact_checking: [ifcn_signatories, efcsn_signatories, fact_checking_sites]
+    climate: [covering_climate_now]          # as soon as the CSV snapshot is in raw/manual/
+  org_types:
+    fact_checking: [fact_checker]
+    community_local: [community_media]
+  scopes:
+    community_local: [local]
+  # Words in the outlet's name. Whole words only, upper/lower case ignored
+  # ("Sport" matches "Sky Sport News", not "Sportschau"). Kept short on purpose:
+  # a word must be clear in every country. Add words here, never in code.
+  # Only the main name counts, and not names that list sections like a
+  # tagline ("Noticias, Deportes, Economía, ..."): those are general news sites.
+  name_keywords_max_commas: 1
+  # Expressions in which a keyword does NOT mean the topic
+  name_keywords_ignore: [science fiction, christian science, falls church, medicine hat, sports illustrated swimsuit]
+  name_keywords:
+    sports: [sport, sports, deporte, deportes, esporte, esportes, desporto, спорт, رياضة]
+    business_economy: [business, economy, economic, economics, finance, financial, economía, economia, économie,
+                       wirtschaft, финансы, экономика, اقتصاد, bourse, markets]
+    health: [health, salud, santé, saúde, medical, medicine, médica, здоровье, صحة]
+    science: [science, sciences, scientific, ciencia, ciência, wissenschaft, наука]
+    climate: [climate, climat, klima]   # not "clima": in Spanish it also means weather
+    technology: [tech, technology, tecnología, tecnologia, technologie]
+    agriculture: [agriculture, agricultural, farm, farmer, farmers, farming, agro, agricultura, agricole, rural]
+    religion: [christian, catholic, catholique, católica, católico, gospel, church, iglesia, islamic, islam, quran,
+               evangelical, bible, biblical, sunnah, orthodox]
+    children_youth: [kids, children, enfants, niños, kinder, junior, youth, juvenil]
+    education: [education, educational, educación, educação, éducation, school, university, universidad,
+                universidade, université, campus, college]
+    culture: [culture, cultural, cultura, kultur, arts]
+    indigenous: [indigenous, indígena, indígenas, aboriginal, first nations, tribal]
+    human_rights: [human rights, derechos humanos, droits humains, droits de l'homme]
+    migration: [migrant, migrants, refugee, refugees, migración, migrantes]
+    diaspora: [diaspora]
+
+# UN profile: SEVERAL per outlet; like topics, only changes the order.
+# "Solutions / constructive journalism", "Development journalism" and
+# "Open to partner content" have NO open source yet: they stay empty until
+# a list is found, hand corrections are made or the website check finds them.
+un_profile:
+  networks:
+    un_relationship: [sdg_media_compact]        # later also the internal list (owner)
+    fact_checking_ifcn: [ifcn_signatories]
+  org_types:
+    public_service_mandate: [public_service_broadcaster]
+  # 2 or more languages (own languages + language services) -> "Multilingual"
+  multilingual_min_languages: 2
+
+# Target audience: SEVERAL per outlet; soft like topics (owner, 09.11.2026).
+# From the per-source tables in config/sources/*.yaml (audience:), plus:
+audience:
+  org_types:
+    local_communities: [community_media]
+  topics:
+    indigenous: [indigenous]
+    diaspora_migrants: [diaspora]
+    rural_farmers: [agriculture]
+  # A language that is neither one of the 9 language buttons nor official in
+  # the outlet's country (config/official_languages.csv) = minority language.
+  minority_language: minority_language
+  # Words in the outlet's name (same rules as for topics)
+  name_keywords:
+    women: [women, woman, women's, femmes, femme, mujer, mujeres, mulher, mulheres, ladies]
+    older_persons: [seniors, senior, elderly, retirees, retired, aînés, mayores, idosos, 50plus, "50+"]
+    youth_students: [youth, juvenil, jeunes, jeunesse, jóvenes, juventude, teen, teens, student, students, estudiantes,
+                     étudiants, campus, college, university]
+    children: [kids, children, enfants, niños, crianças, junior]
+    rural_farmers: [farmer, farmers, farm, farming, rural, agricole, campesino, campesinos, agro]
+    persons_with_disabilities: [deaf, blind, sign language, disability, disabilities, handicap]
+    lgbtq: [lgbt, lgbtq, lgbtqi, gay, lesbian, queer]
+    diaspora_migrants: [diaspora, expat, expats, immigrant, immigrants, migrants]
+    business_professionals: [business, financial, finance, economic, trade]
+
 # ---------------------------------------------------------------- exclusion
 # Very right-wing (far-right) media are NOT shown (owner's request, 06.11.2026:
 # "das bringt nichts"). Only open, documented evidence counts; every excluded
