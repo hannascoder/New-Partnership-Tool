@@ -90,6 +90,14 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   unticked; best match counts strength (focus 3, section 2, covers 1). Export: column "Target audience".
 - Checking: `reports/topics.md` (numbers) and `reports/topics_sample.md` (random examples per topic).
 - Older persons & ageing added as a topic. Search bar: later (BACKLOG).
+- Result (website check of 11,457 sites, 8,359 answered): every topic button has matches; outlets
+  without any topic down from 28 % to 22 %. Smallest: Life below water ~90, SDG 6 / SDG 12 ~120.
+  Strength rule: "main focus" only from name, description, first sentence of Wikipedia / About page,
+  or a source/network; menu entries of max. 4 words = "own section"; headlines need 2+ hits.
+- Checkboxes "Hide outlets whose website did not answer" and "Only new" now work (all buttons active).
+- outlets.json compacted (codes for repeated values): 17.4 MB (limit 25 MiB).
+- Known limits: mojibake names from Media Cloud (e.g. "â€“"); website check only top 100 per
+  country so far (next runs: raise WEBSITE_MAX_RANK); audience groups do not use the texts yet.
 
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).

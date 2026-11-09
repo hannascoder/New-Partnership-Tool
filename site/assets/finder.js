@@ -21,8 +21,21 @@
   }
 
   Promise.all([fetch("data/config.json").then((r) => r.json()), fetch("data/outlets.json").then((r) => r.json())])
-    .then(([cfg, outlets]) => { CFG = cfg; ALL = outlets; init(); apply(); })
+    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); apply(); })
     .catch(() => { $("counter").textContent = "The data could not be loaded. Please reload the page."; });
+
+  /* outlets.json stores repeated values as short codes (pipeline/build/site_data.py compact()) */
+  function expand(list, codes) {
+    const arr = ["ch", "s", "oa", "nw"], first = ["o", "ow", "sc"];
+    list.forEach((o) => {
+      arr.forEach((k) => { if (o[k] && codes[k]) o[k] = o[k].map((v) => (typeof v === "number" ? codes[k][v] : v)); });
+      first.forEach((k) => { if (o[k] && codes[k] && typeof o[k][0] === "number") o[k][0] = codes[k][o[k][0]]; });
+      if (!o.f && codes.f) o.f = codes.f;
+      if (!o.s) o.s = [];
+      if (o.so && codes.so) Object.keys(o.so).forEach((k) => { const v = o.so[k]; if (codes.so[k] && !/^https?:/.test(v)) o.so[k] = codes.so[k].replace("{}", v); });
+    });
+    return list;
+  }
 
   function chip(label, pressed, onClick, opts = {}) {
     const b = document.createElement("button");
@@ -134,7 +147,8 @@
     $("onlyMatchesLabel").textContent = om.label;
     if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
     $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
-    const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true };
+    const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
+                         hide_website_down: true, only_new: true };
     C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches"].includes(c.id)).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
@@ -186,6 +200,11 @@
     return S.worldwide || CFG.why[o.rc[c]] !== "worldwide";
   }
 
+  /* "new" = first found less than new_months (categories.yaml) before the data date */
+  function newSince() {
+    const d = new Date(CFG.data_date); d.setMonth(d.getMonth() - (CFG.new_months || 4));
+    return d.toISOString().slice(0, 10);
+  }
   function anyFilter() {
     return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size;
   }
@@ -247,6 +266,8 @@
       if (S.checks.has("only_verified") && o.s.length < 2) return false;
       if (S.checks.has("has_social_media") && !o.so) return false;
       if (S.checks.has("has_public_contact") && !o.em) return false;
+      if (S.checks.has("hide_website_down") && o.wd) return false;  // website did not answer at the last check
+      if (S.checks.has("only_new") && o.f < newSince()) return false;
       return true;
     });
     current.forEach((o) => {

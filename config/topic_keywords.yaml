@@ -107,10 +107,10 @@ topics:
 
   hunger_food:
     sections:
-      en: [food, food security, hunger, nutrition]
-      fr: [alimentation, sécurité alimentaire, faim, nutrition]
-      es: [alimentación, seguridad alimentaria, hambre, nutrición]
-      pt: [alimentação, segurança alimentar, fome, nutrição]
+      en: [food security, food crisis, hunger, nutrition]
+      fr: [sécurité alimentaire, faim, nutrition]
+      es: [seguridad alimentaria, hambre, nutrición]
+      pt: [segurança alimentar, fome, nutrição]
       ar: [الأمن الغذائي, الغذاء, التغذية]
       ru: [продовольствие, питание, голод]
       zh: [粮食, 粮食安全, 营养]
@@ -355,7 +355,7 @@ topics:
       hi: [महिलाएं, लड़कियां]
       sw: [wanawake, wasichana]
     exclude:
-      en: [women's fashion, beauty tips]
+      en: [women's fashion, beauty tips, landslide victory, landslide win, accessibility help, accessibility statement]
     # matches from a source / section without a sub-topic count here
     general_subtopic: women_rights
     subtopics:
@@ -765,10 +765,10 @@ topics:
 
   work_economy:
     sections:
-      en: [labour, labor, employment, workers]
-      fr: [emploi, travail]
-      es: [empleo, trabajo, laboral]
-      pt: [emprego, trabalho]
+      en: [labour, labor, workers, labour rights]
+      fr: [travail, monde du travail]
+      es: [trabajo, laboral]
+      pt: [trabalho]
       ar: [العمل, التوظيف, وظائف]
       ru: [работа, занятость, труд]
       zh: [就业, 劳动]
@@ -781,11 +781,11 @@ topics:
         label: Jobs, wages and workers' rights (unemployment, trade unions, informal work)
         targets: ["8.3", "8.5", "8.6", "8.8", "8.b"]
         strong:
-          en: [unemployment, employment, decent work, workers' rights, labour rights, labor rights, trade unions, trade union, minimum wage, wages, informal economy,
+          en: [unemployment, decent work, workers' rights, labour rights, labor rights, trade unions, trade union, minimum wage, wages, informal economy,
                informal sector, youth unemployment, job creation, ilo, gig economy, occupational safety]
-          fr: [chômage, emploi, travail décent, droits des travailleurs, syndicats, salaire minimum, économie informelle, chômage des jeunes, grève, oit]
-          es: [desempleo, empleo, trabajo decente, derechos laborales, sindicatos, salario mínimo, economía informal, informalidad, desempleo juvenil, huelga, oit]
-          pt: [desemprego, emprego, trabalho decente, direitos trabalhistas, sindicatos, salário mínimo, economia informal, informalidade, greve, oit]
+          fr: [chômage, travail décent, droits des travailleurs, syndicats, salaire minimum, économie informelle, chômage des jeunes, grève, oit]
+          es: [desempleo, trabajo decente, derechos laborales, sindicatos, salario mínimo, economía informal, informalidad, desempleo juvenil, huelga, oit]
+          pt: [desemprego, trabalho decente, direitos trabalhistas, sindicatos, salário mínimo, economia informal, informalidade, greve, oit]
           ar: [البطالة, التوظيف, العمل اللائق, حقوق العمال, النقابات, الحد الأدنى للأجور, الاقتصاد غير الرسمي, منظمة العمل الدولية]
           ru: [безработица, занятость, достойный труд, права работников, профсоюзы, минимальная зарплата, неформальная экономика, забастовка]
           zh: [失业, 就业, 体面劳动, 劳工权益, 工会, 最低工资, 非正规经济, 青年失业]
@@ -1194,7 +1194,7 @@ topics:
       sw: [dini, imani]
     strong:
       en: [religion, religious, faith, christian, christianity, catholic, church, churches, islam, islamic, muslim, muslims, mosque, quran, jewish, judaism, hindu, hinduism, buddhist, buddhism, gospel, bible, evangelical, pope, interfaith]
-      fr: [religion, religieux, foi, chrétien, chrétienne, catholique, église, islam, islamique, musulman, musulmans, mosquée, coran, juif, bouddhisme, évangélique, pape]
+      fr: [religion, religieux, chrétien, chrétienne, catholique, église, islam, islamique, musulman, musulmans, mosquée, coran, juif, bouddhisme, évangélique, pape]
       es: [religión, religioso, cristiano, cristiana, católico, católica, iglesia, islam, musulmán, musulmanes, mezquita, judío, evangélico, papa francisco]
       pt: [religião, religioso, cristão, cristã, católico, católica, igreja, islã, muçulmano, mesquita, judeu, evangélico]
       ar: [الدين, الإسلام, إسلامي, المسلمين, المسيحية, القرآن, المسجد, الكنيسة, الفتاوى]
@@ -1357,10 +1357,10 @@ topics:
 
   conflict_security:
     sections:
-      en: [conflict, war, security, defence, defense, military, world conflicts]
-      fr: [conflits, guerre, sécurité, défense]
-      es: [conflicto, guerra, seguridad, defensa]
-      pt: [conflito, guerra, segurança, defesa]
+      en: [conflict, conflicts, war, defence, defense, military, world conflicts]
+      fr: [conflits, guerre, défense]
+      es: [conflicto, guerra, defensa]
+      pt: [conflito, guerra, defesa]
       ar: [الحرب, الصراع, الأمن, الدفاع, عسكري]
       ru: [война, конфликт, безопасность, оборона]
       zh: [军事, 战争, 冲突, 国防]
@@ -1467,7 +1467,7 @@ topics:
       - id: disaster_risk
         label: Early warning and disaster preparedness (disaster risk reduction, civil protection)
         strong:
-          en: [disaster risk reduction, disaster preparedness, early warning, early warning systems, emergency management, civil protection, evacuation, disaster response, resilience, sendai framework]
+          en: [disaster risk reduction, disaster preparedness, early warning, early warning systems, emergency management, civil protection, evacuation, disaster response, disaster resilience, sendai framework]
           fr: [réduction des risques de catastrophe, préparation aux catastrophes, alerte précoce, protection civile, évacuation, gestion des urgences]
           es: [reducción del riesgo de desastres, gestión de riesgos, alerta temprana, protección civil, evacuación, gestión de emergencias]
           pt: [redução de riscos de desastres, alerta precoce, defesa civil, proteção civil, evacuação, gestão de emergências]
@@ -1524,21 +1524,21 @@ topics:
 
   disability:
     sections:
-      en: [disability, accessibility, inclusion]
-      fr: [handicap, accessibilité]
-      es: [discapacidad, accesibilidad]
-      pt: [deficiência, acessibilidade]
+      en: [disability, disabilities]
+      fr: [handicap]
+      es: [discapacidad]
+      pt: [deficiência]
       ar: [الإعاقة, ذوي الاحتياجات الخاصة]
       ru: [инвалидность, доступная среда]
       zh: [残疾人, 无障碍]
       hi: [दिव्यांग, विकलांगता]
       sw: [ulemavu]
     strong:
-      en: [disability, disabilities, persons with disabilities, people with disabilities, disabled, accessibility, sign language, deaf, blind, visually impaired,
+      en: [disability, disabilities, persons with disabilities, people with disabilities, disabled, sign language, deaf, blind, visually impaired,
            wheelchair, autism, inclusion of persons with disabilities, crpd, international day of persons with disabilities]
-      fr: [handicap, handicapés, personnes handicapées, personnes en situation de handicap, accessibilité, langue des signes, sourds, aveugles, malvoyants, autisme]
-      es: [discapacidad, personas con discapacidad, accesibilidad, lengua de señas, lenguaje de señas, sordos, ciegos, autismo]
-      pt: [deficiência, pessoas com deficiência, acessibilidade, língua de sinais, surdos, cegos, autismo]
+      fr: [handicap, handicapés, personnes handicapées, personnes en situation de handicap, langue des signes, sourds, aveugles, malvoyants, autisme]
+      es: [discapacidad, personas con discapacidad, lengua de señas, lenguaje de señas, sordos, ciegos, autismo]
+      pt: [deficiência, pessoas com deficiência, língua de sinais, surdos, cegos, autismo]
       ar: [الإعاقة, ذوي الإعاقة, الأشخاص ذوي الإعاقة, لغة الإشارة, الصم, المكفوفين, التوحد]
       ru: [инвалидность, люди с инвалидностью, инвалиды, доступная среда, жестовый язык, глухие, слепые, аутизм]
       zh: [残疾, 残疾人, 无障碍, 手语, 聋人, 盲人, 自闭症]
@@ -1547,10 +1547,10 @@ topics:
 
   media_freedom:
     sections:
-      en: [media, press freedom, journalism, media news]
-      fr: [médias, liberté de la presse, journalisme]
-      es: [medios, libertad de prensa, periodismo]
-      pt: [mídia, media, liberdade de imprensa, jornalismo]
+      en: [press freedom, journalism, media freedom]
+      fr: [liberté de la presse, journalisme]
+      es: [libertad de prensa, periodismo]
+      pt: [liberdade de imprensa, jornalismo]
       ar: [إعلام, الإعلام, حرية الصحافة]
       ru: [медиа, свобода прессы]
       zh: [传媒, 新闻自由]

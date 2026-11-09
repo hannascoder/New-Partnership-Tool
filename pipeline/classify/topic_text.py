@@ -133,24 +133,29 @@ class Matcher:
                 for term, hits in self._strong_hits(text):
                     for topic, sub in hits:
                         add(topic, sub, FOCUS, f'{kind} mentions "{term}"')
-        # About texts (Wikipedia introduction, website About page)
+        # About texts (Wikipedia introduction, website About page): the FIRST sentence
+        # says what the outlet is -> a strong word there = FOCUS; elsewhere = COVERS
+        # (FOCUS also when 3+ different strong words of the topic appear)
         for label, text in abouts:
-            hits = self._strong_hits(text)
+            first = re.split(r"(?<=[.!?。])\s", (text or "").strip(), maxsplit=1)[0]
+            in_first = {topic for _, hs in self._strong_hits(first) for topic, _ in hs}
             per_topic = {}
-            for term, hs in hits:
+            for term, hs in self._strong_hits(text):
                 for topic, sub in hs:
                     per_topic.setdefault(topic, []).append((term, sub))
-            ctx = self._context_topics(text)
             for topic, lst in per_topic.items():
                 terms = sorted({t for t, _ in lst})
-                strong_enough = len(terms) >= 2 or (topic in ctx and len(lst) >= 2)
-                s = FOCUS if strong_enough else COVERS
+                s_ = FOCUS if topic in in_first or len(terms) >= 3 else COVERS
                 for _, sub in lst:
-                    add(topic, sub, s, f'{label}: "' + '", "'.join(terms[:3]) + '"')
-        # DESK: menu entries (section words or strong words), also in the address
+                    add(topic, sub, s_, f'{label}: "' + '", "'.join(terms[:3]) + '"')
+        # DESK: menu entries (section words or strong words), also in the address.
+        # Only short entries are sections; a long one is an article link (-> headlines).
+        headlines = list(headlines)
         for text, path in menu:
+            if len((text or "").split()) > 4:
+                headlines.append(text)
+                continue
             t = self._clean(text)
-            seg = self._clean(" ".join(re.split(r"[/\-_.]+", path or "")))
             found = False
             for topic in self.section.get(t, ()):
                 add(topic, None, DESK, f'website section "{text}"')
@@ -159,10 +164,11 @@ class Matcher:
                 for topic, sub in hits:
                     add(topic, sub, DESK, f'website section "{text}"')
                     found = True
-            if not found and seg:
-                for part in [seg] + seg.split():
-                    for topic in self.section.get(part, ()):
-                        add(topic, None, DESK, f'website section {path}')
+            segs = [x for x in (path or "").strip("/").split("/") if x]
+            if not found and 1 <= len(segs) <= 3 and not any(ch.isdigit() for ch in "".join(segs)):
+                for part in segs:  # a whole address part must be a section word: /climate/, /category/food-security/
+                    for topic in self.section.get(self._clean(part), ()):
+                        add(topic, None, DESK, f'website section /{"/".join(segs)}/')
         # COVERS: headlines / home page
         if headlines:
             per_topic = {}

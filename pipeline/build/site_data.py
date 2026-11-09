@@ -31,6 +31,42 @@ SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org"
                 "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU"}
 
 
+def compact(out):
+    """Keeps outlets.json under Cloudflare's 25 MiB per-file limit: values that repeat
+    (channels, sources, type, ownership, scope) become numbers, the most common
+    "first seen" date is left out, social links are stored as the account name when
+    they follow the usual address pattern. finder.js expand() restores everything."""
+    from collections import Counter
+    codes = {}
+    for key, pos in (("ch", None), ("s", None), ("o", 0), ("ow", 0), ("sc", 0), ("oa", None), ("nw", None)):
+        vals = sorted({(v if pos is None else e[key][pos]) for e in out if key in e
+                       for v in (e[key] if pos is None else [None])} - {None})
+        if pos is not None:
+            vals = sorted({e[key][pos] for e in out if key in e})
+        idx = {v: i for i, v in enumerate(vals)}
+        codes[key] = vals
+        for e in out:
+            if key in e:
+                if pos is None:
+                    e[key] = [idx[v] for v in e[key]]
+                else:
+                    e[key] = [idx[e[key][0]]] + e[key][1:]
+    common = Counter(e["f"] for e in out).most_common(1)[0][0]
+    codes["f"] = common
+    for e in out:
+        if e["f"] == common:
+            del e["f"]
+    codes["so"] = SOCIAL_URL
+    for e in out:
+        for k, u in list((e.get("so") or {}).items()):
+            tpl = SOCIAL_URL.get(k)
+            if tpl:
+                pre = tpl.split("{}")[0]
+                if u.startswith(pre) and "/" not in u[len(pre):].rstrip("/"):
+                    e["so"][k] = u[len(pre):].rstrip("/")
+    return codes
+
+
 def main():
     outlets = json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))
     outlets = [o for o in outlets if not (o.get("cat") or {}).get("excluded")]  # far-right: not shown (rules.yaml)
@@ -83,6 +119,8 @@ def main():
             e["em"] = o["email"].replace("mailto:", "").strip()
         e["s"] = o["sources"]
         e["f"] = o["first_seen"]
+        if (o.get("cat") or {}).get("website_status") == "error":
+            e["wd"] = 1  # website did not answer at the last website check
         cat = o.get("cat", {})
         # topics (step 4d): ids in "tp", the reason of each in "tw" (same order).
         # Left out when the only topic is the default "general news" (no evidence).
@@ -120,6 +158,7 @@ def main():
             e["nw"] = nets
         out.append(e)
     out.sort(key=lambda e: (e["n"] or "").lower())
+    codes = compact(out)  # repeated values -> short codes; the page expands them (finder.js expand())
 
     atlas_file = ROOT / "raw" / "atlas" / "data.json.gz"
     atlas = json.load(gzip.open(atlas_file, "rt", encoding="utf-8")) if atlas_file.exists() else {}
@@ -141,10 +180,12 @@ def main():
         "categories": {k: cats[k] for k in ("material", "org_type", "channel", "ownership", "scope",
                                              "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort")},
         "size_note": cats.get("size_note"),
+        "new_months": cats.get("new_months", 4),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
+        "codes": codes,
         "pending": ["website_check"],
     }
     data = ROOT / "site" / "data"
