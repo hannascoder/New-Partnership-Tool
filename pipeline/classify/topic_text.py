@@ -76,7 +76,7 @@ class Matcher:
                 for lang, names in (v.get("labels") or {}).items():
                     for n in names:
                         k = norm(n)
-                        if k and (CJK.search(k) or len(k) >= 4) and k not in self.strong:
+                        if k and ((CJK.search(k) and len(k) >= 2) or len(k) >= 5) and k not in self.strong:
                             self._add(self.auto, n, (v["topic"], v.get("sub")))
         self.maxlen = max(len(k.split()) for k in list(self.strong) + list(self.context) + list(self.auto))
         self.subtopics = {tid: [s["id"] for s in (t.get("subtopics") or [])] for tid, t in cfg.items()}
@@ -84,7 +84,9 @@ class Matcher:
 
     def _add(self, table, word, value):
         if word.endswith("*"):
-            self.prefix.append((norm(word[:-1]), table is self.strong, value))
+            if table is getattr(self, "auto", None):
+                return  # Wikidata names ending in * (e.g. German "trans*") are not wildcards
+            self.prefix.append((norm(word[:-1]), id(table), value))
             return
         key = norm(word)
         if CJK.search(key):
@@ -113,8 +115,8 @@ class Matcher:
                 v = table.get(key)
                 if v:
                     out.append((key, v))
-            for pre, is_strong, val in self.prefix:
-                if (table is self.strong) == is_strong and toks[i].startswith(pre):
+            for pre, tid_, val in self.prefix:
+                if tid_ == id(table) and toks[i].startswith(pre):
                     out.append((toks[i], {val}))
         if CJK.search(t):
             flat = t.replace(" ", "")
@@ -122,6 +124,24 @@ class Matcher:
                 if tid_ == id(table) and key in flat:
                     out.append((key, v))
         return out
+
+    def auto_terms(self, texts):
+        """the other-language words found in these texts (for prune_auto)"""
+        out = set()
+        for t in texts:
+            out.update(k for k, _ in self._hits(t, self.auto))
+        return out
+
+    def prune_auto(self, counts, n_outlets, max_share):
+        """drops other-language words found in more than max_share of all outlets:
+        they are everyday words there ("kultur", "student", "para"), not topic words"""
+        limit = max(20, int(n_outlets * max_share))
+        bad = {k for k, c in counts.items() if c > limit}
+        for k in bad:
+            self.auto.pop(k, None)
+        for key in [k for k in self.cjk if k[0] == id(self.auto) and k[1] in bad]:
+            del self.cjk[key]
+        return sorted(bad)
 
     def _strong_hits(self, text):
         return self._hits(text, self.strong)
@@ -187,24 +207,26 @@ class Matcher:
                 for part in segs:  # a whole address part must be a section word: /climate/, /category/food-security/
                     for topic in self.section.get(self._clean(part), ()):
                         add(topic, None, DESK, f'website section /{"/".join(segs)}/', path)
-        # other languages (Wikidata names): at most COVERS
+        # other languages (Wikidata names): at most COVERS, and only when 2 different words
+        # point to the topic (or 1 word is a whole menu section)
         if self.auto:
-            def auto_hits(texts):
-                out = []
-                for text in texts:
-                    out += self._hits(text, self.auto)
-                return out
-            for label, texts, need in (("name", [name], 1), ("description", list(descriptions), 1),
-                                       ("About text", [t for _, t in abouts], 1),
-                                       ("website section", [t for t, _ in menu], 1), ("website headlines", list(headlines), 2)):
-                per = {}
-                for term, hs in auto_hits(texts):
+            per = {}
+            for text in [name] + list(descriptions) + [t for _, t in abouts] + list(headlines):
+                for term, hs in self._hits(text, self.auto):
                     for topic, sub in hs:
                         per.setdefault(topic, []).append((term, sub))
-                for topic, lst in per.items():
-                    if len(lst) >= need:
-                        for term, sub in lst:
-                            add(topic, sub, COVERS, f'{label}: "{term}" (other language, via Wikidata)')
+            for text, _ in menu:
+                if len((text or "").split()) <= 4:
+                    t = self._clean(text)
+                    for topic, sub in self.auto.get(t, ()):
+                        per.setdefault(topic, []).extend([(text, sub), ("\x00section", sub)])
+            for topic, lst in per.items():
+                terms = sorted({t for t, _ in lst})
+                if len(terms) >= 2:
+                    words = [t for t in terms if t != "\x00section"]
+                    kind = "website section" if "\x00section" in terms else "words"
+                    for _, sub in lst:
+                        add(topic, sub, COVERS, f'{kind} in another language (via Wikidata): "' + '", "'.join(words[:3]) + '"')
         # COVERS: headlines / home page
         if headlines:
             per_topic = {}

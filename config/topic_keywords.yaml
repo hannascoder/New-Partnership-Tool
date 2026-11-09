@@ -1395,6 +1395,12 @@ topics:
           sw: [ulinzi wa amani, walinda amani, mazungumzo ya amani, mkataba wa amani, baraza la usalama]
 
   technology:
+    exclude:
+      en: [privacy policy, data protection policy, cookie policy]
+      fr: [politique de confidentialité, protection des données personnelles]
+      es: [política de privacidad, protección de datos personales]
+      pt: [política de privacidade]
+      other: [datenschutzerklärung, datenschutzhinweise, datenschutz, gizlilik politikası, polityka prywatności, privacybeleid]   # privacy pages in other languages
     sections:
       en: [tech, technology, digital, ai, science & tech, gadgets, innovation]
       fr: [tech, technologie, numérique, high-tech]

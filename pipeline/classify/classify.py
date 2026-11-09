@@ -597,6 +597,15 @@ def main():
     for f in sorted((ROOT / "raw" / "website_check").glob("*.json.gz")):
         web.update(json.load(gzip.open(f, "rt", encoding="utf-8")))
     print(f"texts: {len(wd_texts)} Wikidata items, {len(web)} websites checked")
+    # other-language words (Wikidata) that are everyday words: dropped by frequency
+    if kw.auto:
+        cnt = Counter()
+        for o in outlets:
+            t = outlet_texts(o, wd_texts, web)
+            cnt.update(kw.auto_terms([o["name"] or ""] + t["descriptions"] + [x for _, x in t["abouts"]]
+                                     + [x for x, _ in t["menu"]] + t["headlines"]))
+        dropped = kw.prune_auto(cnt, len(outlets), rules["topics"].get("auto_words_max_share", 0.003))
+        print(f"other-language words dropped as too common: {len(dropped)} ({', '.join(dropped[:15])} ...)")
     official = {r["iso3"]: set(filter(None, r["official_languages"].split(";")))
                 for r in csv.DictReader(open(ROOT / "config" / "official_languages.csv", encoding="utf-8"))}
     lang_rows = list(csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")))

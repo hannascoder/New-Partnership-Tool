@@ -157,6 +157,9 @@ topics:
   # A "name" that lists sections like a tagline ("Noticias, Deportes, Economía, ...")
   # is not used: those are general news sites.
   name_keywords_max_commas: 1
+  # Words in other languages (from Wikidata) found in more than this share of all outlets
+  # are everyday words, not topic words, and are not used (0.003 = 0.3 % = ~210 outlets).
+  auto_words_max_share: 0.003
 
 # UN profile: SEVERAL per outlet; like topics, only changes the order.
 # "Solutions / constructive journalism", "Development journalism" and
