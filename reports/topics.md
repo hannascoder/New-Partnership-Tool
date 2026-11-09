@@ -1,4 +1,4 @@
-# Step 4d: topics and UN profile
+# Step 4d: topics, target audience and UN profile
 
 70,989 outlets shown on the website. An outlet can have several topics and profiles.
 Topics and UN profiles never hide an outlet; they only change the order (unless the user
@@ -63,8 +63,28 @@ Outlets with no topic in any source (shown as "General news" by default): 20,060
 | Public service mandate | 136 | 0 | 0 | 136 | 0 | organisation type public service broadcaster (136) |
 | Storytelling & documentary | 450 | 450 | 0 | 0 | 0 | iptv-org category "documentary" (445); Wikidata subject: investigative journalism (4); Wikidata subject: documentary film (1) |
 | Fact-checking (IFCN signatory) | 175 | 0 | 175 | 0 | 0 | IFCN (175) |
-| Reaches underserved audiences | 2,660 | 0 | 0 | 2,660 | 0 | in X: not an official language of the country (1,678); organisation type community media (944); topic indigenous (38) |
-| Youth audience | 2,114 | 2,114 | 0 | 0 | 0 | iptv-org category "kids" (835); Wikidata: student newspaper (452); Radio Browser tag "college radio" (191) |
 | Multilingual | 2,921 | 0 | 0 | 2,921 | 0 | N languages (2,921) |
 
-Outlets with at least one UN profile: 7,871
+Outlets with at least one UN profile: 4,795
+
+## Target audience
+
+| Audience | Outlets | source | rule | name | hand | Most frequent reasons |
+|---|---|---|---|---|---|---|
+| Women | 93 | 44 | 0 | 49 | 0 | Wikidata subject: list of women's magazines (22); name contains "women" (19); Wikidata subject: women's magazine (11) |
+| Youth & students | 1,240 | 1,110 | 0 | 130 | 0 | Wikidata: student newspaper (451); Radio Browser tag "college radio" (191); Radio Browser tag "juvenil" (131) |
+| Children | 1,043 | 1,019 | 0 | 24 | 0 | iptv-org category "kids" (835); Radio Browser tag "children" (89); Radio Browser tag "kids" (58) |
+| Older persons | 15 | 0 | 0 | 15 | 0 | name contains "senior" (14); name contains "seniors" (1) |
+| Rural communities & farmers | 104 | 20 | 83 | 1 | 0 | topic agriculture (83); Radio Browser tag "agriculture" (20); name contains "campesino" (1) |
+| Local communities | 944 | 0 | 944 | 0 | 0 | organisation type community media (944) |
+| Persons with disabilities | 13 | 10 | 0 | 3 | 0 | Radio Browser tag "blind" (7); Radio Browser tag "blind radio" (3); name contains "blind" (1) |
+| Indigenous peoples | 52 | 43 | 9 | 0 | 0 | Radio Browser tag "indigenous" (37); topic indigenous (9); Radio Browser tag "aboriginal" (4) |
+| Minority-language speakers | 1,689 | 0 | 1,689 | 0 | 0 | in X: not an official language of the country (1,689) |
+| Ethnic & minority communities | 126 | 126 | 0 | 0 | 0 | Wikidata: African American newspaper (56); Radio Browser tag "latino" (26); Radio Browser tag "ethnic" (9) |
+| Diaspora & migrants | 23 | 15 | 6 | 2 | 0 | Radio Browser tag "ethnic" (9); Radio Browser tag "ethnic programming" (6); topic diaspora (6) |
+| LGBTQ+ communities | 94 | 89 | 0 | 5 | 0 | Wikidata: LGBTQ magazine (55); Wikidata: gay newspaper (10); Wikidata: LGBTQI online newspaper (8) |
+| Religious communities | 3,605 | 3,605 | 0 | 0 | 0 | iptv-org category "religious" (1,902); Radio Browser tag "christian" (820); Radio Browser tag "islam" (236) |
+| Business & professionals | 692 | 431 | 0 | 261 | 0 | name contains "business" (226); Wikidata: trade magazine (214); iptv-org category "business" (173) |
+| Policy makers & decision makers | 622 | 622 | 0 | 0 | 0 | iptv-org category "legislative" (610); Wikidata: government gazette (8); Wikidata: legislature broadcaster (4) |
+
+Outlets with at least one target audience: 9,259

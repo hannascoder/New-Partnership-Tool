@@ -53,6 +53,20 @@ to the topic. Plan agreed, one step per session:
     Proposal: 9 hand-made languages + automatic labels in all languages from Wikidata (concept items).
   - Idea from the owner: a **Target audience** section (women, youth, farmers ...), see questions.
   - Done: "Existing UN relationship" is now the first value of "Member of" (not a UN profile button).
+  Owner's answers 09.11.2026 (second round):
+  - Sub-topics: NO bare numbers and no vague short names. Every sub-topic must say specifically what
+    it is about, in plain language (away from the official wording, but complete). Keep the targets
+    as the reference behind it. -> T1a: label proposal per target, owner reviews.
+  - Sub-topics also for Human rights, Conflict & security, Migration, Humanitarian aid, Disasters,
+    health-related beats; not for Sports, Religion, Culture.
+  - Search bar: NOT now ("we develop that later"); precise filters instead. Kept in docs/BACKLOG.md.
+  - LGBTQ+ (incl. sexual orientation) -> SDG 5, SDG 10, Human rights. Earlier proposals 1-36 accepted;
+    no separate "Environment" button; "Member of" stays where it is.
+  - **Target audience: built (first version)**, soft filter, section under Topics; replaces the UN
+    profiles "Youth audience" and "Reaches underserved audiences". Owner wants it expanded long-term.
+    Sources: iptv-org / Radio Browser / Wikidata (audience: tables), community media, minority languages,
+    names (config/rules.yaml audience:). Later: Wikidata "intended public" (P2360), About pages (T3).
+    Not yet in the export file (owner to decide: new column "Target audience"?).
 - **T2** Wikipedia intro + Wikidata description for ~13,500 outlets, matched with the lists.
 - **T3** website check part 1 (top 50 per country): menu/sections, About page, meta description
   -> keywords; also email contacts, social links, podcast, newsletter.

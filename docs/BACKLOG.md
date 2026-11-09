@@ -39,3 +39,14 @@ Same filters as media (country, region, topics, language); NGOs only get a new o
   Photo/Graphic -> website, social media, newsletter; Text -> website, newsletter. New channel "Events / screenings".
 - Instead of Ownership: NGO filter "Type of work" (advocacy, humanitarian/service delivery, research,
   network/umbrella, grassroots/community, youth organisation, faith-based); media-only filters greyed out.
+
+## Search bar (owner, 09.11.2026: "we develop that later")
+- Typo-tolerant search over the keyword lists (9 languages) and outlet names, suggesting filters.
+  Owner doubts that people search single words; precise filters (sub-topics) come first.
+
+## Ideas agreed 09.11.2026 (topic keywords)
+- UN international days in the keyword lists (8 March, 25 November ...); later: who covered the day.
+- Align section names with UN News sections (Women, Climate and Environment, Health ...).
+- "Wrong topic?" link on every card; the owner decides.
+- Excel export of the keyword lists for review.
+- Target audience: Wikidata "intended public" (P2360); audience words on About pages (T3).

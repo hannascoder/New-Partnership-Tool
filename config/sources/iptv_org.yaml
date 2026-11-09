@@ -28,4 +28,10 @@ topics:
 un_profile:
   educational: [education]
   storytelling: [documentary]
-  youth_audience: [kids]
+
+# Category -> target audience.
+audience:
+  children: [kids]
+  religious: [religious]
+  business_professionals: [business]
+  policy_makers: [legislative]

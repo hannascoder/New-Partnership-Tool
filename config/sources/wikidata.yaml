@@ -180,7 +180,29 @@ un_profile:
   educational:
     classes: [educational television, popular science magazine]
     subjects: [education, educational podcast, popularisation of science]
-  youth_audience:
-    classes: [children's magazine, teen magazine, youth radio, youth media, children's interest channel, student newspaper,
-              school newspaper, high school newspaper, university newspaper, campus radio]
+
+# Wikidata -> target audience. Method: source_field.
+# (Later: Wikidata "intended public" P2360, once the fetcher asks for it.)
+audience:
+  women:
+    classes: [women's magazine]
+    subjects: [list of women's magazines, women's magazine, woman]
+  youth_students:
+    classes: [teen magazine, youth radio, youth media, student newspaper, school newspaper, high school newspaper,
+              university newspaper, campus radio, college student newspapers and periodicals]
+  children:
+    classes: [children's magazine, children's interest channel]
+    subjects: [children's literature, child]
+  lgbtq:
+    classes: [LGBTQ magazine, LGBTI+ related media, LGBTQI online newspaper, gay newspaper]
+    subjects: [LGBTQ, LGBTI+ related media, lesbianism, LGBTQ podcast]
+  ethnic_minorities:
+    classes: [African American newspaper, Asian American newspaper, Jewish newspaper]
+  religious:
+    classes: [Catholic newspaper, Catholic magazine, Jewish newspaper, diocesan magazine, rabbinical periodical,
+              Christian media, religious broadcaster]
+  business_professionals:
+    classes: [business newspaper, business channel, business periodical, trade magazine, legal newspaper, medical newspaper]
+  policy_makers:
+    classes: [legislature broadcaster, government gazette]
   # "Public service mandate" comes from the organisation type (config/rules.yaml), not from here.

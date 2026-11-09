@@ -80,6 +80,9 @@ def main():
         if tps:
             e["tp"] = [t["value"] for t in tps]
             e["tw"] = [w(t["source"]) for t in tps]
+        if cat.get("audience_groups"):
+            e["au"] = [a["value"] for a in cat["audience_groups"]]
+            e["aw"] = [w(a["source"]) for a in cat["audience_groups"]]
         if cat.get("un_profile"):
             e["un"] = [u["value"] for u in cat["un_profile"]]
             e["uw"] = [w(u["source"]) for u in cat["un_profile"]]
@@ -124,7 +127,7 @@ def main():
         "languages": sorted(({"code": c, "name": langs_all[c]["name"]} for c in used_langs if c in langs_all),
                             key=lambda x: x["name"]),
         "categories": {k: cats[k] for k in ("material", "org_type", "channel", "ownership", "scope",
-                                             "topic_groups", "topics", "un_profile", "size", "checkboxes", "sort")},
+                                             "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort")},
         "size_note": cats.get("size_note"),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)

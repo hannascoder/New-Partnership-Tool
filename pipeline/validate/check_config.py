@@ -28,7 +28,7 @@ def ids(name, cats):
 
 cats = yaml.safe_load(open(CONFIG / "categories.yaml", encoding="utf-8"))
 lists = ["scope", "audience_basis", "material", "org_type", "channel", "social_platform",
-         "ownership", "topic_groups", "topics", "un_profile", "size", "checkboxes", "sort", "methods"]
+         "ownership", "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort", "methods"]
 known = {}
 for name in lists:
     if name not in cats:
@@ -86,11 +86,15 @@ else:
 
 # step 4d: every topic / UN profile named in a mapping table must exist in categories.yaml
 topic_ids, un_ids = known.get("topics", set()), known.get("un_profile", set())
+aud_ids = {a["id"] for a in cats.get("audience", [])}
 for f in ("iptv_org.yaml", "radio_browser.yaml", "wikidata.yaml"):
     m = yaml.safe_load(open(CONFIG / "sources" / f, encoding="utf-8")) or {}
     for t in (m.get("topics") or {}):
         if t not in topic_ids:
             errors.append(f"sources/{f}: unknown topic '{t}' under 'topics:'")
+    for a in (m.get("audience") or {}):
+        if a not in aud_ids:
+            errors.append(f"sources/{f}: unknown target audience '{a}' under 'audience:'")
     for u in (m.get("un_profile") or {}):
         if u not in un_ids:
             errors.append(f"sources/{f}: unknown UN profile '{u}' under 'un_profile:'")
@@ -107,6 +111,15 @@ if isinstance(rules, dict):
         if part == "topics":
             for lst in (ur.get("topics") or {}).values():
                 errors += [f"rules.yaml: unknown topic '{t}' in un_profile -> topics" for t in lst if t not in topic_ids]
+    ar = rules.get("audience") or {}
+    for part in ("org_types", "topics", "name_keywords"):
+        for a in (ar.get(part) or {}):
+            if a not in aud_ids:
+                errors.append(f"rules.yaml: unknown target audience '{a}' in audience -> {part}")
+    for lst in (ar.get("topics") or {}).values():
+        errors += [f"rules.yaml: unknown topic '{t}' in audience -> topics" for t in lst if t not in topic_ids]
+    if ar.get("minority_language") and ar["minority_language"] not in aud_ids:
+        errors.append("rules.yaml: unknown target audience in audience -> minority_language")
     if ur.get("minority_language") and ur["minority_language"] not in un_ids:
         errors.append(f"rules.yaml: unknown UN profile '{ur['minority_language']}' in un_profile -> minority_language")
 

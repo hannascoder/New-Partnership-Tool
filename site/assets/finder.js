@@ -6,7 +6,7 @@
   "use strict";
   const PAGE = 50;
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
-              channel: new Set(), size: "all", tp: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
+              channel: new Set(), size: "all", tp: new Set(), au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
   let CFG, ALL = [], shown = 0, current = [];
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
@@ -90,6 +90,12 @@
       });
       d.append(ch); $("f-topics").append(d);
     });
+    const auCount = {}; ALL.forEach((o) => (o.au || []).forEach((a) => { auCount[a] = (auCount[a] || 0) + 1; }));
+    C.audience.forEach((a) => {
+      const n = auCount[a.id] || 0;
+      $("f-audience").append(chip(esc(a.label) + ` <span class="sdg">${n.toLocaleString("en")}</span>`, false, toggle(S.au, a.id),
+        n ? { title: a.description || "" } : { disabled: true, title: "No open source for this yet (the website check may add it later)" }));
+    });
     const unCount = {}; ALL.forEach((o) => (o.un || []).forEach((u) => { unCount[u] = (unCount[u] || 0) + 1; }));
     C.un_profile.filter((u) => !u.shown_in).forEach((u) => {
       const n = unCount[u.id] || 0;
@@ -153,12 +159,13 @@
   }
 
   function anyFilter() {
-    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.un.size || S.checks.size;
+    return S.scope.size || S.own.size || S.nets.size || S.orgType.size || S.material.size || S.langs.size || S.region || S.country || S.channel.size || S.size !== "all" || S.tp.size || S.au.size || S.un.size || S.checks.size;
   }
   /* an outlet without any topic in the sources counts as "General news" (the default topic) */
   function topicsOf(o) { return o.tp || ["general_news"]; }
   function why(o, kind, id) {
     if (kind === "tp") { if (!o.tp) return "no topic in the sources: general news"; return CFG.why[o.tw[o.tp.indexOf(id)]] || ""; }
+    if (kind === "au") return CFG.why[o.aw[o.au.indexOf(id)]] || "";
     return CFG.why[o.uw[o.un.indexOf(id)]] || "";
   }
 
@@ -202,9 +209,9 @@
       return true;
     });
     current.forEach((o) => {
-      o._m = topicsOf(o).filter((t) => S.tp.has(t)).map((t) => ["tp", t]).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
+      o._m = topicsOf(o).filter((t) => S.tp.has(t)).map((t) => ["tp", t]).concat((o.au || []).filter((a) => S.au.has(a)).map((a) => ["au", a])).concat((o.un || []).filter((u) => S.un.has(u)).map((u) => ["un", u]));
     });
-    if (S.onlyMatches && (S.tp.size || S.un.size)) current = current.filter((o) => o._m.length);
+    if (S.onlyMatches && (S.tp.size || S.au.size || S.un.size)) current = current.filter((o) => o._m.length);
     const mode = S.sort === "auto" ? (anyFilter() ? "best_match" : "az") : S.sort;
     const key = (o) => o._k || (o._k = (o.n || "").replace(/^[^\p{L}\p{N}]+/u, ""));  // "__STUDY__" sorts under S
     const byName = (a, b) => key(a).localeCompare(key(b), "en", { sensitivity: "base" });
@@ -227,6 +234,7 @@
     const verified = o.s.length >= 2 ? '<span class="badge verified">verified</span>' : '<span class="badge unverified">1 source</span>';
     const tip = (kind, id, label) => `<span class="tag" title="${esc(why(o, kind, id))}">${esc(label)}</span>`;
     const tpl = topicsOf(o).map((t) => tip("tp", t, lab(C.topics, t))).join(", ");
+    const aul = (o.au || []).map((a) => tip("au", a, lab(C.audience, a))).join(", ");
     const unl = (o.un || []).map((u) => tip("un", u, lab(C.un_profile, u))).join(", ");
     const inList = exportList.has(o.i);
     return `<li class="card${inList ? " selected" : ""}" data-id="${esc(o.i)}"><div class="card-top"><h3>${esc(o.n)}</h3>${verified}</div>
@@ -240,12 +248,13 @@
       ${o.sv ? `<p class="row"><b>Language services:</b> ${esc(o.sv.join(", "))}</p>` : ""}
       <p class="row"><b>Channels:</b> ${esc(chans) || "<span class='pending'>no information</span>"}</p>
       <p class="row"><b>Topics:</b> ${tpl}</p>
+      ${aul ? `<p class="row"><b>Target audience:</b> ${aul}</p>` : ""}
       ${unl ? `<p class="row"><b>UN profile:</b> ${unl}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
       ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a></p>` : ""}
       <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
-      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id]) => lab(k2 === "tp" ? C.topics : C.un_profile, id)).join(", "))}</span>` : ""}
+      ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id)).join(", "))}</span>` : ""}
       <p><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label></p></li>`;
   }
 

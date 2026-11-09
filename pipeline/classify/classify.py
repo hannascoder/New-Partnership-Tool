@@ -397,6 +397,33 @@ def topics(o, cat, rules, maps, kw, order, ov):
     return ev.result(order)
 
 
+def audience_groups(o, cat, rules, maps, kw, order, ov, official, buttons, lang_names, topic_ids):
+    """Target audience (owner's idea, 09.11.2026): who the outlet is made for."""
+    ev = Evidence()
+    source_mappings(o, maps, "audience", ev)
+    types = {cat["org_type"]["value"]} | set(cat.get("org_type_also") or [])
+    for aud, ts in (rules.get("org_types") or {}).items():
+        if types & set(ts):
+            ev.add(aud, "rule", "organisation type " + sorted(types & set(ts))[0].replace("_", " "))
+    for aud, ts in (rules.get("topics") or {}).items():
+        hit = topic_ids & set(ts)
+        if hit:
+            ev.add(aud, "rule", "topic " + sorted(hit)[0].replace("_", " "))
+    off = official.get(o["country"])
+    if rules.get("minority_language") and off:
+        minority = [l for l in o["languages"] if l not in buttons and l not in off]
+        if minority:
+            names = ", ".join(lang_names.get(l, l) for l in minority[:3])
+            ev.add(rules["minority_language"], "rule", f"in {names}: not an official language of the country")
+    name = (o["name"] or "").casefold()
+    if name.count(",") <= 1:
+        for aud, word, rx in kw:
+            if aud not in ev.best and rx.search(name):
+                ev.add(aud, "keyword", f"name contains \"{word}\"")
+    apply_list_overrides(ev, ov, "audience", "target audience")
+    return ev.result(order)
+
+
 def un_profile(o, cat, rules, maps, order, ov, official, buttons, lang_names, topic_ids):
     ev = Evidence()
     source_mappings(o, maps, "un_profile", ev)
@@ -450,6 +477,8 @@ def main():
     cats_cfg = yaml.safe_load(open(ROOT / "config" / "categories.yaml", encoding="utf-8"))
     topic_order = [t["id"] for t in cats_cfg["topics"]]
     un_order = [u["id"] for u in cats_cfg["un_profile"]]
+    aud_order = [a["id"] for a in cats_cfg["audience"]]
+    aud_kw = keyword_patterns(rules["audience"])
     src = ROOT / "config" / "sources"
     maps = {k: yaml.safe_load(open(src / f, encoding="utf-8")) for k, f in
             (("iptv", "iptv_org.yaml"), ("rb", "radio_browser.yaml"), ("wd", "wikidata.yaml"))}
@@ -486,6 +515,8 @@ def main():
         cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov)
         cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
                                        {t["value"] for t in cat["topics"]})
+        cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
+                                          lang_names, {t["value"] for t in cat["topics"]})
         for field, row in overrides.get(o["id"], {}).items():
             if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")
@@ -536,7 +567,7 @@ def report(outlets, intl_missing=()):
 def report_4d(outlets, cats_cfg):
     shown = [o for o in outlets if not o["cat"].get("excluded")]
     n = len(shown)
-    lines = ["# Step 4d: topics and UN profile", "",
+    lines = ["# Step 4d: topics, target audience and UN profile", "",
              f"{n:,} outlets shown on the website. An outlet can have several topics and profiles.",
              "Topics and UN profiles never hide an outlet; they only change the order (unless the user",
              "switches on \"Only show topic matches\").", "",
@@ -565,6 +596,15 @@ def report_4d(outlets, cats_cfg):
         lines.append(f"| {u['label']} | {len(vs):,} | {by['source_field']:,} | {by['membership']:,} | {by['rule']:,} | "
                      f"{by['override']:,} | " + ("; ".join(f"{k} ({c:,})" for k, c in why) or "no open source yet") + " |")
     lines.append(f"\nOutlets with at least one UN profile: {sum(1 for o in shown if o['cat']['un_profile']):,}")
+    lines += ["", "## Target audience", "", "| Audience | Outlets | source | rule | name | hand | Most frequent reasons |",
+              "|---|---|---|---|---|---|---|"]
+    for a in cats_cfg["audience"]:
+        vs = [v for o in shown for v in o["cat"]["audience_groups"] if v["value"] == a["id"]]
+        by = Counter(v["method"] for v in vs)
+        why = Counter(re.sub(r"in .*: not an official", "in X: not an official", v["source"]) for v in vs).most_common(3)
+        lines.append(f"| {a['label']} | {len(vs):,} | {by['source_field']:,} | {by['rule']:,} | {by['keyword']:,} | "
+                     f"{by['override']:,} | " + ("; ".join(f"{k} ({c:,})" for k, c in why) or "no open source yet") + " |")
+    lines.append(f"\nOutlets with at least one target audience: {sum(1 for o in shown if o['cat']['audience_groups']):,}")
     (ROOT / "reports" / "topics.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 

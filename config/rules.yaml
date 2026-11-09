@@ -187,16 +187,33 @@ un_profile:
     fact_checking_ifcn: [ifcn_signatories]
   org_types:
     public_service_mandate: [public_service_broadcaster]
-    underserved_audiences: [community_media]
-  # Topic -> UN profile
-  topics:
-    underserved_audiences: [indigenous]
-  # A language that is neither one of the 9 language buttons nor official in
-  # the outlet's country (config/official_languages.csv) = minority language
-  # -> "Reaches underserved audiences".
-  minority_language: underserved_audiences
   # 2 or more languages (own languages + language services) -> "Multilingual"
   multilingual_min_languages: 2
+
+# Target audience: SEVERAL per outlet; soft like topics (owner, 09.11.2026).
+# From the per-source tables in config/sources/*.yaml (audience:), plus:
+audience:
+  org_types:
+    local_communities: [community_media]
+  topics:
+    indigenous: [indigenous]
+    diaspora_migrants: [diaspora]
+    rural_farmers: [agriculture]
+  # A language that is neither one of the 9 language buttons nor official in
+  # the outlet's country (config/official_languages.csv) = minority language.
+  minority_language: minority_language
+  # Words in the outlet's name (same rules as for topics)
+  name_keywords:
+    women: [women, woman, women's, femmes, femme, mujer, mujeres, mulher, mulheres, ladies]
+    older_persons: [seniors, senior, elderly, retirees, retired, aînés, mayores, idosos, 50plus, "50+"]
+    youth_students: [youth, juvenil, jeunes, jeunesse, jóvenes, juventude, teen, teens, student, students, estudiantes,
+                     étudiants, campus, college, university]
+    children: [kids, children, enfants, niños, crianças, junior]
+    rural_farmers: [farmer, farmers, farm, farming, rural, agricole, campesino, campesinos, agro]
+    persons_with_disabilities: [deaf, blind, sign language, disability, disabilities, handicap]
+    lgbtq: [lgbt, lgbtq, lgbtqi, gay, lesbian, queer]
+    diaspora_migrants: [diaspora, expat, expats, immigrant, immigrants, migrants]
+    business_professionals: [business, financial, finance, economic, trade]
 
 # ---------------------------------------------------------------- exclusion
 # Very right-wing (far-right) media are NOT shown (owner's request, 06.11.2026:

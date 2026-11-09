@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-09
+- **Target audience** (new filter section, soft like topics): women, youth & students, children, older
+  persons, rural communities & farmers, local communities, persons with disabilities, indigenous peoples,
+  minority-language speakers, ethnic & minority communities, diaspora & migrants, LGBTQ+, religious
+  communities, business & professionals, policy makers. Replaces the UN profiles "Youth audience" and
+  "Reaches underserved audiences".
+- "Existing UN relationship" is now the first value of "Member of".
+
 ## 2026-11-06 (evening): step 4d topics + UN profile
 - **Topics** (several per outlet) from the sources' own categories, tags and subjects
   (mapping tables in `config/sources/iptv_org.yaml`, `radio_browser.yaml`, `wikidata.yaml`),
