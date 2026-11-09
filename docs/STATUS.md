@@ -106,8 +106,14 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   (rules.yaml open_to_partner_content), contact page as fallback, shareable link (filters in the
   page address), error link, "Only active" checkbox (latest article from RSS/page dates).
   Website check v2 (contact page, partner-content links, latest article) runs for all ~59,000 sites.
-- Still open: 6 (keyword lists for all languages via Wikidata), 8 (lists for solutions/development
-  journalism). Strength labels on the cards: owner finds them not yet clear -> alternatives proposed.
+- Owner chose option A for the strengths: Specialist / Has a section on it / Reports on it (+ note).
+- 6 done: keyword names in 403 languages from Wikidata (raw/keyword_labels/, workflow keywords.yml);
+  at most "Reports on it", needs 2 different words or a menu section; everyday words dropped by frequency.
+- 8 done as far as open data allows: OCCRP network read (61 outlets); no open member lists for
+  Solutions Journalism Network / GFMD / Earth Journalism Network (JavaScript pages or no list), so
+  "Solutions" and "Development journalism" come from how outlets describe themselves (rules.yaml).
+- 4e done: social media platform fold-out, "Also show outlets without channel information",
+  no "step 4" notices left on the site; every filter button has data except WhatsApp.
 
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
