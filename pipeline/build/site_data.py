@@ -1,11 +1,13 @@
 """Builds the files the website reads (site/data/):
-  outlets.json   one compact entry per outlet (short keys, empty fields left out)
+  outlets-N.json one compact entry per outlet (short keys, empty fields left out),
+                 split into files of 25,000 outlets (Cloudflare limit: 25 MiB per file)
   config.json    allowed values for the filters (from config/), so the page
                  never hard-codes a category, country or language
 The website only reads these two files (briefing K1)."""
 import csv
 import gzip
 import json
+import re
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -71,6 +73,24 @@ def compact(out):
     for e in out:
         if e["f"] == common:
             del e["f"]
+    # links on the outlet's own website: stored without "https://www.example.org"
+    import urllib.parse
+    for e in out:
+        base = e.get("w")
+        if not base:
+            continue
+        host = re.sub(r"^www\.", "", urllib.parse.urlsplit(base if "//" in base else "http://" + base).netloc.lower())
+
+        def rel(u):
+            p = urllib.parse.urlsplit(u)
+            if re.sub(r"^www\.", "", p.netloc.lower()) == host and p.path.startswith("/"):
+                return p.path + ("?" + p.query if p.query else "")
+            return u
+        if e.get("cp"):
+            e["cp"] = rel(e["cp"])
+        for t in e.get("tp") or []:
+            if len(t) >= 5:
+                t[4] = rel(t[4])
     codes["so"] = SOCIAL_URL
     for e in out:
         for k, u in list((e.get("so") or {}).items()):
@@ -217,9 +237,18 @@ def main():
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)
-    json.dump(out, open(data / "outlets.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # split into several files of at most 25,000 outlets (Cloudflare: max 25 MiB per file)
+    for f in data.glob("outlets*.json"):
+        f.unlink()
+    files = []
+    for i in range(0, len(out), 25000):
+        name = f"outlets-{i // 25000 + 1}.json"
+        json.dump(out[i:i + 25000], open(data / name, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        files.append(name)
+    config["outlet_files"] = files
     json.dump(config, open(data / "config.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    print(f"site/data/outlets.json: {len(out)} outlets, {(data / 'outlets.json').stat().st_size / 1e6:.1f} MB")
+    sizes = ", ".join(f"{f} {(data / f).stat().st_size / 1e6:.1f} MB" for f in files)
+    print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes})")
 
 
 if __name__ == "__main__":

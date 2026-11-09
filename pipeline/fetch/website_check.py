@@ -2,7 +2,7 @@
 
 Which outlets: those with a website and rank <= WEBSITE_MAX_RANK in their
 country (default 100), best-known first (all rank-1 outlets, then rank 2 ...).
-Input is the website data file site/data/outlets.json (id, website, rank).
+Input is the website data (site/data/outlets-N.json: id, website, rank).
 
 Per website (home page + the "About" page if one is linked):
   title, description (meta), page language, menu/section names with their
@@ -282,7 +282,9 @@ def save_shards(shards):
 
 
 def main():
-    outlets = json.load(open(ROOT / "site" / "data" / "outlets.json", encoding="utf-8"))
+    outlets = []  # website data files (site/data/outlets-N.json, older: outlets.json)
+    for f in sorted((ROOT / "site" / "data").glob("outlets*.json")):
+        outlets += json.load(open(f, encoding="utf-8"))
     todo = sorted((o for o in outlets if o.get("w") and o["r"] <= MAX_RANK), key=lambda o: (o["r"], o["i"]))
     OUT.mkdir(parents=True, exist_ok=True)
     shards = {}

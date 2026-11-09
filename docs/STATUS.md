@@ -95,9 +95,19 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   Strength rule: "main focus" only from name, description, first sentence of Wikipedia / About page,
   or a source/network; menu entries of max. 4 words = "own section"; headlines need 2+ hits.
 - Checkboxes "Hide outlets whose website did not answer" and "Only new" now work (all buttons active).
-- outlets.json compacted (codes for repeated values): 17.4 MB (limit 25 MiB).
+- Website data split into files of 25,000 outlets (site/data/outlets-N.json, listed in config.json), so the 25 MiB limit per file is no longer a problem.
 - Known limits: mojibake names from Media Cloud (e.g. "â€“"); website check only top 100 per
   country so far (next runs: raise WEBSITE_MAX_RANK); audience groups do not use the texts yet.
+
+## 09.11.2026 (late): owner's answers + built
+- Ranking: equal match -> outlets based in the chosen country first (owner: yes).
+- "Report an error" link on every card -> e-mail to the owner's own address (config: feedback_email).
+- Built (owner: "go", order 1 -> 7 -> 4 -> 3 -> 2): "Open to partner content" from website hints
+  (rules.yaml open_to_partner_content), contact page as fallback, shareable link (filters in the
+  page address), error link, "Only active" checkbox (latest article from RSS/page dates).
+  Website check v2 (contact page, partner-content links, latest article) runs for all ~59,000 sites.
+- Still open: 6 (keyword lists for all languages via Wikidata), 8 (lists for solutions/development
+  journalism). Strength labels on the cards: owner finds them not yet clear -> alternatives proposed.
 
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).

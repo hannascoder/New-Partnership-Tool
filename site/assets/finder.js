@@ -1,4 +1,4 @@
-/* Partner Finder: filters the outlets in data/outlets.json in the browser.
+/* Partner Finder: filters the outlets in data/outlets-N.json in the browser.
    All allowed values come from data/config.json (built from config/).
    Filter logic (briefing L): hard filters must match; within one filter OR,
    between filters AND. Topics and UN profile only change the order. */
@@ -20,7 +20,9 @@
     catch (e) { /* private window: the list still works until the page is closed */ }
   }
 
-  Promise.all([fetch("data/config.json").then((r) => r.json()), fetch("data/outlets.json").then((r) => r.json())])
+  fetch("data/config.json").then((r) => r.json())
+    .then((cfg) => Promise.all((cfg.outlet_files || ["outlets.json"]).map((f) => fetch("data/" + f).then((r) => r.json())))
+      .then((parts) => [cfg, [].concat(...parts)]))
     .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); })
     .catch(() => { $("counter").textContent = "The data could not be loaded. Please reload the page."; });
 
@@ -32,6 +34,11 @@
       first.forEach((k) => { if (o[k] && codes[k] && typeof o[k][0] === "number") o[k][0] = codes[k][o[k][0]]; });
       if (!o.f && codes.f) o.f = codes.f;
       if (!o.s) o.s = [];
+      if (o.w) {  // links on the outlet's own website are stored as "/path"
+        const origin = (/^https?:\/\//.test(o.w) ? o.w : "http://" + o.w).replace(/^(https?:\/\/[^/]+).*$/, "$1");
+        if (o.cp && o.cp[0] === "/") o.cp = origin + o.cp;
+        (o.tp || []).forEach((e) => { if (e[4] && e[4][0] === "/") e[4] = origin + e[4]; });
+      }
       if (o.so && codes.so) Object.keys(o.so).forEach((k) => { const v = o.so[k]; if (codes.so[k] && !/^https?:/.test(v)) o.so[k] = codes.so[k].replace("{}", v); });
     });
     return list;
