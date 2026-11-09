@@ -1,9 +1,9 @@
 {
   "source": "website_check",
-  "fetched_at": "2026-11-09T16:49:41Z",
-  "max_rank": 100,
-  "checked_this_run": 11457,
-  "answered_this_run": 8359,
-  "sites_total": 11457,
-  "answered_total": 8359
+  "fetched_at": "2026-11-09T21:24:31Z",
+  "max_rank": 100000,
+  "checked_this_run": 59435,
+  "answered_this_run": 43701,
+  "sites_total": 59436,
+  "answered_total": 43701
 }
