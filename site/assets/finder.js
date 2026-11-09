@@ -7,7 +7,7 @@
   const PAGE = 50;
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", country: "",
               channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, checks: new Set(), sort: "auto" };
-  let CFG, ALL = [], shown = 0, current = [];
+  let CFG, ALL = [], shown = 0, current = [], nMatch = 0;
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
   const $ = (id) => document.getElementById(id);
@@ -20,8 +20,8 @@
     catch (e) { /* private window: the list still works until the page is closed */ }
   }
 
-  fetch("data/config.json").then((r) => r.json())
-    .then((cfg) => Promise.all((cfg.outlet_files || ["outlets.json"]).map((f) => fetch("data/" + f).then((r) => r.json())))
+  fetch("data/config.json", { cache: "no-cache" }).then((r) => r.json())
+    .then((cfg) => Promise.all((cfg.outlet_files || ["outlets.json"]).map((f) => fetch("data/" + f + "?v=" + encodeURIComponent(cfg.built || "")).then((r) => r.json())))
       .then((parts) => [cfg, [].concat(...parts)]))
     .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); })
     .catch(() => { $("counter").textContent = "The data could not be loaded. Please reload the page."; });
@@ -62,7 +62,7 @@
   /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
   const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", ck: "checks", pl: "platforms" };
   const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
-  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", ou: "f-ownUnknown", om: "f-onlyMatches" };
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", om: "f-onlyMatches" };  // saved when different from the default
   let restoring = false;
   function saveHash() {
     if (restoring) return;
@@ -75,7 +75,7 @@
     if (S.size !== "all") p.set("size", S.size);
     if (S.sort !== "auto") p.set("sort", S.sort);
     if (!S.reach) p.set("rch", "0");
-    Object.entries(FLAGS).forEach(([k, id]) => { if ($(id) && $(id).checked) p.set(k, "1"); });
+    Object.entries(FLAGS).forEach(([k, id]) => { const el = $(id); if (el && el.checked !== el.defaultChecked) p.set(k, el.checked ? "1" : "0"); });
     const h = p.toString();
     history.replaceState(null, "", h ? "#" + h : location.pathname + location.search);
   }
@@ -99,7 +99,7 @@
     if (p.get("size")) { const r = document.querySelector(`input[name="size"][value="${CSS.escape(p.get("size"))}"]`); if (r) { r.checked = true; fire(r, "change"); } }
     if (p.get("sort")) { $("sort").value = p.get("sort"); fire($("sort"), "change"); }
     if (p.get("rch") === "0") { $("f-reach").checked = false; fire($("f-reach"), "change"); }
-    Object.entries(FLAGS).forEach(([k, id]) => { if (p.get(k) && $(id)) { $(id).checked = true; fire($(id), "change"); } });
+    Object.entries(FLAGS).forEach(([k, id]) => { if (p.get(k) && $(id)) { $(id).checked = p.get(k) !== "0"; fire($(id), "change"); } });
     restoring = false;
   }
   const visible = (list) => list.filter((x) => !x.later && !x.hidden);
@@ -132,6 +132,7 @@
     $("f-reach").addEventListener("change", (e) => { S.reach = e.target.checked; apply(); });
     $("f-worldwide").addEventListener("change", (e) => { S.worldwide = e.target.checked; apply(); });
     const typeCount = {}; ALL.forEach((o) => { if (o.o) typeCount[o.o[0]] = (typeCount[o.o[0]] || 0) + 1; });
+    if ($("orgTypeHelp")) $("orgTypeHelp").innerHTML = visible(C.org_type).filter((o) => o.description).map((o) => `<dt>${esc(o.label)}</dt><dd>${esc(o.description)}</dd>`).join("");
     visible(C.org_type).forEach((o) => $("f-orgType").append(chip(esc(o.label) + ` <span class="sdg">${(typeCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgType, o.id))));
     const chCount = {}; ALL.forEach((o) => (o.ch || []).forEach((c) => { chCount[c] = (chCount[c] || 0) + 1; }));
     visible(C.channel).forEach((c) => {
@@ -154,8 +155,8 @@
     });
     $("f-chUnknown").addEventListener("change", (e) => { S.chUnknown = e.target.checked; apply(); });
     const ownCount = {}; ALL.forEach((o) => { if (o.ow) ownCount[o.ow[0]] = (ownCount[o.ow[0]] || 0) + 1; });
-    C.ownership.filter((o) => o.id !== "unknown").forEach((o) => $("f-ownership").append(chip(esc(o.label) + ` <span class="sdg">${(ownCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.own, o.id))));
-    $("f-ownUnknown").addEventListener("change", (e) => { S.ownUnknown = e.target.checked; apply(); });
+    if ($("f-ownership")) C.ownership.filter((o) => o.id !== "unknown").forEach((o) => $("f-ownership").append(chip(esc(o.label) + ` <span class="sdg">${(ownCount[o.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.own, o.id))));
+    if ($("f-ownUnknown")) $("f-ownUnknown").addEventListener("change", (e) => { S.ownUnknown = e.target.checked; apply(); });
     const netCount = {}; ALL.forEach((o) => (o.nw || []).forEach((n) => { netCount[n] = (netCount[n] || 0) + 1; }));
     CFG.networks.forEach((n) => $("f-network").append(chip(esc(n.label) + ` <span class="sdg">${(netCount[n.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.nets, n.id))));
     C.size.forEach((s) => {
@@ -220,6 +221,7 @@
     });
     const om = C.checkboxes.find((c) => c.id === "only_topic_matches") || { label: "Only show topic matches" };
     $("onlyMatchesLabel").textContent = om.label;
+    S.onlyMatches = !!om.default; $("f-onlyMatches").checked = S.onlyMatches; $("f-onlyMatches").defaultChecked = S.onlyMatches;
     if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
     $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
     const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
@@ -351,7 +353,7 @@
       if (S.checks.has("has_social_media") && !o.so) return false;
       if (S.checks.has("has_public_contact") && !o.em && !o.cp) return false;
       if (S.checks.has("only_active") && !(o.lp && o.lp >= activeSince())) return false;
-      if (S.checks.has("hide_website_down") && o.wd) return false;  // website did not answer at the last check
+      if (S.checks.has("hide_website_down") && (o.wd || o.ww)) return false;  // website did not answer at the last check
       if (S.checks.has("only_new") && o.f < newSince()) return false;
       return true;
     });
@@ -372,7 +374,10 @@
     else current.sort(byName);
     const countries = new Set(current.map((o) => o.c)).size;
     const verified = current.filter((o) => o.s.length >= 2).length;
-    $("counter").innerHTML = `<b>${current.length.toLocaleString("en")}</b> ${current.length === 1 ? "outlet" : "outlets"} in <b>${countries}</b> ${countries === 1 ? "country" : "countries"} · ${verified.toLocaleString("en")} verified`;
+    const soft = S.tp.size || S.au.size || S.un.size;
+    nMatch = soft ? current.filter((o) => o._m.length).length : 0;
+    $("counter").innerHTML = `<b>${current.length.toLocaleString("en")}</b> ${current.length === 1 ? "outlet" : "outlets"} in <b>${countries}</b> ${countries === 1 ? "country" : "countries"} · ${verified.toLocaleString("en")} verified`
+      + (soft ? ` · <span class="matchcount"><b>${nMatch.toLocaleString("en")}</b> match your topics / audience / UN profile (shown first)</span>` : "");
     draw(true);
     updateAddAll();
   }
@@ -398,7 +403,8 @@
       ${freedomText(k)}
       ${o.a ? `<p class="row">Also known as: ${esc(o.a.join(", "))}</p>` : ""}
       ${o.o ? `<p class="row"><b>Type:</b> ${esc((C.org_type.find((x) => x.id === o.o[0]) || {}).label || o.o[0])} <span class="pending">(${esc(CFG.why[o.o[1]])})</span></p>` : ""}
-      ${o.ow && o.ow[0] !== "unknown" ? `<p class="row"><b>Ownership:</b> ${esc((C.ownership.find((x) => x.id === o.ow[0]) || {}).label || o.ow[0])} <span class="pending">(${esc(CFG.why[o.ow[1]])})</span></p>` : `<p class="row"><b>Ownership:</b> Unknown <span class="pending" title="No open source says who owns this outlet. This does not mean it is independent or state-run.">ⓘ</span></p>`}
+      ${o.ow && o.ow[0] !== "unknown" ? `<p class="row"><b>Ownership:</b> ${esc((C.ownership.find((x) => x.id === o.ow[0]) || {}).label || o.ow[0])}${o.on ? ` · <b>Owner:</b> ${esc(o.on.join(", "))}` : ""} <span class="pending">(${esc(CFG.why[o.ow[1]])})</span></p>`
+        : `<p class="row"><b>Ownership:</b> Unknown${o.on ? ` · <b>Owner:</b> ${esc(o.on.join(", "))}` : ""} <span class="pending" title="No open source says what kind of owner this is. This does not mean it is independent or state-run.">ⓘ</span></p>`}
       ${o.oa ? `<p class="row"><b>Also listed as:</b> ${esc(o.oa.map((t) => (C.org_type.find((x) => x.id === t) || {}).label || t).join(", "))}</p>` : ""}
       <p class="row"><b>Languages:</b> ${langs}</p>
       ${o.sv ? `<p class="row"><b>Language services:</b> ${esc(o.sv.join(", "))}</p>` : ""}
@@ -406,6 +412,7 @@
       <p class="row"><b>Topics:</b> ${tpl}</p>
       ${aul ? `<p class="row"><b>Target audience:</b> ${aul}</p>` : ""}
       ${unl ? `<p class="row"><b>UN profile:</b> ${unl}</p>` : ""}
+      ${o.ww ? `<p class="row warn">⚠ Website may no longer belong to this outlet: ${esc(o.ww)}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
       ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a>${o.cp ? ` · <a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : ""}</p>`
@@ -446,7 +453,12 @@
   function draw(fromStart) {
     if (fromStart) { shown = 0; $("cards").innerHTML = ""; }
     const slice = current.slice(shown, shown + PAGE);
-    $("cards").insertAdjacentHTML("beforeend", slice.map(card).join(""));
+    const soft = S.tp.size || S.au.size || S.un.size;
+    $("cards").insertAdjacentHTML("beforeend", slice.map((o, j) => {
+      const divider = soft && !S.onlyMatches && shown + j === nMatch && nMatch < current.length
+        ? `<li class="divider">${nMatch ? "Other outlets that fit your other filters (no match for the chosen topics, audience or UN profile)" : "No outlet matches the chosen topics, audience or UN profile – showing all outlets that fit your other filters"}</li>` : "";
+      return divider + card(o);
+    }).join(""));
     shown += slice.length;
     $("more").hidden = shown >= current.length;
     $("more").textContent = `Show more (${(current.length - shown).toLocaleString("en")} left)`;
@@ -527,6 +539,7 @@
     if (o.ow && o.ow[0] === "state_controlled") f.push("State-controlled");
     if (o.s.length < 2) f.push("Unverified");
     if (o.wd) f.push("Website not reachable");
+    if (o.ww) f.push("Website may no longer belong to the outlet");
     if (o.lp && o.lp < activeSince()) f.push("No recent article (last " + o.lp + ")");
     return f.join(", ");
   }
@@ -544,7 +557,7 @@
       scope: o.sc && o.sc[0] !== "unknown" ? lab(C.scope, o.sc[0]) : "",
       languages: (o.l || []).map((l) => CFG.langName[l] || l).join(", "),
       channels: (o.ch || []).map((c) => lab(C.channel, c)).join(", "),
-      ownership: o.ow ? lab(C.ownership, o.ow[0]) : "Unknown",
+      ownership: (o.ow ? lab(C.ownership, o.ow[0]) : "Unknown") + (o.on ? " (" + o.on.join(", ") + ")" : ""),
       topic: topics.join(", "),
       audience: (o.au || []).map((a) => lab(C.audience, a)).join(", "),
       unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),

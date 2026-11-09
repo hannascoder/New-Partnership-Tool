@@ -207,9 +207,13 @@ class Matcher:
                 for part in segs:  # a whole address part must be a section word: /climate/, /category/food-security/
                     for topic in self.section.get(self._clean(part), ()):
                         add(topic, None, DESK, f'website section /{"/".join(segs)}/', path)
-        # other languages (Wikidata names): at most COVERS, and only when 2 different words
-        # point to the topic (or 1 word is a whole menu section)
+        # other languages (Wikidata names): a whole menu entry = DESK (owner, 09.11.2026);
+        # elsewhere at most COVERS, and only when 2 different words point to the topic
         if self.auto:
+            for text, path in menu:
+                if len((text or "").split()) <= 4:
+                    for topic, sub in self.auto.get(self._clean(text), ()):
+                        add(topic, sub, DESK, f'website section "{text}" (another language, via Wikidata)', path)
             per = {}
             for text in [name] + list(descriptions) + [t for _, t in abouts] + list(headlines):
                 for term, hs in self._hits(text, self.auto):
