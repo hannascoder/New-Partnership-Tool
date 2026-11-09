@@ -221,3 +221,53 @@ website_channels:
   newsletter: [newsletter, newsletters, infolettre, lettre d'information, boletín, boletim, рассылка, النشرة البريدية, न्यूज़लेटर, jarida la barua pepe]
 # The page language (<html lang="fr">) is used when no source names a language.
 website_language: true
+
+# "Open to partner content" (UN profile; suggestion 1, owner's go 09.11.2026):
+# the outlet's website shows it publishes content from others. Words in link texts /
+# addresses on the website and in its About page. 9 UN News languages.
+open_to_partner_content:
+  - creativecommons.org
+  - creative commons
+  - republish
+  - republishing
+  - syndication
+  - content syndication
+  - submit a story
+  - submit your story
+  - submit news
+  - submit an article
+  - send us your story
+  - send us your news
+  - write for us
+  - become a contributor
+  - contributors wanted
+  - pitch us
+  - submit a press release
+  - submit press release
+  - partner with us
+  - content partnership
+  - content partners
+  - republier
+  - proposer un article
+  - envoyez vos articles
+  - envoyez-nous
+  - devenir contributeur
+  - publiez votre communiqué
+  - republicar
+  - envía tu nota
+  - envíanos tu noticia
+  - publica tu noticia
+  - escribe para nosotros
+  - colabora con nosotros
+  - envie sua notícia
+  - envie sua pauta
+  - seja colaborador
+  - colabore conosco
+  - прислать новость
+  - предложить новость
+  - стать автором
+  - أرسل خبرك
+  - شارك بمقال
+  - 投稿
+  - अपनी खबर भेजें
+  - tuma habari yako

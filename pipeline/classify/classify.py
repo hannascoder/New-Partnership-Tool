@@ -432,6 +432,23 @@ def add_website_channels_language(o, w, rules, iso1):
             o["language_source"] = "website"
 
 
+def partner_content(w, words):
+    """Reason text if the website shows the outlet takes content from others, else None."""
+    if not w or w.get("status") != "ok" or not words:
+        return None
+    from topic_text import norm
+    for text, url in w.get("extra") or []:
+        hay = " " + norm(text) + " " + norm(url) + " "
+        for x in words:
+            if " " + x + " " in hay:
+                return f'website link "{text or url}"'
+    about = " " + norm(w.get("about") or "") + " "
+    for x in words:
+        if " " + x + " " in about:
+            return f'website About page mentions "{x}"'
+    return None
+
+
 ORG_MAIL = re.compile(r"^(info|contact|contacto|contato|kontakt|redac|redaction|redaccion|redacao|newsroom|news|noticias|"
                       r"editor|editors|editorial|desk|hello|hola|office|admin|press|presse|prensa|imprensa|mail|"
                       r"communication|comunicacion|media|secretariat|reception|support|webmaster|tips|letters|studio|"
@@ -564,6 +581,8 @@ def main():
     buttons = {r["code"] for r in lang_rows if r["button"]}
     lang_names = {r["code"]: r["name"] for r in lang_rows}
     iso1 = {r["iso639_1"]: r["code"] for r in lang_rows if r["iso639_1"]}
+    from topic_text import norm
+    partner_words = [norm(x) for x in rules.get("open_to_partner_content") or []]
     for o in outlets:
         cat = {"org_type": org_type(o, rules["org_type"], media_classes)}
         cat["ownership"] = ownership(o, rules["ownership"], owners, rsf, cat["org_type"]["value"], oidx)
@@ -599,10 +618,18 @@ def main():
             for k, u in (w.get("social") or {}).items():
                 o.setdefault("social_urls", {}).setdefault(k, u)
         cat["website_status"] = w.get("status")
+        if w.get("contact_url"):
+            o["contact_page"] = w["contact_url"]
+        if w.get("last_post"):
+            o["last_post"] = w["last_post"]
         if w.get("status") == "ok":
             add_website_channels_language(o, w, rules, iso1)
         cat["un_profile"] = un_profile(o, cat, rules["un_profile"], maps, un_order, ov, official, buttons, lang_names,
                                        {t["value"] for t in cat["topics"]})
+        hint = partner_content(w, partner_words)
+        if hint and not any(u["value"] == "open_to_partner_content" for u in cat["un_profile"]):
+            cat["un_profile"].append(val("open_to_partner_content", "website_check", hint))
+            cat["un_profile"].sort(key=lambda v: un_order.index(v["value"]) if v["value"] in un_order else 999)
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
                                           lang_names, {t["value"] for t in cat["topics"]}, aud_matcher, txt)
         for field, row in overrides.get(o["id"], {}).items():

@@ -130,6 +130,10 @@ def main():
         for k, u in (o.get("social_urls") or {}).items():  # from the website check
             if k in SOCIAL_URL or k == "linkedin":
                 e.setdefault("so", {}).setdefault(k, u)
+        if o.get("contact_page"):
+            e["cp"] = o["contact_page"]
+        if o.get("last_post"):
+            e["lp"] = o["last_post"]
         if o.get("email"):
             e["em"] = o["email"].replace("mailto:", "").strip()
         e["s"] = o["sources"]
@@ -201,6 +205,9 @@ def main():
                                              "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort")},
         "size_note": cats.get("size_note"),
         "new_months": cats.get("new_months", 4),
+        "active_months": cats.get("active_months", 3),
+        "feedback_email": cats.get("feedback_email"),
+        "topic_strength": cats.get("topic_strength"),
         "source_labels": SOURCE_LABEL,
         # filters that get values in step 4 (classification)
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],

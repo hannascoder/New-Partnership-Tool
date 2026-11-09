@@ -21,7 +21,7 @@
   }
 
   Promise.all([fetch("data/config.json").then((r) => r.json()), fetch("data/outlets.json").then((r) => r.json())])
-    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); apply(); })
+    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); })
     .catch(() => { $("counter").textContent = "The data could not be loaded. Please reload the page."; });
 
   /* outlets.json stores repeated values as short codes (pipeline/build/site_data.py compact()) */
@@ -44,9 +44,57 @@
     if (opts.disabled) { b.disabled = true; b.title = opts.title || "Available after step 4 (classification)"; }
     if (opts.title && !opts.disabled) b.title = opts.title;
     b.addEventListener("click", () => { onClick(b); });
+    if (onClick._v !== undefined) { b.dataset.f = SETNAME.get(onClick._set) || ""; b.dataset.v = onClick._v; }
+    if (opts.f) { b.dataset.f = opts.f; b.dataset.v = opts.v; }
     return b;
   }
-  function toggle(set, value) { return (b) => { set.has(value) ? set.delete(value) : set.add(value); b.setAttribute("aria-pressed", set.has(value)); apply(); }; }
+  function toggle(set, value) {
+    const fn = (b) => { set.has(value) ? set.delete(value) : set.add(value); b.setAttribute("aria-pressed", set.has(value)); apply(); };
+    fn._set = set; fn._v = value; return fn;
+  }
+  /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
+  const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", ck: "checks" };
+  const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
+  const FLAGS = { nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", ou: "f-ownUnknown", om: "f-onlyMatches" };
+  let restoring = false;
+  function saveHash() {
+    if (restoring) return;
+    const p = new URLSearchParams();
+    Object.entries(SETS).forEach(([k, v]) => { if (S[v].size) p.set(k, [...S[v]].join(",")); });
+    const off = Object.entries(S.subOff).filter(([t, o]) => o.size && S.tp.has(t)).map(([t, o]) => t + ":" + [...o].join("|"));
+    if (off.length) p.set("off", off.join(";"));
+    if (S.region) p.set("rg", S.region);
+    if (S.country) p.set("c", S.country);
+    if (S.size !== "all") p.set("size", S.size);
+    if (S.sort !== "auto") p.set("sort", S.sort);
+    if (!S.reach) p.set("rch", "0");
+    Object.entries(FLAGS).forEach(([k, id]) => { if ($(id) && $(id).checked) p.set(k, "1"); });
+    const h = p.toString();
+    history.replaceState(null, "", h ? "#" + h : location.pathname + location.search);
+  }
+  function restoreHash() {
+    const p = new URLSearchParams(location.hash.slice(1));
+    if (![...p.keys()].length) return;
+    restoring = true;
+    const fire = (el, ev) => el && el.dispatchEvent(new Event(ev));
+    if (p.get("rg")) { $("f-region").value = p.get("rg"); fire($("f-region"), "change"); }
+    if (p.get("c")) { $("f-country").value = p.get("c"); fire($("f-country"), "change"); }
+    Object.keys(SETS).forEach((k) => (p.get(k) || "").split(",").filter(Boolean).forEach((v) => {
+      const b = document.querySelector(`.chip[data-f="${k}"][data-v="${CSS.escape(v)}"]`);
+      if (b && !b.disabled) b.click();
+      else if (k === "l") { S.langs.add(v); drawOtherLangs(); }
+      else if (k === "ck") { const c = document.querySelector(`#f-checks input[data-v="${CSS.escape(v)}"]`); if (c && !c.disabled) { c.checked = true; fire(c, "change"); } }
+    }));
+    (p.get("off") || "").split(";").filter(Boolean).forEach((x) => {
+      const [t, subs] = x.split(":");
+      (subs || "").split("|").forEach((s) => { const b = document.querySelector(`.chip[data-f="sub:${CSS.escape(t)}"][data-v="${CSS.escape(s)}"]`); if (b) b.click(); });
+    });
+    if (p.get("size")) { const r = document.querySelector(`input[name="size"][value="${CSS.escape(p.get("size"))}"]`); if (r) { r.checked = true; fire(r, "change"); } }
+    if (p.get("sort")) { $("sort").value = p.get("sort"); fire($("sort"), "change"); }
+    if (p.get("rch") === "0") { $("f-reach").checked = false; fire($("f-reach"), "change"); }
+    Object.entries(FLAGS).forEach(([k, id]) => { if (p.get(k) && $(id)) { $(id).checked = true; fire($(id), "change"); } });
+    restoring = false;
+  }
   const visible = (list) => list.filter((x) => !x.later && !x.hidden);
 
   function init() {
@@ -114,7 +162,7 @@
               off.has(s.id) ? off.delete(s.id) : off.add(s.id);
               btn.setAttribute("aria-pressed", off.has(s.id) ? "false" : "true"); apply();
             });
-            b.classList.add("sub"); sc.append(b);
+            b.classList.add("sub"); b.dataset.f = "sub:" + t.id; b.dataset.v = s.id; sc.append(b);
           });
           box.append(sc); subBoxes.push(box);
         }
@@ -127,7 +175,7 @@
             if (!S.tp.has(t.id)) { delete S.subOff[t.id]; box.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "true")); }
           }
           apply();
-        }, n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No outlet found for this topic yet" }));
+        }, Object.assign({ f: "tp", v: t.id }, n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No outlet found for this topic yet" })));
       });
       d.append(ch); subBoxes.forEach((b) => d.append(b)); $("f-topics").append(d);
     });
@@ -148,11 +196,12 @@
     if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
     $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
     const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
-                         hide_website_down: true, only_new: true };
+                         hide_website_down: true, only_new: true, only_active: true };
     C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches"].includes(c.id)).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
       l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> ${esc(c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">step 4</span>'}`;
+      l.querySelector("input").dataset.v = c.id;
       l.querySelector("input").addEventListener("change", (e) => { e.target.checked ? S.checks.add(c.id) : S.checks.delete(c.id); apply(); });
       $("f-checks").append(l);
     });
@@ -201,6 +250,10 @@
   }
 
   /* "new" = first found less than new_months (categories.yaml) before the data date */
+  function activeSince() {
+    const d = new Date(CFG.data_date); d.setMonth(d.getMonth() - (CFG.active_months || 3));
+    return d.toISOString().slice(0, 10);
+  }
   function newSince() {
     const d = new Date(CFG.data_date); d.setMonth(d.getMonth() - (CFG.new_months || 4));
     return d.toISOString().slice(0, 10);
@@ -217,7 +270,7 @@
     const off = S.subOff[t]; if (!off || !off.size) return e;
     return (e[3] || []).some((s) => !off.has(s)) ? e : null;  // narrowed: only outlets with a chosen sub-topic
   }
-  const STRENGTH = { 1: "main focus", 2: "own section", 3: "covers it" };
+  const STRENGTH = new Proxy({}, { get: (_, k) => ((CFG && CFG.topic_strength) || { 1: "main focus", 2: "own section", 3: "covers it" })[k] });
   function why(o, kind, id) {
     if (kind === "tp") {
       const e = tpEntry(o, id); if (!e || e[2] < 0) return "no topic in the sources: general news";
@@ -230,6 +283,8 @@
   }
 
   function apply() {
+    if (restoring) return;
+    saveHash();
     const C = CFG.categories;
     let matChannels = null, matTypes = null;
     if (S.material.size) {
@@ -265,7 +320,8 @@
       if (S.size === "top50" && o.r > 50) return false;
       if (S.checks.has("only_verified") && o.s.length < 2) return false;
       if (S.checks.has("has_social_media") && !o.so) return false;
-      if (S.checks.has("has_public_contact") && !o.em) return false;
+      if (S.checks.has("has_public_contact") && !o.em && !o.cp) return false;
+      if (S.checks.has("only_active") && !(o.lp && o.lp >= activeSince())) return false;
       if (S.checks.has("hide_website_down") && o.wd) return false;  // website did not answer at the last check
       if (S.checks.has("only_new") && o.f < newSince()) return false;
       return true;
@@ -280,7 +336,9 @@
     // best match: topics count by strength (main focus 3, own section 2, covers it 1), audiences and UN profiles 1 each
     const score = (o) => o._s != null ? o._s : (o._s = o._m.reduce((n, m) => n + (m[0] === "tp" ? 4 - m[2] : 1), 0));
     current.forEach((o) => { o._s = null; });
-    if (mode === "best_match") current.sort((a, b) => score(b) - score(a) || b.p - a.p || byName(a, b));
+    // equal match: outlets based in the chosen country before outlets that only reach it (owner, 09.11.2026)
+    const home = (o) => (S.country && o.c === S.country ? 1 : 0);
+    if (mode === "best_match") current.sort((a, b) => score(b) - score(a) || home(b) - home(a) || b.p - a.p || byName(a, b));
     else if (mode === "country") current.sort((a, b) => (CFG.countryName[a.c] || {}).name.localeCompare((CFG.countryName[b.c] || {}).name) || byName(a, b));
     else current.sort(byName);
     const countries = new Set(current.map((o) => o.c)).size;
@@ -321,12 +379,19 @@
       ${unl ? `<p class="row"><b>UN profile:</b> ${unl}</p>` : ""}
       ${o.w ? `<p class="row"><b>Website:</b> <a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></p>` : ""}
       ${social ? `<p class="row"><b>Social media:</b> ${social}</p>` : ""}
-      ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a></p>` : ""}
-      <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}</p>
+      ${o.em ? `<p class="row"><b>Contact:</b> <a href="mailto:${esc(o.em)}">${esc(o.em)}</a>${o.cp ? ` · <a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : ""}</p>`
+        : o.cp ? `<p class="row"><b>Contact:</b> <a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a></p>` : ""}
+      ${o.lp ? `<p class="row pending">Latest article seen on the website: ${esc(o.lp)}${o.lp < activeSince() ? " (no recent article found)" : ""}</p>` : ""}
+      <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)}${CFG.feedback_email ? ` · <a href="${esc(reportLink(o))}">Report an error</a>` : ""}</p>
       ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id, s]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id) + (k2 === "tp" && s ? ` (${STRENGTH[s]})` : "")).join(", "))}</span>` : ""}
       <p><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label></p></li>`;
   }
 
+  function reportLink(o) {
+    const k = CFG.countryName[o.c] || {};
+    const body = `Outlet: ${o.n} (${k.name || o.c}), id ${o.i}\nWebsite: ${o.w || "-"}\n\nWhat is wrong (e.g. topic, type, ownership, contact, outlet closed)?\n\n\nFilters used: ${location.href}`;
+    return `mailto:${CFG.feedback_email}?subject=${encodeURIComponent("Partner Finder: error report " + o.i)}&body=${encodeURIComponent(body)}`;
+  }
   function basisText(b) {
     return b.startsWith("language_service:") ? "via " + b.slice(17) : b === "broadcast_area" ? "broadcast area" : b === "worldwide" ? "worldwide broadcaster" : "international broadcaster";
   }
@@ -432,6 +497,8 @@
     const f = [];
     if (o.ow && o.ow[0] === "state_controlled") f.push("State-controlled");
     if (o.s.length < 2) f.push("Unverified");
+    if (o.wd) f.push("Website not reachable");
+    if (o.lp && o.lp < activeSince()) f.push("No recent article (last " + o.lp + ")");
     return f.join(", ");
   }
   function exportRow(o, countryFilter, topicFilter) {
@@ -453,7 +520,7 @@
       audience: (o.au || []).map((a) => lab(C.audience, a)).join(", "),
       unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
       memberOf: (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
-      website: o.w || "", contact: o.em || "",
+      website: o.w || "", contact: o.em || o.cp || "",
       social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
       notes: flags(o),
     };
