@@ -398,6 +398,27 @@
    ]
   ]
  },
+ "pf-000041": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Russian state-controlled, funded by the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-controlled international news network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "channels in several languages"
+   ]
+  ]
+ },
  "pf-000045": {
   "date": "2026-11-10",
   "owner": "Axel Springer SE",
@@ -838,6 +859,23 @@
    ]
   ]
  },
+ "pf-000102": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general-interest daily newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Italian and English editions"
+   ]
+  ]
+ },
  "pf-000103": {
   "date": "2026-11-09",
   "not_media": "erotic magazine (adult content is excluded, KATEGORIEN 0.4)",
@@ -863,6 +901,28 @@
     "urban_mobility",
     1,
     "metro, light rail and tram"
+   ]
+  ]
+ },
+ "pf-000110": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour public news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
    ]
   ]
  },
@@ -1136,6 +1196,17 @@
    ]
   ]
  },
+ "pf-000151": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio station"
+   ]
+  ]
+ },
  "pf-000152": {
   "date": "2026-11-10",
   "ownership": [
@@ -1234,6 +1305,34 @@
     null,
     1,
     "commercial broadcast network"
+   ]
+  ]
+ },
+ "pf-000170": {
+  "closed": "Wikipedia: 'was' an independent Russian newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent newspaper known for investigations"
+   ]
+  ]
+ },
+ "pf-000171": {
+  "date": "2026-11-10",
+  "owner": "Sky Italia",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Sky Italia"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "general entertainment channel"
    ]
   ]
  },
@@ -1692,6 +1791,21 @@
    ]
   ]
  },
+ "pf-000230": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: Russian state-owned news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned news agency"
+   ]
+  ]
+ },
  "pf-000234": {
   "date": "2026-11-09",
   "owner": "United States federal government",
@@ -1742,6 +1856,33 @@
   "right_populist": "Wikipedia: mouthpiece of the RSS (Hindutva)",
   "topics": []
  },
+ "pf-000244": {
+  "audience": [
+   [
+    "religious",
+    "Catholic radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: The World Family of Radio Maria"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "international Catholic radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "stations in many countries and languages"
+   ]
+  ]
+ },
  "pf-000246": {
   "audience": [
    [
@@ -1756,6 +1897,28 @@
     null,
     1,
     "main economic newspaper"
+   ]
+  ]
+ },
+ "pf-000252": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist public TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
    ]
   ]
  },
@@ -1919,6 +2082,17 @@
    ]
   ]
  },
+ "pf-000326": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Milan"
+   ]
+  ]
+ },
  "pf-000332": {
   "audience": [
    [
@@ -2027,6 +2201,27 @@
    ]
   ]
  },
+ "pf-000364": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: federal channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "federal TV channel"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "shows"
+   ]
+  ]
+ },
  "pf-000366": {
   "audience": [
    [
@@ -2057,6 +2252,28 @@
   ],
   "website_warning": "the website shows a blog about Kinshasa life, not the newspaper"
  },
+ "pf-000370": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "reruns of fiction and films"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
  "pf-000377": {
   "date": "2026-11-10",
   "owner": "Prasar Bharati",
@@ -2070,6 +2287,23 @@
     null,
     1,
     "public news channel"
+   ]
+  ]
+ },
+ "pf-000386": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ],
+   [
+    "climate",
+    "climate_change",
+    3,
+    "climate stories"
    ]
   ]
  },
@@ -2136,6 +2370,21 @@
    [
     "multilingual",
     "broadcasts in many languages"
+   ]
+  ]
+ },
+ "pf-000418": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Interfax joint-stock company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
    ]
   ]
  },
@@ -2241,6 +2490,27 @@
     null,
     2,
     "website section Sports"
+   ]
+  ]
+ },
+ "pf-000440": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: not-for-profit cooperative of newspapers"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading news agency, not-for-profit cooperative"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Italian, English and Arabic services"
    ]
   ]
  },
@@ -2669,6 +2939,17 @@
    ]
   ]
  },
+ "pf-000608": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV channel"
+   ]
+  ]
+ },
  "pf-000609": {
   "audience": [
    [
@@ -2768,6 +3049,21 @@
    ]
   ]
  },
+ "pf-000632": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: Russian state-controlled website"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news site"
+   ]
+  ]
+ },
  "pf-000644": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: associated with Religious Zionism and the right-wing",
@@ -2781,6 +3077,23 @@
     null,
     1,
     "most widely read newspaper in Canada"
+   ]
+  ]
+ },
+ "pf-000648": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Naples"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Naples"
    ]
   ]
  },
@@ -2868,6 +3181,33 @@
    ]
   ]
  },
+ "pf-000691": {
+  "date": "2026-11-10",
+  "owner": "VGTRK",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned news channel"
+   ]
+  ]
+ },
+ "pf-000693": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "media group with business news"
+   ]
+  ]
+ },
  "pf-000695": {
   "country_hint": "USA (published by Foundry, founded in the USA)",
   "date": "2026-11-10",
@@ -2889,6 +3229,51 @@
     null,
     1,
     "daily newspaper in Melbourne"
+   ]
+  ]
+ },
+ "pf-000709": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper (communist)"
+   ],
+   [
+    "human_rights",
+    null,
+    3,
+    "international coverage"
+   ]
+  ]
+ },
+ "pf-000712": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel with regional news"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "cultural programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
    ]
   ]
  },
@@ -2917,6 +3302,50 @@
    [
     "open_to_partner_content",
     "link 'Submit a News Tip'"
+   ]
+  ]
+ },
+ "pf-000729": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-000731": {
+  "audience": [
+   [
+    "children",
+    "preschool children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV channel"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoons for preschoolers"
+   ]
+  ]
+ },
+ "pf-000737": {
+  "date": "2026-11-10",
+  "owner": "Rambler Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
    ]
   ]
  },
@@ -2956,6 +3385,29 @@
     null,
     1,
     "local news of western France"
+   ]
+  ]
+ },
+ "pf-000745": {
+  "audience": [
+   [
+    "religious",
+    "Catholic readership"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper affiliated with the Catholic Church"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "Catholic daily"
    ]
   ]
  },
@@ -3400,6 +3852,43 @@
    ]
   ]
  },
+ "pf-000853": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "arts and culture channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
+ "pf-000854": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official newspaper of the Russian Armed Forces"
+  ],
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "official newspaper of the armed forces"
+   ]
+  ]
+ },
  "pf-000859": {
   "date": "2026-11-10",
   "topics": [
@@ -3516,6 +4005,34 @@
     null,
     1,
     "weekly news magazine"
+   ]
+  ]
+ },
+ "pf-000904": {
+  "audience": [
+   [
+    "children",
+    "preschool children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "preschool children's channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
    ]
   ]
  },
@@ -3728,6 +4245,27 @@
    ]
   ]
  },
+ "pf-000987": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
+   ]
+  ]
+ },
  "pf-000989": {
   "date": "2026-11-10",
   "ownership": [
@@ -3740,6 +4278,17 @@
     null,
     1,
     "Shanghai state media group"
+   ]
+  ]
+ },
+ "pf-001063": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily tabloid newspaper"
    ]
   ]
  },
@@ -3828,6 +4377,33 @@
    ]
   ]
  },
+ "pf-001144": {
+  "audience": [
+   [
+    "minority_language",
+    "Yiddish"
+   ],
+   [
+    "religious",
+    "Jewish community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Yiddish and Russian newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Jewish Autonomous Oblast"
+   ]
+  ]
+ },
  "pf-001150": {
   "date": "2026-11-10",
   "ownership": [
@@ -3868,6 +4444,34 @@
     null,
     1,
     "regional daily of Gipuzkoa"
+   ]
+  ]
+ },
+ "pf-001170": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel with entertainment"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
    ]
   ]
  },
@@ -3947,6 +4551,23 @@
     null,
     1,
     "financial daily newspaper"
+   ]
+  ]
+ },
+ "pf-001182": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Turin"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "website section Torino"
    ]
   ]
  },
@@ -4031,6 +4652,17 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: taken over by the Orbán-aligned KESMA foundation",
   "topics": []
+ },
+ "pf-001213": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
  },
  "pf-001224": {
   "country_hint": "GTM (Guatemalan channel of TV Azteca)",
@@ -4190,6 +4822,44 @@
     null,
     1,
     "entertainment TV channel"
+   ]
+  ]
+ },
+ "pf-001257": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-001265": {
+  "audience": [
+   [
+    "minority_language",
+    "Veps speakers"
+   ],
+   [
+    "indigenous",
+    "Veps people"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Veps-language monthly"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "only newspaper in the Veps language"
    ]
   ]
  },
@@ -4458,6 +5128,23 @@
    ]
   ]
  },
+ "pf-001349": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "cities",
+    null,
+    1,
+    "architecture and design magazine"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "design"
+   ]
+  ]
+ },
  "pf-001355": {
   "date": "2026-11-10",
   "owner": "National World",
@@ -4473,6 +5160,57 @@
     null,
     2,
     "Scotland"
+   ]
+  ]
+ },
+ "pf-001356": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigative journalism"
+   ]
+  ]
+ },
+ "pf-001357": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-001358": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper (left)"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Ambiente"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Giustizia"
    ]
   ]
  },
@@ -4492,6 +5230,17 @@
    ]
   ]
  },
+ "pf-001368": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Moscow daily newspaper"
+   ]
+  ]
+ },
  "pf-001376": {
   "date": "2026-11-10",
   "owner": "Torstar Corporation",
@@ -4505,6 +5254,23 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-001379": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper of Sicily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sicily"
    ]
   ]
  },
@@ -4597,6 +5363,40 @@
    ]
   ]
  },
+ "pf-001393": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Italians abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: subsidiary of RAI"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international Italian-language TV service"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Italians abroad"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
  "pf-001406": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: Polish right-wing weekly",
@@ -4627,6 +5427,17 @@
     null,
     1,
     "web portal"
+   ]
+  ]
+ },
+ "pf-001438": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "national sports newspaper"
    ]
   ]
  },
@@ -4704,6 +5515,28 @@
     null,
     2,
     "entertainment programmes (shows, reality TV)"
+   ]
+  ]
+ },
+ "pf-001469": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "movie channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
    ]
   ]
  },
@@ -4839,6 +5672,17 @@
    ]
   ]
  },
+ "pf-001536": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-001545": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: conservative, nationalist, far-right stance (major Japanese daily)",
@@ -4869,6 +5713,30 @@
     null,
     2,
     "website section Tech"
+   ]
+  ]
+ },
+ "pf-001553": {
+  "country_hint": "NLD (based in Amsterdam)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent English and Russian online newspaper"
+   ],
+   [
+    "media_freedom",
+    null,
+    3,
+    "independent exile media"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Russian"
    ]
   ]
  },
@@ -4913,6 +5781,38 @@
    ]
   ]
  },
+ "pf-001577": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "history channel"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "history education"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ],
+   [
+    "educational",
+    "history channel"
+   ]
+  ]
+ },
  "pf-001578": {
   "audience": [
    [
@@ -4942,6 +5842,28 @@
    ]
   ]
  },
+ "pf-001582": {
+  "date": "2026-11-10",
+  "owner": "Cairo Communication",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Cairo Communication"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV channel with news and talk"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "documentaries and films"
+   ]
+  ]
+ },
  "pf-001583": {
   "audience": [
    [
@@ -4963,10 +5885,49 @@
    ]
   ]
  },
+ "pf-001584": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "films and series channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
  "pf-001585": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: leans on the right wing",
   "topics": []
+ },
+ "pf-001587": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "cities",
+    null,
+    1,
+    "architecture and design magazine"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "design"
+   ]
+  ]
  },
  "pf-001597": {
   "audience": [
@@ -5332,6 +6293,18 @@
    ]
   ]
  },
+ "pf-001845": {
+  "closed": "Wikipedia: circulated from 1899 to 2020",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly illustrated magazine"
+   ]
+  ]
+ },
  "pf-001848": {
   "date": "2026-11-10",
   "owner": "News Corp Australia",
@@ -5344,10 +6317,49 @@
    ]
   ]
  },
+ "pf-001851": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
+   ]
+  ]
+ },
  "pf-001855": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: national conservative daily",
   "topics": []
+ },
+ "pf-001857": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Russian speakers abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "VGTRK",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: by VGTRK"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international TV channel"
+   ]
+  ]
  },
  "pf-001859": {
   "date": "2026-11-10",
@@ -5497,6 +6509,97 @@
    ]
   ]
  },
+ "pf-001948": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ],
+   [
+    "youth_students",
+    "teenagers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "channel for children and teenagers"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
+ "pf-001954": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: part of the Moscow Media office of the city"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour Moscow TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Moscow"
+   ]
+  ]
+ },
+ "pf-001970": {
+  "date": "2026-11-10",
+  "not_media": "government-sponsored foundation promoting the Russian language, not a media outlet",
+  "topics": []
+ },
+ "pf-001980": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-001991": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
  "pf-001995": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -5622,6 +6725,35 @@
    ]
   ]
  },
+ "pf-002039": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Rome"
+   ]
+  ]
+ },
+ "pf-002040": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Confindustria",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "financial newspaper of record"
+   ]
+  ]
+ },
  "pf-002043": {
   "date": "2026-11-10",
   "owner": "Living Media India",
@@ -5640,6 +6772,39 @@
    ]
   ]
  },
+ "pf-002050": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "global news agency on development and civil society"
+   ],
+   [
+    "partnerships",
+    null,
+    1,
+    "focus on development and global issues"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "civil society and rights"
+   ]
+  ],
+  "un_profile": [
+   [
+    "development",
+    "news on development issues"
+   ],
+   [
+    "multilingual",
+    "several languages"
+   ]
+  ]
+ },
  "pf-002062": {
   "date": "2026-11-10",
   "owner": "Media Chinese International",
@@ -5653,6 +6818,21 @@
     null,
     1,
     "Chinese-language newspaper"
+   ]
+  ]
+ },
+ "pf-002114": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the Moscow government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel of Moscow"
    ]
   ]
  },
@@ -5692,6 +6872,39 @@
    [
     "public_service_mandate",
     "India's public service broadcaster"
+   ]
+  ]
+ },
+ "pf-002227": {
+  "date": "2026-11-10",
+  "owner": "VGTRK",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national channel of VGTRK"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural TV channel"
+   ]
+  ]
+ },
+ "pf-002240": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business focus"
    ]
   ]
  },
@@ -5834,6 +7047,27 @@
    ]
   ]
  },
+ "pf-002288": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private radio station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private music and news radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-002290": {
   "audience": [
    [
@@ -5890,6 +7124,21 @@
    ]
   ]
  },
+ "pf-002310": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: published by the Government of Russia"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government newspaper"
+   ]
+  ]
+ },
  "pf-002312": {
   "date": "2026-11-10",
   "owner": "Shanghai United Media Group",
@@ -5903,6 +7152,17 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-002314": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural and political weekly"
    ]
   ]
  },
@@ -6105,6 +7365,22 @@
    ]
   ]
  },
+ "pf-002379": {
+  "date": "2026-11-10",
+  "owner": "VGTRK",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by VGTRK"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio broadcasting company"
+   ]
+  ]
+ },
  "pf-002385": {
   "date": "2026-11-10",
   "topics": [
@@ -6113,6 +7389,17 @@
     null,
     1,
     "English-language daily newspaper in Hyderabad"
+   ]
+  ]
+ },
+ "pf-002387": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online news agency"
    ]
   ]
  },
@@ -6250,6 +7537,29 @@
    ]
   ]
  },
+ "pf-002458": {
+  "audience": [
+   [
+    "religious",
+    "Catholic readership"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Jesuit periodical"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture and politics"
+   ]
+  ]
+ },
  "pf-002473": {
   "date": "2026-11-10",
   "owner": "News Corp Australia",
@@ -6276,6 +7586,17 @@
     null,
     1,
     "daily newspaper in Brisbane"
+   ]
+  ]
+ },
+ "pf-002479": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
    ]
   ]
  },
@@ -6416,6 +7737,43 @@
    ]
   ]
  },
+ "pf-002621": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "talk and music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
+ "pf-002625": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: dedicated to football club Inter"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football club channel"
+   ]
+  ]
+ },
  "pf-002629": {
   "date": "2026-11-10",
   "owner": "China Central Television",
@@ -6473,6 +7831,23 @@
     null,
     1,
     "national public radio"
+   ]
+  ]
+ },
+ "pf-002655": {
+  "audience": [
+   [
+    "business_professionals",
+    "business daily"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business daily newspaper"
    ]
   ]
  },
@@ -6585,10 +7960,38 @@
    ]
   ]
  },
+ "pf-002777": {
+  "date": "2026-11-10",
+  "owner": "AC Milan",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by AC Milan"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football club channel"
+   ]
+  ]
+ },
  "pf-002778": {
   "date": "2026-11-09",
   "not_media": "a magazine paper size (Wikidata error), not a media outlet",
   "topics": []
+ },
+ "pf-002788": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: official organ of the National Bolshevik Party",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper of the National Bolshevik Party"
+   ]
+  ]
  },
  "pf-002789": {
   "date": "2026-11-10",
@@ -6641,6 +8044,69 @@
    ]
   ]
  },
+ "pf-002821": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national state-owned broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national state broadcaster"
+   ]
+  ]
+ },
+ "pf-002832": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture and classical music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ],
+   [
+    "educational",
+    "culture programmes"
+   ]
+  ]
+ },
+ "pf-002833": {
+  "date": "2026-11-10",
+  "owner": "RAI",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RAI"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio for news and sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Italian public broadcaster RAI"
+   ]
+  ]
+ },
  "pf-002864": {
   "date": "2026-11-10",
   "topics": [
@@ -6670,6 +8136,60 @@
     null,
     1,
     "news agency, multimedia feeds"
+   ]
+  ]
+ },
+ "pf-002874": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RBC Group",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "24-hour business news channel"
+   ]
+  ]
+ },
+ "pf-002876": {
+  "audience": [
+   [
+    "children",
+    "children and teenagers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: joint venture of MFE and Warner Bros. Discovery"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "channel for children and teenagers"
+   ]
+  ]
+ },
+ "pf-002900": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Skydance Corporation"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "lifestyle entertainment channel"
    ]
   ]
  },
@@ -7139,6 +8659,21 @@
    ]
   ]
  },
+ "pf-003227": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Russian state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic-language news channel"
+   ]
+  ]
+ },
  "pf-003250": {
   "date": "2026-11-10",
   "owner": "Future plc",
@@ -7406,6 +8941,17 @@
     null,
     2,
     "website section 学术 (academic)"
+   ]
+  ]
+ },
+ "pf-003495": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
    ]
   ]
  },
@@ -8152,6 +9698,17 @@
   "far_right": "Wikipedia: far-right nationalist newspaper (1920-1939)",
   "topics": []
  },
+ "pf-004333": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-004339": {
   "date": "2026-11-10",
   "owner": "Phoenix Television",
@@ -8371,10 +9928,74 @@
    ]
   ]
  },
+ "pf-004605": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: operated by Rossiya Segodnya / RT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "multilingual project about Russian lifestyle and culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "several languages"
+   ]
+  ]
+ },
  "pf-004610": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: called a far-right online publication",
   "topics": []
+ },
+ "pf-004702": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "intergovernmental TV and radio company of CIS countries"
+   ]
+  ]
+ },
+ "pf-004743": {
+  "audience": [
+   [
+    "children",
+    "for children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's TV channel"
+   ]
+  ]
+ },
+ "pf-004821": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public channel founded by presidential decree"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel"
+   ]
+  ]
  },
  "pf-004847": {
   "date": "2026-11-10",
@@ -8389,6 +10010,23 @@
     null,
     1,
     "English-language state-run news channel"
+   ]
+  ]
+ },
+ "pf-004850": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
    ]
   ]
  },
@@ -9711,6 +11349,32 @@
   "right_populist": "Wikipedia: published by the RSS (Hindu nationalist)",
   "topics": []
  },
+ "pf-008897": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel with news"
+   ]
+  ]
+ },
+ "pf-008976": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: run by the Russian Ministry of Defence"
+  ],
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "TV network of the Ministry of Defence"
+   ]
+  ]
+ },
  "pf-009014": {
   "date": "2026-11-10",
   "owner": "Australian Broadcasting Corporation",
@@ -10256,6 +11920,27 @@
   "right_populist": "Wikipedia: right-wing, supports Law and Justice",
   "topics": []
  },
+ "pf-013480": {
+  "audience": [
+   [
+    "women",
+    "magazine for women"
+   ],
+   [
+    "minority_language",
+    "Bashkir language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine for women and family"
+   ]
+  ]
+ },
  "pf-013525": {
   "date": "2026-11-10",
   "ownership": [
@@ -10339,6 +12024,21 @@
    ]
   ]
  },
+ "pf-013769": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned and operated by the Russian government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state media group"
+   ]
+  ]
+ },
  "pf-013785": {
   "date": "2026-11-10",
   "ownership": [
@@ -10396,6 +12096,35 @@
     null,
     1,
     "pay-TV channel for Brazilians living abroad"
+   ]
+  ]
+ },
+ "pf-014290": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news site on the Caucasus"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "chronicles of rights violations"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "conflicts in the Caucasus"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Russian"
    ]
   ]
  },
@@ -10560,6 +12289,27 @@
   "right_populist": "Wikipedia: right-wing magazine, favourable to the BJP",
   "topics": []
  },
+ "pf-015193": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: Russian government news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government news agency and radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
+   ]
+  ]
+ },
  "pf-015216": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: Spanish far right of the 1930s",
@@ -10577,6 +12327,23 @@
     null,
     1,
     "music radio station"
+   ]
+  ]
+ },
+ "pf-015444": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "regional TV of Calabria"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
    ]
   ]
  },
@@ -10866,6 +12633,11 @@
     "entertainment TV network"
    ]
   ]
+ },
+ "pf-016924": {
+  "date": "2026-11-10",
+  "not_media": "recommendation platform (VK), not a media outlet",
+  "topics": []
  },
  "pf-016954": {
   "date": "2026-11-10",

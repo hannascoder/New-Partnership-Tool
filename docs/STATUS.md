@@ -136,8 +136,8 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   outlets without topic 13 %.
 - Organisation types renamed (owner, 09.11.2026): "Newspaper, TV, radio or news site", "News agency
   (supplies other media)", "Public broadcaster (independent)", "Community radio & local media", "Fact-checker".
-- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA, CHN, IND, AUS, GBR (700 outlets).
-  Next: RUS, ITA, JPN ... (order of outlet count).
+- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA, CHN, IND, AUS, GBR, RUS, ITA (800 outlets).
+  Next: JPN ... (order of outlet count).
 - Right-wing media (owner, 10.11.2026: "ausblenden und rechte Medien wie Junge Freiheit auch"): the AI reading
   of the Wikipedia text marks far-right outlets ("far_right", 29 hidden, e.g. Junge Freiheit, OAN, Newsmax,
   Valeurs actuelles) and right-wing populist / party-aligned ones ("right_populist", 23, e.g. GB News, Aaj Tak,
