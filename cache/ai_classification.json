@@ -25,6 +25,31 @@
    ]
   ]
  },
+ "pf-000005": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public service broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ],
+   [
+    "multilingual",
+    "World Service in many languages"
+   ]
+  ]
+ },
  "pf-000006": {
   "date": "2026-11-09",
   "owner": "The New York Times Company",
@@ -67,6 +92,45 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000015": {
+  "date": "2026-11-10",
+  "owner": "Scott Trust",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: owned by the Scott Trust"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "environment desk"
+   ]
+  ]
+ },
+ "pf-000016": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
    ]
   ]
  },
@@ -221,7 +285,6 @@
  },
  "pf-000032": {
   "date": "2026-11-10",
-  "owner": "Radio France",
   "ownership": [
    "public_service",
    "Wikipedia: local stations of Radio France (now ICI)"
@@ -474,6 +537,23 @@
    ]
   ]
  },
+ "pf-000060": {
+  "audience": [
+   [
+    "youth_students",
+    "rock music fans"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "rock and metal music magazine"
+   ]
+  ]
+ },
  "pf-000061": {
   "date": "2026-11-09",
   "topics": [
@@ -531,7 +611,6 @@
  },
  "pf-000067": {
   "date": "2026-11-10",
-  "owner": "The Times Group",
   "topics": [
    [
     "general_news",
@@ -614,6 +693,18 @@
     null,
     1,
     "flagship channel of ARD"
+   ]
+  ]
+ },
+ "pf-000074": {
+  "date": "2026-11-10",
+  "owner": "News UK",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily national newspaper"
    ]
   ]
  },
@@ -730,10 +821,72 @@
    ]
   ]
  },
+ "pf-000099": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ],
+   [
+    "fact_checking",
+    null,
+    2,
+    "website section FactCheck"
+   ]
+  ]
+ },
  "pf-000103": {
   "date": "2026-11-09",
   "not_media": "erotic magazine (adult content is excluded, KATEGORIEN 0.4)",
   "topics": []
+ },
+ "pf-000109": {
+  "audience": [
+   [
+    "business_professionals",
+    "railway industry"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "industry_innovation",
+    "infrastructure",
+    1,
+    "railway industry business magazine"
+   ],
+   [
+    "cities",
+    "urban_mobility",
+    1,
+    "metro, light rail and tram"
+   ]
+  ]
+ },
+ "pf-000116": {
+  "date": "2026-11-10",
+  "owner": "Thomson Reuters",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Thomson Reuters"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "news in many languages"
+   ]
+  ]
  },
  "pf-000117": {
   "date": "2026-11-10",
@@ -1017,7 +1170,6 @@
  },
  "pf-000162": {
   "date": "2026-11-10",
-  "owner": "France Médias Monde",
   "ownership": [
    "public_service",
    "Wikipedia: state-owned, publicly funded international news network"
@@ -1131,6 +1283,51 @@
    ]
   ]
  },
+ "pf-000181": {
+  "audience": [
+   [
+    "business_professionals",
+    "business and policy readers"
+   ],
+   [
+    "policy_makers",
+    "international affairs"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "news and international affairs weekly"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "current affairs"
+   ]
+  ]
+ },
+ "pf-000184": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Nikkei",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and economics daily"
+   ]
+  ]
+ },
  "pf-000187": {
   "date": "2026-11-09",
   "owner": "Fox Corporation",
@@ -1193,6 +1390,18 @@
    ]
   ]
  },
+ "pf-000196": {
+  "date": "2026-11-10",
+  "owner": "Telegraph Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "conservative broadsheet newspaper"
+   ]
+  ]
+ },
  "pf-000198": {
   "date": "2026-11-10",
   "topics": [
@@ -1238,6 +1447,45 @@
     null,
     1,
     "national state TV broadcaster"
+   ]
+  ]
+ },
+ "pf-000202": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "private",
+   "Wikipedia: BBC Global News Ltd (commercial subsidiary)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international TV news channel"
+   ]
+  ]
+ },
+ "pf-000203": {
+  "date": "2026-11-10",
+  "owner": "News UK",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ]
+  ]
+ },
+ "pf-000205": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "middle-market conservative tabloid"
    ]
   ]
  },
@@ -1295,13 +1543,28 @@
  },
  "pf-000212": {
   "date": "2026-11-10",
-  "owner": "Groupe Dassault",
   "topics": [
    [
     "general_news",
     null,
     1,
     "oldest national daily newspaper"
+   ]
+  ]
+ },
+ "pf-000214": {
+  "date": "2026-11-10",
+  "owner": "Sky Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Sky Group (Comcast)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
    ]
   ]
  },
@@ -1326,6 +1589,24 @@
    [
     "storytelling",
     "long-form journalism and essays"
+   ]
+  ]
+ },
+ "pf-000220": {
+  "date": "2026-11-10",
+  "owner": "Reach plc",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily tabloid"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Football"
    ]
   ]
  },
@@ -1380,6 +1661,34 @@
    [
     "multilingual",
     "English and French"
+   ]
+  ]
+ },
+ "pf-000226": {
+  "date": "2026-11-10",
+  "owner": "News UK",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Sunday newspaper"
+   ]
+  ]
+ },
+ "pf-000228": {
+  "date": "2026-11-10",
+  "owner": "Tapt Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Tapt Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial talk radio in Sydney"
    ]
   ]
  },
@@ -1610,6 +1919,23 @@
    ]
   ]
  },
+ "pf-000332": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Arab readers in London and abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent pan-Arab daily newspaper"
+   ]
+  ]
+ },
  "pf-000341": {
   "date": "2026-11-10",
   "ownership": [
@@ -1644,6 +1970,23 @@
     null,
     2,
     "entertainment channel"
+   ]
+  ]
+ },
+ "pf-000343": {
+  "audience": [
+   [
+    "youth_students",
+    "dance music fans"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "electronic dance music magazine"
    ]
   ]
  },
@@ -1813,6 +2156,18 @@
    ]
   ]
  },
+ "pf-000431": {
+  "date": "2026-11-10",
+  "owner": "Nine Entertainment",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Sydney"
+   ]
+  ]
+ },
  "pf-000435": {
   "date": "2026-11-09",
   "owner": "Ministry of Communication and Media (DRC)",
@@ -1886,6 +2241,32 @@
     null,
     2,
     "website section Sports"
+   ]
+  ]
+ },
+ "pf-000450": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned and operated by the BBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "world's largest external broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ],
+   [
+    "multilingual",
+    "broadcasts in many languages"
    ]
   ]
  },
@@ -1980,6 +2361,18 @@
    ]
   ]
  },
+ "pf-000523": {
+  "date": "2026-11-10",
+  "owner": "Australian Community Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Canberra"
+   ]
+  ]
+ },
  "pf-000527": {
   "date": "2026-11-10",
   "ownership": [
@@ -2010,6 +2403,33 @@
     null,
     1,
     "Comarca Lagunera region"
+   ]
+  ]
+ },
+ "pf-000532": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: publicly owned, commercially funded"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public broadcast TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "Channel 4 News"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcast remit"
    ]
   ]
  },
@@ -2115,6 +2535,29 @@
     null,
     1,
     "technology magazine: impact on culture, economy and politics"
+   ]
+  ]
+ },
+ "pf-000555": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "popular science magazine"
+   ],
+   [
+    "technology",
+    null,
+    1,
+    "science and technology"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "popular science"
    ]
   ]
  },
@@ -2226,6 +2669,23 @@
    ]
   ]
  },
+ "pf-000609": {
+  "audience": [
+   [
+    "lgbtq",
+    "LGBTQ+ magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "LGBTQ+ magazine"
+   ]
+  ]
+ },
  "pf-000613": {
   "audience": [
    [
@@ -2324,6 +2784,30 @@
    ]
   ]
  },
+ "pf-000654": {
+  "date": "2026-11-10",
+  "owner": "Reach plc",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "middle-market tabloid"
+   ]
+  ]
+ },
+ "pf-000657": {
+  "date": "2026-11-10",
+  "owner": "Future plc",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "technology publication"
+   ]
+  ]
+ },
  "pf-000658": {
   "audience": [
    [
@@ -2347,7 +2831,6 @@
  },
  "pf-000661": {
   "date": "2026-11-10",
-  "owner": "Éditions Gallimard",
   "topics": [
    [
     "culture",
@@ -2382,6 +2865,30 @@
     null,
     1,
     "Mumbai news"
+   ]
+  ]
+ },
+ "pf-000695": {
+  "country_hint": "USA (published by Foundry, founded in the USA)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "magazine about Apple products"
+   ]
+  ]
+ },
+ "pf-000697": {
+  "date": "2026-11-10",
+  "owner": "Nine Entertainment",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Melbourne"
    ]
   ]
  },
@@ -2468,6 +2975,23 @@
    ]
   ]
  },
+ "pf-000756": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper in London"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "London"
+   ]
+  ]
+ },
  "pf-000761": {
   "date": "2026-11-09",
   "topics": [
@@ -2524,6 +3048,19 @@
     "violence_peace",
     3,
     "programme Dialogue entre Congolais"
+   ]
+  ]
+ },
+ "pf-000763": {
+  "closed": "Wikipedia: ran from 2006 to 2014",
+  "country_hint": "GBR (British magazine)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "video game magazine"
    ]
   ]
  },
@@ -2615,6 +3152,34 @@
    ]
   ],
   "website_warning": "the website shows shopping and lifestyle adverts, not the newspaper"
+ },
+ "pf-000787": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: division of the BBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster in Scotland"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Scotland"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ]
+  ]
  },
  "pf-000792": {
   "date": "2026-11-10",
@@ -2883,6 +3448,29 @@
    ]
   ]
  },
+ "pf-000879": {
+  "audience": [
+   [
+    "lgbtq",
+    "gay magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "gay lifestyle magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website sections Culture, Style"
+   ]
+  ]
+ },
  "pf-000892": {
   "date": "2026-11-10",
   "owner": "BCE Inc. (Bell Media)",
@@ -2896,6 +3484,27 @@
     null,
     1,
     "largest private TV network"
+   ]
+  ]
+ },
+ "pf-000894": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV network, shows"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "10 News"
    ]
   ]
  },
@@ -2941,6 +3550,111 @@
     null,
     1,
     "daily business newspaper"
+   ]
+  ]
+ },
+ "pf-000915": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikidata: state-funded independent public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "national public broadcaster"
+   ]
+  ]
+ },
+ "pf-000923": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: BBC channel"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliamentary content"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ]
+  ]
+ },
+ "pf-000930": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned and operated by the BBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and discussion radio"
+   ],
+   [
+    "sports",
+    null,
+    1,
+    "sport coverage"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ]
+  ]
+ },
+ "pf-000933": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned and operated by the BBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "speech radio with news and current affairs"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "drama and arts"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
    ]
   ]
  },
@@ -3029,6 +3743,40 @@
    ]
   ]
  },
+ "pf-001068": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV channel"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
+   ]
+  ]
+ },
+ "pf-001070": {
+  "closed": "Wikidata: former magazine (1842-2003)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "former illustrated news magazine, now a content agency"
+   ]
+  ],
+  "website_warning": "the website shows a content agency (showreel, services), not the magazine"
+ },
  "pf-001075": {
   "audience": [
    [
@@ -3061,6 +3809,22 @@
     null,
     1,
     "largest newspaper in Argentina"
+   ]
+  ]
+ },
+ "pf-001117": {
+  "date": "2026-11-10",
+  "owner": "Foxtel",
+  "ownership": [
+   "private",
+   "Wikipedia: cable channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "premium drama channel"
    ]
   ]
  },
@@ -3148,7 +3912,7 @@
    ]
   ],
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -3508,7 +4272,7 @@
  },
  "pf-001304": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: part of CCTV"
@@ -3524,7 +4288,7 @@
  },
  "pf-001305": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: national state broadcaster"
@@ -3535,6 +4299,23 @@
     null,
     1,
     "primary channel of CCTV"
+   ]
+  ]
+ },
+ "pf-001309": {
+  "audience": [
+   [
+    "lgbtq",
+    "for the LGBTI community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "LGBTQ newspaper"
    ]
   ]
  },
@@ -3677,6 +4458,24 @@
    ]
   ]
  },
+ "pf-001355": {
+  "date": "2026-11-10",
+  "owner": "National World",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Scottish daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Scotland"
+   ]
+  ]
+ },
  "pf-001364": {
   "date": "2026-11-10",
   "owner": "RTVE",
@@ -3725,6 +4524,57 @@
    ]
   ]
  },
+ "pf-001384": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "multicultural broadcaster"
+   ],
+   [
+    "minority_language",
+    "programmes in many languages"
+   ],
+   [
+    "indigenous",
+    "Indigenous section"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multicultural and multilingual public broadcaster"
+   ],
+   [
+    "indigenous",
+    null,
+    2,
+    "website section Indigenous"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "multicultural broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
+   ],
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
  "pf-001389": {
   "date": "2026-11-10",
   "owner": "Real Madrid CF",
@@ -3751,6 +4601,18 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: Polish right-wing weekly",
   "topics": []
+ },
+ "pf-001420": {
+  "date": "2026-11-10",
+  "owner": "Bauer Media Group",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "film magazine"
+   ]
+  ]
  },
  "pf-001433": {
   "date": "2026-11-09",
@@ -3787,7 +4649,6 @@
  },
  "pf-001448": {
   "date": "2026-11-10",
-  "owner": "Groupe Le Monde",
   "topics": [
    [
     "general_news",
@@ -3848,6 +4709,7 @@
  },
  "pf-001472": {
   "date": "2026-11-10",
+  "owner": "China Central Television",
   "ownership": [
    "public_service",
    "Wikipedia: public broadcasting service of Hong Kong"
@@ -3864,6 +4726,28 @@
    [
     "public_service_mandate",
     "public broadcaster"
+   ]
+  ]
+ },
+ "pf-001487": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikidata: publicly funded BBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news division of the BBC"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
    ]
   ]
  },
@@ -4016,6 +4900,19 @@
    ]
   ]
  },
+ "pf-001574": {
+  "closed": "Wikipedia: 'was' a magazine",
+  "country_hint": "GBR (UK magazine)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "video game magazine"
+   ]
+  ]
+ },
  "pf-001578": {
   "audience": [
    [
@@ -4024,7 +4921,6 @@
    ]
   ],
   "date": "2026-11-10",
-  "owner": "Bayard Presse",
   "topics": [
    [
     "general_news",
@@ -4114,7 +5010,7 @@
  },
  "pf-001636": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: owned by CCTV / CGTN"
@@ -4125,6 +5021,30 @@
     null,
     1,
     "Arabic-language TV channel"
+   ]
+  ]
+ },
+ "pf-001668": {
+  "date": "2026-11-10",
+  "owner": "Reach plc",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "tabloid with showbiz"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website section Football"
    ]
   ]
  },
@@ -4263,6 +5183,22 @@
    ]
   ]
  },
+ "pf-001716": {
+  "date": "2026-11-10",
+  "owner": "Sky Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Sky Group (Comcast)"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channels"
+   ]
+  ]
+ },
  "pf-001723": {
   "date": "2026-11-09",
   "topics": [
@@ -4355,7 +5291,7 @@
  },
  "pf-001807": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CGTN, state-run"
@@ -4371,7 +5307,7 @@
  },
  "pf-001808": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CGTN, state-run"
@@ -4393,6 +5329,18 @@
     null,
     1,
     "national daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-001848": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national broadsheet newspaper"
    ]
   ]
  },
@@ -4458,6 +5406,40 @@
    ]
   ]
  },
+ "pf-001883": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Adelaide"
+   ]
+  ]
+ },
+ "pf-001887": {
+  "audience": [
+   [
+    "youth_students",
+    "caters to young listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Australian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: founded by the ABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "alternative music radio"
+   ]
+  ]
+ },
  "pf-001898": {
   "date": "2026-11-10",
   "owner": "Rogers Sports & Media",
@@ -4474,6 +5456,18 @@
    ]
   ]
  },
+ "pf-001918": {
+  "date": "2026-11-10",
+  "owner": "British Film Institute",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "film magazine of the British Film Institute"
+   ]
+  ]
+ },
  "pf-001925": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -4483,6 +5477,23 @@
     null,
     1,
     "daily newspaper in Montreal"
+   ]
+  ]
+ },
+ "pf-001943": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "political and cultural magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website sections Culture, Books"
    ]
   ]
  },
@@ -4598,6 +5609,18 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing editorial stance",
   "topics": []
+ },
+ "pf-002022": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "conservative tabloid in Melbourne"
+   ]
+  ]
  },
  "pf-002043": {
   "date": "2026-11-10",
@@ -4726,6 +5749,35 @@
    ]
   ]
  },
+ "pf-002248": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "political and cultural weekly"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "cultural coverage"
+   ]
+  ]
+ },
+ "pf-002277": {
+  "closed": "Wikidata: children's channel 1998-2025",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "preschool children's channel"
+   ]
+  ]
+ },
  "pf-002283": {
   "date": "2026-11-10",
   "topics": [
@@ -4734,6 +5786,23 @@
     null,
     1,
     "weekly political news magazine"
+   ]
+  ]
+ },
+ "pf-002284": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Perth"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Western Australia"
    ]
   ]
  },
@@ -4786,6 +5855,18 @@
    ]
   ]
  },
+ "pf-002297": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper in Sydney"
+   ]
+  ]
+ },
  "pf-002306": {
   "date": "2026-11-10",
   "owner": "Display Connectors",
@@ -4822,6 +5903,17 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-002317": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine with essays"
    ]
   ]
  },
@@ -4878,6 +5970,27 @@
     null,
     2,
     "website sections UPSC, Exam Mentor"
+   ]
+  ]
+ },
+ "pf-002347": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: owned by a readers' co-operative"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing daily newspaper"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    1,
+    "focus on trade union issues"
    ]
   ]
  },
@@ -5003,6 +6116,40 @@
    ]
   ]
  },
+ "pf-002406": {
+  "audience": [
+   [
+    "minority_language",
+    "Welsh-language programmes"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: division of the BBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster in Wales"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Wales"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ]
+  ]
+ },
  "pf-002408": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -5044,7 +6191,7 @@
    ]
   ],
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: operated by CCTV"
@@ -5103,9 +6250,38 @@
    ]
   ]
  },
+ "pf-002473": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by News Corp Australia"
+  ],
+  "right_populist": "same channel as Sky News Australia (hidden, owner 10.11.2026)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "conservative news channel"
+   ]
+  ]
+ },
+ "pf-002475": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Brisbane"
+   ]
+  ]
+ },
  "pf-002495": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -5242,7 +6418,7 @@
  },
  "pf-002629": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -5499,7 +6675,7 @@
  },
  "pf-002903": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -5515,7 +6691,7 @@
  },
  "pf-002904": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: government-affiliated"
@@ -5531,7 +6707,7 @@
  },
  "pf-002906": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -5575,7 +6751,7 @@
  },
  "pf-002913": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: state broadcaster CCTV"
@@ -5766,6 +6942,22 @@
    ]
   ]
  },
+ "pf-002963": {
+  "date": "2026-11-10",
+  "owner": "Australian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ABC radio station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music radio"
+   ]
+  ]
+ },
  "pf-002972": {
   "audience": [
    [
@@ -5836,6 +7028,28 @@
    ]
   ]
  },
+ "pf-003057": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: division of the BBC"
+  ],
+  "topics": [
+   [
+    "hunger_food",
+    "nutrition",
+    3,
+    "recipes"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "food and recipe website"
+   ]
+  ]
+ },
  "pf-003119": {
   "date": "2026-11-10",
   "owner": "Canadian Broadcasting Corporation",
@@ -5890,7 +7104,7 @@
  },
  "pf-003204": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CGTN, state-run"
@@ -5922,6 +7136,30 @@
    [
     "multilingual",
     "Hindi and English channels"
+   ]
+  ]
+ },
+ "pf-003250": {
+  "date": "2026-11-10",
+  "owner": "Future plc",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "retro video game magazine"
+   ]
+  ]
+ },
+ "pf-003254": {
+  "closed": "Wikipedia: The Bulletin 'was' an Australian magazine (closed 2008)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly magazine on politics and business"
    ]
   ]
  },
@@ -6171,6 +7409,23 @@
    ]
   ]
  },
+ "pf-003510": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Scottish broadsheet newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Scotland"
+   ]
+  ]
+ },
  "pf-003570": {
   "date": "2026-11-09",
   "topics": [
@@ -6343,7 +7598,7 @@
  },
  "pf-003737": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV news channel"
@@ -6394,6 +7649,35 @@
     "justice_rule_of_law",
     2,
     "website section Judiciário"
+   ]
+  ]
+ },
+ "pf-003785": {
+  "date": "2026-11-10",
+  "owner": "DMG Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free daily newspaper"
+   ]
+  ]
+ },
+ "pf-003787": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Brisbane and Queensland"
    ]
   ]
  },
@@ -6466,7 +7750,6 @@
  },
  "pf-003859": {
   "date": "2026-11-10",
-  "owner": "Grupo Imagen",
   "topics": [
    [
     "general_news",
@@ -6775,6 +8058,18 @@
    ]
   ]
  },
+ "pf-004167": {
+  "closed": "Wikipedia: published 1907-1928",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
+   ]
+  ]
+ },
  "pf-004174": {
   "date": "2026-11-10",
   "topics": [
@@ -6843,7 +8138,6 @@
  },
  "pf-004324": {
   "date": "2026-11-10",
-  "owner": "The Times Group",
   "topics": [
    [
     "general_news",
@@ -6902,6 +8196,44 @@
    ]
   ]
  },
+ "pf-004362": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "for newly arrived immigrants"
+   ],
+   [
+    "minority_language",
+    "programmes in many languages"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Special Broadcasting Service",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by SBS"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multicultural radio network"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for newly arrived immigrants"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
+   ]
+  ]
+ },
  "pf-004379": {
   "audience": [
    [
@@ -6923,9 +8255,29 @@
    ]
   ]
  },
+ "pf-004401": {
+  "audience": [
+   [
+    "women",
+    "teen girls"
+   ],
+   [
+    "youth_students",
+    "teen magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "teen girls magazine"
+   ]
+  ]
+ },
  "pf-004404": {
   "date": "2026-11-10",
-  "owner": "Ramoji Group",
   "topics": [
    [
     "general_news",
@@ -6998,6 +8350,27 @@
    ]
   ]
  },
+ "pf-004594": {
+  "audience": [
+   [
+    "lgbtq",
+    "LGBTQIA+ community media"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio station"
+  ],
+  "topics": [
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "LGBTQIA+ community radio"
+   ]
+  ]
+ },
  "pf-004610": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: called a far-right online publication",
@@ -7005,7 +8378,7 @@
  },
  "pf-004847": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: state-run China Global Television Network"
@@ -7016,6 +8389,185 @@
     null,
     1,
     "English-language state-run news channel"
+   ]
+  ]
+ },
+ "pf-004963": {
+  "audience": [
+   [
+    "religious",
+    "Christian radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: Christian radio"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio station"
+   ]
+  ]
+ },
+ "pf-004977": {
+  "audience": [
+   [
+    "persons_with_disabilities",
+    "for people with difficulties reading print"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: radio reading service"
+  ],
+  "topics": [
+   [
+    "disability",
+    null,
+    1,
+    "radio reading service for people who cannot read print"
+   ]
+  ]
+ },
+ "pf-004979": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: not-for-profit radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "not-for-profit educational radio"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "Sydney Educational Radio"
+   ]
+  ]
+ },
+ "pf-004982": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community radio in Canberra"
+   ]
+  ]
+ },
+ "pf-004985": {
+  "date": "2026-11-10",
+  "owner": "Tapt Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Tapt Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "talkback radio in Melbourne"
+   ]
+  ]
+ },
+ "pf-004991": {
+  "date": "2026-11-10",
+  "owner": "Tapt Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Tapt Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "talkback radio in Brisbane"
+   ]
+  ]
+ },
+ "pf-004993": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "multicultural radio"
+   ],
+   [
+    "minority_language",
+    "programmes in many languages"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "multicultural community radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "multicultural programmes"
+   ]
+  ]
+ },
+ "pf-005001": {
+  "date": "2026-11-10",
+  "owner": "Tapt Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Tapt Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and talk radio in Perth"
+   ]
+  ]
+ },
+ "pf-005002": {
+  "date": "2026-11-10",
+  "owner": "Australian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ABC radio station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local public radio in Sydney"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sydney"
    ]
   ]
  },
@@ -7068,6 +8620,30 @@
     null,
     2,
     "website section Iglesia"
+   ]
+  ]
+ },
+ "pf-005313": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Are Media",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's magazine"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Health"
    ]
   ]
  },
@@ -7185,7 +8761,7 @@
  },
  "pf-005567": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -7207,7 +8783,7 @@
    ]
   ],
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: owned by CCTV"
@@ -7223,7 +8799,7 @@
  },
  "pf-005569": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -7481,7 +9057,6 @@
  },
  "pf-006267": {
   "date": "2026-11-10",
-  "owner": "Organización Editorial Mexicana",
   "topics": [
    [
     "general_news",
@@ -7587,6 +9162,22 @@
    ]
   ]
  },
+ "pf-006437": {
+  "date": "2026-11-10",
+  "owner": "Foxtel",
+  "ownership": [
+   "private",
+   "Wikipedia: division of Foxtel"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channels"
+   ]
+  ]
+ },
  "pf-006485": {
   "date": "2026-11-09",
   "owner": "Grupo Globo",
@@ -7660,6 +9251,24 @@
     null,
     1,
     "news division of Global TV"
+   ]
+  ]
+ },
+ "pf-006560": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gold Coast region"
    ]
   ]
  },
@@ -7797,7 +9406,6 @@
  },
  "pf-007019": {
   "date": "2026-11-10",
-  "owner": "Organización Editorial Mexicana",
   "topics": [
    [
     "general_news",
@@ -8023,6 +9631,24 @@
    ]
   ]
  },
+ "pf-008672": {
+  "date": "2026-11-10",
+  "owner": "Nine Entertainment",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Politics"
+   ]
+  ]
+ },
  "pf-008722": {
   "audience": [
    [
@@ -8084,6 +9710,38 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: published by the RSS (Hindu nationalist)",
   "topics": []
+ },
+ "pf-009014": {
+  "date": "2026-11-10",
+  "owner": "Australian Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service radio of the ABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public radio with arts and ideas"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "science programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "knowledge programmes"
+   ],
+   [
+    "public_service_mandate",
+    "public radio"
+   ]
+  ]
  },
  "pf-009061": {
   "date": "2026-11-09",
@@ -8160,10 +9818,86 @@
   "far_right": "Wikidata (fr): American far-right media",
   "topics": []
  },
+ "pf-009514": {
+  "date": "2026-11-10",
+  "owner": "Australian Community Media",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local newspaper of North-West Tasmania"
+   ]
+  ]
+ },
  "pf-009528": {
   "date": "2026-11-10",
   "right_populist": "Wikidata (fr): American far-right / conservative magazine",
   "topics": []
+ },
+ "pf-009641": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: network of nonprofit media outlets"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nonprofit outlet with articles by academics"
+   ],
+   [
+    "science",
+    null,
+    1,
+    "research reports by academics"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Education"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environment + Energy"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "articles written by academics"
+   ],
+   [
+    "open_to_partner_content",
+    "academics write the articles"
+   ]
+  ]
+ },
+ "pf-009759": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Ukrainian community"
+   ],
+   [
+    "minority_language",
+    "Ukrainian language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "Ukrainian weekly in Australia"
+   ]
+  ]
  },
  "pf-009844": {
   "date": "2026-11-10",
@@ -8174,6 +9908,21 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): partisan right-wing site (Salem Media); Wikipedia: 'mainstream conservative' bias",
   "topics": []
+ },
+ "pf-010276": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "British entertainment pay TV channel"
+   ]
+  ]
  },
  "pf-010297": {
   "date": "2026-11-10",
@@ -8187,6 +9936,24 @@
     null,
     1,
     "space and astronomy news"
+   ]
+  ]
+ },
+ "pf-011363": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Are Media",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's weekly magazine"
    ]
   ]
  },
@@ -8413,7 +10180,7 @@
  },
  "pf-012292": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: owned by CCTV"
@@ -8637,6 +10404,18 @@
   "not_media": "online chess platform, not a media outlet",
   "topics": []
  },
+ "pf-014348": {
+  "date": "2026-11-10",
+  "owner": "News Corp Australia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
+ },
  "pf-014395": {
   "date": "2026-11-10",
   "ownership": [
@@ -8740,6 +10519,29 @@
     "environment_general",
     2,
     "website section Environment"
+   ]
+  ]
+ },
+ "pf-015027": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local newspaper of Colac"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "link 'Suggest a Story'"
    ]
   ]
  },
@@ -9024,7 +10826,7 @@
  },
  "pf-016660": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: state-run CGTN"
@@ -9069,6 +10871,29 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: organ of Spanish Catholic integrism, links to the extreme right",
   "topics": []
+ },
+ "pf-017013": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Persian speakers in Iran and abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Persian-language satellite TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Persian, English and Arabic"
+   ]
+  ]
  },
  "pf-017019": {
   "date": "2026-11-10",
@@ -9153,7 +10978,6 @@
    ]
   ],
   "date": "2026-11-10",
-  "owner": "Grupo Multimedios",
   "topics": [
    [
     "business_economy",
@@ -9185,7 +11009,7 @@
  },
  "pf-021449": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
@@ -9284,7 +11108,7 @@
    ]
   ],
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: owned by CCTV"
@@ -9382,7 +11206,7 @@
  },
  "pf-024188": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV / CMG"
@@ -9398,7 +11222,7 @@
  },
  "pf-024219": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: owned by CCTV"
@@ -9595,6 +11419,28 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia",
   "topics": []
+ },
+ "pf-029551": {
+  "date": "2026-11-10",
+  "owner": "BBC",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned and operated by the BBC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music and arts radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "BBC public service"
+   ]
+  ]
  },
  "pf-031169": {
   "date": "2026-11-10",
@@ -9864,6 +11710,33 @@
    ]
   ]
  },
+ "pf-070537": {
+  "audience": [
+   [
+    "minority_language",
+    "Welsh speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcast channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Welsh-language public TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Welsh public broadcaster"
+   ]
+  ]
+ },
  "pf-070540": {
   "date": "2026-11-10",
   "topics": [
@@ -9932,7 +11805,7 @@
  },
  "pf-071244": {
   "date": "2026-11-10",
-  "owner": "China Media Group",
+  "owner": "China Central Television",
   "ownership": [
    "state_controlled",
    "Wikipedia: CCTV channel"
