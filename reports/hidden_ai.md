@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-37 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+41 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -29,6 +29,7 @@
 | pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
 | pf-008748 | Official Gazette of the Federation | MEX | not a media outlet: official government gazette that publishes laws, not a media outlet |
 | pf-000928 | CKM | POL | no longer published: Wikipedia: CKM 'was' a magazine |
+| pf-001427 | Contimporanul | ROU | no longer published: Wikipedia: 'was' a Romanian magazine (historic) |
 | pf-016924 | Dzen | RUS | not a media outlet: recommendation platform (VK), not a media outlet |
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |
 | pf-001845 | Ogoniok | RUS | no longer published: Wikipedia: circulated from 1899 to 2020 |
@@ -41,3 +42,6 @@
 | pf-000103 | Penthouse | USA | not a media outlet: erotic magazine (adult content is excluded, KATEGORIEN 0.4) |
 | pf-000001 | Reddit | USA | not a media outlet: social media platform and forum, not a media outlet |
 | pf-016215 | الباحث الدلالي | USA | not a media outlet: search engine for scientific papers, not a media outlet |
+| pf-003258 | Die Afrikaanse Patriot | ZAF | no longer published: Wikipedia: historic newspaper (first issue 1876) |
+| pf-002656 | South African Press Association | ZAF | no longer published: Wikipedia: closed on 31 March 2015 |
+| pf-021991 | e.tv News | ZAF | no longer published: Wikipedia: e.tv News & Sport 'was' a channel |

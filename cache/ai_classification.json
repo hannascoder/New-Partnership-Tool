@@ -2125,6 +2125,17 @@
    ]
   ]
  },
+ "pf-000257": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper born as liberation struggle paper"
+   ]
+  ]
+ },
  "pf-000260": {
   "date": "2026-11-10",
   "owner": "RTL Deutschland",
@@ -2276,6 +2287,28 @@
     null,
     1,
     "news division of ABC"
+   ]
+  ]
+ },
+ "pf-000306": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TVR news channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24/7 public news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
    ]
   ]
  },
@@ -2668,6 +2701,28 @@
    ]
   ]
  },
+ "pf-000413": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national commercial radio of the SABC"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
  "pf-000418": {
   "date": "2026-11-10",
   "ownership": [
@@ -2888,6 +2943,23 @@
    [
     "multilingual",
     "broadcasts in many languages"
+   ]
+  ]
+ },
+ "pf-000456": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "website section Securitate"
    ]
   ]
  },
@@ -3942,6 +4014,33 @@
    ]
   ]
  },
+ "pf-000724": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hungarian-language local daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cluj county"
+   ]
+  ]
+ },
  "pf-000729": {
   "date": "2026-11-10",
   "topics": [
@@ -3994,6 +4093,39 @@
     null,
     2,
     "conflicts section"
+   ]
+  ]
+ },
+ "pf-000733": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "biggest Sunday newspaper"
+   ]
+  ]
+ },
+ "pf-000736": {
+  "date": "2026-11-10",
+  "owner": "Antena TV Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Antena TV Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -4306,6 +4438,28 @@
    [
     "public_service_mandate",
     "BBC public service"
+   ]
+  ]
+ },
+ "pf-000789": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: main channel of TVR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main public TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
    ]
   ]
  },
@@ -4740,6 +4894,50 @@
    ]
   ]
  },
+ "pf-000877": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Radio Romania",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Romanian public radio station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public regional radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Transylvania"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Sănătate"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
  "pf-000879": {
   "audience": [
    [
@@ -4912,6 +5110,33 @@
    ]
   ]
  },
+ "pf-000912": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "Africa's oldest community radio"
+   ],
+   [
+    "human_rights",
+    null,
+    3,
+    "pioneering community media"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English, Afrikaans, isiXhosa"
+   ]
+  ]
+ },
  "pf-000913": {
   "date": "2026-11-10",
   "ownership": [
@@ -4945,6 +5170,28 @@
    [
     "public_service_mandate",
     "national public broadcaster"
+   ]
+  ]
+ },
+ "pf-000921": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: run by the SABC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Afrikaans public radio service"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
    ]
   ]
  },
@@ -5294,6 +5541,28 @@
    ]
   ]
  },
+ "pf-001061": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public television company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
  "pf-001062": {
   "date": "2026-11-10",
   "ownership": [
@@ -5480,6 +5749,21 @@
    ]
   ]
  },
+ "pf-001131": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Digi Communications"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary and lifestyle channel"
+   ]
+  ]
+ },
  "pf-001140": {
   "date": "2026-11-10",
   "topics": [
@@ -5517,6 +5801,21 @@
     null,
     2,
     "Aichi Prefecture"
+   ]
+  ]
+ },
+ "pf-001143": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Digi TV platform"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports TV network"
    ]
   ]
  },
@@ -5940,6 +6239,83 @@
    ]
   ]
  },
+ "pf-001216": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Oltenia"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-001217": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: international service of the SABC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international broadcasting service"
+   ],
+   [
+    "partnerships",
+    null,
+    3,
+    "Africa coverage"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ],
+   [
+    "multilingual",
+    "several African and European languages"
+   ]
+  ]
+ },
+ "pf-001223": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Cultură"
+   ]
+  ]
+ },
  "pf-001224": {
   "country_hint": "GTM (Guatemalan channel of TV Azteca)",
   "date": "2026-11-10",
@@ -6226,6 +6602,27 @@
     null,
     1,
     "official newspaper of the People's Liberation Army"
+   ]
+  ]
+ },
+ "pf-001276": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hungarian-language generalist TV"
    ]
   ]
  },
@@ -7159,6 +7556,24 @@
    ]
   ]
  },
+ "pf-001403": {
+  "date": "2026-11-10",
+  "owner": "Media24",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online news publication"
+   ],
+   [
+    "peace_justice",
+    "violence_peace",
+    2,
+    "crime section"
+   ]
+  ]
+ },
  "pf-001406": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: Polish right-wing weekly",
@@ -7173,6 +7588,18 @@
     null,
     1,
     "film magazine"
+   ]
+  ]
+ },
+ "pf-001427": {
+  "closed": "Wikipedia: 'was' a Romanian magazine (historic)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
    ]
   ]
  },
@@ -7200,6 +7627,23 @@
     null,
     1,
     "national sports newspaper"
+   ]
+  ]
+ },
+ "pf-001442": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "family magazine for black readers"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -7299,6 +7743,32 @@
     null,
     2,
     "dramas, variety and anime"
+   ]
+  ]
+ },
+ "pf-001459": {
+  "date": "2026-11-10",
+  "owner": "Radio Romania",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the public radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ],
+   [
+    "multilingual",
+    "many languages incl. Aromanian"
    ]
   ]
  },
@@ -7467,6 +7937,44 @@
    [
     "public_service_mandate",
     "BBC public service"
+   ]
+  ]
+ },
+ "pf-001496": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Radio Romania",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Radio Romania station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public regional radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Târgu Mureș"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
    ]
   ]
  },
@@ -7690,6 +8198,51 @@
     null,
     1,
     "daily newspaper in Junín"
+   ]
+  ]
+ },
+ "pf-001558": {
+  "date": "2026-11-10",
+  "owner": "Naspers",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Afrikaans daily newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Sake"
+   ]
+  ]
+ },
+ "pf-001572": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hungarian-language newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Mureș county"
    ]
   ]
  },
@@ -8194,6 +8747,22 @@
    ]
   ]
  },
+ "pf-001703": {
+  "date": "2026-11-10",
+  "owner": "RCS & RDS",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by RCS & RDS"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music TV channel"
+   ]
+  ]
+ },
  "pf-001707": {
   "date": "2026-11-10",
   "ownership": [
@@ -8663,6 +9232,30 @@
    ]
   ]
  },
+ "pf-001878": {
+  "date": "2026-11-10",
+  "owner": "M&G Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper with investigative journalism"
+   ],
+   [
+    "gender_equality",
+    "women_leadership",
+    2,
+    "Power of Women 2026"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigations"
+   ]
+  ]
+ },
  "pf-001883": {
   "date": "2026-11-10",
   "owner": "News Corp Australia",
@@ -8970,6 +9563,22 @@
    ]
   ]
  },
+ "pf-002028": {
+  "date": "2026-11-10",
+  "owner": "Radio France Internationale",
+  "ownership": [
+   "public_service",
+   "Wikipedia: service of Radio France Internationale"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Romanian-language service of RFI"
+   ]
+  ]
+ },
  "pf-002037": {
   "date": "2026-11-10",
   "topics": [
@@ -9117,6 +9726,21 @@
    [
     "public_service_mandate",
     "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-002109": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
    ]
   ]
  },
@@ -9381,6 +10005,17 @@
     "war_conflict",
     2,
     "war section"
+   ]
+  ]
+ },
+ "pf-002260": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio with music for South Africa"
    ]
   ]
  },
@@ -9861,6 +10496,23 @@
    ]
   ]
  },
+ "pf-002391": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-002406": {
   "audience": [
    [
@@ -9904,6 +10556,40 @@
     null,
     1,
     "daily newspaper in Vancouver"
+   ]
+  ]
+ },
+ "pf-002417": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Romanians abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: international channel of TVR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international channel of public TV"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Romanians abroad"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
    ]
   ]
  },
@@ -9962,6 +10648,17 @@
     null,
     1,
     "commercial TV network"
+   ]
+  ]
+ },
+ "pf-002450": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports website and newspaper"
    ]
   ]
  },
@@ -10490,6 +11187,18 @@
    ]
   ]
  },
+ "pf-002656": {
+  "closed": "Wikipedia: closed on 31 March 2015",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-002659": {
   "audience": [
    [
@@ -10725,6 +11434,28 @@
   "date": "2026-11-09",
   "not_media": "a magazine paper size (Wikidata error), not a media outlet",
   "topics": []
+ },
+ "pf-002779": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
+ },
+ "pf-002781": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in Bucharest"
+   ]
+  ]
  },
  "pf-002782": {
   "date": "2026-11-10",
@@ -11313,6 +12044,23 @@
    ]
   ]
  },
+ "pf-002932": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "industry_innovation",
+    "infrastructure",
+    3,
+    "infrastructure project coverage"
+   ]
+  ]
+ },
  "pf-002934": {
   "date": "2026-11-10",
   "ownership": [
@@ -11456,6 +12204,27 @@
     null,
     1,
     "news, talk and music radio"
+   ]
+  ]
+ },
+ "pf-003028": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Antena TV Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Educație"
    ]
   ]
  },
@@ -11632,6 +12401,43 @@
    ]
   ]
  },
+ "pf-003195": {
+  "date": "2026-11-10",
+  "owner": "Sekunjalo",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cape Town"
+   ]
+  ]
+ },
+ "pf-003196": {
+  "date": "2026-11-10",
+  "owner": "Independent News & Media SA",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "morning newspaper in Cape Town"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cape Town"
+   ]
+  ],
+  "website_warning": "the website address leads to an audience research site (saarf.co.za), not the newspaper"
+ },
  "pf-003202": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: classed to the right or far right",
@@ -11650,6 +12456,17 @@
     null,
     1,
     "Russian-language news channel"
+   ]
+  ]
+ },
+ "pf-003211": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports news outlet"
    ]
   ]
  },
@@ -11739,6 +12556,18 @@
    ]
   ]
  },
+ "pf-003258": {
+  "closed": "Wikipedia: historic newspaper (first issue 1876)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first Afrikaans-language newspaper"
+   ]
+  ]
+ },
  "pf-003262": {
   "audience": [
    [
@@ -11809,6 +12638,29 @@
     null,
     1,
     "sports network"
+   ]
+  ]
+ },
+ "pf-003294": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Zulu-language daily newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "health section"
    ]
   ]
  },
@@ -11937,6 +12789,27 @@
     null,
     1,
     "news agency, 3,000 articles a day"
+   ]
+  ]
+ },
+ "pf-003345": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hungarian-language national newspaper"
    ]
   ]
  },
@@ -12898,6 +13771,106 @@
    ]
   ]
  },
+ "pf-004056": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-004057": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "family public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-004058": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-004059": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the SABC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national English-language public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
  "pf-004060": {
   "date": "2026-11-09",
   "ownership": [
@@ -13076,6 +14049,34 @@
    ]
   ]
  },
+ "pf-004237": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "isiZulu public radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
  "pf-004242": {
   "date": "2026-11-09",
   "topics": [
@@ -13223,6 +14224,34 @@
    ]
   ]
  },
+ "pf-004347": {
+  "audience": [
+   [
+    "youth_students",
+    "young listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "youth music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
  "pf-004348": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -13232,6 +14261,21 @@
     null,
     1,
     "local newspaper in Brantford"
+   ]
+  ]
+ },
+ "pf-004350": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV channels"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "group of sports channels"
    ]
   ]
  },
@@ -13724,6 +14768,27 @@
    ]
   ]
  },
+ "pf-004765": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV network"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and finance news across Africa"
+   ]
+  ]
+ },
  "pf-004768": {
   "date": "2026-11-10",
   "owner": "Mahaka Media",
@@ -14131,6 +15196,28 @@
    ]
   ]
  },
+ "pf-005020": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio in Cape Town"
+   ]
+  ]
+ },
+ "pf-005043": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-005047": {
   "date": "2026-11-10",
   "ownership": [
@@ -14185,6 +15272,144 @@
    ]
   ],
   "website_warning": "the website shows an empty WordPress page ('Hello world!')"
+ },
+ "pf-005080": {
+  "date": "2026-11-10",
+  "owner": "Radio Romania",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Romanian public radio station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public regional radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Moldavia region"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-005081": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Timișoara region"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-005082": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Mureș region"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-005156": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main commercial radio of the Eastern Cape"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Eastern Cape and Garden Route"
+   ]
+  ]
+ },
+ "pf-005178": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing bi-monthly magazine"
+   ],
+   [
+    "inequalities",
+    null,
+    1,
+    "social justice"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    2,
+    "labour"
+   ]
+  ]
  },
  "pf-005196": {
   "date": "2026-11-09",
@@ -14283,6 +15508,29 @@
    ]
   ]
  },
+ "pf-005289": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business"
+   ]
+  ]
+ },
  "pf-005313": {
   "audience": [
    [
@@ -14304,6 +15552,21 @@
     null,
     2,
     "website section Health"
+   ]
+  ]
+ },
+ "pf-005326": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
    ]
   ]
  },
@@ -14730,6 +15993,42 @@
    ]
   ]
  },
+ "pf-005819": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial talk radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cape Town"
+   ]
+  ]
+ },
+ "pf-005820": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community TV"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community TV channel of Cape Town"
+   ]
+  ]
+ },
  "pf-005825": {
   "audience": [
    [
@@ -14942,6 +16241,23 @@
    ]
   ]
  },
+ "pf-006093": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid daily newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Elections"
+   ]
+  ]
+ },
  "pf-006096": {
   "date": "2026-11-10",
   "topics": [
@@ -15018,6 +16334,27 @@
    ]
   ]
  },
+ "pf-006166": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: news channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "politics"
+   ]
+  ]
+ },
  "pf-006174": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing to far-right anti-immigration site",
@@ -15027,6 +16364,28 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
+ },
+ "pf-006220": {
+  "date": "2026-11-10",
+  "owner": "e.tv",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by e.tv"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news broadcaster"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Elections"
+   ]
+  ]
  },
  "pf-006221": {
   "date": "2026-11-10",
@@ -15041,6 +16400,27 @@
     null,
     1,
     "sports channel and website of ERT"
+   ]
+  ]
+ },
+ "pf-006223": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial radio in KwaZulu-Natal"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "KwaZulu-Natal"
    ]
   ]
  },
@@ -15223,6 +16603,23 @@
    ]
   ]
  },
+ "pf-006363": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's magazine on fashion and lifestyle"
+   ]
+  ]
+ },
  "pf-006382": {
   "audience": [
    [
@@ -15258,6 +16655,28 @@
     null,
     1,
     "news website"
+   ]
+  ]
+ },
+ "pf-006430": {
+  "date": "2026-11-10",
+  "owner": "Doğan Holding",
+  "ownership": [
+   "private",
+   "Wikipedia: part of Doğan Holding"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -15458,6 +16877,28 @@
     null,
     1,
     "Gold Coast region"
+   ]
+  ]
+ },
+ "pf-006564": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SABC regional radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "regional radio for Cape Town"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
    ]
   ]
  },
@@ -15750,6 +17191,23 @@
    [
     "public_service_mandate",
     "public radio"
+   ]
+  ]
+ },
+ "pf-006969": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major news site"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "finance"
    ]
   ]
  },
@@ -16176,6 +17634,44 @@
    ]
   ]
  },
+ "pf-007379": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian-speaking minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Hungarian community in Romania"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Transylvania and Maramureș"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
  "pf-008126": {
   "audience": [
    [
@@ -16358,6 +17854,101 @@
    ]
   ]
  },
+ "pf-008279": {
+  "audience": [
+   [
+    "minority_language",
+    "Tshivenda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Tshivenda regional public radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-008285": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Sesotho public radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-008289": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper and news website"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "local news section"
+   ]
+  ]
+ },
+ "pf-008349": {
+  "date": "2026-11-10",
+  "owner": "Clever",
+  "ownership": [
+   "private",
+   "Wikipedia: media group Clever"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channels"
+   ]
+  ]
+ },
  "pf-008409": {
   "date": "2026-11-10",
   "owner": "TBS",
@@ -16385,6 +17976,23 @@
   "right_populist": "Wikipedia: national-liberal Right, right-wing readership",
   "topics": []
  },
+ "pf-008424": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent online news publication"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigations"
+   ]
+  ]
+ },
  "pf-008432": {
   "date": "2026-11-10",
   "ownership": [
@@ -16397,6 +18005,40 @@
     null,
     1,
     "publisher of Daily Trust"
+   ]
+  ]
+ },
+ "pf-008539": {
+  "audience": [
+   [
+    "minority_language",
+    "Xitsonga speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SABC radio station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Xitsonga public radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
    ]
   ]
  },
@@ -16562,6 +18204,17 @@
    ]
   ]
  },
+ "pf-008741": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "weekly literary magazine"
+   ]
+  ]
+ },
  "pf-008748": {
   "date": "2026-11-10",
   "not_media": "official government gazette that publishes laws, not a media outlet",
@@ -16675,6 +18328,40 @@
    ]
   ]
  },
+ "pf-009003": {
+  "audience": [
+   [
+    "rural_farmers",
+    "'Life in the countryside', farmers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Radio Romania",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-owned radio run by Radio Romania"
+  ],
+  "topics": [
+   [
+    "agriculture",
+    null,
+    1,
+    "radio for rural areas and farmers"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "village life"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
  "pf-009014": {
   "date": "2026-11-10",
   "owner": "Australian Broadcasting Corporation",
@@ -16707,6 +18394,49 @@
    ]
   ]
  },
+ "pf-009018": {
+  "date": "2026-11-10",
+  "owner": "Radio Romania",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the Romanian Radio Broadcasting Company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first national public radio channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-009019": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community-based radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "Afrikaans community radio in Bloemfontein"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "religion programmes"
+   ]
+  ]
+ },
  "pf-009061": {
   "date": "2026-11-09",
   "owner": "Sistema Verdes Mares",
@@ -16728,6 +18458,33 @@
     null,
     1,
     "TV network"
+   ]
+  ]
+ },
+ "pf-009117": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-009118": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: news channel"
+  ],
+  "right_populist": "Wikipedia: news TV with conservative and nationalist orientation",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
    ]
   ]
  },
@@ -17789,6 +19546,23 @@
    ]
   ]
  },
+ "pf-013359": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency and media company"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Economic"
+   ]
+  ]
+ },
  "pf-013415": {
   "date": "2026-11-10",
   "owner": "ERT",
@@ -17935,6 +19709,23 @@
     null,
     1,
     "youth magazine of the Communist Youth"
+   ]
+  ]
+ },
+ "pf-013462": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest independent newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Makhanda (Grahamstown)"
    ]
   ]
  },
@@ -18172,6 +19963,21 @@
    [
     "public_service_mandate",
     "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-013921": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community radio in the North West"
    ]
   ]
  },
@@ -18463,6 +20269,33 @@
    ]
   ]
  },
+ "pf-014741": {
+  "audience": [
+   [
+    "minority_language",
+    "isiNdebele speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SABC radio station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "isiNdebele national public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
  "pf-014857": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right news channel",
@@ -18487,6 +20320,33 @@
     null,
     1,
     "music and entertainment radio"
+   ]
+  ]
+ },
+ "pf-014872": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SABC radio station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "isiXhosa public radio"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
    ]
   ]
  },
@@ -19098,6 +20958,29 @@
    ]
   ]
  },
+ "pf-016212": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news syndication service written by Africans"
+   ],
+   [
+    "partnerships",
+    null,
+    3,
+    "Africa news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "news and content syndication service"
+   ]
+  ]
+ },
  "pf-016215": {
   "date": "2026-11-09",
   "not_media": "search engine for scientific papers, not a media outlet",
@@ -19345,6 +21228,33 @@
     null,
     2,
     "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-016604": {
+  "audience": [
+   [
+    "religious",
+    "Orthodox community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: official service of the Romanian Patriarchate"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "news service of the Romanian Orthodox Church"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Romanian and English"
    ]
   ]
  },
@@ -19823,6 +21733,39 @@
    ]
   ]
  },
+ "pf-021979": {
+  "audience": [
+   [
+    "children",
+    "cartoons"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by eMedia Investments"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
+ "pf-021991": {
+  "closed": "Wikipedia: e.tv News & Sport 'was' a channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV news and sports channel"
+   ]
+  ]
+ },
  "pf-022009": {
   "date": "2026-11-09",
   "owner": "Socialist Workers' Party (PTS)",
@@ -20110,6 +22053,82 @@
    ]
   ]
  },
+ "pf-024143": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ],
+   [
+    "educational",
+    "educational channel"
+   ]
+  ]
+ },
+ "pf-024144": {
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the SABC"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "free-to-air sports channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-024157": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "South African Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SABC channel"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "online children's channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "SABC public broadcaster"
+   ]
+  ]
+ },
  "pf-024174": {
   "audience": [
    [
@@ -20317,6 +22336,17 @@
    ]
   ]
  },
+ "pf-024743": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Romanian news channel (Euronews franchise)"
+   ]
+  ]
+ },
  "pf-024753": {
   "date": "2026-11-09",
   "topics": [
@@ -20465,6 +22495,50 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing German news website",
   "topics": []
+ },
+ "pf-025723": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TVR channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "folklore streaming channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-025724": {
+  "date": "2026-11-10",
+  "owner": "Televiziunea Română",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of TVR"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
+   ]
+  ]
  },
  "pf-025923": {
   "date": "2026-11-10",
@@ -20978,6 +23052,27 @@
    [
     "public_service_mandate",
     "national public broadcaster"
+   ]
+  ]
+ },
+ "pf-070551": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Romanian public broadcaster"
    ]
   ]
  },

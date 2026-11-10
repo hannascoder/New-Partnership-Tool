@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-148 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+149 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -113,6 +113,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-001585 | Nascer do Sol | PRT | AI reading (right-wing populist): Wikipedia: leans on the right wing |
 | pf-016497 | Observador | PRT | AI reading (right-wing populist): Wikipedia: defined political orientation (right-wing liberalism) |
 | pf-000334 | Al-Aqsa TV | PSE | Wikidata political ideology of the owner Hamas: antisemitism |
+| pf-009118 | România TV | ROU | AI reading (right-wing populist): Wikipedia: news TV with conservative and nationalist orientation |
 | pf-002788 | Limonka | RUS | AI reading: Wikipedia: official organ of the National Bolshevik Party |
 | pf-014030 | Riecz | RUS | Wikidata political ideology of the owner Nazi Germany: Nazism |
 | pf-016110 | Tsargrad TV | RUS | AI reading (right-wing populist): Wikipedia: pro-Kremlin, Russian Orthodox stances; owner Konstantin Malofeev (nationalist) |

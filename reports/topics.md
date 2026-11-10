@@ -1,8 +1,8 @@
 # Step 4d: topics, target audience and UN profile
 
-Topic matches by strength: main focus 83,179 · own section 79,232 · covers it 54,569
+Topic matches by strength: main focus 83,218 · own section 79,235 · covers it 54,560
 
-70,891 outlets shown on the website. An outlet can have several topics and profiles.
+70,886 outlets shown on the website. An outlet can have several topics and profiles.
 Topics and UN profiles never hide an outlet; they only change the order (unless the user
 switches on "Only show topic matches").
 
@@ -14,8 +14,8 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 |---|---|---|---|---|---|---|---|
 | Poverty (SDG 1) | 626 | 0 | 0 | 0 | 25 | 0 | website section "Development" (59); website headlines: "pobreza" (51); website headlines: "social security" (34) |
 | Hunger & food (SDG 2) | 1,044 | 0 | 0 | 0 | 62 | 0 | website About page: "nutrition" (109); website section "Nutrition" (57); website headlines: "hunger" (43) |
-| Health & well-being (SDG 3) | 8,451 | 87 | 0 | 0 | 242 | 0 | website section "Health" (2,156); website section "Salud" (704); website section "Saúde" (443) |
-| Quality education (SDG 4) | 9,562 | 1,325 | 0 | 0 | 645 | 0 | website section "Education" (2,065); iptv-org category "education" (781); website About page: "education" (454) |
+| Health & well-being (SDG 3) | 8,452 | 87 | 0 | 0 | 242 | 0 | website section "Health" (2,156); website section "Salud" (704); website section "Saúde" (443) |
+| Quality education (SDG 4) | 9,561 | 1,325 | 0 | 0 | 645 | 0 | website section "Education" (2,065); iptv-org category "education" (781); website About page: "education" (454) |
 | Gender equality (SDG 5) | 3,299 | 16 | 0 | 0 | 345 | 0 | website headlines: "rape" (239); website section "Women" (109); website headlines: "feminicidio" (74) |
 | Clean water & sanitation (SDG 6) | 748 | 0 | 0 | 0 | 27 | 0 | website section "Water" (45); website section "Sanità" (another language, via Wikidata) (39); website headlines: "agua potable" (25) |
 | Responsible consumption & production (SDG 12) | 706 | 0 | 0 | 0 | 28 | 0 | website section "Sustainability" (91); website headlines: "recycling" (56); website section "Sustentabilidade​" (54) |
@@ -27,19 +27,19 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Industry, innovation & infrastructure (SDG 9) | 4,237 | 0 | 0 | 0 | 471 | 0 | website About page: "innovation" (289); website About page: "infrastructure" (144); website headlines: "industria" (96) |
 | Reduced inequalities (SDG 10) | 1,152 | 141 | 0 | 0 | 163 | 0 | website section "Diversidade" (59); Wikidata: African American newspaper (56); Wikidata: LGBTQ magazine (54) |
 | Sustainable cities & communities (SDG 11) | 1,827 | 0 | 0 | 0 | 47 | 0 | website section "Housing" (238); website section "Cidades" (180); website section "Transport" (99) |
-| Peace, justice & strong institutions (SDG 16) | 3,351 | 24 | 60 | 0 | 222 | 0 | website section "Investigations" (161); website section "Courts" (159); website section "Justice" (141) |
-| Partnerships for the goals (SDG 17) | 894 | 0 | 0 | 0 | 36 | 0 | website headlines: "onu" (98); website section "Development" (60); website About page: "imf", "international monetary fund" (32) |
-| General news | 36,317 | 26,988 | 0 | 0 | 0 | 0 | Wikidata: newspaper (9,788); no topic in the sources: general news (9,199); iptv-org category "general" (6,940) |
+| Peace, justice & strong institutions (SDG 16) | 3,350 | 24 | 60 | 0 | 222 | 0 | website section "Investigations" (160); website section "Courts" (159); website section "Justice" (141) |
+| Partnerships for the goals (SDG 17) | 896 | 0 | 0 | 0 | 36 | 0 | website headlines: "onu" (98); website section "Development" (60); website About page: "imf", "international monetary fund" (32) |
+| General news | 36,328 | 26,985 | 0 | 0 | 0 | 0 | Wikidata: newspaper (9,787); no topic in the sources: general news (9,196); iptv-org category "general" (6,939) |
 | Fact-checking & misinformation | 1,127 | 38 | 267 | 0 | 109 | 0 | IFCN (150); Wikipedia list of fact-checking websites (96); website About page: "verification" (85) |
 | Science | 5,434 | 153 | 0 | 0 | 843 | 0 | website section "Science" (280); website section "History + Science" (280); website About page: "research" (223) |
-| Business & economy | 17,653 | 579 | 0 | 0 | 3,780 | 0 | website section "Business" (2,613); description mentions "business" (1,239); website About page: "business" (720) |
-| Culture | 21,976 | 1,376 | 0 | 0 | 5,284 | 0 | website section "Entertainment" (2,064); website section "Cultura" (1,058); description mentions "music" (924) |
-| Religion | 8,487 | 3,622 | 0 | 0 | 917 | 0 | iptv-org category "religious" (1,901); Radio Browser tag "christian" (820); website section "Religion" (298) |
-| Community & local | 22,261 | 2,427 | 0 | 16,082 | 773 | 0 | scope local (15,453); Radio Browser tag "community radio" (704); organisation type community media (629) |
+| Business & economy | 17,652 | 579 | 0 | 0 | 3,778 | 0 | website section "Business" (2,613); description mentions "business" (1,239); website About page: "business" (720) |
+| Culture | 21,980 | 1,375 | 0 | 0 | 5,282 | 0 | website section "Entertainment" (2,064); website section "Cultura" (1,058); description mentions "music" (924) |
+| Religion | 8,487 | 3,622 | 0 | 0 | 916 | 0 | iptv-org category "religious" (1,901); Radio Browser tag "christian" (820); website section "Religion" (298) |
+| Community & local | 22,276 | 2,427 | 0 | 16,082 | 772 | 0 | scope local (15,453); Radio Browser tag "community radio" (704); organisation type community media (629) |
 | Humanitarian aid | 783 | 0 | 0 | 0 | 35 | 0 | website headlines: "relief" (158); website headlines: "shelter" (78); website About page: "relief" (33) |
 | Human rights | 1,552 | 9 | 0 | 0 | 215 | 0 | website headlines: "hate speech" (80); website About page: "freedom of speech" (54); website About page: "human rights" (50) |
 | Migration & refugees | 1,489 | 0 | 0 | 0 | 79 | 0 | website headlines: "immigration" (154); website section "Immigration" (147); website headlines: "deportation" (49) |
-| Conflict & security | 2,267 | 16 | 0 | 0 | 230 | 0 | website headlines: "military", "weapons" (247); website headlines: "military" (185); website headlines: "militar" (166) |
+| Conflict & security | 2,268 | 16 | 0 | 0 | 230 | 0 | website headlines: "military", "weapons" (247); website headlines: "military" (185); website headlines: "militar" (166) |
 | Technology, digital & AI | 8,231 | 85 | 0 | 0 | 1,055 | 0 | website section "Technology" (597); website section "Tecnología" (449); website section "Tech" (448) |
 | Agriculture & rural | 3,492 | 24 | 0 | 0 | 341 | 0 | website section "Agriculture" (430); website headlines: "farm" (179); website About page: "cultures" (111) |
 | Disasters & emergencies | 2,398 | 0 | 0 | 0 | 135 | 0 | website section "Wildfires" (149); website headlines: "flood" (82); website headlines: "tsunami" (77) |
@@ -47,12 +47,12 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Indigenous peoples | 886 | 37 | 0 | 0 | 101 | 0 | website headlines: "indigenous" (102); website section "Tamazight" (another language, via Wikidata) (65); website About page: "indigenous" (52) |
 | Disability & inclusion | 1,112 | 0 | 0 | 0 | 51 | 0 | website headlines: "discapacidad", "personas con discapacidad" (150); website headlines: "blind" (124); website About page: "blind", "disabilities" (74) |
 | Media freedom & journalism | 770 | 22 | 58 | 0 | 230 | 0 | website About page: "independent journalism" (66); OCCRP network (investigative journalism) (58); Wikipedia: "investigative journalism" (38) |
-| Elections & governance | 10,706 | 959 | 0 | 0 | 689 | 0 | iptv-org category "legislative" (610); website section "Elections" (330); website headlines: "election" (324) |
-| Sports | 21,408 | 3,114 | 0 | 0 | 4,934 | 0 | website section "Sports" (4,073); iptv-org category "sports" (2,175); description mentions "sports" (2,031) |
+| Elections & governance | 10,707 | 959 | 0 | 0 | 689 | 0 | iptv-org category "legislative" (610); website section "Elections" (330); website headlines: "election" (324) |
+| Sports | 21,406 | 3,114 | 0 | 0 | 4,933 | 0 | website section "Sports" (4,073); iptv-org category "sports" (2,175); description mentions "sports" (2,030) |
 | Diaspora | 535 | 15 | 0 | 0 | 123 | 0 | website About page: "diaspora" (72); website section "Diaspora" (62); website headlines: "diaspora" (53) |
 | Older persons & ageing | 1,479 | 0 | 0 | 0 | 60 | 0 | website headlines: "seniors" (134); website section "Seniors" (108); website headlines: "adultos mayores" (89) |
 
-Outlets with no topic in any source (shown as "General news" by default): 9,169 (13 %)
+Outlets with no topic in any source (shown as "General news" by default): 9,164 (13 %)
 
 ## UN profile
 
@@ -61,14 +61,14 @@ Outlets with no topic in any source (shown as "General news" by default): 9,169 
 | Educational / explanatory | 971 | 957 | 0 | 0 | 0 | iptv-org category "education" (781); Radio Browser tag "education" (91); Radio Browser tag "educational" (35) |
 | Solutions / constructive journalism | 147 | 0 | 0 | 0 | 0 | website section "Good News" (66); website section "Solutions" (29); website About page mentions "solutions journalism" (9) |
 | Development journalism | 113 | 0 | 0 | 0 | 0 | website section "Development" (64); website section "Développement" (10); website section "Desarrollo" (8) |
-| Open to partner content | 1,878 | 0 | 0 | 0 | 0 | website link "Submit News" (339); website link "Send Us Your News" (132); website link "Submit a News Tip" (85) |
+| Open to partner content | 1,879 | 0 | 0 | 0 | 0 | website link "Submit News" (339); website link "Send Us Your News" (132); website link "Submit a News Tip" (85) |
 | Existing UN relationship | 327 | 0 | 327 | 0 | 0 | SDG Media Compact (327) |
-| Public service mandate | 206 | 0 | 0 | 136 | 0 | organisation type public service broadcaster (136); AI reading: Italian public broadcaster RAI (16); AI reading: Polish public broadcaster (10) |
+| Public service mandate | 239 | 0 | 0 | 136 | 0 | organisation type public service broadcaster (136); AI reading: SABC public broadcaster (18); AI reading: Italian public broadcaster RAI (16) |
 | Storytelling & documentary | 462 | 449 | 0 | 0 | 0 | iptv-org category "documentary" (445); AI reading: documentaries (3); Wikidata subject: investigative journalism (3) |
 | Fact-checking (IFCN signatory) | 174 | 0 | 174 | 0 | 0 | IFCN (174) |
-| Multilingual | 2,956 | 0 | 0 | 2,912 | 0 | N languages (2,912); AI reading: news in many languages (3); AI reading: many languages (3) |
+| Multilingual | 2,958 | 0 | 0 | 2,911 | 0 | N languages (2,911); AI reading: news in many languages (3); AI reading: many languages (3) |
 
-Outlets with at least one UN profile: 6,915
+Outlets with at least one UN profile: 6,947
 
 ## Target audience
 
@@ -82,12 +82,12 @@ Outlets with at least one UN profile: 6,915
 | Local communities | 2,146 | 0 | 944 | 742 | 0 | organisation type community media (944); description mentions "community radio" (206); website About page: "community newspaper" (136) |
 | Persons with disabilities | 111 | 10 | 0 | 11 | 0 | website About page: "persons with disabilities" (41); website About page: "personas con discapacidad" (28); website About page: "people with disabilities" (8) |
 | Indigenous peoples | 891 | 43 | 842 | 1 | 0 | topic indigenous (842); Radio Browser tag "indigenous" (37); Radio Browser tag "aboriginal" (4) |
-| Minority-language speakers | 1,780 | 0 | 1,764 | 0 | 0 | in X: not an official language of the country (1,764); AI reading: programmes in many languages (2); AI reading: French-speaking minority in Ontario (1) |
-| Ethnic & minority communities | 272 | 125 | 0 | 70 | 0 | Wikidata: African American newspaper (56); Radio Browser tag "latino" (26); website About page: "jewish community" (17) |
-| Diaspora & migrants | 559 | 15 | 509 | 5 | 0 | topic diaspora (509); Radio Browser tag "ethnic" (9); Radio Browser tag "ethnic programming" (6) |
+| Minority-language speakers | 1,786 | 0 | 1,764 | 0 | 0 | in X: not an official language of the country (1,764); AI reading: Hungarian-speaking minority (3); AI reading: programmes in many languages (2) |
+| Ethnic & minority communities | 279 | 125 | 0 | 70 | 0 | Wikidata: African American newspaper (56); Radio Browser tag "latino" (26); website About page: "jewish community" (17) |
+| Diaspora & migrants | 560 | 15 | 509 | 5 | 0 | topic diaspora (509); Radio Browser tag "ethnic" (9); Radio Browser tag "ethnic programming" (6) |
 | LGBTQ+ communities | 122 | 88 | 0 | 24 | 0 | Wikidata: LGBTQ magazine (54); Wikidata: gay newspaper (10); Wikidata: LGBTQI online newspaper (8) |
-| Religious communities | 3,779 | 3,602 | 0 | 116 | 0 | iptv-org category "religious" (1,901); Radio Browser tag "christian" (820); Radio Browser tag "islam" (236) |
+| Religious communities | 3,780 | 3,602 | 0 | 116 | 0 | iptv-org category "religious" (1,901); Radio Browser tag "christian" (820); Radio Browser tag "islam" (236) |
 | Business & professionals | 1,330 | 430 | 0 | 617 | 0 | name contains "business" (226); Wikidata: trade magazine (213); iptv-org category "business" (173) |
 | Policy makers & decision makers | 857 | 620 | 0 | 60 | 0 | iptv-org category "legislative" (610); website About page: "decision makers" (51); website About page: "policymakers" (21) |
 
-Outlets with at least one target audience: 16,011
+Outlets with at least one target audience: 16,017
