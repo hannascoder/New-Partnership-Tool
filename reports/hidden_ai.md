@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-23 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+31 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -12,11 +12,19 @@
 | pf-000763 | مجلة نينتندو الرسمية | AUS | no longer published: Wikipedia: ran from 2006 to 2014 |
 | pf-000175 | G Magazine | BRA | no longer published: published from 1997 until 2013 |
 | pf-002778 | digest size | BRA | not a media outlet: a magazine paper size (Wikidata error), not a media outlet |
+| pf-005776 | Cadena Súper | COL | no longer published: Wikipedia: Cadena Super 'was' a radio network |
+| pf-012320 | El Mundo | COL | no longer published: Wikipedia: El Mundo 'was' a newspaper |
+| pf-006320 | W Radio | COL | no longer published: Wikipedia: W Radio Colombia 'was' a radio network |
 | pf-002425 | Boletín Oficial del Estado | ESP | not a media outlet: official state gazette (laws and notices), not a media outlet |
 | pf-001694 | El Punt | ESP | no longer published: no longer published under this name (now El Punt Avui) |
 | pf-002676 | GP Racing | ESP | no longer published: published until December 2024, merged with a sister magazine |
 | pf-001070 | The Illustrated London News | GBR | no longer published: Wikidata: former magazine (1842-2003) |
 | pf-004254 | Avriani | GRC | no longer published: Wikipedia: closed down in October 2012 |
+| pf-003843 | De Locomotief | IDN | no longer published: Wikipedia: historic newspaper of the Dutch East Indies era |
+| pf-002926 | Indonesia Raya | IDN | no longer published: Wikipedia: permanently closed in 1974 |
+| pf-008127 | Koran Sindo | IDN | no longer published: Wikipedia: Koran Sindo 'was' a newspaper |
+| pf-001615 | TV Edukasi | IDN | no longer published: Wikipedia: TV Edukasi 'was' a TV station |
+| pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
 | pf-008748 | Official Gazette of the Federation | MEX | not a media outlet: official government gazette that publishes laws, not a media outlet |
 | pf-016924 | Dzen | RUS | not a media outlet: recommendation platform (VK), not a media outlet |
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |

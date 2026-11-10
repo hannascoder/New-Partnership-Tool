@@ -234,7 +234,7 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 | Id | Name | Country | Note |
 |---|---|---|---|
 
-## Possible duplicates: same website, several entries (2917)
+## Possible duplicates: same website, several entries (2916)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 

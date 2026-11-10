@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 122 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 64, scope 3
+- No longer shown: 130 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 91, scope 3
 
 ### Examples: ownership
 
@@ -14,8 +14,8 @@
 - Agence France-Presse (pf-000057): unknown → public_service
 - Associated Press (pf-000058): unknown → community_nonprofit
 - Das Erste (pf-000073): unknown → public_service
+- Tokyo MX (pf-000106): unknown → private
 - Die Tageszeitung (pf-000150): unknown → community_nonprofit
-- Junge Welt (pf-000152): unknown → community_nonprofit
 
 ### Examples: scope
 
@@ -37,9 +37,9 @@
 - BC Report (CAN, pf-005351)
 - Blaze Media (USA, pf-009508)
 - Boletín Oficial del Estado (ESP, pf-002425)
+- Cadena Súper (COL, pf-005776)
 - Cahiers du Cercle Proudhon (FRA, pf-003169)
 - Causeur (FRA, pf-003202)
 - Chess.com (USA, pf-014292)
 - CHOI-FM (CAN, pf-003135)
 - CNews (FRA, pf-003419)
-- Counter-Currents (USA, pf-027761)
