@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-88 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+97 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -38,6 +38,7 @@
 | pf-015305 | Kerberos | FIN | no longer published: Wikipedia: published 1917-1921 |
 | pf-002852 | Yle Fem | FIN | no longer published: Wikipedia: Yle Fem 'was' a TV channel |
 | pf-001070 | The Illustrated London News | GBR | no longer published: Wikidata: former magazine (1842-2003) |
+| pf-010352 | Viasat 1 | GHA | no longer published: Wikipedia: Viasat 1 'was' a channel (replaced) |
 | pf-002878 | Athens News Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
 | pf-004254 | Avriani | GRC | no longer published: Wikipedia: closed down in October 2012 |
 | pf-003760 | Macedonian Press Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
@@ -82,6 +83,14 @@
 | pf-004746 | Kievskaia starina | UKR | no longer published: Wikipedia: 'was' a monthly chronicle (historic) |
 | pf-002891 | TVi | UKR | no longer published: Wikipedia: TVi 'was' a TV channel |
 | pf-010283 | Ukraina | UKR | no longer published: Wikipedia: TRC Ukraina 'was' a TV channel |
+| pf-013115 | Alma Gallega | URY | no longer published: no information; historic Galician newspaper |
+| pf-017412 | La Conservación | URY | no longer published: Wikipedia: 'fue' (was) a historic publication |
+| pf-008215 | La Licorne | URY | no longer published: Wikipedia: historic literary magazine |
+| pf-002026 | La Vanguardia | URY | no longer published: Wikipedia: 'fue' (was) a historic publication |
+| pf-021893 | RTV (Uruguay) | URY | no longer published: Wikipedia: TeleR 'fue' (was) a channel |
+| pf-024285 | Servicio Internacional SODRE | URY | no longer published: Wikipedia: 'fue' (was) an international service |
+| pf-070575 | Televisión Nacional Uruguay 8 | URY | no longer published: Wikipedia: Canal 8 'fue' (was) a channel |
+| pf-014328 | The Britannia and Montevideo Reporter | URY | no longer published: Wikidata: former newspaper |
 | pf-014292 | Chess.com | USA | not a media outlet: online chess platform, not a media outlet |
 | pf-000017 | Google News | USA | not a media outlet: news aggregator of Google, does not publish its own content |
 | pf-000103 | Penthouse | USA | not a media outlet: erotic magazine (adult content is excluded, KATEGORIEN 0.4) |

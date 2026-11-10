@@ -3669,6 +3669,28 @@
    ]
   ]
  },
+ "pf-000430": {
+  "date": "2026-11-10",
+  "owner": "Ghana Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public TV"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
  "pf-000431": {
   "date": "2026-11-10",
   "owner": "Nine Entertainment",
@@ -8839,6 +8861,17 @@
    ]
   ]
  },
+ "pf-001118": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national newspaper"
+   ]
+  ]
+ },
  "pf-001122": {
   "audience": [
    [
@@ -9381,6 +9414,17 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-001197": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
    ]
   ]
  },
@@ -14274,6 +14318,24 @@
    ]
   ]
  },
+ "pf-002026": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Afro-Uruguayan community"
+   ]
+  ],
+  "closed": "Wikipedia: 'fue' (was) a historic publication",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "publication of the Afro-Uruguayan community"
+   ]
+  ]
+ },
  "pf-002028": {
   "date": "2026-11-10",
   "owner": "Radio France Internationale",
@@ -15158,6 +15220,27 @@
     null,
     1,
     "entertainment TV channel"
+   ]
+  ]
+ },
+ "pf-002233": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the Ministry of Education and Culture"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public TV network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public TV"
    ]
   ]
  },
@@ -17250,6 +17333,21 @@
    ]
   ]
  },
+ "pf-002735": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned daily newspaper"
+   ]
+  ]
+ },
  "pf-002745": {
   "date": "2026-11-10",
   "topics": [
@@ -17317,6 +17415,23 @@
     null,
     1,
     "Tyrol"
+   ]
+  ]
+ },
+ "pf-002756": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -19570,6 +19685,27 @@
    ]
   ]
  },
+ "pf-003443": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: established by law as state broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public service broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
  "pf-003450": {
   "date": "2026-11-10",
   "ownership": [
@@ -20798,6 +20934,29 @@
    ]
   ]
  },
+ "pf-004037": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency on the Southern Cone"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "agriculture section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Spanish"
+   ]
+  ]
+ },
  "pf-004044": {
   "date": "2026-11-10",
   "topics": [
@@ -21424,6 +21583,23 @@
    ]
   ]
  },
+ "pf-004295": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV station in Montevideo"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-004324": {
   "date": "2026-11-10",
   "topics": [
@@ -21777,6 +21953,23 @@
     null,
     1,
     "business news magazine"
+   ]
+  ]
+ },
+ "pf-004531": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -22833,6 +23026,23 @@
    ]
   ]
  },
+ "pf-005071": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "news and business newspaper"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "daily news"
+   ]
+  ]
+ },
  "pf-005074": {
   "date": "2026-11-10",
   "topics": [
@@ -23562,6 +23772,23 @@
    ]
   ]
  },
+ "pf-005552": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "politics"
+   ]
+  ]
+ },
  "pf-005567": {
   "date": "2026-11-10",
   "owner": "China Central Television",
@@ -23718,6 +23945,23 @@
     null,
     1,
     "cultural programming network"
+   ]
+  ]
+ },
+ "pf-005802": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Colonia del Sacramento"
    ]
   ]
  },
@@ -24395,6 +24639,23 @@
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
  },
+ "pf-006217": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-006220": {
   "date": "2026-11-10",
   "owner": "e.tv",
@@ -24588,6 +24849,23 @@
    ]
   ]
  },
+ "pf-006272": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Paysandú"
+   ]
+  ]
+ },
  "pf-006273": {
   "date": "2026-11-10",
   "topics": [
@@ -24743,6 +25021,23 @@
     null,
     1,
     "Chillán, Ñuble"
+   ]
+  ]
+ },
+ "pf-006357": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Fray Bentos"
    ]
   ]
  },
@@ -24926,6 +25221,23 @@
    ]
   ]
  },
+ "pf-006440": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "agribusiness section"
+   ]
+  ]
+ },
  "pf-006442": {
   "date": "2026-11-10",
   "topics": [
@@ -25083,6 +25395,36 @@
    ]
   ]
  },
+ "pf-006532": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned news agency"
+   ]
+  ]
+ },
+ "pf-006533": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned daily newspaper"
+   ]
+  ]
+ },
  "pf-006536": {
   "date": "2026-11-10",
   "topics": [
@@ -25160,6 +25502,22 @@
    [
     "public_service_mandate",
     "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-006606": {
+  "date": "2026-11-10",
+  "owner": "Despite Media Group",
+  "ownership": [
+   "private",
+   "Wikidata: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading news and information radio"
    ]
   ]
  },
@@ -25707,6 +26065,17 @@
    ]
   ]
  },
+ "pf-007112": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "FM radio"
+   ]
+  ]
+ },
  "pf-007121": {
   "date": "2026-11-10",
   "ownership": [
@@ -25903,6 +26272,23 @@
    ]
   ]
  },
+ "pf-007210": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Melo, Cerro Largo"
+   ]
+  ]
+ },
  "pf-007213": {
   "date": "2026-11-10",
   "topics": [
@@ -25996,6 +26382,17 @@
     null,
     1,
     "Catholic radio"
+   ]
+  ]
+ },
+ "pf-007232": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
    ]
   ]
  },
@@ -26286,6 +26683,17 @@
    ]
   ]
  },
+ "pf-007342": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "pay TV focused on sport events"
+   ]
+  ]
+ },
  "pf-007348": {
   "date": "2026-11-10",
   "topics": [
@@ -26385,6 +26793,28 @@
    [
     "public_service_mandate",
     "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-007391": {
+  "date": "2026-11-10",
+  "owner": "Multimedia Group",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private news radio"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "arts and culture"
    ]
   ]
  },
@@ -26641,6 +27071,18 @@
    ]
   ]
  },
+ "pf-008215": {
+  "closed": "Wikipedia: historic literary magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
+   ]
+  ]
+ },
  "pf-008219": {
   "date": "2026-11-10",
   "topics": [
@@ -26888,6 +27330,23 @@
     null,
     1,
     "music radio network"
+   ]
+  ]
+ },
+ "pf-008459": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -27210,6 +27669,23 @@
     "magazine on women's rights"
    ]
   ]
+ },
+ "pf-008740": {
+  "date": "2026-11-10",
+  "owner": "Ghana Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio of GBC"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "public radio in Tema"
+   ]
+  ],
+  "website_warning": "the website shows a technical test page"
  },
  "pf-008741": {
   "date": "2026-11-10",
@@ -27696,6 +28172,27 @@
    ]
   ]
  },
+ "pf-009439": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "first private free-to-air TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-009442": {
   "date": "2026-11-09",
   "topics": [
@@ -27878,6 +28375,17 @@
     null,
     1,
     "Ukrainian weekly in Australia"
+   ]
+  ]
+ },
+ "pf-009776": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -28088,6 +28596,24 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-010352": {
+  "closed": "Wikipedia: Viasat 1 'was' a channel (replaced)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -29167,6 +29693,11 @@
    ]
   ]
  },
+ "pf-013115": {
+  "closed": "no information; historic Galician newspaper",
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-013200": {
   "date": "2026-11-10",
   "topics": [
@@ -29969,6 +30500,17 @@
    ]
   ]
  },
+ "pf-013901": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
+ },
  "pf-013921": {
   "date": "2026-11-10",
   "ownership": [
@@ -30070,6 +30612,27 @@
    [
     "public_service_mandate",
     "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-014012": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by the Blay Family"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Health"
    ]
   ]
  },
@@ -30275,6 +30838,44 @@
    ]
   ]
  },
+ "pf-014264": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-014265": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private TV broadcaster"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-014274": {
   "date": "2026-11-10",
   "topics": [
@@ -30349,6 +30950,18 @@
     null,
     1,
     "children's channel"
+   ]
+  ]
+ },
+ "pf-014328": {
+  "closed": "Wikidata: former newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "historic English newspaper"
    ]
   ]
  },
@@ -30474,6 +31087,49 @@
     null,
     1,
     "largest private news agency"
+   ]
+  ]
+ },
+ "pf-014421": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio station"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "football"
+   ]
+  ]
+ },
+ "pf-014422": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports radio"
+   ]
+  ]
+ },
+ "pf-014423": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-owned radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music public radio"
    ]
   ]
  },
@@ -30790,6 +31446,27 @@
     null,
     1,
     "sports channel"
+   ]
+  ]
+ },
+ "pf-014970": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the Intendancy of Montevideo"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV of Montevideo"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Montevideo"
    ]
   ]
  },
@@ -31677,6 +32354,17 @@
     null,
     1,
     "pan-European sports TV network"
+   ]
+  ]
+ },
+ "pf-016082": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports pay TV"
    ]
   ]
  },
@@ -32606,6 +33294,23 @@
    ]
   ]
  },
+ "pf-017062": {
+  "audience": [
+   [
+    "religious",
+    "Pentecostal viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian TV (Perez Chapel)"
+   ]
+  ]
+ },
  "pf-017078": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: editorial ideology aligned with Spanish nationalism",
@@ -32832,6 +33537,24 @@
   "right_populist": "Wikipedia: right-wing militarist religious network",
   "topics": []
  },
+ "pf-017412": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Afro-Uruguayan community"
+   ]
+  ],
+  "closed": "Wikipedia: 'fue' (was) a historic publication",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Afro-Montevidean weekly"
+   ]
+  ]
+ },
  "pf-017421": {
   "date": "2026-11-10",
   "topics": [
@@ -32937,6 +33660,29 @@
    ]
   ]
  },
+ "pf-021412": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and financial news"
+   ],
+   [
+    "energy",
+    null,
+    2,
+    "energy awards"
+   ]
+  ]
+ },
  "pf-021449": {
   "date": "2026-11-10",
   "owner": "China Central Television",
@@ -32984,6 +33730,44 @@
     null,
     1,
     "online TV for Venezuelans"
+   ]
+  ]
+ },
+ "pf-021571": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
+   ]
+  ]
+ },
+ "pf-021608": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Melo"
    ]
   ]
  },
@@ -33093,6 +33877,18 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-021893": {
+  "closed": "Wikipedia: TeleR 'fue' (was) a channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pay TV of La República"
    ]
   ]
  },
@@ -33225,6 +34021,17 @@
    ]
   ]
  },
+ "pf-022018": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "pay TV channel"
+   ]
+  ]
+ },
  "pf-022065": {
   "audience": [
    [
@@ -33250,6 +34057,28 @@
     "extreme_poverty",
     2,
     "poverty alleviation and rural revitalisation"
+   ]
+  ]
+ },
+ "pf-022093": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal of 970 Universal radio"
+   ]
+  ]
+ },
+ "pf-022580": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal and syndication"
    ]
   ]
  },
@@ -33330,6 +34159,46 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-023018": {
+  "date": "2026-11-10",
+  "owner": "Multimedia Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website and TV"
+   ]
+  ]
+ },
+ "pf-023019": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business"
+   ]
+  ]
+ },
+ "pf-023022": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ]
+  ]
+ },
  "pf-023051": {
   "date": "2026-11-10",
   "topics": [
@@ -33379,6 +34248,21 @@
    ]
   ]
  },
+ "pf-023195": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private radio"
+   ]
+  ]
+ },
  "pf-023264": {
   "date": "2026-11-10",
   "ownership": [
@@ -33402,6 +34286,39 @@
     null,
     1,
     "independent news portal"
+   ]
+  ]
+ },
+ "pf-023299": {
+  "date": "2026-11-10",
+  "owner": "Despite Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: private radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private radio"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "party primaries coverage"
+   ]
+  ]
+ },
+ "pf-023323": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and digital news"
    ]
   ]
  },
@@ -33436,6 +34353,23 @@
     null,
     2,
     "entertainment and lifestyle"
+   ]
+  ]
+ },
+ "pf-023453": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Maldonado"
    ]
   ]
  },
@@ -33480,6 +34414,75 @@
     null,
     1,
     "sports pay TV channel"
+   ]
+  ]
+ },
+ "pf-023512": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "24-hour music channel"
+   ]
+  ]
+ },
+ "pf-023513": {
+  "date": "2026-11-10",
+  "owner": "Despite Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Despite Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private radio"
+   ]
+  ]
+ },
+ "pf-023514": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kumasi"
+   ]
+  ]
+ },
+ "pf-023515": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private radio"
+   ],
+   [
+    "sports",
+    null,
+    1,
+    "sports"
    ]
   ]
  },
@@ -33535,6 +34538,27 @@
     null,
     1,
     "evangelical Christian channel"
+   ]
+  ]
+ },
+ "pf-023546": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: parliament channel"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament online channel"
    ]
   ]
  },
@@ -33611,6 +34635,21 @@
     null,
     3,
     "Quechua name"
+   ]
+  ]
+ },
+ "pf-023693": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: M-Net"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite entertainment channel"
    ]
   ]
  },
@@ -33762,6 +34801,17 @@
    ]
   ]
  },
+ "pf-024164": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV station in the Northern Region"
+   ]
+  ]
+ },
  "pf-024174": {
   "audience": [
    [
@@ -33850,6 +34900,18 @@
     null,
     1,
     "Olympic channel"
+   ]
+  ]
+ },
+ "pf-024285": {
+  "closed": "Wikipedia: 'fue' (was) an international service",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
    ]
   ]
  },
@@ -34006,6 +35068,34 @@
     null,
     2,
     "local section"
+   ]
+  ]
+ },
+ "pf-024687": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first online-only news portal"
+   ]
+  ]
+ },
+ "pf-024705": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -34259,6 +35349,21 @@
    ]
   ]
  },
+ "pf-025343": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the state telecom company Antel"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "events streaming channel"
+   ]
+  ]
+ },
  "pf-025349": {
   "closed": "Wikipedia: Ciberayllu 'was' a publication",
   "date": "2026-11-10",
@@ -34284,6 +35389,17 @@
     null,
     1,
     "archive programming of TVN"
+   ]
+  ]
+ },
+ "pf-025579": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
    ]
   ]
  },
@@ -34370,6 +35486,23 @@
    ]
   ]
  },
+ "pf-025825": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio with journalism and music"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-025923": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing satirical magazine, called far-right by Libération",
@@ -34435,6 +35568,17 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
+ },
+ "pf-026479": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
+   ]
+  ]
  },
  "pf-026553": {
   "date": "2026-11-10",
@@ -34601,6 +35745,17 @@
   "far_right": "Wikidata (fr): French far-right weekly owned by Vincent Bolloré",
   "topics": []
  },
+ "pf-026868": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "FM radio"
+   ]
+  ]
+ },
  "pf-026873": {
   "date": "2026-11-10",
   "topics": [
@@ -34645,6 +35800,23 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: close to far-right politicians, spreads disinformation",
   "topics": []
+ },
+ "pf-026902": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Paysandú"
+   ]
+  ]
  },
  "pf-027051": {
   "date": "2026-11-10",
@@ -34748,6 +35920,29 @@
   "right_populist": "general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia",
   "topics": []
  },
+ "pf-028728": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "FM radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "northern Rocha"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "agro-veterinary guide"
+   ]
+  ]
+ },
  "pf-028921": {
   "date": "2026-11-10",
   "topics": [
@@ -34803,6 +35998,27 @@
     null,
     1,
     "regional music radio"
+   ]
+  ]
+ },
+ "pf-029483": {
+  "audience": [
+   [
+    "youth_students",
+    "campus radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: university radio"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "campus radio of the University of Cape Coast"
    ]
   ]
  },
@@ -34908,6 +36124,17 @@
    ]
   ]
  },
+ "pf-030020": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal of Citi FM"
+   ]
+  ]
+ },
  "pf-030088": {
   "audience": [
    [
@@ -34922,6 +36149,34 @@
     null,
     1,
     "classic music radio"
+   ]
+  ]
+ },
+ "pf-030145": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
+ "pf-030242": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national AM radio"
    ]
   ]
  },
@@ -35146,6 +36401,10 @@
    ]
   ]
  },
+ "pf-031846": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-032043": {
   "date": "2026-11-10",
   "owner": "NPO",
@@ -35201,6 +36460,10 @@
     "Dutch public broadcaster"
    ]
   ]
+ },
+ "pf-032104": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-032124": {
   "date": "2026-11-10",
@@ -35456,6 +36719,10 @@
    ]
   ]
  },
+ "pf-032508": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-032516": {
   "date": "2026-11-10",
   "ownership": [
@@ -35632,6 +36899,23 @@
    ]
   ]
  },
+ "pf-033525": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Río Branco"
+   ]
+  ]
+ },
  "pf-033949": {
   "audience": [
    [
@@ -35792,6 +37076,27 @@
    ]
   ]
  },
+ "pf-035513": {
+  "audience": [
+   [
+    "youth_students",
+    "youth radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "youth radio (YFM)"
+   ]
+  ]
+ },
+ "pf-035530": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-036742": {
   "date": "2026-11-10",
   "topics": []
@@ -35834,6 +37139,17 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-036962": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
  "pf-037058": {
   "audience": [
    [
@@ -35865,6 +37181,17 @@
  "pf-037103": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-037104": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment website"
+   ]
+  ]
  },
  "pf-037105": {
   "audience": [
@@ -36298,6 +37625,38 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-039844": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channels"
+   ]
+  ]
+ },
+ "pf-039875": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ],
+   [
+    "health",
+    null,
+    3,
+    "health articles"
+   ]
+  ]
+ },
+ "pf-040332": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-040459": {
   "date": "2026-11-10",
   "topics": [
@@ -36325,6 +37684,10 @@
   "right_populist": "international channel of Fox News",
   "topics": []
  },
+ "pf-042825": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-043164": {
   "audience": [
    [
@@ -36345,6 +37708,10 @@
     "university TV"
    ]
   ]
+ },
+ "pf-043873": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-044029": {
   "audience": [
@@ -36416,6 +37783,17 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-045971": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
  "pf-046141": {
   "date": "2026-11-10",
   "topics": []
@@ -36445,6 +37823,23 @@
     null,
     1,
     "TV channel"
+   ]
+  ]
+ },
+ "pf-049111": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Florida department"
    ]
   ]
  },
@@ -36502,6 +37897,23 @@
     null,
     2,
     "elections section"
+   ]
+  ]
+ },
+ "pf-055276": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent weekly"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Paysandú"
    ]
   ]
  },
@@ -36598,6 +38010,17 @@
    ]
   ]
  },
+ "pf-059386": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
  "pf-060343": {
   "date": "2026-11-10",
   "topics": [
@@ -36606,6 +38029,17 @@
     null,
     1,
     "largest online news website"
+   ]
+  ]
+ },
+ "pf-060639": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal"
    ]
   ]
  },
@@ -36747,6 +38181,17 @@
     null,
     2,
     "website section Salud"
+   ]
+  ]
+ },
+ "pf-066801": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent daily newspaper"
    ]
   ]
  },
@@ -37004,6 +38449,24 @@
    [
     "public_service_mandate",
     "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-070575": {
+  "closed": "Wikipedia: Canal 8 'fue' (was) a channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Melo"
    ]
   ]
  },

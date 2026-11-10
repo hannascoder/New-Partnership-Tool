@@ -3,163 +3,98 @@
 A new sample is drawn every day. For each value: what the tool says and why.
 Wrong? Tell Claude the id, or note it in overrides.csv.
 
-## KTBU 55.3 — United States of America · pf-043119
+## KTPS-TV — United States of America · pf-043128
 
-- Website: - (check: not checked)
+- Website: https://www.topekapublicschools.net/departments/communications/ktps-tv (check: ok)
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (iptv-org broadcast area: city / region)
-- Languages: spa · Channels: tv
-- Topics: culture (Specialist: iptv-org category "culture"); community_local (Specialist: scope local)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
+- Languages: eng · Channels: tv, website, social_media
+- Topics: health (Has a section on it: website section "Superintendent/NEA-t COVID-19 Advisory"); education (Specialist: iptv-org category "education"); gender_equality (Reports on it: website About page: "gender identity", "sexual orientation"); climate (Specialist: website About page: "environment"); industry_innovation (Has a section on it: website section "Ideas for Innovation Form"); religion (Reports on it: website About page: "religion"); community_local (Specialist: scope local); children_youth (Specialist: website About page: "students"); disability (Reports on it: website About page: "disability")
+- Target audience: youth_students (website About page: "for students")
+- UN profile: educational (iptv-org category "education")
+- Contact: - · contact page: https://www.topekapublicschools.net/departments/business_office/contact_us · latest article: -
 
-## El 9 esportiu — Spain · pf-006247
+## El Ancasti — Argentina · pf-006248
 
-- Website: https://www.lesportiudecatalunya.cat/ (check: ok)
-- Sources: wikidata
+- Website: http://www.elancasti.com.ar/ (check: ok)
+- Sources: media_cloud, wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: unknown (no scope information in the sources)
-- Languages: cat · Channels: print, website, social_media
-- Topics: business_economy (Specialist: description mentions "economia"); culture (Specialist: description mentions "cultura"); sports (Specialist: Wikidata: sports newspaper)
+- Scope: national (Media Cloud collection "Argentina - National")
+- Languages: spa · Channels: print, website, social_media, podcast, newsletter
+- Topics: general_news (Specialist: Wikidata: newspaper); business_economy (Has a section on it: website section "Política y Economía"); culture (Has a section on it: website section "Cultura"); disability (Reports on it: website headlines: "discapacidad", "personas con discapacidad"); sports (Has a section on it: website section "Deportes")
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: https://www.elancasti.com.ar/contacto · latest article: -
+
+## Bospor Krym — Ukraine · pf-068535
+
+- Website: http://www.bospor.com.ua/ (check: error)
+- Sources: media_cloud
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (Media Cloud collection "Ukraine - National")
+- Languages: rus · Channels: tv, website
+- Topics: general_news (Reports on it: no topic in the sources: general news)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Oscoda County Herald — United States of America · pf-068527
+## Honolulu Weekly — United States of America · pf-006950
 
-- Website: http://www.oscodaherald.com/ (check: robots)
-- Sources: media_cloud
+- Website: http://www.honoluluweekly.com (check: ok)
+- Sources: media_cloud, wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "United States - State & Local")
 - Languages: eng · Channels: print, website
-- Topics: community_local (Specialist: scope local)
+- Topics: peace_justice (Reports on it: Wikipedia: "investigative reporting"); general_news (Specialist: Wikidata: newspaper); community_local (Specialist: scope local)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Honolulu Record — United States of America · pf-006949
+## Colorados Vision TV — Ecuador · pf-039682
 
-- Website: - (check: not checked)
-- Sources: wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: unknown (no scope information in the sources)
-- Languages: - · Channels: print
-- Topics: general_news (Specialist: Wikidata: newspaper)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## COE-TV Channel 19 — United States of America · pf-039674
-
-- Website: https://www.slocoe.org/coe-tv/ (check: ok)
+- Website: https://coloradosvision.com/ (check: ok)
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: local (iptv-org broadcast area: city / region)
-- Languages: eng, spa · Channels: tv, website, social_media
-- Topics: health (Specialist: website About page: "suicide prevention"); education (Specialist: iptv-org category "education"); gender_equality (Specialist: website About page: "sexual harassment"); inequalities (Specialist: website About page: "discrimination"); business_economy (Has a section on it: website section "Business Services"); community_local (Specialist: scope local); technology (Has a section on it: website section "Information Technology Services")
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: spa · Channels: tv, website, social_media
+- Topics: general_news (Specialist: iptv-org category "general"); technology (Reports on it: website headlines: "tecnologia")
 - Target audience: -
-- UN profile: educational (iptv-org category "education"); multilingual (2 languages)
-- Contact: - · contact page: https://www.slocoe.org/contact-slocoe/ · latest article: 2026-10-30
+- UN profile: -
+- Contact: - · contact page: - · latest article: 2026-09-11
 
-## revistamatadero.com — Chile · pf-056698
+## basepublica.cl — Chile · pf-056706
 
-- Website: https://www.revistamatadero.com/ (check: ok)
+- Website: https://www.basepublica.cl (check: ok)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (Media Cloud collection "Chile - National")
 - Languages: spa · Channels: website, social_media
-- Topics: culture (Specialist: description mentions "cultura"); human_rights (Reports on it: website headlines: "derechos humanos")
+- Topics: education (Has a section on it: website section "EDUCACIÓN"); consumption (Reports on it: website headlines: "reciclaje"); climate (Has a section on it: website section "MEDIO AMBIENTE"); life_on_land (Reports on it: website headlines: "conservacion"); industry_innovation (Reports on it: website headlines: "industria", "innovacion"); business_economy (Has a section on it: website section "NUEVA ECONOMÍA"); culture (Has a section on it: website section "CULTURA Y SOCIEDAD"); community_local (Has a section on it: website section "COMUNIDAD"); children_youth (Reports on it: website headlines: "estudiantes", "jovenes", "juventud"); elections (Reports on it: website About page: "democracia"); sports (Reports on it: website headlines: "deporte", "mundial")
 - Target audience: -
 - UN profile: -
-- Contact: info@revistamatadero.com · contact page: - · latest article: 2026-11-02
+- Contact: - · contact page: https://www.basepublica.cl/contacto/ · latest article: 2026-11-06
 
-## Mandir TV — India · pf-043777
+## Manifold TV — Benin · pf-043785
 
-- Website: https://mandirtv.in/ (check: ok)
+- Website: - (check: not checked)
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (iptv-org broadcast area: whole country)
-- Languages: hin · Channels: tv, website
-- Topics: culture (Specialist: website About page: "संस्कृति"); religion (Specialist: iptv-org category "religious")
+- Languages: fra · Channels: tv
+- Topics: religion (Specialist: iptv-org category "religious")
 - Target audience: religious (iptv-org category "religious")
-- UN profile: solutions (website section "Solutions")
-- Contact: - · contact page: https://mandirtv.in/contact/ · latest article: 2026-05-23
-
-## Chickasaw Journal — United States of America · pf-019908
-
-- Website: http://chickasawjournal.com/ (check: ok)
-- Sources: media_cloud, wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website, social_media, podcast, newsletter
-- Topics: health (Reports on it: website headlines: "covid"); general_news (Specialist: Wikidata: newspaper); business_economy (Has a section on it: website section "Business Directory"); community_local (Specialist: scope local); children_youth (Reports on it: website headlines: "kids"); elections (Reports on it: website headlines: "legislature"); sports (Specialist: description mentions "sports")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://www.djournal.com/contact/ · latest article: 2022-07-27
-
-## Whitehall Ledger — United States of America · pf-019982
-
-- Website: https://www.whitehallledger.com/ (check: ok)
-- Sources: media_cloud, wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website
-- Topics: health (Reports on it: website headlines: "cancer", "diabetes"); life_on_land (Reports on it: website headlines: "conservation", "wildlife", "wildlife trafficking"); general_news (Specialist: Wikidata: newspaper); business_economy (Reports on it: website headlines: "business"); community_local (Specialist: scope local)
-- Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Richmond Times-Dispatch — United States of America · pf-009092
-
-- Website: http://www.richmond.com/ (check: ok)
-- Sources: media_cloud, wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: private (Wikidata: owner Berkshire Hathaway (business))
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: website, print, social_media, newsletter
-- Topics: health (Has a section on it: website section "Health"); education (Has a section on it: website section "Education"); gender_equality (Reports on it: website headlines: "women s basketball"); general_news (Specialist: Wikidata: newspaper); business_economy (Has a section on it: website section "Markets & Stocks"); culture (Specialist: website About page: "theatre"); religion (Has a section on it: website section "Faith"); community_local (Specialist: scope local); technology (Reports on it: website headlines: "tech"); sports (Specialist: description mentions "sports")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://richmond.com/forms/contact/letter_to_the_editor/ · latest article: 2026-11-09
-
-## lavozhispanact.com — United States of America · pf-054364
-
-- Website: https://www.lavozhispanact.com (check: error)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: spa · Channels: print, website
-- Topics: community_local (Specialist: scope local)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## Design Milk — United States of America · pf-023082
-
-- Website: http://design-milk.com/ (check: ok)
-- Sources: wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: unknown (no scope information in the sources)
-- Languages: eng · Channels: website, social_media
-- Topics: culture (Has a section on it: website section "Art"); technology (Has a section on it: website section "Tech")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://design-milk.com/contact/ · latest article: 2026-10-14
-
-## Herald Country Market — United States of America · pf-018800
+## Holmes County Herald — United States of America · pf-019914
 
 - Website: - (check: not checked)
 - Sources: wikidata
@@ -172,20 +107,85 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## TVNZ 1 — New Zealand · pf-049289
+## Chapel Hill News — United States of America · pf-019988
 
-- Website: https://www.tvnz.co.nz/livetv/tvnz-1 (check: ok)
-- Sources: iptv_org
+- Website: https://www.wunc.org/topic/wunc-music (check: ok)
+- Sources: radio_browser, wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: eng · Channels: print, radio, website, social_media, podcast, newsletter
+- Topics: education (Has a section on it: website section "Education"); climate (Has a section on it: website section "Environment"); general_news (Specialist: Wikidata: newspaper); business_economy (Has a section on it: website section "Business & Economy"); culture (Specialist: description mentions "music"); community_local (Specialist: website About page: "local news"); conflict_security (Has a section on it: website section "Military"); children_youth (Has a section on it: website section "Youth Reporting Internships"); elections (Has a section on it: website section /tags/elections/)
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: https://www.wunc.org/contact-us · latest article: 2026-09-01
+
+## Risk — United Kingdom of Great Britain and Northern Ireland · pf-009094
+
+- Website: http://www.risk.net (check: ok)
+- Sources: wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: private (Wikidata: owner Incisive Media (company))
+- Scope: unknown (no scope information in the sources)
+- Languages: eng · Channels: print, website, social_media, newsletter
+- Topics: education (Has a section on it: website section "Learning"); climate (Has a section on it: website section /benchmarking/climate/charts/); industry_innovation (Reports on it: website About page: "infrastructure"); business_economy (Specialist: description mentions "trade"); culture (Has a section on it: website section /books/); technology (Has a section on it: website section "Artificial intelligence")
+- Target audience: business_professionals (description mentions "trade magazine")
+- UN profile: -
+- Contact: - · contact page: https://www.risk.net/static/contacts · latest article: 2026-10-22
+
+## Aguilar Noticias | Tu portal de información — Spain · pf-054372
+
+- Website: http://www.aguilarnoticias.com/ (check: ok)
+- Sources: media_cloud
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (Media Cloud collection "Spain - National")
+- Languages: spa · Channels: website, social_media
+- Topics: education (Has a section on it: website section "Educación"); business_economy (Has a section on it: website section "Economía"); culture (Has a section on it: website section "Cultura"); agriculture (Has a section on it: website section "Agricultura"); sports (Has a section on it: website section "Deportes")
+- Target audience: rural_farmers (topic agriculture)
+- UN profile: -
+- Contact: - · contact page: - · latest article: 2025-04-07
+
+## TVP Kultura 2 — Poland · pf-023089
+
+- Website: https://tvpkultura.tvp.pl/ (check: ok)
+- Sources: iptv_org, wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: private (Wikidata: owner Telewizja Polska (business))
 - Scope: national (iptv-org broadcast area: whole country)
-- Languages: eng · Channels: tv, website
-- Topics: general_news (Specialist: iptv-org category "general")
+- Languages: pol · Channels: tv, website, social_media
+- Topics: culture (Reports on it: words in another language (via Wikidata): "festiwal", "teatr", "teatru")
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Watchdog — Sri Lanka · pf-071103
+## Macoupin County Enquirer-Democrat — United States of America · pf-018806
+
+- Website: - (check: not checked)
+- Sources: wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: - · Channels: print, social_media
+- Topics: general_news (Specialist: Wikidata: newspaper)
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## TV Omindare — Brazil · pf-049297
+
+- Website: https://www.tvomindare.tv.br/ (check: ok)
+- Sources: iptv_org
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: local (iptv-org broadcast area: city / region)
+- Languages: por · Channels: tv, website, social_media, podcast
+- Topics: culture (Specialist: iptv-org category "culture"); community_local (Specialist: scope local)
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: https://www.tvomindare.tv.br/contact · latest article: -
+
+## Bellingcat — Netherlands (Kingdom of the) · pf-071112
 
 - Website: - (check: not checked)
 - Sources: fact_checking_sites
@@ -198,46 +198,46 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## chattanoogan.com — United States of America · pf-059772
+## pdby.co.za — South Africa · pf-059780
 
-- Website: http://www.chattanoogan.com/ (check: ok)
+- Website: https://pdby.co.za/ (check: ok)
+- Sources: media_cloud
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (Media Cloud collection "South Africa - National")
+- Languages: eng · Channels: website, social_media
+- Topics: gender_equality (Reports on it: website headlines: "lgbtq"); industry_innovation (Reports on it: website headlines: "bridges"); inequalities (Reports on it: website headlines: "lgbtq"); fact_checking (Reports on it: website About page: "fact checking"); science (Reports on it: website headlines: "scientists"); business_economy (Reports on it: website headlines: "trade"); culture (Has a section on it: website section "Entertainment"); religion (Reports on it: website headlines: "church"); children_youth (Specialist: description mentions "youth"); elections (Reports on it: website headlines: "democracy", "vote"); sports (Has a section on it: website section "Sports")
+- Target audience: youth_students (website About page: "student newspaper")
+- UN profile: -
+- Contact: - · contact page: https://pdby.co.za/contact-us/tip-line/ · latest article: 2026-11-07
+
+## natchezdemocrat.com — United States of America · pf-058360
+
+- Website: http://www.natchezdemocrat.com/ (check: error)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: website, social_media, podcast, newsletter
-- Topics: business_economy (Has a section on it: website section "Business"); culture (Has a section on it: website section "Entertainment"); religion (Has a section on it: website section "Church"); community_local (Specialist: scope local); elections (Has a section on it: website section "Government"); sports (Has a section on it: website section "Sports")
+- Languages: eng · Channels: print, website
+- Topics: community_local (Specialist: scope local)
 - Target audience: -
 - UN profile: -
-- Contact: news@chattanoogan.com · contact page: - · latest article: 2026-11-09
+- Contact: - · contact page: - · latest article: -
 
-## thepacificanonline.com — United States of America · pf-058352
+## North Coast Citizen — United States of America · pf-020513
 
-- Website: http://thepacificanonline.com/ (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website, social_media
-- Topics: business_economy (Reports on it: website About page: "finance"); culture (Reports on it: website headlines: "art", "culture"); community_local (Specialist: scope local); sports (Has a section on it: website section "Sports")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: 2026-11-05
-
-## Source Weekly — United States of America · pf-020507
-
-- Website: https://www.bendsource.com/ (check: ok)
+- Website: http://northcoastcitizen.com/ (check: ok)
 - Sources: media_cloud, wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website, social_media, podcast, newsletter
-- Topics: general_news (Specialist: Wikidata: newspaper); fact_checking (Specialist: website About page: "fact checking"); business_economy (Has a section on it: website section "Business News"); culture (Specialist: website About page: "art", "music"); religion (Reports on it: website headlines: "gospel"); community_local (Specialist: scope local); human_rights (Specialist: website About page: "social justice"); agriculture (Reports on it: website headlines: "harvest"); elections (Has a section on it: website section "Elections")
+- Languages: eng · Channels: print, website, social_media, newsletter
+- Topics: education (Reports on it: website headlines: "education", "preschool"); consumption (Reports on it: website headlines: "recycling"); work_economy (Reports on it: website headlines: "entrepreneurship"); general_news (Specialist: Wikidata: newspaper); business_economy (Reports on it: website headlines: "economic"); community_local (Specialist: scope local); agriculture (Reports on it: website headlines: "agricultural"); disasters (Reports on it: website headlines: "earthquake"); children_youth (Reports on it: website headlines: "children", "children s rights"); elections (Reports on it: website headlines: "ballot", "election", "vote"); sports (Has a section on it: website section "Sports")
 - Target audience: rural_farmers (topic agriculture)
-- UN profile: -
-- Contact: editor@bendsource.com · contact page: https://www.bendsource.com/bend-contactus-page/ · latest article: 2026-11-09
+- UN profile: open_to_partner_content (website link "Submit Your News")
+- Contact: admin@countrymedia.net · contact page: https://www.tillamookheadlightherald.com/northcoastcitizen/site/ncc_contact_us.html · latest article: 2026-02-18
 
-## Berwick Shire News and Pakenham and Cranbourne Gazette — Australia · pf-021238
+## Bowral Free Press and Mittagong, Burrawang and Kangaloon Advocate — Australia · pf-021244
 
 - Website: - (check: not checked)
 - Sources: wikidata
@@ -250,44 +250,44 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Sisa Journal — Republic of Korea · pf-004079
+## Slice — Canada · pf-004080
 
-- Website: http://www.sisajournal.com/ (check: ok)
-- Sources: wikidata
+- Website: https://www.slice.ca (check: ok)
+- Sources: iptv_org, wikidata
 - Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: unknown (no scope information in the sources)
-- Languages: kor · Channels: print, website
-- Topics: health (Has a section on it: website section "Health"); education (Has a section on it: website section "교육" (another language, via Wikidata)); general_news (Specialist: Wikidata: news media); science (Has a section on it: website section "IT/Science"); business_economy (Has a section on it: website section "경제" (another language, via Wikidata)); culture (Has a section on it: website section "Culture"); diaspora (Reports on it: Wikipedia: "expatriates")
-- Target audience: diaspora_migrants (topic diaspora)
+- Ownership: private (Wikidata: owner Corus Entertainment (business))
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: eng · Channels: tv, website
+- Topics: general_news (Reports on it: no topic in the sources: general news)
+- Target audience: -
 - UN profile: -
-- Contact: - · contact page: - · latest article: 2026-11-09
+- Contact: info@slice.ca · contact page: - · latest article: 2026-09-28
 
-## WKSR — United States of America · pf-010802
+## WKTN — United States of America · pf-010805
 
-- Website: http://www.wksr.com (check: ok)
+- Website: http://www.wktn.com (check: ok)
 - Sources: media_cloud, wikidata
 - Type: news_outlet (no evidence for another type)
-- Ownership: private (Wikidata: owner Roger Wright (human))
+- Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: radio, tv, website
-- Topics: culture (Reports on it: Wikipedia: "music"); community_local (Specialist: scope local); sports (Has a section on it: website section "Sports")
+- Languages: eng · Channels: radio, website, social_media, podcast
+- Topics: culture (Has a section on it: website section "ART CENTER CLASSES"); religion (Reports on it: Wikipedia: "catholic", "religion"); community_local (Specialist: scope local); sports (Has a section on it: website section "Sports"); older_persons (Reports on it: website headlines: "aging", "seniors")
 - Target audience: -
 - UN profile: -
-- Contact: - · contact page: https://www.wksr.com/shows/ · latest article: -
+- Contact: info@wktn.com · contact page: https://wktn.com/contact/ · latest article: 2026-11-09
 
-## Dainik Agniban — India · pf-024911
+## La Preuve — Burkina Faso · pf-024920
 
-- Website: https://www.agniban.com/ (check: ok)
+- Website: - (check: not checked)
 - Sources: wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: unknown (no scope information in the sources)
-- Languages: hin · Channels: print, website, social_media
-- Topics: health (Has a section on it: website section /category/health/); general_news (Specialist: Wikidata: newspaper); business_economy (Specialist: description mentions "business"); culture (Has a section on it: website section /category/entertainment/); religion (Has a section on it: website section "धर्म-ज्‍योतिष"); technology (Has a section on it: website section /category/technology/); sports (Specialist: description mentions "sports")
+- Languages: fra · Channels: print
+- Topics: general_news (Specialist: Wikidata: newspaper); religion (Specialist: Wikidata subject: Islam)
 - Target audience: -
 - UN profile: -
-- Contact: - · contact page: https://www.agniban.com/madhya-predesh-jan-sampark/ · latest article: 2026-02-01
+- Contact: - · contact page: - · latest article: -
 
 ## Zuger Woche — Switzerland · pf-000233
 
@@ -302,44 +302,44 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Le Canada Français — Canada · pf-053299
+## Caledonia Courier - Fort. St. James News — Canada · pf-053307
 
-- Website: http://www.canadafrancais.com/ (check: ok)
+- Website: http://www.caledoniacourier.com/ (check: ok)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "Canada - State & Local")
-- Languages: fra · Channels: print, website, social_media
-- Topics: business_economy (Has a section on it: website section "Économie"); culture (Has a section on it: website section "Culture"); community_local (Specialist: scope local); disability (Reports on it: website headlines: "handicap", "personnes en situation de handicap", "personnes handicapees"); sports (Has a section on it: website section "Sports")
-- Target audience: -
+- Languages: eng · Channels: print, website, newsletter
+- Topics: life_on_land (Has a section on it: website section "Wildfires"); business_economy (Has a section on it: website section "Business"); culture (Has a section on it: website section "Entertainment"); community_local (Specialist: scope local); disasters (Has a section on it: website section "Wildfires"); elections (Has a section on it: website section "Election"); sports (Has a section on it: website section "Sports"); older_persons (Reports on it: website headlines: "alzheimer", "alzheimer s", "dementia")
+- Target audience: local_communities (website About page: "local community")
 - UN profile: -
-- Contact: - · contact page: https://www.canadafrancais.com/nous-joindre/ · latest article: 2026-11-09
+- Contact: - · contact page: https://caledoniacourier.com/services/contact-us/ · latest article: -
 
-## Essex Reporter — United States of America · pf-052157
+## Evince — United States of America · pf-052165
 
-- Website: http://www.essexreporter.com/ (check: ok)
+- Website: http://evincemagazine.com/ (check: ok)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website, newsletter
-- Topics: health (Reports on it: website headlines: "diabetes"); education (Has a section on it: website section "Schools"); business_economy (Has a section on it: website section "Business"); culture (Has a section on it: website section "Arts & Entertainment"); community_local (Specialist: scope local); elections (Has a section on it: website section "Government"); sports (Has a section on it: website section "Sports")
+- Languages: eng · Channels: print, website
+- Topics: community_local (Specialist: scope local)
 - Target audience: -
-- UN profile: open_to_partner_content (website link "Submit News")
-- Contact: news@essexreporter.com · contact page: https://www.essexreporter.com/site/contact.html · latest article: 2026-11-10
+- UN profile: -
+- Contact: - · contact page: http://evincemagazine.com/contact/ · latest article: 2026-03-12
 
-## HTV — Cameroon · pf-042151
+## HTV7 — Viet Nam · pf-042159
 
-- Website: - (check: not checked)
+- Website: https://htv.com.vn/ (check: ok)
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (iptv-org broadcast area: whole country)
-- Languages: fra · Channels: tv
-- Topics: general_news (Specialist: iptv-org category "general")
+- Languages: vie · Channels: tv, website, social_media
+- Topics: education (Has a section on it: website section "Giáo dục" (another language, via Wikidata)); industry_innovation (Has a section on it: website section "Innovation Fest"); general_news (Specialist: iptv-org category "general"); business_economy (Has a section on it: website section "Kinh tế" (another language, via Wikidata)); culture (Reports on it: words in another language (via Wikidata): "van hoa", "đai hoi"); technology (Has a section on it: website section "Công nghệ" (another language, via Wikidata)); elections (Reports on it: words in another language (via Wikidata): "bau cu", "dan chu")
 - Target audience: -
 - UN profile: -
-- Contact: - · contact page: - · latest article: -
+- Contact: - · contact page: - · latest article: 2026-11-09
 
 ## Vizion Plus — Albania · pf-001680
 
@@ -367,29 +367,29 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - UN profile: -
 - Contact: - · contact page: - · latest article: 2026-11-09
 
-## Gouvernement du Burundi — Burundi · pf-065399
+## Iran Khabar — Canada · pf-065407
 
-- Website: http://www.burundi.gov.bi/ (check: ok)
+- Website: http://iran-khabar.com/ (check: error)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Burundi - National")
-- Languages: fra · Channels: website
-- Topics: poverty (Reports on it: website headlines: "securite sociale"); education (Reports on it: website headlines: "education"); water_sanitation (Reports on it: website headlines: "assainissement", "eau potable", "hygiene"); climate (Reports on it: website headlines: "environnement"); industry_innovation (Reports on it: website headlines: "infrastructures"); science (Reports on it: website headlines: "recherche scientifique", "scientifique"); business_economy (Reports on it: website headlines: "commerce", "economie", "entreprises"); culture (Reports on it: website headlines: "culture"); agriculture (Reports on it: website headlines: "agriculteurs", "agriculture", "elevage"); children_youth (Reports on it: website headlines: "jeunesse"); sports (Reports on it: website headlines: "sports")
-- Target audience: rural_farmers (topic agriculture)
+- Scope: local (Media Cloud collection "Canada - State & Local")
+- Languages: fas · Channels: print, website
+- Topics: community_local (Specialist: scope local)
+- Target audience: minority_language (in Persian: not an official language of the country)
 - UN profile: -
-- Contact: - · contact page: https://primature.gov.bi/contacts/ · latest article: 2026-11-09
+- Contact: - · contact page: - · latest article: -
 
-## Global GoalsCast — United States of America · pf-070606
+## Globo — Brazil · pf-070616
 
-- Website: https://globalgoalscast.org/ (check: ok)
+- Website: https://somos.globo.com/ (check: ok)
 - Sources: sdg_media_compact
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: unknown (no scope information in the sources)
-- Languages: eng · Channels: website, social_media
-- Topics: poverty (Reports on it: website About page: "poverty"); hunger_food (Reports on it: website About page: "hunger"); health (Has a section on it: website section "COVID Chaos"); education (Reports on it: website About page: "education"); gender_equality (Reports on it: website About page: "gender equality"); water_sanitation (Reports on it: website About page: "sanitation"); climate (Reports on it: website About page: "climate change", "environment"); partnerships (Has a section on it: website section "The Sustainable Development Goals"); science (Reports on it: website About page: "research"); business_economy (Reports on it: website About page: "markets", "trade"); human_rights (Reports on it: website About page: "social justice"); disasters (Specialist: website About page: "natural disasters"); disability (Has a section on it: website section "Disabilities and the Pandemic")
+- Languages: por · Channels: website
+- Topics: consumption (Specialist: description mentions "esg")
 - Target audience: -
 - UN profile: un_relationship (SDG Media Compact)
-- Contact: - · contact page: https://globalgoalscast.org/contact/ · latest article: -
+- Contact: - · contact page: - · latest article: -
 
