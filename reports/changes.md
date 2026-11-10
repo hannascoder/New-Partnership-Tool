@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 130 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 91, scope 3
+- No longer shown: 136 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 98, scope 3
 
 ### Examples: ownership
 
@@ -42,4 +42,4 @@
 - Causeur (FRA, pf-003202)
 - Chess.com (USA, pf-014292)
 - CHOI-FM (CAN, pf-003135)
-- CNews (FRA, pf-003419)
+- CKM (POL, pf-000928)

@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-145 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+147 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -104,7 +104,9 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-017409 | SMNI News Channel | PHL | AI reading (right-wing populist): Wikipedia: right-wing militarist religious network |
 | pf-008550 | Myśl.pl | POL | AI reading (right-wing populist): Wikipedia: right-wing journal |
 | pf-002675 | Nasz Dziennik | POL | AI reading: Wikipedia: right-wing to far-right |
+| pf-001849 | Radio Maryja | POL | AI reading (right-wing populist): general knowledge, not in the profile text (please check): nationalist and right-wing Catholic radio of Tadeusz Rydzyk; the text says 'religious and political socially conservative' |
 | pf-012608 | Telewizja Republika | POL | AI reading (right-wing populist): Wikipedia: right-wing, supports Law and Justice |
+| pf-002131 | Telewizja Trwam | POL | AI reading (right-wing populist): general knowledge, not in the profile text (please check): TV channel of the Radio Maryja group (Tadeusz Rydzyk) |
 | pf-001406 | Tygodnik Solidarność | POL | AI reading (right-wing populist): Wikipedia: Polish right-wing weekly |
 | pf-004463 | Газета Польська | POL | AI reading: Wikipedia: right-wing populist to far-right weekly |
 | pf-001585 | Nascer do Sol | PRT | AI reading (right-wing populist): Wikipedia: leans on the right wing |

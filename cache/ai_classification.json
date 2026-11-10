@@ -1066,6 +1066,29 @@
    ]
   ]
  },
+ "pf-000122": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "centre-left weekly news magazine"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Nauka"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Zdrowie"
+   ]
+  ]
+ },
  "pf-000123": {
   "date": "2026-11-10",
   "owner": "LVMH",
@@ -1249,6 +1272,28 @@
     null,
     1,
     "public broadcaster for Thuringia, Saxony, Saxony-Anhalt"
+   ]
+  ]
+ },
+ "pf-000149": {
+  "date": "2026-11-10",
+  "owner": "1+1 Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by 1+1 Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel with series and films"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -1524,6 +1569,33 @@
     null,
     1,
     "Wikipedia: political commentary"
+   ]
+  ]
+ },
+ "pf-000191": {
+  "audience": [
+   [
+    "minority_language",
+    "Belarusian language"
+   ],
+   [
+    "diaspora_migrants",
+    "Belarusian audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel for Belarus"
+   ],
+   [
+    "media_freedom",
+    null,
+    2,
+    "independent media for Belarus"
    ]
   ]
  },
@@ -2134,6 +2206,27 @@
    ]
   ]
  },
+ "pf-000286": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel, most watched"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000300": {
   "date": "2026-11-10",
   "topics": [
@@ -2557,6 +2650,28 @@
    ]
   ]
  },
+ "pf-000427": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV channel"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "extreme and adventure sports channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "12 languages"
+   ]
+  ],
+  "website_warning": "the website shows an empty blog ('Hello world!'), not the channel"
+ },
  "pf-000431": {
   "date": "2026-11-10",
   "owner": "Nine Entertainment",
@@ -2726,6 +2841,33 @@
    ]
   ]
  },
+ "pf-000460": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Polish diaspora"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TVN network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international pay TV channel"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Poles abroad"
+   ]
+  ]
+ },
  "pf-000483": {
   "date": "2026-11-09",
   "owner": "Hearst",
@@ -2763,6 +2905,58 @@
     null,
     1,
     "entertainment trade magazine"
+   ]
+  ]
+ },
+ "pf-000488": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: media group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-000489": {
+  "date": "2026-11-10",
+  "owner": "Telewizja Polsat",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Telewizja Polsat"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel with series"
+   ]
+  ]
+ },
+ "pf-000490": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Polsat group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
    ]
   ]
  },
@@ -3472,6 +3666,28 @@
    ]
   ]
  },
+ "pf-000700": {
+  "date": "2026-11-10",
+  "owner": "Polskie Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Polish public radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public radio with music and culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ]
+  ]
+ },
  "pf-000709": {
   "date": "2026-11-10",
   "topics": [
@@ -3588,6 +3804,29 @@
    ]
   ]
  },
+ "pf-000732": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing intellectual network and daily"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "conflicts section"
+   ]
+  ]
+ },
  "pf-000737": {
   "date": "2026-11-10",
   "owner": "Rambler Media Group",
@@ -3615,6 +3854,22 @@
     null,
     2,
     "website section GTA Elections 2026"
+   ]
+  ]
+ },
+ "pf-000740": {
+  "date": "2026-11-10",
+  "owner": "TVN Group",
+  "ownership": [
+   "private",
+   "Wikipedia: TVN Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "drama and comedy channel"
    ]
   ]
  },
@@ -4145,6 +4400,21 @@
    ]
   ]
  },
+ "pf-000843": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
+   ]
+  ]
+ },
  "pf-000848": {
   "date": "2026-11-10",
   "ownership": [
@@ -4217,6 +4487,17 @@
     null,
     1,
     "official newspaper of the armed forces"
+   ]
+  ]
+ },
+ "pf-000855": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationwide daily newspaper"
    ]
   ]
  },
@@ -4525,6 +4806,18 @@
    ]
   ]
  },
+ "pf-000928": {
+  "closed": "Wikipedia: CKM 'was' a magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "men's lifestyle magazine"
+   ]
+  ]
+ },
  "pf-000930": {
   "date": "2026-11-10",
   "owner": "BBC",
@@ -4581,6 +4874,33 @@
    ]
   ]
  },
+ "pf-000959": {
+  "audience": [
+   [
+    "minority_language",
+    "Belarusian language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: funded by the Polish Ministry of Foreign Affairs"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio for Belarus, funded by the Polish foreign ministry"
+   ],
+   [
+    "media_freedom",
+    null,
+    3,
+    "independent media for Belarus"
+   ]
+  ]
+ },
  "pf-000963": {
   "date": "2026-11-10",
   "owner": "Éditions Philippe Amaury",
@@ -4631,6 +4951,27 @@
     "school_access",
     2,
     "website section Education"
+   ]
+  ]
+ },
+ "pf-000974": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Nickelodeon"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
    ]
   ]
  },
@@ -4783,6 +5124,33 @@
    ]
   ]
  },
+ "pf-001062": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: publicly funded radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio broadcaster"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Ukrainian public broadcaster"
+   ]
+  ]
+ },
  "pf-001063": {
   "date": "2026-11-10",
   "topics": [
@@ -4905,6 +5273,27 @@
    ]
   ]
  },
+ "pf-001114": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial radio station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001117": {
   "date": "2026-11-10",
   "owner": "Foxtel",
@@ -4918,6 +5307,29 @@
     null,
     1,
     "premium drama channel"
+   ]
+  ]
+ },
+ "pf-001140": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "socio-political online media"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "veterans section"
    ]
   ]
  },
@@ -4962,6 +5374,31 @@
     null,
     1,
     "Jewish Autonomous Oblast"
+   ]
+  ]
+ },
+ "pf-001148": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: official international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international broadcasting service"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "foreign-language services"
+   ],
+   [
+    "public_service_mandate",
+    "Ukrainian public broadcaster"
    ]
   ]
  },
@@ -5374,6 +5811,29 @@
    ]
   ]
  },
+ "pf-001230": {
+  "audience": [
+   [
+    "minority_language",
+    "Silesian"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "regional TV of Silesia"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Silesia"
+   ]
+  ]
+ },
  "pf-001235": {
   "date": "2026-11-10",
   "owner": "Mediaset España",
@@ -5563,6 +6023,27 @@
    ]
   ]
  },
+ "pf-001270": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: Ukrainian state news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state news agency"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
+   ]
+  ]
+ },
  "pf-001273": {
   "date": "2026-11-10",
   "ownership": [
@@ -5726,6 +6207,189 @@
     null,
     2,
     "website section Ocio y cultura"
+   ]
+  ]
+ },
+ "pf-001318": {
+  "date": "2026-11-10",
+  "owner": "Polsat",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Polsat"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "lifestyle channel for men"
+   ]
+  ]
+ },
+ "pf-001320": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by TVP"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports channel"
+   ]
+  ]
+ },
+ "pf-001321": {
+  "audience": [
+   [
+    "women",
+    "aimed at women"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "pay-TV channel on fashion, health and beauty"
+   ]
+  ]
+ },
+ "pf-001323": {
+  "date": "2026-11-10",
+  "owner": "Telewizja Polsat",
+  "ownership": [
+   "private",
+   "Wikipedia: Telewizja Polsat"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ]
+  ]
+ },
+ "pf-001324": {
+  "audience": [
+   [
+    "women",
+    "aimed at women"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Polsat",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Polsat"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "lifestyle channel for women"
+   ]
+  ]
+ },
+ "pf-001325": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Polish diaspora"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Telewizja Polska",
+  "ownership": [
+   "public_service",
+   "Wikipedia: channel of TVP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international channel of public TV"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Poles abroad"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-001326": {
+  "date": "2026-11-10",
+  "owner": "Telewizja Polska",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Telewizja Polska"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "HD version of public TV channels"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-001327": {
+  "date": "2026-11-10",
+  "owner": "Polsat",
+  "ownership": [
+   "private",
+   "Wikipedia: Polsat Network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
+ "pf-001335": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Canal+ network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "pay TV with films and sport"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
    ]
   ]
  },
@@ -6018,6 +6682,33 @@
     null,
     1,
     "Kyoto"
+   ]
+  ]
+ },
+ "pf-001375": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national public-service radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public radio"
+   ],
+   [
+    "children_youth",
+    null,
+    2,
+    "programmes for children"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
    ]
   ]
  },
@@ -7124,6 +7815,23 @@
    ]
   ]
  },
+ "pf-001684": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Lviv daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lviv"
+   ]
+  ]
+ },
  "pf-001686": {
   "date": "2026-11-10",
   "topics": [
@@ -7306,6 +8014,17 @@
    ]
   ]
  },
+ "pf-001709": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly magazine and online news"
+   ]
+  ]
+ },
  "pf-001716": {
   "date": "2026-11-10",
   "owner": "Sky Group",
@@ -7350,6 +8069,29 @@
   "right_populist": "Wikipedia: right-wing, nationalist",
   "topics": []
  },
+ "pf-001745": {
+  "audience": [
+   [
+    "minority_language",
+    "Belarusian language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio for Belarus"
+   ],
+   [
+    "media_freedom",
+    null,
+    2,
+    "independent media for Belarus"
+   ]
+  ]
+ },
  "pf-001762": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -7359,6 +8101,40 @@
     null,
     2,
     "general entertainment, drama series"
+   ]
+  ]
+ },
+ "pf-001767": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ]
+  ]
+ },
+ "pf-001792": {
+  "audience": [
+   [
+    "religious",
+    "Catholic readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Roman Catholic weekly"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "socio-cultural weekly"
    ]
   ]
  },
@@ -7455,6 +8231,17 @@
    ]
   ]
  },
+ "pf-001832": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ]
+  ]
+ },
  "pf-001845": {
   "closed": "Wikipedia: circulated from 1899 to 2020",
   "date": "2026-11-10",
@@ -7479,6 +8266,28 @@
    ]
   ]
  },
+ "pf-001849": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-profit radio"
+  ],
+  "right_populist": "general knowledge, not in the profile text (please check): nationalist and right-wing Catholic radio of Tadeusz Rydzyk; the text says 'religious and political socially conservative'",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio"
+   ]
+  ]
+ },
  "pf-001851": {
   "date": "2026-11-10",
   "topics": [
@@ -7493,6 +8302,29 @@
     null,
     2,
     "entertainment"
+   ]
+  ]
+ },
+ "pf-001853": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ],
+   [
+    "fact_checking",
+    null,
+    2,
+    "website section Fact-checking"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Polish, English, Ukrainian, Russian"
    ]
   ]
  },
@@ -7543,6 +8375,21 @@
    [
     "multilingual",
     "Basque and Spanish"
+   ]
+  ]
+ },
+ "pf-001867": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Polcast Television"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
    ]
   ]
  },
@@ -7998,6 +8845,55 @@
    ]
   ]
  },
+ "pf-002078": {
+  "date": "2026-11-10",
+  "owner": "TVP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Opole Voivodeship"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-002112": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: run by public broadcaster TVP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ]
+  ]
+ },
  "pf-002114": {
   "date": "2026-11-10",
   "ownership": [
@@ -8027,6 +8923,56 @@
     null,
     2,
     "website section Cultura"
+   ]
+  ]
+ },
+ "pf-002131": {
+  "audience": [
+   [
+    "religious",
+    "Catholic viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: Lux Veritatis Foundation"
+  ],
+  "right_populist": "general knowledge, not in the profile text (please check): TV channel of the Radio Maryja group (Tadeusz Rydzyk)",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic TV channel"
+   ]
+  ]
+ },
+ "pf-002148": {
+  "date": "2026-11-10",
+  "owner": "TVP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Podkarpackie Voivodeship"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
    ]
   ]
  },
@@ -8153,6 +9099,29 @@
     null,
     2,
     "cultural coverage"
+   ]
+  ]
+ },
+ "pf-002254": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language newspaper"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
    ]
   ]
  },
@@ -8558,6 +9527,17 @@
    ]
   ]
  },
+ "pf-002381": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly socio-political newspaper"
+   ]
+  ]
+ },
  "pf-002383": {
   "date": "2026-11-10",
   "ownership": [
@@ -8690,6 +9670,21 @@
    ]
   ]
  },
+ "pf-002432": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV network"
+   ]
+  ]
+ },
  "pf-002453": {
   "audience": [
    [
@@ -8758,6 +9753,45 @@
    ]
   ]
  },
+ "pf-002462": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
+   ]
+  ]
+ },
+ "pf-002469": {
+  "date": "2026-11-10",
+  "owner": "1+1 Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by 1+1 Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel with films and sport"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-002473": {
   "date": "2026-11-10",
   "owner": "News Corp Australia",
@@ -8772,6 +9806,23 @@
     null,
     1,
     "conservative news channel"
+   ]
+  ]
+ },
+ "pf-002474": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent news agency"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
    ]
   ]
  },
@@ -8795,6 +9846,51 @@
     null,
     1,
     "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-002491": {
+  "date": "2026-11-10",
+  "owner": "Suspilne",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by Suspilne"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Ukrainian public broadcaster"
+   ]
+  ]
+ },
+ "pf-002492": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural magazine"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "world and people"
    ]
   ]
  },
@@ -8909,6 +10005,30 @@
    [
     "educational",
     "French-language learning offers"
+   ]
+  ]
+ },
+ "pf-002588": {
+  "date": "2026-11-10",
+  "owner": "Gremi Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily economic and legal newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    1,
+    "economic newspaper"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    1,
+    "legal newspaper"
    ]
   ]
  },
@@ -9157,6 +10277,49 @@
    ]
   ]
  },
+ "pf-002710": {
+  "date": "2026-11-10",
+  "owner": "TVP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional branch of TVP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kuyavian-Pomeranian Voivodeship"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-002711": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: part of TVN Network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour commercial news channel"
+   ]
+  ]
+ },
  "pf-002733": {
   "date": "2026-11-10",
   "ownership": [
@@ -9196,6 +10359,48 @@
     null,
     1,
     "Sichuan Province"
+   ]
+  ]
+ },
+ "pf-002758": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: National Public Broadcasting Company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Ukrainian public broadcaster"
+   ]
+  ]
+ },
+ "pf-002761": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Ukrainian, Russian, English"
    ]
   ]
  },
@@ -9462,6 +10667,29 @@
     null,
     1,
     "channel for children and teenagers"
+   ]
+  ]
+ },
+ "pf-002880": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ]
+  ]
+ },
+ "pf-002891": {
+  "closed": "Wikipedia: TVi 'was' a TV channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent TV channel"
    ]
   ]
  },
@@ -9971,6 +11199,23 @@
    ]
   ]
  },
+ "pf-003097": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-003119": {
   "date": "2026-11-10",
   "owner": "Canadian Broadcasting Corporation",
@@ -10057,6 +11302,17 @@
    [
     "multilingual",
     "Hindi and English channels"
+   ]
+  ]
+ },
+ "pf-003226": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station with news"
    ]
   ]
  },
@@ -11454,6 +12710,17 @@
    ]
   ]
  },
+ "pf-004454": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary journal publishing translations"
+   ]
+  ]
+ },
  "pf-004457": {
   "date": "2026-11-10",
   "topics": [
@@ -11493,6 +12760,50 @@
    ]
   ]
  },
+ "pf-004567": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-004572": {
+  "audience": [
+   [
+    "indigenous",
+    "Crimean Tatars"
+   ],
+   [
+    "minority_language",
+    "Crimean Tatar language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel for Crimean Tatars"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "Crimean Tatars"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Ukrainian, Crimean Tatar, English"
+   ]
+  ]
+ },
  "pf-004581": {
   "audience": [
    [
@@ -11508,6 +12819,27 @@
     null,
     1,
     "news on Hollywood and the entertainment industry"
+   ]
+  ]
+ },
+ "pf-004590": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately held"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "privately held TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -11558,6 +12890,21 @@
   "far_right": "Wikipedia: called a far-right online publication",
   "topics": []
  },
+ "pf-004676": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: publishes laws of the parliament"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government gazette publishing laws"
+   ]
+  ]
+ },
  "pf-004679": {
   "date": "2026-11-10",
   "owner": "El Tiempo Casa Editorial",
@@ -11577,6 +12924,17 @@
     null,
     1,
     "Bogotá"
+   ]
+  ]
+ },
+ "pf-004690": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly socio-political newspaper"
    ]
   ]
  },
@@ -11672,6 +13030,40 @@
    ]
   ]
  },
+ "pf-004746": {
+  "closed": "Wikipedia: 'was' a monthly chronicle (historic)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "historical and literary chronicle"
+   ]
+  ]
+ },
+ "pf-004761": {
+  "date": "2026-11-10",
+  "owner": "Suspilne",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public TV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public culture channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Ukrainian public broadcaster"
+   ]
+  ]
+ },
  "pf-004768": {
   "date": "2026-11-10",
   "owner": "Mahaka Media",
@@ -11694,6 +13086,34 @@
    ]
   ]
  },
+ "pf-004803": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "general entertainment channel"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sports"
+   ]
+  ]
+ },
+ "pf-004819": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online publication on politics and economy"
+   ]
+  ]
+ },
  "pf-004821": {
   "date": "2026-11-10",
   "ownership": [
@@ -11706,6 +13126,27 @@
     null,
     1,
     "public TV channel"
+   ]
+  ]
+ },
+ "pf-004823": {
+  "audience": [
+   [
+    "children",
+    "cartoons and games"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: part of 1+1 Media"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "family and children's channel"
    ]
   ]
  },
@@ -11768,6 +13209,49 @@
     null,
     1,
     "national newspaper"
+   ]
+  ]
+ },
+ "pf-004893": {
+  "date": "2026-11-10",
+  "owner": "1+1 Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: part of 1+1 Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national entertainment TV channel"
+   ]
+  ]
+ },
+ "pf-004930": {
+  "audience": [
+   [
+    "indigenous",
+    "Crimean Tatars"
+   ],
+   [
+    "minority_language",
+    "Crimean Tatar language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Crimean Tatar weekly newspaper"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "Crimean Tatar community"
    ]
   ]
  },
@@ -12596,6 +14080,33 @@
    ]
   ]
  },
+ "pf-005894": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Ukrainian diaspora"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: 1+1 group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international TV channel"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for the Ukrainian diaspora"
+   ]
+  ]
+ },
  "pf-005939": {
   "audience": [
    [
@@ -12616,6 +14127,35 @@
     null,
     2,
     "website section Elections"
+   ]
+  ]
+ },
+ "pf-006032": {
+  "audience": [
+   [
+    "business_professionals",
+    "business media"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business online media"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "website section Agro"
+   ],
+   [
+    "energy",
+    null,
+    2,
+    "website section Energy"
    ]
   ]
  },
@@ -13961,6 +15501,21 @@
    ]
   ]
  },
+ "pf-008902": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Polsat"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports news channel"
+   ]
+  ]
+ },
  "pf-008976": {
   "date": "2026-11-10",
   "ownership": [
@@ -13973,6 +15528,27 @@
     null,
     1,
     "TV network of the Ministry of Defence"
+   ]
+  ]
+ },
+ "pf-008995": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official channel of the Ukrainian parliament"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "official channel of parliament"
    ]
   ]
  },
@@ -14103,6 +15679,27 @@
     null,
     2,
     "Sundanese culture"
+   ]
+  ]
+ },
+ "pf-009426": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV channel"
+  ],
+  "topics": [
+   [
+    "human_rights",
+    "social_rights",
+    1,
+    "social-intervention TV channel"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
    ]
   ]
  },
@@ -14358,6 +15955,18 @@
     null,
     1,
     "British entertainment pay TV channel"
+   ]
+  ]
+ },
+ "pf-010283": {
+  "closed": "Wikipedia: TRC Ukraina 'was' a TV channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel"
    ]
   ]
  },
@@ -14744,10 +16353,43 @@
    ]
   ]
  },
+ "pf-012586": {
+  "date": "2026-11-10",
+  "owner": "Telewizja Polsat",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Telewizja Polsat"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music TV channel"
+   ]
+  ]
+ },
  "pf-012608": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing, supports Law and Justice",
   "topics": []
+ },
+ "pf-012889": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "only national Ukrainian newspaper in Crimea"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Crimea"
+   ]
+  ]
  },
  "pf-012916": {
   "date": "2026-11-10",
@@ -14766,6 +16408,44 @@
    ]
   ],
   "website_warning": "the website shows an online gambling ('slot') page, not the TV channel"
+ },
+ "pf-012917": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing magazine of social criticism"
+   ],
+   [
+    "inequalities",
+    null,
+    1,
+    "social criticism"
+   ]
+  ]
+ },
+ "pf-012918": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public TV channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel of Kyiv"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kyiv"
+   ]
+  ]
  },
  "pf-013200": {
   "date": "2026-11-10",
@@ -15034,6 +16714,29 @@
    ]
   ]
  },
+ "pf-013767": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent online media"
+   ],
+   [
+    "media_freedom",
+    null,
+    3,
+    "independent journalism"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Ukrainian, English, Russian"
+   ]
+  ]
+ },
  "pf-013769": {
   "date": "2026-11-10",
   "ownership": [
@@ -15067,6 +16770,45 @@
    [
     "public_service_mandate",
     "public broadcasting system"
+   ]
+  ]
+ },
+ "pf-013792": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "internet TV station"
+   ]
+  ]
+ },
+ "pf-013808": {
+  "audience": [
+   [
+    "children",
+    "children and parents"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Telewizja Polska",
+  "ownership": [
+   "public_service",
+   "Wikipedia: offered by Telewizja Polska"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public channel for children"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
    ]
   ]
  },
@@ -15129,6 +16871,27 @@
     null,
     1,
     "pay-TV channel for Brazilians living abroad"
+   ]
+  ]
+ },
+ "pf-014203": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: sister channel of TVN24"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and world news channel"
    ]
   ]
  },
@@ -15446,6 +17209,21 @@
   "right_populist": "Wikipedia: right-wing news website",
   "topics": []
  },
+ "pf-015088": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Polsat"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "information TV channel"
+   ]
+  ]
+ },
  "pf-015097": {
   "date": "2026-11-10",
   "ownership": [
@@ -15605,6 +17383,29 @@
     null,
     1,
     "children's channel"
+   ]
+  ]
+ },
+ "pf-015672": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Ukrainian, English and Russian"
    ]
   ]
  },
@@ -15888,6 +17689,21 @@
    ]
   ]
  },
+ "pf-016493": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned and operated by the Ministry of Defence"
+  ],
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "radio of the Ministry of Defence"
+   ]
+  ]
+ },
  "pf-016497": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: defined political orientation (right-wing liberalism)",
@@ -15963,6 +17779,23 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right conservative media company",
   "topics": []
+ },
+ "pf-016611": {
+  "audience": [
+   [
+    "minority_language",
+    "Russian speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Russian-language TV channel for Russian speakers"
+   ]
+  ]
  },
  "pf-016621": {
   "date": "2026-11-10",
@@ -16180,6 +18013,22 @@
    ]
   ]
  },
+ "pf-017103": {
+  "date": "2026-11-10",
+  "owner": "1+1 Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by 1+1 Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "film channel"
+   ]
+  ]
+ },
  "pf-017205": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: called 'the right wing's highly influential answer to Slate'",
@@ -16238,6 +18087,27 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing newspaper",
   "topics": []
+ },
+ "pf-021382": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Paramount"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's TV network"
+   ]
+  ]
  },
  "pf-021449": {
   "date": "2026-11-10",
@@ -16651,6 +18521,32 @@
   "far_right": "Wikipedia: kept the far-right, pro-government positioning of Nation TV",
   "topics": []
  },
+ "pf-024418": {
+  "date": "2026-11-10",
+  "owner": "Telewizja Polska",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by Telewizja Polska"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international English-language news network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Polish public broadcaster"
+   ],
+   [
+    "multilingual",
+    "English-language channel"
+   ]
+  ]
+ },
  "pf-024446": {
   "date": "2026-11-09",
   "owner": "Mediapro",
@@ -16678,6 +18574,29 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: extreme-right French media",
   "topics": []
+ },
+ "pf-024586": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language online newspaper"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "war section"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Politics"
+   ]
+  ]
  },
  "pf-024753": {
   "date": "2026-11-09",
@@ -16762,6 +18681,23 @@
   "far_right": "Wikipedia: pushes far-right content and conspiracy theories",
   "topics": []
  },
+ "pf-025068": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV channel"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "documentaries"
+   ]
+  ]
+ },
  "pf-025589": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing German news website",
@@ -16776,6 +18712,22 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
+ },
+ "pf-026630": {
+  "date": "2026-11-10",
+  "owner": "Suspilne",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the Public Broadcasting Company"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports channel"
+   ]
+  ]
  },
  "pf-026657": {
   "date": "2026-11-09",

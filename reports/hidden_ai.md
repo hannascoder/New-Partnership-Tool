@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-31 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+35 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -26,10 +26,14 @@
 | pf-001615 | TV Edukasi | IDN | no longer published: Wikipedia: TV Edukasi 'was' a TV station |
 | pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
 | pf-008748 | Official Gazette of the Federation | MEX | not a media outlet: official government gazette that publishes laws, not a media outlet |
+| pf-000928 | CKM | POL | no longer published: Wikipedia: CKM 'was' a magazine |
 | pf-016924 | Dzen | RUS | not a media outlet: recommendation platform (VK), not a media outlet |
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |
 | pf-001845 | Ogoniok | RUS | no longer published: Wikipedia: circulated from 1899 to 2020 |
 | pf-001970 | Russkiy Mir Foundation | RUS | not a media outlet: government-sponsored foundation promoting the Russian language, not a media outlet |
+| pf-004746 | Kievskaia starina | UKR | no longer published: Wikipedia: 'was' a monthly chronicle (historic) |
+| pf-002891 | TVi | UKR | no longer published: Wikipedia: TVi 'was' a TV channel |
+| pf-010283 | Ukraina | UKR | no longer published: Wikipedia: TRC Ukraina 'was' a TV channel |
 | pf-014292 | Chess.com | USA | not a media outlet: online chess platform, not a media outlet |
 | pf-000017 | Google News | USA | not a media outlet: news aggregator of Google, does not publish its own content |
 | pf-000103 | Penthouse | USA | not a media outlet: erotic magazine (adult content is excluded, KATEGORIEN 0.4) |
