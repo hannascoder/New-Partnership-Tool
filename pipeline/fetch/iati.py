@@ -26,6 +26,18 @@ def main():
     kept = [{k: o.get(k) for k in FIELDS} for o in orgs
             if o.get("publisher_organization_type") in NGO_TYPES
             and (o.get("publisher_country") or "").upper() in allowed and o.get("state") == "active"]
+    # the list does not include website and e-mail: read them from each organisation's page
+    SHOW = "https://iatiregistry.org/api/3/action/organization_show"
+    for o in kept:
+        if o.get("publisher_url") and o.get("publisher_contact_email"):
+            continue
+        try:
+            r = json.loads(get(SHOW, {"id": o["name"]}, tries=2, timeout=60))["result"]
+        except Exception:
+            continue
+        extras = {e.get("key"): e.get("value") for e in r.get("extras") or [] if isinstance(e, dict)}
+        for k in ("publisher_url", "publisher_contact_email"):
+            o[k] = o.get(k) or r.get(k) or extras.get(k)
     save("iati", kept, {"url": API, "total_in_source": len(orgs), "ngo_types": NGO_TYPES,
                         "licence": "IATI Registry metadata (open)"})
 

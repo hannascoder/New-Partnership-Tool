@@ -10,5 +10,7 @@ pages:
   - {id: ecosoc_aow_search,     url: "https://esango.un.org/civilsociety/displayAowSearch.do?method=search&sessionCheck=false"}
   - {id: ecosoc_advanced_search, url: "https://esango.un.org/civilsociety/displayAdvancedSearch.do?method=search&sessionCheck=false"}
   - {id: un_geneva_ngo_list,    url: "https://www.ungeneva.org/en/engage/civil-society/ngo-list"}
-  # added 10.11.2026: NGOs accredited to the Conference of States Parties (disability) -> topic "Disability"
+  # added 10.11.2026: NGOs accredited to the Conference of States Parties (disability) -> topic "Disability".
+  # The site refuses automatic downloads (HTTP 403, 10.11.2026): not worked around; the owner can save the
+  # page by hand as raw/ngo/desa_cosp_list.html.gz if wanted.
   - {id: desa_cosp_list,        url: "https://social.desa.un.org/issues/disability/cosp/list-of-non-governmental-organization-accredited-to-the-conference-of-states"}

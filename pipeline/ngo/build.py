@@ -218,6 +218,13 @@ def merge(records):
 
 
 ORDER = ["ecosoc", "wikidata_ngo", "un_geneva", "iati"]
+PREF = {"ecosoc": 0, "wd": 1, "ungva": 2, "iati": 3}
+
+
+def nid_guess(keys):
+    """stable id of a merged NGO: the key of its best source (ECOSOC > Wikidata > UN Geneva > IATI)"""
+    main_key = min(keys, key=lambda k: (PREF.get(k.split(":")[0], 9), k))
+    return "ngo-" + re.sub(r"[^a-z0-9]+", "-", main_key.lower()).strip("-")
 
 
 def first(members, key):
@@ -252,8 +259,21 @@ def contains_word(text, words):
     return None
 
 
+def website_data():
+    """results of the website check (pipeline/fetch/website_check.py also checks NGO websites)"""
+    web = {}
+    for f in sorted((RAW / "website_check").glob("*.json.gz")):
+        for i, v in json.load(gzip.open(f, "rt", encoding="utf-8")).items():
+            if i.startswith("ngo-"):
+                web[i] = v
+    return web
+
+
 def main():
     recs = ecosoc() + wikidata() + geneva() + iati_ngos()
+    web = website_data()
+    import csv
+    iso1 = {r["iso639_1"]: r["code"] for r in csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")) if r["iso639_1"]}
     print("records:", Counter(r["source"] for r in recs))
     groups = merge(recs)
     topics = Matcher()
@@ -271,9 +291,7 @@ def main():
         name = first(ms, "name")
         country = first(ms, "country")
         keys = sorted(m["key"] for m in ms)
-        pref = {"ecosoc": 0, "wd": 1, "ungva": 2, "iati": 3}
-        main_key = min(keys, key=lambda k: (pref.get(k.split(":")[0], 9), k))
-        nid = "ngo-" + re.sub(r"[^a-z0-9]+", "-", main_key.lower()).strip("-")
+        nid = nid_guess(keys)
         # exclusions
         why_out = None
         for m in ms:
@@ -310,7 +328,15 @@ def main():
         shorts = [x for m in ms for x in m.get("short") or []]
         # long texts (mission, IATI description) like an About page: first sentence = Specialist, rest = Reports on it
         abouts = [("description", desc)] if desc else []
-        for tp, r in topics.match(name=name, descriptions=shorts, abouts=abouts).items():
+        wsite = web.get(nid_guess(keys)) or {}
+        menu, heads = [], []
+        if wsite.get("status") == "ok":
+            shorts += [x for x in (wsite.get("desc"), wsite.get("title")) if x]
+            if wsite.get("about"):
+                abouts.append(("website About page", wsite["about"]))
+            menu = [tuple(x) for x in wsite.get("nav") or []]
+            heads = (wsite.get("heads") or []) + ([wsite["home_text"]] if wsite.get("home_text") else [])
+        for tp, r in topics.match(name=name, descriptions=shorts, abouts=abouts, menu=menu, headlines=heads).items():
             for sub in r["subs"] or [None]:
                 add(tp, sub, r["s"], r["why"])
         cat_topics = [{**t, "subs": sorted(t["subs"]), "method": "source_field" if t["source"].startswith("ECOSOC") else "keyword"}
@@ -332,6 +358,9 @@ def main():
         if any(s.startswith("ecosoc_") and s != "ecosoc_registered" for s in us):
             us = [s for s in us if s != "ecosoc_registered"]
         social = {}
+        if wsite.get("status") == "ok":
+            for k, u in (wsite.get("social") or {}).items():
+                social.setdefault(k, u)
         for m in ms:
             for k, v in (m.get("social") or {}).items():
                 social.setdefault(k, v)
@@ -340,9 +369,13 @@ def main():
         out.append({
             "id": nid, "name": name, "country": country, "kind": "ngo",
             "alt_names": sorted({a for m in ms for a in [m["name"]] + (m.get("alt_names") or []) if a != name})[:5],
-            "website": first(ms, "website"), "languages": sorted({l for m in ms for l in m.get("languages") or []}),
+            "website": first(ms, "website"),
+            "languages": sorted({l for m in ms for l in m.get("languages") or []})
+            or ([iso1[wsite["lang"].split("-")[0].split("_")[0].lower()]] if wsite.get("lang") and wsite["lang"].split("-")[0].split("_")[0].lower() in iso1 else []),
+            "contact_page": wsite.get("contact_url") if wsite.get("status") == "ok" else None,
+            "last_post": wsite.get("last_post"),
             "channels": (["website"] if first(ms, "website") else []) + (["social_media"] if social else []),
-            "social": social, "email": next((x for x in (org_email(m.get("email")) for m in ms) if x), None), "sources": sorted({m["source"] for m in ms}),
+            "social": social, "email": next((x for x in [org_email(m.get("email")) for m in ms] + [org_email(e) for e in wsite.get("emails") or []] if x), None), "sources": sorted({m["source"] for m in ms}),
             "members": keys, "first_seen": first_seen[nid], "wikipedia_languages": wl,
             "profile_url": first(ms, "profile_url"),
             "ngo": {"un_status": us, "type_of_work": tow, "fields": fields,
@@ -350,6 +383,7 @@ def main():
             "prominence": max([weight.get(s, 0) for s in us] or [0]) * 10 + wl + len({m["source"] for m in ms}),
             "cat": {"topics": cat_topics,
                     "audience_groups": [{"value": a, "source": s} for a, s in aud.items()],
+                    "website_status": wsite.get("status"),
                     "org_type": {"value": "ngo", "source": "NGO list: " + ", ".join(sorted({m['source'] for m in ms}))}},
         })
     json.dump(first_seen, open(first_seen_file, "w", encoding="utf-8"), ensure_ascii=False, indent=0, sort_keys=True)
