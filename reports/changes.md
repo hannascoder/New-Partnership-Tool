@@ -2,7 +2,7 @@
 
 - New outlets: 0
 - No longer shown: 110 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 40, scope 3
+- Changed values: ownership 51, scope 3
 
 ### Examples: ownership
 

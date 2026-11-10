@@ -462,6 +462,18 @@
    ]
   ]
  },
+ "pf-000059": {
+  "date": "2026-11-10",
+  "owner": "HT Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper"
+   ]
+  ]
+ },
  "pf-000061": {
   "date": "2026-11-09",
   "topics": [
@@ -514,6 +526,24 @@
    [
     "storytelling",
     "documentaries about animals"
+   ]
+  ]
+ },
+ "pf-000067": {
+  "date": "2026-11-10",
+  "owner": "The Times Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "city sections"
    ]
   ]
  },
@@ -614,6 +644,40 @@
    [
     "multilingual",
     "English edition"
+   ]
+  ]
+ },
+ "pf-000076": {
+  "date": "2026-11-10",
+  "owner": "Chinese Communist Party",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: newspaper of the CCP Central Committee"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official newspaper of the CCP Central Committee"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Sci-Tech"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "editions in many languages"
    ]
   ]
  },
@@ -1140,6 +1204,43 @@
    ]
   ]
  },
+ "pf-000200": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official state news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official state news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "news in many languages"
+   ]
+  ]
+ },
+ "pf-000201": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national broadcaster of the PRC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national state TV broadcaster"
+   ]
+  ]
+ },
  "pf-000206": {
   "date": "2026-11-09",
   "topics": [
@@ -1244,6 +1345,27 @@
    ]
   ]
  },
+ "pf-000223": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Warner Bros. Discovery India"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
+   ]
+  ]
+ },
  "pf-000224": {
   "date": "2026-11-10",
   "topics": [
@@ -1344,6 +1466,21 @@
    ]
   ]
  },
+ "pf-000267": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: nonprofit cooperative of newspapers"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest news agency, nonprofit cooperative"
+   ]
+  ]
+ },
  "pf-000272": {
   "date": "2026-11-09",
   "owner": "People Inc.",
@@ -1402,6 +1539,24 @@
     null,
     1,
     "regional public TV of Madrid"
+   ]
+  ]
+ },
+ "pf-000284": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Kasturi & Sons",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
    ]
   ]
  },
@@ -1559,6 +1714,22 @@
   ],
   "website_warning": "the website shows a blog about Kinshasa life, not the newspaper"
  },
+ "pf-000377": {
+  "date": "2026-11-10",
+  "owner": "Prasar Bharati",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Government news channel, owned by Doordarshan"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news channel"
+   ]
+  ]
+ },
  "pf-000404": {
   "date": "2026-11-09",
   "topics": [
@@ -1567,6 +1738,17 @@
     null,
     1,
     "general-interest family magazine"
+   ]
+  ]
+ },
+ "pf-000405": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language broadsheet daily"
    ]
   ]
  },
@@ -1589,6 +1771,28 @@
     null,
     1,
     "business magazine"
+   ]
+  ]
+ },
+ "pf-000411": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "broadcasts in many languages"
    ]
   ]
  },
@@ -1775,6 +1979,22 @@
     "international news agency"
    ]
   ]
+ },
+ "pf-000527": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state news weekly"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national English-language news weekly"
+   ]
+  ],
+  "website_warning": "the website (bjinformation.com) does not look like Beijing Review"
  },
  "pf-000531": {
   "date": "2026-11-10",
@@ -2145,6 +2365,23 @@
     null,
     1,
     "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-000676": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "morning daily compact newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Mumbai news"
    ]
   ]
  },
@@ -2519,6 +2756,50 @@
    ]
   ]
  },
+ "pf-000835": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Chinese-speaking viewers worldwide"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: majority state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV network for Mandarin and Cantonese viewers"
+   ]
+  ]
+ },
+ "pf-000837": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news publishing group"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "website section Military"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website sections Business, Trade, Finance"
+   ]
+  ]
+ },
  "pf-000841": {
   "audience": [
    [
@@ -2733,6 +3014,21 @@
    ]
   ]
  },
+ "pf-000989": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Shanghai-based state media outlet"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Shanghai state media group"
+   ]
+  ]
+ },
  "pf-001075": {
   "audience": [
    [
@@ -2765,6 +3061,27 @@
     null,
     1,
     "largest newspaper in Argentina"
+   ]
+  ]
+ },
+ "pf-001150": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-run web portal"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "content in several languages"
    ]
   ]
  },
@@ -2823,6 +3140,34 @@
   "right_populist": "Wikipedia: since 2017 centrist and right-wing views",
   "topics": []
  },
+ "pf-001180": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "for overseas Chinese"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "CCTV channel broadcasting outside China"
+   ],
+   [
+    "diaspora",
+    null,
+    2,
+    "for Chinese viewers abroad"
+   ]
+  ]
+ },
  "pf-001181": {
   "audience": [
    [
@@ -2849,6 +3194,18 @@
     null,
     1,
     "daily newspaper of Córdoba"
+   ]
+  ]
+ },
+ "pf-001186": {
+  "date": "2026-11-10",
+  "owner": "The Hindu Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper"
    ]
   ]
  },
@@ -2983,6 +3340,61 @@
    ]
   ]
  },
+ "pf-001248": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "news service for overseas Chinese"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "second largest state news agency"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "website section 宗教 (religion)"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section 教育 (education)"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section 健康 (health)"
+   ]
+  ]
+ },
+ "pf-001249": {
+  "date": "2026-11-10",
+  "owner": "People's Daily",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned, under the People's Daily"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned outlet commenting on international issues"
+   ]
+  ]
+ },
  "pf-001251": {
   "date": "2026-11-09",
   "owner": "Grupo Globo",
@@ -3033,6 +3445,21 @@
    ]
   ]
  },
+ "pf-001273": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official PLA newspaper"
+  ],
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "official newspaper of the People's Liberation Army"
+   ]
+  ]
+ },
  "pf-001293": {
   "country_hint": "DNK (Nordic network, website gamereactor.dk)",
   "date": "2026-11-10",
@@ -3079,6 +3506,38 @@
    ]
   ]
  },
+ "pf-001304": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: part of CCTV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "main sports channel"
+   ]
+  ]
+ },
+ "pf-001305": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national state broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "primary channel of CCTV"
+   ]
+  ]
+ },
  "pf-001310": {
   "audience": [
    [
@@ -3098,6 +3557,22 @@
     null,
     1,
     "business news channel"
+   ]
+  ]
+ },
+ "pf-001311": {
+  "date": "2026-11-10",
+  "owner": "Network18",
+  "ownership": [
+   "private",
+   "Wikipedia: Network18 (Reliance Industries)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language news channel"
    ]
   ]
  },
@@ -3234,6 +3709,22 @@
    ]
   ]
  },
+ "pf-001382": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national radio service"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national radio network"
+   ]
+  ]
+ },
  "pf-001389": {
   "date": "2026-11-10",
   "owner": "Real Madrid CF",
@@ -3355,6 +3846,44 @@
    ]
   ]
  },
+ "pf-001472": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcasting service of Hong Kong"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcasting service of Hong Kong"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
+ "pf-001515": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "website section Karnataka"
+   ]
+  ]
+ },
  "pf-001518": {
   "audience": [
    [
@@ -3430,6 +3959,34 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: conservative, nationalist, far-right stance (major Japanese daily)",
   "topics": []
+ },
+ "pf-001547": {
+  "date": "2026-11-10",
+  "owner": "Alibaba Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Alibaba Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website sections Economy, Business"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "website section Tech"
+   ]
+  ]
  },
  "pf-001555": {
   "date": "2026-11-09",
@@ -3555,6 +4112,60 @@
    ]
   ]
  },
+ "pf-001636": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by CCTV / CGTN"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic-language TV channel"
+   ]
+  ]
+ },
+ "pf-001675": {
+  "date": "2026-11-10",
+  "owner": "Jagran Prakashan",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hindi-language daily newspaper"
+   ]
+  ]
+ },
+ "pf-001678": {
+  "date": "2026-11-10",
+  "owner": "Prasar Bharati",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned public radio broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public radio"
+   ],
+   [
+    "multilingual",
+    "broadcasts in many Indian languages"
+   ]
+  ]
+ },
  "pf-001679": {
   "date": "2026-11-10",
   "topics": [
@@ -3631,6 +4242,24 @@
     null,
     1,
     "Catalan daily"
+   ]
+  ]
+ },
+ "pf-001708": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Indian Express Group",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
    ]
   ]
  },
@@ -3721,6 +4350,38 @@
    [
     "public_service_mandate",
     "French public television"
+   ]
+  ]
+ },
+ "pf-001807": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CGTN, state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Spanish-language news channel"
+   ]
+  ]
+ },
+ "pf-001808": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CGTN, state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language news channel"
    ]
   ]
  },
@@ -3938,6 +4599,40 @@
   "right_populist": "Wikipedia: right-wing editorial stance",
   "topics": []
  },
+ "pf-002043": {
+  "date": "2026-11-10",
+  "owner": "Living Media India",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "most widely circulated news magazine"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Hindi editions"
+   ]
+  ]
+ },
+ "pf-002062": {
+  "date": "2026-11-10",
+  "owner": "Media Chinese International",
+  "ownership": [
+   "private",
+   "Wikipedia: published by Media Chinese International"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Chinese-language newspaper"
+   ]
+  ]
+ },
  "pf-002115": {
   "date": "2026-11-09",
   "topics": [
@@ -3952,6 +4647,28 @@
     null,
     2,
     "website section Cultura"
+   ]
+  ]
+ },
+ "pf-002186": {
+  "date": "2026-11-10",
+  "owner": "Prasar Bharati",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned, established by the Government of India"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public service TV broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "India's public service broadcaster"
    ]
   ]
  },
@@ -4092,6 +4809,34 @@
    ]
   ]
  },
+ "pf-002312": {
+  "date": "2026-11-10",
+  "owner": "Shanghai United Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: published by Shanghai United Media Group (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-002319": {
+  "date": "2026-11-10",
+  "owner": "Dainik Bhaskar Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hindi-language daily newspaper"
+   ]
+  ]
+ },
  "pf-002330": {
   "date": "2026-11-09",
   "owner": "Grupo Abril",
@@ -4115,6 +4860,122 @@
    ]
   ]
  },
+ "pf-002342": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: run by The Tribune Trust"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website sections UPSC, Exam Mentor"
+   ]
+  ]
+ },
+ "pf-002351": {
+  "date": "2026-11-10",
+  "owner": "Zee Media",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website and Zee News programme"
+   ]
+  ]
+ },
+ "pf-002353": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "The Times Group",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business daily newspaper"
+   ]
+  ]
+ },
+ "pf-002354": {
+  "date": "2026-11-10",
+  "owner": "Indian Express Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper"
+   ]
+  ]
+ },
+ "pf-002355": {
+  "date": "2026-11-10",
+  "owner": "ABP Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English daily newspaper in Kolkata"
+   ]
+  ]
+ },
+ "pf-002356": {
+  "date": "2026-11-10",
+  "owner": "Express Publications",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language broadsheet daily"
+   ]
+  ]
+ },
+ "pf-002358": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general-interest news magazine"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Elections"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "website sections Sports, Cricket"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Hindi"
+   ]
+  ]
+ },
  "pf-002368": {
   "date": "2026-11-10",
   "owner": "Axel Springer SE",
@@ -4131,6 +4992,17 @@
    ]
   ]
  },
+ "pf-002385": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily newspaper in Hyderabad"
+   ]
+  ]
+ },
  "pf-002408": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -4143,10 +5015,48 @@
    ]
   ]
  },
+ "pf-002422": {
+  "date": "2026-11-10",
+  "owner": "Prasar Bharati",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the Ministry of Information and Broadcasting"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "state-owned entertainment channel"
+   ]
+  ]
+ },
  "pf-002425": {
   "date": "2026-11-10",
   "not_media": "official state gazette (laws and notices), not a media outlet",
   "topics": []
+ },
+ "pf-002430": {
+  "audience": [
+   [
+    "business_professionals",
+    "finance channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: operated by CCTV"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "finance channel"
+   ]
+  ]
  },
  "pf-002453": {
   "audience": [
@@ -4190,6 +5100,22 @@
     null,
     1,
     "all-news channel"
+   ]
+  ]
+ },
+ "pf-002495": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    1,
+    "Law and Society channel"
    ]
   ]
  },
@@ -4273,6 +5199,63 @@
    ]
   ]
  },
+ "pf-002592": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hindi-language daily newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section चुनाव (elections)"
+   ],
+   [
+    "climate",
+    "environment_general",
+    3,
+    "air quality (AQI) section"
+   ]
+  ]
+ },
+ "pf-002598": {
+  "date": "2026-11-10",
+  "owner": "Sun Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Tamil daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Tamil Nadu"
+   ]
+  ]
+ },
+ "pf-002629": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "arts and entertainment channel"
+   ]
+  ]
+ },
  "pf-002635": {
   "date": "2026-11-10",
   "owner": "Grupo Multimedios",
@@ -4314,6 +5297,29 @@
     null,
     1,
     "national public radio"
+   ]
+  ]
+ },
+ "pf-002659": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business daily newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Hindi"
    ]
   ]
  },
@@ -4379,6 +5385,27 @@
    [
     "multilingual",
     "English and French (La Presse canadienne)"
+   ]
+  ]
+ },
+ "pf-002746": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: provincial state broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sichuan Province"
    ]
   ]
  },
@@ -4455,6 +5482,81 @@
    ]
   ]
  },
+ "pf-002867": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private agency, described as close to the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency, multimedia feeds"
+   ]
+  ]
+ },
+ "pf-002903": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV drama channel"
+   ]
+  ]
+ },
+ "pf-002904": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government-affiliated"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "movie channel"
+   ]
+  ]
+ },
+ "pf-002906": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "science and education channel"
+   ],
+   [
+    "education",
+    null,
+    1,
+    "education programming"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "science and education channel"
+   ]
+  ]
+ },
  "pf-002907": {
   "date": "2026-11-09",
   "owner": "Grupo Bandeirantes",
@@ -4468,6 +5570,79 @@
     null,
     1,
     "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-002913": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state broadcaster CCTV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary channel"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "documentaries"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries"
+   ]
+  ]
+ },
+ "pf-002914": {
+  "audience": [
+   [
+    "minority_language",
+    "Malayalam speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Malayala Manorama Company",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Malayalam-language daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Kerala, website section Local News"
+   ]
+  ]
+ },
+ "pf-002917": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: statutory public broadcaster of the Government of India"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcasting corporation"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
    ]
   ]
  },
@@ -4568,6 +5743,29 @@
    ]
   ]
  },
+ "pf-002940": {
+  "audience": [
+   [
+    "minority_language",
+    "Gujarati speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper in Asia, Gujarati and English"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website sections stock market, trade"
+   ]
+  ]
+ },
  "pf-002972": {
   "audience": [
    [
@@ -4626,6 +5824,18 @@
    ]
   ]
  },
+ "pf-003032": {
+  "date": "2026-11-10",
+  "owner": "The New Indian Express Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Tamil daily newspaper"
+   ]
+  ]
+ },
  "pf-003119": {
   "date": "2026-11-10",
   "owner": "Canadian Broadcasting Corporation",
@@ -4677,6 +5887,43 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: classed to the right or far right",
   "topics": []
+ },
+ "pf-003204": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CGTN, state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Russian-language news channel"
+   ]
+  ]
+ },
+ "pf-003224": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: news media company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Hindi and English channels"
+   ]
+  ]
  },
  "pf-003262": {
   "audience": [
@@ -4902,6 +6149,28 @@
   "right_populist": "general knowledge, not in the profile text (please check): right-wing Spanish online newspaper",
   "topics": []
  },
+ "pf-003442": {
+  "date": "2026-11-10",
+  "owner": "Chinese Communist Party",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Chinese Communist Party daily"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section 学术 (academic)"
+   ]
+  ]
+ },
  "pf-003570": {
   "date": "2026-11-09",
   "topics": [
@@ -5072,6 +6341,22 @@
   "far_right": "Wikipedia: extreme-right weekly",
   "topics": []
  },
+ "pf-003737": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV news channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
  "pf-003740": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín (Artear)",
@@ -5137,6 +6422,18 @@
     null,
     1,
     "weekly newspaper in Lubumbashi"
+   ]
+  ]
+ },
+ "pf-003845": {
+  "date": "2026-11-10",
+  "owner": "ABP Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali-language daily newspaper"
    ]
   ]
  },
@@ -5271,6 +6568,22 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing TV news channel",
   "topics": []
+ },
+ "pf-003916": {
+  "date": "2026-11-10",
+  "owner": "NDTV",
+  "ownership": [
+   "private",
+   "Wikipedia: NDTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour English-language news channel"
+   ]
+  ]
  },
  "pf-003948": {
   "date": "2026-11-09",
@@ -5462,6 +6775,23 @@
    ]
   ]
  },
+ "pf-004174": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Tamil-language daily newspaper"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "cinema sections"
+   ]
+  ]
+ },
  "pf-004227": {
   "audience": [
    [
@@ -5511,10 +6841,54 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-004324": {
+  "date": "2026-11-10",
+  "owner": "The Times Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hindi newspaper"
+   ]
+  ]
+ },
  "pf-004329": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right nationalist newspaper (1920-1939)",
   "topics": []
+ },
+ "pf-004339": {
+  "date": "2026-11-10",
+  "owner": "Phoenix Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by majority state-owned Phoenix Television"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pay TV news channel"
+   ]
+  ]
+ },
+ "pf-004342": {
+  "date": "2026-11-10",
+  "owner": "ABP Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by ABP Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hindi-language TV news channel"
+   ]
+  ]
  },
  "pf-004348": {
   "date": "2026-11-10",
@@ -5525,6 +6899,62 @@
     null,
     1,
     "local newspaper in Brantford"
+   ]
+  ]
+ },
+ "pf-004379": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Warner Bros. Discovery India"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's pay TV channel"
+   ]
+  ]
+ },
+ "pf-004404": {
+  "date": "2026-11-10",
+  "owner": "Ramoji Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest Telugu daily newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "AP Local Body Elections"
+   ]
+  ]
+ },
+ "pf-004457": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hindi-Rajasthani daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "state sections"
    ]
   ]
  },
@@ -5572,6 +7002,22 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: called a far-right online publication",
   "topics": []
+ },
+ "pf-004847": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run China Global Television Network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language state-run news channel"
+   ]
+  ]
  },
  "pf-005196": {
   "date": "2026-11-09",
@@ -5737,6 +7183,82 @@
    ]
   ]
  },
+ "pf-005567": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Chinese opera channel"
+   ]
+  ]
+ },
+ "pf-005568": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by CCTV"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel with animated films"
+   ]
+  ]
+ },
+ "pf-005569": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music channel"
+   ]
+  ]
+ },
+ "pf-005766": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Network18",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Network18"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "Hindi business news channel"
+   ]
+  ]
+ },
  "pf-005773": {
   "date": "2026-11-10",
   "owner": "Bell Media",
@@ -5746,6 +7268,39 @@
     null,
     1,
     "news division of CTV"
+   ]
+  ]
+ },
+ "pf-005777": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Beijing-based media group"
+  ],
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "financial and business media group"
+   ],
+   [
+    "energy",
+    null,
+    2,
+    "website section 能源 (energy)"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section 健康 (health)"
    ]
   ]
  },
@@ -5993,6 +7548,22 @@
     null,
     1,
     "Spanish-language pay TV network"
+   ]
+  ]
+ },
+ "pf-006403": {
+  "date": "2026-11-10",
+  "owner": "Network18",
+  "ownership": [
+   "private",
+   "Wikipedia: Network18 (Reliance Industries)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
    ]
   ]
  },
@@ -6334,6 +7905,23 @@
    ]
   ]
  },
+ "pf-008151": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Marathi-language newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Pune, Mumbai, Maharashtra sections"
+   ]
+  ]
+ },
  "pf-008200": {
   "date": "2026-11-09",
   "ownership": [
@@ -6411,6 +7999,27 @@
     null,
     1,
     "TV network"
+   ]
+  ]
+ },
+ "pf-008666": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Indian counterpart of Nickelodeon"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's pay TV channel"
    ]
   ]
  },
@@ -6802,6 +8411,58 @@
    ]
   ]
  },
+ "pf-012292": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by CCTV"
+  ],
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "defence and military channel"
+   ]
+  ]
+ },
+ "pf-012349": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by China's Communist Party"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-012365": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Zhejiang Radio and Television Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite entertainment channel"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Zhejiang Province"
+   ]
+  ]
+ },
  "pf-012447": {
   "audience": [
    [
@@ -7003,6 +8664,39 @@
    ]
   ]
  },
+ "pf-014403": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest private news agency"
+   ]
+  ]
+ },
+ "pf-014729": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Network18",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business magazine"
+   ]
+  ]
+ },
  "pf-014857": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right news channel",
@@ -7148,6 +8842,28 @@
   "not_media": "search engine for scientific papers, not a media outlet",
   "topics": []
  },
+ "pf-016246": {
+  "date": "2026-11-10",
+  "owner": "Zee Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by the Essel Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language international news channel"
+   ],
+   [
+    "climate",
+    "environment_general",
+    3,
+    "Mission Sustainability series"
+   ]
+  ]
+ },
  "pf-016313": {
   "date": "2026-11-10",
   "topics": [
@@ -7283,6 +8999,50 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing and conservative",
   "topics": []
+ },
+ "pf-016658": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run China Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international state media organisation"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "channels in several languages"
+   ]
+  ]
+ },
+ "pf-016660": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run CGTN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries"
+   ]
+  ]
  },
  "pf-016697": {
   "date": "2026-11-10",
@@ -7423,6 +9183,22 @@
   "right_populist": "Wikipedia: right-wing newspaper",
   "topics": []
  },
+ "pf-021449": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "ultra-HD channel with dramas and documentaries"
+   ]
+  ]
+ },
  "pf-021455": {
   "date": "2026-11-09",
   "owner": "Grupo Perfil",
@@ -7497,6 +9273,34 @@
     null,
     1,
     "created by the Socialist Workers' Party"
+   ]
+  ]
+ },
+ "pf-022065": {
+  "audience": [
+   [
+    "rural_farmers",
+    "channel for agriculture, rural areas and farmers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by CCTV"
+  ],
+  "topics": [
+   [
+    "agriculture",
+    null,
+    1,
+    "agriculture and rural channel"
+   ],
+   [
+    "poverty",
+    "extreme_poverty",
+    2,
+    "poverty alleviation and rural revitalisation"
    ]
   ]
  },
@@ -7575,6 +9379,38 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-024188": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV / CMG"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "ultra-HD channel"
+   ]
+  ]
+ },
+ "pf-024219": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by CCTV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "Olympic channel"
+   ]
+  ]
  },
  "pf-024405": {
   "date": "2026-11-10",
@@ -8091,6 +9927,22 @@
    [
     "multilingual",
     "multilingual news network"
+   ]
+  ]
+ },
+ "pf-071244": {
+  "date": "2026-11-10",
+  "owner": "China Media Group",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: CCTV channel"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "international sporting events channel"
    ]
   ]
  },
