@@ -276,6 +276,16 @@ def main():
     iso1 = {r["iso639_1"]: r["code"] for r in csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")) if r["iso639_1"]}
     print("records:", Counter(r["source"] for r in recs))
     groups = merge(recs)
+    # Wikidata alone counts only with a classic NGO class (config/ngo.yaml wikidata_classes_included)
+    ok_cls = {x.lower() for x in CFG.get("wikidata_classes_included") or []}
+    kept = []
+    for g in groups:
+        srcs = {m["source"] for m in g["members"]}
+        if srcs == {"wikidata_ngo"} and not any(c.lower() in ok_cls for m in g["members"] for c in m.get("wd_classes") or []):
+            continue
+        kept.append(g)
+    print(f"groups: {len(groups)}, kept {len(kept)} (Wikidata-only items without a classic NGO class left out)")
+    groups = kept
     topics = Matcher()
     audience = Matcher(ROOT / "config" / "audience_keywords.yaml")
     field_map = {k.lower(): v for k, v in FIELDS["fields"].items()}
@@ -283,6 +293,8 @@ def main():
     weight = {s["id"]: s["weight"] for s in CFG["un_status"]}
     ideos = {x.lower() for x in RULES["exclude_far_right"]["wikidata_ideologies"]}
     gongo = {x.lower() for x in CFG["exclude"]["wikidata_classes"]}
+    right = {x.lower() for x in CFG["exclude"].get("wikidata_ideologies_right") or []}
+    not_ngo = {x.lower() for x in CFG["exclude"].get("wikidata_not_ngo_classes") or []}
     first_seen_file = ROOT / "cache" / "ngo_first_seen.json"
     first_seen = json.load(open(first_seen_file, encoding="utf-8")) if first_seen_file.exists() else {}
     out, excluded = [], []
@@ -298,9 +310,15 @@ def main():
             hit = [i for i in m.get("wd_ideology") or [] if i.lower() in ideos]
             if hit:
                 why_out = "far-right (Wikidata political ideology: " + hit[0] + ")"
+            hit = [i for i in m.get("wd_ideology") or [] if i.lower() in right]
+            if hit and not why_out:
+                why_out = "right-wing (Wikidata political ideology: " + hit[0] + ")"
             cls = [c for c in m.get("wd_classes") or [] if c.lower() in gongo]
             if cls:
                 why_out = "government-organised NGO (Wikidata: " + cls[0] + ")"
+            cls = [c for c in m.get("wd_classes") or [] if c.lower() in not_ngo]
+            if cls and not why_out:
+                why_out = "not a classic NGO (Wikidata: " + cls[0] + ")"
         w = contains_word(name, CFG["exclude"]["name_words"])
         if w and not why_out:
             why_out = f'not a classic NGO (name contains "{w.strip()}")'

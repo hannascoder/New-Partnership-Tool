@@ -64,6 +64,21 @@ type_of_work:
     fields: [religion]
     words: [church, christian, catholic, evangelical, lutheran, methodist, baptist, adventist, islamic, muslim, jewish, buddhist, hindu, sikh, bahá'í, baha'i, quaker, faith, église, chrétien, iglesia, cristiana, islámica, igreja, diocese, ministries, mission]
 
+# Wikidata: its "NGO" class has far too many sub-classes (college sports teams, dioceses, convents,
+# fire brigades ...: 67,000 items, checked 10.11.2026). An item from Wikidata alone counts as an NGO
+# only when it is directly an instance of one of these classes; other Wikidata items are only used to
+# add details (website, social media, languages) to NGOs found in ECOSOC, UN Geneva or IATI.
+wikidata_classes_included: [non-governmental organization, international non-governmental organization,
+  environmental non-governmental organization, non-governmental organization for development,
+  advocacy group, activist group, civil society organization, Civil Society Organization of Public Interest,
+  charitable organization, charitable corporation, charitable trust, charitable incorporated organisation, health charity,
+  aid agency, humanitarian organization, development organization, volunteer organization,
+  human rights organization, Helsinki Committee for Human Rights, women's organization, women's rights organization,
+  LGBTQ+ organization, LGBTQ+ rights organization, disability rights organization, disabled people's organisation,
+  indigenous rights organization, anti-racism organization, peace organization, anti-nuclear organization,
+  environmental organization, conservation organization, animal welfare organization, animal rights organization,
+  animal advocacy organization]
+
 # ECOSOC fields of activity -> target audience (config/categories.yaml audience ids)
 audience_from_fields:
   children: children
@@ -86,6 +101,17 @@ audience_from_fields:
 exclude:
   # Wikidata classes of the item (instance of): government-organised NGOs
   wikidata_classes: [government-organized non-governmental organization, GONGO, state-sponsored organization]
+  # not classic NGOs although Wikidata also lists them under an NGO class (10.11.2026: German "pressure group"
+  # = mostly business associations): left out when any source item has one of these classes
+  wikidata_not_ngo_classes: [trade association, professional association, employers' organization, business association,
+                             chamber of commerce, trade union, political party, sports governing body, medical association,
+                             learned society, scientific society, think tank, university, foundation]
+  # right-wing NGOs (owner 10.11.2026: "alles raus was rechts ist"; mainstream conservative stays, like for media):
+  # Wikidata political ideology, in addition to the far-right list of config/rules.yaml
+  wikidata_ideologies_right: [right-wing populism, national conservatism, ultraconservatism, paleoconservatism, Christian right,
+                              ethnic nationalism, white nationalism, Identitarian movement, opposition to immigration, Islamophobia,
+                              anti-gender movement, anti-transgender activism, anti-feminism, homophobia, racism, anti-abortion movement,
+                              Russian nationalism]
   # same far-right ideologies as for media: config/rules.yaml exclude_far_right.wikidata_ideologies
   # words in the name that show it is not a classic NGO (companies, government bodies, universities)
   name_words: [ministry of, ministère, ministerio, government of, university, université, universidad, universidade,
