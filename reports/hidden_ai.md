@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-78 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+87 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -10,6 +10,15 @@
 | pf-003254 | The Bulletin | AUS | no longer published: Wikipedia: The Bulletin 'was' an Australian magazine (closed 2008) |
 | pf-004167 | The Lone Hand | AUS | no longer published: Wikipedia: published 1907-1928 |
 | pf-000763 | مجلة نينتندو الرسمية | AUS | no longer published: Wikipedia: ran from 2006 to 2014 |
+| pf-000689 | Arbeiter-Zeitung | AUT | no longer published: Wikipedia: Arbeiter-Zeitung 'was' the party daily |
+| pf-001290 | Bundesgesetzblatt für die Republik Österreich | AUT | not a media outlet: federal law gazette, not a media outlet |
+| pf-021919 | HOSI Wien | AUT | not a media outlet: LGBT organisation, not a media outlet (an NGO) |
+| pf-013826 | Internationale Zeitschrift für Psychoanalyse | AUT | no longer published: Wikidata: journal 1913-1941 |
+| pf-003106 | Neue Freie Presse | AUT | no longer published: Wikipedia: historic newspaper (1864-1939) |
+| pf-017232 | Nick Austria | AUT | no longer published: Wikidata: defunct channel |
+| pf-001095 | Ostara | AUT | no longer published: Wikipedia: historic magazine |
+| pf-000716 | Radio Österreich International | AUT | no longer published: Wikipedia: RÖI 'was' a radio station |
+| pf-002810 | Volksstimme | AUT | no longer published: Wikipedia: published 1945-1991 |
 | pf-014573 | Associated Whistleblowing Press | BEL | no longer published: Wikipedia: AWP 'was' an agency |
 | pf-000981 | Bessy | BEL | not a media outlet: comics series, not a media outlet |
 | pf-002762 | Blokwatch | BEL | no longer published: Wikipedia: Blokwatch 'was' a news site |

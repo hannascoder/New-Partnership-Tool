@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-157 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+159 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -15,6 +15,8 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-017205 | Quillette | AUS | AI reading (right-wing populist): Wikipedia: called 'the right wing's highly influential answer to Slate' |
 | pf-028600 | Sky News Australia | AUS | AI reading (right-wing populist): general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia |
 | pf-001091 | Die Aula | AUT | Wikipedia Category:Far-right periodicals |
+| pf-026607 | Krone.tv | AUT | AI reading (right-wing populist): general knowledge, not in the profile text (please check): Kronen Zeitung is widely described as right-wing populist |
+| pf-001095 | Ostara | AUT | AI reading: Wikipedia: völkisch, antisemitic magazine ('of the Blonde and Masculists') |
 | pf-040973 | eXXpress TV | AUT | AI reading (right-wing populist): general knowledge, not in the profile text (please check): right-wing populist Austrian channel |
 | pf-002954 | 't Pallieterke | BEL | AI reading (right-wing populist): Wikipedia: Flemish nationalist (advocates Flemish independence), largely conservative; general knowledge: close to Vlaams Belang circles (please check) |
 | pf-009693 | The Daily Sangram | BGD | AI reading (right-wing populist): Wikipedia: mouthpiece of Bangladesh Jamaat-e-Islami (Islamist party) |

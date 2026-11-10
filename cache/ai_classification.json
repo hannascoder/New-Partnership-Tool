@@ -1203,6 +1203,17 @@
    ]
   ]
  },
+ "pf-000113": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-000115": {
   "country_hint": "PER (TV channel in Trujillo, Peru)",
   "date": "2026-11-10",
@@ -2403,6 +2414,34 @@
    ]
   ]
  },
+ "pf-000245": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tyrol and South Tyrol"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ]
+  ]
+ },
  "pf-000246": {
   "audience": [
    [
@@ -2797,6 +2836,47 @@
    ]
   ]
  },
+ "pf-000314": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
+ },
+ "pf-000315": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: ProSiebenSat.1"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV station"
+   ]
+  ]
+ },
+ "pf-000316": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "largest commercial TV station"
+   ]
+  ]
+ },
  "pf-000321": {
   "date": "2026-11-10",
   "owner": "Mediaset España",
@@ -2861,6 +2941,48 @@
     null,
     1,
     "independent pan-Arab daily newspaper"
+   ]
+  ]
+ },
+ "pf-000333": {
+  "audience": [
+   [
+    "youth_students",
+    "students"
+   ],
+   [
+    "diaspora_migrants",
+    "migrants"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "culture and education web radio"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ],
+   [
+    "educational",
+    "education radio"
    ]
   ]
  },
@@ -3215,6 +3337,21 @@
    ]
   ]
  },
+ "pf-000384": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: terrestrial commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
+   ]
+  ]
+ },
  "pf-000386": {
   "date": "2026-11-10",
   "topics": [
@@ -3229,6 +3366,23 @@
     "climate_change",
     3,
     "climate stories"
+   ]
+  ]
+ },
+ "pf-000387": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional sections"
    ]
   ]
  },
@@ -3968,6 +4122,28 @@
    [
     "multilingual",
     "many languages"
+   ]
+  ]
+ },
+ "pf-000494": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by ORF"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
    ]
   ]
  },
@@ -4849,6 +5025,23 @@
    ]
   ]
  },
+ "pf-000603": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Styria"
+   ]
+  ]
+ },
  "pf-000606": {
   "date": "2026-11-10",
   "topics": [
@@ -4968,6 +5161,34 @@
    [
     "public_service_mandate",
     "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000619": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Styria"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
    ]
   ]
  },
@@ -5520,6 +5741,18 @@
    ]
   ]
  },
+ "pf-000689": {
+  "closed": "Wikipedia: Arbeiter-Zeitung 'was' the party daily",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "social democrat daily"
+   ]
+  ]
+ },
  "pf-000691": {
   "date": "2026-11-10",
   "owner": "VGTRK",
@@ -5715,6 +5948,29 @@
    ]
   ]
  },
+ "pf-000716": {
+  "closed": "Wikipedia: RÖI 'was' a radio station",
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international shortwave radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ]
+  ]
+ },
  "pf-000717": {
   "date": "2026-11-10",
   "topics": [
@@ -5746,6 +6002,27 @@
     null,
     1,
     "Neuchâtel"
+   ]
+  ]
+ },
+ "pf-000721": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-commercial non-profit"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community radio of Salzburg"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "community radio open to programme makers"
    ]
   ]
  },
@@ -6113,6 +6390,28 @@
    ]
   ]
  },
+ "pf-000754": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by ORF"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture and information channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ]
+  ]
+ },
  "pf-000756": {
   "date": "2026-11-10",
   "topics": [
@@ -6324,6 +6623,44 @@
    ]
   ]
  },
+ "pf-000769": {
+  "audience": [
+   [
+    "youth_students",
+    "youth audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by ORF"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "youth radio with music"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news in English and German"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ],
+   [
+    "multilingual",
+    "German and English"
+   ]
+  ]
+ },
  "pf-000770": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): pro-Fidesz government news channel",
@@ -6412,6 +6749,17 @@
    ]
   ],
   "website_warning": "the website shows shopping and lifestyle adverts, not the newspaper"
+ },
+ "pf-000784": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
  },
  "pf-000786": {
   "date": "2026-11-10",
@@ -6523,6 +6871,34 @@
    ]
   ]
  },
+ "pf-000795": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Austrians in Europe"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: free-to-air version of ORF 2"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "European version of ORF 2"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ]
+  ]
+ },
  "pf-000796": {
   "date": "2026-11-10",
   "topics": [
@@ -6537,6 +6913,28 @@
     null,
     1,
     "St. Gallen"
+   ]
+  ]
+ },
+ "pf-000797": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV with information"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
    ]
   ]
  },
@@ -6558,6 +6956,17 @@
    [
     "public_service_mandate",
     "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000800": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily broadsheet"
    ]
   ]
  },
@@ -6627,6 +7036,29 @@
    ]
   ]
  },
+ "pf-000806": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Styria and Carinthia"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Alpe Adria"
+   ]
+  ]
+ },
  "pf-000807": {
   "date": "2026-11-10",
   "topics": [
@@ -6641,6 +7073,23 @@
     null,
     2,
     "website section Wissen"
+   ]
+  ]
+ },
+ "pf-000810": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional edition"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Braunau"
    ]
   ]
  },
@@ -6675,6 +7124,34 @@
     null,
     1,
     "Berlin daily"
+   ]
+  ]
+ },
+ "pf-000813": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by ORF"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV with entertainment"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
    ]
   ]
  },
@@ -8200,6 +8677,19 @@
   "right_populist": "Wikipedia: owned by a right-wing populist politician",
   "topics": []
  },
+ "pf-001095": {
+  "closed": "Wikipedia: historic magazine",
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: völkisch, antisemitic magazine ('of the Blonde and Masculists')",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "pseudo-historical magazine"
+   ]
+  ]
+ },
  "pf-001097": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín",
@@ -9345,6 +9835,11 @@
     "evening tabloid newspaper"
    ]
   ]
+ },
+ "pf-001290": {
+  "date": "2026-11-10",
+  "not_media": "federal law gazette, not a media outlet",
+  "topics": []
  },
  "pf-001293": {
   "country_hint": "DNK (Nordic network, website gamereactor.dk)",
@@ -11111,6 +11606,23 @@
    ]
   ]
  },
+ "pf-001507": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "magazine on European politics and culture"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "culture"
+   ]
+  ]
+ },
  "pf-001508": {
   "date": "2026-11-10",
   "ownership": [
@@ -11474,6 +11986,23 @@
    ]
   ]
  },
+ "pf-001560": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "faith and society"
+   ]
+  ]
+ },
  "pf-001570": {
   "date": "2026-11-10",
   "topics": [
@@ -11690,6 +12219,27 @@
    ]
   ]
  },
+ "pf-001593": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: associative local TV"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community TV in Linz"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "viewers upload videos"
+   ]
+  ]
+ },
  "pf-001597": {
   "audience": [
    [
@@ -11710,6 +12260,34 @@
     null,
     2,
     "jobs and tenders sections"
+   ]
+  ]
+ },
+ "pf-001608": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lower Austria"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
    ]
   ]
  },
@@ -12219,6 +12797,27 @@
   "right_populist": "Wikipedia: right-wing, nationalist",
   "topics": []
  },
+ "pf-001741": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private local TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tyrol"
+   ]
+  ]
+ },
  "pf-001743": {
   "date": "2026-11-10",
   "topics": [
@@ -12308,6 +12907,21 @@
    ]
   ]
  },
+ "pf-001760": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-commercial community TV"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community TV of Salzburg"
+   ]
+  ]
+ },
  "pf-001762": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -12328,6 +12942,44 @@
     null,
     1,
     "weekly newspaper"
+   ]
+  ]
+ },
+ "pf-001769": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "events and cinema"
+   ]
+  ]
+ },
+ "pf-001771": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private regional"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Linz, Upper Austria"
    ]
   ]
  },
@@ -12537,6 +13189,49 @@
     null,
     1,
     "French-language news channel"
+   ]
+  ]
+ },
+ "pf-001819": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: associative radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "free community radio in Innsbruck"
+   ]
+  ]
+ },
+ "pf-001823": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Vorarlberg"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
    ]
   ]
  },
@@ -13200,6 +13895,23 @@
     null,
     1,
     "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-001986": {
+  "audience": [
+   [
+    "business_professionals",
+    "journalists"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "media_freedom",
+    null,
+    1,
+    "trade magazine about journalism"
    ]
   ]
  },
@@ -14959,6 +15671,17 @@
    ]
   ]
  },
+ "pf-002396": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major weekly news magazine"
+   ]
+  ]
+ },
  "pf-002406": {
   "audience": [
    [
@@ -15439,6 +16162,62 @@
    ]
   ]
  },
+ "pf-002535": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Upper Austria"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ]
+  ]
+ },
+ "pf-002545": {
+  "date": "2026-11-10",
+  "owner": "ORF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: broadcast by ORF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Salzburg"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Austrian public broadcaster ORF"
+   ]
+  ]
+ },
  "pf-002565": {
   "audience": [
    [
@@ -15650,6 +16429,23 @@
    [
     "public_service_mandate",
     "Belgian public broadcaster"
+   ]
+  ]
+ },
+ "pf-002613": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Salzburg"
    ]
   ]
  },
@@ -16119,6 +16915,23 @@
    ]
   ]
  },
+ "pf-002755": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tyrol"
+   ]
+  ]
+ },
  "pf-002758": {
   "date": "2026-11-10",
   "ownership": [
@@ -16170,6 +16983,23 @@
     null,
     1,
     "research on the far right"
+   ]
+  ]
+ },
+ "pf-002763": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "weekly business magazine"
    ]
   ]
  },
@@ -16335,6 +17165,18 @@
     null,
     2,
     "sport"
+   ]
+  ]
+ },
+ "pf-002810": {
+  "closed": "Wikipedia: published 1945-1991",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "communist newspaper"
    ]
   ]
  },
@@ -17349,6 +18191,18 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-003106": {
+  "closed": "Wikipedia: historic newspaper (1864-1939)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Viennese newspaper"
    ]
   ]
  },
@@ -19662,6 +20516,41 @@
    ]
   ]
  },
+ "pf-004141": {
+  "date": "2026-11-10",
+  "owner": "Grupo de Medios Telemicro",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel with telenovelas"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-004144": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-004146": {
   "date": "2026-11-10",
   "topics": [
@@ -19861,6 +20750,28 @@
   "closed": "Wikipedia: closed down in October 2012",
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-004257": {
+  "date": "2026-11-10",
+  "owner": "Red Bull GmbH",
+  "ownership": [
+   "private",
+   "Wikipedia: Red Bull GmbH"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "lifestyle magazine of Red Bull"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
  },
  "pf-004259": {
   "date": "2026-11-10",
@@ -20069,6 +20980,23 @@
    ]
   ]
  },
+ "pf-004365": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "large TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-004379": {
   "audience": [
    [
@@ -20148,6 +21076,23 @@
     null,
     3,
     "shipping news (Sjöfartsnytt)"
+   ]
+  ]
+ },
+ "pf-004453": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading and oldest newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "baseball (Lidom)"
    ]
   ]
  },
@@ -23617,6 +24562,17 @@
    ]
   ]
  },
+ "pf-006647": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital news outlet"
+   ]
+  ]
+ },
  "pf-006656": {
   "date": "2026-11-10",
   "ownership": [
@@ -24607,6 +25563,30 @@
     null,
     1,
     "regional entertainment TV channels"
+   ]
+  ]
+ },
+ "pf-007321": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Dominicans in the USA"
+   ]
+  ],
+  "country_hint": "USA (channel in the United States for Dominican residents)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network for Dominicans in the USA"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -28121,6 +29101,18 @@
    ]
   ]
  },
+ "pf-013826": {
+  "closed": "Wikidata: journal 1913-1941",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "psychoanalytic journal"
+   ]
+  ]
+ },
  "pf-013896": {
   "date": "2026-11-10",
   "topics": [
@@ -28296,6 +29288,23 @@
    ]
   ]
  },
+ "pf-014183": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national newspaper"
+   ],
+   [
+    "migration",
+    null,
+    3,
+    "Haiti coverage"
+   ]
+  ]
+ },
  "pf-014203": {
   "audience": [
    [
@@ -28314,6 +29323,23 @@
     null,
     1,
     "business and world news channel"
+   ]
+  ]
+ },
+ "pf-014222": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -28771,6 +29797,27 @@
     null,
     1,
     "private regional TV station"
+   ]
+  ]
+ },
+ "pf-014921": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private radio"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's radio"
    ]
   ]
  },
@@ -29855,6 +30902,17 @@
    ]
   ]
  },
+ "pf-016262": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV station"
+   ]
+  ]
+ },
  "pf-016279": {
   "closed": "Wikipedia: Golperu 'fue' (was) a channel",
   "date": "2026-11-10",
@@ -30632,6 +31690,18 @@
    ]
   ]
  },
+ "pf-017232": {
+  "closed": "Wikidata: defunct channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's TV channel"
+   ]
+  ]
+ },
  "pf-017290": {
   "audience": [
    [
@@ -30959,6 +32029,11 @@
     "news"
    ]
   ]
+ },
+ "pf-021919": {
+  "date": "2026-11-10",
+  "not_media": "LGBT organisation, not a media outlet (an NGO)",
+  "topics": []
  },
  "pf-021927": {
   "date": "2026-11-10",
@@ -32197,6 +33272,23 @@
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
  },
+ "pf-026553": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "economy and tourism"
+   ]
+  ]
+ },
  "pf-026591": {
   "date": "2026-11-10",
   "topics": [
@@ -32205,6 +33297,18 @@
     null,
     1,
     "music radio"
+   ]
+  ]
+ },
+ "pf-026607": {
+  "date": "2026-11-10",
+  "right_populist": "general knowledge, not in the profile text (please check): Kronen Zeitung is widely described as right-wing populist",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online TV of the Kronen Zeitung"
    ]
   ]
  },
@@ -32371,6 +33475,17 @@
    ]
   ]
  },
+ "pf-027090": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-027606": {
   "audience": [
    [
@@ -32435,6 +33550,17 @@
   "right_populist": "general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia",
   "topics": []
  },
+ "pf-028921": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    3,
+    "Christian radio (name)"
+   ]
+  ]
+ },
  "pf-029150": {
   "date": "2026-11-10",
   "ownership": [
@@ -32456,6 +33582,17 @@
    ]
   ]
  },
+ "pf-029371": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "tropical music radio"
+   ]
+  ]
+ },
  "pf-029431": {
   "date": "2026-11-10",
   "topics": [
@@ -32464,6 +33601,23 @@
     null,
     1,
     "regional music radio"
+   ]
+  ]
+ },
+ "pf-029507": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "eastern region"
    ]
   ]
  },
@@ -32486,6 +33640,23 @@
    [
     "public_service_mandate",
     "BBC public service"
+   ]
+  ]
+ },
+ "pf-029575": {
+  "audience": [
+   [
+    "religious",
+    "Christian audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio ministry"
    ]
   ]
  },
@@ -32535,6 +33706,18 @@
    ]
   ]
  },
+ "pf-030321": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ],
+  "website_warning": "the website shows another music portal (RD Musica), not the channel"
+ },
  "pf-030403": {
   "date": "2026-11-10",
   "ownership": [
@@ -32553,6 +33736,23 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-030530": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV and radio stations"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -33260,29 +34460,173 @@
    ]
   ]
  },
+ "pf-036742": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-036750": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-036927": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV of Jarabacoa"
+   ]
+  ]
  },
  "pf-036950": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-037058": {
+  "audience": [
+   [
+    "youth_students",
+    "young channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "young TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-037078": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037103": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-037105": {
+  "audience": [
+   [
+    "religious",
+    "Christian audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian TV"
+   ]
+  ]
+ },
+ "pf-037164": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-037176": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV channel in Santiago de los Caballeros"
+   ]
+  ]
+ },
+ "pf-037183": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and opinion TV channel"
+   ]
+  ]
+ },
+ "pf-037191": {
+  "date": "2026-11-10",
+  "topics": [],
+  "website_warning": "the website shows 'Account Suspended'"
+ },
+ "pf-037216": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-037264": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV channel of Los Alcarrizos"
+   ]
+  ]
  },
  "pf-037277": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-037291": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV channels"
+   ]
+  ]
+ },
+ "pf-037404": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal"
+   ]
+  ]
+ },
  "pf-037443": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037549": {
+  "date": "2026-11-10",
   "topics": []
  },
  "pf-037579": {
@@ -33331,6 +34675,17 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-037720": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital news platform"
+   ]
+  ]
+ },
  "pf-037812": {
   "date": "2026-11-10",
   "ownership": [
@@ -33352,20 +34707,114 @@
    ]
   ]
  },
+ "pf-037813": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-037874": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037918": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    3,
+    "Christian TV (name)"
+   ]
+  ]
  },
  "pf-037982": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-038021": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Dominicans in the USA"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "multicultural radio and TV"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "based in Orlando"
+   ]
+  ]
+ },
  "pf-038028": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-038093": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV"
+   ]
+  ]
+ },
+ "pf-038253": {
+  "audience": [
+   [
+    "business_professionals",
+    "business TV"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business TV"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "technology"
+   ]
+  ]
+ },
+ "pf-038297": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV of Boca Chica"
+   ]
+  ]
+ },
+ "pf-038310": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV of Bonao"
+   ]
+  ]
  },
  "pf-038318": {
   "date": "2026-11-09",
@@ -33402,6 +34851,18 @@
  "pf-038496": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-038499": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-038511": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-038621": {
+  "date": "2026-11-10",
   "topics": []
  },
  "pf-038907": {
@@ -33498,6 +34959,61 @@
    ]
   ]
  },
+ "pf-052779": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking residents"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language news magazine"
+   ]
+  ]
+ },
+ "pf-056339": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
+   ]
+  ]
+ },
+ "pf-058124": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-059252": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "expats"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "kitesurf community site"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Cabarete"
+   ]
+  ]
+ },
  "pf-060695": {
   "date": "2026-11-09",
   "topics": [
@@ -33544,6 +35060,34 @@
   "topics": [],
   "website_warning": "this address is a lifestyle blog, not the Congolese Press Agency (see pf-000435)"
  },
+ "pf-060794": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital news"
+   ]
+  ]
+ },
+ "pf-062927": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "baseball"
+   ]
+  ]
+ },
  "pf-064102": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): far-right, Falun Gong-affiliated newspaper",
@@ -33563,6 +35107,40 @@
     null,
     1,
     "business newspaper (journal des affaires)"
+   ]
+  ]
+ },
+ "pf-064445": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "diaspora",
+    null,
+    2,
+    "Dominican community in New York"
+   ]
+  ]
+ },
+ "pf-064690": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Salud"
    ]
   ]
  },

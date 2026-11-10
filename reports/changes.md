@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 188 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 233, scope 3
+- No longer shown: 198 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 238, scope 3
 
 ### Examples: ownership
 
@@ -37,9 +37,9 @@
 - Aaj Tak (IND, pf-003906)
 - American Thinker (USA, pf-004610)
 - Apollo News (DEU, pf-025589)
+- Arbeiter-Zeitung (AUT, pf-000689)
 - Arriba España (PER, pf-026717)
 - Associated Whistleblowing Press (BEL, pf-014573)
 - Athens News Agency (GRC, pf-002878)
 - Avriani (GRC, pf-004254)
 - BC Report (CAN, pf-005351)
-- Bessy (BEL, pf-000981)

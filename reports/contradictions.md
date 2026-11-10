@@ -219,7 +219,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (12)
+## AI reading: probably in another country (13)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
@@ -233,6 +233,7 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 | pf-003263 | Disney Channel India | BGD | IND (Indian channel) |
 | pf-004132 | TV Venezuela | VEN | USA (channel airing in the United States) |
 | pf-007156 | Perú Mágico | CHL | PER (Peruvian channel) |
+| pf-007321 | Televisión Dominicana | DOM | USA (channel in the United States for Dominican residents) |
 | pf-014802 | NK News | KOR | USA (American news website) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
 | pf-021377 | Televen América | VEN | USA (US pay TV channel) |
