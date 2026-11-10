@@ -1003,6 +1003,18 @@
    ]
   ]
  },
+ "pf-000115": {
+  "country_hint": "PER (TV channel in Trujillo, Peru)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV channel in Trujillo, Peru"
+   ]
+  ]
+ },
  "pf-000116": {
   "date": "2026-11-10",
   "owner": "Thomson Reuters",
@@ -1104,6 +1116,23 @@
     null,
     2,
     "Paris and Île-de-France news"
+   ]
+  ]
+ },
+ "pf-000128": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "political and financial daily"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "financial coverage"
    ]
   ]
  },
@@ -2552,6 +2581,27 @@
    ]
   ]
  },
+ "pf-000400": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000404": {
   "date": "2026-11-09",
   "topics": [
@@ -3352,6 +3402,17 @@
    ]
   ]
  },
+ "pf-000606": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Athens"
+   ]
+  ]
+ },
  "pf-000608": {
   "date": "2026-11-10",
   "topics": [
@@ -3474,6 +3535,115 @@
     null,
     1,
     "news site"
+   ]
+  ]
+ },
+ "pf-000635": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public service broadcaster"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Cultura"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Chilean public broadcaster"
+   ]
+  ]
+ },
+ "pf-000636": {
+  "date": "2026-11-10",
+  "owner": "Mega Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Mega Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-000637": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "daily business newspaper"
+   ]
+  ]
+ },
+ "pf-000641": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-000642": {
+  "date": "2026-11-10",
+  "owner": "Vytal Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Vytal Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -6615,6 +6785,44 @@
    ]
   ]
  },
+ "pf-001369": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Greeks abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: international service of ERT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international service of Greek state radio"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Greeks abroad"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Greek public broadcaster ERT"
+   ],
+   [
+    "multilingual",
+    "foreign-language programmes"
+   ]
+  ]
+ },
  "pf-001371": {
   "date": "2026-11-10",
   "owner": "Radio Republik Indonesia",
@@ -7898,6 +8106,17 @@
    ]
   ]
  },
+ "pf-001692": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-001694": {
   "closed": "no longer published under this name (now El Punt Avui)",
   "date": "2026-11-10",
@@ -8153,6 +8372,23 @@
    [
     "multilingual",
     "English and Spanish editions"
+   ]
+  ]
+ },
+ "pf-001801": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "section for pupils"
    ]
   ]
  },
@@ -8734,6 +8970,17 @@
    ]
   ]
  },
+ "pf-002037": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-002039": {
   "date": "2026-11-10",
   "topics": [
@@ -8923,6 +9170,18 @@
     null,
     2,
     "website section Cultura"
+   ]
+  ]
+ },
+ "pf-002125": {
+  "date": "2026-11-10",
+  "owner": "El Mercurio SAP",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national evening newspaper"
    ]
   ]
  },
@@ -9508,6 +9767,27 @@
     null,
     1,
     "TV news channel"
+   ]
+  ]
+ },
+ "pf-002378": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -10238,6 +10518,27 @@
   "right_populist": "Wikipedia: promotes right-wing libertarianism",
   "topics": []
  },
+ "pf-002667": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-002675": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing to far-right",
@@ -10599,6 +10900,23 @@
    ]
   ]
  },
+ "pf-002858": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "website section Tecnología"
+   ]
+  ]
+ },
  "pf-002864": {
   "date": "2026-11-10",
   "topics": [
@@ -10667,6 +10985,18 @@
     null,
     1,
     "channel for children and teenagers"
+   ]
+  ]
+ },
+ "pf-002878": {
+  "closed": "Wikipedia: 'was' one of two news agencies (merged into AMNA)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
    ]
   ]
  },
@@ -11237,6 +11567,23 @@
   "right_populist": "Wikipedia: populist opinions, targets feminists",
   "topics": []
  },
+ "pf-003162": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pay TV news channel"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Negocios"
+   ]
+  ]
+ },
  "pf-003165": {
   "audience": [
    [
@@ -11263,6 +11610,28 @@
   "far_right": "Wikipedia: born on the far right (historic review)",
   "topics": []
  },
+ "pf-003180": {
+  "date": "2026-11-10",
+  "owner": "Televisión Nacional de Chile",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster TVN"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news brand of the public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Chilean public broadcaster"
+   ]
+  ]
+ },
  "pf-003202": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: classed to the right or far right",
@@ -11281,6 +11650,21 @@
     null,
     1,
     "Russian-language news channel"
+   ]
+  ]
+ },
+ "pf-003223": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: organ of the Communist Party of Greece"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "organ of the Communist Party central committee"
    ]
   ]
  },
@@ -11395,6 +11779,27 @@
    ]
   ]
  },
+ "pf-003276": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: government TV network"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament TV"
+   ]
+  ]
+ },
  "pf-003289": {
   "date": "2026-11-09",
   "owner": "ESPN (The Walt Disney Company)",
@@ -11421,6 +11826,23 @@
     null,
     1,
     "Barranquilla"
+   ]
+  ]
+ },
+ "pf-003310": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Valparaíso"
    ]
   ]
  },
@@ -11527,6 +11949,39 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing political commentary",
   "topics": []
+ },
+ "pf-003358": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Chileans abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: international feed of TVN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international feed of TVN"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Chileans abroad"
+   ]
+  ]
  },
  "pf-003359": {
   "date": "2026-11-09",
@@ -11640,6 +12095,27 @@
    ]
   ]
  },
+ "pf-003437": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-003441": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing Spanish online newspaper",
@@ -11664,6 +12140,33 @@
     null,
     2,
     "website section 学术 (academic)"
+   ]
+  ]
+ },
+ "pf-003450": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: Universidad de Concepción"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "university TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Concepción"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
    ]
   ]
  },
@@ -11753,6 +12256,30 @@
     null,
     1,
     "news channel"
+   ]
+  ]
+ },
+ "pf-003609": {
+  "date": "2026-11-10",
+  "owner": "Copesa",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "daily tabloid"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
    ]
   ]
  },
@@ -11936,6 +12463,18 @@
     null,
     1,
     "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-003760": {
+  "closed": "Wikipedia: 'was' one of two news agencies (merged into AMNA)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
    ]
   ]
  },
@@ -12303,6 +12842,29 @@
    ]
   ]
  },
+ "pf-003964": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio station"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional sections"
+   ]
+  ]
+ },
  "pf-003986": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín",
@@ -12487,6 +13049,33 @@
    ]
   ]
  },
+ "pf-004234": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Salud"
+   ]
+  ]
+ },
  "pf-004242": {
   "date": "2026-11-09",
   "topics": [
@@ -12520,10 +13109,60 @@
    ]
   ]
  },
+ "pf-004247": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: nationalist Greek weekly",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper on national issues and defence"
+   ]
+  ]
+ },
  "pf-004254": {
   "closed": "Wikipedia: closed down in October 2012",
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-004259": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Patras and the Peloponnese"
+   ]
+  ]
+ },
+ "pf-004260": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by Filmocentro"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "subscription TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
  },
  "pf-004324": {
   "date": "2026-11-10",
@@ -12742,6 +13381,27 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing populist to far-right weekly",
   "topics": []
+ },
+ "pf-004464": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Greek and English"
+   ]
+  ]
  },
  "pf-004467": {
   "audience": [
@@ -13228,6 +13888,22 @@
    ]
   ]
  },
+ "pf-004916": {
+  "date": "2026-11-10",
+  "owner": "Luksic Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by the Luksic Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cable culture channel"
+   ]
+  ]
+ },
  "pf-004930": {
   "audience": [
    [
@@ -13396,6 +14072,27 @@
    ]
   ]
  },
+ "pf-004994": {
+  "audience": [
+   [
+    "religious",
+    "Orthodox viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private station"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Greek Orthodox TV"
+   ]
+  ]
+ },
  "pf-005001": {
   "date": "2026-11-10",
   "owner": "Tapt Media",
@@ -13434,6 +14131,21 @@
    ]
   ]
  },
+ "pf-005047": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural cable channel"
+   ]
+  ]
+ },
  "pf-005069": {
   "date": "2026-11-10",
   "owner": "Caracol TV",
@@ -13456,6 +14168,24 @@
    ]
   ]
  },
+ "pf-005074": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Aetolia-Acarnania"
+   ]
+  ],
+  "website_warning": "the website shows an empty WordPress page ('Hello world!')"
+ },
  "pf-005196": {
   "date": "2026-11-09",
   "owner": "Grupo América",
@@ -13471,6 +14201,23 @@
     null,
     2,
     "website section Pymes"
+   ]
+  ]
+ },
+ "pf-005197": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "Latin American business magazine"
    ]
   ]
  },
@@ -14130,6 +14877,27 @@
    ]
   ]
  },
+ "pf-006011": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Crete"
+   ]
+  ]
+ },
  "pf-006032": {
   "audience": [
    [
@@ -14260,6 +15028,22 @@
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
  },
+ "pf-006221": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by ERT"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel and website of ERT"
+   ]
+  ]
+ },
  "pf-006252": {
   "date": "2026-11-10",
   "topics": [
@@ -14338,6 +15122,23 @@
    ]
   ]
  },
+ "pf-006271": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Concepción and Biobío"
+   ]
+  ]
+ },
  "pf-006276": {
   "date": "2026-11-09",
   "topics": [
@@ -14376,6 +15177,23 @@
    ]
   ]
  },
+ "pf-006302": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Central Greece and Euboea"
+   ]
+  ]
+ },
  "pf-006320": {
   "closed": "Wikipedia: W Radio Colombia 'was' a radio network",
   "date": "2026-11-10",
@@ -14385,6 +15203,23 @@
     null,
     1,
     "news/talk radio network"
+   ]
+  ]
+ },
+ "pf-006323": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "second oldest newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Chillán, Ñuble"
    ]
   ]
  },
@@ -14562,6 +15397,23 @@
    ]
   ]
  },
+ "pf-006527": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network"
+   ],
+   [
+    "agriculture",
+    null,
+    3,
+    "name and origin: National Agriculture Society"
+   ]
+  ]
+ },
  "pf-006536": {
   "date": "2026-11-10",
   "topics": [
@@ -14625,6 +15477,23 @@
    ]
   ]
  },
+ "pf-006637": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and sports radio"
+   ],
+   [
+    "sports",
+    null,
+    1,
+    "sports"
+   ]
+  ]
+ },
  "pf-006638": {
   "date": "2026-11-10",
   "ownership": [
@@ -14643,6 +15512,23 @@
     null,
     1,
     "northern Colombia"
+   ]
+  ]
+ },
+ "pf-006659": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Punta Arenas"
    ]
   ]
  },
@@ -14676,6 +15562,23 @@
     null,
     1,
     "TV station in Córdoba"
+   ]
+  ]
+ },
+ "pf-006752": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Biobío Region"
    ]
   ]
  },
@@ -14779,6 +15682,17 @@
     null,
     2,
     "website section Elecciones"
+   ]
+  ]
+ },
+ "pf-006890": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
    ]
   ]
  },
@@ -14934,6 +15848,18 @@
    ]
   ]
  },
+ "pf-007156": {
+  "country_hint": "PER (Peruvian channel)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Peruvian pay TV channel"
+   ]
+  ]
+ },
  "pf-007189": {
   "date": "2026-11-09",
   "owner": "Workers' Party (Partido Obrero)",
@@ -14949,6 +15875,130 @@
     null,
     1,
     "party newspaper"
+   ]
+  ]
+ },
+ "pf-007213": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio with broad coverage"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional zones"
+   ]
+  ]
+ },
+ "pf-007216": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-007217": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "radio of the Diocese of Chillán"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Chillán"
+   ]
+  ]
+ },
+ "pf-007224": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio with interviews and columns"
+   ]
+  ]
+ },
+ "pf-007226": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Puerto Aysén"
+   ]
+  ]
+ },
+ "pf-007234": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "national network"
+   ]
+  ]
+ },
+ "pf-007237": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-007247": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Chillán, Ñuble"
    ]
   ]
  },
@@ -15126,6 +16176,33 @@
    ]
   ]
  },
+ "pf-008126": {
+  "audience": [
+   [
+    "women",
+    "feminist media"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio"
+  ],
+  "topics": [
+   [
+    "gender_equality",
+    null,
+    1,
+    "feminist community radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "citizen radio"
+   ]
+  ]
+ },
  "pf-008127": {
   "closed": "Wikipedia: Koran Sindo 'was' a newspaper",
   "date": "2026-11-10",
@@ -15173,6 +16250,23 @@
     null,
     2,
     "website section Regional"
+   ]
+  ]
+ },
+ "pf-008185": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Crete"
    ]
   ]
  },
@@ -15249,6 +16343,18 @@
     "corruption_institutions",
     1,
     "focus on power and politics"
+   ]
+  ]
+ },
+ "pf-008257": {
+  "date": "2026-11-10",
+  "owner": "El Mercurio SAP",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "middle-market tabloid"
    ]
   ]
  },
@@ -15436,6 +16542,23 @@
     null,
     3,
     "Venezuela coverage"
+   ]
+  ]
+ },
+ "pf-008725": {
+  "audience": [
+   [
+    "religious",
+    "Christian audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Adventist Christian TV and radio"
    ]
   ]
  },
@@ -15647,6 +16770,17 @@
    ]
   ]
  },
+ "pf-009273": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "information and entertainment radio"
+   ]
+  ]
+ },
  "pf-009317": {
   "date": "2026-11-09",
   "owner": "Skydance",
@@ -15700,6 +16834,23 @@
     null,
     2,
     "entertainment"
+   ]
+  ]
+ },
+ "pf-009434": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoons for children"
    ]
   ]
  },
@@ -15943,6 +17094,23 @@
   "right_populist": "general knowledge, not in the profile text (please check): partisan right-wing site (Salem Media); Wikipedia: 'mainstream conservative' bias",
   "topics": []
  },
+ "pf-010221": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kozani, Western Macedonia"
+   ]
+  ]
+ },
  "pf-010276": {
   "date": "2026-11-10",
   "ownership": [
@@ -16091,6 +17259,23 @@
    ]
   ]
  },
+ "pf-011453": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Santiago and Antofagasta"
+   ]
+  ]
+ },
  "pf-011459": {
   "date": "2026-11-10",
   "topics": [
@@ -16120,6 +17305,18 @@
     null,
     1,
     "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-011490": {
+  "date": "2026-11-10",
+  "owner": "El Mercurio",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website of El Mercurio"
    ]
   ]
  },
@@ -16265,6 +17462,23 @@
     null,
     2,
     "website section Agro"
+   ]
+  ]
+ },
+ "pf-012211": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "investigative news website"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigative journalism"
    ]
   ]
  },
@@ -16572,6 +17786,155 @@
     null,
     1,
     "name: Agropolitan TV"
+   ]
+  ]
+ },
+ "pf-013415": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikidata: ERT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Thessaloniki"
+   ]
+  ]
+ },
+ "pf-013416": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private regional channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional TV channel with news"
+   ]
+  ]
+ },
+ "pf-013417": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional TV station"
+   ]
+  ]
+ },
+ "pf-013418": {
+  "date": "2026-11-10",
+  "owner": "Nova",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Nova"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports pay TV network"
+   ]
+  ]
+ },
+ "pf-013420": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first non-state TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Thessaloniki"
+   ]
+  ]
+ },
+ "pf-013421": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional information TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Attica"
+   ]
+  ]
+ },
+ "pf-013422": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-013423": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ERT station"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "24-hour sports radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Greek public broadcaster ERT"
+   ]
+  ]
+ },
+ "pf-013426": {
+  "audience": [
+   [
+    "youth_students",
+    "youth-oriented magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "youth magazine of the Communist Youth"
    ]
   ]
  },
@@ -16946,6 +18309,27 @@
   "not_media": "online chess platform, not a media outlet",
   "topics": []
  },
+ "pf-014296": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Disney"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
  "pf-014329": {
   "date": "2026-11-10",
   "ownership": [
@@ -17106,6 +18490,81 @@
    ]
   ]
  },
+ "pf-014876": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private regional TV station"
+   ]
+  ]
+ },
+ "pf-014938": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ERT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public radio with Greek music"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Greek public broadcaster ERT"
+   ]
+  ]
+ },
+ "pf-014939": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ERT3"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public radio programme"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Thessaloniki"
+   ]
+  ]
+ },
+ "pf-014940": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ERT radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "world music radio"
+   ]
+  ]
+ },
  "pf-014965": {
   "country_hint": "MEX (channel of Mexican origin)",
   "date": "2026-11-09",
@@ -17116,6 +18575,22 @@
     null,
     1,
     "sports channel"
+   ]
+  ]
+ },
+ "pf-014992": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikidata: local station of Hellenic Radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local public radio of the North Aegean"
    ]
   ]
  },
@@ -17336,6 +18811,70 @@
   "far_right": "Wikipedia: Spanish far right of the 1930s",
   "topics": []
  },
+ "pf-015325": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio station"
+   ]
+  ]
+ },
+ "pf-015330": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "cities",
+    null,
+    1,
+    "architecture news website"
+   ]
+  ]
+ },
+ "pf-015341": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: municipal station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "municipal TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Aspropyrgos, Attica"
+   ]
+  ]
+ },
+ "pf-015414": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-015436": {
   "date": "2026-11-10",
   "ownership": [
@@ -17429,6 +18968,23 @@
    ]
   ]
  },
+ "pf-015967": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Eastern Macedonia and Thrace"
+   ]
+  ]
+ },
  "pf-016065": {
   "audience": [
    [
@@ -17479,6 +19035,23 @@
     null,
     1,
     "sports radio and media"
+   ]
+  ]
+ },
+ "pf-016147": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Eastern Macedonia and Thrace"
    ]
   ]
  },
@@ -18168,10 +19741,65 @@
   "right_populist": "Wikipedia: conservative and right-wing editorial stance",
   "topics": []
  },
+ "pf-021797": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free city guide and magazine"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Athens and Thessaloniki"
+   ]
+  ]
+ },
  "pf-021830": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: described as far-right, misleading information",
   "topics": []
+ },
+ "pf-021890": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-021956": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Ioannina, Epirus"
+   ]
+  ]
  },
  "pf-021957": {
   "date": "2026-11-10",
@@ -18274,6 +19902,17 @@
   "far_right": "Wikipedia: far-right news website, disinformation",
   "topics": []
  },
+ "pf-022979": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
  "pf-023051": {
   "date": "2026-11-10",
   "topics": [
@@ -18357,6 +19996,21 @@
    ]
   ]
  },
+ "pf-023508": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports pay TV channel"
+   ]
+  ]
+ },
  "pf-023583": {
   "date": "2026-11-10",
   "topics": [
@@ -18378,6 +20032,33 @@
   "date": "2026-11-10",
   "right_populist": "channel of the right-wing populist Sweden Democrats",
   "topics": []
+ },
+ "pf-023654": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: radio of the University of Santiago"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "university radio"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Educación"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Vida y Salud"
+   ]
+  ]
  },
  "pf-023760": {
   "date": "2026-11-09",
@@ -18426,6 +20107,44 @@
     null,
     1,
     "weekly newspaper"
+   ]
+  ]
+ },
+ "pf-024174": {
+  "audience": [
+   [
+    "children",
+    "children and teenagers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Televisión Nacional de Chile",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public channel of TVN"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "educational and cultural channel for children"
+   ],
+   [
+    "education",
+    null,
+    1,
+    "educational programming"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Chilean public broadcaster"
+   ],
+   [
+    "educational",
+    "educational programmes"
    ]
   ]
  },
@@ -18659,6 +20378,34 @@
    ]
   ]
  },
+ "pf-024907": {
+  "date": "2026-11-10",
+  "owner": "ERT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: ERT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news channel"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional sections"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Greek public broadcaster ERT"
+   ]
+  ]
+ },
  "pf-024998": {
   "date": "2026-11-10",
   "topics": [
@@ -18698,6 +20445,22 @@
    ]
   ]
  },
+ "pf-025496": {
+  "date": "2026-11-10",
+  "owner": "Televisión Nacional de Chile",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TVN archive channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "archive programming of TVN"
+   ]
+  ]
+ },
  "pf-025589": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing German news website",
@@ -18707,6 +20470,33 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing satirical magazine, called far-right by Libération",
   "topics": []
+ },
+ "pf-026114": {
+  "audience": [
+   [
+    "indigenous",
+    "Rapa Nui people"
+   ],
+   [
+    "minority_language",
+    "Rapa Nui language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "indigenous",
+    null,
+    1,
+    "TV channel of Easter Island"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Rapa Nui"
+   ]
+  ]
  },
  "pf-026219": {
   "date": "2026-11-10",
@@ -18761,6 +20551,21 @@
    [
     "storytelling",
     "Wikipedia: interviews, videos and podcasts"
+   ]
+  ]
+ },
+ "pf-026687": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community TV station"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community TV of Población La Victoria"
    ]
   ]
  },

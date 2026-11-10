@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-147 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+148 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -72,6 +72,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-001740 | Estia | GRC | AI reading (right-wing populist): Wikipedia: right-wing, nationalist |
 | pf-024837 | Golden Dawn | GRC | Wikidata political ideology: neo-Nazism |
 | pf-027635 | Golden Dawn | GRC | Wikidata political ideology: neo-Nazism |
+| pf-004247 | Stochos | GRC | AI reading (right-wing populist): Wikipedia: nationalist Greek weekly |
 | pf-001177 | Ta Nea | GRC | AI reading (right-wing populist): Wikipedia: since 2017 centrist and right-wing views |
 | pf-000770 | Hír TV | HUN | AI reading (right-wing populist): general knowledge, not in the profile text (please check): pro-Fidesz government news channel |
 | pf-016508 | Magyar Nemzet | HUN | AI reading (right-wing populist): Wikipedia: national conservative, associated with the Fidesz government |

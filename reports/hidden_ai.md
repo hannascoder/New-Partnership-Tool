@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-35 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+37 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -19,7 +19,9 @@
 | pf-001694 | El Punt | ESP | no longer published: no longer published under this name (now El Punt Avui) |
 | pf-002676 | GP Racing | ESP | no longer published: published until December 2024, merged with a sister magazine |
 | pf-001070 | The Illustrated London News | GBR | no longer published: Wikidata: former magazine (1842-2003) |
+| pf-002878 | Athens News Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
 | pf-004254 | Avriani | GRC | no longer published: Wikipedia: closed down in October 2012 |
+| pf-003760 | Macedonian Press Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
 | pf-003843 | De Locomotief | IDN | no longer published: Wikipedia: historic newspaper of the Dutch East Indies era |
 | pf-002926 | Indonesia Raya | IDN | no longer published: Wikipedia: permanently closed in 1974 |
 | pf-008127 | Koran Sindo | IDN | no longer published: Wikipedia: Koran Sindo 'was' a newspaper |

@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 136 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 98, scope 3
+- No longer shown: 139 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 118, scope 3
 
 ### Examples: ownership
 
@@ -33,6 +33,7 @@
 - Aaj Tak (IND, pf-003906)
 - American Thinker (USA, pf-004610)
 - Apollo News (DEU, pf-025589)
+- Athens News Agency (GRC, pf-002878)
 - Avriani (GRC, pf-004254)
 - BC Report (CAN, pf-005351)
 - Blaze Media (USA, pf-009508)
@@ -42,4 +43,3 @@
 - Causeur (FRA, pf-003202)
 - Chess.com (USA, pf-014292)
 - CHOI-FM (CAN, pf-003135)
-- CKM (POL, pf-000928)
