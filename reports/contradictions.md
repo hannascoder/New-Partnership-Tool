@@ -220,15 +220,19 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (4)
+## AI reading: probably in another country (8)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
 | Id | Name | Country now | AI reading says |
 |---|---|---|---|
 | pf-000519 | United Press International | ESP | USA (American news agency) |
+| pf-000841 | Univision | MEX | USA (American Spanish-language network) |
+| pf-001224 | Azteca Guatemala | MEX | GTM (Guatemalan channel of TV Azteca) |
 | pf-001293 | Gamereactor | DEU | DNK (Nordic network, website gamereactor.dk) |
+| pf-006382 | Mexicanal | MEX | USA (pay-TV network for Mexican Americans, studios in the USA) |
 | pf-006436 | Fox News Radio | CAN | USA (American radio network) |
+| pf-013558 | i24NEWS | FRA | ISR (news channel broadcasting from Tel Aviv) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
 
 ## AI reading: please check (0)

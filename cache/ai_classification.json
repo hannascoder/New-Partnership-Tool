@@ -75,6 +75,51 @@
   "not_media": "news aggregator of Google, does not publish its own content",
   "topics": []
  },
+ "pf-000018": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "most widely read national newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "French and English editions"
+   ]
+  ]
+ },
+ "pf-000022": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "satirical weekly newspaper"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigations into political scandals"
+   ]
+  ]
+ },
+ "pf-000023": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
+ },
  "pf-000024": {
   "date": "2026-11-09",
   "owner": "Versant",
@@ -121,6 +166,172 @@
     null,
     1,
     "public broadcaster for Berlin and Brandenburg"
+   ]
+  ]
+ },
+ "pf-000030": {
+  "date": "2026-11-10",
+  "owner": "Radio France",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by Radio France"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour all-news radio"
+   ],
+   [
+    "fact_checking",
+    null,
+    2,
+    "Vrai ou Fake fact-checking"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public service broadcaster"
+   ]
+  ]
+ },
+ "pf-000031": {
+  "date": "2026-11-10",
+  "owner": "Radio France",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of Radio France"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public radio"
+   ]
+  ]
+ },
+ "pf-000032": {
+  "date": "2026-11-10",
+  "owner": "Radio France",
+  "ownership": [
+   "public_service",
+   "Wikipedia: local stations of Radio France (now ICI)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "network of local public radio stations"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public radio"
+   ]
+  ]
+ },
+ "pf-000033": {
+  "date": "2026-11-10",
+  "owner": "Radio France",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of Radio France"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural public radio"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "science, history and philosophy programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "knowledge programmes"
+   ],
+   [
+    "public_service_mandate",
+    "French public radio"
+   ]
+  ]
+ },
+ "pf-000034": {
+  "date": "2026-11-10",
+  "owner": "Radio France",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by Radio France"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music and jazz radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public radio"
+   ]
+  ]
+ },
+ "pf-000035": {
+  "date": "2026-11-10",
+  "owner": "France Médias Monde",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-owned international radio, public service"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international radio news network"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Science & Technology"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Environment"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "broadcasts in many languages"
    ]
   ]
  },
@@ -206,6 +417,33 @@
     null,
     1,
     "international news photo agency"
+   ]
+  ]
+ },
+ "pf-000057": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: French international news agency with independent status"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international news agency"
+   ],
+   [
+    "fact_checking",
+    null,
+    2,
+    "AFP Factuel fact-checking service"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "news in many languages"
    ]
   ]
  },
@@ -412,6 +650,22 @@
    ]
   ]
  },
+ "pf-000095": {
+  "date": "2026-11-10",
+  "owner": "TelevisaUnivision",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network of TelevisaUnivision"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "telenovelas, shows and celebrities"
+   ]
+  ]
+ },
  "pf-000103": {
   "date": "2026-11-09",
   "not_media": "erotic magazine (adult content is excluded, KATEGORIEN 0.4)",
@@ -458,6 +712,24 @@
    ]
   ]
  },
+ "pf-000123": {
+  "date": "2026-11-10",
+  "owner": "LVMH",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Paris and Île-de-France news"
+   ]
+  ]
+ },
  "pf-000136": {
   "date": "2026-11-10",
   "topics": [
@@ -490,6 +762,28 @@
     null,
     1,
     "fashion and lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-000138": {
+  "audience": [
+   [
+    "youth_students",
+    "targets younger audiences"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Groupe TF1",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by Groupe TF1"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV channel"
    ]
   ]
  },
@@ -654,6 +948,28 @@
     null,
     1,
     "daily newspaper of record"
+   ]
+  ]
+ },
+ "pf-000162": {
+  "date": "2026-11-10",
+  "owner": "France Médias Monde",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-owned, publicly funded international news network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international news TV network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "French, English, Arabic and Spanish channels"
    ]
   ]
  },
@@ -872,6 +1188,18 @@
    [
     "storytelling",
     "documentaries"
+   ]
+  ]
+ },
+ "pf-000212": {
+  "date": "2026-11-10",
+  "owner": "Groupe Dassault",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest national daily newspaper"
    ]
   ]
  },
@@ -1112,6 +1440,17 @@
     null,
     2,
     "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-000325": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football magazine"
    ]
   ]
  },
@@ -1436,6 +1775,23 @@
    ]
   ]
  },
+ "pf-000531": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Comarca Lagunera region"
+   ]
+  ]
+ },
  "pf-000533": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: editorial stance perceived as far-right since 2023",
@@ -1486,6 +1842,28 @@
    ]
   ]
  },
+ "pf-000546": {
+  "date": "2026-11-10",
+  "owner": "RMC BFM",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by RMC BFM"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "website section Police-Justice"
+   ]
+  ]
+ },
  "pf-000549": {
   "date": "2026-11-09",
   "ownership": [
@@ -1519,6 +1897,44 @@
    ]
   ]
  },
+ "pf-000556": {
+  "date": "2026-11-10",
+  "owner": "France Télévisions",
+  "ownership": [
+   "public_service",
+   "Wikipedia: flagship channel of France Télévisions"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist public TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public television"
+   ]
+  ]
+ },
+ "pf-000562": {
+  "date": "2026-11-10",
+  "owner": "Eurosport (Skydance)",
+  "ownership": [
+   "private",
+   "Wikipedia: subsidiary of Skydance Corporation"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports TV channel"
+   ]
+  ]
+ },
  "pf-000570": {
   "date": "2026-11-10",
   "topics": [
@@ -1546,6 +1962,28 @@
    ]
   ]
  },
+ "pf-000575": {
+  "date": "2026-11-10",
+  "owner": "Televisa",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Televisa"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV station in Ciudad Juárez"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "carries Las Estrellas programming"
+   ]
+  ]
+ },
  "pf-000587": {
   "date": "2026-11-10",
   "owner": "Atresmedia",
@@ -1559,6 +1997,40 @@
     null,
     1,
     "generalist TV channel"
+   ]
+  ]
+ },
+ "pf-000613": {
+  "audience": [
+   [
+    "children",
+    "children's programmes"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "France Télévisions",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by France Télévisions"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public channel with children's programming"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture and live performance strand"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public television"
    ]
   ]
  },
@@ -1621,6 +2093,39 @@
    ]
   ]
  },
+ "pf-000658": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by M6 Group"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "kids and family TV channel"
+   ]
+  ]
+ },
+ "pf-000661": {
+  "date": "2026-11-10",
+  "owner": "Éditions Gallimard",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
+   ]
+  ]
+ },
  "pf-000671": {
   "date": "2026-11-10",
   "topics": [
@@ -1675,6 +2180,43 @@
     null,
     2,
     "website section GTA Elections 2026"
+   ]
+  ]
+ },
+ "pf-000741": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: owned by a non-profit association"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "local news of western France"
+   ]
+  ]
+ },
+ "pf-000753": {
+  "date": "2026-11-10",
+  "owner": "Eurosport (Skydance)",
+  "ownership": [
+   "private",
+   "Wikipedia: part of the Eurosport network"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports TV channel"
    ]
   ]
  },
@@ -1777,6 +2319,23 @@
    [
     "open_to_partner_content",
     "national syndicator to more than 1,000 public radio stations"
+   ]
+  ]
+ },
+ "pf-000778": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "people and pop culture"
    ]
   ]
  },
@@ -1944,6 +2503,58 @@
    ]
   ]
  },
+ "pf-000841": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Spanish-language network for Hispanic Americans"
+   ]
+  ],
+  "country_hint": "USA (American Spanish-language network)",
+  "date": "2026-11-10",
+  "owner": "TelevisaUnivision",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by TelevisaUnivision"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Spanish-language TV network"
+   ],
+   [
+    "migration",
+    "migrants",
+    2,
+    "website section Inmigración"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "shows and celebrities"
+   ]
+  ]
+ },
+ "pf-000859": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Toulouse and southwestern France"
+   ]
+  ]
+ },
  "pf-000869": {
   "audience": [
    [
@@ -1991,6 +2602,34 @@
    ]
   ]
  },
+ "pf-000896": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ]
+  ]
+ },
+ "pf-000906": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's fashion magazine"
+   ]
+  ]
+ },
  "pf-000910": {
   "audience": [
    [
@@ -2005,6 +2644,18 @@
     null,
     1,
     "daily business newspaper"
+   ]
+  ]
+ },
+ "pf-000963": {
+  "date": "2026-11-10",
+  "owner": "Éditions Philippe Amaury",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
    ]
   ]
  },
@@ -2101,6 +2752,17 @@
    ]
   ]
  },
+ "pf-001162": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "film magazine"
+   ]
+  ]
+ },
  "pf-001169": {
   "date": "2026-11-10",
   "topics": [
@@ -2137,6 +2799,24 @@
     null,
     1,
     "second largest daily"
+   ]
+  ]
+ },
+ "pf-001181": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "LVMH",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "financial daily newspaper"
    ]
   ]
  },
@@ -2202,6 +2882,23 @@
     null,
     1,
     "preschool channel"
+   ]
+  ]
+ },
+ "pf-001224": {
+  "country_hint": "GTM (Guatemalan channel of TV Azteca)",
+  "date": "2026-11-10",
+  "owner": "TV Azteca",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by TV Azteca"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV channel"
    ]
   ]
  },
@@ -2275,6 +2972,22 @@
     null,
     2,
     "website section Eleições 2026"
+   ]
+  ]
+ },
+ "pf-001252": {
+  "date": "2026-11-10",
+  "owner": "Groupe TF1",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Groupe TF1"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV channel"
    ]
   ]
  },
@@ -2419,6 +3132,50 @@
    ]
   ]
  },
+ "pf-001347": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: independent satirical weekly"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "satirical weekly news magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Dessins (cartoons)"
+   ],
+   [
+    "media_freedom",
+    null,
+    3,
+    "satirical press, freedom of expression"
+   ]
+  ]
+ },
+ "pf-001348": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Ecologie"
+   ]
+  ]
+ },
  "pf-001364": {
   "date": "2026-11-10",
   "owner": "RTVE",
@@ -2486,6 +3243,41 @@
     null,
     1,
     "web portal"
+   ]
+  ]
+ },
+ "pf-001447": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leftist daily newspaper"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    2,
+    "social movements and labour"
+   ]
+  ]
+ },
+ "pf-001448": {
+  "date": "2026-11-10",
+  "owner": "Groupe Le Monde",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly translating the international press"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "translates articles from many languages"
    ]
   ]
  },
@@ -2636,6 +3428,80 @@
    ]
   ]
  },
+ "pf-001578": {
+  "audience": [
+   [
+    "religious",
+    "Catholic daily"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Bayard Presse",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "general-interest daily newspaper"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "Catholic publication"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section COP31"
+   ]
+  ]
+ },
+ "pf-001583": {
+  "audience": [
+   [
+    "children",
+    "children's programming"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV channel"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's TV channel"
+   ]
+  ]
+ },
+ "pf-001597": {
+  "audience": [
+   [
+    "policy_makers",
+    "pan-African political magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pan-African weekly news magazine"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "jobs and tenders sections"
+   ]
+  ]
+ },
  "pf-001629": {
   "date": "2026-11-10",
   "topics": [
@@ -2653,6 +3519,45 @@
    ]
   ]
  },
+ "pf-001679": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Mexican newspaper"
+   ]
+  ]
+ },
+ "pf-001683": {
+  "date": "2026-11-10",
+  "owner": "France Télévisions",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public TV network of France Télévisions"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV network"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "French public television"
+   ]
+  ]
+ },
  "pf-001686": {
   "date": "2026-11-10",
   "topics": [
@@ -2661,6 +3566,23 @@
     null,
     1,
     "daily in Bilbao"
+   ]
+  ]
+ },
+ "pf-001689": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and economics newspaper"
    ]
   ]
  },
@@ -2731,6 +3653,38 @@
    [
     "multilingual",
     "English and Spanish editions"
+   ]
+  ]
+ },
+ "pf-001804": {
+  "date": "2026-11-10",
+  "owner": "France Télévisions",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of France Télévisions"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "non-fiction and educational programming"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "documentaries"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational and documentary channel"
+   ],
+   [
+    "public_service_mandate",
+    "French public television"
    ]
   ]
  },
@@ -3013,6 +3967,17 @@
    ]
   ]
  },
+ "pf-002283": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly political news magazine"
+   ]
+  ]
+ },
  "pf-002287": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -3140,6 +4105,35 @@
   "not_media": "official state gazette (laws and notices), not a media outlet",
   "topics": []
  },
+ "pf-002453": {
+  "audience": [
+   [
+    "lgbtq",
+    "LGBTQIA magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "main LGBTQIA magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website section Culture"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Sexo & Santé"
+   ]
+  ]
+ },
  "pf-002455": {
   "date": "2026-11-10",
   "owner": "Canadian Broadcasting Corporation",
@@ -3153,6 +4147,37 @@
     null,
     1,
     "all-news channel"
+   ]
+  ]
+ },
+ "pf-002513": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public cultural radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural radio station"
+   ],
+   [
+    "education",
+    null,
+    1,
+    "educational programming"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational programming"
+   ],
+   [
+    "public_service_mandate",
+    "public cultural radio"
    ]
   ]
  },
@@ -3175,6 +4200,49 @@
     null,
     1,
     "international public radio"
+   ]
+  ]
+ },
+ "pf-002568": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public French-language TV network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international French-language TV network"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "French-language programming"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "French-language learning offers"
+   ]
+  ]
+ },
+ "pf-002635": {
+  "date": "2026-11-10",
+  "owner": "Grupo Multimedios",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Multimedios"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major national newspaper"
    ]
   ]
  },
@@ -3271,6 +4339,17 @@
   "not_media": "a magazine paper size (Wikidata error), not a media outlet",
   "topics": []
  },
+ "pf-002789": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading daily newspaper of Mexico City"
+   ]
+  ]
+ },
  "pf-002802": {
   "audience": [
    [
@@ -3308,6 +4387,23 @@
     null,
     2,
     "website section Ciência"
+   ]
+  ]
+ },
+ "pf-002864": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "southwestern France departments"
    ]
   ]
  },
@@ -3767,6 +4863,22 @@
   ],
   "website_warning": "the website now shows online casino and betting reviews, not the newspaper"
  },
+ "pf-003604": {
+  "date": "2026-11-10",
+  "owner": "Groupe TF1",
+  "ownership": [
+   "private",
+   "Wikipedia: part of TF1 Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
  "pf-003634": {
   "date": "2026-11-09",
   "topics": [
@@ -3992,6 +5104,18 @@
    ]
   ]
  },
+ "pf-003859": {
+  "date": "2026-11-10",
+  "owner": "Grupo Imagen",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Mexico City"
+   ]
+  ]
+ },
  "pf-003869": {
   "audience": [
    [
@@ -4141,6 +5265,27 @@
     null,
     3,
     "Wikipedia: programming includes culture"
+   ]
+  ]
+ },
+ "pf-003953": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: local associative radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local radio in Besançon"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news editions"
    ]
   ]
  },
@@ -4320,6 +5465,23 @@
   "far_right": "Wikipedia: right-wing populist to far-right weekly",
   "topics": []
  },
+ "pf-004467": {
+  "audience": [
+   [
+    "business_professionals",
+    "targeted to business markets"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business news magazine"
+   ]
+  ]
+ },
  "pf-004581": {
   "audience": [
    [
@@ -4456,6 +5618,18 @@
    ]
   ]
  },
+ "pf-005464": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "peace_justice",
+    "violence_peace",
+    1,
+    "documents the Mexican drug war"
+   ]
+  ],
+  "website_warning": "the website now shows a Vietnamese casino and betting site, not the blog"
+ },
  "pf-005505": {
   "date": "2026-11-09",
   "topics": [
@@ -4499,6 +5673,28 @@
     null,
     1,
     "news division of CTV"
+   ]
+  ]
+ },
+ "pf-005804": {
+  "audience": [
+   [
+    "children",
+    "children and youth programming"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "TelevisaUnivision",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by TelevisaUnivision"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV network"
    ]
   ]
  },
@@ -4572,6 +5768,23 @@
    ]
   ]
  },
+ "pf-006161": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "states of the Yucatán Peninsula"
+   ]
+  ]
+ },
  "pf-006174": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing to far-right anti-immigration site",
@@ -4582,6 +5795,40 @@
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
  },
+ "pf-006252": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in Culiacán"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sinaloa"
+   ]
+  ]
+ },
+ "pf-006259": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent daily newspaper in Guadalajara"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "website section Jalisco"
+   ]
+  ]
+ },
  "pf-006260": {
   "date": "2026-11-09",
   "topics": [
@@ -4590,6 +5837,29 @@
     null,
     1,
     "local newspaper of Santa Fe"
+   ]
+  ]
+ },
+ "pf-006265": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Monterrey"
+   ]
+  ]
+ },
+ "pf-006267": {
+  "date": "2026-11-10",
+  "owner": "Organización Editorial Mexicana",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in Guadalajara"
    ]
   ]
  },
@@ -4628,6 +5898,28 @@
    [
     "educational",
     "educational channel of the Ministry of Education"
+   ]
+  ]
+ },
+ "pf-006382": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Mexican programming for viewers abroad"
+   ]
+  ],
+  "country_hint": "USA (pay-TV network for Mexican Americans, studios in the USA)",
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: launched by Castalia Communications"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Spanish-language pay TV network"
    ]
   ]
  },
@@ -4671,6 +5963,46 @@
    [
     "multilingual",
     "English and Spanish versions"
+   ]
+  ]
+ },
+ "pf-006505": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news magazine with feature stories"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "website sections Cine, Cultura, Música"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "reportage, profiles and chronicles"
+   ]
+  ]
+ },
+ "pf-006536": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multiplatform newspaper"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Salud"
    ]
   ]
  },
@@ -4729,6 +6061,27 @@
    ]
   ]
  },
+ "pf-006760": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of the Mexican Congress"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "covers congressional proceedings"
+   ]
+  ]
+ },
  "pf-006794": {
   "date": "2026-11-09",
   "owner": "Government of the City of Buenos Aires",
@@ -4762,6 +6115,24 @@
    ]
   ]
  },
+ "pf-006900": {
+  "date": "2026-11-10",
+  "owner": "Organización Editorial Mexicana",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Puebla"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "city of Puebla"
+   ]
+  ]
+ },
  "pf-006972": {
   "date": "2026-11-09",
   "topics": [
@@ -4776,6 +6147,39 @@
    [
     "multilingual",
     "local editions in several countries"
+   ]
+  ]
+ },
+ "pf-007019": {
+  "date": "2026-11-10",
+  "owner": "Organización Editorial Mexicana",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Mexican newspaper"
+   ]
+  ]
+ },
+ "pf-007121": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: independent government agency for public broadcasting"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcasting system"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "state public broadcasting system"
    ]
   ]
  },
@@ -4797,6 +6201,23 @@
    ]
   ]
  },
+ "pf-007262": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural magazine"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "political magazine"
+   ]
+  ]
+ },
  "pf-007307": {
   "audience": [
    [
@@ -4815,6 +6236,22 @@
     null,
     1,
     "TV of the Chamber of Deputies"
+   ]
+  ]
+ },
+ "pf-007319": {
+  "date": "2026-11-10",
+  "owner": "TelevisaUnivision",
+  "ownership": [
+   "private",
+   "Wikipedia: division of TelevisaUnivision"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "regional entertainment TV channels"
    ]
   ]
  },
@@ -4846,6 +6283,34 @@
     null,
     1,
     "TV channel in Tucumán"
+   ]
+  ]
+ },
+ "pf-008210": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in Mexico City"
+   ]
+  ]
+ },
+ "pf-008211": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper of Grupo Diario de Morelia"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Morelia, Michoacán"
    ]
   ]
  },
@@ -4887,6 +6352,11 @@
     "website section Queer & Now"
    ]
   ]
+ },
+ "pf-008748": {
+  "date": "2026-11-10",
+  "not_media": "official government gazette that publishes laws, not a media outlet",
+  "topics": []
  },
  "pf-008820": {
   "audience": [
@@ -5007,6 +6477,82 @@
    ]
   ]
  },
+ "pf-011385": {
+  "audience": [
+   [
+    "older_persons",
+    "music from the 1940s onwards"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio station of IMER"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classic music radio"
+   ]
+  ]
+ },
+ "pf-011390": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Ciudad Juárez"
+   ]
+  ]
+ },
+ "pf-011391": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: cultural channel of Televisión Metropolitana"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural TV channel (Canal 22)"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public cultural channel"
+   ]
+  ]
+ },
+ "pf-011397": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "San Luis Potosí"
+   ]
+  ]
+ },
  "pf-011504": {
   "date": "2026-11-10",
   "topics": [
@@ -5021,6 +6567,23 @@
     null,
     1,
     "emphasis on political news"
+   ]
+  ]
+ },
+ "pf-011518": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "website section Política"
    ]
   ]
  },
@@ -5192,6 +6755,93 @@
    ]
   ]
  },
+ "pf-013554": {
+  "date": "2026-11-10",
+  "owner": "TV Azteca",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by TV Azteca"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV network"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sports broadcasts"
+   ]
+  ]
+ },
+ "pf-013558": {
+  "country_hint": "ISR (news channel broadcasting from Tel Aviv)",
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: founded and financed by Patrick Drahi"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour international news channel"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "Middle East coverage"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English, French and Arabic channels"
+   ]
+  ]
+ },
+ "pf-013785": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national public TV network of SPR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public TV network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcasting system"
+   ]
+  ]
+ },
+ "pf-014126": {
+  "date": "2026-11-10",
+  "owner": "Grupo Imagen",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Imagen"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
  "pf-014131": {
   "audience": [
    [
@@ -5214,6 +6864,33 @@
   "date": "2026-11-09",
   "not_media": "online chess platform, not a media outlet",
   "topics": []
+ },
+ "pf-014395": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikidata: public TV network of the state of Sonora"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV network"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "state of Sonora"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "website section Medio Ambiente"
+   ]
+  ]
  },
  "pf-014857": {
   "date": "2026-11-10",
@@ -5281,6 +6958,21 @@
   "far_right": "Wikipedia: Spanish far right of the 1930s",
   "topics": []
  },
+ "pf-015436": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by Instituto Mexicano de la Radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio station"
+   ]
+  ]
+ },
  "pf-015602": {
   "audience": [
    [
@@ -5304,10 +6996,91 @@
   "far_right": "Wikipedia: junction of right and far-right currents",
   "topics": []
  },
+ "pf-015962": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: talk radio network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and talk radio network"
+   ]
+  ]
+ },
+ "pf-016073": {
+  "date": "2026-11-10",
+  "owner": "Eurosport (Skydance)",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV group"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "pan-European sports TV network"
+   ]
+  ]
+ },
  "pf-016215": {
   "date": "2026-11-09",
   "not_media": "search engine for scientific papers, not a media outlet",
   "topics": []
+ },
+ "pf-016313": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent daily morning newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "city of Aguascalientes"
+   ]
+  ]
+ },
+ "pf-016333": {
+  "audience": [
+   [
+    "youth_students",
+    "university television"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the National Autonomous University of Mexico"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational TV network of UNAM"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "university cultural programming"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational television"
+   ]
+  ]
  },
  "pf-016423": {
   "date": "2026-11-10",
@@ -5353,6 +7126,28 @@
    ]
   ]
  },
+ "pf-016601": {
+  "date": "2026-11-10",
+  "owner": "Grupo Imagen",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo Imagen"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national TV network with news"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment programmes"
+   ]
+  ]
+ },
  "pf-016610": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right conservative media company",
@@ -5368,6 +7163,22 @@
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
  },
+ "pf-016915": {
+  "date": "2026-11-10",
+  "owner": "TV Azteca",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by TV Azteca"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV network"
+   ]
+  ]
+ },
  "pf-016954": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: organ of Spanish Catholic integrism, links to the extreme right",
@@ -5377,6 +7188,23 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right fake news website",
   "topics": []
+ },
+ "pf-017027": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent daily newspaper in Monterrey"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "website section Local"
+   ]
+  ]
  },
  "pf-017095": {
   "date": "2026-11-09",
@@ -5418,6 +7246,24 @@
    [
     "open_to_partner_content",
     "agency: its reports are republished by other media"
+   ]
+  ]
+ },
+ "pf-017290": {
+  "audience": [
+   [
+    "business_professionals",
+    "business and finance newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Grupo Multimedios",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "national daily covering business and financial markets"
    ]
   ]
  },
@@ -5473,6 +7319,17 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: described as far-right, misleading information",
   "topics": []
+ },
+ "pf-021960": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
  },
  "pf-022009": {
   "date": "2026-11-09",
@@ -5705,6 +7562,17 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right 're-information' media spreading Kremlin propaganda",
   "topics": []
+ },
+ "pf-027066": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports website"
+   ]
+  ]
  },
  "pf-036750": {
   "date": "2026-11-09",
@@ -5979,6 +7847,27 @@
     null,
     2,
     "website section Kultur"
+   ]
+  ]
+ },
+ "pf-070543": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national public television broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public TV broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "national public broadcaster"
    ]
   ]
  },

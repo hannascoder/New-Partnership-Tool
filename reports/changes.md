@@ -1,21 +1,21 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 40 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 21, scope 1
+- No longer shown: 41 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 41, scope 1
 
 ### Examples: ownership
 
+- Franceinfo (pf-000030): unknown → public_service
+- France Inter (pf-000031): unknown → public_service
+- France Bleu (pf-000032): unknown → public_service
+- France Culture (pf-000033): unknown → public_service
+- France Musique (pf-000034): unknown → public_service
+- Agence France-Presse (pf-000057): unknown → public_service
 - Associated Press (pf-000058): unknown → community_nonprofit
 - Das Erste (pf-000073): unknown → public_service
 - Die Tageszeitung (pf-000150): unknown → community_nonprofit
 - Junge Welt (pf-000152): unknown → community_nonprofit
-- Telemadrid (pf-000283): unknown → public_service
-- Fortune (pf-000408): unknown → private
-- Variety (pf-000485): unknown → private
-- Billboard (pf-000504): unknown → private
-- Focus (pf-000811): unknown → private
-- Agência Senado (pf-001202): unknown → public_service
 
 ### Examples: scope
 
