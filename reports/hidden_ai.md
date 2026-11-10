@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-97 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+101 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -59,6 +59,8 @@
 | pf-000307 | Gay Krant | NLD | no longer published: Wikipedia: Gay Krant 'was' a magazine |
 | pf-001908 | Mot Dag | NOR | not a media outlet: political group of the 1920s-30s, not a media outlet |
 | pf-008730 | Nylænde | NOR | no longer published: Wikipedia: Nylænde 'was' a magazine (historic) |
+| pf-009649 | The Cricketer Magazine | PAK | no longer published: Wikidata: defunct magazine |
+| pf-016372 | VSH News | PAK | no longer published: Wikipedia: VSH News 'was' a network |
 | pf-025349 | Ciberayllu | PER | no longer published: Wikipedia: Ciberayllu 'was' a publication |
 | pf-006459 | Freak Out! | PER | no longer published: Wikipedia: Freak Out! 'was' a magazine |
 | pf-016279 | Gol Perú | PER | no longer published: Wikipedia: Golperu 'fue' (was) a channel |
@@ -98,6 +100,8 @@
 | pf-016215 | الباحث الدلالي | USA | not a media outlet: search engine for scientific papers, not a media outlet |
 | pf-006157 | Diario Panorama | VEN | no longer published: Wikipedia: Panorama 'was' a newspaper |
 | pf-006634 | El Diario de Lara | VEN | no longer published: Wikipedia: 'fue' (was) a newspaper |
+| pf-012231 | An Nam Tạp Chí | VNM | no longer published: historic magazine (no data) |
+| pf-012240 | Nông cổ mín đàm | VNM | no longer published: Wikipedia: published 1901-1924 |
 | pf-003258 | Die Afrikaanse Patriot | ZAF | no longer published: Wikipedia: historic newspaper (first issue 1876) |
 | pf-002656 | South African Press Association | ZAF | no longer published: Wikipedia: closed on 31 March 2015 |
 | pf-021991 | e.tv News | ZAF | no longer published: Wikipedia: e.tv News & Sport 'was' a channel |

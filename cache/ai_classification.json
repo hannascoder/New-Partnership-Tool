@@ -5880,6 +5880,27 @@
    ]
   ]
  },
+ "pf-000694": {
+  "audience": [
+   [
+    "children",
+    "cartoons"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Warner Bros. Discovery"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
+   ]
+  ]
+ },
  "pf-000695": {
   "country_hint": "USA (published by Foundry, founded in the USA)",
   "date": "2026-11-10",
@@ -7347,6 +7368,22 @@
     null,
     1,
     "commercial TV channel"
+   ]
+  ]
+ },
+ "pf-000827": {
+  "date": "2026-11-10",
+  "owner": "ARY Digital Network",
+  "ownership": [
+   "private",
+   "Wikipedia: ARY"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network with dramas"
    ]
   ]
  },
@@ -11342,6 +11379,27 @@
    ]
   ]
  },
+ "pf-001455": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: directly state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
+   ]
+  ]
+ },
  "pf-001457": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -11830,6 +11888,17 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-001510": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language newspaper"
    ]
   ]
  },
@@ -13640,6 +13709,24 @@
    ]
   ]
  },
+ "pf-001852": {
+  "date": "2026-11-10",
+  "owner": "Jang Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV news network"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-001853": {
   "date": "2026-11-10",
   "topics": [
@@ -13839,6 +13926,21 @@
     null,
     1,
     "daily newspaper in Adelaide"
+   ]
+  ]
+ },
+ "pf-001886": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national television under the state"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national TV broadcaster"
    ]
   ]
  },
@@ -18508,6 +18610,29 @@
    ]
   ]
  },
+ "pf-002947": {
+  "country_hint": "ARE (based in Dubai, United Arab Emirates)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Urdu entertainment channel"
+   ]
+  ]
+ },
+ "pf-002948": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu news channel"
+   ]
+  ]
+ },
  "pf-002954": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: Flemish nationalist (advocates Flemish independence), largely conservative; general knowledge: close to Vlaams Belang circles (please check)",
@@ -18517,6 +18642,27 @@
     null,
     1,
     "satirical Flemish weekly"
+   ]
+  ]
+ },
+ "pf-002956": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Pakistan Broadcasting Corporation (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state radio (Radio Pakistan)"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many regional languages"
    ]
   ]
  },
@@ -20142,6 +20288,21 @@
    ]
   ]
  },
+ "pf-003743": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: national television corporation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national TV corporation"
+   ]
+  ]
+ },
  "pf-003754": {
   "date": "2026-11-10",
   "topics": [
@@ -20295,6 +20456,17 @@
     null,
     1,
     "weekly newspaper in Lubumbashi"
+   ]
+  ]
+ },
+ "pf-003830": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "large Urdu daily newspaper"
    ]
   ]
  },
@@ -21786,6 +21958,35 @@
    ]
   ]
  },
+ "pf-004373": {
+  "date": "2026-11-10",
+  "owner": "Lakson Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu-language newspaper"
+   ]
+  ]
+ },
+ "pf-004374": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
+   ],
+   [
+    "peace_justice",
+    null,
+    3,
+    "Kashmir section"
+   ]
+  ]
+ },
  "pf-004379": {
   "audience": [
    [
@@ -21970,6 +22171,22 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-004553": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and general affairs channel"
    ]
   ]
  },
@@ -22164,6 +22381,21 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: called a far-right online publication",
   "topics": []
+ },
+ "pf-004660": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
  },
  "pf-004664": {
   "date": "2026-11-10",
@@ -22978,6 +23210,22 @@
    ]
   ]
  },
+ "pf-005044": {
+  "date": "2026-11-10",
+  "owner": "Pakistan Television Corporation",
+  "ownership": [
+   "state_controlled",
+   "website: PTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV for Azad Kashmir"
+   ]
+  ]
+ },
  "pf-005047": {
   "date": "2026-11-10",
   "ownership": [
@@ -22990,6 +23238,44 @@
     null,
     1,
     "cultural cable channel"
+   ]
+  ]
+ },
+ "pf-005048": {
+  "date": "2026-11-10",
+  "owner": "ARY Digital Network",
+  "ownership": [
+   "private",
+   "Wikipedia: ARY"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
+ "pf-005049": {
+  "audience": [
+   [
+    "religious",
+    "Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "ARY Digital Network",
+  "ownership": [
+   "private",
+   "Wikipedia: ARY"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Islamic religious TV"
    ]
   ]
  },
@@ -23304,6 +23590,27 @@
     null,
     1,
     "arts and literature magazine"
+   ]
+  ]
+ },
+ "pf-005261": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government-operated"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government-operated national news agency"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "provincial sections"
    ]
   ]
  },
@@ -23865,6 +24172,17 @@
    ]
   ]
  },
+ "pf-005767": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
  "pf-005773": {
   "date": "2026-11-10",
   "owner": "Bell Media",
@@ -24308,6 +24626,17 @@
    ]
   ]
  },
+ "pf-005902": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
  "pf-005939": {
   "audience": [
    [
@@ -24413,6 +24742,24 @@
    ]
   ]
  },
+ "pf-006072": {
+  "audience": [
+   [
+    "minority_language",
+    "Sindhi readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Sindhi daily newspaper"
+   ]
+  ],
+  "website_warning": "the website shows a slot gambling page, not the newspaper"
+ },
  "pf-006093": {
   "date": "2026-11-10",
   "topics": [
@@ -24472,6 +24819,21 @@
     null,
     1,
     "leftist monthly newspaper"
+   ]
+  ]
+ },
+ "pf-006119": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: subsidiary of Dawn group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour Urdu news channel"
    ]
   ]
  },
@@ -24638,6 +25000,23 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
+ },
+ "pf-006213": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu news and current affairs channel"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business"
+   ]
+  ]
  },
  "pf-006217": {
   "date": "2026-11-10",
@@ -25024,6 +25403,17 @@
    ]
   ]
  },
+ "pf-006354": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
  "pf-006357": {
   "date": "2026-11-10",
   "topics": [
@@ -25291,6 +25681,38 @@
    ]
   ]
  },
+ "pf-006486": {
+  "date": "2026-11-10",
+  "owner": "Jang Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Geo"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel (cricket)"
+   ]
+  ]
+ },
+ "pf-006487": {
+  "date": "2026-11-10",
+  "owner": "Jang Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Jang Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV news channel"
+   ]
+  ]
+ },
  "pf-006494": {
   "date": "2026-11-10",
   "ownership": [
@@ -25546,6 +25968,33 @@
     null,
     1,
     "sports channel"
+   ]
+  ]
+ },
+ "pf-006624": {
+  "audience": [
+   [
+    "children",
+    "children's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: Hamdard Foundation"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "bilingual children's magazine"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "children's magazine"
    ]
   ]
  },
@@ -26880,6 +27329,23 @@
    ]
   ]
  },
+ "pf-008129": {
+  "audience": [
+   [
+    "minority_language",
+    "Sindhi speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "first private Sindhi TV"
+   ]
+  ]
+ },
  "pf-008147": {
   "date": "2026-11-10",
   "ownership": [
@@ -26924,6 +27390,34 @@
     null,
     2,
     "Pune, Mumbai, Maharashtra sections"
+   ]
+  ]
+ },
+ "pf-008158": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu daily newspaper"
+   ]
+  ]
+ },
+ "pf-008160": {
+  "audience": [
+   [
+    "minority_language",
+    "Pashto speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Pashto-language TV"
    ]
   ]
  },
@@ -27231,6 +27725,22 @@
    ]
   ]
  },
+ "pf-008311": {
+  "date": "2026-11-10",
+  "owner": "Pakistan Television Corporation",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by PTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state news channel"
+   ]
+  ]
+ },
  "pf-008349": {
   "date": "2026-11-10",
   "owner": "Clever",
@@ -27244,6 +27754,23 @@
     null,
     1,
     "sports channels"
+   ]
+  ]
+ },
+ "pf-008402": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu newspaper"
+   ],
+   [
+    "religion",
+    null,
+    3,
+    "name"
    ]
   ]
  },
@@ -27703,6 +28230,22 @@
   "not_media": "official government gazette that publishes laws, not a media outlet",
   "topics": []
  },
+ "pf-008813": {
+  "date": "2026-11-10",
+  "owner": "Pakistan Television Corporation",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned PTV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "state sports channel"
+   ]
+  ]
+ },
  "pf-008820": {
   "audience": [
    [
@@ -27729,6 +28272,23 @@
    [
     "educational",
     "educational children's channel"
+   ]
+  ]
+ },
+ "pf-008822": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "cities section"
    ]
   ]
  },
@@ -28048,6 +28608,21 @@
    ]
   ]
  },
+ "pf-009137": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by businessman and politician Aleem Khan"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu news channel"
+   ]
+  ]
+ },
  "pf-009155": {
   "date": "2026-11-10",
   "topics": [
@@ -28333,6 +28908,18 @@
    ]
   ]
  },
+ "pf-009649": {
+  "closed": "Wikidata: defunct magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "cricket magazine"
+   ]
+  ]
+ },
  "pf-009674": {
   "date": "2026-11-10",
   "topics": [
@@ -28475,6 +29062,27 @@
    ]
   ]
  },
+ "pf-010187": {
+  "audience": [
+   [
+    "youth_students",
+    "youth union newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: published by the Communist Youth Union"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper of the Communist Youth Union"
+   ]
+  ]
+ },
  "pf-010220": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): partisan right-wing site (Salem Media); Wikipedia: 'mainstream conservative' bias",
@@ -28551,6 +29159,56 @@
     null,
     1,
     "space and astronomy news"
+   ]
+  ]
+ },
+ "pf-010324": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "science and technology channel"
+   ],
+   [
+    "education",
+    null,
+    1,
+    "education"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "science and education"
+   ]
+  ]
+ },
+ "pf-010325": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "sports, culture and entertainment"
+   ],
+   [
+    "sports",
+    null,
+    1,
+    "sport"
    ]
   ]
  },
@@ -28631,6 +29289,21 @@
     null,
     1,
     "Christian TV station"
+   ]
+  ]
+ },
+ "pf-010365": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned English-language daily"
    ]
   ]
  },
@@ -29340,6 +30013,381 @@
    ]
   ]
  },
+ "pf-012231": {
+  "closed": "historic magazine (no data)",
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-012236": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "military section"
+   ]
+  ]
+ },
+ "pf-012237": {
+  "date": "2026-11-10",
+  "owner": "HTV",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: HTV"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "channel of Ho Chi Minh City TV (DreamsTV)"
+   ]
+  ]
+ },
+ "pf-012238": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "labour newspaper"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    2,
+    "labour union newspaper"
+   ]
+  ]
+ },
+ "pf-012239": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (Nguoi Lao Dong)"
+   ]
+  ]
+ },
+ "pf-012240": {
+  "closed": "Wikipedia: published 1901-1924",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "agriculture",
+    null,
+    1,
+    "economic newspaper"
+   ]
+  ]
+ },
+ "pf-012242": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official state-run news agency"
+   ]
+  ]
+ },
+ "pf-012244": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Vietnamese abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international channel for Vietnamese abroad"
+   ]
+  ]
+ },
+ "pf-012245": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "ethnic minorities"
+   ],
+   [
+    "minority_language",
+    "minority languages"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "indigenous",
+    null,
+    1,
+    "channel for ethnic minorities"
+   ]
+  ]
+ },
+ "pf-012246": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
+ "pf-012247": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "channel for the Southeast region"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Southeast region"
+   ]
+  ]
+ },
+ "pf-012248": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "channel for the Southwest region"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Mekong Delta"
+   ]
+  ]
+ },
+ "pf-012249": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Ministry of Information and Communications"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
+ },
+ "pf-012250": {
+  "date": "2026-11-10",
+  "owner": "FPT Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
+ },
+ "pf-012251": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Duong"
+   ]
+  ]
+ },
+ "pf-012252": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Thuan"
+   ]
+  ]
+ },
+ "pf-012253": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: station under the Provincial Party Committee"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bac Ninh"
+   ]
+  ]
+ },
+ "pf-012254": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Khanh Hoa"
+   ]
+  ]
+ },
+ "pf-012255": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Thanh Hoa"
+   ]
+  ]
+ },
+ "pf-012256": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Thai Nguyen"
+   ]
+  ]
+ },
+ "pf-012257": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Dong Nai"
+   ]
+  ]
+ },
  "pf-012281": {
   "date": "2026-11-10",
   "topics": [
@@ -29441,6 +30489,17 @@
     null,
     2,
     "Zhejiang Province"
+   ]
+  ]
+ },
+ "pf-012385": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
    ]
   ]
  },
@@ -30324,6 +31383,32 @@
    ]
   ]
  },
+ "pf-013742": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Geo"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu news channel"
+   ]
+  ]
+ },
+ "pf-013751": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "Chitral newspaper"
+   ]
+  ]
+ },
  "pf-013767": {
   "date": "2026-11-10",
   "topics": [
@@ -30511,6 +31596,22 @@
    ]
   ]
  },
+ "pf-013919": {
+  "date": "2026-11-10",
+  "owner": "Pakistan Television Corporation",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by PTV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public entertainment channel"
+   ]
+  ]
+ },
  "pf-013921": {
   "date": "2026-11-10",
   "ownership": [
@@ -30644,6 +31745,37 @@
     null,
     1,
     "daily tabloid newspaper"
+   ]
+  ]
+ },
+ "pf-014104": {
+  "date": "2026-11-10",
+  "owner": "HTV",
+  "ownership": [
+   "state_controlled",
+   "website: HTV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
+ "pf-014105": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: Communist Party periodical"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "theoretical journal of the Communist Party"
    ]
   ]
  },
@@ -31087,6 +32219,23 @@
     null,
     1,
     "largest private news agency"
+   ]
+  ]
+ },
+ "pf-014408": {
+  "audience": [
+   [
+    "minority_language",
+    "Sindhi speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Sindhi-language news channel"
    ]
   ]
  },
@@ -31544,6 +32693,21 @@
    ]
   ]
  },
+ "pf-015002": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Geo"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment channel"
+   ]
+  ]
+ },
  "pf-015005": {
   "date": "2026-11-10",
   "topics": [
@@ -31784,6 +32948,38 @@
     null,
     2,
     "music"
+   ]
+  ]
+ },
+ "pf-015156": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment channel"
+   ]
+  ]
+ },
+ "pf-015157": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tien Giang"
    ]
   ]
  },
@@ -32129,6 +33325,17 @@
    ]
   ]
  },
+ "pf-015564": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Punjabi TV channel (name)"
+   ]
+  ]
+ },
  "pf-015602": {
   "audience": [
    [
@@ -32181,6 +33388,22 @@
    ]
   ]
  },
+ "pf-015624": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper of VTV"
+   ]
+  ]
+ },
  "pf-015672": {
   "date": "2026-11-10",
   "topics": [
@@ -32208,6 +33431,17 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: junction of right and far-right currents",
   "topics": []
+ },
+ "pf-015709": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu news channel"
+   ]
+  ]
  },
  "pf-015726": {
   "date": "2026-11-10",
@@ -32261,6 +33495,23 @@
     null,
     1,
     "UHD channel"
+   ]
+  ]
+ },
+ "pf-015927": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu news channel"
+   ],
+   [
+    "partnerships",
+    null,
+    3,
+    "South Asia and China sections"
    ]
   ]
  },
@@ -32688,6 +33939,83 @@
    ]
   ]
  },
+ "pf-016372": {
+  "audience": [
+   [
+    "minority_language",
+    "Balochi speakers"
+   ]
+  ],
+  "closed": "Wikipedia: VSH News 'was' a network",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Baloch news network"
+   ]
+  ]
+ },
+ "pf-016388": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "national educational channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational TV"
+   ]
+  ]
+ },
+ "pf-016389": {
+  "date": "2026-11-10",
+  "owner": "Vietnam Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: channel of state broadcaster VTV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture, history, heritage and tourism"
+   ]
+  ]
+ },
+ "pf-016390": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Nam Dinh"
+   ]
+  ]
+ },
  "pf-016403": {
   "date": "2026-11-10",
   "ownership": [
@@ -32898,6 +34226,23 @@
     null,
     1,
     "business news TV network"
+   ]
+  ]
+ },
+ "pf-016546": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Urdu newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Khyber Pakhtunkhwa"
    ]
   ]
  },
@@ -33272,6 +34617,23 @@
    ]
   ]
  },
+ "pf-017050": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local news channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lahore"
+   ]
+  ]
+ },
  "pf-017053": {
   "date": "2026-11-10",
   "topics": [
@@ -33328,6 +34690,27 @@
     null,
     1,
     "pay TV channel"
+   ]
+  ]
+ },
+ "pf-017093": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Phuoc"
    ]
   ]
  },
@@ -33426,6 +34809,17 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: called 'the right wing's highly influential answer to Slate'",
   "topics": []
+ },
+ "pf-017215": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
  },
  "pf-017218": {
   "date": "2026-11-10",
@@ -33572,6 +34966,27 @@
    ]
   ]
  },
+ "pf-017480": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Dien Bien"
+   ]
+  ]
+ },
  "pf-017615": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: organ of the extreme right (1977-1980)",
@@ -33596,6 +35011,21 @@
     null,
     1,
     "online financial newspaper"
+   ]
+  ]
+ },
+ "pf-021356": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Hum Network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
    ]
   ]
  },
@@ -34021,6 +35451,27 @@
    ]
   ]
  },
+ "pf-022016": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Quang Ninh"
+   ]
+  ]
+ },
  "pf-022018": {
   "date": "2026-11-10",
   "topics": [
@@ -34289,6 +35740,27 @@
    ]
   ]
  },
+ "pf-023270": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Vietnam News Agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper of the news agency VNA"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "several languages"
+   ]
+  ]
+ },
  "pf-023299": {
   "date": "2026-11-10",
   "owner": "Despite Media Group",
@@ -34500,6 +35972,23 @@
     "corruption_institutions",
     1,
     "investigative journalism against corruption"
+   ]
+  ]
+ },
+ "pf-023530": {
+  "audience": [
+   [
+    "children",
+    "cartoons"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
    ]
   ]
  },
@@ -34866,6 +36355,27 @@
    ]
   ]
  },
+ "pf-024203": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Yen Bai"
+   ]
+  ]
+ },
  "pf-024215": {
   "audience": [
    [
@@ -34938,6 +36448,22 @@
    ]
   ]
  },
+ "pf-024333": {
+  "date": "2026-11-10",
+  "owner": "ARY Digital Network",
+  "ownership": [
+   "private",
+   "Wikipedia: ARY"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
  "pf-024391": {
   "date": "2026-11-10",
   "topics": [
@@ -34976,6 +36502,28 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: kept the far-right, pro-government positioning of Nation TV",
   "topics": []
+ },
+ "pf-024409": {
+  "date": "2026-11-10",
+  "owner": "HTV",
+  "ownership": [
+   "state_controlled",
+   "website: HTV, city state broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Ho Chi Minh City TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Ho Chi Minh City"
+   ]
+  ]
  },
  "pf-024418": {
   "date": "2026-11-10",
@@ -35657,6 +37205,27 @@
    ]
   ]
  },
+ "pf-026652": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gia Lai"
+   ]
+  ]
+ },
  "pf-026655": {
   "date": "2026-11-10",
   "owner": "Bangladesh Television",
@@ -35770,6 +37339,27 @@
     "global_cooperation",
     1,
     "EU policy news"
+   ]
+  ]
+ },
+ "pf-026875": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lao Cai"
    ]
   ]
  },
@@ -37452,6 +39042,48 @@
    ]
   ]
  },
+ "pf-037964": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bac Giang"
+   ]
+  ]
+ },
+ "pf-037968": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bac Lieu"
+   ]
+  ]
+ },
  "pf-037982": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
@@ -37485,6 +39117,27 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-038032": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Duong"
+   ]
+  ]
+ },
  "pf-038093": {
   "date": "2026-11-10",
   "topics": [
@@ -37493,6 +39146,69 @@
     null,
     1,
     "news TV"
+   ]
+  ]
+ },
+ "pf-038241": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Dinh"
+   ]
+  ]
+ },
+ "pf-038242": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Duong"
+   ]
+  ]
+ },
+ "pf-038243": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: provincial radio-TV station (Party committee and People's Committee)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "provincial radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Binh Phuoc"
    ]
   ]
  },

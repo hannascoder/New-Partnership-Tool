@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 208 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 263, scope 3
+- No longer shown: 212 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 298, scope 3
 
 ### Examples: ownership
 
@@ -37,9 +37,9 @@
 - Aaj Tak (IND, pf-003906)
 - Alma Gallega (URY, pf-013115)
 - American Thinker (USA, pf-004610)
+- An Nam Tạp Chí (VNM, pf-012231)
 - Apollo News (DEU, pf-025589)
 - Arbeiter-Zeitung (AUT, pf-000689)
 - Arriba España (PER, pf-026717)
 - Associated Whistleblowing Press (BEL, pf-014573)
 - Athens News Agency (GRC, pf-002878)
-- Avriani (GRC, pf-004254)
