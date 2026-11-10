@@ -398,6 +398,33 @@
    ]
   ]
  },
+ "pf-000037": {
+  "audience": [
+   [
+    "religious",
+    "Jewish community"
+   ],
+   [
+    "ethnic_minorities",
+    "Jewish community in Turkey"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Jewish weekly newspaper"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "Jewish community"
+   ]
+  ]
+ },
  "pf-000041": {
   "date": "2026-11-10",
   "ownership": [
@@ -861,6 +888,22 @@
     null,
     1,
     "telenovelas, shows and celebrities"
+   ]
+  ]
+ },
+ "pf-000098": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national public broadcaster (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster"
    ]
   ]
  },
@@ -2103,6 +2146,33 @@
    ]
   ]
  },
+ "pf-000247": {
+  "audience": [
+   [
+    "indigenous",
+    "Sámi people"
+   ],
+   [
+    "minority_language",
+    "Sámi language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Northern Sámi-language newspaper"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "Sámi newspaper"
+   ]
+  ]
+ },
  "pf-000252": {
   "date": "2026-11-10",
   "owner": "RAI",
@@ -2122,6 +2192,34 @@
    [
     "public_service_mandate",
     "Italian public broadcaster RAI"
+   ]
+  ]
+ },
+ "pf-000256": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Turkic-speaking audiences"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: TRT channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "channel for Turkey and the Balkans"
+   ],
+   [
+    "diaspora",
+    null,
+    2,
+    "Turkic world"
    ]
   ]
  },
@@ -2421,6 +2519,22 @@
    ]
   ]
  },
+ "pf-000344": {
+  "country_hint": "USA (American pay TV network)",
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Disney"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's pay TV network"
+   ]
+  ]
+ },
  "pf-000346": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: taken over by a right-wing populist media owner in 2022",
@@ -2455,6 +2569,35 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000358": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "football and basketball"
+   ]
+  ]
+ },
+ "pf-000359": {
+  "date": "2026-11-10",
+  "owner": "İhlas Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
    ]
   ]
  },
@@ -2594,6 +2737,23 @@
     "climate_change",
     3,
     "climate stories"
+   ]
+  ]
+ },
+ "pf-000396": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Trondheim region"
    ]
   ]
  },
@@ -2777,6 +2937,17 @@
   ],
   "website_warning": "the website shows an empty blog ('Hello world!'), not the channel"
  },
+ "pf-000428": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest newspaper"
+   ]
+  ]
+ },
  "pf-000431": {
   "date": "2026-11-10",
   "owner": "Nine Entertainment",
@@ -2803,6 +2974,23 @@
     null,
     1,
     "Cali and the Pacific region"
+   ]
+  ]
+ },
+ "pf-000434": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Flekkefjord and western Agder"
    ]
   ]
  },
@@ -2946,6 +3134,22 @@
    ]
   ]
  },
+ "pf-000451": {
+  "date": "2026-11-10",
+  "owner": "Turkuvaz Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Turkuvaz Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network with series"
+   ]
+  ]
+ },
  "pf-000456": {
   "date": "2026-11-10",
   "topics": [
@@ -3079,6 +3283,27 @@
     null,
     1,
     "free-to-air TV channel"
+   ]
+  ]
+ },
+ "pf-000491": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-run news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
    ]
   ]
  },
@@ -3373,6 +3598,22 @@
    ]
   ]
  },
+ "pf-000559": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: TRT news channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
  "pf-000561": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing Italian daily",
@@ -3443,6 +3684,23 @@
    ]
   ]
  },
+ "pf-000582": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Ekonomi"
+   ]
+  ]
+ },
  "pf-000585": {
   "date": "2026-11-10",
   "ownership": [
@@ -3482,6 +3740,17 @@
     null,
     1,
     "daily newspaper in Athens"
+   ]
+  ]
+ },
+ "pf-000607": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -3944,6 +4213,23 @@
     null,
     3,
     "international coverage"
+   ]
+  ]
+ },
+ "pf-000711": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lister region"
    ]
   ]
  },
@@ -4463,6 +4749,22 @@
    ]
   ]
  },
+ "pf-000790": {
+  "date": "2026-11-10",
+  "owner": "Demirören Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Demirören Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ]
+  ]
+ },
  "pf-000792": {
   "date": "2026-11-10",
   "owner": "RTL Group",
@@ -4961,6 +5263,23 @@
    ]
   ]
  },
+ "pf-000886": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "city sections"
+   ]
+  ]
+ },
  "pf-000890": {
   "date": "2026-11-10",
   "owner": "The Chunichi Shimbun Company",
@@ -5152,6 +5471,23 @@
    ]
   ]
  },
+ "pf-000914": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "largest financial newspaper"
+   ]
+  ]
+ },
  "pf-000915": {
   "date": "2026-11-10",
   "ownership": [
@@ -5330,6 +5666,23 @@
    ]
   ]
  },
+ "pf-000965": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest newspaper outside Oslo"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bergen and Western Norway"
+   ]
+  ]
+ },
  "pf-000966": {
   "audience": [
    [
@@ -5406,6 +5759,37 @@
     null,
     1,
     "only daily wholly in Basque"
+   ]
+  ]
+ },
+ "pf-000986": {
+  "audience": [
+   [
+    "indigenous",
+    "Sámi people"
+   ],
+   [
+    "minority_language",
+    "Sámi language"
+   ],
+   [
+    "religious",
+    "Christian readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Northern Sámi Christian publication"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "Sámi"
    ]
   ]
  },
@@ -5674,6 +6058,27 @@
    ]
   ]
  },
+ "pf-001077": {
+  "audience": [
+   [
+    "children",
+    "cartoons"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Skydance"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
+   ]
+  ]
+ },
  "pf-001086": {
   "date": "2026-11-10",
   "ownership": [
@@ -5692,6 +6097,17 @@
     null,
     2,
     "dramas, variety and anime"
+   ]
+  ]
+ },
+ "pf-001088": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing daily"
    ]
   ]
  },
@@ -6008,6 +6424,21 @@
    [
     "public_service_mandate",
     "NHK"
+   ]
+  ]
+ },
+ "pf-001166": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national private radio"
    ]
   ]
  },
@@ -6408,6 +6839,22 @@
     null,
     1,
     "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-001243": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by state broadcaster TRT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "first national TV channel, series"
    ]
   ]
  },
@@ -7086,6 +7533,29 @@
    ]
   ]
  },
+ "pf-001354": {
+  "audience": [
+   [
+    "indigenous",
+    "Sámi people"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Sámi newspaper in Norwegian"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "Sámi community"
+   ]
+  ]
+ },
  "pf-001355": {
   "date": "2026-11-10",
   "owner": "National World",
@@ -7709,6 +8179,17 @@
    ]
   ]
  },
+ "pf-001450": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ]
+  ]
+ },
  "pf-001457": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -7918,6 +8399,17 @@
    ]
   ]
  },
+ "pf-001478": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major tabloid newspaper"
+   ]
+  ]
+ },
  "pf-001487": {
   "date": "2026-11-10",
   "owner": "BBC",
@@ -8102,6 +8594,28 @@
    [
     "multilingual",
     "international broadcasting in several languages"
+   ]
+  ]
+ },
+ "pf-001534": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: international service of TRT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international radio service"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
    ]
   ]
  },
@@ -8926,6 +9440,23 @@
    ]
   ]
  },
+ "pf-001793": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kvinnherad"
+   ]
+  ]
+ },
  "pf-001798": {
   "date": "2026-11-09",
   "owner": "Grupo Folha",
@@ -9036,6 +9567,29 @@
    ]
   ]
  },
+ "pf-001827": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly on politics, culture and science"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "culture focus"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "science"
+   ]
+  ]
+ },
  "pf-001832": {
   "date": "2026-11-10",
   "topics": [
@@ -9090,6 +9644,23 @@
     null,
     1,
     "Catholic radio"
+   ]
+  ]
+ },
+ "pf-001850": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kristiansand and Agder"
    ]
   ]
  },
@@ -9290,6 +9861,11 @@
    ]
   ]
  },
+ "pf-001896": {
+  "date": "2026-11-10",
+  "not_media": "official journal that publishes laws, not a media outlet",
+  "topics": []
+ },
  "pf-001898": {
   "date": "2026-11-10",
   "owner": "Rogers Sports & Media",
@@ -9306,6 +9882,45 @@
    ]
   ]
  },
+ "pf-001903": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Svalbard"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Forskning"
+   ]
+  ]
+ },
+ "pf-001908": {
+  "date": "2026-11-10",
+  "not_media": "political group of the 1920s-30s, not a media outlet",
+  "topics": []
+ },
+ "pf-001914": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ]
+  ]
+ },
  "pf-001918": {
   "date": "2026-11-10",
   "owner": "British Film Institute",
@@ -9318,6 +9933,27 @@
    ]
   ]
  },
+ "pf-001922": {
+  "audience": [
+   [
+    "minority_language",
+    "Armenian speakers"
+   ],
+   [
+    "ethnic_minorities",
+    "Armenian community in Turkey"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Armenian-language daily, oldest in the world"
+   ]
+  ]
+ },
  "pf-001925": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -9327,6 +9963,38 @@
     null,
     1,
     "daily newspaper in Montreal"
+   ]
+  ]
+ },
+ "pf-001939": {
+  "audience": [
+   [
+    "minority_language",
+    "Kurdish speakers"
+   ],
+   [
+    "ethnic_minorities",
+    "Kurdish community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: TRT station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Kurdish-language public TV"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "news and sport"
    ]
   ]
  },
@@ -9376,6 +10044,34 @@
    [
     "public_service_mandate",
     "Italian public broadcaster RAI"
+   ]
+  ]
+ },
+ "pf-001953": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: TRT Arabic channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic-language channel"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "War on Gaza section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Arabic"
    ]
   ]
  },
@@ -9729,6 +10425,17 @@
    ]
   ]
  },
+ "pf-002083": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing daily newspaper"
+   ]
+  ]
+ },
  "pf-002109": {
   "date": "2026-11-10",
   "ownership": [
@@ -9741,6 +10448,22 @@
     null,
     1,
     "commercial TV channel"
+   ]
+  ]
+ },
+ "pf-002111": {
+  "date": "2026-11-10",
+  "owner": "Demirören Group",
+  "ownership": [
+   "private",
+   "Wikipedia: part of Demirören Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel"
    ]
   ]
  },
@@ -9809,6 +10532,17 @@
    ]
   ]
  },
+ "pf-002128": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Oslo"
+   ]
+  ]
+ },
  "pf-002131": {
   "audience": [
    [
@@ -9828,6 +10562,182 @@
     null,
     1,
     "Catholic TV channel"
+   ]
+  ]
+ },
+ "pf-002132": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Arendal and Aust-Agder"
+   ]
+  ]
+ },
+ "pf-002133": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Stavanger and Rogaland"
+   ]
+  ]
+ },
+ "pf-002135": {
+  "audience": [
+   [
+    "religious",
+    "Christian readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily on news and faith"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "faith and ethics"
+   ]
+  ]
+ },
+ "pf-002136": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kristiansund and Nordmøre"
+   ]
+  ]
+ },
+ "pf-002137": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bergen"
+   ]
+  ]
+ },
+ "pf-002138": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tromsø"
+   ]
+  ]
+ },
+ "pf-002142": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bodø"
+   ]
+  ]
+ },
+ "pf-002144": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national weekly in Nynorsk"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ]
+  ]
+ },
+ "pf-002145": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Drammen"
+   ]
+  ]
+ },
+ "pf-002146": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Alta, Kautokeino and Loppa"
    ]
   ]
  },
@@ -9859,6 +10769,74 @@
    ]
   ]
  },
+ "pf-002150": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest newspaper in Northern Norway"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tromsø and Troms"
+   ]
+  ]
+ },
+ "pf-002155": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Asker and Bærum"
+   ]
+  ]
+ },
+ "pf-002170": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Strand"
+   ]
+  ]
+ },
+ "pf-002181": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Brønnøysund"
+   ]
+  ]
+ },
  "pf-002186": {
   "date": "2026-11-10",
   "owner": "Prasar Bharati",
@@ -9878,6 +10856,132 @@
    [
     "public_service_mandate",
     "India's public service broadcaster"
+   ]
+  ]
+ },
+ "pf-002188": {
+  "date": "2026-11-10",
+  "owner": "A-pressen",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Vikersund"
+   ]
+  ]
+ },
+ "pf-002203": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Hallingdal"
+   ]
+  ]
+ },
+ "pf-002213": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kinn and Bremanger"
+   ]
+  ]
+ },
+ "pf-002214": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Måløy"
+   ]
+  ]
+ },
+ "pf-002216": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gloppen"
+   ]
+  ]
+ },
+ "pf-002218": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Førde and Sunnfjord"
+   ]
+  ]
+ },
+ "pf-002224": {
+  "audience": [
+   [
+    "religious",
+    "Christian readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Christian newspaper"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "Christian newspaper"
    ]
   ]
  },
@@ -10129,6 +11233,18 @@
    ]
   ]
  },
+ "pf-002294": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: conservative, Islamist daily, hardline support of President Erdoğan",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "conservative Islamist daily"
+   ]
+  ]
+ },
  "pf-002297": {
   "date": "2026-11-10",
   "owner": "News Corp Australia",
@@ -10176,6 +11292,23 @@
     null,
     1,
     "government newspaper"
+   ]
+  ]
+ },
+ "pf-002311": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "terrestrial TV channel"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
    ]
   ]
  },
@@ -10249,6 +11382,22 @@
     null,
     2,
     "website section Política"
+   ]
+  ]
+ },
+ "pf-002335": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: TRT channel"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports events channel"
    ]
   ]
  },
@@ -10402,6 +11551,28 @@
     null,
     1,
     "TV news channel"
+   ]
+  ]
+ },
+ "pf-002371": {
+  "date": "2026-11-10",
+  "owner": "Doğuş Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Doğuş Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationwide news channel"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "NTV Para"
    ]
   ]
  },
@@ -10744,6 +11915,21 @@
     "war_conflict",
     2,
     "war section"
+   ]
+  ]
+ },
+ "pf-002464": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: İhlas"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
    ]
   ]
  },
@@ -11330,6 +12516,34 @@
    ]
   ]
  },
+ "pf-002729": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned and operated by TRT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary channel"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "nature section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "human stories documentaries"
+   ]
+  ]
+ },
  "pf-002733": {
   "date": "2026-11-10",
   "ownership": [
@@ -11645,6 +12859,27 @@
     null,
     2,
     "website section Tecnología"
+   ]
+  ]
+ },
+ "pf-002862": {
+  "audience": [
+   [
+    "minority_language",
+    "Armenian speakers"
+   ],
+   [
+    "ethnic_minorities",
+    "Armenian community in Turkey"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Armenian-language daily newspaper"
    ]
   ]
  },
@@ -12129,6 +13364,28 @@
     null,
     1,
     "Christian TV network"
+   ]
+  ]
+ },
+ "pf-002958": {
+  "date": "2026-11-10",
+  "owner": "NRK",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by NRK"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationwide public radio channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "NRK"
    ]
   ]
  },
@@ -13064,6 +14321,34 @@
    ]
   ]
  },
+ "pf-003474": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "NRK",
+  "ownership": [
+   "public_service",
+   "Wikipedia: run by NRK"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public children's TV and radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "NRK"
+   ]
+  ]
+ },
  "pf-003495": {
   "date": "2026-11-10",
   "topics": [
@@ -13491,6 +14776,29 @@
     null,
     1,
     "daily newspaper in Mexico City"
+   ]
+  ]
+ },
+ "pf-003866": {
+  "audience": [
+   [
+    "rural_farmers",
+    "agriculture and rural districts"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper with a focus on agriculture"
+   ],
+   [
+    "agriculture",
+    null,
+    1,
+    "agriculture and rural districts"
    ]
   ]
  },
@@ -14589,10 +15897,42 @@
    ]
   ]
  },
+ "pf-004609": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: İhlas"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel (TGRT)"
+   ]
+  ]
+ },
  "pf-004610": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: called a far-right online publication",
   "topics": []
+ },
+ "pf-004664": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "popular daily newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "currency rates"
+   ]
+  ]
  },
  "pf-004676": {
   "date": "2026-11-10",
@@ -14993,6 +16333,71 @@
     null,
     1,
     "Crimean Tatar community"
+   ]
+  ]
+ },
+ "pf-004955": {
+  "audience": [
+   [
+    "religious",
+    "Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the Presidency of Religious Affairs"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "religious TV of the Presidency of Religious Affairs"
+   ]
+  ]
+ },
+ "pf-004956": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned and operated by TRT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music channel"
+   ]
+  ]
+ },
+ "pf-004957": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Turks abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: international TV channel of TRT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international channel"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Turks abroad"
    ]
   ]
  },
@@ -15463,6 +16868,17 @@
    ]
   ]
  },
+ "pf-005208": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ]
+  ]
+ },
  "pf-005221": {
   "date": "2026-11-10",
   "topics": [
@@ -15632,6 +17048,35 @@
     null,
     1,
     "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-005432": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent news agency"
+   ],
+   [
+    "human_rights",
+    null,
+    1,
+    "rights-based reporting"
+   ],
+   [
+    "gender_equality",
+    null,
+    2,
+    "gender coverage"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Turkish, English, Kurdish"
    ]
   ]
  },
@@ -16902,6 +18347,18 @@
    ]
   ]
  },
+ "pf-006612": {
+  "date": "2026-11-10",
+  "owner": "Ciner Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website (former newspaper)"
+   ]
+  ]
+ },
  "pf-006613": {
   "date": "2026-11-09",
   "owner": "Torneos",
@@ -17306,6 +18763,51 @@
    ]
   ]
  },
+ "pf-007131": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "global English news channel"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "War on Gaza section"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "BizTech section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English-language channel"
+   ]
+  ]
+ },
+ "pf-007138": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationwide TV channel close to the CHP"
+   ]
+  ]
+ },
  "pf-007156": {
   "country_hint": "PER (Peruvian channel)",
   "date": "2026-11-10",
@@ -17315,6 +18817,17 @@
     null,
     1,
     "Peruvian pay TV channel"
+   ]
+  ]
+ },
+ "pf-007179": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website (former newspaper)"
    ]
   ]
  },
@@ -17333,6 +18846,74 @@
     null,
     1,
     "party newspaper"
+   ]
+  ]
+ },
+ "pf-007191": {
+  "audience": [
+   [
+    "youth_students",
+    "university radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: university radio (METU)"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "university music radio"
+   ]
+  ]
+ },
+ "pf-007192": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: established by TRT"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
+ "pf-007198": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Turkuvaz"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
+ "pf-007202": {
+  "date": "2026-11-10",
+  "owner": "Ciner Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Ciner Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news channel"
    ]
   ]
  },
@@ -17854,6 +19435,17 @@
    ]
   ]
  },
+ "pf-008278": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first online-only newspaper"
+   ]
+  ]
+ },
  "pf-008279": {
   "audience": [
    [
@@ -17933,6 +19525,18 @@
    ]
   ]
  },
+ "pf-008304": {
+  "closed": "Wikidata: defunct magazine (1979-2016)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "magazine on science and Islamic spirituality"
+   ]
+  ]
+ },
  "pf-008349": {
   "date": "2026-11-10",
   "owner": "Clever",
@@ -18005,6 +19609,21 @@
     null,
     1,
     "publisher of Daily Trust"
+   ]
+  ]
+ },
+ "pf-008455": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio network"
    ]
   ]
  },
@@ -18201,6 +19820,18 @@
     null,
     1,
     "Adventist Christian TV and radio"
+   ]
+  ]
+ },
+ "pf-008730": {
+  "closed": "Wikipedia: Nylænde 'was' a magazine (historic)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "women_rights",
+    1,
+    "magazine on women's rights"
    ]
   ]
  },
@@ -18922,6 +20553,23 @@
    ]
   ]
  },
+ "pf-010363": {
+  "audience": [
+   [
+    "religious",
+    "Christian viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian TV station"
+   ]
+  ]
+ },
  "pf-011363": {
   "audience": [
    [
@@ -19345,6 +20993,23 @@
   "right_populist": "Wikipedia: right-wing, supports Law and Justice",
   "topics": []
  },
+ "pf-012816": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tysvær"
+   ]
+  ]
+ },
  "pf-012889": {
   "date": "2026-11-10",
   "topics": [
@@ -19543,6 +21208,23 @@
     null,
     1,
     "name: Agropolitan TV"
+   ]
+  ]
+ },
+ "pf-013344": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Vest-Telemark"
    ]
   ]
  },
@@ -20666,6 +22348,28 @@
    ]
   ]
  },
+ "pf-015205": {
+  "date": "2026-11-10",
+  "owner": "Turkuvaz Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Turkuvaz Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pro-government English-language daily"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "War on Gaza section"
+   ]
+  ]
+ },
  "pf-015216": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: Spanish far right of the 1930s",
@@ -20750,6 +22454,28 @@
    ]
   ]
  },
+ "pf-015443": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: TRT channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture and art channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "culture, literature, philosophy"
+   ]
+  ]
+ },
  "pf-015444": {
   "date": "2026-11-10",
   "topics": [
@@ -20813,6 +22539,22 @@
   "far_right": "Wikipedia: junction of right and far-right currents",
   "topics": []
  },
+ "pf-015732": {
+  "date": "2026-11-10",
+  "owner": "TRT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: established by TRT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "UHD channel"
+   ]
+  ]
+ },
  "pf-015962": {
   "date": "2026-11-10",
   "ownership": [
@@ -20875,6 +22617,31 @@
     null,
     1,
     "pan-European sports TV network"
+   ]
+  ]
+ },
+ "pf-016094": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ],
+   [
+    "minority_language",
+    "Kurdish speakers"
+   ],
+   [
+    "ethnic_minorities",
+    "Kurdish community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "Kurdish children's TV"
    ]
   ]
  },
@@ -21691,6 +23458,29 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-021927": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "online cartoon magazine"
+   ],
+   [
+    "media_freedom",
+    null,
+    2,
+    "editorial cartoons"
+   ]
+  ],
+  "un_profile": [
+   [
+    "open_to_partner_content",
+    "platform for publishing cartoons from members"
    ]
   ]
  },

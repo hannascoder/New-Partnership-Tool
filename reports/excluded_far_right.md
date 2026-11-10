@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-149 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+150 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -123,6 +123,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-021735 | Naewna | THA | AI reading (right-wing populist): Wikipedia: conservative and right-wing editorial stance |
 | pf-024405 | TOP NEWS | THA | AI reading: Wikipedia: kept the far-right, pro-government positioning of Nation TV |
 | pf-007167 | Yeni Akit | TUR | Wikidata political ideology: antisemitism |
+| pf-002294 | Yeni Şafak | TUR | AI reading (right-wing populist): Wikipedia: conservative, Islamist daily, hardline support of President Erdoğan |
 | pf-003020 | American Free Press | USA | Wikipedia Category:Far-right periodicals published in the United States |
 | pf-000482 | American Renaissance | USA | Wikidata political ideology: white supremacy |
 | pf-004610 | American Thinker | USA | AI reading: Wikipedia: called a far-right online publication |
