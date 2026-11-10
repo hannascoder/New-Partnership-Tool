@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-10
+- AI reading (in the chat, no paid API) for the top 50 outlets of DR Congo, USA, Brazil, Argentina, Canada,
+  Spain, Germany, Mexico and France (500 outlets): topics, target audience, UN profile, owner.
+- Far-right media hidden also by reading the Wikipedia text (29 more, e.g. Junge Freiheit); right-wing
+  populist media listed for the owner's decision.
+- Entries that are not media (platforms, official gazettes) or no longer published are hidden.
+
 ## 2026-11-09 (evening)
 - **All topic buttons work.** Hidden keyword lists per topic (`config/topic_keywords.yaml`, 9 UN News
   languages) compared with outlet names, Wikidata descriptions, Wikipedia introductions and the

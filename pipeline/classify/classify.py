@@ -529,6 +529,15 @@ def apply_ai(o, cat, ai, un_order, aud_order):
         o["owner_names"] = [a["owner"]] + (o.get("owner_names") or [])
     if a.get("website_warning"):
         cat["website_warning"] = a["website_warning"]
+    # not shown (KATEGORIEN 0: only existing media with information): listed in reports/hidden_ai.md
+    if a.get("not_media"):
+        cat["hidden"] = "not a media outlet: " + a["not_media"]
+    elif a.get("closed"):
+        cat["hidden"] = "no longer published: " + a["closed"]
+    if a.get("country_hint"):
+        cat["country_hint"] = a["country_hint"]
+    if a.get("review"):
+        cat["review"] = a["review"]
 
 
 def outlet_texts(o, wd_texts, web):
@@ -625,6 +634,10 @@ def main():
     media_classes = set(rules["media_classes"])
     outlets = json.load(open(ROOT / "work" / "outlets.json", encoding="utf-8"))
     overrides = load_overrides()
+    for o in outlets:  # hand correction of the country (overrides.csv, field "country")
+        row = overrides.get(o["id"], {}).get("country")
+        if row and row.get("value"):
+            o["country_before"], o["country"] = o["country"], row["value"].strip().upper()
     owners_file = ROOT / "raw" / "wikidata_owners" / "data.json.gz"
     owners = json.load(gzip.open(owners_file, "rt", encoding="utf-8")) if owners_file.exists() else {}
     rsf = json.load(open(ROOT / "work" / "rsf.json", encoding="utf-8"))
@@ -688,6 +701,13 @@ def main():
             also.append("news_outlet")
         cat["org_type_also"] = also
         fr = far_right(o, rules["exclude_far_right"], fr_evidence, owners)
+        a_ = ai.get(o["id"]) or {}
+        if not fr and rules["exclude_far_right"].get("ai_reading") and a_.get("far_right"):
+            fr = "AI reading: " + a_["far_right"]
+        if not fr and rules["exclude_far_right"].get("hide_right_wing_populist") and a_.get("right_populist"):
+            fr = "AI reading (right-wing populist): " + a_["right_populist"]
+        if a_.get("right_populist"):
+            o["right_populist"] = a_["right_populist"]
         if fr and (overrides.get(o["id"], {}).get("far_right") or {}).get("value") == "no":
             fr = None
         cat["excluded"] = fr
@@ -737,12 +757,23 @@ def main():
     json.dump(outlets, open(ROOT / "work" / "classified.json", "w", encoding="utf-8"), ensure_ascii=False)
     report(outlets, intl_missing)
     report_4d(outlets, cats_cfg)
+    hid = sorted((o for o in outlets if o["cat"].get("hidden")), key=lambda o: (o["country"] or "", o["name"] or ""))
+    (ROOT / "reports" / "hidden_ai.md").write_text("\n".join(
+        ["# Not shown after the AI reading (not media, or no longer published)", "",
+         f"{len(hid)} entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).", "",
+         "| Id | Name | Country | Reason |", "|---|---|---|---|"]
+        + [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['hidden']} |" for o in hid]) + "\n", encoding="utf-8")
     ex = sorted((o for o in outlets if o["cat"].get("excluded")), key=lambda o: (o["country"] or "", o["name"] or ""))
     lines = ["# Excluded as far-right (not shown on the website)", "",
              f"{len(ex)} outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).",
              "To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.", "",
              "| Id | Name | Country | Reason |", "|---|---|---|---|"]
     lines += [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['excluded']} |" for o in ex]
+    rp = sorted((o for o in outlets if o.get("right_populist") and not o["cat"].get("excluded")), key=lambda o: (o["country"] or "", o["name"] or ""))
+    lines += ["", f"## Right-wing populist / party-aligned right-wing media: SHOWN for now ({len(rp)})", "",
+              "Hidden only if the owner sets hide_right_wing_populist: true in config/rules.yaml.", "",
+              "| Id | Name | Country | Reason |", "|---|---|---|---|"]
+    lines += [f"| {o['id']} | {o['name']} | {o['country']} | {o['right_populist']} |" for o in rp]
     (ROOT / "reports" / "excluded_far_right.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"excluded as far-right: {len(ex)}")
 
@@ -778,7 +809,7 @@ def report(outlets, intl_missing=()):
 
 
 def report_4d(outlets, cats_cfg):
-    shown = [o for o in outlets if not o["cat"].get("excluded")]
+    shown = [o for o in outlets if not o["cat"].get("excluded") and not o["cat"].get("hidden")]
     n = len(shown)
     by_strength = Counter(v.get("strength") for o in shown for v in o["cat"]["topics"] if v["method"] != "default")
     lines = ["# Step 4d: topics, target audience and UN profile", "",

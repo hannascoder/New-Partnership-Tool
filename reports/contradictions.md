@@ -1,6 +1,6 @@
 # Contradictions and things to check (step 5)
 
-## Sources disagree on the country (214)
+## Sources disagree on the country (213)
 
 The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is listed.
 
@@ -48,7 +48,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-001643 | Radio Notre-Dame | FRA | CAF, FRA |
 | pf-001648 | Sport 1 | CZE | CZE, HUN |
 | pf-001697 | Elbe-Jeetzel-Zeitung | DEU | AUT, DEU |
-| pf-001731 | Miramar | BRA | BRA, MOZ |
+| pf-001731 | Miramar | MOZ | BRA, MOZ |
 | pf-001745 | European Radio for Belarus | POL | BLR, POL |
 | pf-001890 | Romance TV | DEU | DEU, POL |
 | pf-001967 | Libya Al Ahrar TV | LBY | LBY, QAT |
@@ -67,7 +67,6 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-002875 | ANT1 | CYP | CYP, GRC |
 | pf-002947 | Urdu 1 | PAK | ARE, PAK |
 | pf-003164 | CNN Türk | USA | TUR, USA |
-| pf-003262 | Disney Channel | ARG | ARG, BRA |
 | pf-003263 | Disney Channel India | BGD | BGD, IND |
 | pf-003265 | Disney Channel | USA | ARG, USA |
 | pf-003266 | Disney Channel | GBR | GBR, POL |
@@ -117,7 +116,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-008597 | Inner Mongolia Radio and Television | CHN | CHN, MNG |
 | pf-008727 | Nunatsiaq News | CAN | CAN, USA |
 | pf-008987 | Sukan+ | MYS | MYS, TUV |
-| pf-009317 | Space | BRA | ARG, BRA |
+| pf-009317 | Space | ARG | ARG, BRA |
 | pf-009363 | Enlace TV | CRI | CRI, ECU |
 | pf-009441 | TV Asia | IND | IND, USA |
 | pf-009835 | The Irish Post | GBR | GBR, IRL |
@@ -221,7 +220,27 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## Possible duplicates: same website, several entries (2927)
+## AI reading: probably in another country (8)
+
+The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
+
+| Id | Name | Country now | AI reading says |
+|---|---|---|---|
+| pf-000519 | United Press International | ESP | USA (American news agency) |
+| pf-000841 | Univision | MEX | USA (American Spanish-language network) |
+| pf-001224 | Azteca Guatemala | MEX | GTM (Guatemalan channel of TV Azteca) |
+| pf-001293 | Gamereactor | DEU | DNK (Nordic network, website gamereactor.dk) |
+| pf-006382 | Mexicanal | MEX | USA (pay-TV network for Mexican Americans, studios in the USA) |
+| pf-006436 | Fox News Radio | CAN | USA (American radio network) |
+| pf-013558 | i24NEWS | FRA | ISR (news channel broadcasting from Tel Aviv) |
+| pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
+
+## AI reading: please check (0)
+
+| Id | Name | Country | Note |
+|---|---|---|---|
+
+## Possible duplicates: same website, several entries (2922)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 

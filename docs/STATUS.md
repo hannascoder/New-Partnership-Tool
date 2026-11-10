@@ -134,7 +134,20 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   outlets in total; several sessions). Finds websites taken over by others (casino, travel guides).
 - Full website check v2 in (59,436 sites): public contact 37 %, active 24 %, open to partner content 1,713,
   outlets without topic 13 %.
-- Open question to the owner: clearer names for the organisation types (proposal sent).
+- Organisation types renamed (owner, 09.11.2026): "Newspaper, TV, radio or news site", "News agency
+  (supplies other media)", "Public broadcaster (independent)", "Community radio & local media", "Fact-checker".
+- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA (500 outlets).
+  Next: CHN, IND, AUS, GBR, RUS, ITA, JPN ... (order of outlet count).
+- Right-wing media (owner, 10.11.2026: "ausblenden und rechte Medien wie Junge Freiheit auch"): the AI reading
+  of the Wikipedia text marks far-right outlets ("far_right", 29 hidden, e.g. Junge Freiheit, OAN, Newsmax,
+  Valeurs actuelles) and right-wing populist / party-aligned ones ("right_populist", 23, e.g. GB News, Aaj Tak,
+  Die Weltwoche) - the latter are SHOWN until the owner decides (config/rules.yaml hide_right_wing_populist).
+  Mainstream conservative media (Le Figaro, Le Point, FAZ ...) stay. List: reports/excluded_far_right.md.
+- Platforms and non-media (Reddit, Google News, official gazettes ...) stay hidden (owner, 10.11.2026).
+  The AI reading also hides entries that are not media or no longer published (reports/hidden_ai.md)
+  and lists outlets that are probably in another country (reports/contradictions.md).
+  Country corrections confirmed by the owner go into overrides.csv (field "country"): Miramar MOZ,
+  Runner's World USA, Space ARG. Owner asked WHY non-media are hidden (answer: KATEGORIEN 0) - decision open.
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
 

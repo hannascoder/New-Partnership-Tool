@@ -60,19 +60,19 @@ material:
 # 1) WHO is it?
 org_type:
   - id: news_outlet
-    label: News outlet
+    label: Newspaper, TV, radio or news site   # was "News outlet" (owner, 09.11.2026)
     description: Any newspaper, magazine, TV or radio station, news website or podcast that is not one of the types below. Most media are here.
   - id: news_agency
-    label: News agency
+    label: News agency (supplies other media)
     description: Sells news, photos and videos to other media (e.g. AFP, Reuters, a national news agency). One story can reach hundreds of outlets.
   - id: public_service_broadcaster
-    label: Public service broadcaster
+    label: Public broadcaster (independent)
     description: Publicly funded and independent TV/radio with a public mission (e.g. BBC, Deutsche Welle). Member of a broadcasting union or listed as such. State-controlled broadcasters are not counted here.
   - id: community_media
-    label: Community media
+    label: Community radio & local media
     description: Local, non-profit radio, TV or newspapers run by and for a community (e.g. a village radio, a campus radio).
   - id: fact_checker
-    label: Fact-checking organisation
+    label: Fact-checker
     description: Checks claims and fights misinformation (e.g. members of IFCN or EFCSN). Fact-checking units of big media keep their own type.
   - id: ngo
     label: NGO / civil society
