@@ -2,7 +2,7 @@
 
 ## 2026-11-10
 - AI reading (in the chat, no paid API) for the top 50 outlets of DR Congo, USA, Brazil, Argentina, Canada,
-  Spain, Germany, Mexico, France, China, India, Australia, the UK, Russia, Italy, Japan, Colombia, Indonesia, Nigeria, Poland, Ukraine, Chile, Greece, South Africa, Romania, Turkey, Norway, Finland, Sweden, Switzerland, the Netherlands, Peru and Belgium (1,700 outlets): topics, target audience, UN profile, owner.
+  Spain, Germany, Mexico, France, China, India, Australia, the UK, Russia, Italy, Japan, Colombia, Indonesia, Nigeria, Poland, Ukraine, Chile, Greece, South Africa, Romania, Turkey, Norway, Finland, Sweden, Switzerland, the Netherlands, Peru, Belgium, Bangladesh and Venezuela (1,800 outlets): topics, target audience, UN profile, owner.
 - Far-right media hidden also by reading the Wikipedia text (29 more, e.g. Junge Freiheit); right-wing
   populist and partisan right-wing media hidden as well (owner: "alles raus was rechts ist"), e.g. Fox News,
   GB News, Aaj Tak, Die Weltwoche; 143 in total, each with its reason in reports/excluded_far_right.md.

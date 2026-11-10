@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 172 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 205, scope 3
+- No longer shown: 177 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 222, scope 3
 
 ### Examples: ownership
 

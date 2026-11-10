@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-152 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+153 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -17,6 +17,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-001091 | Die Aula | AUT | Wikipedia Category:Far-right periodicals |
 | pf-040973 | eXXpress TV | AUT | AI reading (right-wing populist): general knowledge, not in the profile text (please check): right-wing populist Austrian channel |
 | pf-002954 | 't Pallieterke | BEL | AI reading (right-wing populist): Wikipedia: Flemish nationalist (advocates Flemish independence), largely conservative; general knowledge: close to Vlaams Belang circles (please check) |
+| pf-009693 | The Daily Sangram | BGD | AI reading (right-wing populist): Wikipedia: mouthpiece of Bangladesh Jamaat-e-Islami (Islamist party) |
 | pf-021359 | The Morning News | BGD | AI reading (right-wing populist): Wikipedia: right-wing newspaper |
 | pf-011735 | Gazeta do Povo | BRA | AI reading (right-wing populist): Wikipedia: since 2015 an outlet for Brazilian conservatism (right-wing) |
 | pf-011893 | Jovem Pan | BRA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): aligned with Bolsonaro's right-wing movement |

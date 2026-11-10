@@ -507,6 +507,17 @@
    ]
   ]
  },
+ "pf-000043": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV channel"
+   ]
+  ]
+ },
  "pf-000045": {
   "date": "2026-11-10",
   "owner": "Axel Springer SE",
@@ -942,6 +953,33 @@
     null,
     1,
     "film, TV and entertainment industry"
+   ]
+  ]
+ },
+ "pf-000092": {
+  "audience": [
+   [
+    "indigenous",
+    "Wayuu people"
+   ],
+   [
+    "minority_language",
+    "Wayuu language"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "bilingual Spanish and Wayuu newspaper"
+   ],
+   [
+    "indigenous",
+    null,
+    1,
+    "Wayuu people"
    ]
   ]
  },
@@ -2416,6 +2454,27 @@
    ]
   ]
  },
+ "pf-000258": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: funded by the government"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000260": {
   "date": "2026-11-10",
   "owner": "RTL Deutschland",
@@ -2722,6 +2781,27 @@
    ]
   ]
  },
+ "pf-000335": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: news network (state-funded, Caracas)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Latin American news network headquartered in Caracas"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Spanish and English"
+   ]
+  ]
+ },
  "pf-000341": {
   "date": "2026-11-10",
   "ownership": [
@@ -2930,6 +3010,21 @@
    ]
   ]
  },
+ "pf-000367": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private news channel"
+   ]
+  ]
+ },
  "pf-000368": {
   "date": "2026-11-09",
   "topics": [
@@ -3085,6 +3180,17 @@
     null,
     2,
     "website section Business"
+   ]
+  ]
+ },
+ "pf-000399": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
    ]
   ]
  },
@@ -3392,6 +3498,21 @@
     null,
     2,
     "website section Sports"
+   ]
+  ]
+ },
+ "pf-000437": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: part of a government ministry"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
    ]
   ]
  },
@@ -4322,6 +4443,23 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-000623": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Zulia"
    ]
   ]
  },
@@ -6087,6 +6225,27 @@
    ]
   ]
  },
+ "pf-000863": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikidata: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000869": {
   "audience": [
    [
@@ -7804,6 +7963,23 @@
    ]
   ]
  },
+ "pf-001222": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Maracay, Aragua"
+   ]
+  ]
+ },
  "pf-001223": {
   "date": "2026-11-10",
   "topics": [
@@ -9248,6 +9424,21 @@
     null,
     1,
     "web portal"
+   ]
+  ]
+ },
+ "pf-001436": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government-backed"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper launched with government backing"
    ]
   ]
  },
@@ -11278,6 +11469,21 @@
    ]
   ]
  },
+ "pf-001844": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-run TV channel"
+   ]
+  ]
+ },
  "pf-001845": {
   "closed": "Wikipedia: circulated from 1899 to 2020",
   "date": "2026-11-10",
@@ -11826,6 +12032,17 @@
   "date": "2026-11-10",
   "not_media": "government-sponsored foundation promoting the Russian language, not a media outlet",
   "topics": []
+ },
+ "pf-001972": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest English-language daily"
+   ]
+  ]
  },
  "pf-001980": {
   "date": "2026-11-10",
@@ -13772,6 +13989,27 @@
    ]
   ]
  },
+ "pf-002454": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-002455": {
   "date": "2026-11-10",
   "owner": "Canadian Broadcasting Corporation",
@@ -14138,6 +14376,17 @@
    [
     "public_service_mandate",
     "Belgian public broadcaster"
+   ]
+  ]
+ },
+ "pf-002585": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading Bengali daily newspaper"
    ]
   ]
  },
@@ -15083,6 +15332,23 @@
    ]
   ]
  },
+ "pf-002861": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Mérida"
+   ]
+  ]
+ },
  "pf-002862": {
   "audience": [
    [
@@ -15904,6 +16170,23 @@
    ]
   ]
  },
+ "pf-003083": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Valencia, Carabobo"
+   ]
+  ]
+ },
  "pf-003097": {
   "date": "2026-11-10",
   "topics": [
@@ -16207,6 +16490,28 @@
     null,
     1,
     "children's channel"
+   ]
+  ]
+ },
+ "pf-003263": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "country_hint": "IND (Indian channel)",
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: JioStar"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's pay TV channel"
    ]
   ]
  },
@@ -17342,6 +17647,46 @@
    ]
   ]
  },
+ "pf-003852": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "agriculture",
+    null,
+    3,
+    "rural Bengal section"
+   ]
+  ]
+ },
+ "pf-003853": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "24-hour radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-003857": {
   "date": "2026-11-09",
   "owner": "Grupo Record",
@@ -17362,6 +17707,70 @@
     null,
     1,
     "daily newspaper in Mexico City"
+   ]
+  ]
+ },
+ "pf-003860": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned national TV"
+   ]
+  ]
+ },
+ "pf-003863": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-003864": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned radio broadcaster"
+   ]
+  ]
+ },
+ "pf-003865": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -18067,6 +18476,41 @@
     null,
     1,
     "private music TV"
+   ]
+  ]
+ },
+ "pf-004132": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Venezuelan diaspora"
+   ]
+  ],
+  "country_hint": "USA (channel airing in the United States)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "channel for Venezuelans in the USA"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-004135": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
    ]
   ]
  },
@@ -18877,6 +19321,27 @@
    ]
   ]
  },
+ "pf-004710": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community channel"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community TV"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "inspiration"
+   ]
+  ]
+ },
  "pf-004730": {
   "date": "2026-11-10",
   "ownership": [
@@ -19174,6 +19639,17 @@
     null,
     1,
     "national entertainment TV channel"
+   ]
+  ]
+ },
+ "pf-004901": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
    ]
   ]
  },
@@ -19557,6 +20033,17 @@
    ]
   ]
  },
+ "pf-005056": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV channel"
+   ]
+  ]
+ },
  "pf-005069": {
   "date": "2026-11-10",
   "owner": "Caracol TV",
@@ -19691,6 +20178,23 @@
    ]
   ]
  },
+ "pf-005095": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Carabobo"
+   ]
+  ]
+ },
  "pf-005156": {
   "date": "2026-11-10",
   "ownership": [
@@ -19732,6 +20236,23 @@
     "decent_jobs",
     2,
     "labour"
+   ]
+  ]
+ },
+ "pf-005179": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "popular daily newspaper (relaunched 2024)"
+   ],
+   [
+    "media_freedom",
+    null,
+    3,
+    "closed twice by the government"
    ]
   ]
  },
@@ -19907,6 +20428,27 @@
    ]
   ]
  },
+ "pf-005319": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Caracas"
+   ]
+  ]
+ },
  "pf-005326": {
   "date": "2026-11-10",
   "ownership": [
@@ -19995,6 +20537,38 @@
     null,
     1,
     "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-005382": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national (state) news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
+ "pf-005402": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English and Bengali online news portal"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Bengali"
    ]
   ]
  },
@@ -20097,6 +20671,27 @@
     null,
     1,
     "daily newspaper in Abuja"
+   ]
+  ]
+ },
+ "pf-005478": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikidata: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -20434,6 +21029,21 @@
    ]
   ]
  },
+ "pf-005811": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private 24-hour news channel"
+   ]
+  ]
+ },
  "pf-005819": {
   "date": "2026-11-10",
   "ownership": [
@@ -20535,6 +21145,23 @@
    ]
   ]
  },
+ "pf-005864": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-005865": {
   "date": "2026-11-09",
   "topics": [
@@ -20543,6 +21170,33 @@
     null,
     1,
     "local TV station in Bahía Blanca"
+   ]
+  ]
+ },
+ "pf-005867": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Impress Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "agriculture programmes"
    ]
   ]
  },
@@ -20786,6 +21440,80 @@
    ]
   ]
  },
+ "pf-006148": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language news magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "essays"
+   ]
+  ]
+ },
+ "pf-006153": {
+  "date": "2026-11-10",
+  "owner": "Bloque De Armas",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in Caracas"
+   ]
+  ]
+ },
+ "pf-006156": {
+  "date": "2026-11-10",
+  "owner": "Bloque De Armas",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "national daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-006157": {
+  "closed": "Wikipedia: Panorama 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Maracaibo, Zulia"
+   ]
+  ]
+ },
+ "pf-006158": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government-owned daily"
+   ]
+  ]
+ },
  "pf-006161": {
   "date": "2026-11-10",
   "topics": [
@@ -20910,6 +21638,23 @@
    ]
   ]
  },
+ "pf-006258": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Barquisimeto, Lara"
+   ]
+  ]
+ },
  "pf-006259": {
   "date": "2026-11-10",
   "topics": [
@@ -20949,6 +21694,17 @@
    ]
   ]
  },
+ "pf-006264": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "evening newspaper in Caracas"
+   ]
+  ]
+ },
  "pf-006265": {
   "date": "2026-11-10",
   "topics": [
@@ -20957,6 +21713,17 @@
     null,
     1,
     "daily newspaper in Monterrey"
+   ]
+  ]
+ },
+ "pf-006266": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
    ]
   ]
  },
@@ -20985,6 +21752,29 @@
     null,
     1,
     "Concepción and Biobío"
+   ]
+  ]
+ },
+ "pf-006273": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Puerto la Cruz, Anzoátegui"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Educación"
    ]
   ]
  },
@@ -21195,6 +21985,23 @@
    ]
   ]
  },
+ "pf-006426": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-006430": {
   "date": "2026-11-10",
   "owner": "Doğan Holding",
@@ -21399,6 +22206,21 @@
    ]
   ]
  },
+ "pf-006530": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government radio station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government radio"
+   ]
+  ]
+ },
  "pf-006536": {
   "date": "2026-11-10",
   "topics": [
@@ -21425,6 +22247,17 @@
     null,
     1,
     "news division of Global TV"
+   ]
+  ]
+ },
+ "pf-006550": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news network"
    ]
   ]
  },
@@ -21496,6 +22329,24 @@
    ]
   ]
  },
+ "pf-006634": {
+  "closed": "Wikipedia: 'fue' (was) a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lara, Yaracuy"
+   ]
+  ]
+ },
  "pf-006637": {
   "date": "2026-11-10",
   "topics": [
@@ -21531,6 +22382,21 @@
     null,
     1,
     "northern Colombia"
+   ]
+  ]
+ },
+ "pf-006656": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: radio of the Ministry of Culture"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture radio of the Ministry of Culture"
    ]
   ]
  },
@@ -21685,6 +22551,23 @@
    ]
   ]
  },
+ "pf-006805": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bolívar State"
+   ]
+  ]
+ },
  "pf-006808": {
   "audience": [
    [
@@ -21727,6 +22610,23 @@
     null,
     2,
     "website section Elecciones"
+   ]
+  ]
+ },
+ "pf-006884": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper of Venezuela"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Barquisimeto, Lara"
    ]
   ]
  },
@@ -21832,6 +22732,29 @@
    ]
   ]
  },
+ "pf-007016": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "San Cristóbal, Táchira"
+   ],
+   [
+    "migration",
+    null,
+    2,
+    "border section"
+   ]
+  ]
+ },
  "pf-007019": {
   "date": "2026-11-10",
   "topics": [
@@ -21847,6 +22770,17 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): TV channel of the right-wing Libertad Digital",
   "topics": []
+ },
+ "pf-007037": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "lifestyle magazine"
+   ]
+  ]
  },
  "pf-007073": {
   "date": "2026-11-10",
@@ -22305,6 +23239,18 @@
    ]
   ]
  },
+ "pf-007289": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ]
+  ],
+  "website_warning": "the website shows a gambling page, not the newspaper"
+ },
  "pf-007307": {
   "audience": [
    [
@@ -22432,6 +23378,34 @@
    ]
   ]
  },
+ "pf-007334": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ]
+  ]
+ },
+ "pf-007348": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Apure"
+   ]
+  ]
+ },
  "pf-007359": {
   "date": "2026-11-10",
   "ownership": [
@@ -22444,6 +23418,21 @@
     null,
     1,
     "football channel"
+   ]
+  ]
+ },
+ "pf-007362": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: part of the state-controlled Bolivarian system"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network"
    ]
   ]
  },
@@ -22482,6 +23471,29 @@
    [
     "public_service_mandate",
     "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-007393": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ]
+  ]
+ },
+ "pf-008118": {
+  "date": "2026-11-10",
+  "owner": "East West Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
    ]
   ]
  },
@@ -22699,6 +23711,23 @@
     "corruption_institutions",
     1,
     "focus on power and politics"
+   ]
+  ]
+ },
+ "pf-008220": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Maracaibo, Zulia"
    ]
   ]
  },
@@ -23023,6 +24052,29 @@
   ],
   "website_warning": "the website shows a World of Warcraft blog, not the news agency"
  },
+ "pf-008661": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-008666": {
   "audience": [
    [
@@ -23253,6 +24305,29 @@
    ]
   ]
  },
+ "pf-008941": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lara, Barinas, Portuguesa, Yaracuy"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ]
+  ]
+ },
  "pf-008976": {
   "date": "2026-11-10",
   "ownership": [
@@ -23265,6 +24340,27 @@
     null,
     1,
     "TV network of the Ministry of Defence"
+   ]
+  ]
+ },
+ "pf-008990": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Bengal Media Corporation"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -23758,6 +24854,18 @@
   ],
   "website_warning": "the website shows an online slot gambling page, not the newspaper"
  },
+ "pf-009693": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: mouthpiece of Bangladesh Jamaat-e-Islami (Islamist party)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ]
+  ]
+ },
  "pf-009759": {
   "audience": [
    [
@@ -23890,6 +24998,21 @@
    ]
   ]
  },
+ "pf-010295": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private news agency"
+   ]
+  ]
+ },
  "pf-010297": {
   "date": "2026-11-10",
   "ownership": [
@@ -23902,6 +25025,39 @@
     null,
     1,
     "space and astronomy news"
+   ]
+  ]
+ },
+ "pf-010331": {
+  "audience": [
+   [
+    "religious",
+    "Catholic viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-profit association"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational values TV"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "Catholic"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational TV"
    ]
   ]
  },
@@ -23948,6 +25104,23 @@
     null,
     1,
     "Umeå"
+   ]
+  ]
+ },
+ "pf-011285": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "counterterrorism section"
    ]
   ]
  },
@@ -24182,6 +25355,27 @@
     null,
     1,
     "full-service radio"
+   ]
+  ]
+ },
+ "pf-011543": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "eastern Venezuela"
    ]
   ]
  },
@@ -24616,6 +25810,28 @@
     null,
     1,
     "Japanese-language newspaper of the Japanese-Brazilian community"
+   ]
+  ]
+ },
+ "pf-012553": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Sunday newspaper"
+   ]
+  ]
+ },
+ "pf-012562": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Marxist-Leninist party newspaper"
    ]
   ]
  },
@@ -25174,6 +26390,44 @@
    ]
   ]
  },
+ "pf-013482": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
+ "pf-013483": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
+ "pf-013484": {
+  "closed": "Wikipedia: BTV World 'was' a channel",
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: BTV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state satellite TV service"
+   ]
+  ]
+ },
  "pf-013521": {
   "date": "2026-11-10",
   "topics": [
@@ -25567,6 +26821,21 @@
    ]
   ]
  },
+ "pf-014229": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: armed forces TV"
+  ],
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "TV network of the armed forces"
+   ]
+  ]
+ },
  "pf-014231": {
   "date": "2026-11-10",
   "ownership": [
@@ -25602,6 +26871,28 @@
     null,
     1,
     "daily business newspaper"
+   ]
+  ]
+ },
+ "pf-014274": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
+   ]
+  ]
+ },
+ "pf-014286": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper (Alokito Bangladesh)"
    ]
   ]
  },
@@ -25775,6 +27066,23 @@
    ]
   ]
  },
+ "pf-014489": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Trujillo, Táchira, Mérida"
+   ]
+  ]
+ },
  "pf-014573": {
   "closed": "Wikipedia: AWP 'was' an agency",
   "date": "2026-11-10",
@@ -25829,6 +27137,23 @@
    [
     "public_service_mandate",
     "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-014775": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regions section"
    ]
   ]
  },
@@ -26244,6 +27569,17 @@
    ]
   ]
  },
+ "pf-015199": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ]
+  ]
+ },
  "pf-015205": {
   "date": "2026-11-10",
   "owner": "Turkuvaz Media",
@@ -26479,6 +27815,23 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-015469": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Chattogram"
+   ]
+  ]
+ },
  "pf-015602": {
   "audience": [
    [
@@ -26494,6 +27847,23 @@
     null,
     1,
     "children's channel"
+   ]
+  ]
+ },
+ "pf-015623": {
+  "audience": [
+   [
+    "religious",
+    "Catholic viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic pay TV channel"
    ]
   ]
  },
@@ -26538,6 +27908,23 @@
     null,
     1,
     "UHD channel"
+   ]
+  ]
+ },
+ "pf-015928": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent journalism outlet"
+   ],
+   [
+    "media_freedom",
+    null,
+    2,
+    "independent media"
    ]
   ]
  },
@@ -27018,6 +28405,27 @@
    ]
   ]
  },
+ "pf-016553": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-016563": {
   "audience": [
    [
@@ -27155,6 +28563,34 @@
    ]
   ]
  },
+ "pf-016664": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali news website"
+   ]
+  ]
+ },
+ "pf-016672": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Chattogram"
+   ]
+  ]
+ },
  "pf-016678": {
   "date": "2026-11-10",
   "topics": [
@@ -27169,6 +28605,18 @@
     null,
     2,
     "sport and football"
+   ]
+  ]
+ },
+ "pf-016693": {
+  "closed": "Wikipedia: historic newspaper ('was')",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first Bengali newspaper of Dhaka"
    ]
   ]
  },
@@ -27455,6 +28903,21 @@
    ]
   ]
  },
+ "pf-017357": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikidata: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
  "pf-017409": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing militarist religious network",
@@ -27491,6 +28954,30 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing newspaper",
   "topics": []
+ },
+ "pf-021377": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Venezuelans abroad"
+   ]
+  ],
+  "country_hint": "USA (US pay TV channel)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "pay TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
  },
  "pf-021382": {
   "audience": [
@@ -27545,6 +29032,24 @@
    ]
   ]
  },
+ "pf-021565": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Venezuelans abroad"
+   ]
+  ],
+  "country_hint": "USA (US-based online TV)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online TV for Venezuelans"
+   ]
+  ]
+ },
  "pf-021693": {
   "date": "2026-11-09",
   "owner": "Novus Mídia",
@@ -27564,6 +29069,17 @@
     null,
     2,
     "website section Agro"
+   ]
+  ]
+ },
+ "pf-021733": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online news portal"
    ]
   ]
  },
@@ -27593,6 +29109,23 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: described as far-right, misleading information",
   "topics": []
+ },
+ "pf-021876": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Aragua"
+   ]
+  ]
  },
  "pf-021890": {
   "date": "2026-11-10",
@@ -28121,6 +29654,28 @@
    ]
   ]
  },
+ "pf-024137": {
+  "date": "2026-11-10",
+  "owner": "Bangladesh Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Bangladesh Television"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional station of state TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Chattogram"
+   ]
+  ]
+ },
  "pf-024143": {
   "date": "2026-11-10",
   "owner": "South African Broadcasting Corporation",
@@ -28521,6 +30076,17 @@
    ]
   ]
  },
+ "pf-024994": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
+ },
  "pf-024998": {
   "date": "2026-11-10",
   "topics": [
@@ -28535,6 +30101,23 @@
     null,
     2,
     "Edo State"
+   ]
+  ]
+ },
+ "pf-025015": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Bengali daily newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English edition"
    ]
   ]
  },
@@ -28769,6 +30352,23 @@
    ]
   ]
  },
+ "pf-026148": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-026219": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
@@ -28819,6 +30419,22 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-026655": {
+  "date": "2026-11-10",
+  "owner": "Bangladesh Television",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state news channel"
    ]
   ]
  },
@@ -30302,6 +31918,23 @@
    [
     "educational",
     "educational broadcasting"
+   ]
+  ]
+ },
+ "pf-070550": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },

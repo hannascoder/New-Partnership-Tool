@@ -219,7 +219,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (7)
+## AI reading: probably in another country (11)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
@@ -230,15 +230,19 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 | pf-000344 | Disney Jr. | TUR | USA (American pay TV network) |
 | pf-000695 | مک‌ورلد | GBR | USA (published by Foundry, founded in the USA) |
 | pf-001553 | The Moscow Times | RUS | NLD (based in Amsterdam) |
+| pf-003263 | Disney Channel India | BGD | IND (Indian channel) |
+| pf-004132 | TV Venezuela | VEN | USA (channel airing in the United States) |
 | pf-007156 | Perú Mágico | CHL | PER (Peruvian channel) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
+| pf-021377 | Televen América | VEN | USA (US pay TV channel) |
+| pf-021565 | VPItv | VEN | USA (US-based online TV) |
 
 ## AI reading: please check (0)
 
 | Id | Name | Country | Note |
 |---|---|---|---|
 
-## Possible duplicates: same website, several entries (2914)
+## Possible duplicates: same website, several entries (2913)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 
