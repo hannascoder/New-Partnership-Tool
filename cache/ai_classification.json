@@ -25,6 +25,17 @@
    ]
   ]
  },
+ "pf-000003": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "computer magazine"
+   ]
+  ]
+ },
  "pf-000005": {
   "date": "2026-11-10",
   "ownership": [
@@ -817,6 +828,37 @@
    [
     "multilingual",
     "editions in many languages"
+   ]
+  ]
+ },
+ "pf-000077": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national public-broadcasting company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "Russian invasion section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Yle public broadcaster"
+   ],
+   [
+    "multilingual",
+    "Finnish, Swedish, Sámi and more"
    ]
   ]
  },
@@ -2723,6 +2765,17 @@
    ]
   ]
  },
+ "pf-000378": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satirical magazine"
+   ]
+  ]
+ },
  "pf-000386": {
   "date": "2026-11-10",
   "topics": [
@@ -2948,6 +3001,17 @@
    ]
   ]
  },
+ "pf-000429": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily evening newspaper"
+   ]
+  ]
+ },
  "pf-000431": {
   "date": "2026-11-10",
   "owner": "Nine Entertainment",
@@ -3067,6 +3131,23 @@
     null,
     2,
     "website section Sports"
+   ]
+  ]
+ },
+ "pf-000438": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Colombian exiles"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "alternative news agency on Colombia"
    ]
   ]
  },
@@ -3684,6 +3765,18 @@
    ]
   ]
  },
+ "pf-000579": {
+  "closed": "Wikipedia: Stockholms-Tidningen 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "morning newspaper"
+   ]
+  ]
+ },
  "pf-000582": {
   "date": "2026-11-10",
   "topics": [
@@ -4087,6 +4180,17 @@
    ]
   ]
  },
+ "pf-000659": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest Swedish-language newspaper in Finland"
+   ]
+  ]
+ },
  "pf-000661": {
   "date": "2026-11-10",
   "topics": [
@@ -4139,6 +4243,23 @@
     null,
     1,
     "state-owned news channel"
+   ]
+  ]
+ },
+ "pf-000692": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "syndicalist newspaper"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    1,
+    "workers' newspaper"
    ]
   ]
  },
@@ -5124,6 +5245,34 @@
     null,
     1,
     "nationwide daily newspaper"
+   ]
+  ]
+ },
+ "pf-000856": {
+  "date": "2026-11-10",
+  "owner": "Sveriges Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Sveriges Television"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swedish public broadcaster"
    ]
   ]
  },
@@ -6947,6 +7096,23 @@
    ]
   ]
  },
+ "pf-001253": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationwide evening newspaper"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
+   ]
+  ]
+ },
  "pf-001257": {
   "date": "2026-11-10",
   "topics": [
@@ -7070,6 +7236,17 @@
     null,
     1,
     "Hungarian-language generalist TV"
+   ]
+  ]
+ },
+ "pf-001282": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "evening tabloid newspaper"
    ]
   ]
  },
@@ -8061,6 +8238,17 @@
    ]
   ]
  },
+ "pf-001426": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-001427": {
   "closed": "Wikipedia: 'was' a Romanian magazine (historic)",
   "date": "2026-11-10",
@@ -8407,6 +8595,41 @@
     null,
     1,
     "major tabloid newspaper"
+   ]
+  ]
+ },
+ "pf-001480": {
+  "audience": [
+   [
+    "religious",
+    "Christian readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily Christian newspaper"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "Christian voice"
+   ]
+  ]
+ },
+ "pf-001481": {
+  "closed": "Wikipedia: published 1886-1913",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    null,
+    1,
+    "women's magazine"
    ]
   ]
  },
@@ -8989,6 +9212,17 @@
    ]
   ]
  },
+ "pf-001667": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-001668": {
   "date": "2026-11-10",
   "owner": "Reach plc",
@@ -9371,6 +9605,23 @@
   "right_populist": "Wikipedia: right-wing, nationalist",
   "topics": []
  },
+ "pf-001743": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Malmö and southern Sweden"
+   ]
+  ]
+ },
  "pf-001745": {
   "audience": [
    [
@@ -9391,6 +9642,27 @@
     null,
     2,
     "independent media for Belarus"
+   ]
+  ]
+ },
+ "pf-001755": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-profit Expo Foundation"
+  ],
+  "topics": [
+   [
+    "human_rights",
+    null,
+    1,
+    "anti-racist magazine"
+   ],
+   [
+    "inequalities",
+    "discrimination",
+    1,
+    "investigates racism and the far right"
    ]
   ]
  },
@@ -9454,6 +9726,28 @@
     null,
     1,
     "Kvinnherad"
+   ]
+  ]
+ },
+ "pf-001795": {
+  "date": "2026-11-10",
+  "owner": "MTV",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by MTV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news programmes"
    ]
   ]
  },
@@ -9598,6 +9892,27 @@
     null,
     1,
     "weekly news magazine"
+   ]
+  ]
+ },
+ "pf-001835": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV4 AB"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "TV4 Nyheterna"
    ]
   ]
  },
@@ -9792,6 +10107,23 @@
    ]
   ]
  },
+ "pf-001872": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Näringsliv"
+   ]
+  ]
+ },
  "pf-001874": {
   "date": "2026-11-09",
   "topics": [
@@ -9963,6 +10295,23 @@
     null,
     1,
     "daily newspaper in Montreal"
+   ]
+  ]
+ },
+ "pf-001933": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gothenburg"
    ]
   ]
  },
@@ -11001,6 +11350,22 @@
    ]
   ]
  },
+ "pf-002228": {
+  "date": "2026-11-10",
+  "owner": "MTV Oy",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by MTV Oy"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV channel"
+   ]
+  ]
+ },
  "pf-002240": {
   "date": "2026-11-10",
   "topics": [
@@ -11086,6 +11451,23 @@
     null,
     2,
     "cultural coverage"
+   ]
+  ]
+ },
+ "pf-002251": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Örebro County"
    ]
   ]
  },
@@ -11576,6 +11958,34 @@
    ]
   ]
  },
+ "pf-002374": {
+  "date": "2026-11-10",
+  "owner": "Yle",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Yle"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio channel"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional broadcasts"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Yle public broadcaster"
+   ]
+  ]
+ },
  "pf-002378": {
   "date": "2026-11-10",
   "ownership": [
@@ -11653,6 +12063,21 @@
     null,
     1,
     "English-language daily newspaper in Hyderabad"
+   ]
+  ]
+ },
+ "pf-002386": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
    ]
   ]
  },
@@ -12218,6 +12643,34 @@
    ]
   ]
  },
+ "pf-002597": {
+  "date": "2026-11-10",
+  "owner": "TV4 Group",
+  "ownership": [
+   "private",
+   "Wikipedia: TV4 Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary channel"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "documentaries"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries"
+   ]
+  ]
+ },
  "pf-002598": {
   "date": "2026-11-10",
   "owner": "Sun Group",
@@ -12273,6 +12726,23 @@
    ]
   ]
  },
+ "pf-002626": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Umeå and Västerbotten"
+   ]
+  ]
+ },
  "pf-002629": {
   "date": "2026-11-10",
   "owner": "China Central Television",
@@ -12325,6 +12795,23 @@
     null,
     1,
     "publication for the Muslim community"
+   ]
+  ]
+ },
+ "pf-002644": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Malmö and Skåne"
    ]
   ]
  },
@@ -12845,6 +13332,23 @@
    ]
   ]
  },
+ "pf-002852": {
+  "closed": "Wikipedia: Yle Fem 'was' a TV channel",
+  "date": "2026-11-10",
+  "owner": "Yle",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Yle channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Swedish-language TV channel"
+   ]
+  ]
+ },
  "pf-002858": {
   "date": "2026-11-10",
   "topics": [
@@ -12900,6 +13404,34 @@
    ]
   ]
  },
+ "pf-002865": {
+  "date": "2026-11-10",
+  "owner": "Sveriges Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Sveriges Radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "national public radio with local stations"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swedish public broadcaster"
+   ]
+  ]
+ },
  "pf-002867": {
   "date": "2026-11-10",
   "ownership": [
@@ -12912,6 +13444,23 @@
     null,
     1,
     "news agency, multimedia feeds"
+   ]
+  ]
+ },
+ "pf-002869": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Southwest Finland, Turku"
    ]
   ]
  },
@@ -14164,6 +14713,23 @@
    ]
   ]
  },
+ "pf-003406": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Centre Party newspaper"
+   ],
+   [
+    "agriculture",
+    null,
+    3,
+    "rural readership"
+   ]
+  ]
+ },
  "pf-003417": {
   "date": "2026-11-10",
   "ownership": [
@@ -14246,6 +14812,23 @@
    ]
   ]
  },
+ "pf-003439": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "liberal daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gävle"
+   ]
+  ]
+ },
  "pf-003441": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing Spanish online newspaper",
@@ -14321,6 +14904,28 @@
    ]
   ]
  },
+ "pf-003456": {
+  "date": "2026-11-10",
+  "owner": "Sveriges Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Sveriges Television"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swedish public broadcaster"
+   ]
+  ]
+ },
  "pf-003474": {
   "audience": [
    [
@@ -14346,6 +14951,23 @@
    [
     "public_service_mandate",
     "NRK"
+   ]
+  ]
+ },
+ "pf-003486": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper of Finland, in Swedish"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Turku (Åbo)"
    ]
   ]
  },
@@ -14624,6 +15246,23 @@
    ]
   ]
  },
+ "pf-003754": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "western Uusimaa"
+   ]
+  ]
+ },
  "pf-003760": {
   "closed": "Wikipedia: 'was' one of two news agencies (merged into AMNA)",
   "date": "2026-11-10",
@@ -14657,6 +15296,23 @@
     "justice_rule_of_law",
     2,
     "website section Judiciário"
+   ]
+  ]
+ },
+ "pf-003771": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Uppsala"
    ]
   ]
  },
@@ -14802,6 +15458,28 @@
    ]
   ]
  },
+ "pf-003868": {
+  "audience": [
+   [
+    "youth_students",
+    "young listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Yle",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Yle"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Swedish-language entertainment radio"
+   ]
+  ]
+ },
  "pf-003869": {
   "audience": [
    [
@@ -14834,6 +15512,76 @@
    ]
   ]
  },
+ "pf-003870": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Swedish-language newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Åland"
+   ]
+  ]
+ },
+ "pf-003874": {
+  "closed": "Wikipedia: SVT HD 'was' a channel",
+  "date": "2026-11-10",
+  "owner": "SVT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SVT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "HD TV channel"
+   ]
+  ]
+ },
+ "pf-003876": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Swedish-language regional daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Ostrobothnia"
+   ]
+  ],
+  "website_warning": "the website address leads to the library newspaper archive, not the current newspaper"
+ },
+ "pf-003877": {
+  "date": "2026-11-10",
+  "owner": "Expressen",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gothenburg"
+   ]
+  ]
+ },
  "pf-003878": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -14843,6 +15591,40 @@
     null,
     1,
     "daily newspaper in Ottawa"
+   ]
+  ]
+ },
+ "pf-003881": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Swedish-language regional daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Ostrobothnia"
+   ]
+  ]
+ },
+ "pf-003882": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Swedish-language regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "western Uusimaa"
    ]
   ]
  },
@@ -15253,6 +16035,66 @@
     "women_sport",
     2,
     "website section Copa do Brasil Feminina"
+   ]
+  ]
+ },
+ "pf-004097": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Finns in Sweden"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "Finnish channel broadcasting in Sweden"
+   ]
+  ]
+ },
+ "pf-004103": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "morning newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sundsvall"
+   ]
+  ]
+ },
+ "pf-004105": {
+  "date": "2026-11-10",
+  "owner": "Sveriges Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Sweden's official international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international broadcasting station"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swedish public broadcaster"
+   ],
+   [
+    "multilingual",
+    "several languages"
    ]
   ]
  },
@@ -15701,6 +16543,29 @@
    ]
   ]
  },
+ "pf-004412": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Åland"
+   ],
+   [
+    "industry_innovation",
+    null,
+    3,
+    "shipping news (Sjöfartsnytt)"
+   ]
+  ]
+ },
  "pf-004454": {
   "date": "2026-11-10",
   "topics": [
@@ -15831,6 +16696,23 @@
     null,
     1,
     "news on Hollywood and the entertainment industry"
+   ]
+  ]
+ },
+ "pf-004589": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "international residents of Finland"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language online newspaper"
    ]
   ]
  },
@@ -16333,6 +17215,41 @@
     null,
     1,
     "Crimean Tatar community"
+   ]
+  ]
+ },
+ "pf-004945": {
+  "closed": "Wikipedia: published 1824-1931",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "morning newspaper"
+   ]
+  ]
+ },
+ "pf-004950": {
+  "audience": [
+   [
+    "minority_language",
+    "Finnish / Meänkieli readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper in Swedish and Finnish"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tornedalen"
    ]
   ]
  },
@@ -16907,6 +17824,23 @@
    ]
   ]
  },
+ "pf-005281": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "social democratic newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Dalarna"
+   ]
+  ]
+ },
  "pf-005288": {
   "date": "2026-11-09",
   "topics": [
@@ -17153,6 +18087,23 @@
    ]
   ]
  },
+ "pf-005487": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Borås"
+   ]
+  ]
+ },
  "pf-005505": {
   "date": "2026-11-09",
   "topics": [
@@ -17184,6 +18135,23 @@
     null,
     1,
     "heavy metal music website"
+   ]
+  ]
+ },
+ "pf-005535": {
+  "audience": [
+   [
+    "youth_students",
+    "student magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "student humour magazine"
    ]
   ]
  },
@@ -17720,6 +18688,34 @@
    ]
   ]
  },
+ "pf-006111": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Norrköping"
+   ]
+  ]
+ },
+ "pf-006116": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leftist monthly newspaper"
+   ]
+  ]
+ },
  "pf-006132": {
   "date": "2026-11-10",
   "ownership": [
@@ -18019,6 +19015,40 @@
    ]
   ]
  },
+ "pf-006316": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Raahe"
+   ]
+  ]
+ },
+ "pf-006319": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Lappeenranta"
+   ]
+  ]
+ },
  "pf-006320": {
   "closed": "Wikipedia: W Radio Colombia 'was' a radio network",
   "date": "2026-11-10",
@@ -18028,6 +19058,23 @@
     null,
     1,
     "news/talk radio network"
+   ]
+  ]
+ },
+ "pf-006321": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Savonlinna"
    ]
   ]
  },
@@ -18100,6 +19147,23 @@
     null,
     1,
     "news website"
+   ]
+  ]
+ },
+ "pf-006407": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "socialist weekly magazine"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
    ]
   ]
  },
@@ -18179,6 +19243,23 @@
     null,
     1,
     "sports channels"
+   ]
+  ]
+ },
+ "pf-006442": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kalajoki river valley"
    ]
   ]
  },
@@ -19330,6 +20411,23 @@
    ]
   ]
  },
+ "pf-008184": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kouvola"
+   ]
+  ]
+ },
  "pf-008185": {
   "date": "2026-11-10",
   "topics": [
@@ -19627,6 +20725,29 @@
    ]
   ]
  },
+ "pf-008474": {
+  "audience": [
+   [
+    "rural_farmers",
+    "rural readership"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "agriculture",
+    null,
+    1,
+    "newspaper on rural affairs and agriculture"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-008539": {
   "audience": [
    [
@@ -19665,6 +20786,22 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing journal",
   "topics": []
+ },
+ "pf-008591": {
+  "date": "2026-11-10",
+  "owner": "Viaplay Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Viaplay Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "current affairs, documentaries and drama"
+   ]
+  ]
  },
  "pf-008616": {
   "date": "2026-11-09",
@@ -19993,6 +21130,23 @@
    ]
   ]
  },
+ "pf-009006": {
+  "audience": [
+   [
+    "religious",
+    "Christian listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio"
+   ]
+  ]
+ },
  "pf-009014": {
   "date": "2026-11-10",
   "owner": "Australian Broadcasting Corporation",
@@ -20184,6 +21338,23 @@
     null,
     3,
     "boxing events"
+   ]
+  ]
+ },
+ "pf-009414": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Swedish-language newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Närpes and Kristinestad"
    ]
   ]
  },
@@ -20570,6 +21741,23 @@
    ]
   ]
  },
+ "pf-010373": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Umeå"
+   ]
+  ]
+ },
  "pf-011363": {
   "audience": [
    [
@@ -20681,6 +21869,40 @@
    ]
   ]
  },
+ "pf-011456": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Finnish and Swedish"
+   ]
+  ]
+ },
+ "pf-011457": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio station in Helsinki"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Helsinki"
+   ]
+  ]
+ },
  "pf-011459": {
   "date": "2026-11-10",
   "topics": [
@@ -20770,6 +21992,23 @@
    ]
   ]
  },
+ "pf-011640": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bohuslän"
+   ]
+  ]
+ },
  "pf-011641": {
   "date": "2026-11-09",
   "topics": [
@@ -20799,6 +22038,23 @@
     null,
     1,
     "federal public media company"
+   ]
+  ]
+ },
+ "pf-011705": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Eskilstuna"
    ]
   ]
  },
@@ -20870,6 +22126,187 @@
    ]
   ]
  },
+ "pf-012124": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Alingsås"
+   ]
+  ]
+ },
+ "pf-012133": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kalmar"
+   ]
+  ]
+ },
+ "pf-012135": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Karlskrona and Blekinge"
+   ]
+  ]
+ },
+ "pf-012148": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Falun"
+   ]
+  ]
+ },
+ "pf-012152": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gotland"
+   ]
+  ]
+ },
+ "pf-012155": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "Finnish history journal"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "history"
+   ]
+  ]
+ },
+ "pf-012165": {
+  "audience": [
+   [
+    "religious",
+    "church readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "church newspaper"
+   ]
+  ]
+ },
+ "pf-012171": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Espoo, Kauniainen, Kirkkonummi"
+   ]
+  ]
+ },
+ "pf-012173": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "technology news website"
+   ]
+  ]
+ },
+ "pf-012190": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Piteå"
+   ]
+  ]
+ },
+ "pf-012202": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "morning newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Växjö"
+   ]
+  ]
+ },
  "pf-012211": {
   "date": "2026-11-10",
   "topics": [
@@ -20884,6 +22321,23 @@
     "corruption_institutions",
     2,
     "investigative journalism"
+   ]
+  ]
+ },
+ "pf-012229": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Östersund and Jämtland"
    ]
   ]
  },
@@ -20992,6 +22446,101 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing, supports Law and Justice",
   "topics": []
+ },
+ "pf-012619": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Social Democratic Party organ"
+   ]
+  ]
+ },
+ "pf-012627": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Forssa"
+   ]
+  ]
+ },
+ "pf-012647": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kouvola"
+   ]
+  ]
+ },
+ "pf-012659": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Loviisa"
+   ]
+  ]
+ },
+ "pf-012672": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial music radio"
+   ]
+  ]
+ },
+ "pf-012760": {
+  "closed": "Wikipedia: Folkbladet 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Norrköping"
+   ]
+  ]
  },
  "pf-012816": {
   "date": "2026-11-10",
@@ -22241,6 +23790,33 @@
    ]
   ]
  },
+ "pf-015092": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster in Åland"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Åland"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
  "pf-015097": {
   "date": "2026-11-10",
   "ownership": [
@@ -22375,6 +23951,92 @@
   "far_right": "Wikipedia: Spanish far right of the 1930s",
   "topics": []
  },
+ "pf-015235": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Iisalmi"
+   ]
+  ]
+ },
+ "pf-015305": {
+  "closed": "Wikipedia: published 1917-1921",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satirical magazine"
+   ]
+  ]
+ },
+ "pf-015306": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "home and women's magazine"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "wellbeing section"
+   ]
+  ]
+ },
+ "pf-015315": {
+  "audience": [
+   [
+    "women",
+    "feminist magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "women_rights",
+    1,
+    "feminist magazine"
+   ]
+  ]
+ },
+ "pf-015319": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "north-east Savo"
+   ]
+  ]
+ },
  "pf-015325": {
   "date": "2026-11-10",
   "topics": [
@@ -22492,6 +24154,10 @@
     "entertainment"
    ]
   ]
+ },
+ "pf-015449": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-015602": {
   "audience": [
@@ -23276,6 +24942,21 @@
     null,
     1,
     "film channel"
+   ]
+  ]
+ },
+ "pf-017112": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: MTV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
    ]
   ]
  },
@@ -24367,6 +26048,17 @@
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
  },
+ "pf-026591": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
  "pf-026630": {
   "date": "2026-11-10",
   "owner": "Suspilne",
@@ -24842,6 +26534,56 @@
    [
     "public_service_mandate",
     "national public broadcaster"
+   ]
+  ]
+ },
+ "pf-070545": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikidata: publicly funded radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swedish public broadcaster"
+   ],
+   [
+    "multilingual",
+    "programmes in minority languages"
+   ]
+  ]
+ },
+ "pf-070549": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public-service educational broadcaster"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "public educational broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swedish public broadcaster"
+   ],
+   [
+    "educational",
+    "educational broadcasting"
    ]
   ]
  },

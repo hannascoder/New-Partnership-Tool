@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-45 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+52 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -18,6 +18,8 @@
 | pf-002425 | Boletín Oficial del Estado | ESP | not a media outlet: official state gazette (laws and notices), not a media outlet |
 | pf-001694 | El Punt | ESP | no longer published: no longer published under this name (now El Punt Avui) |
 | pf-002676 | GP Racing | ESP | no longer published: published until December 2024, merged with a sister magazine |
+| pf-015305 | Kerberos | FIN | no longer published: Wikipedia: published 1917-1921 |
+| pf-002852 | Yle Fem | FIN | no longer published: Wikipedia: Yle Fem 'was' a TV channel |
 | pf-001070 | The Illustrated London News | GBR | no longer published: Wikidata: former magazine (1842-2003) |
 | pf-002878 | Athens News Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
 | pf-004254 | Avriani | GRC | no longer published: Wikipedia: closed down in October 2012 |
@@ -36,6 +38,11 @@
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |
 | pf-001845 | Ogoniok | RUS | no longer published: Wikipedia: circulated from 1899 to 2020 |
 | pf-001970 | Russkiy Mir Foundation | RUS | not a media outlet: government-sponsored foundation promoting the Russian language, not a media outlet |
+| pf-001481 | Dagny | SWE | no longer published: Wikipedia: published 1886-1913 |
+| pf-012760 | Folkbladet | SWE | no longer published: Wikipedia: Folkbladet 'was' a newspaper |
+| pf-003874 | SVT HD | SWE | no longer published: Wikipedia: SVT HD 'was' a channel |
+| pf-004945 | Stockholms Dagblad | SWE | no longer published: Wikipedia: published 1824-1931 |
+| pf-000579 | Stockholms-Tidningen | SWE | no longer published: Wikipedia: Stockholms-Tidningen 'was' a newspaper |
 | pf-001896 | Official Gazette of the Republic of Turkey | TUR | not a media outlet: official journal that publishes laws, not a media outlet |
 | pf-008304 | Sızıntı | TUR | no longer published: Wikidata: defunct magazine (1979-2016) |
 | pf-004746 | Kievskaia starina | UKR | no longer published: Wikipedia: 'was' a monthly chronicle (historic) |
