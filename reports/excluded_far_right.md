@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-159 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+161 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -21,6 +21,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-002954 | 't Pallieterke | BEL | AI reading (right-wing populist): Wikipedia: Flemish nationalist (advocates Flemish independence), largely conservative; general knowledge: close to Vlaams Belang circles (please check) |
 | pf-009693 | The Daily Sangram | BGD | AI reading (right-wing populist): Wikipedia: mouthpiece of Bangladesh Jamaat-e-Islami (Islamist party) |
 | pf-021359 | The Morning News | BGD | AI reading (right-wing populist): Wikipedia: right-wing newspaper |
+| pf-002606 | SKAT | BGR | AI reading (right-wing populist): general knowledge, not in the profile text (please check): nationalist TV linked to nationalist parties |
 | pf-011735 | Gazeta do Povo | BRA | AI reading (right-wing populist): Wikipedia: since 2015 an outlet for Brazilian conservatism (right-wing) |
 | pf-011893 | Jovem Pan | BRA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): aligned with Bolsonaro's right-wing movement |
 | pf-031169 | Jovem Pan News | BRA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): news channel of Jovem Pan (aligned with Bolsonaro's movement) |
@@ -112,6 +113,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-027100 | The Nexus | NZL | Wikidata political ideology: neo-Nazism |
 | pf-026717 | Arriba España | PER | AI reading: Wikidata: Peruvian Falangist magazine |
 | pf-017409 | SMNI News Channel | PHL | AI reading (right-wing populist): Wikipedia: right-wing militarist religious network |
+| pf-004213 | Sonshine Media Network International | PHL | AI reading (right-wing populist): general knowledge, not in the profile text (please check): network of pastor Apollo Quiboloy, partisan pro-Duterte |
 | pf-008550 | Myśl.pl | POL | AI reading (right-wing populist): Wikipedia: right-wing journal |
 | pf-002675 | Nasz Dziennik | POL | AI reading: Wikipedia: right-wing to far-right |
 | pf-001849 | Radio Maryja | POL | AI reading (right-wing populist): general knowledge, not in the profile text (please check): nationalist and right-wing Catholic radio of Tadeusz Rydzyk; the text says 'religious and political socially conservative' |

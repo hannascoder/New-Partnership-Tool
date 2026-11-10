@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-108 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+114 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -25,6 +25,12 @@
 | pf-003784 | Metro | BEL | no longer published: Wikipedia: Metro 'was' a newspaper |
 | pf-013484 | BTV World | BGD | no longer published: Wikipedia: BTV World 'was' a channel |
 | pf-016693 | Dhaka Prakash | BGD | no longer published: Wikipedia: historic newspaper ('was') |
+| pf-006511 | Gayda | BGR | no longer published: Wikipedia: historic newspaper |
+| pf-004337 | Klassa | BGR | no longer published: Wikipedia: Klassa 'was' a newspaper |
+| pf-015454 | Literary Front | BGR | no longer published: Wikipedia: 'was' a weekly |
+| pf-008993 | Rabotnichesko Delo | BGR | no longer published: Wikidata: defunct newspaper |
+| pf-004706 | State Gazette | BGR | not a media outlet: official gazette, not a media outlet |
+| pf-004336 | The Sofia Echo | BGR | no longer published: Wikipedia: The Sofia Echo 'was' a newspaper |
 | pf-014415 | Bandera Roja | BOL | no longer published: Wikipedia: published 1926-1927 |
 | pf-014416 | Bandera Roja | BOL | no longer published: Wikipedia: historic newspaper (1947) |
 | pf-022520 | Bolivia | BOL | no longer published: Wikipedia: 'was' a newspaper |

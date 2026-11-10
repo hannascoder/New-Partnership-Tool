@@ -1289,6 +1289,27 @@
    ]
   ]
  },
+ "pf-000121": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Nova Broadcasting Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000122": {
   "date": "2026-11-10",
   "topics": [
@@ -2194,6 +2215,17 @@
    ]
   ]
  },
+ "pf-000217": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-000218": {
   "date": "2026-11-10",
   "owner": "Tamedia",
@@ -2914,6 +2946,28 @@
     null,
     1,
     "political news magazine"
+   ]
+  ]
+ },
+ "pf-000324": {
+  "date": "2026-11-10",
+  "owner": "bTV Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: bTV Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "first private national TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -7501,6 +7555,23 @@
    ]
   ]
  },
+ "pf-000826": {
+  "audience": [
+   [
+    "business_professionals",
+    "business daily"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business-oriented daily"
+   ]
+  ]
+ },
  "pf-000827": {
   "date": "2026-11-10",
   "owner": "ARY Digital Network",
@@ -8570,6 +8641,27 @@
     null,
     1,
     "only daily wholly in Basque"
+   ]
+  ]
+ },
+ "pf-000979": {
+  "audience": [
+   [
+    "children",
+    "cartoons"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Skydance"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
    ]
   ]
  },
@@ -9765,6 +9857,17 @@
    ]
   ]
  },
+ "pf-001218": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper and news agency"
+   ]
+  ]
+ },
  "pf-001222": {
   "date": "2026-11-10",
   "topics": [
@@ -10204,6 +10307,27 @@
    ]
   ]
  },
+ "pf-001287": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Bulgarian public broadcaster"
+   ]
+  ]
+ },
  "pf-001290": {
   "date": "2026-11-10",
   "not_media": "federal law gazette, not a media outlet",
@@ -10607,6 +10731,17 @@
    [
     "public_service_mandate",
     "Belgian public broadcaster"
+   ]
+  ]
+ },
+ "pf-001342": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "weekly business and politics"
    ]
   ]
  },
@@ -11570,6 +11705,27 @@
    ]
   ]
  },
+ "pf-001456": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Bulgarian public broadcaster"
+   ]
+  ]
+ },
  "pf-001457": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -12020,6 +12176,17 @@
    [
     "public_service_mandate",
     "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-001497": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and comment radio"
    ]
   ]
  },
@@ -12586,6 +12753,17 @@
     null,
     1,
     "Coimbra"
+   ]
+  ]
+ },
+ "pf-001580": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid daily"
    ]
   ]
  },
@@ -15870,6 +16048,17 @@
    ]
   ]
  },
+ "pf-002305": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language broadsheet"
+   ]
+  ]
+ },
  "pf-002306": {
   "date": "2026-11-10",
   "owner": "Display Connectors",
@@ -16540,6 +16729,21 @@
   "date": "2026-11-10",
   "not_media": "official state gazette (laws and notices), not a media outlet",
   "topics": []
+ },
+ "pf-002429": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
  },
  "pf-002430": {
   "audience": [
@@ -17258,6 +17462,18 @@
    [
     "public_service_mandate",
     "Belgian public broadcaster"
+   ]
+  ]
+ },
+ "pf-002606": {
+  "date": "2026-11-10",
+  "right_populist": "general knowledge, not in the profile text (please check): nationalist TV linked to nationalist parties",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national cable TV"
    ]
   ]
  },
@@ -18037,6 +18253,28 @@
     null,
     1,
     "public children's channel"
+   ]
+  ]
+ },
+ "pf-002806": {
+  "date": "2026-11-10",
+  "owner": "Bulgarian National Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: BNT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV station"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Bulgarian public broadcaster"
    ]
   ]
  },
@@ -19232,6 +19470,50 @@
    ]
   ]
  },
+ "pf-003064": {
+  "date": "2026-11-10",
+  "owner": "Bulgarian National Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by BNT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public regional TV"
+   ]
+  ]
+ },
+ "pf-003065": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Bulgarians abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Bulgarian National Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: BNT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public international TV"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "Bulgarians abroad"
+   ]
+  ]
+ },
  "pf-003083": {
   "date": "2026-11-10",
   "topics": [
@@ -20387,6 +20669,22 @@
    ]
   ]
  },
+ "pf-003561": {
+  "date": "2026-11-10",
+  "owner": "GMA Network",
+  "ownership": [
+   "private",
+   "Wikipedia: GMA Network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
  "pf-003570": {
   "date": "2026-11-09",
   "topics": [
@@ -20663,6 +20961,17 @@
     null,
     1,
     "national TV corporation"
+   ]
+  ]
+ },
+ "pf-003744": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air network"
    ]
   ]
  },
@@ -21993,6 +22302,58 @@
    ]
   ]
  },
+ "pf-004210": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic TV station"
+   ]
+  ],
+  "website_warning": "the website shows an unrelated Chinese page"
+ },
+ "pf-004211": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional infotainment TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Central Luzon"
+   ]
+  ]
+ },
+ "pf-004212": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-004213": {
+  "date": "2026-11-10",
+  "right_populist": "general knowledge, not in the profile text (please check): network of pastor Apollo Quiboloy, partisan pro-Duterte",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "terrestrial TV network"
+   ]
+  ]
+ },
  "pf-004214": {
   "audience": [
    [
@@ -22011,6 +22372,22 @@
     null,
     1,
     "children's channel"
+   ]
+  ]
+ },
+ "pf-004218": {
+  "date": "2026-11-10",
+  "owner": "MBC Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: MBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
    ]
   ]
  },
@@ -22069,6 +22446,32 @@
    ]
   ]
  },
+ "pf-004235": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-004236": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Aliw Broadcasting"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM news radio"
+   ]
+  ]
+ },
  "pf-004237": {
   "date": "2026-11-10",
   "owner": "South African Broadcasting Corporation",
@@ -22094,6 +22497,60 @@
    [
     "public_service_mandate",
     "SABC public broadcaster"
+   ]
+  ]
+ },
+ "pf-004238": {
+  "date": "2026-11-10",
+  "owner": "MBC Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: MBC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-004240": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state television"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state television network"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "provincial news"
+   ]
+  ]
+ },
+ "pf-004241": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital TV station"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
    ]
   ]
  },
@@ -22279,6 +22736,30 @@
    ]
   ]
  },
+ "pf-004336": {
+  "closed": "Wikipedia: The Sofia Echo 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language weekly"
+   ]
+  ]
+ },
+ "pf-004337": {
+  "closed": "Wikipedia: Klassa 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-004339": {
   "date": "2026-11-10",
   "owner": "Phoenix Television",
@@ -22380,6 +22861,28 @@
     null,
     2,
     "entertainment"
+   ]
+  ]
+ },
+ "pf-004358": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily"
+   ]
+  ]
+ },
+ "pf-004360": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily"
    ]
   ]
  },
@@ -22485,6 +22988,22 @@
     null,
     1,
     "children's pay TV channel"
+   ]
+  ]
+ },
+ "pf-004380": {
+  "date": "2026-11-10",
+  "owner": "MBC Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: MBC"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community radio network"
    ]
   ]
  },
@@ -22654,6 +23173,33 @@
    ]
   ]
  },
+ "pf-004545": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "overseas Filipinos"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: ABS-CBN"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "global channel for Filipinos abroad"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
+   ]
+  ]
+ },
  "pf-004553": {
   "date": "2026-11-10",
   "owner": "Vietnam Television",
@@ -22667,6 +23213,27 @@
     null,
     1,
     "news and general affairs channel"
+   ]
+  ]
+ },
+ "pf-004556": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -22979,6 +23546,11 @@
     "intergovernmental TV and radio company of CIS countries"
    ]
   ]
+ },
+ "pf-004706": {
+  "date": "2026-11-10",
+  "not_media": "official gazette, not a media outlet",
+  "topics": []
  },
  "pf-004710": {
   "date": "2026-11-10",
@@ -23326,6 +23898,17 @@
     null,
     1,
     "Bengali daily newspaper"
+   ]
+  ]
+ },
+ "pf-004912": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "philosophy journal"
    ]
   ]
  },
@@ -23703,6 +24286,22 @@
     null,
     2,
     "news and politics"
+   ]
+  ]
+ },
+ "pf-005041": {
+  "date": "2026-11-10",
+  "owner": "ABS-CBN",
+  "ownership": [
+   "private",
+   "Wikipedia: ABS-CBN"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news division of ABS-CBN"
    ]
   ]
  },
@@ -24293,6 +24892,27 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing or conservative editorial stance",
   "topics": []
+ },
+ "pf-005355": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: CME"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "news and music radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
  },
  "pf-005361": {
   "date": "2026-11-10",
@@ -25279,6 +25899,207 @@
     null,
     2,
     "website section Energy"
+   ]
+  ]
+ },
+ "pf-006037": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Laoag"
+   ]
+  ]
+ },
+ "pf-006038": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio station"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "San Fernando"
+   ]
+  ]
+ },
+ "pf-006039": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Subic Bay"
+   ]
+  ]
+ },
+ "pf-006041": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Davao"
+   ]
+  ]
+ },
+ "pf-006042": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cebu"
+   ]
+  ]
+ },
+ "pf-006044": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Cebu"
+   ]
+  ],
+  "website_warning": "the website shows a Thai gambling page, not the station"
+ },
+ "pf-006045": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Presidential Broadcast Service"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cebu"
+   ]
+  ]
+ },
+ "pf-006046": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Iloilo"
+   ]
+  ],
+  "website_warning": "the website shows a Russian football streaming page"
+ },
+ "pf-006047": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "rock radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Cebu"
+   ]
+  ]
+ },
+ "pf-006048": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Cebu"
    ]
   ]
  },
@@ -26285,6 +27106,28 @@
    ]
   ]
  },
+ "pf-006489": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "overseas Filipinos"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "GMA Network",
+  "ownership": [
+   "private",
+   "Wikipedia: GMA Network"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "channel for Filipinos abroad"
+   ]
+  ]
+ },
  "pf-006494": {
   "date": "2026-11-10",
   "ownership": [
@@ -26337,6 +27180,18 @@
    [
     "storytelling",
     "reportage, profiles and chronicles"
+   ]
+  ]
+ },
+ "pf-006511": {
+  "closed": "Wikipedia: historic newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "19th-century newspaper"
    ]
   ]
  },
@@ -26962,6 +27817,28 @@
    [
     "public_service_mandate",
     "public radio"
+   ]
+  ]
+ },
+ "pf-006957": {
+  "date": "2026-11-10",
+  "owner": "Bulgarian National Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Bulgarian National Radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned news radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Bulgarian public broadcaster"
    ]
   ]
  },
@@ -28247,6 +29124,17 @@
    ]
   ]
  },
+ "pf-008252": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language broadsheet"
+   ]
+  ]
+ },
  "pf-008257": {
   "date": "2026-11-10",
   "owner": "El Mercurio SAP",
@@ -28374,6 +29262,17 @@
     null,
     1,
     "state news channel"
+   ]
+  ]
+ },
+ "pf-008323": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary e-magazine"
    ]
   ]
  },
@@ -28533,6 +29432,23 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-008477": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper on Mindanao"
+   ],
+   [
+    "peace_justice",
+    "violence_peace",
+    2,
+    "Mindanao peace process"
    ]
   ]
  },
@@ -28759,6 +29675,21 @@
    ]
   ]
  },
+ "pf-008717": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: United Group"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
  "pf-008720": {
   "date": "2026-11-10",
   "owner": "Seznam.cz",
@@ -28895,6 +29826,23 @@
    ]
   ]
  },
+ "pf-008809": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "computer games media"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "tech"
+   ]
+  ]
+ },
  "pf-008813": {
   "date": "2026-11-10",
   "owner": "Pakistan Television Corporation",
@@ -28974,6 +29922,36 @@
   ],
   "website_warning": "the website shows a gambling ('BIRTOTO') page, not the newspaper"
  },
+ "pf-008862": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state-owned radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned radio network"
+   ]
+  ]
+ },
+ "pf-008864": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official news agency of the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official government news agency"
+   ]
+  ]
+ },
  "pf-008897": {
   "date": "2026-11-10",
   "topics": [
@@ -28997,6 +29975,17 @@
     null,
     1,
     "sports news channel"
+   ]
+  ]
+ },
+ "pf-008928": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
    ]
   ]
  },
@@ -29038,6 +30027,17 @@
    ]
   ]
  },
+ "pf-008983": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
  "pf-008990": {
   "date": "2026-11-10",
   "ownership": [
@@ -29056,6 +30056,18 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-008993": {
+  "closed": "Wikidata: defunct newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "party daily"
    ]
   ]
  },
@@ -31241,6 +32253,21 @@
    ]
   ]
  },
+ "pf-012336": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: BTV Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "jazz radio"
+   ]
+  ]
+ },
  "pf-012349": {
   "date": "2026-11-10",
   "ownership": [
@@ -31687,6 +32714,100 @@
    ]
   ]
  },
+ "pf-013030": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel (name)"
+   ]
+  ]
+ },
+ "pf-013032": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: media group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national TV and media group"
+   ]
+  ]
+ },
+ "pf-013034": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "socialist daily"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "website section Elections"
+   ]
+  ]
+ },
+ "pf-013035": {
+  "audience": [
+   [
+    "rural_farmers",
+    "agriculture readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "agriculture",
+    null,
+    1,
+    "newspaper on agriculture"
+   ]
+  ]
+ },
+ "pf-013036": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel"
+   ]
+  ],
+  "website_warning": "the website menu shows betting bonus links"
+ },
+ "pf-013038": {
+  "date": "2026-11-10",
+  "owner": "Bulgarian National Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Bulgarian National Radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Bulgarian public broadcaster"
+   ]
+  ]
+ },
  "pf-013115": {
   "closed": "no information; historic Galician newspaper",
   "date": "2026-11-10",
@@ -32090,6 +33211,23 @@
    ]
   ]
  },
+ "pf-013434": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
  "pf-013462": {
   "date": "2026-11-10",
   "topics": [
@@ -32311,6 +33449,29 @@
    ]
   ]
  },
+ "pf-013724": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online news website"
+   ],
+   [
+    "fact_checking",
+    null,
+    2,
+    "fact-checks"
+   ],
+   [
+    "media_freedom",
+    null,
+    2,
+    "press freedom cases"
+   ]
+  ]
+ },
  "pf-013732": {
   "date": "2026-11-10",
   "owner": "Jawa Pos Group",
@@ -32477,6 +33638,22 @@
     null,
     1,
     "internet TV station"
+   ]
+  ]
+ },
+ "pf-013795": {
+  "date": "2026-11-10",
+  "owner": "Bulgarian National Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: BNT"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports and culture channel"
    ]
   ]
  },
@@ -33399,6 +34576,28 @@
    ]
   ]
  },
+ "pf-014786": {
+  "date": "2026-11-10",
+  "owner": "MBC Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: MBC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Mindanao"
+   ]
+  ]
+ },
  "pf-014802": {
   "country_hint": "USA (American news website)",
   "date": "2026-11-10",
@@ -34153,6 +35352,39 @@
    ]
   ]
  },
+ "pf-015347": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satirical magazine"
+   ]
+  ]
+ },
+ "pf-015413": {
+  "date": "2026-11-10",
+  "owner": "MBC Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: MBC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Legazpi"
+   ]
+  ]
+ },
  "pf-015414": {
   "date": "2026-11-10",
   "ownership": [
@@ -34265,6 +35497,18 @@
     null,
     2,
     "music"
+   ]
+  ]
+ },
+ "pf-015454": {
+  "closed": "Wikipedia: 'was' a weekly",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary weekly"
    ]
   ]
  },
@@ -34755,6 +35999,23 @@
    ]
   ]
  },
+ "pf-016174": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "General Santos"
+   ]
+  ]
+ },
  "pf-016211": {
   "date": "2026-11-10",
   "ownership": [
@@ -34822,6 +36083,28 @@
     null,
     1,
     "Czechs abroad"
+   ]
+  ]
+ },
+ "pf-016242": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music and news radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Baguio"
    ]
   ]
  },
@@ -35061,6 +36344,28 @@
    ]
   ]
  },
+ "pf-016404": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Dagupan"
+   ]
+  ]
+ },
  "pf-016405": {
   "closed": "Wikipedia: Radio A 'was' a radio station",
   "date": "2026-11-10",
@@ -35070,6 +36375,49 @@
     null,
     1,
     "music radio"
+   ]
+  ]
+ },
+ "pf-016407": {
+  "audience": [
+   [
+    "religious",
+    "Christian listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-commercial (FEBC)"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian non-commercial radio"
+   ]
+  ]
+ },
+ "pf-016408": {
+  "date": "2026-11-10",
+  "owner": "Radio Mindanao Network",
+  "ownership": [
+   "private",
+   "Wikipedia: RMN"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music and news radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Zamboanga"
    ]
   ]
  },
@@ -35829,6 +37177,23 @@
    ]
   ]
  },
+ "pf-017122": {
+  "audience": [
+   [
+    "business_professionals",
+    "economic news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business TV"
+   ]
+  ]
+ },
  "pf-017205": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: called 'the right wing's highly influential answer to Slate'",
@@ -36015,6 +37380,21 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: organ of the extreme right (1977-1980)",
   "topics": []
+ },
+ "pf-017792": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: MediaQuest"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24/7 news channel"
+   ]
+  ]
  },
  "pf-017802": {
   "date": "2026-11-10",
@@ -36279,6 +37659,34 @@
    ]
   ]
  },
+ "pf-021716": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Euronews franchise radio"
+   ]
+  ]
+ },
+ "pf-021717": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV with news and political commentary"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "art and culture"
+   ]
+  ]
+ },
  "pf-021733": {
   "date": "2026-11-10",
   "topics": [
@@ -36303,6 +37711,23 @@
     null,
     1,
     "online newspaper"
+   ]
+  ]
+ },
+ "pf-021773": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "regional TV of Stara Zagora"
+   ],
+   [
+    "partnerships",
+    null,
+    3,
+    "EU policies section"
    ]
   ]
  },
@@ -36341,6 +37766,17 @@
     null,
     1,
     "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-021847": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
    ]
   ]
  },
@@ -36458,6 +37894,21 @@
     null,
     1,
     "national daily newspaper"
+   ]
+  ]
+ },
+ "pf-021977": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: MediaQuest"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Tagalog news channel"
    ]
   ]
  },
@@ -36610,6 +38061,17 @@
    ]
   ]
  },
+ "pf-022561": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel"
+   ]
+  ]
+ },
  "pf-022580": {
   "date": "2026-11-10",
   "topics": [
@@ -36659,6 +38121,78 @@
     null,
     2,
     "fashion"
+   ]
+  ]
+ },
+ "pf-022631": {
+  "date": "2026-11-10",
+  "owner": "Radio Philippines Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM news radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "General Santos"
+   ]
+  ]
+ },
+ "pf-022632": {
+  "date": "2026-11-10",
+  "owner": "Radio Philippines Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM news radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cagayan de Oro"
+   ]
+  ]
+ },
+ "pf-022633": {
+  "date": "2026-11-10",
+  "owner": "Radio Philippines Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM news radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Surigao"
+   ]
+  ]
+ },
+ "pf-022634": {
+  "date": "2026-11-10",
+  "owner": "Radio Philippines Network",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "AM news radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bacolod"
    ]
   ]
  },
@@ -36972,6 +38506,21 @@
     null,
     1,
     "Maldonado"
+   ]
+  ]
+ },
+ "pf-023470": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Nova Broadcasting Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
    ]
   ]
  },
@@ -38113,6 +39662,21 @@
    ]
   ]
  },
+ "pf-025473": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Aliw Broadcasting"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ]
+  ]
+ },
  "pf-025496": {
   "date": "2026-11-10",
   "owner": "Televisión Nacional de Chile",
@@ -38288,6 +39852,17 @@
   "far_right": "Wikipedia: right-wing satirical magazine, called far-right by Libération",
   "topics": []
  },
+ "pf-025930": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
  "pf-025970": {
   "date": "2026-11-10",
   "owner": "Medialivre",
@@ -38348,6 +39923,23 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
+ },
+ "pf-026333": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "FM radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Oriental Mindoro"
+   ]
+  ]
  },
  "pf-026479": {
   "date": "2026-11-10",
@@ -38743,6 +40335,23 @@
     null,
     1,
     "business and finance magazine"
+   ]
+  ]
+ },
+ "pf-027623": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "online news of Plovdiv"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -41210,6 +42819,17 @@
     null,
     1,
     "digital newspaper"
+   ]
+  ]
+ },
+ "pf-056625": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "fact_checking",
+    null,
+    1,
+    "fact-checking website"
    ]
   ]
  },
