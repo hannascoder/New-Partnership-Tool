@@ -14,11 +14,11 @@
 
 | Value | Outlets | Main sources |
 |---|---|---|
-| state_controlled | 1233 | Wikipedia list of state media (State Media Monitor) 851; Wikidata: owner (government agency) 57; Wikidata: owner (political party) 50; Wikidata: owner's owner (executive branch) 48 |
-| public_service | 444 | Wikidata: owner (public broadcaster) 211; organisation type public service broadcaster 127; Wikidata: owner (public broadcasting) 27; AI reading: website: public regional broadcaster 14 |
-| community_nonprofit | 1360 | organisation type community media 808; Wikidata: owner (university) 135; Wikidata: owner (nonprofit organization) 119; Wikidata: owner (public university) 74 |
-| private | 5179 | Wikidata: owner (business) 3128; Wikidata: owner (media company) 505; Wikidata: owner (human) 403; Wikidata: owner (publishing house) 287 |
-| unknown | 62860 | no ownership information in the sources 62860 |
+| state_controlled | 1239 | Wikipedia list of state media (State Media Monitor) 851; Wikidata: owner (government agency) 57; Wikidata: owner (political party) 50; Wikidata: owner's owner (executive branch) 48 |
+| public_service | 450 | Wikidata: owner (public broadcaster) 211; organisation type public service broadcaster 127; Wikidata: owner (public broadcasting) 27; AI reading: website: public regional broadcaster 14 |
+| community_nonprofit | 1365 | organisation type community media 808; Wikidata: owner (university) 135; Wikidata: owner (nonprofit organization) 119; Wikidata: owner (public university) 74 |
+| private | 5187 | Wikidata: owner (business) 3128; Wikidata: owner (media company) 505; Wikidata: owner (human) 403; Wikidata: owner (publishing house) 287 |
+| unknown | 62835 | no ownership information in the sources 62835 |
 
 Listed as public service broadcaster AND news outlet (private owner): 2
 

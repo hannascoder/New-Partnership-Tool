@@ -2387,6 +2387,18 @@
   "right_populist": "Wikipedia: mouthpiece of the RSS (Hindutva)",
   "topics": []
  },
+ "pf-000239": {
+  "closed": "Wikipedia: The Prague Post 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language newspaper"
+   ]
+  ]
+ },
  "pf-000244": {
   "audience": [
    [
@@ -3281,6 +3293,63 @@
    ]
   ]
  },
+ "pf-000371": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public service news agency"
+   ]
+  ]
+ },
+ "pf-000372": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
+   ]
+  ]
+ },
+ "pf-000373": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
+   ]
+  ]
+ },
  "pf-000377": {
   "date": "2026-11-10",
   "owner": "Prasar Bharati",
@@ -3866,6 +3935,17 @@
    ]
   ]
  },
+ "pf-000442": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "daily tabloid"
+   ]
+  ]
+ },
  "pf-000443": {
   "date": "2026-11-10",
   "topics": [
@@ -4333,6 +4413,33 @@
     null,
     1,
     "music magazine"
+   ]
+  ]
+ },
+ "pf-000505": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: American state-funded media organization"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international broadcaster for countries without free media"
+   ],
+   [
+    "media_freedom",
+    null,
+    2,
+    "free press mission"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "27 languages"
    ]
   ]
  },
@@ -5627,6 +5734,29 @@
     null,
     1,
     "literary magazine"
+   ]
+  ]
+ },
+ "pf-000670": {
+  "audience": [
+   [
+    "business_professionals",
+    "economic newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "economic daily"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "national daily"
    ]
   ]
  },
@@ -8861,6 +8991,24 @@
    ]
   ]
  },
+ "pf-001104": {
+  "date": "2026-11-10",
+  "owner": "Czech News Center",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily tabloid"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "celebrities"
+   ]
+  ]
+ },
  "pf-001114": {
   "date": "2026-11-10",
   "ownership": [
@@ -9318,6 +9466,17 @@
    ]
   ]
  },
+ "pf-001173": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Czech and Slovak exile magazine"
+   ]
+  ]
+ },
  "pf-001176": {
   "date": "2026-11-10",
   "owner": "Unidad Editorial",
@@ -9462,6 +9621,17 @@
     null,
     1,
     "national daily newspaper"
+   ]
+  ]
+ },
+ "pf-001198": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -12069,6 +12239,18 @@
    ]
   ]
  },
+ "pf-001528": {
+  "date": "2026-11-10",
+  "owner": "MAFRA",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
+ },
  "pf-001531": {
   "date": "2026-11-10",
   "owner": "Canadian Broadcasting Corporation",
@@ -12826,6 +13008,17 @@
     null,
     1,
     "Aichi Prefecture"
+   ]
+  ]
+ },
+ "pf-001688": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper of Bolivia"
    ]
   ]
  },
@@ -13914,6 +14107,17 @@
     "corruption_institutions",
     2,
     "investigations"
+   ]
+  ]
+ },
+ "pf-001880": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "puppet theatre magazine"
    ]
   ]
  },
@@ -15645,6 +15849,27 @@
    ]
   ]
  },
+ "pf-002301": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Armenian diaspora in Europe"
+   ],
+   [
+    "minority_language",
+    "Armenian"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "Armenian-European magazine"
+   ]
+  ]
+ },
  "pf-002306": {
   "date": "2026-11-10",
   "owner": "Display Connectors",
@@ -15840,6 +16065,32 @@
     null,
     2,
     "website sections UPSC, Exam Mentor"
+   ]
+  ]
+ },
+ "pf-002344": {
+  "date": "2026-11-10",
+  "owner": "Czech Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Czech Radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
+   ],
+   [
+    "multilingual",
+    "several languages"
    ]
   ]
  },
@@ -16556,6 +16807,22 @@
     null,
     1,
     "daily sports newspaper"
+   ]
+  ]
+ },
+ "pf-002486": {
+  "date": "2026-11-10",
+  "owner": "FTV Prima",
+  "ownership": [
+   "private",
+   "Wikipedia: FTV Prima"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV station"
    ]
   ]
  },
@@ -18570,6 +18837,48 @@
    ]
   ]
  },
+ "pf-002936": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-002937": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state TV (only state-run channel)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first and state TV station"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-002940": {
   "audience": [
    [
@@ -18768,6 +19077,21 @@
    ]
   ]
  },
+ "pf-002986": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government press agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government press agency"
+   ]
+  ]
+ },
  "pf-002989": {
   "date": "2026-11-09",
   "owner": "Empresa Brasil de Comunicação (EBC)",
@@ -18922,6 +19246,17 @@
     null,
     1,
     "Valencia, Carabobo"
+   ]
+  ]
+ },
+ "pf-003092": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "press agency and news website"
    ]
   ]
  },
@@ -19995,6 +20330,34 @@
    ]
   ]
  },
+ "pf-003508": {
+  "date": "2026-11-10",
+  "owner": "Czech Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Czech Television"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "main public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
+   ]
+  ]
+ },
  "pf-003510": {
   "date": "2026-11-10",
   "topics": [
@@ -20353,6 +20716,21 @@
     "justice_rule_of_law",
     2,
     "website section Judiciário"
+   ]
+  ]
+ },
+ "pf-003770": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private TV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
    ]
   ]
  },
@@ -20921,6 +21299,23 @@
    ]
   ]
  },
+ "pf-003943": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-003944": {
   "date": "2026-11-10",
   "owner": "RTP",
@@ -21103,6 +21498,40 @@
    [
     "public_service_mandate",
     "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-004024": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-004026": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -21340,6 +21769,17 @@
    ]
   ]
  },
+ "pf-004100": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary quarterly"
+   ]
+  ]
+ },
  "pf-004103": {
   "date": "2026-11-10",
   "topics": [
@@ -21380,6 +21820,18 @@
    [
     "multilingual",
     "several languages"
+   ]
+  ]
+ },
+ "pf-004108": {
+  "closed": "Wikipedia: published in the 19th and 20th century",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "illustrated magazine"
    ]
   ]
  },
@@ -21769,6 +22221,34 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-004322": {
+  "date": "2026-11-10",
+  "owner": "Czech Television",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Czech Television"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour public news channel"
+   ],
+   [
+    "conflict_security",
+    "war_conflict",
+    2,
+    "Ukraine section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
    ]
   ]
  },
@@ -22381,6 +22861,33 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: called a far-right online publication",
   "topics": []
+ },
+ "pf-004614": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: media development organization"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "media development organisation and online journal on Central and Eastern Europe"
+   ],
+   [
+    "media_freedom",
+    null,
+    1,
+    "media development"
+   ]
+  ],
+  "un_profile": [
+   [
+    "development",
+    "media development"
+   ]
+  ]
  },
  "pf-004660": {
   "date": "2026-11-10",
@@ -23441,6 +23948,23 @@
    ]
   ]
  },
+ "pf-005085": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly on politics, society and culture"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ]
+  ]
+ },
  "pf-005095": {
   "date": "2026-11-10",
   "topics": [
@@ -24240,6 +24764,22 @@
    ]
   ]
  },
+ "pf-005781": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state-funded"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-funded newspaper"
+   ]
+  ]
+ },
  "pf-005782": {
   "date": "2026-11-10",
   "topics": [
@@ -24637,6 +25177,17 @@
    ]
   ]
  },
+ "pf-005917": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music radio"
+   ]
+  ]
+ },
  "pf-005939": {
   "audience": [
    [
@@ -24678,6 +25229,27 @@
     null,
     1,
     "Crete"
+   ]
+  ]
+ },
+ "pf-006029": {
+  "audience": [
+   [
+    "religious",
+    "Christian viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-commercial TV"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "non-commercial Christian TV"
    ]
   ]
  },
@@ -26065,6 +26637,21 @@
    ]
   ]
  },
+ "pf-006653": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: apostolate of the Society of Jesus"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private Jesuit news agency"
+   ]
+  ]
+ },
  "pf-006656": {
   "date": "2026-11-10",
   "ownership": [
@@ -26789,6 +27376,27 @@
    ]
   ]
  },
+ "pf-007221": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: work of the Society of Jesus"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio founded by the Jesuits"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "Jesuit origin"
+   ]
+  ]
+ },
  "pf-007224": {
   "date": "2026-11-10",
   "topics": [
@@ -26923,6 +27531,23 @@
     null,
     1,
     "music radio for young people"
+   ]
+  ]
+ },
+ "pf-007254": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel of associated journalists"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Ciencia"
    ]
   ]
  },
@@ -27577,6 +28202,17 @@
    ]
   ]
  },
+ "pf-008217": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-008219": {
   "date": "2026-11-10",
   "topics": [
@@ -28123,6 +28759,18 @@
    ]
   ]
  },
+ "pf-008720": {
+  "date": "2026-11-10",
+  "owner": "Seznam.cz",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
  "pf-008722": {
   "audience": [
    [
@@ -28229,6 +28877,23 @@
   "date": "2026-11-10",
   "not_media": "official government gazette that publishes laws, not a media outlet",
   "topics": []
+ },
+ "pf-008772": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cochabamba"
+   ]
+  ]
  },
  "pf-008813": {
   "date": "2026-11-10",
@@ -28562,6 +29227,34 @@
     null,
     1,
     "TV network"
+   ]
+  ]
+ },
+ "pf-009112": {
+  "date": "2026-11-10",
+  "owner": "FTV Prima",
+  "ownership": [
+   "private",
+   "Wikipedia: FTV Prima"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary channel"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "documentaries"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "documentaries"
    ]
   ]
  },
@@ -29105,6 +29798,17 @@
    ]
   ]
  },
+ "pf-010269": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ]
+  ]
+ },
  "pf-010276": {
   "date": "2026-11-10",
   "ownership": [
@@ -29596,6 +30300,76 @@
    ]
   ]
  },
+ "pf-011574": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private music radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-011587": {
+  "date": "2026-11-10",
+  "topics": [],
+  "website_warning": "the website is a sports price comparison site, not a media outlet"
+ },
+ "pf-011610": {
+  "date": "2026-11-10",
+  "owner": "Czech Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Czech Radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
+   ]
+  ]
+ },
+ "pf-011611": {
+  "date": "2026-11-10",
+  "owner": "Czech Radio",
+  "ownership": [
+   "public_service",
+   "website: Czech Radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Hradec Králové"
+   ]
+  ]
+ },
  "pf-011640": {
   "date": "2026-11-10",
   "topics": [
@@ -30010,6 +30784,17 @@
     null,
     1,
     "Östersund and Jämtland"
+   ]
+  ]
+ },
+ "pf-012230": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
    ]
   ]
  },
@@ -30492,6 +31277,23 @@
    ]
   ]
  },
+ "pf-012368": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Czech regions"
+   ]
+  ]
+ },
  "pf-012385": {
   "date": "2026-11-10",
   "topics": [
@@ -30500,6 +31302,28 @@
     null,
     1,
     "news channel"
+   ]
+  ]
+ },
+ "pf-012431": {
+  "date": "2026-11-10",
+  "owner": "Czech Radio",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Czech Radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Czech public broadcaster"
    ]
   ]
  },
@@ -30595,6 +31419,23 @@
    ]
   ]
  },
+ "pf-012636": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business daily"
+   ]
+  ]
+ },
  "pf-012647": {
   "date": "2026-11-10",
   "topics": [
@@ -30626,6 +31467,23 @@
     null,
     1,
     "Loviisa"
+   ]
+  ]
+ },
+ "pf-012660": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "popular science monthly"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "popular science"
    ]
   ]
  },
@@ -30676,6 +31534,83 @@
     null,
     1,
     "Tysvær"
+   ]
+  ]
+ },
+ "pf-012834": {
+  "date": "2026-11-10",
+  "owner": "MAFRA",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regional news"
+   ]
+  ]
+ },
+ "pf-012835": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "economic news website"
+   ]
+  ]
+ },
+ "pf-012838": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "magazine on the Czech internet and IT"
+   ]
+  ]
+ },
+ "pf-012839": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-012840": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "servers, networks and IT security"
+   ]
+  ]
+ },
+ "pf-012847": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Nova Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "crime series channel"
    ]
   ]
  },
@@ -31362,6 +32297,17 @@
     null,
     1,
     "dance music radio"
+   ]
+  ]
+ },
+ "pf-013718": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "rock music TV"
    ]
   ]
  },
@@ -32239,6 +33185,30 @@
    ]
   ]
  },
+ "pf-014415": {
+  "closed": "Wikipedia: published 1926-1927",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "labour newspaper"
+   ]
+  ]
+ },
+ "pf-014416": {
+  "closed": "Wikipedia: historic newspaper (1947)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-014421": {
   "date": "2026-11-10",
   "topics": [
@@ -32352,6 +33322,18 @@
     null,
     1,
     "whistleblowing information agency"
+   ]
+  ]
+ },
+ "pf-014603": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "anarcho-syndicalist newspaper"
    ]
   ]
  },
@@ -33575,6 +34557,21 @@
    ]
   ]
  },
+ "pf-016020": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV Barrandov"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "crime channel"
+   ]
+  ]
+ },
  "pf-016065": {
   "audience": [
    [
@@ -33800,6 +34797,33 @@
   "date": "2026-11-09",
   "not_media": "search engine for scientific papers, not a media outlet",
   "topics": []
+ },
+ "pf-016220": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Czechs abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV Nova"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV for viewers abroad"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "Czechs abroad"
+   ]
+  ]
  },
  "pf-016244": {
   "audience": [
@@ -34997,6 +36021,27 @@
   "right_populist": "Wikidata: right-wing news website",
   "topics": []
  },
+ "pf-017821": {
+  "audience": [
+   [
+    "minority_language",
+    "Russian speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: RFE/RL (US-funded)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Russian-language TV channel of RFE/RL"
+   ]
+  ]
+ },
  "pf-021289": {
   "audience": [
    [
@@ -35110,6 +36155,17 @@
     null,
     2,
     "energy awards"
+   ]
+  ]
+ },
+ "pf-021442": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent subscription daily"
    ]
   ]
  },
@@ -35271,6 +36327,22 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: described as far-right, misleading information",
   "topics": []
+ },
+ "pf-021831": {
+  "date": "2026-11-10",
+  "owner": "FTV Prima",
+  "ownership": [
+   "private",
+   "Wikipedia: FTV Prima"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
  },
  "pf-021876": {
   "date": "2026-11-10",
@@ -35522,6 +36594,22 @@
    ]
   ]
  },
+ "pf-022520": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state-funded"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-funded newspaper"
+   ]
+  ]
+ },
  "pf-022580": {
   "date": "2026-11-10",
   "topics": [
@@ -35583,6 +36671,21 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right news website, disinformation",
   "topics": []
+ },
+ "pf-022682": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Bolivia TV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state TV network"
+   ]
+  ]
  },
  "pf-022742": {
   "date": "2026-11-10",
@@ -35758,6 +36861,33 @@
    [
     "multilingual",
     "several languages"
+   ]
+  ]
+ },
+ "pf-023288": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "website: Ministry of Cultures"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural and educational TV"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "educational"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational content"
    ]
   ]
  },
@@ -36214,6 +37344,29 @@
    ]
   ]
  },
+ "pf-024139": {
+  "audience": [
+   [
+    "rural_farmers",
+    "coca growers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and news network of coca growers"
+   ],
+   [
+    "indigenous",
+    null,
+    2,
+    "Indigenous movement"
+   ]
+  ]
+ },
  "pf-024143": {
   "date": "2026-11-10",
   "owner": "South African Broadcasting Corporation",
@@ -36410,6 +37563,21 @@
     null,
     1,
     "Olympic channel"
+   ]
+  ]
+ },
+ "pf-024268": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: FTV Prima"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "non-fiction entertainment channel"
    ]
   ]
  },
@@ -36616,6 +37784,27 @@
     null,
     2,
     "local section"
+   ]
+  ]
+ },
+ "pf-024678": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by a mining company"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -36956,6 +38145,49 @@
   "right_populist": "general knowledge, not in the profile text (please check): right-wing German news website",
   "topics": []
  },
+ "pf-025624": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Monasterio family"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio station"
+   ]
+  ]
+ },
+ "pf-025629": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
+   ],
+   [
+    "climate",
+    "environment_general",
+    1,
+    "website section Medioambiente"
+   ]
+  ]
+ },
+ "pf-025635": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "film database and magazine"
+   ]
+  ]
+ },
  "pf-025655": {
   "audience": [
    [
@@ -37125,6 +38357,57 @@
     null,
     1,
     "AM radio"
+   ]
+  ]
+ },
+ "pf-026541": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "San Borja, Beni"
+   ]
+  ]
+ },
+ "pf-026542": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Potosí"
+   ]
+  ]
+ },
+ "pf-026544": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -37467,6 +38750,17 @@
   "date": "2026-11-10",
   "far_right": "Wikidata: far-right commentary website",
   "topics": []
+ },
+ "pf-027766": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in La Paz"
+   ]
+  ]
  },
  "pf-027880": {
   "date": "2026-11-10",
@@ -38328,6 +39622,23 @@
    ]
   ]
  },
+ "pf-032541": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Santa Cruz valleys"
+   ]
+  ]
+ },
  "pf-032732": {
   "date": "2026-11-10",
   "ownership": [
@@ -38346,6 +39657,17 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-032743": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and media group"
    ]
   ]
  },
@@ -38430,6 +39752,17 @@
    ]
   ]
  },
+ "pf-033152": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "information radio"
+   ]
+  ]
+ },
  "pf-033256": {
   "audience": [
    [
@@ -38444,6 +39777,23 @@
     null,
     1,
     "Catholic radio (Radio Maria)"
+   ]
+  ]
+ },
+ "pf-033305": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Rurrenabaque (Amazon)"
    ]
   ]
  },
@@ -38503,6 +39853,17 @@
     null,
     1,
     "Río Branco"
+   ]
+  ]
+ },
+ "pf-033617": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian TV (name)"
    ]
   ]
  },
@@ -38649,6 +40010,11 @@
    ]
   ]
  },
+ "pf-034532": {
+  "date": "2026-11-10",
+  "topics": [],
+  "website_warning": "the website shows an unrelated page (Washington, DC)"
+ },
  "pf-034617": {
   "audience": [
    [
@@ -38696,6 +40062,10 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-036789": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-036838": {
   "audience": [
    [
@@ -38740,6 +40110,53 @@
    ]
   ]
  },
+ "pf-036979": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "website: Bolivian Space Agency"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational satellite TV of the Bolivian Space Agency"
+   ]
+  ]
+ },
+ "pf-036995": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "website: Bolivian Space Agency"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international satellite TV"
+   ]
+  ]
+ },
+ "pf-037039": {
+  "audience": [
+   [
+    "indigenous",
+    "Indigenous peoples"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "indigenous",
+    null,
+    1,
+    "Indigenous peoples' TV (Abya Yala)"
+   ]
+  ]
+ },
  "pf-037058": {
   "audience": [
    [
@@ -38762,6 +40179,10 @@
     "news"
    ]
   ]
+ },
+ "pf-037070": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-037078": {
   "date": "2026-11-09",
@@ -38817,6 +40238,23 @@
    ]
   ]
  },
+ "pf-037166": {
+  "audience": [
+   [
+    "business_professionals",
+    "mining sector"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "industry_innovation",
+    "industry",
+    1,
+    "mining news TV"
+   ]
+  ]
+ },
  "pf-037176": {
   "date": "2026-11-10",
   "topics": [
@@ -38843,6 +40281,23 @@
   "date": "2026-11-10",
   "topics": [],
   "website_warning": "the website shows 'Account Suspended'"
+ },
+ "pf-037194": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Aiquile"
+   ]
+  ]
  },
  "pf-037215": {
   "audience": [
@@ -38929,9 +40384,53 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-037459": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV of Tarija"
+   ]
+  ]
+ },
+ "pf-037467": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "industry_innovation",
+    "industry",
+    2,
+    "mining TV"
+   ]
+  ]
+ },
+ "pf-037498": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV of Oruro"
+   ]
+  ]
+ },
  "pf-037549": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-037564": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV of Tarija"
+   ]
+  ]
  },
  "pf-037579": {
   "date": "2026-11-09",
@@ -39390,6 +40889,40 @@
    ]
   ]
  },
+ "pf-040576": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Santa Cruz"
+   ]
+  ]
+ },
+ "pf-040712": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network and news"
+   ],
+   [
+    "human_rights",
+    null,
+    3,
+    "activist cases"
+   ]
+  ]
+ },
  "pf-040973": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing populist Austrian channel",
@@ -39616,6 +41149,21 @@
    ]
   ]
  },
+ "pf-054777": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: non-profit digital outlet"
+  ],
+  "topics": [
+   [
+    "fact_checking",
+    null,
+    1,
+    "independent non-profit fact-checking"
+   ]
+  ]
+ },
  "pf-055276": {
   "date": "2026-11-10",
   "topics": [
@@ -39662,6 +41210,34 @@
     null,
     1,
     "digital newspaper"
+   ]
+  ]
+ },
+ "pf-057261": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "human_rights",
+    null,
+    1,
+    "investigative journalism on human rights"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigations"
+   ]
+  ]
+ },
+ "pf-057264": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency of photojournalists"
    ]
   ]
  },

@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-101 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+108 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -25,6 +25,11 @@
 | pf-003784 | Metro | BEL | no longer published: Wikipedia: Metro 'was' a newspaper |
 | pf-013484 | BTV World | BGD | no longer published: Wikipedia: BTV World 'was' a channel |
 | pf-016693 | Dhaka Prakash | BGD | no longer published: Wikipedia: historic newspaper ('was') |
+| pf-014415 | Bandera Roja | BOL | no longer published: Wikipedia: published 1926-1927 |
+| pf-014416 | Bandera Roja | BOL | no longer published: Wikipedia: historic newspaper (1947) |
+| pf-022520 | Bolivia | BOL | no longer published: Wikipedia: 'was' a newspaper |
+| pf-005781 | Cambio | BOL | no longer published: Wikipedia: 'was' a newspaper |
+| pf-014603 | La Humanidad | BOL | no longer published: Wikipedia: 'was' a newspaper |
 | pf-000175 | G Magazine | BRA | no longer published: published from 1997 until 2013 |
 | pf-002778 | digest size | BRA | not a media outlet: a magazine paper size (Wikidata error), not a media outlet |
 | pf-000147 | .ch | CHE | no longer published: Wikipedia: '.ch' 'was' a newspaper; the website now sells phones |
@@ -32,6 +37,8 @@
 | pf-005776 | Cadena Súper | COL | no longer published: Wikipedia: Cadena Super 'was' a radio network |
 | pf-012320 | El Mundo | COL | no longer published: Wikipedia: El Mundo 'was' a newspaper |
 | pf-006320 | W Radio | COL | no longer published: Wikipedia: W Radio Colombia 'was' a radio network |
+| pf-004108 | Světozor | CZE | no longer published: Wikipedia: published in the 19th and 20th century |
+| pf-000239 | The Prague Post | CZE | no longer published: Wikipedia: The Prague Post 'was' a newspaper |
 | pf-002425 | Boletín Oficial del Estado | ESP | not a media outlet: official state gazette (laws and notices), not a media outlet |
 | pf-001694 | El Punt | ESP | no longer published: no longer published under this name (now El Punt Avui) |
 | pf-002676 | GP Racing | ESP | no longer published: published until December 2024, merged with a sister magazine |
