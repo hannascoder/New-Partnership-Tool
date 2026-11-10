@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 156 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 145, scope 3
+- No longer shown: 159 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 190, scope 3
 
 ### Examples: ownership
 
@@ -14,8 +14,8 @@
 - Agence France-Presse (pf-000057): unknown → public_service
 - Associated Press (pf-000058): unknown → community_nonprofit
 - Das Erste (pf-000073): unknown → public_service
+- Radiotelevisione svizzera di lingua italiana (pf-000105): unknown → public_service
 - Tokyo MX (pf-000106): unknown → private
-- Die Tageszeitung (pf-000150): unknown → community_nonprofit
 
 ### Examples: scope
 
@@ -28,6 +28,7 @@
 
 ### Examples: no longer shown
 
+- .ch (CHE, pf-000147)
 - 0404 News (ISR, pf-015038)
 - A Muvra (FRA, pf-004329)
 - Aaj Tak (IND, pf-003906)
@@ -42,4 +43,3 @@
 - Cahiers du Cercle Proudhon (FRA, pf-003169)
 - Causeur (FRA, pf-003202)
 - Chess.com (USA, pf-014292)
-- CHOI-FM (CAN, pf-003135)

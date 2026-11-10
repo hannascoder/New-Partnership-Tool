@@ -1005,6 +1005,33 @@
   "not_media": "erotic magazine (adult content is excluded, KATEGORIEN 0.4)",
   "topics": []
  },
+ "pf-000105": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Swiss public broadcaster in Italian"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Italian-language public radio and TV"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Edu"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
  "pf-000106": {
   "date": "2026-11-10",
   "ownership": [
@@ -1386,6 +1413,18 @@
     null,
     1,
     "public broadcaster for Thuringia, Saxony, Saxony-Anhalt"
+   ]
+  ]
+ },
+ "pf-000147": {
+  "closed": "Wikipedia: '.ch' 'was' a newspaper; the website now sells phones",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free daily newspaper"
    ]
   ]
  },
@@ -1979,6 +2018,18 @@
    ]
   ]
  },
+ "pf-000218": {
+  "date": "2026-11-10",
+  "owner": "Tamedia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ]
+  ]
+ },
  "pf-000220": {
   "date": "2026-11-10",
   "owner": "Reach plc",
@@ -2307,6 +2358,35 @@
    ]
   ]
  },
+ "pf-000268": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper and news website"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "German and French"
+   ]
+  ]
+ },
  "pf-000272": {
   "date": "2026-11-09",
   "owner": "People Inc.",
@@ -2449,6 +2529,24 @@
    [
     "public_service_mandate",
     "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-000307": {
+  "audience": [
+   [
+    "lgbtq",
+    "gay community"
+   ]
+  ],
+  "closed": "Wikipedia: Gay Krant 'was' a magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "gender_identity",
+    1,
+    "magazine for the gay community"
    ]
   ]
  },
@@ -2776,6 +2874,35 @@
    ]
   ]
  },
+ "pf-000379": {
+  "date": "2026-11-10",
+  "owner": "Tamedia",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Bern"
+   ]
+  ]
+ },
+ "pf-000382": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Basel"
+   ]
+  ]
+ },
  "pf-000386": {
   "date": "2026-11-10",
   "topics": [
@@ -2790,6 +2917,23 @@
     "climate_change",
     3,
     "climate stories"
+   ]
+  ]
+ },
+ "pf-000389": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent French-language daily"
+   ],
+   [
+    "human_rights",
+    null,
+    3,
+    "alternative outlook"
    ]
   ]
  },
@@ -3272,6 +3416,23 @@
     null,
     1,
     "for Poles abroad"
+   ]
+  ]
+ },
+ "pf-000463": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "German, French, Italian"
    ]
   ]
  },
@@ -3777,6 +3938,37 @@
    ]
   ]
  },
+ "pf-000581": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Swiss abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: part of SRG SSR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multilingual international news platform"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ],
+   [
+    "multilingual",
+    "ten languages"
+   ]
+  ]
+ },
  "pf-000582": {
   "date": "2026-11-10",
   "topics": [
@@ -3922,6 +4114,45 @@
     null,
     1,
     "public sports TV channel"
+   ]
+  ]
+ },
+ "pf-000616": {
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by SRF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000626": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "La Côte, Vaud"
    ]
   ]
  },
@@ -4213,6 +4444,27 @@
    ]
   ]
  },
+ "pf-000672": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RSI"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "principal Italian-language public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
  "pf-000676": {
   "date": "2026-11-10",
   "topics": [
@@ -4421,6 +4673,23 @@
    ]
   ]
  },
+ "pf-000720": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper (now ArcInfo)"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Neuchâtel"
+   ]
+  ]
+ },
  "pf-000724": {
   "audience": [
    [
@@ -4548,6 +4817,18 @@
    ]
   ]
  },
+ "pf-000738": {
+  "date": "2026-11-10",
+  "owner": "NZZ Mediengruppe",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "German-language daily newspaper"
+   ]
+  ]
+ },
  "pf-000739": {
   "date": "2026-11-10",
   "owner": "Bell Media",
@@ -4626,6 +4907,96 @@
    ]
   ]
  },
+ "pf-000747": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news platforms of RTS"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000748": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS public TV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public TV channel with sport"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "series and films"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000749": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS cultural radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000750": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "French-language music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
  "pf-000753": {
   "date": "2026-11-10",
   "owner": "Eurosport (Skydance)",
@@ -4656,6 +5027,46 @@
     null,
     1,
     "London"
+   ]
+  ]
+ },
+ "pf-000758": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking international community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Geneva region"
+   ]
+  ]
+ },
+ "pf-000760": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satirical magazine"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "political online platform"
    ]
   ]
  },
@@ -4731,6 +5142,45 @@
    ]
   ]
  },
+ "pf-000764": {
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by SRF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000765": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bern"
+   ]
+  ]
+ },
  "pf-000766": {
   "audience": [
    [
@@ -4779,6 +5229,28 @@
   "right_populist": "general knowledge, not in the profile text (please check): pro-Fidesz government news channel",
   "topics": []
  },
+ "pf-000771": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily newspaper"
+   ]
+  ]
+ },
+ "pf-000775": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
+   ]
+  ]
+ },
  "pf-000778": {
   "date": "2026-11-10",
   "topics": [
@@ -4819,6 +5291,23 @@
    ]
   ],
   "website_warning": "the website shows shopping and lifestyle adverts, not the newspaper"
+ },
+ "pf-000786": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Biel/Bienne"
+   ]
+  ]
  },
  "pf-000787": {
   "date": "2026-11-10",
@@ -4886,6 +5375,17 @@
    ]
   ]
  },
+ "pf-000791": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper (left)"
+   ]
+  ]
+ },
  "pf-000792": {
   "date": "2026-11-10",
   "owner": "RTL Group",
@@ -4899,6 +5399,82 @@
     null,
     2,
     "documentaries and TV shows"
+   ]
+  ]
+ },
+ "pf-000796": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "St. Gallen"
+   ]
+  ]
+ },
+ "pf-000798": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio of Swiss Satellite Radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "pop music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000803": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: run by SRG SSR"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public TV channel with sport and films"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "films"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000804": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language newspaper"
    ]
   ]
  },
@@ -5776,6 +6352,39 @@
    ]
   ]
  },
+ "pf-000938": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Dutch speakers abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: best of the NPO"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international channel with the best of Dutch and Flemish public TV"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "for Dutch speakers abroad"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Dutch public broadcaster"
+   ]
+  ]
+ },
  "pf-000959": {
   "audience": [
    [
@@ -6228,6 +6837,23 @@
    ]
   ]
  },
+ "pf-001078": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business magazine"
+   ]
+  ]
+ },
  "pf-001086": {
   "date": "2026-11-10",
   "ownership": [
@@ -6257,6 +6883,23 @@
     null,
     1,
     "left-wing daily"
+   ]
+  ]
+ },
+ "pf-001089": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Geneva"
    ]
   ]
  },
@@ -6311,6 +6954,27 @@
     null,
     1,
     "premium drama channel"
+   ]
+  ]
+ },
+ "pf-001122": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Kosovo Albanian diaspora"
+   ],
+   [
+    "minority_language",
+    "Albanian"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Albanian-language daily newspaper"
    ]
   ]
  },
@@ -8277,6 +8941,23 @@
    ]
   ]
  },
+ "pf-001437": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Ticino"
+   ]
+  ]
+ },
  "pf-001438": {
   "date": "2026-11-10",
   "topics": [
@@ -8633,6 +9314,110 @@
    ]
   ]
  },
+ "pf-001482": {
+  "audience": [
+   [
+    "youth_students",
+    "young listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SRF radio station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "youth music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-001483": {
+  "audience": [
+   [
+    "older_persons",
+    "traditional music"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SRF radio station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "folk and popular music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-001484": {
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SRF"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-001485": {
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: SRF"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ],
+   [
+    "educational",
+    "culture and knowledge"
+   ]
+  ]
+ },
  "pf-001487": {
   "date": "2026-11-10",
   "owner": "BBC",
@@ -8842,6 +9627,23 @@
    ]
   ]
  },
+ "pf-001535": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Winterthur"
+   ]
+  ]
+ },
  "pf-001536": {
   "date": "2026-11-10",
   "topics": [
@@ -8953,6 +9755,23 @@
     null,
     2,
     "website section Sake"
+   ]
+  ]
+ },
+ "pf-001571": {
+  "audience": [
+   [
+    "religious",
+    "religious audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "religious web TV"
    ]
   ]
  },
@@ -9209,6 +10028,23 @@
     null,
     1,
     "Arabic-language TV channel"
+   ]
+  ]
+ },
+ "pf-001659": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Fribourg"
    ]
   ]
  },
@@ -9666,6 +10502,34 @@
    ]
   ]
  },
+ "pf-001757": {
+  "date": "2026-11-10",
+  "owner": "SRF",
+  "ownership": [
+   "public_service",
+   "Wikipedia: produced by SRG SSR"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
  "pf-001762": {
   "date": "2026-11-10",
   "owner": "Corus Entertainment",
@@ -9815,6 +10679,39 @@
    [
     "public_service_mandate",
     "French public television"
+   ]
+  ]
+ },
+ "pf-001806": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: subsidiary of SRG SSR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "German-language public radio and TV"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "website section Wissen"
+   ],
+   [
+    "children_youth",
+    null,
+    2,
+    "website section Kids"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
    ]
   ]
  },
@@ -10621,6 +11518,27 @@
     null,
     1,
     "Romanian-language service of RFI"
+   ]
+  ]
+ },
+ "pf-002033": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public music radio of SRG SSR"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "jazz music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
    ]
   ]
  },
@@ -11721,6 +12639,17 @@
    ]
   ]
  },
+ "pf-002316": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "tech magazine"
+   ]
+  ]
+ },
  "pf-002317": {
   "date": "2026-11-10",
   "topics": [
@@ -12437,6 +13366,23 @@
    ]
   ]
  },
+ "pf-002487": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "regional newspaper of the islands"
+   ],
+   [
+    "religion",
+    null,
+    2,
+    "section Kerk & Geloof"
+   ]
+  ]
+ },
  "pf-002491": {
   "date": "2026-11-10",
   "owner": "Suspilne",
@@ -13000,6 +13946,39 @@
     null,
     1,
     "24-hour commercial news channel"
+   ]
+  ]
+ },
+ "pf-002713": {
+  "audience": [
+   [
+    "minority_language",
+    "Romansh speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Swiss public radio in Romansh"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Romansh-language public radio"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
    ]
   ]
  },
@@ -13994,6 +14973,23 @@
     null,
     1,
     "public news agency"
+   ]
+  ]
+ },
+ "pf-003008": {
+  "audience": [
+   [
+    "business_professionals",
+    "news agencies"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "media_freedom",
+    null,
+    1,
+    "federation of European news agencies"
    ]
   ]
  },
@@ -14999,6 +15995,18 @@
    ]
   ]
  },
+ "pf-003555": {
+  "closed": "Wikipedia text is about the language; historic magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "magazine in the Interlingue language"
+   ]
+  ]
+ },
  "pf-003570": {
   "date": "2026-11-09",
   "topics": [
@@ -15844,6 +16852,33 @@
    ]
   ]
  },
+ "pf-004017": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: subsidiary of SRG SSR"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language public radio and TV"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
  "pf-004044": {
   "date": "2026-11-10",
   "topics": [
@@ -16095,6 +17130,21 @@
    [
     "multilingual",
     "several languages"
+   ]
+  ]
+ },
+ "pf-004124": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private TV station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private music TV"
    ]
   ]
  },
@@ -23081,6 +24131,23 @@
    ]
   ]
  },
+ "pf-013575": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio"
+   ]
+  ]
+ },
  "pf-013732": {
   "date": "2026-11-10",
   "owner": "Jawa Pos Group",
@@ -23194,6 +24261,17 @@
    [
     "public_service_mandate",
     "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-013896": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
    ]
   ]
  },
@@ -24250,6 +25328,17 @@
     null,
     1,
     "Eastern Macedonia and Thrace"
+   ]
+  ]
+ },
+ "pf-016001": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "history magazine"
    ]
   ]
  },
@@ -25327,6 +26416,10 @@
    ]
   ]
  },
+ "pf-023009": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-023051": {
   "date": "2026-11-10",
   "topics": [
@@ -26075,6 +27168,27 @@
    ]
   ]
  },
+ "pf-026651": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Aalsmeer"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
  "pf-026657": {
   "date": "2026-11-09",
   "topics": [
@@ -26166,10 +27280,52 @@
   "far_right": "Wikidata: American far-right newspaper",
   "topics": []
  },
+ "pf-028387": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Hillegom, Lisse and Bollenstreek"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
  "pf-028600": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia",
   "topics": []
+ },
+ "pf-029150": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Barneveld, Nijkerk and Veluwe"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
  },
  "pf-029551": {
   "date": "2026-11-10",
@@ -26193,10 +27349,776 @@
    ]
   ]
  },
+ "pf-029648": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business news radio"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
+ },
+ "pf-029649": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business news radio"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
+ },
+ "pf-030403": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Baarn, Bunschoten and Soest"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-030706": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "hit music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "local"
+   ]
+  ]
+ },
+ "pf-030936": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Haarlem, Heemstede and Bloemendaal"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-031024": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Horst aan de Maas"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
  "pf-031169": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): news channel of Jovem Pan (aligned with Bolsonaro's movement)",
   "topics": []
+ },
+ "pf-031479": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Limburg"
+   ]
+  ]
+ },
+ "pf-031590": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Langstraat"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-031683": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Zeewolde"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-031829": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of ML5 region"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032043": {
+  "date": "2026-11-10",
+  "owner": "NPO",
+  "ownership": [
+   "public_service",
+   "website: public TV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Dutch public broadcaster"
+   ]
+  ]
+ },
+ "pf-032046": {
+  "date": "2026-11-10",
+  "owner": "NPO",
+  "ownership": [
+   "public_service",
+   "website: NPO Radio 1"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news and sports radio"
+   ],
+   [
+    "sports",
+    null,
+    1,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Dutch public broadcaster"
+   ]
+  ]
+ },
+ "pf-032124": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Goeree-Overflakkee"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032125": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Brabant"
+   ]
+  ]
+ },
+ "pf-032126": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Brabant"
+   ]
+  ]
+ },
+ "pf-032127": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Land van Cuijk"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032129": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Peel en Maas"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032130": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Tilburg"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032131": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Venray"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032132": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "The Hague and Zuid-Holland West"
+   ]
+  ]
+ },
+ "pf-032133": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Zeeland"
+   ]
+  ]
+ },
+ "pf-032134": {
+  "audience": [
+   [
+    "minority_language",
+    "West Frisian speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Friesland"
+   ]
+  ]
+ },
+ "pf-032166": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local news of Groningen"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-032504": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Rijssen and Holten"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-032516": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "website: commercial radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "hit music radio"
+   ]
+  ]
+ },
+ "pf-032732": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Castricum"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-033033": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gelderland"
+   ]
+  ]
+ },
+ "pf-033081": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Hoeksche Waard"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-033392": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Venlo"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-033523": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Rotterdam region (Rijnmond)"
+   ]
+  ]
+ },
+ "pf-034029": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of Achterhoek"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-034214": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Drenthe"
+   ]
+  ]
+ },
+ "pf-034215": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: local public broadcaster (lokale omroep)"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local broadcaster of IJsselmond"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "local news"
+   ]
+  ]
+ },
+ "pf-034218": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Groningen"
+   ]
+  ]
+ },
+ "pf-034219": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Noord-Holland"
+   ]
+  ]
+ },
+ "pf-034220": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Overijssel"
+   ]
+  ]
  },
  "pf-036750": {
   "date": "2026-11-09",
@@ -26268,6 +28190,27 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037812": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Amsterdam"
+   ]
+  ]
  },
  "pf-037874": {
   "date": "2026-11-09",
@@ -26365,6 +28308,55 @@
   "date": "2026-11-10",
   "right_populist": "international channel of Fox News",
   "topics": []
+ },
+ "pf-045258": {
+  "date": "2026-11-10",
+  "owner": "NPO",
+  "ownership": [
+   "public_service",
+   "website: NPO"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcasting platform"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "documentaries"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Dutch public broadcaster"
+   ]
+  ]
+ },
+ "pf-045499": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: public regional broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Flevoland"
+   ]
+  ]
  },
  "pf-060695": {
   "date": "2026-11-09",
@@ -26485,6 +28477,31 @@
    [
     "public_service_mandate",
     "Welsh public broadcaster"
+   ]
+  ]
+ },
+ "pf-070539": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcasting group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcasting group"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Swiss public broadcaster SRG SSR"
+   ],
+   [
+    "multilingual",
+    "German, French, Italian, Romansh"
    ]
   ]
  },

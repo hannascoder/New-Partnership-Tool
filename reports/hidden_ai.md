@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-52 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+55 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -12,6 +12,8 @@
 | pf-000763 | مجلة نينتندو الرسمية | AUS | no longer published: Wikipedia: ran from 2006 to 2014 |
 | pf-000175 | G Magazine | BRA | no longer published: published from 1997 until 2013 |
 | pf-002778 | digest size | BRA | not a media outlet: a magazine paper size (Wikidata error), not a media outlet |
+| pf-000147 | .ch | CHE | no longer published: Wikipedia: '.ch' 'was' a newspaper; the website now sells phones |
+| pf-003555 | Cosmoglotta | CHE | no longer published: Wikipedia text is about the language; historic magazine |
 | pf-005776 | Cadena Súper | COL | no longer published: Wikipedia: Cadena Super 'was' a radio network |
 | pf-012320 | El Mundo | COL | no longer published: Wikipedia: El Mundo 'was' a newspaper |
 | pf-006320 | W Radio | COL | no longer published: Wikipedia: W Radio Colombia 'was' a radio network |
@@ -30,6 +32,7 @@
 | pf-001615 | TV Edukasi | IDN | no longer published: Wikipedia: TV Edukasi 'was' a TV station |
 | pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
 | pf-008748 | Official Gazette of the Federation | MEX | not a media outlet: official government gazette that publishes laws, not a media outlet |
+| pf-000307 | Gay Krant | NLD | no longer published: Wikipedia: Gay Krant 'was' a magazine |
 | pf-001908 | Mot Dag | NOR | not a media outlet: political group of the 1920s-30s, not a media outlet |
 | pf-008730 | Nylænde | NOR | no longer published: Wikipedia: Nylænde 'was' a magazine (historic) |
 | pf-000928 | CKM | POL | no longer published: Wikipedia: CKM 'was' a magazine |
