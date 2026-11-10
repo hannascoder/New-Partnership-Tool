@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 177 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 222, scope 3
+- No longer shown: 188 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 233, scope 3
 
 ### Examples: ownership
 
@@ -31,6 +31,8 @@
 - 't Pallieterke (BEL, pf-002954)
 - .ch (CHE, pf-000147)
 - 0404 News (ISR, pf-015038)
+- 168 Óra (HUN, pf-000323)
+- 888.hu (HUN, pf-016516)
 - A Muvra (FRA, pf-004329)
 - Aaj Tak (IND, pf-003906)
 - American Thinker (USA, pf-004610)
@@ -41,5 +43,3 @@
 - Avriani (GRC, pf-004254)
 - BC Report (CAN, pf-005351)
 - Bessy (BEL, pf-000981)
-- Blaze Media (USA, pf-009508)
-- Blokwatch (BEL, pf-002762)

@@ -1662,6 +1662,39 @@
    ]
   ]
  },
+ "pf-000166": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "international audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Korea International Broadcasting Foundation"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international English-language broadcaster"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and other languages"
+   ]
+  ]
+ },
  "pf-000168": {
   "date": "2026-11-10",
   "owner": "ProSiebenSat.1 Media",
@@ -2050,6 +2083,27 @@
     null,
     3,
     "entertainment network"
+   ]
+  ]
+ },
+ "pf-000209": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: JoongAng group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -2658,6 +2712,23 @@
    ]
   ]
  },
+ "pf-000303": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "science magazine of the Academy of Sciences"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "science magazine"
+   ]
+  ]
+ },
  "pf-000306": {
   "date": "2026-11-10",
   "owner": "Televiziunea Română",
@@ -2739,6 +2810,18 @@
     null,
     2,
     "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-000323": {
+  "closed": "Wikipedia: in circulation 1989-2022",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "political news magazine"
    ]
   ]
  },
@@ -2989,6 +3072,23 @@
     null,
     2,
     "shows"
+   ]
+  ]
+ },
+ "pf-000365": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "several languages"
    ]
   ]
  },
@@ -3303,6 +3403,21 @@
    ]
   ]
  },
+ "pf-000414": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by a company founded by Parliament"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-000418": {
   "date": "2026-11-10",
   "ownership": [
@@ -3315,6 +3430,27 @@
     null,
     1,
     "news agency"
+   ]
+  ]
+ },
+ "pf-000421": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-profit listener-supported"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community non-profit radio"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "alternative music"
    ]
   ]
  },
@@ -3613,6 +3749,18 @@
    ]
   ]
  },
+ "pf-000455": {
+  "closed": "Wikidata: newspapers between 1841 and 1994",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "several historic newspapers"
+   ]
+  ]
+ },
  "pf-000456": {
   "date": "2026-11-10",
   "topics": [
@@ -3671,6 +3819,21 @@
    [
     "multilingual",
     "German, French, Italian"
+   ]
+  ]
+ },
+ "pf-000469": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private TV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private TV with news and current affairs"
    ]
   ]
  },
@@ -3831,6 +3994,106 @@
    ]
   ]
  },
+ "pf-000498": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "leading broadcaster"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-000499": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000500": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gyeonggi and Incheon"
+   ]
+  ]
+ },
+ "pf-000501": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest regional commercial broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Busan and Gyeongnam"
+   ]
+  ]
+ },
+ "pf-000502": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000503": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "health section"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Japanese editions"
+   ]
+  ]
+ },
  "pf-000504": {
   "date": "2026-11-09",
   "owner": "Penske Media Corporation",
@@ -3844,6 +4107,193 @@
     null,
     1,
     "music magazine"
+   ]
+  ]
+ },
+ "pf-000506": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Koreans abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio for Koreans abroad and the North"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-000507": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-000508": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "centre-left daily"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "climate disaster section"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "AI section"
+   ]
+  ]
+ },
+ "pf-000509": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
+   ]
+  ]
+ },
+ "pf-000510": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-000512": {
+  "audience": [
+   [
+    "children",
+    "children's education"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: educational public broadcaster"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational broadcasting"
+   ],
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
+ "pf-000514": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigations"
+   ]
+  ]
+ },
+ "pf-000515": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English edition of JoongAng"
+   ]
+  ]
+ },
+ "pf-000516": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Channel A Corporation"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-000517": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper about North Korea"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "North Korea"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Korean, English, Chinese"
    ]
   ]
  },
@@ -3871,6 +4321,43 @@
    ]
   ]
  },
+ "pf-000524": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: official international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ],
+   [
+    "multilingual",
+    "many languages"
+   ]
+  ]
+ },
+ "pf-000525": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ]
+  ]
+ },
  "pf-000527": {
   "date": "2026-11-10",
   "ownership": [
@@ -3886,6 +4373,27 @@
    ]
   ],
   "website_warning": "the website (bjinformation.com) does not look like Beijing Review"
+ },
+ "pf-000528": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
  },
  "pf-000531": {
   "date": "2026-11-10",
@@ -3935,6 +4443,27 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: editorial stance perceived as far-right since 2023",
   "topics": []
+ },
+ "pf-000534": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public-broadcasting radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio for news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Hungarian public media"
+   ]
+  ]
  },
  "pf-000536": {
   "audience": [
@@ -4187,6 +4716,23 @@
     null,
     1,
     "regional daily (Ruhr area)"
+   ]
+  ]
+ },
+ "pf-000572": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business"
    ]
   ]
  },
@@ -4690,6 +5236,29 @@
    ]
   ]
  },
+ "pf-000651": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Busan"
+   ],
+   [
+    "life_below_water",
+    null,
+    2,
+    "economy and maritime section"
+   ]
+  ]
+ },
  "pf-000654": {
   "date": "2026-11-10",
   "owner": "Reach plc",
@@ -4806,6 +5375,151 @@
    ]
   ]
  },
+ "pf-000677": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigative reports"
+   ]
+  ]
+ },
+ "pf-000678": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-000679": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-000681": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Hungarians abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "MTVA",
+  "ownership": [
+   "public_service",
+   "Wikipedia: state-financed MTVA"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "international channel for Hungarians abroad"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "programmes"
+   ]
+  ]
+ },
+ "pf-000684": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-000686": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
+   ]
+  ]
+ },
+ "pf-000688": {
+  "audience": [
+   [
+    "business_professionals",
+    "business daily"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "conservative business daily"
+   ]
+  ]
+ },
  "pf-000691": {
   "date": "2026-11-10",
   "owner": "VGTRK",
@@ -4893,6 +5607,27 @@
    [
     "public_service_mandate",
     "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-000708": {
+  "audience": [
+   [
+    "youth_students",
+    "younger demographic"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public music radio for young people"
    ]
   ]
  },
@@ -5014,6 +5749,18 @@
    ]
   ]
  },
+ "pf-000723": {
+  "closed": "Wikipedia: published 1881-1938",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-000724": {
   "audience": [
    [
@@ -5038,6 +5785,23 @@
     null,
     1,
     "Cluj county"
+   ]
+  ]
+ },
+ "pf-000728": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "liberal weekly with satirical tone"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
    ]
   ]
  },
@@ -5228,6 +5992,18 @@
     null,
     1,
     "Catholic daily"
+   ]
+  ]
+ },
+ "pf-000746": {
+  "closed": "Wikipedia: historic journal (first half of the 20th century)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary journal"
    ]
   ]
  },
@@ -5561,6 +6337,27 @@
     null,
     1,
     "French-language daily newspaper"
+   ]
+  ]
+ },
+ "pf-000772": {
+  "audience": [
+   [
+    "children",
+    "cartoons"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "cartoon channel"
    ]
   ]
  },
@@ -5936,6 +6733,21 @@
     null,
     1,
     "channel mainly for children (animated series)"
+   ]
+  ]
+ },
+ "pf-000824": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
    ]
   ]
  },
@@ -6476,6 +7288,28 @@
    ]
   ]
  },
+ "pf-000905": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by KBS"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main public TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
  "pf-000906": {
   "audience": [
    [
@@ -6661,6 +7495,27 @@
    ]
   ]
  },
+ "pf-000926": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music and literature radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Hungarian public media"
+   ]
+  ]
+ },
  "pf-000928": {
   "closed": "Wikipedia: CKM 'was' a magazine",
   "date": "2026-11-10",
@@ -6759,6 +7614,23 @@
    [
     "public_service_mandate",
     "Dutch public broadcaster"
+   ]
+  ]
+ },
+ "pf-000946": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website and daily"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment"
    ]
   ]
  },
@@ -7398,6 +8270,41 @@
    ]
   ]
  },
+ "pf-001127": {
+  "closed": "Wikipedia: Népszava 'was' a newspaper (ended 2026)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "social-democratic newspaper"
+   ]
+  ]
+ },
+ "pf-001129": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: supports Hungary's conservative (governing) parties, owned by Gábor Széles; party-aligned like Magyar Nemzet",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
+ },
+ "pf-001130": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine (relaunched)"
+   ]
+  ]
+ },
  "pf-001131": {
   "date": "2026-11-10",
   "ownership": [
@@ -7410,6 +8317,27 @@
     null,
     1,
     "documentary and lifestyle channel"
+   ]
+  ]
+ },
+ "pf-001134": {
+  "audience": [
+   [
+    "older_persons",
+    "folk music"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: MédiaKlikk public radio"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "folk music public radio"
    ]
   ]
  },
@@ -7830,6 +8758,39 @@
     null,
     1,
     "English-language daily newspaper"
+   ]
+  ]
+ },
+ "pf-001189": {
+  "date": "2026-11-10",
+  "right_populist": "general knowledge, not in the profile text (please check): pro-government right-wing weekly",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly political magazine"
+   ]
+  ]
+ },
+ "pf-001191": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial broadcaster"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "leading TV and radio broadcaster"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -8325,6 +9286,19 @@
    ]
   ]
  },
+ "pf-001272": {
+  "closed": "Wikipedia: Echo TV 'was' a channel",
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: Christian-conservative, known as a supporter of Fidesz and KDNP",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
  "pf-001273": {
   "date": "2026-11-10",
   "ownership": [
@@ -8794,6 +9768,50 @@
    ]
   ]
  },
+ "pf-001344": {
+  "audience": [
+   [
+    "religious",
+    "Pentecostal readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Pentecostal weekly news magazine"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news"
+   ]
+  ]
+ },
+ "pf-001345": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001346": {
   "date": "2026-11-10",
   "not_media": "annual guide book on light novels, not a media outlet",
@@ -8965,6 +9983,27 @@
     null,
     1,
     "national public TV channel"
+   ]
+  ]
+ },
+ "pf-001366": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: pay TV"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's TV channel"
    ]
   ]
  },
@@ -9371,10 +10410,64 @@
    ]
   ]
  },
+ "pf-001405": {
+  "date": "2026-11-10",
+  "owner": "RTL Group",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by RTL Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001406": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: Polish right-wing weekly",
   "topics": []
+ },
+ "pf-001413": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "talk and news radio"
+   ],
+   [
+    "media_freedom",
+    null,
+    3,
+    "opposition voice"
+   ]
+  ]
+ },
+ "pf-001417": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "political, cultural and literary monthly"
+   ]
+  ]
  },
  "pf-001420": {
   "date": "2026-11-10",
@@ -9963,6 +11056,23 @@
    ]
   ]
  },
+ "pf-001491": {
+  "audience": [
+   [
+    "religious",
+    "Catholic readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic news agency"
+   ]
+  ]
+ },
  "pf-001496": {
   "audience": [
    [
@@ -10019,6 +11129,18 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-001511": {
+  "closed": "Wikipedia: Music FM 'was' a radio station (ceased)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
    ]
   ]
  },
@@ -10349,6 +11471,17 @@
     null,
     2,
     "website section Sake"
+   ]
+  ]
+ },
+ "pf-001570": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
    ]
   ]
  },
@@ -11195,6 +12328,21 @@
     null,
     1,
     "weekly newspaper"
+   ]
+  ]
+ },
+ "pf-001790": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Antenna Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
    ]
   ]
  },
@@ -18560,6 +19708,27 @@
    ]
   ]
  },
+ "pf-004214": {
+  "audience": [
+   [
+    "children",
+    "children and teens"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Disney"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
  "pf-004227": {
   "audience": [
    [
@@ -21200,6 +22369,23 @@
    ]
   ]
  },
+ "pf-005875": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cheongju"
+   ]
+  ]
+ },
  "pf-005891": {
   "date": "2026-11-10",
   "ownership": [
@@ -21318,6 +22504,23 @@
     null,
     2,
     "website section Energy"
+   ]
+  ]
+ },
+ "pf-006054": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Daegu"
    ]
   ]
  },
@@ -21930,6 +23133,18 @@
    ]
   ]
  },
+ "pf-006373": {
+  "closed": "Wikipedia: historic magazine (1865-1880 in Budapest)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Romanian literary magazine"
+   ]
+  ]
+ },
  "pf-006382": {
   "audience": [
    [
@@ -22146,6 +23361,23 @@
     null,
     1,
     "first private TV station"
+   ]
+  ]
+ },
+ "pf-006500": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gangwon"
    ]
   ]
  },
@@ -23436,6 +24668,23 @@
    ]
   ]
  },
+ "pf-007371": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "North Jeolla"
+   ]
+  ]
+ },
  "pf-007379": {
   "audience": [
    [
@@ -24140,6 +25389,18 @@
     null,
     2,
     "website section Politics"
+   ]
+  ]
+ },
+ "pf-008678": {
+  "date": "2026-11-10",
+  "owner": "Christian Broadcasting System",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily news of the Christian Broadcasting System"
    ]
   ]
  },
@@ -25728,6 +26989,46 @@
    ]
   ]
  },
+ "pf-012281": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio station"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Incheon and Gyeonggi"
+   ]
+  ]
+ },
+ "pf-012285": {
+  "audience": [
+   [
+    "religious",
+    "Christian audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio and TV"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "general programming"
+   ]
+  ]
+ },
  "pf-012292": {
   "date": "2026-11-10",
   "owner": "China Central Television",
@@ -26149,6 +27450,93 @@
     null,
     1,
     "22 local newspapers"
+   ]
+  ]
+ },
+ "pf-013250": {
+  "date": "2026-11-10",
+  "owner": "EBS",
+  "ownership": [
+   "public_service",
+   "Wikipedia: EBS"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational TV"
+   ]
+  ]
+ },
+ "pf-013254": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS N subsidiary"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "drama cable channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-013255": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS N subsidiary"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's cable channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
+ "pf-013275": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private news agency"
    ]
   ]
  },
@@ -26618,6 +28006,61 @@
    ]
   ]
  },
+ "pf-013773": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business magazine"
+   ]
+  ]
+ },
+ "pf-013774": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Koreans abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by KBS"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international pay TV"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "international audiences"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ],
+   [
+    "multilingual",
+    "subtitles in many languages"
+   ]
+  ]
+ },
  "pf-013785": {
   "date": "2026-11-10",
   "ownership": [
@@ -26709,6 +28152,56 @@
   "right_populist": "Wikipedia: national conservative and pro-Russian",
   "topics": []
  },
+ "pf-013962": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "EBS",
+  "ownership": [
+   "public_service",
+   "Wikipedia: EBS"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "education"
+   ]
+  ]
+ },
+ "pf-013967": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS N subsidiary"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports cable channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
+ },
  "pf-013968": {
   "date": "2026-11-10",
   "topics": [
@@ -26720,6 +28213,28 @@
    ]
   ],
   "website_warning": "the website shows a Chinese gambling page, not the TV station"
+ },
+ "pf-013969": {
+  "date": "2026-11-10",
+  "owner": "Korean Broadcasting System",
+  "ownership": [
+   "public_service",
+   "Wikipedia: KBS N subsidiary"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "variety cable channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Korean public broadcaster"
+   ]
+  ]
  },
  "pf-014026": {
   "date": "2026-11-10",
@@ -26763,6 +28278,21 @@
     null,
     1,
     "pay-TV channel for Brazilians living abroad"
+   ]
+  ]
+ },
+ "pf-014144": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial entertainment channel"
    ]
   ]
  },
@@ -27154,6 +28684,24 @@
     null,
     2,
     "regions section"
+   ]
+  ]
+ },
+ "pf-014802": {
+  "country_hint": "USA (American news website)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website about North Korea"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "investigations"
    ]
   ]
  },
@@ -27815,6 +29363,42 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-015450": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikidata: state-owned"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports channel"
+   ]
+  ]
+ },
+ "pf-015452": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: MédiaKlikk"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "youth channel"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "music"
+   ]
+  ]
+ },
  "pf-015469": {
   "date": "2026-11-10",
   "topics": [
@@ -27829,6 +29413,28 @@
     null,
     1,
     "Chattogram"
+   ]
+  ]
+ },
+ "pf-015482": {
+  "date": "2026-11-10",
+  "owner": "EBS",
+  "ownership": [
+   "public_service",
+   "Wikipedia: EBS"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational TV"
    ]
   ]
  },
@@ -27894,6 +29500,45 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: junction of right and far-right currents",
   "topics": []
+ },
+ "pf-015726": {
+  "date": "2026-11-10",
+  "owner": "MTVA",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public television channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Hungarian public media"
+   ]
+  ]
+ },
+ "pf-015727": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "investigative journalism"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigations into public money"
+   ]
+  ]
  },
  "pf-015732": {
   "date": "2026-11-10",
@@ -28049,6 +29694,17 @@
     null,
     2,
     "website section Educación"
+   ]
+  ]
+ },
+ "pf-016100": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online journal (gonzo journalism)"
    ]
   ]
  },
@@ -28383,6 +30039,73 @@
   "right_populist": "Wikipedia: national conservative, associated with the Fidesz government",
   "topics": []
  },
+ "pf-016516": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: conservative line supporting Viktor Orbán, attacks critics of the government",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
+ "pf-016518": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public channel"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational and cultural public channel"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "culture"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Hungarian public media"
+   ],
+   [
+    "educational",
+    "educational channel"
+   ]
+  ]
+ },
+ "pf-016522": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Mediaworks Hungary",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
+   ],
+   [
+    "energy",
+    null,
+    2,
+    "energy crisis section"
+   ]
+  ]
+ },
  "pf-016524": {
   "audience": [
    [
@@ -28440,6 +30163,22 @@
     null,
     1,
     "name: Radio Maria, a Catholic radio network"
+   ]
+  ]
+ },
+ "pf-016578": {
+  "date": "2026-11-10",
+  "owner": "MTVA",
+  "ownership": [
+   "public_service",
+   "Wikipedia: MTVA"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "archive channel"
    ]
   ]
  },
@@ -28854,10 +30593,44 @@
    ]
   ]
  },
+ "pf-017114": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
  "pf-017205": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: called 'the right wing's highly influential answer to Slate'",
   "topics": []
+ },
+ "pf-017218": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news and opinion website"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "against the far right"
+   ]
+  ]
  },
  "pf-017290": {
   "audience": [
@@ -28950,6 +30723,23 @@
   "right_populist": "Wikidata: right-wing news website",
   "topics": []
  },
+ "pf-021289": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "online financial newspaper"
+   ]
+  ]
+ },
  "pf-021359": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing newspaper",
@@ -28997,6 +30787,17 @@
     null,
     1,
     "children's TV network"
+   ]
+  ]
+ },
+ "pf-021402": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
    ]
   ]
  },
@@ -29087,6 +30888,17 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: conservative and right-wing editorial stance",
   "topics": []
+ },
+ "pf-021768": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
  },
  "pf-021797": {
   "date": "2026-11-10",
@@ -29427,6 +31239,17 @@
     null,
     1,
     "TV channel"
+   ]
+  ]
+ },
+ "pf-023267": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent news portal"
    ]
   ]
  },

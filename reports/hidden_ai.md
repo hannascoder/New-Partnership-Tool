@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-70 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+78 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -32,6 +32,14 @@
 | pf-002878 | Athens News Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
 | pf-004254 | Avriani | GRC | no longer published: Wikipedia: closed down in October 2012 |
 | pf-003760 | Macedonian Press Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
+| pf-000323 | 168 Óra | HUN | no longer published: Wikipedia: in circulation 1989-2022 |
+| pf-000723 | Budapesti Hírlap | HUN | no longer published: Wikipedia: published 1881-1938 |
+| pf-001272 | Echo TV | HUN | no longer published: Wikipedia: Echo TV 'was' a channel |
+| pf-006373 | Familia | HUN | no longer published: Wikipedia: historic magazine (1865-1880 in Budapest) |
+| pf-001511 | Music FM | HUN | no longer published: Wikipedia: Music FM 'was' a radio station (ceased) |
+| pf-000746 | Nyugat | HUN | no longer published: Wikipedia: historic journal (first half of the 20th century) |
+| pf-001127 | Népszava | HUN | no longer published: Wikipedia: Népszava 'was' a newspaper (ended 2026) |
+| pf-000455 | Pesti Hírlap | HUN | no longer published: Wikidata: newspapers between 1841 and 1994 |
 | pf-003843 | De Locomotief | IDN | no longer published: Wikipedia: historic newspaper of the Dutch East Indies era |
 | pf-002926 | Indonesia Raya | IDN | no longer published: Wikipedia: permanently closed in 1974 |
 | pf-008127 | Koran Sindo | IDN | no longer published: Wikipedia: Koran Sindo 'was' a newspaper |

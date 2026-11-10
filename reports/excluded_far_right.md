@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-153 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+157 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -76,7 +76,11 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-027635 | Golden Dawn | GRC | Wikidata political ideology: neo-Nazism |
 | pf-004247 | Stochos | GRC | AI reading (right-wing populist): Wikipedia: nationalist Greek weekly |
 | pf-001177 | Ta Nea | GRC | AI reading (right-wing populist): Wikipedia: since 2017 centrist and right-wing views |
+| pf-016516 | 888.hu | HUN | AI reading (right-wing populist): Wikipedia: conservative line supporting Viktor Orbán, attacks critics of the government |
+| pf-001272 | Echo TV | HUN | AI reading (right-wing populist): Wikipedia: Christian-conservative, known as a supporter of Fidesz and KDNP |
 | pf-000770 | Hír TV | HUN | AI reading (right-wing populist): general knowledge, not in the profile text (please check): pro-Fidesz government news channel |
+| pf-001189 | Magyar Demokrata | HUN | AI reading (right-wing populist): general knowledge, not in the profile text (please check): pro-government right-wing weekly |
+| pf-001129 | Magyar Hírlap | HUN | AI reading (right-wing populist): Wikipedia: supports Hungary's conservative (governing) parties, owned by Gábor Széles; party-aligned like Magyar Nemzet |
 | pf-016508 | Magyar Nemzet | HUN | AI reading (right-wing populist): Wikipedia: national conservative, associated with the Fidesz government |
 | pf-001212 | Origo | HUN | AI reading (right-wing populist): Wikipedia: taken over by the Orbán-aligned KESMA foundation |
 | pf-003906 | Aaj Tak | IND | AI reading (right-wing populist): Wikipedia: right-wing TV news channel |
