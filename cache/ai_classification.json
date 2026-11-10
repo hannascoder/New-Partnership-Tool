@@ -3976,6 +3976,34 @@
    ]
   ]
  },
+ "pf-000466": {
+  "audience": [
+   [
+    "older_persons",
+    "archive TV"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by RTP"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "archive programmes channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
+   ]
+  ]
+ },
  "pf-000469": {
   "date": "2026-11-10",
   "ownership": [
@@ -4668,6 +4696,17 @@
    ]
   ]
  },
+ "pf-000537": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ]
+  ]
+ },
  "pf-000540": {
   "date": "2026-11-10",
   "owner": "RTVE",
@@ -5006,6 +5045,28 @@
     null,
     1,
     "national news agency"
+   ]
+  ]
+ },
+ "pf-000586": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: produced by RTP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -5843,6 +5904,17 @@
    ]
   ]
  },
+ "pf-000706": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports newspaper"
+   ]
+  ]
+ },
  "pf-000708": {
   "audience": [
    [
@@ -6062,6 +6134,34 @@
     null,
     1,
     "Cluj county"
+   ]
+  ]
+ },
+ "pf-000725": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service broadcasting organisation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public service broadcaster"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -9712,6 +9812,23 @@
    ]
   ]
  },
+ "pf-001264": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper (now online)"
+   ]
+  ]
+ },
  "pf-001265": {
   "audience": [
    [
@@ -11015,6 +11132,17 @@
    ]
   ]
  },
+ "pf-001435": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily tabloid newspaper"
+   ]
+  ]
+ },
  "pf-001436": {
   "date": "2026-11-10",
   "ownership": [
@@ -11278,6 +11406,23 @@
     null,
     2,
     "entertainment programmes (shows, reality TV)"
+   ]
+  ]
+ },
+ "pf-001464": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Portuguese-speaking world"
    ]
   ]
  },
@@ -12132,6 +12277,23 @@
    ]
   ]
  },
+ "pf-001579": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Coimbra"
+   ]
+  ]
+ },
  "pf-001582": {
   "date": "2026-11-10",
   "owner": "Cairo Communication",
@@ -12879,6 +13041,18 @@
    ]
   ]
  },
+ "pf-001756": {
+  "date": "2026-11-10",
+  "owner": "Impresa",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "flagship weekly"
+   ]
+  ]
+ },
  "pf-001757": {
   "date": "2026-11-10",
   "owner": "SRF",
@@ -13561,6 +13735,33 @@
    ]
   ]
  },
+ "pf-001877": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private commercial radio"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "news"
+   ]
+  ]
+ },
  "pf-001878": {
   "date": "2026-11-10",
   "owner": "M&G Media",
@@ -13660,6 +13861,17 @@
     null,
     2,
     "website section Forskning"
+   ]
+  ]
+ },
+ "pf-001905": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "daily sports newspaper"
    ]
   ]
  },
@@ -14157,6 +14369,40 @@
    ]
   ]
  },
+ "pf-002049": {
+  "country_hint": "CHE (based in Geneva, Switzerland)",
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: independent non-profit newsroom (formerly IRIN)"
+  ],
+  "topics": [
+   [
+    "humanitarian",
+    null,
+    1,
+    "independent news on humanitarian crises"
+   ],
+   [
+    "migration",
+    null,
+    2,
+    "displacement"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "conflicts"
+   ]
+  ],
+  "un_profile": [
+   [
+    "development",
+    "humanitarian and development journalism"
+   ]
+  ]
+ },
  "pf-002050": {
   "date": "2026-11-10",
   "topics": [
@@ -14257,6 +14503,23 @@
     null,
     1,
     "left-wing daily newspaper"
+   ]
+  ]
+ },
+ "pf-002086": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
    ]
   ]
  },
@@ -14448,6 +14711,23 @@
     null,
     1,
     "Stavanger and Rogaland"
+   ]
+  ]
+ },
+ "pf-002134": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily national newspaper of record"
+   ],
+   [
+    "technology",
+    null,
+    3,
+    "Web Summit coverage"
    ]
   ]
  },
@@ -14814,6 +15094,18 @@
    ]
   ]
  },
+ "pf-002223": {
+  "date": "2026-11-10",
+  "owner": "Nation Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-002224": {
   "audience": [
    [
@@ -15126,6 +15418,21 @@
     null,
     1,
     "Galician public TV"
+   ]
+  ]
+ },
+ "pf-002292": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial music radio"
    ]
   ]
  },
@@ -15716,6 +16023,21 @@
    ]
   ]
  },
+ "pf-002407": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "terrestrial TV channel"
+   ]
+  ]
+ },
  "pf-002408": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -15802,6 +16124,27 @@
     null,
     1,
     "finance channel"
+   ]
+  ]
+ },
+ "pf-002431": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Impresa"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -16106,6 +16449,40 @@
     "justice_rule_of_law",
     1,
     "Law and Society channel"
+   ]
+  ]
+ },
+ "pf-002500": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Portuguese speakers abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by RTP"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "international channel for Portuguese speakers"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -16737,6 +17114,17 @@
    ]
   ]
  },
+ "pf-002709": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
+ },
  "pf-002710": {
   "date": "2026-11-10",
   "owner": "TVP",
@@ -17049,6 +17437,34 @@
     null,
     1,
     "online newspaper"
+   ]
+  ]
+ },
+ "pf-002780": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by RTP"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural public TV channel"
+   ],
+   [
+    "children_youth",
+    null,
+    2,
+    "children's programmes"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -17549,6 +17965,34 @@
    ]
   ]
  },
+ "pf-002898": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by state-owned public broadcaster RTP"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "main public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
+   ]
+  ]
+ },
  "pf-002900": {
   "date": "2026-11-10",
   "ownership": [
@@ -17637,6 +18081,28 @@
     null,
     1,
     "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-002908": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: produced by RTP"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music and culture radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -17974,6 +18440,27 @@
     null,
     1,
     "classical music radio"
+   ]
+  ]
+ },
+ "pf-002967": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: legislature TV"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament channel"
    ]
   ]
  },
@@ -18440,6 +18927,23 @@
    ]
   ]
  },
+ "pf-003236": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Braga"
+   ]
+  ]
+ },
  "pf-003250": {
   "date": "2026-11-10",
   "owner": "Future plc",
@@ -18535,6 +19039,27 @@
     null,
     1,
     "children's pay TV channel"
+   ]
+  ]
+ },
+ "pf-003267": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Disney"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
    ]
   ]
  },
@@ -18664,6 +19189,33 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-003326": {
+  "audience": [
+   [
+    "youth_students",
+    "university radio"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: university radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "university radio of Coimbra"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
    ]
   ]
  },
@@ -19701,6 +20253,18 @@
    ]
   ]
  },
+ "pf-003858": {
+  "closed": "Wikidata: former newspaper (1880-1977)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-003859": {
   "date": "2026-11-10",
   "topics": [
@@ -20046,6 +20610,28 @@
     null,
     1,
     "main radio network"
+   ]
+  ]
+ },
+ "pf-003944": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by RTP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -20463,6 +21049,33 @@
    [
     "multilingual",
     "several languages"
+   ]
+  ]
+ },
+ "pf-004123": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Portuguese speakers abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TVI"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "international TV service"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "programmes"
    ]
   ]
  },
@@ -21678,6 +22291,23 @@
    ]
   ]
  },
+ "pf-004828": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Azores (Ponta Delgada)"
+   ]
+  ]
+ },
  "pf-004847": {
   "date": "2026-11-10",
   "owner": "China Central Television",
@@ -22121,6 +22751,29 @@
    ]
   ]
  },
+ "pf-005025": {
+  "audience": [
+   [
+    "youth_students",
+    "urban young listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "urban music radio"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news and politics"
+   ]
+  ]
+ },
  "pf-005043": {
   "date": "2026-11-10",
   "topics": [
@@ -22478,6 +23131,23 @@
    ]
   ]
  },
+ "pf-005284": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Azores"
+   ]
+  ]
+ },
  "pf-005288": {
   "date": "2026-11-09",
   "topics": [
@@ -22683,6 +23353,21 @@
    [
     "multilingual",
     "English and Bengali"
+   ]
+  ]
+ },
+ "pf-005415": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by S.L. Benfica"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football club TV"
    ]
   ]
  },
@@ -25765,6 +26450,36 @@
    ]
   ]
  },
+ "pf-008147": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned TV and radio broadcaster"
+   ]
+  ]
+ },
+ "pf-008149": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Standard Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV network"
+   ]
+  ]
+ },
  "pf-008151": {
   "date": "2026-11-10",
   "topics": [
@@ -26238,6 +26953,27 @@
   "right_populist": "Wikipedia: right-wing journal",
   "topics": []
  },
+ "pf-008558": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Nation Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "general entertainment channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-008591": {
   "date": "2026-11-10",
   "owner": "Viaplay Group",
@@ -26301,6 +27037,23 @@
     null,
     2,
     "sport"
+   ]
+  ]
+ },
+ "pf-008663": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
    ]
   ]
  },
@@ -27179,6 +27932,30 @@
    ]
   ]
  },
+ "pf-010088": {
+  "date": "2026-11-10",
+  "owner": "The Standard Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper of Kenya"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "courts section"
+   ],
+   [
+    "hunger_food",
+    "nutrition",
+    2,
+    "nutrition section"
+   ]
+  ]
+ },
  "pf-010106": {
   "date": "2026-11-10",
   "topics": [
@@ -27654,6 +28431,29 @@
    ]
   ]
  },
+ "pf-011688": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Madeira"
+   ],
+   [
+    "work_economy",
+    "growth",
+    3,
+    "tourism"
+   ]
+  ]
+ },
  "pf-011702": {
   "date": "2026-11-09",
   "ownership": [
@@ -27696,6 +28496,34 @@
     null,
     1,
     "daily newspaper (digital)"
+   ]
+  ]
+ },
+ "pf-011772": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "biweekly arts and ideas newspaper"
+   ]
+  ]
+ },
+ "pf-011820": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional weekly"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Guimarães"
    ]
   ]
  },
@@ -27751,6 +28579,23 @@
     null,
     2,
     "website section Agro"
+   ]
+  ]
+ },
+ "pf-011976": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "science and health section"
    ]
   ]
  },
@@ -29540,6 +30385,33 @@
    ]
   ]
  },
+ "pf-014387": {
+  "audience": [
+   [
+    "local_communities",
+    "Kibera residents"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: community radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community radio in Kibera slum"
+   ],
+   [
+    "cities",
+    "housing",
+    2,
+    "informal settlements"
+   ]
+  ]
+ },
  "pf-014395": {
   "date": "2026-11-10",
   "ownership": [
@@ -29602,6 +30474,33 @@
     null,
     1,
     "largest private news agency"
+   ]
+  ]
+ },
+ "pf-014432": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture and art channel"
+   ]
+  ]
+ },
+ "pf-014438": {
+  "date": "2026-11-10",
+  "owner": "Royal Media Services",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Royal Media Services"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV channel"
    ]
   ]
  },
@@ -29909,6 +30808,21 @@
    ]
   ]
  },
+ "pf-014976": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Sporting Clube"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football club TV"
+   ]
+  ]
+ },
  "pf-014992": {
   "date": "2026-11-10",
   "owner": "ERT",
@@ -30078,6 +30992,38 @@
    ]
   ]
  },
+ "pf-015101": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
+ "pf-015105": {
+  "audience": [
+   [
+    "children",
+    "preschool"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Disney"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "preschool channel"
+   ]
+  ]
+ },
  "pf-015108": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing and far-right",
@@ -30091,6 +31037,27 @@
     null,
     1,
     "entertainment news"
+   ]
+  ]
+ },
+ "pf-015114": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "generalist channel focused on news and crime"
+   ],
+   [
+    "peace_justice",
+    "violence_peace",
+    2,
+    "crime coverage"
    ]
   ]
  },
@@ -30503,6 +31470,23 @@
    ]
   ]
  },
+ "pf-015608": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking residents (Algarve)"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial music radio"
+   ]
+  ]
+ },
  "pf-015623": {
   "audience": [
    [
@@ -30835,6 +31819,21 @@
    ]
   ]
  },
+ "pf-016211": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government-run"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government-run national news agency"
+   ]
+  ]
+ },
  "pf-016212": {
   "date": "2026-11-10",
   "topics": [
@@ -31084,6 +32083,34 @@
     null,
     1,
     "radio of the Ministry of Defence"
+   ]
+  ]
+ },
+ "pf-016496": {
+  "date": "2026-11-10",
+  "owner": "RTP",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by RTP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Azores"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Portuguese public broadcaster RTP"
    ]
   ]
  },
@@ -31557,6 +32584,28 @@
    ]
   ]
  },
+ "pf-017053": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
+   ]
+  ]
+ },
+ "pf-017054": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ]
+  ]
+ },
  "pf-017078": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: editorial ideology aligned with Spanish nationalism",
@@ -31699,6 +32748,23 @@
     null,
     1,
     "children's TV channel"
+   ]
+  ]
+ },
+ "pf-017282": {
+  "audience": [
+   [
+    "children",
+    "preschool"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "preschool channel"
    ]
   ]
  },
@@ -32238,6 +33304,17 @@
   "far_right": "Wikipedia: far-right news website, disinformation",
   "topics": []
  },
+ "pf-022742": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "Football Federation TV"
+   ]
+  ]
+ },
  "pf-022979": {
   "date": "2026-11-10",
   "topics": [
@@ -32344,6 +33421,24 @@
    ]
   ]
  },
+ "pf-023395": {
+  "date": "2026-11-10",
+  "owner": "Ringier",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online news"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "entertainment and lifestyle"
+   ]
+  ]
+ },
  "pf-023479": {
   "audience": [
    [
@@ -32423,6 +33518,23 @@
     null,
     1,
     "children's channel"
+   ]
+  ]
+ },
+ "pf-023539": {
+  "audience": [
+   [
+    "religious",
+    "evangelical viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "evangelical Christian channel"
    ]
   ]
  },
@@ -32741,6 +33853,29 @@
    ]
   ]
  },
+ "pf-024321": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "website section Saúde"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "website section Negócios"
+   ]
+  ]
+ },
  "pf-024391": {
   "date": "2026-11-10",
   "topics": [
@@ -32943,6 +34078,23 @@
    [
     "storytelling",
     "tells the story of the Kivu region from Kivu"
+   ]
+  ]
+ },
+ "pf-024869": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper title of Portugal"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Setúbal"
    ]
   ]
  },
@@ -33223,6 +34375,18 @@
   "far_right": "Wikipedia: right-wing satirical magazine, called far-right by Libération",
   "topics": []
  },
+ "pf-025970": {
+  "date": "2026-11-10",
+  "owner": "Medialivre",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
  "pf-026114": {
   "audience": [
    [
@@ -33454,10 +34618,44 @@
    ]
   ]
  },
+ "pf-026886": {
+  "audience": [
+   [
+    "minority_language",
+    "Kikuyu speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Kikuyu-language radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "central Kenya"
+   ]
+  ]
+ },
  "pf-026893": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: close to far-right politicians, spreads disinformation",
   "topics": []
+ },
+ "pf-027051": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital audio-visual media"
+   ]
+  ]
  },
  "pf-027056": {
   "date": "2026-11-10",
@@ -33581,6 +34779,10 @@
     "local news"
    ]
   ]
+ },
+ "pf-029347": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-029371": {
   "date": "2026-11-10",
@@ -33706,6 +34908,23 @@
    ]
   ]
  },
+ "pf-030088": {
+  "audience": [
+   [
+    "older_persons",
+    "classic music"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classic music radio"
+   ]
+  ]
+ },
  "pf-030321": {
   "date": "2026-11-10",
   "topics": [
@@ -33794,6 +35013,18 @@
    ]
   ]
  },
+ "pf-031011": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian TV (name)"
+   ]
+  ],
+  "website_warning": "the website shows betting ads, may not belong to the channel"
+ },
  "pf-031024": {
   "date": "2026-11-10",
   "ownership": [
@@ -33812,6 +35043,17 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-031028": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio stations of Citizen Digital"
    ]
   ]
  },
@@ -34250,6 +35492,17 @@
    ]
   ]
  },
+ "pf-032763": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading digital news source"
+   ]
+  ]
+ },
  "pf-033033": {
   "date": "2026-11-10",
   "ownership": [
@@ -34292,6 +35545,51 @@
    ]
   ]
  },
+ "pf-033120": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Swahili radio"
+   ]
+  ]
+ },
+ "pf-033138": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "coastal community radio on culture"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "coast"
+   ]
+  ]
+ },
+ "pf-033256": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio (Radio Maria)"
+   ]
+  ]
+ },
  "pf-033392": {
   "date": "2026-11-10",
   "ownership": [
@@ -34331,6 +35629,23 @@
     null,
     1,
     "Rotterdam region (Rijnmond)"
+   ]
+  ]
+ },
+ "pf-033949": {
+  "audience": [
+   [
+    "minority_language",
+    "Dholuo speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Luo-language TV"
    ]
   ]
  },
@@ -34460,6 +35775,23 @@
    ]
   ]
  },
+ "pf-034617": {
+  "audience": [
+   [
+    "minority_language",
+    "Kalenjin speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "Kalenjin radio of the North Rift"
+   ]
+  ]
+ },
  "pf-036742": {
   "date": "2026-11-10",
   "topics": []
@@ -34468,6 +35800,23 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-036838": {
+  "audience": [
+   [
+    "minority_language",
+    "Kikuyu speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Kikuyu culture and history TV"
+   ]
+  ]
  },
  "pf-036927": {
   "date": "2026-11-10",
@@ -34578,6 +35927,29 @@
   "topics": [],
   "website_warning": "the website shows 'Account Suspended'"
  },
+ "pf-037215": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's educational TV"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "education"
+   ]
+  ]
+ },
  "pf-037216": {
   "date": "2026-11-10",
   "topics": []
@@ -34608,6 +35980,21 @@
     "local TV channels"
    ]
   ]
+ },
+ "pf-037297": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    3,
+    "Islamic TV (name)"
+   ]
+  ]
+ },
+ "pf-037347": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-037404": {
   "date": "2026-11-10",
@@ -34715,6 +36102,17 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037913": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "industry_innovation",
+    "infrastructure",
+    3,
+    "aviation (name)"
+   ]
+  ]
  },
  "pf-037918": {
   "date": "2026-11-10",
@@ -34900,6 +36298,23 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-040459": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Kenyan TV news"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "court news"
+   ]
+  ]
+ },
  "pf-040973": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing populist Austrian channel",
@@ -34909,6 +36324,44 @@
   "date": "2026-11-10",
   "right_populist": "international channel of Fox News",
   "topics": []
+ },
+ "pf-043164": {
+  "audience": [
+   [
+    "youth_students",
+    "university TV"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "website: Kenyatta University TV"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "university TV"
+   ]
+  ]
+ },
+ "pf-044029": {
+  "audience": [
+   [
+    "business_professionals",
+    "business TV"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business TV"
+   ]
+  ]
  },
  "pf-045258": {
   "date": "2026-11-10",
@@ -34959,6 +36412,65 @@
    ]
   ]
  },
+ "pf-045918": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-046141": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-047113": {
+  "audience": [
+   [
+    "religious",
+    "Christian audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio and TV"
+   ]
+  ]
+ },
+ "pf-048033": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ]
+  ]
+ },
+ "pf-050095": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio"
+   ],
+   [
+    "agriculture",
+    null,
+    2,
+    "agriculture section"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "western Kenya"
+   ]
+  ]
+ },
  "pf-052779": {
   "audience": [
    [
@@ -34976,6 +36488,44 @@
    ]
   ]
  },
+ "pf-054326": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news section of Capital FM"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "elections section"
+   ]
+  ]
+ },
+ "pf-055328": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "cities",
+    "housing",
+    1,
+    "stories from African slums"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "African stories by local storytellers"
+   ],
+   [
+    "open_to_partner_content",
+    "collaborates with local storytellers"
+   ]
+  ]
+ },
  "pf-056339": {
   "date": "2026-11-10",
   "topics": [
@@ -34987,9 +36537,43 @@
    ]
   ]
  },
+ "pf-057871": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "coastal radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "coast"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "elections"
+   ]
+  ]
+ },
  "pf-058124": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-059068": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "climate",
+    null,
+    1,
+    "environment and ecology news"
+   ]
+  ]
  },
  "pf-059252": {
   "audience": [
@@ -35011,6 +36595,17 @@
     null,
     2,
     "Cabarete"
+   ]
+  ]
+ },
+ "pf-060343": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "largest online news website"
    ]
   ]
  },
@@ -35127,6 +36722,17 @@
    ]
   ]
  },
+ "pf-064606": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
  "pf-064690": {
   "date": "2026-11-10",
   "topics": [
@@ -35141,6 +36747,47 @@
     null,
     2,
     "website section Salud"
+   ]
+  ]
+ },
+ "pf-068307": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-068322": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigative journalism ('Investigate. Expose. Empower.')"
+   ]
+  ]
+ },
+ "pf-068506": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-069107": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "creativity in Africa and the diaspora"
+   ]
+  ]
+ },
+ "pf-069535": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "aggregator of African news (Kenya page)"
    ]
   ]
  },
@@ -35449,6 +37096,17 @@
    [
     "educational",
     "media literacy education and journalist training"
+   ]
+  ]
+ },
+ "pf-071469": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigative journalism (name)"
    ]
   ]
  }

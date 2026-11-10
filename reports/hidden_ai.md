@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-87 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+88 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -66,6 +66,7 @@
 | pf-008449 | Mercurio Peruano | PER | no longer published: Wikipedia: published 1790-1795 |
 | pf-016405 | Radio A La Radio del Amor | PER | no longer published: Wikipedia: Radio A 'was' a radio station |
 | pf-000928 | CKM | POL | no longer published: Wikipedia: CKM 'was' a magazine |
+| pf-003858 | O Século | PRT | no longer published: Wikidata: former newspaper (1880-1977) |
 | pf-001427 | Contimporanul | ROU | no longer published: Wikipedia: 'was' a Romanian magazine (historic) |
 | pf-016924 | Dzen | RUS | not a media outlet: recommendation platform (VK), not a media outlet |
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |
