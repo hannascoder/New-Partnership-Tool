@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-114 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+120 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -45,6 +45,12 @@
 | pf-006320 | W Radio | COL | no longer published: Wikipedia: W Radio Colombia 'was' a radio network |
 | pf-004108 | Světozor | CZE | no longer published: Wikipedia: published in the 19th and 20th century |
 | pf-000239 | The Prague Post | CZE | no longer published: Wikipedia: The Prague Post 'was' a newspaper |
+| pf-003867 | Land og Folk | DNK | no longer published: Wikipedia: 'was' a newspaper |
+| pf-023757 | El Día | ECU | no longer published: Wikipedia: published 1913-1952 |
+| pf-022961 | Hélice | ECU | no longer published: Wikipedia: 'fue' (was) a magazine |
+| pf-021058 | La Mujer | ECU | no longer published: Wikipedia: historic magazine (1905) |
+| pf-006443 | PP El Verdadero | ECU | no longer published: Wikipedia: 'fue' (was) a newspaper |
+| pf-023655 | XOX | ECU | no longer published: Wikipedia: published 1998-2000 |
 | pf-002425 | Boletín Oficial del Estado | ESP | not a media outlet: official state gazette (laws and notices), not a media outlet |
 | pf-001694 | El Punt | ESP | no longer published: no longer published under this name (now El Punt Avui) |
 | pf-002676 | GP Racing | ESP | no longer published: published until December 2024, merged with a sister magazine |

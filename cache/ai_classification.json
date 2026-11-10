@@ -938,6 +938,23 @@
    ]
   ]
  },
+ "pf-000082": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper (founded 1749)"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business"
+   ]
+  ]
+ },
  "pf-000084": {
   "audience": [
    [
@@ -1787,6 +1804,23 @@
    ]
   ]
  },
+ "pf-000174": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "weekly broadsheet on society and culture"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000175": {
   "audience": [
    [
@@ -1830,6 +1864,23 @@
     null,
     1,
     "youth-targeted TV channel"
+   ]
+  ]
+ },
+ "pf-000178": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Aarhus and East Jutland"
    ]
   ]
  },
@@ -2552,6 +2603,27 @@
    ]
   ]
  },
+ "pf-000253": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Warner Bros. Discovery"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "subscription TV channel"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-000256": {
   "audience": [
    [
@@ -2918,6 +2990,21 @@
     null,
     1,
     "largest commercial TV station"
+   ]
+  ]
+ },
+ "pf-000320": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: operated by Tritel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
    ]
   ]
  },
@@ -3633,6 +3720,24 @@
     null,
     1,
     "business magazine"
+   ]
+  ]
+ },
+ "pf-000409": {
+  "date": "2026-11-10",
+  "owner": "JP/Politikens Hus",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily broadsheet"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Danish and English"
    ]
   ]
  },
@@ -7993,6 +8098,23 @@
    ]
   ]
  },
+ "pf-000883": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "climate",
+    "climate_change",
+    2,
+    "website section Klima"
+   ]
+  ]
+ },
  "pf-000886": {
   "date": "2026-11-10",
   "topics": [
@@ -8506,6 +8628,17 @@
     null,
     1,
     "national news agency"
+   ]
+  ]
+ },
+ "pf-000961": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "conservative daily newspaper"
    ]
   ]
  },
@@ -9058,6 +9191,33 @@
   "right_populist": "Wikipedia: owned by a right-wing populist politician",
   "topics": []
  },
+ "pf-001094": {
+  "audience": [
+   [
+    "minority_language",
+    "German minority in Denmark"
+   ],
+   [
+    "ethnic_minorities",
+    "German minority"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "German-language newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "North Schleswig"
+   ]
+  ]
+ },
  "pf-001095": {
   "closed": "Wikipedia: historic magazine",
   "date": "2026-11-10",
@@ -9466,6 +9626,17 @@
    ]
   ]
  },
+ "pf-001163": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper in Quito"
+   ]
+  ]
+ },
  "pf-001164": {
   "date": "2026-11-10",
   "owner": "NHK",
@@ -9669,6 +9840,23 @@
     null,
     1,
     "English-language daily newspaper"
+   ]
+  ]
+ },
+ "pf-001187": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "major daily newspaper"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "National Assembly section"
    ]
   ]
  },
@@ -9994,6 +10182,27 @@
     null,
     1,
     "free-to-air TV network"
+   ]
+  ]
+ },
+ "pf-001242": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "state-owned TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -11952,6 +12161,23 @@
    ]
   ]
  },
+ "pf-001477": {
+  "audience": [
+   [
+    "minority_language",
+    "Faroese"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper in the Faroe Islands"
+   ]
+  ]
+ },
  "pf-001478": {
   "date": "2026-11-10",
   "topics": [
@@ -12678,6 +12904,24 @@
    ]
   ]
  },
+ "pf-001576": {
+  "date": "2026-11-10",
+  "owner": "JP/Politikens Hus",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-001577": {
   "date": "2026-11-10",
   "owner": "RAI",
@@ -12968,6 +13212,44 @@
     null,
     1,
     "Arabic-language TV channel"
+   ]
+  ]
+ },
+ "pf-001637": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public service channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public TV"
+   ]
+  ]
+ },
+ "pf-001638": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -13313,6 +13595,23 @@
     null,
     1,
     "Saitama Prefecture"
+   ]
+  ]
+ },
+ "pf-001702": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Funen"
    ]
   ]
  },
@@ -13718,6 +14017,29 @@
    ]
   ]
  },
+ "pf-001796": {
+  "audience": [
+   [
+    "religious",
+    "Christian readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Christian daily newspaper"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "faith and ethics"
+   ]
+  ]
+ },
  "pf-001798": {
   "date": "2026-11-09",
   "owner": "Grupo Folha",
@@ -14009,6 +14331,23 @@
     null,
     1,
     "commercial TV channel"
+   ]
+  ]
+ },
+ "pf-001847": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Svendborg"
    ]
   ]
  },
@@ -15013,6 +15352,17 @@
    ]
   ]
  },
+ "pf-002077": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-002078": {
   "date": "2026-11-10",
   "owner": "TVP",
@@ -15066,6 +15416,23 @@
     null,
     1,
     "business newspaper"
+   ]
+  ]
+ },
+ "pf-002095": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "South and Southern Jutland"
    ]
   ]
  },
@@ -15444,6 +15811,29 @@
    [
     "public_service_mandate",
     "Polish public broadcaster"
+   ]
+  ]
+ },
+ "pf-002149": {
+  "audience": [
+   [
+    "business_professionals",
+    "engineers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "technology",
+    null,
+    1,
+    "engineering and technology news"
+   ],
+   [
+    "science",
+    null,
+    1,
+    "science"
    ]
   ]
  },
@@ -15853,6 +16243,28 @@
     "war_conflict",
     2,
     "war section"
+   ]
+  ]
+ },
+ "pf-002256": {
+  "date": "2026-11-10",
+  "owner": "DR",
+  "ownership": [
+   "public_service",
+   "Wikipedia: Danish Broadcasting Corporation"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public talk radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Danish public broadcaster"
    ]
   ]
  },
@@ -17195,6 +17607,33 @@
    ]
   ]
  },
+ "pf-002528": {
+  "audience": [
+   [
+    "religious",
+    "Christian listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: missionary radio"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian missionary radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages incl. Quichua"
+   ]
+  ]
+ },
  "pf-002535": {
   "date": "2026-11-10",
   "owner": "ORF",
@@ -17869,6 +18308,17 @@
    ]
   ]
  },
+ "pf-002718": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football magazine"
+   ]
+  ]
+ },
  "pf-002729": {
   "date": "2026-11-10",
   "owner": "TRT",
@@ -17968,6 +18418,23 @@
     null,
     1,
     "Sichuan Province"
+   ]
+  ]
+ },
+ "pf-002747": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bornholm"
    ]
   ]
  },
@@ -19330,6 +19797,17 @@
    ]
   ]
  },
+ "pf-002988": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ]
+  ]
+ },
  "pf-002989": {
   "date": "2026-11-09",
   "owner": "Empresa Brasil de Comunicação (EBC)",
@@ -19822,6 +20300,34 @@
    ]
   ]
  },
+ "pf-003246": {
+  "audience": [
+   [
+    "children",
+    "children 3-13"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "DR",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by DR"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public children's channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Danish public broadcaster"
+   ]
+  ]
+ },
  "pf-003250": {
   "date": "2026-11-10",
   "owner": "Future plc",
@@ -20149,6 +20655,23 @@
     null,
     1,
     "news agency, 3,000 articles a day"
+   ]
+  ]
+ },
+ "pf-003343": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "major TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -21358,6 +21881,18 @@
    ]
   ]
  },
+ "pf-003867": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "communist newspaper"
+   ]
+  ]
+ },
  "pf-003868": {
   "audience": [
    [
@@ -21644,6 +22179,27 @@
    [
     "public_service_mandate",
     "Portuguese public broadcaster RTP"
+   ]
+  ]
+ },
+ "pf-003946": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Albavisión"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -22141,6 +22697,27 @@
     null,
     1,
     "illustrated magazine"
+   ]
+  ]
+ },
+ "pf-004111": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "state-run TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -22832,6 +23409,23 @@
    ]
   ]
  },
+ "pf-004349": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "international residents"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language newspaper"
+   ]
+  ]
+ },
  "pf-004350": {
   "date": "2026-11-10",
   "ownership": [
@@ -23065,6 +23659,28 @@
     null,
     3,
     "shipping news (Sjöfartsnytt)"
+   ]
+  ]
+ },
+ "pf-004440": {
+  "date": "2026-11-10",
+  "owner": "TV 2",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TV 2 regional"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Southern Denmark"
    ]
   ]
  },
@@ -25902,6 +26518,22 @@
    ]
   ]
  },
+ "pf-006036": {
+  "date": "2026-11-10",
+  "owner": "DR",
+  "ownership": [
+   "public_service",
+   "Wikipedia: DR"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public streaming service"
+   ]
+  ]
+ },
  "pf-006037": {
   "date": "2026-11-10",
   "owner": "Radio Mindanao Network",
@@ -26117,6 +26749,23 @@
     null,
     1,
     "Daegu"
+   ]
+  ]
+ },
+ "pf-006056": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
    ]
   ]
  },
@@ -26557,6 +27206,23 @@
     null,
     1,
     "literary magazine"
+   ]
+  ]
+ },
+ "pf-006262": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cuenca"
    ]
   ]
  },
@@ -27038,6 +27704,18 @@
    ]
   ]
  },
+ "pf-006443": {
+  "closed": "Wikipedia: 'fue' (was) a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state newspaper"
+   ]
+  ]
+ },
  "pf-006459": {
   "closed": "Wikipedia: Freak Out! 'was' a magazine",
   "date": "2026-11-10",
@@ -27492,6 +28170,21 @@
    ]
   ]
  },
+ "pf-006652": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: official digital information service of the state"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official state news agency"
+   ]
+  ]
+ },
  "pf-006653": {
   "date": "2026-11-10",
   "ownership": [
@@ -27715,6 +28408,35 @@
     null,
     1,
     "national daily newspaper"
+   ]
+  ]
+ },
+ "pf-006860": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Ecuadorians abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international pay TV signal"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "Ecuadorians abroad"
    ]
   ]
  },
@@ -28580,6 +29302,23 @@
     null,
     1,
     "Medellín"
+   ]
+  ]
+ },
+ "pf-007316": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cuenca"
    ]
   ]
  },
@@ -30435,6 +31174,50 @@
    ]
   ]
  },
+ "pf-009428": {
+  "date": "2026-11-10",
+  "owner": "TV 2",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TV 2 network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Central and West Jutland"
+   ]
+  ]
+ },
+ "pf-009429": {
+  "date": "2026-11-10",
+  "owner": "TV 2",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TV 2 regional"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "North Jutland"
+   ]
+  ]
+ },
  "pf-009434": {
   "audience": [
    [
@@ -30449,6 +31232,28 @@
     null,
     1,
     "cartoons for children"
+   ]
+  ]
+ },
+ "pf-009435": {
+  "date": "2026-11-10",
+  "owner": "TV 2",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TV 2 network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Funen"
    ]
   ]
  },
@@ -31601,6 +32406,18 @@
    ]
   ]
  },
+ "pf-012126": {
+  "country_hint": "SWE (Swedish magazine based in Malmö)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "history magazine"
+   ]
+  ]
+ },
  "pf-012133": {
   "date": "2026-11-10",
   "topics": [
@@ -32529,6 +33346,23 @@
    ]
   ]
  },
+ "pf-012753": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online communist daily"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    2,
+    "trade union section"
+   ]
+  ]
+ },
  "pf-012760": {
   "closed": "Wikipedia: Folkbladet 'was' a newspaper",
   "date": "2026-11-10",
@@ -32805,6 +33639,196 @@
    [
     "public_service_mandate",
     "Bulgarian public broadcaster"
+   ]
+  ]
+ },
+ "pf-013041": {
+  "audience": [
+   [
+    "policy_makers",
+    "politics and policy"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "independent newspaper on Danish politics"
+   ]
+  ]
+ },
+ "pf-013047": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "history magazine"
+   ]
+  ]
+ },
+ "pf-013051": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "men's lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-013059": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Herning"
+   ]
+  ]
+ },
+ "pf-013060": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Horsens"
+   ]
+  ]
+ },
+ "pf-013071": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Silkeborg"
+   ]
+  ]
+ },
+ "pf-013073": {
+  "audience": [
+   [
+    "older_persons",
+    "older audience music"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "DR",
+  "ownership": [
+   "public_service",
+   "Wikipedia: DR"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
+   ]
+  ]
+ },
+ "pf-013079": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local daily"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Skive"
+   ]
+  ]
+ },
+ "pf-013084": {
+  "date": "2026-11-10",
+  "owner": "TV 2",
+  "ownership": [
+   "public_service",
+   "Wikipedia: TV 2 network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bornholm"
+   ]
+  ]
+ },
+ "pf-013088": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public service TV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sealand and Lolland-Falster"
+   ]
+  ]
+ },
+ "pf-013091": {
+  "date": "2026-11-10",
+  "owner": "Jysk Fynske Medier",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Vejle"
    ]
   ]
  },
@@ -34929,6 +35953,23 @@
    ]
   ]
  },
+ "pf-015033": {
+  "audience": [
+   [
+    "women",
+    "women's rights"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    "women_rights",
+    1,
+    "feminist magazine"
+   ]
+  ]
+ },
  "pf-015036": {
   "date": "2026-11-10",
   "topics": [
@@ -35080,6 +36121,22 @@
     "violence_peace",
     2,
     "crime coverage"
+   ]
+  ]
+ },
+ "pf-015116": {
+  "date": "2026-11-10",
+  "owner": "DR",
+  "ownership": [
+   "public_service",
+   "Wikipedia: DR"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "jazz radio"
    ]
   ]
  },
@@ -35363,6 +36420,17 @@
    ]
   ]
  },
+ "pf-015387": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "celebrity weekly"
+   ]
+  ]
+ },
  "pf-015413": {
   "date": "2026-11-10",
   "owner": "MBC Media Group",
@@ -35526,6 +36594,23 @@
     null,
     1,
     "Chattogram"
+   ]
+  ]
+ },
+ "pf-015478": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Latin American information agency on social movements"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "social movements"
    ]
   ]
  },
@@ -36199,6 +37284,23 @@
     null,
     1,
     "city of Aguascalientes"
+   ]
+  ]
+ },
+ "pf-016331": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "long-form online newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "storytelling",
+    "long-form stories"
    ]
   ]
  },
@@ -36886,6 +37988,27 @@
    ]
   ]
  },
+ "pf-016897": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: government-owned"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government-owned TV station"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Danish public broadcaster"
+   ]
+  ]
+ },
  "pf-016915": {
   "date": "2026-11-10",
   "owner": "TV Azteca",
@@ -36943,6 +38066,33 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: organ of Spanish Catholic integrism, links to the extreme right",
   "topics": []
+ },
+ "pf-016967": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "peace_justice",
+    "violence_peace",
+    1,
+    "press agency on peace and non-violence"
+   ],
+   [
+    "human_rights",
+    null,
+    1,
+    "human rights"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many languages"
+   ],
+   [
+    "open_to_partner_content",
+    "volunteer-based agency"
+   ]
+  ]
  },
  "pf-017013": {
   "audience": [
@@ -37422,6 +38572,18 @@
    ]
   ]
  },
+ "pf-021058": {
+  "closed": "Wikipedia: historic magazine (1905)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    null,
+    1,
+    "first Ecuadorian women's magazine"
+   ]
+  ]
+ },
  "pf-021289": {
   "audience": [
    [
@@ -37578,6 +38740,28 @@
     null,
     2,
     "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-021505": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "weekly family magazine"
+   ]
+  ]
+ },
+ "pf-021513": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital newspaper"
    ]
   ]
  },
@@ -37827,6 +39011,23 @@
     null,
     1,
     "pay TV of La República"
+   ]
+  ]
+ },
+ "pf-021897": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital-native news outlet"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "elections"
    ]
   ]
  },
@@ -38229,6 +39430,18 @@
     null,
     1,
     "Football Federation TV"
+   ]
+  ]
+ },
+ "pf-022961": {
+  "closed": "Wikipedia: 'fue' (was) a magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "avant-garde magazine"
    ]
   ]
  },
@@ -38779,6 +39992,18 @@
    ]
   ]
  },
+ "pf-023655": {
+  "closed": "Wikipedia: published 1998-2000",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "comic anthology magazine"
+   ]
+  ]
+ },
  "pf-023657": {
   "date": "2026-11-10",
   "ownership": [
@@ -38818,6 +40043,18 @@
     null,
     1,
     "satellite entertainment channel"
+   ]
+  ]
+ },
+ "pf-023757": {
+  "closed": "Wikipedia: published 1913-1952",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local newspaper"
    ]
   ]
  },
@@ -39457,6 +40694,17 @@
    ]
   ]
  },
+ "pf-024784": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language news of teleSUR"
+   ]
+  ]
+ },
  "pf-024869": {
   "date": "2026-11-10",
   "topics": [
@@ -39566,6 +40814,17 @@
     null,
     2,
     "documentaries"
+   ]
+  ]
+ },
+ "pf-025149": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
    ]
   ]
  },
@@ -39827,6 +41086,17 @@
     null,
     1,
     "Christian radio network"
+   ]
+  ]
+ },
+ "pf-025784": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cultural magazine"
    ]
   ]
  },
@@ -40494,6 +41764,17 @@
    ]
   ]
  },
+ "pf-029432": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "rock radio"
+   ]
+  ]
+ },
  "pf-029483": {
   "audience": [
    [
@@ -40828,6 +42109,34 @@
     null,
     1,
     "Limburg"
+   ]
+  ]
+ },
+ "pf-031545": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV news"
+   ]
+  ]
+ },
+ "pf-031578": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cuenca"
    ]
   ]
  },
@@ -41245,6 +42554,17 @@
     null,
     1,
     "Santa Cruz valleys"
+   ]
+  ]
+ },
+ "pf-032579": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio network"
    ]
   ]
  },
@@ -41671,6 +42991,17 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-036786": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
  "pf-036789": {
   "date": "2026-11-10",
   "topics": []
@@ -41977,6 +43308,10 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-037348": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-037404": {
   "date": "2026-11-10",
   "topics": [
@@ -41988,10 +43323,66 @@
    ]
   ]
  },
+ "pf-037436": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "online TV of Ambato"
+   ]
+  ]
+ },
  "pf-037443": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037445": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio (America Estereo network)"
+   ]
+  ]
+ },
+ "pf-037446": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio (America Estereo network)"
+   ]
+  ]
+ },
+ "pf-037447": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio (America Estereo network)"
+   ]
+  ]
+ },
+ "pf-037450": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local cable channel"
+   ]
+  ],
+  "website_warning": "the website shows a cable/internet provider, not the channel's programmes"
  },
  "pf-037459": {
   "date": "2026-11-10",
@@ -42025,6 +43416,18 @@
     "TV of Oruro"
    ]
   ]
+ },
+ "pf-037541": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local cable channel"
+   ]
+  ],
+  "website_warning": "the website shows a cable/internet provider, not the channel's programmes"
  },
  "pf-037549": {
   "date": "2026-11-10",
@@ -42087,6 +43490,10 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-037691": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-037720": {
   "date": "2026-11-10",
   "topics": [
@@ -42095,6 +43502,17 @@
     null,
     1,
     "digital news platform"
+   ]
+  ]
+ },
+ "pf-037768": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    2,
+    "'Canal de vida'"
    ]
   ]
  },
@@ -42127,6 +43545,23 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037896": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Azogues"
+   ]
+  ]
  },
  "pf-037913": {
   "date": "2026-11-10",
@@ -42196,6 +43631,18 @@
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
+ },
+ "pf-037986": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local cable channel"
+   ]
+  ],
+  "website_warning": "the website shows a cable/internet provider, not the channel's programmes"
  },
  "pf-038021": {
   "audience": [
@@ -42375,6 +43822,29 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-038347": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV of Salinas"
+   ]
+  ]
+ },
+ "pf-038349": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local cable channel"
+   ]
+  ],
+  "website_warning": "the website shows a cable/internet provider, not the channel's programmes"
+ },
  "pf-038365": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
@@ -42397,6 +43867,32 @@
    ]
   ]
  },
+ "pf-038458": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-038488": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV channel"
+   ]
+  ]
+ },
+ "pf-038490": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV of Caluma"
+   ]
+  ]
+ },
  "pf-038496": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
@@ -42413,6 +43909,17 @@
  "pf-038621": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-038860": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local TV of Cayambe"
+   ]
+  ]
  },
  "pf-038907": {
   "date": "2026-11-09",
@@ -42724,6 +44231,17 @@
    ]
   ]
  },
+ "pf-052294": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news magazine portal"
+   ]
+  ]
+ },
  "pf-052779": {
   "audience": [
    [
@@ -42810,6 +44328,11 @@
     "collaborates with local storytellers"
    ]
   ]
+ },
+ "pf-056040": {
+  "date": "2026-11-10",
+  "topics": [],
+  "website_warning": "the website shows an unrelated page (dog training), not the radio"
  },
  "pf-056339": {
   "date": "2026-11-10",
@@ -43095,6 +44618,10 @@
     "website section Salud"
    ]
   ]
+ },
+ "pf-065076": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-066801": {
   "date": "2026-11-10",
