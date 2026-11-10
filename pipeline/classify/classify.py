@@ -701,6 +701,13 @@ def main():
             also.append("news_outlet")
         cat["org_type_also"] = also
         fr = far_right(o, rules["exclude_far_right"], fr_evidence, owners)
+        a_ = ai.get(o["id"]) or {}
+        if not fr and rules["exclude_far_right"].get("ai_reading") and a_.get("far_right"):
+            fr = "AI reading: " + a_["far_right"]
+        if not fr and rules["exclude_far_right"].get("hide_right_wing_populist") and a_.get("right_populist"):
+            fr = "AI reading (right-wing populist): " + a_["right_populist"]
+        if a_.get("right_populist"):
+            o["right_populist"] = a_["right_populist"]
         if fr and (overrides.get(o["id"], {}).get("far_right") or {}).get("value") == "no":
             fr = None
         cat["excluded"] = fr
@@ -762,6 +769,11 @@ def main():
              "To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.", "",
              "| Id | Name | Country | Reason |", "|---|---|---|---|"]
     lines += [f"| {o['id']} | {o['name']} | {o['country']} | {o['cat']['excluded']} |" for o in ex]
+    rp = sorted((o for o in outlets if o.get("right_populist") and not o["cat"].get("excluded")), key=lambda o: (o["country"] or "", o["name"] or ""))
+    lines += ["", f"## Right-wing populist / party-aligned right-wing media: SHOWN for now ({len(rp)})", "",
+              "Hidden only if the owner sets hide_right_wing_populist: true in config/rules.yaml.", "",
+              "| Id | Name | Country | Reason |", "|---|---|---|---|"]
+    lines += [f"| {o['id']} | {o['name']} | {o['country']} | {o['right_populist']} |" for o in rp]
     (ROOT / "reports" / "excluded_far_right.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"excluded as far-right: {len(ex)}")
 

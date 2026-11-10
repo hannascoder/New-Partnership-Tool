@@ -538,7 +538,7 @@
  },
  "pf-000142": {
   "date": "2026-11-10",
-  "review": "Wikipedia describes it as right-wing; please check against the far-right rule (rules.yaml)",
+  "far_right": "Wikipedia: conservative, right-wing, nationalistic; 'ideological supply ship of right-wing populism'",
   "topics": [
    [
     "general_news",
@@ -977,6 +977,11 @@
    ]
   ]
  },
+ "pf-000238": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: mouthpiece of the RSS (Hindutva)",
+  "topics": []
+ },
  "pf-000246": {
   "audience": [
    [
@@ -1146,6 +1151,11 @@
     "entertainment channel"
    ]
   ]
+ },
+ "pf-000346": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: taken over by a right-wing populist media owner in 2022",
+  "topics": []
  },
  "pf-000354": {
   "audience": [
@@ -1425,6 +1435,11 @@
     "international news agency"
    ]
   ]
+ },
+ "pf-000533": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: editorial stance perceived as far-right since 2023",
+  "topics": []
  },
  "pf-000540": {
   "date": "2026-11-10",
@@ -2069,6 +2084,11 @@
    ]
   ]
  },
+ "pf-001090": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: owned by a right-wing populist politician",
+  "topics": []
+ },
  "pf-001097": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín",
@@ -2583,6 +2603,11 @@
    ]
   ]
  },
+ "pf-001545": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: conservative, nationalist, far-right stance (major Japanese daily)",
+  "topics": []
+ },
  "pf-001555": {
   "date": "2026-11-09",
   "topics": [
@@ -2673,6 +2698,11 @@
     "open TV station"
    ]
   ]
+ },
+ "pf-001740": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing, nationalist",
+  "topics": []
  },
  "pf-001762": {
   "date": "2026-11-10",
@@ -2906,6 +2936,11 @@
     "website section Tecnología"
    ]
   ]
+ },
+ "pf-002019": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing editorial stance",
+  "topics": []
  },
  "pf-002115": {
   "date": "2026-11-09",
@@ -3170,6 +3205,11 @@
     "national public radio"
    ]
   ]
+ },
+ "pf-002675": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: right-wing to far-right",
+  "topics": []
  },
  "pf-002676": {
   "closed": "published until December 2024, merged with a sister magazine",
@@ -3479,6 +3519,11 @@
    ]
   ]
  },
+ "pf-003202": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: classed to the right or far right",
+  "topics": []
+ },
  "pf-003262": {
   "audience": [
    [
@@ -3576,6 +3621,16 @@
    ]
   ]
  },
+ "pf-003347": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: founded by an extreme-right journalist",
+  "topics": []
+ },
+ "pf-003350": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing political commentary",
+  "topics": []
+ },
  "pf-003359": {
   "date": "2026-11-09",
   "owner": "Fundação Padre Anchieta",
@@ -3647,6 +3702,11 @@
     "website section Affaires"
    ]
   ]
+ },
+ "pf-003419": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right opinion channel",
+  "topics": []
  },
  "pf-003420": {
   "date": "2026-11-10",
@@ -3810,6 +3870,11 @@
    ]
   ]
  },
+ "pf-003710": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: extreme-right collaborationist review (1936-1944)",
+  "topics": []
+ },
  "pf-003712": {
   "date": "2026-11-10",
   "topics": [
@@ -3826,6 +3891,11 @@
     "website section La bonne nouvelle"
    ]
   ]
+ },
+ "pf-003722": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: extreme-right weekly",
+  "topics": []
  },
  "pf-003740": {
   "date": "2026-11-09",
@@ -4009,6 +4079,11 @@
     "website section Educación"
    ]
   ]
+ },
+ "pf-003906": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing TV news channel",
+  "topics": []
  },
  "pf-003948": {
   "date": "2026-11-09",
@@ -4218,6 +4293,16 @@
    ]
   ]
  },
+ "pf-004244": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: today associated with the far right",
+  "topics": []
+ },
+ "pf-004329": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right nationalist newspaper (1920-1939)",
+  "topics": []
+ },
  "pf-004348": {
   "date": "2026-11-10",
   "owner": "Postmedia Network",
@@ -4229,6 +4314,11 @@
     "local newspaper in Brantford"
    ]
   ]
+ },
+ "pf-004463": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: right-wing populist to far-right weekly",
+  "topics": []
  },
  "pf-004581": {
   "audience": [
@@ -4247,6 +4337,11 @@
     "news on Hollywood and the entertainment industry"
    ]
   ]
+ },
+ "pf-004610": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: called a far-right online publication",
+  "topics": []
  },
  "pf-005196": {
   "date": "2026-11-09",
@@ -4477,6 +4572,16 @@
    ]
   ]
  },
+ "pf-006174": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: right-wing to far-right anti-immigration site",
+  "topics": []
+ },
+ "pf-006177": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing news channel",
+  "topics": []
+ },
  "pf-006260": {
   "date": "2026-11-09",
   "topics": [
@@ -4498,6 +4603,11 @@
     "only newspaper of Salta province"
    ]
   ]
+ },
+ "pf-006284": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing TV channel",
+  "topics": []
  },
  "pf-006293": {
   "date": "2026-11-09",
@@ -4739,6 +4849,11 @@
    ]
   ]
  },
+ "pf-008550": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing journal",
+  "topics": []
+ },
  "pf-008616": {
   "date": "2026-11-09",
   "topics": [
@@ -4801,6 +4916,11 @@
     "educational children's channel"
    ]
   ]
+ },
+ "pf-008833": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: published by the RSS (Hindu nationalist)",
+  "topics": []
  },
  "pf-009061": {
   "date": "2026-11-09",
@@ -5034,6 +5154,11 @@
    ]
   ]
  },
+ "pf-012608": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing, supports Law and Justice",
+  "topics": []
+ },
  "pf-013525": {
   "date": "2026-11-10",
   "ownership": [
@@ -5090,6 +5215,11 @@
   "not_media": "online chess platform, not a media outlet",
   "topics": []
  },
+ "pf-014857": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right news channel",
+  "topics": []
+ },
  "pf-014965": {
   "country_hint": "MEX (channel of Mexican origin)",
   "date": "2026-11-09",
@@ -5131,6 +5261,26 @@
    ]
   ]
  },
+ "pf-015038": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing news website",
+  "topics": []
+ },
+ "pf-015108": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: right-wing and far-right",
+  "topics": []
+ },
+ "pf-015121": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing magazine, favourable to the BJP",
+  "topics": []
+ },
+ "pf-015216": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: Spanish far right of the 1930s",
+  "topics": []
+ },
  "pf-015602": {
   "audience": [
    [
@@ -5149,9 +5299,19 @@
    ]
   ]
  },
+ "pf-015686": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: junction of right and far-right currents",
+  "topics": []
+ },
  "pf-016215": {
   "date": "2026-11-09",
   "not_media": "search engine for scientific papers, not a media outlet",
+  "topics": []
+ },
+ "pf-016423": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing media company",
   "topics": []
  },
  "pf-016427": {
@@ -5192,6 +5352,31 @@
     "name: Radio Maria, a Catholic radio network"
    ]
   ]
+ },
+ "pf-016610": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right conservative media company",
+  "topics": []
+ },
+ "pf-016621": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing and conservative",
+  "topics": []
+ },
+ "pf-016697": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing news channel",
+  "topics": []
+ },
+ "pf-016954": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: organ of Spanish Catholic integrism, links to the extreme right",
+  "topics": []
+ },
+ "pf-017019": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right fake news website",
+  "topics": []
  },
  "pf-017095": {
   "date": "2026-11-09",
@@ -5236,6 +5421,16 @@
    ]
   ]
  },
+ "pf-017409": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing militarist religious network",
+  "topics": []
+ },
+ "pf-017615": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: organ of the extreme right (1977-1980)",
+  "topics": []
+ },
  "pf-021455": {
   "date": "2026-11-09",
   "owner": "Grupo Perfil",
@@ -5274,6 +5469,11 @@
    ]
   ]
  },
+ "pf-021830": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: described as far-right, misleading information",
+  "topics": []
+ },
  "pf-022009": {
   "date": "2026-11-09",
   "owner": "Socialist Workers' Party (PTS)",
@@ -5291,6 +5491,26 @@
     "created by the Socialist Workers' Party"
    ]
   ]
+ },
+ "pf-022640": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing political website",
+  "topics": []
+ },
+ "pf-022661": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right news website, disinformation",
+  "topics": []
+ },
+ "pf-023074": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing populist news website",
+  "topics": []
+ },
+ "pf-023337": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: right-wing orientation",
+  "topics": []
  },
  "pf-023479": {
   "audience": [
@@ -5321,6 +5541,11 @@
    ]
   ]
  },
+ "pf-023635": {
+  "date": "2026-11-10",
+  "right_populist": "channel of the right-wing populist Sweden Democrats",
+  "topics": []
+ },
  "pf-023760": {
   "date": "2026-11-09",
   "topics": [
@@ -5343,6 +5568,11 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-024405": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: kept the far-right, pro-government positioning of Nation TV",
+  "topics": []
+ },
  "pf-024446": {
   "date": "2026-11-09",
   "owner": "Mediapro",
@@ -5354,6 +5584,11 @@
     "sports channels"
    ]
   ]
+ },
+ "pf-024577": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: extreme-right French media",
+  "topics": []
  },
  "pf-024753": {
   "date": "2026-11-09",
@@ -5416,6 +5651,11 @@
    ]
   ]
  },
+ "pf-025065": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: pushes far-right content and conspiracy theories",
+  "topics": []
+ },
  "pf-026657": {
   "date": "2026-11-09",
   "topics": [
@@ -5450,6 +5690,21 @@
     "Wikipedia: interviews, videos and podcasts"
    ]
   ]
+ },
+ "pf-026750": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: nationalist outlet linked to an ultranationalist organisation, anti-Rohingya reports",
+  "topics": []
+ },
+ "pf-026893": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: close to far-right politicians, spreads disinformation",
+  "topics": []
+ },
+ "pf-027056": {
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: far-right 're-information' media spreading Kremlin propaganda",
+  "topics": []
  },
  "pf-036750": {
   "date": "2026-11-09",

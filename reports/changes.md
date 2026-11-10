@@ -1,7 +1,7 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 11 (merged into another entry, excluded, or gone from all sources)
+- No longer shown: 40 (merged into another entry, excluded, or gone from all sources)
 - Changed values: ownership 21, scope 1
 
 ### Examples: ownership
@@ -26,14 +26,18 @@
 
 ### Examples: no longer shown
 
+- A Muvra (FRA, pf-004329)
+- American Thinker (USA, pf-004610)
 - Boletín Oficial del Estado (ESP, pf-002425)
+- Causeur (FRA, pf-003202)
 - Chess.com (USA, pf-014292)
+- CNews (FRA, pf-003419)
+- Crónica Global (ESP, pf-015686)
 - digest size (BRA, pf-002778)
+- Disclose.tv (DEU, pf-025065)
 - Disney Channel (ARG, pf-003262)
+- Document.no (NOR, pf-006174)
+- El Fascio (ESP, pf-015216)
+- El Imparcial (ESP, pf-017615)
 - El Punt (ESP, pf-001694)
-- G Magazine (BRA, pf-000175)
-- Google News (USA, pf-000017)
-- GP Racing (ESP, pf-002676)
-- Penthouse (USA, pf-000103)
-- Reddit (USA, pf-000001)
-- الباحث الدلالي (USA, pf-016215)
+- Faits et Documents (FRA, pf-003347)

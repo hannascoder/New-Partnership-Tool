@@ -231,13 +231,12 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 | pf-006436 | Fox News Radio | CAN | USA (American radio network) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
 
-## AI reading: please check (1)
+## AI reading: please check (0)
 
 | Id | Name | Country | Note |
 |---|---|---|---|
-| pf-000142 | Junge Freiheit | DEU | Wikipedia describes it as right-wing; please check against the far-right rule (rules.yaml) |
 
-## Possible duplicates: same website, several entries (2926)
+## Possible duplicates: same website, several entries (2922)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 

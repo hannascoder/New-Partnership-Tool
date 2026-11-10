@@ -217,6 +217,13 @@ exclude_far_right:
   # "alt-right", "neo-Nazi", "white nationalist" or "fascist" and a media word
   # (fetched by pipeline/fetch/far_right.py), and their direct subcategories.
   wikipedia_categories: true
+  # 3. AI reading of the Wikipedia text (cache/ai_classification.json, "far_right"): outlets described
+  #    as far-right / extreme right, or like Junge Freiheit (owner, 10.11.2026: "ausblenden, und rechte
+  #    Medien wie Junge Freiheit auch").
+  ai_reading: true
+  # Right-wing populist / party-aligned right-wing media ("right_populist" in the AI reading, e.g. GB News,
+  # Republic TV, Die Weltwoche): listed in reports/excluded_far_right.md; hidden only if set to true.
+  hide_right_wing_populist: false
 
 # ---------------------------------------------------------------- website check
 # Channels found on the outlet's own website (menu entries, feed addresses).
