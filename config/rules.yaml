@@ -223,7 +223,7 @@ exclude_far_right:
   ai_reading: true
   # Right-wing populist / party-aligned right-wing media ("right_populist" in the AI reading, e.g. GB News,
   # Republic TV, Die Weltwoche): listed in reports/excluded_far_right.md; hidden only if set to true.
-  hide_right_wing_populist: false
+  hide_right_wing_populist: true
 
 # ---------------------------------------------------------------- website check
 # Channels found on the outlet's own website (menu entries, feed addresses).

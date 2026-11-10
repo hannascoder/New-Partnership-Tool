@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 41 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 41, scope 1
+- No longer shown: 110 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 40, scope 3
 
 ### Examples: ownership
 
@@ -19,25 +19,27 @@
 
 ### Examples: scope
 
+- Azteca Guatemala (pf-001224): unknown → national
 - Miramar (pf-001731): unknown → national
+- Mexicanal (pf-006382): national → unknown
 
 ### Examples: new
 
 
 ### Examples: no longer shown
 
+- 0404 News (ISR, pf-015038)
 - A Muvra (FRA, pf-004329)
+- Aaj Tak (IND, pf-003906)
 - American Thinker (USA, pf-004610)
+- Apollo News (DEU, pf-025589)
+- Avriani (GRC, pf-004254)
+- BC Report (CAN, pf-005351)
+- Blaze Media (USA, pf-009508)
 - Boletín Oficial del Estado (ESP, pf-002425)
+- Cahiers du Cercle Proudhon (FRA, pf-003169)
 - Causeur (FRA, pf-003202)
 - Chess.com (USA, pf-014292)
+- CHOI-FM (CAN, pf-003135)
 - CNews (FRA, pf-003419)
-- Crónica Global (ESP, pf-015686)
-- digest size (BRA, pf-002778)
-- Disclose.tv (DEU, pf-025065)
-- Disney Channel (ARG, pf-003262)
-- Document.no (NOR, pf-006174)
-- El Fascio (ESP, pf-015216)
-- El Imparcial (ESP, pf-017615)
-- El Punt (ESP, pf-001694)
-- Faits et Documents (FRA, pf-003347)
+- Counter-Currents (USA, pf-027761)

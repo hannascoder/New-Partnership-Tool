@@ -141,8 +141,12 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
 - Right-wing media (owner, 10.11.2026: "ausblenden und rechte Medien wie Junge Freiheit auch"): the AI reading
   of the Wikipedia text marks far-right outlets ("far_right", 29 hidden, e.g. Junge Freiheit, OAN, Newsmax,
   Valeurs actuelles) and right-wing populist / party-aligned ones ("right_populist", 23, e.g. GB News, Aaj Tak,
-  Die Weltwoche) - the latter are SHOWN until the owner decides (config/rules.yaml hide_right_wing_populist).
-  Mainstream conservative media (Le Figaro, Le Point, FAZ ...) stay. List: reports/excluded_far_right.md.
+  Die Weltwoche). Owner, 10.11.2026: "alles raus was rechts ist, auch die größeren" -> hide_right_wing_populist: true,
+  plus 45 more found in the Wikipedia texts or well known (Fox News, Estadão, Veja, Jovem Pan, Epoch Times, Sky News
+  Australia, Magyar Nemzet, Origo, Okdiario ...; reasons marked "general knowledge" where the text does not say it).
+  Mainstream conservative media (Le Figaro, FAZ, Telegraph, Daily Mail, Bild, NY Post ...) stay for now - asked owner.
+  List: reports/excluded_far_right.md. Country corrections (owner, 10.11.2026): UPI, Fox News Radio, Univision,
+  Mexicanal -> USA; Gamereactor -> DNK; Azteca Guatemala -> GTM; i24NEWS -> ISR (overrides.csv).
 - Platforms and non-media (Reddit, Google News, official gazettes ...) stay hidden (owner, 10.11.2026).
   The AI reading also hides entries that are not media or no longer published (reports/hidden_ai.md)
   and lists outlets that are probably in another country (reports/contradictions.md).

@@ -171,7 +171,7 @@ def main():
             "The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is listed.", "",
             "| Id | Name | Used | Sources say |", "|---|---|---|---|"]
     con += [f"| {o['id']} | {o['name']} | {o['country']} | {', '.join(o['country_conflict'])} |" for o in cc[:300]]
-    hint = [o for o in outlets if o["cat"].get("country_hint")]
+    hint = [o for o in outlets if o["cat"].get("country_hint") and not o["cat"]["country_hint"].startswith(o["country"] or "-")]
     con += ["", f"## AI reading: probably in another country ({len(hint)})", "",
             "The tool keeps the country from Wikidata / the sources; tell Claude if one should change.", "",
             "| Id | Name | Country now | AI reading says |", "|---|---|---|---|"]

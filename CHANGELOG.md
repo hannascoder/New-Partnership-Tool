@@ -4,7 +4,10 @@
 - AI reading (in the chat, no paid API) for the top 50 outlets of DR Congo, USA, Brazil, Argentina, Canada,
   Spain, Germany, Mexico and France (500 outlets): topics, target audience, UN profile, owner.
 - Far-right media hidden also by reading the Wikipedia text (29 more, e.g. Junge Freiheit); right-wing
-  populist media listed for the owner's decision.
+  populist and partisan right-wing media hidden as well (owner: "alles raus was rechts ist"), e.g. Fox News,
+  GB News, Aaj Tak, Die Weltwoche; ~120 in total, each with its reason in reports/excluded_far_right.md.
+- 7 outlets moved to their real country (UPI, Fox News Radio, Univision, Mexicanal, Gamereactor, Azteca
+  Guatemala, i24NEWS).
 - Entries that are not media (platforms, official gazettes) or no longer published are hidden.
 
 ## 2026-11-09 (evening)
