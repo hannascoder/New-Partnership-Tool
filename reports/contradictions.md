@@ -219,12 +219,13 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (1)
+## AI reading: probably in another country (2)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
 | Id | Name | Country now | AI reading says |
 |---|---|---|---|
+| pf-000695 | مک‌ورلد | GBR | USA (published by Foundry, founded in the USA) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
 
 ## AI reading: please check (0)

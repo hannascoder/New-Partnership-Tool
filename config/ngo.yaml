@@ -1,0 +1,95 @@
+# NGOs (phase 2, owner's decisions 10.11.2026)
+# - NGOs are in the database but only shown when "Include NGOs in this search" is ticked.
+# - Same filters as media (country, region, language, topics/SDGs, target audience, contact ...);
+#   extra NGO filters fold out when the box is ticked.
+# - Classic NGOs only for now (no foundations, universities, think tanks, companies).
+# - ALL ECOSOC NGOs, also those only registered without consultative status (small note on the card,
+#   filter "Only NGOs with ECOSOC status").
+# - Far-right NGOs and government-organised NGOs (GONGOs) are not shown.
+# - Shown together with media on the website, but in separate sections in the export.
+
+checkbox_label: "Include NGOs in this search"
+checkbox_hint: "Adds non-governmental organisations (NGOs) to the results: ECOSOC, UN Geneva, Wikidata and IATI. NGO filters open below."
+
+# UN status / accreditation ("Member of" for NGOs). Order = strength for the ranking.
+un_status:
+  - {id: ecosoc_general, label: "ECOSOC General consultative status", weight: 6}
+  - {id: ecosoc_special, label: "ECOSOC Special consultative status", weight: 5}
+  - {id: ecosoc_roster, label: "ECOSOC Roster status", weight: 4}
+  - {id: dgc_associated, label: "Associated with UN DGC", weight: 4}
+  - {id: un_geneva, label: "Accredited at UN Geneva", weight: 3}
+  - {id: desa_cosp, label: "Accredited to the Disability Conference (COSP)", weight: 3}
+  - {id: ecosoc_registered, label: "Registered in the ECOSOC database (no status)", weight: 1,
+     note: "Only registered in the UN civil society database: not checked by the UN."}
+  - {id: iati_publisher, label: "Publishes its projects (IATI)", weight: 2}
+only_ecosoc_label: "Only NGOs with ECOSOC consultative status"
+
+# Type of work: from the ECOSOC fields of activity, else from words in the name (descriptions name too much).
+# A soft guess, shown as such on the card ("from the name / description").
+type_of_work:
+  - id: advocacy
+    label: "Advocacy & rights"
+    fields: [human rights, minority rights, torture, women/gender equality, human rights of women, advocacy and outreach]
+    words: [advocacy, rights, droits, derechos, direitos, watch, campaign, justice, liberties, defenders]
+  - id: humanitarian
+    label: "Humanitarian aid & service delivery"
+    fields: [humanitarian affairs, refugees, service provision, de-mining]
+    words: [relief, humanitarian, aid, emergency, rescue, secours, ayuda, socorro, charity, charitable, caritas, red cross, red crescent, croix-rouge, cruz roja, food bank]
+  - id: development
+    label: "Development"
+    fields: [development, sustainable development, extreme poverty, least developed countries, rural development, micro-credit]
+    words: [development, développement, desarrollo, desenvolvimento, poverty, pauvreté, pobreza, empowerment]
+  - id: research
+    label: "Research & policy"
+    fields: [research, policy advice, statistics]
+    words: [research, institute, institut, instituto, studies, centre for, center for, policy, observatory, observatoire, observatorio]
+  - id: network
+    label: "Network / umbrella organisation"
+    fields: []
+    words: [network, réseau, red de, rede, federation, fédération, federación, alliance, alianza, coalition, coalición, union of, platform, plateforme, plataforma, council, conseil, confederation, international association, world association]
+  - id: grassroots
+    label: "Grassroots & community"
+    fields: [volunteerism]
+    words: [community, communauté, comunidad, comunidade, grassroots, village, local, association locale, self-help, cooperative]
+  - id: youth
+    label: "Youth organisation"
+    fields: [youth]
+    words: [youth, young, jeunes, jeunesse, juventud, jóvenes, juventude, jovens, student, students, étudiants, estudiantes, scouts, guides]
+  - id: women
+    label: "Women's organisation"
+    fields: [women, women/gender equality, gender issues and advancement of women]
+    words: [women, woman, women's, femmes, femme, mujeres, mujer, mulheres, mulher, girls, filles, niñas, sisters, sisterhood, feminist, féministe, feminista]
+  - id: faith_based
+    label: "Faith-based"
+    fields: [religion]
+    words: [church, christian, catholic, evangelical, lutheran, methodist, baptist, adventist, islamic, muslim, jewish, buddhist, hindu, sikh, bahá'í, baha'i, quaker, faith, église, chrétien, iglesia, cristiana, islámica, igreja, diocese, ministries, mission]
+
+# ECOSOC fields of activity -> target audience (config/categories.yaml audience ids)
+audience_from_fields:
+  children: children
+  the girl child: children
+  youth: youth_students
+  aging: older_persons
+  disabled persons: persons_with_disabilities
+  indigenous peoples: indigenous
+  indigenous issues: indigenous
+  women: women
+  women/gender equality: women
+  migration: diaspora_migrants
+  refugees: diaspora_migrants
+  minority rights: ethnic_minorities
+  agriculture: rural_farmers
+  rural development: rural_farmers
+  religion: religious
+
+# Not shown (owner 10.11.2026: "ja auch raus"):
+exclude:
+  # Wikidata classes of the item (instance of): government-organised NGOs
+  wikidata_classes: [government-organized non-governmental organization, GONGO, state-sponsored organization]
+  # same far-right ideologies as for media: config/rules.yaml exclude_far_right.wikidata_ideologies
+  # words in the name that show it is not a classic NGO (companies, government bodies, universities)
+  name_words: [ministry of, ministère, ministerio, government of, university, université, universidad, universidade,
+               city council, municipality, chamber of commerce, chambre de commerce, cámara de comercio]
+
+# Ranking within a country (size filter "Top 10 / Top 50"): UN status weight (highest), then the
+# number of Wikipedia language versions, then the number of sources.

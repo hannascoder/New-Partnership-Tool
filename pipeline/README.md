@@ -10,6 +10,7 @@ python pipeline/merge/merge.py             # duplicates merged, ids     -> work/
 python pipeline/classify/classify.py       # categories (step 4)        -> work/classified.json, reports/topics.md
 python pipeline/validate/known_outlets.py  # check: 20 known outlets    -> reports/known_outlets.md
 python pipeline/validate/reports.py        # step 5 reports            -> reports/coverage.md, sample.md, contradictions.md, changes.md
+python pipeline/ngo/build.py               # NGOs (phase 2)            -> work/ngos.json, reports/ngos.md
 python pipeline/build/site_data.py         # website data               -> site/data/
 ```
 

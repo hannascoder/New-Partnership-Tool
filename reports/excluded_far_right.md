@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-143 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+144 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -11,6 +11,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-015209 | Liktori | ALB | Wikipedia Category:Fascist newspapers |
 | pf-003168 | Cabildo | ARG | Wikipedia Category:Far-right periodicals published in Argentina |
 | pf-026893 | La Derecha Diario | ARG | AI reading: Wikipedia: close to far-right politicians, spreads disinformation |
+| pf-002473 | News24 | AUS | AI reading (right-wing populist): same channel as Sky News Australia (hidden, owner 10.11.2026) |
 | pf-017205 | Quillette | AUS | AI reading (right-wing populist): Wikipedia: called 'the right wing's highly influential answer to Slate' |
 | pf-028600 | Sky News Australia | AUS | AI reading (right-wing populist): general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia |
 | pf-001091 | Die Aula | AUT | Wikipedia Category:Far-right periodicals |

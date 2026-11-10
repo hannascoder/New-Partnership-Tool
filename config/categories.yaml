@@ -75,8 +75,9 @@ org_type:
     label: Fact-checker
     description: Checks claims and fights misinformation (e.g. members of IFCN or EFCSN). Fact-checking units of big media keep their own type.
   - id: ngo
-    label: NGO / civil society
-    later: true
+    label: NGO
+    later: true  # not a button: NGOs come in with the box "Include NGOs in this search" (config/ngo.yaml)
+    description: Non-governmental organisation (classic NGOs; foundations, networks and universities follow later).
   - id: network
     label: Network / association
     later: true

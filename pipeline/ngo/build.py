@@ -1,0 +1,386 @@
+"""NGOs (phase 2, owner's decisions 10.11.2026; config/ngo.yaml).
+
+Reads the raw NGO sources, merges entries that are the same organisation, assigns the same
+categories as for media (topics with strength and sub-topics, target audience, languages,
+contact) plus NGO-only values (UN status, type of work) and writes work/ngos.json in the same
+shape as work/classified.json, so pipeline/build/site_data.py can write the site files.
+
+Sources (all open, no keys):
+  ECOSOC iCSO   raw/ecosoc/       lists (status, type, fields of activity, DPI/DGC) + profiles
+  Wikidata      raw/wikidata_ngo/ NGOs with at least one Wikipedia page
+  UN Geneva     raw/ngo/un_geneva_ngo_list.html.gz
+  IATI          raw/iati/         NGOs that publish their projects
+Not shown: far-right NGOs (same Wikidata ideologies as for media), government-organised NGOs
+(GONGOs), entries whose name shows they are not an NGO (ministry, university, company ...).
+Reports: reports/ngos.md (counts, coverage), reports/ngos_excluded.md.
+"""
+import gzip
+import html as htmllib
+import json
+import re
+import sys
+from collections import Counter, defaultdict
+from datetime import date
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "pipeline" / "normalize"))
+sys.path.insert(0, str(ROOT / "pipeline" / "classify"))
+from countrymatch import to_iso3  # noqa: E402
+from ngos import iati, un_geneva  # noqa: E402
+from sources import COUNTRIES, LANG, norm_url  # noqa: E402
+from topic_text import Matcher, norm  # noqa: E402
+
+RAW = ROOT / "raw"
+CFG = yaml.safe_load(open(ROOT / "config" / "ngo.yaml", encoding="utf-8"))
+FIELDS = yaml.safe_load(open(ROOT / "config" / "sources" / "ecosoc_fields.yaml", encoding="utf-8"))
+RULES = yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8"))
+TODAY = str(date.today())
+GENERIC_DOMAINS = {"facebook.com", "twitter.com", "x.com", "instagram.com", "linkedin.com", "youtube.com",
+                   "google.com", "sites.google.com", "wordpress.com", "blogspot.com", "gmail.com", "yahoo.com",
+                   "un.org", "esango.un.org", "wikipedia.org"}
+
+
+def load_gz(path, default):
+    p = RAW / path
+    return json.load(gzip.open(p, "rt", encoding="utf-8")) if p.exists() else default
+
+
+def clean_name(s):
+    return re.sub(r"\s+", " ", htmllib.unescape(s or "")).strip().strip('"').strip()
+
+
+def name_key(s):
+    k = norm(clean_name(s))
+    k = re.sub(r"\b(the|of|for|and|de|la|le|les|des|du|el|los|las|et|y|e|da|do|das|dos)\b", " ", k)
+    return " ".join(k.split())
+
+
+# ------------------------------------------------------------------ ECOSOC
+STATUS_ID = {"general": "ecosoc_general", "special": "ecosoc_special", "roster": "ecosoc_roster"}
+
+
+def field_label(meta):
+    """the field of activity a list stands for (its link label, or the page heading)"""
+    lab = (meta.get("label") or "").strip()
+    if lab.lower().startswith("field of activity code"):
+        h = meta.get("heading") or ""
+        m = re.search(r"(?:field of activity|fields of activity|area of expertise)\s*[:\-]?\s*([A-Za-z ,/()'-]{3,80})", h, re.I)
+        lab = m.group(1).strip() if m else ""
+    return lab
+
+
+PROFILE_FIELDS = {  # label on the profile page -> our key (checked against raw/ecosoc/samples)
+    "country": r"(?:Country|Pays|Headquarters? address.*?Country)\s*:?\s*\|?\s*([A-Za-z][A-Za-z .,'()-]{2,60})",
+    "website": r"(?:Web ?site|Site web)\s*:?\s*\|?\s*((?:https?://)?[\w.-]+\.[a-z]{2,}[^\s|]*)",
+    "languages": r"(?:Working languages?|Languages?)\s*:?\s*\|?\s*([A-Za-z ,;/()-]{3,200})",
+    "type": r"(?:Organi[sz]ation type|Type of organi[sz]ation)\s*:?\s*\|?\s*([A-Za-z ,/-]{3,80})",
+    "mission": r"(?:Mission statement|Mission|Purpose|Aims and purposes)\s*:?\s*\|?\s*([^|]{20,1500})",
+}
+
+
+def parse_profile(p):
+    t = p.get("text") or ""
+    out = {}
+    for k, rx in PROFILE_FIELDS.items():
+        m = re.search(rx, t, re.I | re.S)
+        if m:
+            out[k] = m.group(1).strip(" |,;")
+    if not out.get("website"):
+        out["website"] = next((u for u in p.get("links") or [] if not any(g in u for g in GENERIC_DOMAINS)), None)
+    out["email"] = (p.get("emails") or [None])[0]
+    return out
+
+
+def ecosoc():
+    lists = load_gz("ecosoc/lists.json.gz", {})
+    orgs = load_gz("ecosoc/orgs.json.gz", {})
+    profiles = load_gz("ecosoc/profiles.json.gz", {})
+    if not orgs:
+        return []
+    member = defaultdict(lambda: {"status": None, "types": set(), "fields": set(), "dgc": False})
+    for m in lists.values():
+        kind, label = m.get("kind"), (m.get("label") or "")
+        for code in m.get("codes") or []:
+            r = member[code]
+            if kind == "status":
+                r["status"] = STATUS_ID.get(label.lower().split()[0] if label else "", r["status"])
+            elif kind == "type":
+                r["types"].add(label)
+            elif kind == "field":
+                f = field_label(m)
+                if f:
+                    r["fields"].add(f)
+            elif kind == "dpi":
+                r["dgc"] = True
+    ngo_type = set(FIELDS.get("types_included") or [])
+    type_lists_known = any(m.get("kind") == "type" and m.get("complete") for m in lists.values())
+    out = []
+    for code, o in orgs.items():
+        r = member[code]
+        if type_lists_known and not (r["types"] & ngo_type):
+            continue  # not of type "Non-governmental organization" (owner: classic NGOs first)
+        prof = parse_profile(profiles.get(code) or {})
+        status = r["status"]
+        if not status:  # accreditations column, e.g. "Special 2016"
+            for a in o.get("accreditations") or []:
+                s = STATUS_ID.get(a.split()[0].lower())
+                if s:
+                    status = s
+                    break
+        website, domain = norm_url(prof.get("website"))
+        country = to_iso3(prof["country"]) if prof.get("country") else None
+        us = [status or "ecosoc_registered"] + (["dgc_associated"] if r["dgc"] else [])
+        out.append({
+            "key": f"ecosoc:{code}", "source": "ecosoc", "name": clean_name(o["name"]), "alt_names": [],
+            "website": website, "domain": domain, "country": country,
+            "languages": LANG.codes_of(re.split(r"[,;/]| and ", prof.get("languages") or "")),
+            "email": prof.get("email"), "social": {},
+            "fields": sorted(r["fields"]), "un_status": us,
+            "description": prof.get("mission") or "",
+            "profile_url": f"https://esango.un.org/civilsociety/showProfileDetail.do?method=showProfileDetails&profileCode={code}",
+        })
+    return out
+
+
+# ------------------------------------------------------------------ Wikidata
+def wikidata():
+    recs = load_gz("wikidata_ngo/data.json.gz", [])
+    lab_file = RAW / "wikidata_ngo" / "linked_labels.json"
+    labels = json.load(open(lab_file, encoding="utf-8")) if lab_file.exists() else {}
+    out = []
+    for r in recs:
+        names = r.get("labels") or {}
+        name = names.get("en") or next(iter(names.values()), None)
+        if not name:
+            continue
+        if r.get("dissolved") or r.get("date_of_closure"):
+            continue
+        countries = [c for c in r.get("matched_countries", []) if c in COUNTRIES]
+        website, domain = norm_url((r.get("website") or [None])[0])
+        social = {k: r[f][0] if isinstance(r.get(f), list) else r.get(f) for k, f in (
+            ("youtube", "youtube_channel_id"), ("facebook", "facebook_id"), ("instagram", "instagram_username"),
+            ("tiktok", "tiktok_username"), ("x", "x_username"), ("telegram", "telegram_username")) if r.get(f)}
+        lab = lambda qs: [labels.get(q) or q for q in qs or []]  # noqa: E731
+        out.append({
+            "key": f"wd:{r['qid']}", "source": "wikidata_ngo", "name": name,
+            "alt_names": sorted({v for v in names.values() if v != name})[:10],
+            "website": website, "domain": domain, "country": countries[0] if countries else None,
+            "languages": LANG.codes_of(lab(r.get("language_used")) + lab(r.get("language_of_work"))),
+            "email": (r.get("email") or [None])[0], "social": social,
+            "fields": [], "un_status": [],
+            "description": "", "short": lab(r.get("field_of_work")),  # Wikidata "field of work": a short label each
+            "wd_classes": lab(r.get("instance_of")), "wd_ideology": lab(r.get("political_ideology")),
+            "wd_member_of": lab(r.get("member_of")),
+            "wikipedia_languages": r.get("wikipedia_languages", 0),
+        })
+    return out
+
+
+def geneva():
+    out = []
+    for r in un_geneva():
+        out.append({**r, "fields": [], "un_status": ["un_geneva"], "description": "", "social": {}})
+    return out
+
+
+def iati_ngos():
+    out = []
+    for r in iati():
+        out.append({**r, "fields": [], "un_status": ["iati_publisher"],
+                    "description": (r.get("raw") or {}).get("description") or "", "social": {}})
+    return out
+
+
+# ------------------------------------------------------------------ merge
+def merge(records):
+    """same website (not a social network or blog host) or same name in the same country = same NGO"""
+    groups, by_domain, by_name = [], {}, {}
+    for r in records:
+        d = (r.get("domain") or "").split("/")[0]
+        dk = d if d and not any(d == g or d.endswith("." + g) for g in GENERIC_DOMAINS) else None
+        nk = (name_key(r["name"]), r.get("country")) if r.get("country") else None
+        g = (by_domain.get(r.get("domain")) if dk else None) or (by_name.get(nk) if nk else None)
+        if g is None:
+            g = {"members": []}
+            groups.append(g)
+        g["members"].append(r)
+        if dk:
+            by_domain.setdefault(r["domain"], g)
+        if nk:
+            by_name.setdefault(nk, g)
+        for a in r.get("alt_names") or []:
+            if r.get("country"):
+                by_name.setdefault((name_key(a), r["country"]), g)
+    return groups
+
+
+ORDER = ["ecosoc", "wikidata_ngo", "un_geneva", "iati"]
+
+
+def first(members, key):
+    for m in sorted(members, key=lambda m: ORDER.index(m["source"]) if m["source"] in ORDER else 9):
+        if m.get(key):
+            return m[key]
+    return None
+
+
+ORG_MAIL = ("info", "contact", "office", "secretariat", "secretaria", "secretariado", "admin", "mail", "hello",
+            "general", "enquir", "inquir", "communication", "press", "media", "team", "geneva", "genev", "newyork",
+            "ngo", "org", "director", "board", "hq", "headquarter", "central", "welcome", "bureau", "sede", "accueil",
+            "advocacy", "program", "partnership", "membership", "network", "un.", "ecosoc", "global", "intl", "international")
+
+
+def org_email(e):
+    """only organisation addresses (owner, 06.11.2026): info@, office@, secretariat@ ...;
+    personal addresses (j.smith@, maria.lopez@) are left out"""
+    e = (e or "").replace("mailto:", "").strip().lower()
+    if not re.match(r"^[\w.+-]+@[\w-]+\.[\w.-]+$", e):
+        return None
+    local = e.split("@")[0]
+    return e if any(w in local for w in ORG_MAIL) else None
+
+
+def contains_word(text, words):
+    t = " " + norm(text) + " "
+    for w in words:
+        k = norm(w)
+        if k and (" " + k + " ") in t:
+            return w
+    return None
+
+
+def main():
+    recs = ecosoc() + wikidata() + geneva() + iati_ngos()
+    print("records:", Counter(r["source"] for r in recs))
+    groups = merge(recs)
+    topics = Matcher()
+    audience = Matcher(ROOT / "config" / "audience_keywords.yaml")
+    field_map = {k.lower(): v for k, v in FIELDS["fields"].items()}
+    aud_fields = {k.lower(): v for k, v in CFG["audience_from_fields"].items()}
+    weight = {s["id"]: s["weight"] for s in CFG["un_status"]}
+    ideos = {x.lower() for x in RULES["exclude_far_right"]["wikidata_ideologies"]}
+    gongo = {x.lower() for x in CFG["exclude"]["wikidata_classes"]}
+    first_seen_file = ROOT / "cache" / "ngo_first_seen.json"
+    first_seen = json.load(open(first_seen_file, encoding="utf-8")) if first_seen_file.exists() else {}
+    out, excluded = [], []
+    for g in groups:
+        ms = g["members"]
+        name = first(ms, "name")
+        country = first(ms, "country")
+        keys = sorted(m["key"] for m in ms)
+        pref = {"ecosoc": 0, "wd": 1, "ungva": 2, "iati": 3}
+        main_key = min(keys, key=lambda k: (pref.get(k.split(":")[0], 9), k))
+        nid = "ngo-" + re.sub(r"[^a-z0-9]+", "-", main_key.lower()).strip("-")
+        # exclusions
+        why_out = None
+        for m in ms:
+            hit = [i for i in m.get("wd_ideology") or [] if i.lower() in ideos]
+            if hit:
+                why_out = "far-right (Wikidata political ideology: " + hit[0] + ")"
+            cls = [c for c in m.get("wd_classes") or [] if c.lower() in gongo]
+            if cls:
+                why_out = "government-organised NGO (Wikidata: " + cls[0] + ")"
+        w = contains_word(name, CFG["exclude"]["name_words"])
+        if w and not why_out:
+            why_out = f'not a classic NGO (name contains "{w.strip()}")'
+        if why_out:
+            excluded.append((nid, name, country, why_out))
+            continue
+        if not country or country not in COUNTRIES:
+            excluded.append((nid, name, country or "-", "no country of the 195 in the sources"))
+            continue
+        fields = sorted({f for m in ms for f in m.get("fields") or []})
+        desc = " | ".join(dict.fromkeys(m["description"] for m in ms if m.get("description")))
+        # topics: ECOSOC fields (the NGO named them itself) = Specialist; words in name / description
+        tps = {}
+
+        def add(topic, sub, strength, source):
+            t = tps.setdefault(topic, {"value": topic, "method": "source_field", "strength": 9, "source": "", "subs": set()})
+            if sub:
+                t["subs"].add(sub)
+            if strength < t["strength"]:
+                t["strength"], t["source"] = strength, source
+        for f in fields:
+            for x in field_map.get(f.lower(), []):
+                tp, _, sub = x.partition("/")
+                add(tp, sub or None, 1, f"ECOSOC field of activity: {f}")
+        shorts = [x for m in ms for x in m.get("short") or []]
+        # long texts (mission, IATI description) like an About page: first sentence = Specialist, rest = Reports on it
+        abouts = [("description", desc)] if desc else []
+        for tp, r in topics.match(name=name, descriptions=shorts, abouts=abouts).items():
+            for sub in r["subs"] or [None]:
+                add(tp, sub, r["s"], r["why"])
+        cat_topics = [{**t, "subs": sorted(t["subs"]), "method": "source_field" if t["source"].startswith("ECOSOC") else "keyword"}
+                      for t in tps.values()]
+        aud = {}
+        for f in fields:
+            a = aud_fields.get(f.lower())
+            if a:
+                aud.setdefault(a, f"ECOSOC field of activity: {f}")
+        for a, r in audience.match(name=name, descriptions=shorts, abouts=abouts).items():
+            aud.setdefault(a, r["why"])
+        tow = []
+        for t in CFG["type_of_work"]:
+            f = next((f for f in fields if f.lower() in [x.lower() for x in t["fields"]]), None)
+            word = None if f else contains_word(name, t["words"])  # name only: descriptions mention too much
+            if f or word:
+                tow.append([t["id"], f"ECOSOC field of activity: {f}" if f else f'name: "{word}"'])
+        us = sorted({s for m in ms for s in m.get("un_status") or []}, key=lambda s: -weight.get(s, 0))
+        if any(s.startswith("ecosoc_") and s != "ecosoc_registered" for s in us):
+            us = [s for s in us if s != "ecosoc_registered"]
+        social = {}
+        for m in ms:
+            for k, v in (m.get("social") or {}).items():
+                social.setdefault(k, v)
+        wl = max([m.get("wikipedia_languages") or 0 for m in ms])
+        first_seen.setdefault(nid, TODAY)
+        out.append({
+            "id": nid, "name": name, "country": country, "kind": "ngo",
+            "alt_names": sorted({a for m in ms for a in [m["name"]] + (m.get("alt_names") or []) if a != name})[:5],
+            "website": first(ms, "website"), "languages": sorted({l for m in ms for l in m.get("languages") or []}),
+            "channels": (["website"] if first(ms, "website") else []) + (["social_media"] if social else []),
+            "social": social, "email": next((x for x in (org_email(m.get("email")) for m in ms) if x), None), "sources": sorted({m["source"] for m in ms}),
+            "members": keys, "first_seen": first_seen[nid], "wikipedia_languages": wl,
+            "profile_url": first(ms, "profile_url"),
+            "ngo": {"un_status": us, "type_of_work": tow, "fields": fields,
+                    "registered_only": us[:1] == ["ecosoc_registered"] and len(ms) == 1},
+            "prominence": max([weight.get(s, 0) for s in us] or [0]) * 10 + wl + len({m["source"] for m in ms}),
+            "cat": {"topics": cat_topics,
+                    "audience_groups": [{"value": a, "source": s} for a, s in aud.items()],
+                    "org_type": {"value": "ngo", "source": "NGO list: " + ", ".join(sorted({m['source'] for m in ms}))}},
+        })
+    json.dump(first_seen, open(first_seen_file, "w", encoding="utf-8"), ensure_ascii=False, indent=0, sort_keys=True)
+    json.dump(out, open(ROOT / "work" / "ngos.json", "w", encoding="utf-8"), ensure_ascii=False)
+    # reports
+    n = len(out) or 1
+    pct = lambda f: f"{sum(1 for o in out if f(o)) / n * 100:.0f} %"  # noqa: E731
+    lines = ["# NGOs (phase 2)", "", f"Built {TODAY}. Sources: " + ", ".join(f"{k} {v}" for k, v in Counter(r['source'] for r in recs).items()), "",
+             f"**{len(out):,} NGOs** shown (only when 'Include NGOs in this search' is ticked), {len(excluded):,} not shown "
+             "(reports/ngos_excluded.md).", "",
+             "| Information | Share |", "|---|---|",
+             f"| Topic | {pct(lambda o: o['cat']['topics'])} |",
+             f"| Topic from ECOSOC fields of activity | {pct(lambda o: o['ngo']['fields'])} |",
+             f"| Target audience | {pct(lambda o: o['cat']['audience_groups'])} |",
+             f"| Language | {pct(lambda o: o['languages'])} |",
+             f"| Website | {pct(lambda o: o['website'])} |",
+             f"| E-mail | {pct(lambda o: o['email'])} |",
+             f"| ECOSOC consultative status | {pct(lambda o: any(s in ('ecosoc_general', 'ecosoc_special', 'ecosoc_roster') for s in o['ngo']['un_status']))} |",
+             f"| Only registered in ECOSOC (note on the card) | {pct(lambda o: o['ngo']['registered_only'])} |",
+             "", "## UN status", ""]
+    for s, c in Counter(s for o in out for s in o["ngo"]["un_status"]).most_common():
+        lines.append(f"- {s}: {c:,}")
+    lines += ["", "## Countries with most NGOs", ""]
+    for c, k in Counter(o["country"] for o in out).most_common(20):
+        lines.append(f"- {c}: {k:,}")
+    (ROOT / "reports" / "ngos.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    ex = ["# NGOs not shown", "", "| Id | Name | Country | Reason |", "|---|---|---|---|"]
+    ex += [f"| {a} | {b} | {c} | {d} |" for a, b, c, d in sorted(excluded, key=lambda x: (x[3], x[2] or "", x[1] or ""))]
+    (ROOT / "reports" / "ngos_excluded.md").write_text("\n".join(ex) + "\n", encoding="utf-8")
+    print(f"{len(out)} NGOs, {len(excluded)} not shown")
+
+
+if __name__ == "__main__":
+    main()
