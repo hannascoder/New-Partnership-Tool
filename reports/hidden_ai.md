@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-120 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+127 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -74,6 +74,8 @@
 | pf-008127 | Koran Sindo | IDN | no longer published: Wikipedia: Koran Sindo 'was' a newspaper |
 | pf-001615 | TV Edukasi | IDN | no longer published: Wikipedia: TV Edukasi 'was' a TV station |
 | pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
+| pf-005240 | Arrouiah | KWT | no longer published: Wikidata: published 2008-201x |
+| pf-026819 | Homat Alwatan | KWT | no longer published: Wikipedia: 'was' a magazine |
 | pf-008748 | Official Gazette of the Federation | MEX | not a media outlet: official government gazette that publishes laws, not a media outlet |
 | pf-000307 | Gay Krant | NLD | no longer published: Wikipedia: Gay Krant 'was' a magazine |
 | pf-001908 | Mot Dag | NOR | not a media outlet: political group of the 1920s-30s, not a media outlet |
@@ -99,6 +101,11 @@
 | pf-003874 | SVT HD | SWE | no longer published: Wikipedia: SVT HD 'was' a channel |
 | pf-004945 | Stockholms Dagblad | SWE | no longer published: Wikipedia: published 1824-1931 |
 | pf-000579 | Stockholms-Tidningen | SWE | no longer published: Wikipedia: Stockholms-Tidningen 'was' a newspaper |
+| pf-023093 | ALTV | THA | no longer published: Wikipedia: ALTV 'was' a channel |
+| pf-014884 | Post Today | THA | no longer published: Wikipedia: published 2003 to 2026 ('was') |
+| pf-024407 | Siam Free Press | THA | no longer published: Wikidata: defunct newspaper |
+| pf-024709 | Siam Rath Weekly Review | THA | no longer published: Wikidata: defunct newspaper |
+| pf-001646 | Thai Global Network | THA | no longer published: Wikipedia: former channel |
 | pf-001896 | Official Gazette of the Republic of Turkey | TUR | not a media outlet: official journal that publishes laws, not a media outlet |
 | pf-008304 | Sızıntı | TUR | no longer published: Wikidata: defunct magazine (1979-2016) |
 | pf-004746 | Kievskaia starina | UKR | no longer published: Wikipedia: 'was' a monthly chronicle (historic) |

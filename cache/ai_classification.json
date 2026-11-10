@@ -3547,6 +3547,21 @@
    ]
   ]
  },
+ "pf-000383": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Royal Thai Army station"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "army radio and TV station"
+   ]
+  ]
+ },
  "pf-000384": {
   "date": "2026-11-10",
   "ownership": [
@@ -8543,6 +8558,27 @@
    ]
   ]
  },
+ "pf-000934": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Bangkok Broadcasting & Television"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000938": {
   "audience": [
    [
@@ -8590,6 +8626,23 @@
     null,
     2,
     "entertainment"
+   ]
+  ]
+ },
+ "pf-000949": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
    ]
   ]
  },
@@ -9480,6 +9533,22 @@
     null,
     1,
     "Jewish Autonomous Oblast"
+   ]
+  ]
+ },
+ "pf-001146": {
+  "date": "2026-11-10",
+  "owner": "National Broadcasting Services of Thailand",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the National Broadcasting Services"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio"
    ]
   ]
  },
@@ -11599,6 +11668,28 @@
    ]
   ]
  },
+ "pf-001395": {
+  "date": "2026-11-10",
+  "owner": "MCOT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-owned commercial"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "state-owned commercial TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001403": {
   "date": "2026-11-10",
   "owner": "Media24",
@@ -13182,6 +13273,24 @@
    ]
   ]
  },
+ "pf-001628": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "German speakers in Thailand"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "German-language weekly"
+   ]
+  ],
+  "website_warning": "the website shows a gambling page, not the newspaper"
+ },
  "pf-001629": {
   "date": "2026-11-10",
   "topics": [
@@ -13250,6 +13359,18 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-001646": {
+  "closed": "Wikipedia: former channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "satellite channel for Thais abroad"
    ]
   ]
  },
@@ -13325,6 +13446,17 @@
     null,
     2,
     "website section Football"
+   ]
+  ]
+ },
+ "pf-001674": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national Thai daily"
    ]
   ]
  },
@@ -13992,6 +14124,41 @@
     null,
     1,
     "Kvinnherad"
+   ]
+  ]
+ },
+ "pf-001794": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Myanmar exiles"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website on Myanmar"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "Myanmar coverage"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "conflict in Myanmar"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and Burmese"
    ]
   ]
  },
@@ -14898,6 +15065,27 @@
    [
     "public_service_mandate",
     "Italian public broadcaster RAI"
+   ]
+  ]
+ },
+ "pf-001952": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -16223,6 +16411,27 @@
    ]
   ]
  },
+ "pf-002253": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: official state news wire"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official state news agency"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Arabic, English and more"
+   ]
+  ]
+ },
  "pf-002254": {
   "audience": [
    [
@@ -17215,6 +17424,21 @@
    ]
   ]
  },
+ "pf-002445": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: National Broadcasting Services (government)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national state TV"
+   ]
+  ]
+ },
  "pf-002450": {
   "date": "2026-11-10",
   "topics": [
@@ -18116,6 +18340,23 @@
    ]
   ]
  },
+ "pf-002658": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language online newspaper"
+   ]
+  ]
+ },
  "pf-002659": {
   "audience": [
    [
@@ -18924,6 +19165,27 @@
     null,
     2,
     "website section Tecnología"
+   ]
+  ]
+ },
+ "pf-002860": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcasting service"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcasting service"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
    ]
   ]
  },
@@ -20328,6 +20590,17 @@
    ]
   ]
  },
+ "pf-003249": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Thai daily newspaper"
+   ]
+  ]
+ },
  "pf-003250": {
   "date": "2026-11-10",
   "owner": "Future plc",
@@ -20989,6 +21262,23 @@
    [
     "public_service_mandate",
     "public broadcaster"
+   ]
+  ]
+ },
+ "pf-003444": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Thai daily"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "politics"
    ]
   ]
  },
@@ -25197,6 +25487,34 @@
    ]
   ]
  },
+ "pf-005112": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
+   ],
+   [
+    "peace_justice",
+    "justice_rule_of_law",
+    2,
+    "security and justice section"
+   ]
+  ]
+ },
+ "pf-005116": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
+   ]
+  ]
+ },
  "pf-005156": {
   "date": "2026-11-10",
   "ownership": [
@@ -25215,6 +25533,23 @@
     null,
     1,
     "Eastern Cape and Garden Route"
+   ]
+  ]
+ },
+ "pf-005176": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "parliament section"
    ]
   ]
  },
@@ -25321,6 +25656,34 @@
    ]
   ]
  },
+ "pf-005211": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic newspaper"
+   ]
+  ]
+ },
+ "pf-005218": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking expatriates"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first English-language newspaper"
+   ]
+  ]
+ },
  "pf-005221": {
   "date": "2026-11-10",
   "topics": [
@@ -25329,6 +25692,18 @@
     null,
     1,
     "arts and literature magazine"
+   ]
+  ]
+ },
+ "pf-005240": {
+  "closed": "Wikidata: published 2008-201x",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic newspaper"
    ]
   ]
  },
@@ -25724,6 +26099,51 @@
     null,
     2,
     "sports"
+   ]
+  ]
+ },
+ "pf-005458": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Thai daily"
+   ],
+   [
+    "peace_justice",
+    "violence_peace",
+    2,
+    "crime section"
+   ]
+  ]
+ },
+ "pf-005459": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper"
+   ]
+  ]
+ },
+ "pf-005460": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "south and regions"
    ]
   ]
  },
@@ -29519,6 +29939,28 @@
    ]
   ]
  },
+ "pf-007966": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: governmental channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government English-language TV"
+   ]
+  ]
+ },
  "pf-008118": {
   "date": "2026-11-10",
   "owner": "East West Media Group",
@@ -29717,6 +30159,39 @@
    ]
   ]
  },
+ "pf-008190": {
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state-run, Ministry of Information"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official state TV"
+   ]
+  ]
+ },
+ "pf-008191": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking expatriates"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily"
+   ]
+  ]
+ },
  "pf-008200": {
   "date": "2026-11-09",
   "ownership": [
@@ -29863,6 +30338,23 @@
    ]
   ]
  },
+ "pf-008235": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
+   ]
+  ]
+ },
  "pf-008252": {
   "date": "2026-11-10",
   "topics": [
@@ -29988,6 +30480,70 @@
    ]
   ]
  },
+ "pf-008305": {
+  "audience": [
+   [
+    "minority_language",
+    "Chinese-speaking community"
+   ],
+   [
+    "ethnic_minorities",
+    "Thai Chinese community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Chinese-language Thai daily"
+   ]
+  ]
+ },
+ "pf-008307": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (now online)"
+   ]
+  ]
+ },
+ "pf-008308": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-profit"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent non-profit online newspaper"
+   ],
+   [
+    "human_rights",
+    null,
+    1,
+    "rights section"
+   ]
+  ]
+ },
+ "pf-008310": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
+   ]
+  ]
+ },
  "pf-008311": {
   "date": "2026-11-10",
   "owner": "Pakistan Television Corporation",
@@ -30004,6 +30560,45 @@
    ]
   ]
  },
+ "pf-008312": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
+ "pf-008318": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (now online)"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "regions"
+   ]
+  ]
+ },
+ "pf-008319": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports newspaper"
+   ]
+  ]
+ },
  "pf-008323": {
   "date": "2026-11-10",
   "topics": [
@@ -30012,6 +30607,17 @@
     null,
     1,
     "literary e-magazine"
+   ]
+  ]
+ },
+ "pf-008347": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Thai daily newspaper"
    ]
   ]
  },
@@ -30119,6 +30725,22 @@
    ]
   ]
  },
+ "pf-008452": {
+  "date": "2026-11-10",
+  "owner": "MCOT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: MCOT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
+ },
  "pf-008455": {
   "date": "2026-11-10",
   "ownership": [
@@ -30190,6 +30812,22 @@
     "Mindanao peace process"
    ]
   ]
+ },
+ "pf-008504": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music channel"
+   ]
+  ],
+  "website_warning": "the website shows an IT services company, not the channel"
+ },
+ "pf-008505": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-008539": {
   "audience": [
@@ -33548,6 +34186,57 @@
    ]
   ]
  },
+ "pf-012985": {
+  "audience": [
+   [
+    "religious",
+    "Shia Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Shia Islamic satellite channel"
+   ]
+  ]
+ },
+ "pf-012986": {
+  "audience": [
+   [
+    "religious",
+    "Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Islamic channel"
+   ]
+  ]
+ },
+ "pf-012996": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "academic journal on Islamic studies"
+   ],
+   [
+    "science",
+    null,
+    2,
+    "peer-reviewed journal"
+   ]
+  ]
+ },
  "pf-013030": {
   "date": "2026-11-10",
   "topics": [
@@ -34252,6 +34941,81 @@
    ]
   ]
  },
+ "pf-013441": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: True"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "digital TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
+ "pf-013444": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "publishing house"
+   ]
+  ]
+ },
+ "pf-013447": {
+  "date": "2026-11-10",
+  "owner": "MCOT",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: subsidiary of MCOT (state-owned)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ]
+  ]
+ },
+ "pf-013448": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Workpoint"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national digital TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-013462": {
   "date": "2026-11-10",
   "topics": [
@@ -34892,6 +35656,101 @@
     null,
     1,
     "daily tabloid newspaper"
+   ]
+  ]
+ },
+ "pf-014040": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Nation TV Co."
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news TV"
+   ]
+  ]
+ },
+ "pf-014041": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: PPTV"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "football"
+   ]
+  ]
+ },
+ "pf-014046": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: digital channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "digital TV with dramas and sitcoms"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-014047": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: RS"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-014048": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "news organisation of Chiang Mai"
    ]
   ]
  },
@@ -35600,6 +36459,28 @@
    ]
   ]
  },
+ "pf-014777": {
+  "date": "2026-11-10",
+  "owner": "National Broadcasting Services of Thailand",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "foreign-language services"
+   ]
+  ]
+ },
  "pf-014786": {
   "date": "2026-11-10",
   "owner": "MBC Media Group",
@@ -35706,6 +36587,18 @@
     null,
     1,
     "private regional TV station"
+   ]
+  ]
+ },
+ "pf-014884": {
+  "closed": "Wikipedia: published 2003 to 2026 ('was')",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Thai daily"
    ]
   ]
  },
@@ -36809,6 +37702,90 @@
    ]
   ]
  },
+ "pf-015908": {
+  "date": "2026-11-10",
+  "owner": "GMM Grammy",
+  "ownership": [
+   "private",
+   "Wikipedia: GMM Grammy"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "digital TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-015909": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: True"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-015911": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: parliament channel"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament TV"
+   ]
+  ]
+ },
+ "pf-015912": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Triple V Broadcast"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "digital TV channel"
+   ]
+  ]
+ },
+ "pf-015915": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "liberal TV channel"
+   ]
+  ]
+ },
  "pf-015927": {
   "date": "2026-11-10",
   "topics": [
@@ -36840,6 +37817,28 @@
     null,
     2,
     "independent media"
+   ]
+  ]
+ },
+ "pf-015946": {
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Ministry of Information"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -38531,6 +39530,22 @@
   "far_right": "Wikipedia: organ of the extreme right (1977-1980)",
   "topics": []
  },
+ "pf-017635": {
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Ministry of Information"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "state TV channel"
+   ]
+  ]
+ },
  "pf-017792": {
   "date": "2026-11-10",
   "ownership": [
@@ -38818,6 +39833,45 @@
     null,
     1,
     "Melo"
+   ]
+  ]
+ },
+ "pf-021619": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Ministry of Information"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament TV of Kuwait TV network"
+   ]
+  ]
+ },
+ "pf-021658": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language online newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Chiang Rai"
    ]
   ]
  },
@@ -39531,6 +40585,22 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing populist news website",
   "topics": []
+ },
+ "pf-023093": {
+  "closed": "Wikipedia: ALTV 'was' a channel",
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by Thai PBS"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "educational TV"
+   ]
+  ]
  },
  "pf-023162": {
   "date": "2026-11-10",
@@ -40457,6 +41527,18 @@
   "far_right": "Wikipedia: kept the far-right, pro-government positioning of Nation TV",
   "topics": []
  },
+ "pf-024407": {
+  "closed": "Wikidata: defunct newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English daily"
+   ]
+  ]
+ },
  "pf-024409": {
   "date": "2026-11-10",
   "owner": "HTV",
@@ -40619,6 +41701,18 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-024709": {
+  "closed": "Wikidata: defunct newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English weekly"
    ]
   ]
  },
@@ -41011,6 +42105,22 @@
    ]
   ]
  },
+ "pf-025652": {
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "website: Ministry of Information"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "state drama channel"
+   ]
+  ]
+ },
  "pf-025655": {
   "audience": [
    [
@@ -41097,6 +42207,23 @@
     null,
     1,
     "cultural magazine"
+   ]
+  ]
+ },
+ "pf-025810": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "quarterly science magazine"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "popular science"
    ]
   ]
  },
@@ -41459,6 +42586,18 @@
   "far_right": "Wikidata (fr): French far-right weekly owned by Vincent Bolloré",
   "topics": []
  },
+ "pf-026819": {
+  "closed": "Wikipedia: 'was' a magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "conflict_security",
+    null,
+    1,
+    "military magazine of the armed forces"
+   ]
+  ]
+ },
  "pf-026868": {
   "date": "2026-11-10",
   "topics": [
@@ -41591,6 +42730,38 @@
    ]
   ]
  },
+ "pf-027337": {
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "website: Ministry of Information"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "state sports channel"
+   ]
+  ]
+ },
+ "pf-027338": {
+  "date": "2026-11-10",
+  "owner": "Kuwait Ministry of Information",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: Kuwaiti TV"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
+   ]
+  ]
+ },
  "pf-027606": {
   "audience": [
    [
@@ -41706,6 +42877,40 @@
    ]
   ]
  },
+ "pf-028904": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "audio readings of the 40 Hadith"
+   ]
+  ]
+ },
+ "pf-028905": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "audio readings of the 40 Hadith in English"
+   ]
+  ]
+ },
  "pf-028921": {
   "date": "2026-11-10",
   "topics": [
@@ -41735,6 +42940,125 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-029333": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "audio readings of Al-Adab Al-Mufrad"
+   ]
+  ]
+ },
+ "pf-029334": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "audio readings on Quran recitation"
+   ]
+  ]
+ },
+ "pf-029337": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Quran recitation radio"
+   ]
+  ]
+ },
+ "pf-029338": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Quran recitation with English translation"
+   ]
+  ]
+ },
+ "pf-029339": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Quran recitation with French translation"
+   ]
+  ]
+ },
+ "pf-029340": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Quran recitation with Spanish translation"
+   ]
+  ]
+ },
+ "pf-029341": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "audio readings of Quran commentary"
    ]
   ]
  },
@@ -41772,6 +43096,23 @@
     null,
     1,
     "rock radio"
+   ]
+  ]
+ },
+ "pf-029446": {
+  "audience": [
+   [
+    "religious",
+    "Muslim listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "audio reading of the Prophet's biography"
    ]
   ]
  },
@@ -43266,6 +44607,10 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-037254": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-037264": {
   "date": "2026-11-10",
   "topics": [
@@ -43311,6 +44656,17 @@
  "pf-037348": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-037392": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (name)"
+   ]
+  ]
  },
  "pf-037404": {
   "date": "2026-11-10",
@@ -43538,6 +44894,10 @@
   ]
  },
  "pf-037813": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-037855": {
   "date": "2026-11-10",
   "topics": []
  },
@@ -43946,6 +45306,45 @@
   "note": "no text about this outlet in the sources or on its website",
   "topics": []
  },
+ "pf-039318": {
+  "audience": [
+   [
+    "religious",
+    "Shia Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Shia Islamic channel network"
+   ]
+  ]
+ },
+ "pf-039319": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    2,
+    "clips of Ch4Teen (Islamic)"
+   ]
+  ]
+ },
+ "pf-039320": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    2,
+    "documentaries of Ch4Teen (Islamic)"
+   ]
+  ]
+ },
  "pf-039724": {
   "date": "2026-11-09",
   "topics": [],
@@ -44231,6 +45630,17 @@
    ]
   ]
  },
+ "pf-050737": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
  "pf-052294": {
   "date": "2026-11-10",
   "topics": [
@@ -44329,6 +45739,40 @@
    ]
   ]
  },
+ "pf-055420": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily newspaper"
+   ]
+  ]
+ },
+ "pf-055459": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (Al Watan)"
+   ]
+  ]
+ },
+ "pf-055566": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (Al-Seyassah)"
+   ]
+  ],
+  "website_warning": "the website shows an empty directory listing"
+ },
  "pf-056040": {
   "date": "2026-11-10",
   "topics": [],
@@ -44404,6 +45848,17 @@
     null,
     2,
     "elections"
+   ]
+  ]
+ },
+ "pf-057984": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily newspaper"
    ]
   ]
  },
@@ -44602,6 +46057,45 @@
    ]
   ]
  },
+ "pf-064637": {
+  "audience": [
+   [
+    "religious",
+    "Muslim readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Islamic weekly magazine"
+   ]
+  ]
+ },
+ "pf-064638": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "magazine (Al Yaqza)"
+   ]
+  ]
+ },
+ "pf-064639": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary magazine"
+   ]
+  ]
+ },
  "pf-064690": {
   "date": "2026-11-10",
   "topics": [
@@ -44622,6 +46116,28 @@
  "pf-065076": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-065558": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (Al Taleea)"
+   ]
+  ]
+ },
+ "pf-066560": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (Al Shahed)"
+   ]
+  ]
  },
  "pf-066801": {
   "date": "2026-11-10",
@@ -44672,6 +46188,23 @@
     null,
     1,
     "aggregator of African news (Kenya page)"
+   ]
+  ]
+ },
+ "pf-070388": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily newspaper"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "economy"
    ]
   ]
  },
@@ -44906,6 +46439,21 @@
     null,
     1,
     "Melo"
+   ]
+  ]
+ },
+ "pf-070947": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-070949": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament channel (name)"
    ]
   ]
  },
