@@ -563,6 +563,23 @@
    ]
   ]
  },
+ "pf-000050": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language broadsheet"
+   ]
+  ]
+ },
  "pf-000051": {
   "date": "2026-11-10",
   "topics": [
@@ -726,6 +743,28 @@
    [
     "storytelling",
     "documentaries about animals"
+   ]
+  ]
+ },
+ "pf-000064": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Serbs abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Radio Television of Serbia",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS"
+  ],
+  "topics": [
+   [
+    "diaspora",
+    null,
+    1,
+    "satellite channel for Serbs abroad"
    ]
   ]
  },
@@ -2226,6 +2265,17 @@
    ]
   ]
  },
+ "pf-000213": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-000214": {
   "date": "2026-11-10",
   "owner": "Sky Group",
@@ -2288,6 +2338,19 @@
     "French-language daily"
    ]
   ]
+ },
+ "pf-000219": {
+  "closed": "Wikipedia: 24 sata 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free newspaper"
+   ]
+  ],
+  "website_warning": "the website shows a Vietnamese football betting page"
  },
  "pf-000220": {
   "date": "2026-11-10",
@@ -3628,6 +3691,129 @@
    ]
   ]
  },
+ "pf-000390": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Serbian public broadcaster"
+   ]
+  ]
+ },
+ "pf-000391": {
+  "date": "2026-11-10",
+  "owner": "Radio Television of Serbia",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Serbian public broadcaster"
+   ]
+  ]
+ },
+ "pf-000392": {
+  "audience": [
+   [
+    "minority_language",
+    "Vojvodina minorities"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: regional public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional public broadcaster"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Vojvodina"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Serbian public broadcaster"
+   ],
+   [
+    "multilingual",
+    "programmes in minority languages"
+   ]
+  ]
+ },
+ "pf-000394": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Srđan Milovanović"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news station with national coverage"
+   ]
+  ]
+ },
+ "pf-000395": {
+  "date": "2026-11-10",
+  "owner": "Pink Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Pink Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national radio and TV brand"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000396": {
   "date": "2026-11-10",
   "topics": [
@@ -4085,6 +4271,23 @@
     null,
     1,
     "alternative news agency on Colombia"
+   ]
+  ]
+ },
+ "pf-000439": {
+  "audience": [
+   [
+    "children",
+    "children and youth"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "kids channel"
    ]
   ]
  },
@@ -5403,6 +5606,27 @@
     null,
     2,
     "Styria"
+   ]
+  ]
+ },
+ "pf-000605": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic local weekly"
    ]
   ]
  },
@@ -6821,6 +7045,17 @@
    ]
   ]
  },
+ "pf-000751": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music TV"
+   ]
+  ]
+ },
  "pf-000753": {
   "date": "2026-11-10",
   "owner": "Eurosport (Skydance)",
@@ -7067,6 +7302,18 @@
    [
     "open_to_partner_content",
     "national syndicator to more than 1,000 public radio stations"
+   ]
+  ]
+ },
+ "pf-000768": {
+  "date": "2026-11-10",
+  "owner": "United Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-oriented daily of record"
    ]
   ]
  },
@@ -7675,6 +7922,18 @@
    ]
   ]
  },
+ "pf-000825": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: identifies with religious Zionism (the settler movement); general knowledge: right-wing (please check)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "media network identifying with religious Zionism"
+   ]
+  ]
+ },
  "pf-000826": {
   "audience": [
    [
@@ -7956,6 +8215,27 @@
    ]
   ]
  },
+ "pf-000857": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
+   ]
+  ]
+ },
  "pf-000859": {
   "date": "2026-11-10",
   "topics": [
@@ -8213,6 +8493,17 @@
    ]
   ]
  },
+ "pf-000899": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper (now online)"
+   ]
+  ]
+ },
  "pf-000902": {
   "date": "2026-11-10",
   "ownership": [
@@ -8298,6 +8589,23 @@
     null,
     1,
     "women's fashion magazine"
+   ]
+  ]
+ },
+ "pf-000908": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "kids cable channel"
    ]
   ]
  },
@@ -8609,6 +8917,27 @@
    [
     "public_service_mandate",
     "Dutch public broadcaster"
+   ]
+  ]
+ },
+ "pf-000940": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: operated by the army"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "army radio"
+   ],
+   [
+    "conflict_security",
+    null,
+    2,
+    "military radio"
    ]
   ]
  },
@@ -9314,6 +9643,23 @@
    ]
   ]
  },
+ "pf-001106": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "web portal"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "health section"
+   ]
+  ]
+ },
  "pf-001114": {
   "date": "2026-11-10",
   "ownership": [
@@ -9725,6 +10071,38 @@
    [
     "public_service_mandate",
     "NHK"
+   ]
+  ]
+ },
+ "pf-001165": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "immigrants"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Israeli Public Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: IPBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multilingual public radio for immigrants"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Israeli public broadcaster"
+   ],
+   [
+    "multilingual",
+    "many languages"
    ]
   ]
  },
@@ -10254,6 +10632,23 @@
    ]
   ]
  },
+ "pf-001241": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tel Aviv region"
+   ]
+  ]
+ },
  "pf-001242": {
   "date": "2026-11-10",
   "ownership": [
@@ -10288,6 +10683,24 @@
     null,
     1,
     "first national TV channel, series"
+   ]
+  ]
+ },
+ "pf-001244": {
+  "closed": "Wikipedia: Channel 1 'was' a TV channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -11799,6 +12212,17 @@
     null,
     1,
     "literary magazine"
+   ]
+  ]
+ },
+ "pf-001431": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "mass-market daily"
    ]
   ]
  },
@@ -14875,6 +15299,22 @@
    ]
   ]
  },
+ "pf-001902": {
+  "closed": "Wikipedia: 'was' the international broadcaster",
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: official international broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international radio"
+   ]
+  ]
+ },
  "pf-001903": {
   "date": "2026-11-10",
   "topics": [
@@ -14913,6 +15353,21 @@
   "date": "2026-11-10",
   "not_media": "political group of the 1920s-30s, not a media outlet",
   "topics": []
+ },
+ "pf-001910": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: satellite company"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satellite TV provider"
+   ]
+  ]
  },
  "pf-001914": {
   "date": "2026-11-10",
@@ -15016,6 +15471,29 @@
     null,
     2,
     "news and sport"
+   ]
+  ]
+ },
+ "pf-001942": {
+  "audience": [
+   [
+    "religious",
+    "Orthodox Jewish readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Orthodox Jewish daily"
+   ],
+   [
+    "religion",
+    null,
+    1,
+    "Orthodox Jewish"
    ]
   ]
  },
@@ -17235,6 +17713,24 @@
    ]
   ]
  },
+ "pf-002399": {
+  "audience": [
+   [
+    "minority_language",
+    "Russian speakers"
+   ]
+  ],
+  "closed": "Wikipedia: Vesty 'was' a newspaper (now website)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Russian-language daily"
+   ]
+  ]
+ },
  "pf-002406": {
   "audience": [
    [
@@ -18406,6 +18902,29 @@
    ]
   ]
  },
+ "pf-002671": {
+  "audience": [
+   [
+    "minority_language",
+    "Slovak minority"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV in Slovak"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Bački Petrovac"
+   ]
+  ]
+ },
  "pf-002675": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: right-wing to far-right",
@@ -18420,6 +18939,23 @@
     null,
     1,
     "Formula One magazine"
+   ]
+  ]
+ },
+ "pf-002677": {
+  "audience": [
+   [
+    "business_professionals",
+    "financial news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "financial newspaper"
    ]
   ]
  },
@@ -19023,6 +19559,24 @@
     null,
     1,
     "communist newspaper"
+   ]
+  ]
+ },
+ "pf-002812": {
+  "closed": "Wikipedia: Channel 2 'was' a channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -19869,6 +20423,23 @@
    ]
   ]
  },
+ "pf-002943": {
+  "audience": [
+   [
+    "religious",
+    "Haredi readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Haredi weekly magazine"
+   ]
+  ]
+ },
  "pf-002946": {
   "audience": [
    [
@@ -20282,6 +20853,66 @@
    ]
   ]
  },
+ "pf-003093": {
+  "audience": [
+   [
+    "minority_language",
+    "Russian speakers"
+   ],
+   [
+    "diaspora_migrants",
+    "immigrants from the former USSR"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Russian-language TV"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "elections 2026"
+   ]
+  ]
+ },
+ "pf-003094": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: published by Arutz Sheva (religious Zionism, settler movement); please check",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly of Arutz Sheva"
+   ]
+  ]
+ },
+ "pf-003095": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic-language weekly"
+   ]
+  ]
+ },
  "pf-003097": {
   "date": "2026-11-10",
   "topics": [
@@ -20299,6 +20930,29 @@
    ]
   ]
  },
+ "pf-003098": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "poetry and literature magazine"
+   ]
+  ]
+ },
+ "pf-003105": {
+  "closed": "Wikipedia: existed 2007-2016",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free daily"
+   ]
+  ]
+ },
  "pf-003106": {
   "closed": "Wikipedia: historic newspaper (1864-1939)",
   "date": "2026-11-10",
@@ -20308,6 +20962,29 @@
     null,
     1,
     "Viennese newspaper"
+   ]
+  ]
+ },
+ "pf-003107": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business daily"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "tech"
    ]
   ]
  },
@@ -22402,6 +23079,18 @@
   "right_populist": "Wikipedia: right-wing TV news channel",
   "topics": []
  },
+ "pf-003913": {
+  "closed": "Wikipedia: published 2005-2012",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid"
+   ]
+  ]
+ },
  "pf-003916": {
   "date": "2026-11-10",
   "owner": "NDTV",
@@ -22613,6 +23302,34 @@
    ]
   ]
  },
+ "pf-003975": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional radio"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Haifa"
+   ]
+  ]
+ },
+ "pf-003980": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Mizrahi music radio"
+   ]
+  ]
+ },
  "pf-003986": {
   "date": "2026-11-09",
   "owner": "Grupo Clarín",
@@ -22626,6 +23343,23 @@
     null,
     1,
     "news radio"
+   ]
+  ]
+ },
+ "pf-004002": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kragujevac"
    ]
   ]
  },
@@ -23808,6 +24542,23 @@
    ]
   ]
  },
+ "pf-004363": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's weekly"
+   ]
+  ]
+ },
  "pf-004365": {
   "date": "2026-11-10",
   "topics": [
@@ -24637,6 +25388,21 @@
    ]
   ]
  },
+ "pf-004779": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Pink International"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pay TV channel"
+   ]
+  ]
+ },
  "pf-004803": {
   "date": "2026-11-10",
   "topics": [
@@ -24768,6 +25534,27 @@
    ]
   ]
  },
+ "pf-004865": {
+  "audience": [
+   [
+    "minority_language",
+    "Rusyn speakers"
+   ],
+   [
+    "ethnic_minorities",
+    "Rusyn minority"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly of the Rusyn minority"
+   ]
+  ]
+ },
  "pf-004876": {
   "date": "2026-11-10",
   "owner": "PT Kompas Media Nusantara",
@@ -24804,6 +25591,23 @@
     null,
     1,
     "Bengali daily newspaper"
+   ]
+  ]
+ },
+ "pf-004902": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "left-wing news and opinion magazine"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "occupation coverage"
    ]
   ]
  },
@@ -25944,6 +26748,39 @@
    ]
   ]
  },
+ "pf-005367": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: BIRN network"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "investigative reporting network"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigative reporting"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "transitional justice"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "English and regional languages"
+   ]
+  ]
+ },
  "pf-005377": {
   "date": "2026-11-09",
   "owner": "Grupo Bandeirantes",
@@ -26023,6 +26860,23 @@
    ]
   ]
  },
+ "pf-005427": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
+   ],
+   [
+    "climate",
+    "environment_general",
+    2,
+    "Green section"
+   ]
+  ]
+ },
  "pf-005432": {
   "date": "2026-11-10",
   "topics": [
@@ -26078,6 +26932,18 @@
    [
     "educational",
     "school content by subject"
+   ]
+  ]
+ },
+ "pf-005443": {
+  "date": "2026-11-10",
+  "owner": "Keshet",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "comedy portal"
    ]
   ]
  },
@@ -28496,6 +29362,18 @@
    ]
   ]
  },
+ "pf-006614": {
+  "closed": "Wikipedia: 'was' a website",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radical left-wing website"
+   ]
+  ]
+ },
  "pf-006624": {
   "audience": [
    [
@@ -29117,6 +29995,27 @@
    [
     "public_service_mandate",
     "NHK"
+   ]
+  ]
+ },
+ "pf-007098": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic newspaper in Nazareth"
    ]
   ]
  },
@@ -30192,6 +31091,23 @@
    ]
   ]
  },
+ "pf-008192": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "multi-language online newspaper"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "several languages"
+   ]
+  ]
+ },
  "pf-008200": {
   "date": "2026-11-09",
   "ownership": [
@@ -30571,6 +31487,17 @@
    ]
   ]
  },
+ "pf-008315": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "pay TV sports network"
+   ]
+  ]
+ },
  "pf-008318": {
   "date": "2026-11-10",
   "topics": [
@@ -30681,6 +31608,17 @@
   "right_populist": "Wikipedia: national-liberal Right, right-wing readership",
   "topics": []
  },
+ "pf-008417": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "regional music radio"
+   ]
+  ]
+ },
  "pf-008424": {
   "date": "2026-11-10",
   "topics": [
@@ -30770,6 +31708,24 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-008465": {
+  "date": "2026-11-10",
+  "owner": "Keshet Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website of Keshet"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "celebrities"
    ]
   ]
  },
@@ -30886,6 +31842,23 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-008580": {
+  "audience": [
+   [
+    "religious",
+    "Haredi readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Haredi daily"
    ]
   ]
  },
@@ -31728,6 +32701,21 @@
    ]
   ]
  },
+ "pf-009211": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: NBC Universal"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "science fiction channel"
+   ]
+  ]
+ },
  "pf-009273": {
   "date": "2026-11-10",
   "topics": [
@@ -31853,6 +32841,23 @@
     null,
     1,
     "North Jutland"
+   ]
+  ]
+ },
+ "pf-009430": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Užice"
    ]
   ]
  },
@@ -33776,6 +34781,23 @@
    ]
   ]
  },
+ "pf-012384": {
+  "audience": [
+   [
+    "minority_language",
+    "Romanian minority in Serbia"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Romanian-language weekly"
+   ]
+  ]
+ },
  "pf-012385": {
   "date": "2026-11-10",
   "topics": [
@@ -34526,6 +35548,45 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-013189": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic commercial TV"
+   ]
+  ]
+ },
+ "pf-013192": {
+  "audience": [
+   [
+    "children",
+    "preschool"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "preschool channel"
+   ]
+  ],
+  "website_warning": "the website shows a server default page"
+ },
  "pf-013200": {
   "date": "2026-11-10",
   "topics": [
@@ -34772,6 +35833,106 @@
     null,
     2,
     "website section Economic"
+   ]
+  ]
+ },
+ "pf-013369": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "website: RTV (Vojvodina public broadcaster)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Novi Sad"
+   ]
+  ]
+ },
+ "pf-013378": {
+  "date": "2026-11-10",
+  "right_populist": "general knowledge, not in the profile text (please check): Serbian national-conservative political magazine",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "publisher and quarterly on politics"
+   ]
+  ]
+ },
+ "pf-013380": {
+  "date": "2026-11-10",
+  "owner": "Radio Television of Serbia",
+  "ownership": [
+   "public_service",
+   "website: RTS"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public HD channel"
+   ]
+  ]
+ },
+ "pf-013381": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Stara Pazova"
+   ]
+  ]
+ },
+ "pf-013383": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Čačak"
+   ]
+  ]
+ },
+ "pf-013384": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Pančevo"
    ]
   ]
  },
@@ -35092,6 +36253,17 @@
    ]
   ]
  },
+ "pf-013485": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary journal of Matica srpska"
+   ]
+  ]
+ },
  "pf-013521": {
   "date": "2026-11-10",
   "topics": [
@@ -35260,6 +36432,22 @@
    ]
   ]
  },
+ "pf-013731": {
+  "date": "2026-11-10",
+  "owner": "Radio Television of Serbia",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTS"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public culture and arts channel"
+   ]
+  ]
+ },
  "pf-013732": {
   "date": "2026-11-10",
   "owner": "Jawa Pos Group",
@@ -35275,6 +36463,21 @@
     null,
     2,
     "football"
+   ]
+  ]
+ },
+ "pf-013737": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Antenna Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cable TV channel"
    ]
   ]
  },
@@ -35301,6 +36504,38 @@
     null,
     1,
     "Chitral newspaper"
+   ]
+  ]
+ },
+ "pf-013755": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Antenna Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-013765": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "telenovela channel"
    ]
   ]
  },
@@ -35538,10 +36773,91 @@
    ]
   ]
  },
+ "pf-013925": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Braničevo"
+   ]
+  ]
+ },
+ "pf-013926": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Niš"
+   ]
+  ]
+ },
+ "pf-013927": {
+  "closed": "Wikipedia: 'was' a TV station",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "private TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Jagodina"
+   ]
+  ]
+ },
  "pf-013929": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: national conservative and pro-Russian",
   "topics": []
+ },
+ "pf-013939": {
+  "date": "2026-11-10",
+  "right_populist": "general knowledge, not in the profile text (please check): news site of the far-right settler movement (Yitzhar)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ]
+  ]
+ },
+ "pf-013959": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
  },
  "pf-013962": {
   "audience": [
@@ -36011,6 +37327,17 @@
     null,
     2,
     "news"
+   ]
+  ]
+ },
+ "pf-014272": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio station"
    ]
   ]
  },
@@ -36521,6 +37848,18 @@
    ]
   ]
  },
+ "pf-014813": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: known for its political bias in favour of the ruling Serbian Progressive Party (SNS)",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "tabloid newspaper"
+   ]
+  ]
+ },
  "pf-014857": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: far-right news channel",
@@ -36620,6 +37959,29 @@
     null,
     1,
     "children's radio"
+   ]
+  ]
+ },
+ "pf-014933": {
+  "audience": [
+   [
+    "policy_makers",
+    "policy readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "portal on EU integration of the Western Balkans"
+   ],
+   [
+    "partnerships",
+    "global_cooperation",
+    1,
+    "EU integration"
    ]
   ]
  },
@@ -37874,6 +39236,27 @@
    ]
   ]
  },
+ "pf-015971": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Palestinian channel for Arab citizens of Israel"
+   ]
+  ]
+ },
  "pf-016001": {
   "date": "2026-11-10",
   "topics": [
@@ -39066,6 +40449,60 @@
   "far_right": "Wikipedia: organ of Spanish Catholic integrism, links to the extreme right",
   "topics": []
  },
+ "pf-016956": {
+  "date": "2026-11-10",
+  "owner": "Israeli Public Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by IPBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned public TV"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Israeli public broadcaster"
+   ]
+  ]
+ },
+ "pf-016961": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Arab citizens of Israel"
+   ],
+   [
+    "minority_language",
+    "Arabic speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Israeli Public Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: IPBC"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV for Arab viewers"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Israeli public broadcaster"
+   ]
+  ]
+ },
  "pf-016967": {
   "date": "2026-11-10",
   "topics": [
@@ -39326,6 +40763,17 @@
    ]
   ]
  },
+ "pf-017120": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel (name)"
+   ]
+  ]
+ },
  "pf-017122": {
   "audience": [
    [
@@ -39340,6 +40788,22 @@
     null,
     1,
     "business TV"
+   ]
+  ]
+ },
+ "pf-017127": {
+  "date": "2026-11-10",
+  "owner": "Israeli Public Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: IPBC"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public music radio"
    ]
   ]
  },
@@ -39385,6 +40849,49 @@
     null,
     1,
     "children's TV channel"
+   ]
+  ]
+ },
+ "pf-017235": {
+  "date": "2026-11-10",
+  "owner": "Keshet Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Keshet Media Group"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-017238": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Reshet Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -39565,6 +41072,44 @@
   "date": "2026-11-10",
   "right_populist": "Wikidata: right-wing news website",
   "topics": []
+ },
+ "pf-017816": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Israeli Public Broadcasting Corporation",
+  "ownership": [
+   "public_service",
+   "Wikipedia: IPBC"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public children's channel"
+   ],
+   [
+    "education",
+    null,
+    1,
+    "education"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Israeli public broadcaster"
+   ],
+   [
+    "educational",
+    "educational TV"
+   ]
+  ]
  },
  "pf-017821": {
   "audience": [
@@ -39819,6 +41364,29 @@
    ]
   ]
  },
+ "pf-021580": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Bosniak community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Novi Pazar (Sandžak)"
+   ]
+  ]
+ },
  "pf-021608": {
   "date": "2026-11-10",
   "topics": [
@@ -39858,6 +41426,29 @@
    ]
   ]
  },
+ "pf-021649": {
+  "audience": [
+   [
+    "ethnic_minorities",
+    "Bosniak community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Sandžak"
+   ]
+  ]
+ },
  "pf-021658": {
   "date": "2026-11-10",
   "topics": [
@@ -39894,6 +41485,23 @@
     null,
     2,
     "website section Agro"
+   ]
+  ]
+ },
+ "pf-021713": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "cable TV network"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "Elections 2026"
    ]
   ]
  },
@@ -40599,6 +42207,17 @@
     null,
     1,
     "educational TV"
+   ]
+  ]
+ },
+ "pf-023138": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV broadcaster"
    ]
   ]
  },
@@ -41596,6 +43215,23 @@
     null,
     1,
     "sports channels"
+   ]
+  ]
+ },
+ "pf-024455": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio and portal"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Novi Sad and Vojvodina"
    ]
   ]
  },
@@ -42796,6 +44432,17 @@
    ]
   ]
  },
+ "pf-027637": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "commercial TV with news"
+   ]
+  ]
+ },
  "pf-027761": {
   "date": "2026-11-10",
   "far_right": "Wikidata: far-right commentary website",
@@ -43841,6 +45488,29 @@
    ]
   ]
  },
+ "pf-032206": {
+  "audience": [
+   [
+    "minority_language",
+    "Hungarian minority"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Hungarian-language radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Vojvodina"
+   ]
+  ]
+ },
  "pf-032504": {
   "date": "2026-11-10",
   "ownership": [
@@ -43906,6 +45576,29 @@
     null,
     1,
     "radio network"
+   ]
+  ]
+ },
+ "pf-032727": {
+  "audience": [
+   [
+    "minority_language",
+    "Bulgarian minority"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV (Bulgarian minority)"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Dimitrovgrad (Caribrod)"
    ]
   ]
  },
@@ -44033,6 +45726,23 @@
    ]
   ]
  },
+ "pf-033158": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Kruševac"
+   ]
+  ]
+ },
  "pf-033256": {
   "audience": [
    [
@@ -44134,6 +45844,23 @@
     null,
     1,
     "Christian TV (name)"
+   ]
+  ]
+ },
+ "pf-033656": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent news and analysis portal"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Belgrade"
    ]
   ]
  },
@@ -46424,6 +48151,31 @@
    ]
   ]
  },
+ "pf-070566": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Israeli public broadcaster"
+   ],
+   [
+    "multilingual",
+    "Hebrew and Arabic (Makan)"
+   ]
+  ]
+ },
  "pf-070575": {
   "closed": "Wikipedia: Canal 8 'fue' (was) a channel",
   "date": "2026-11-10",
@@ -46439,6 +48191,17 @@
     null,
     1,
     "Melo"
+   ]
+  ]
+ },
+ "pf-070748": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "fact_checking",
+    null,
+    1,
+    "fact-checking of politicians' statements"
    ]
   ]
  },

@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 240 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 350, scope 3
+- No longer shown: 254 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 365, scope 3
 
 ### Examples: ownership
 
@@ -32,6 +32,7 @@
 - .ch (CHE, pf-000147)
 - 0404 News (ISR, pf-015038)
 - 168 Óra (HUN, pf-000323)
+- 24 sata (SRB, pf-000219)
 - 888.hu (HUN, pf-016516)
 - A Muvra (FRA, pf-004329)
 - Aaj Tak (IND, pf-003906)
@@ -42,4 +43,3 @@
 - Apollo News (DEU, pf-025589)
 - Arbeiter-Zeitung (AUT, pf-000689)
 - Arriba España (PER, pf-026717)
-- Arrouiah (KWT, pf-005240)

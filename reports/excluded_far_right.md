@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-161 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+166 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -94,6 +94,9 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-015121 | Swarajya | IND | AI reading (right-wing populist): Wikipedia: right-wing magazine, favourable to the BJP |
 | pf-006177 | Zee News | IND | AI reading (right-wing populist): Wikipedia: right-wing news channel |
 | pf-015038 | 0404 News | ISR | AI reading (right-wing populist): Wikipedia: right-wing news website |
+| pf-000825 | Arutz Sheva | ISR | AI reading (right-wing populist): Wikipedia: identifies with religious Zionism (the settler movement); general knowledge: right-wing (please check) |
+| pf-003094 | B'Sheva | ISR | AI reading (right-wing populist): Wikipedia: published by Arutz Sheva (religious Zionism, settler movement); please check |
+| pf-013939 | HaKol HaYehudi | ISR | AI reading (right-wing populist): general knowledge, not in the profile text (please check): news site of the far-right settler movement (Yitzhar) |
 | pf-002019 | Israel Hayom | ISR | AI reading (right-wing populist): Wikipedia: right-wing editorial stance |
 | pf-000644 | Makor Rishon | ISR | AI reading (right-wing populist): Wikipedia: associated with Religious Zionism and the right-wing |
 | pf-008416 | Mida | ISR | AI reading (right-wing populist): Wikipedia: national-liberal Right, right-wing readership |
@@ -128,6 +131,8 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-002788 | Limonka | RUS | AI reading: Wikipedia: official organ of the National Bolshevik Party |
 | pf-014030 | Riecz | RUS | Wikidata political ideology of the owner Nazi Germany: Nazism |
 | pf-016110 | Tsargrad TV | RUS | AI reading (right-wing populist): Wikipedia: pro-Kremlin, Russian Orthodox stances; owner Konstantin Malofeev (nationalist) |
+| pf-014813 | Informer | SRB | AI reading (right-wing populist): Wikipedia: known for its political bias in favour of the ruling Serbian Progressive Party (SNS) |
+| pf-013378 | Nova srpska politička misao | SRB | AI reading (right-wing populist): general knowledge, not in the profile text (please check): Serbian national-conservative political magazine |
 | pf-013929 | Pečat | SRB | AI reading (right-wing populist): Wikipedia: national conservative and pro-Russian |
 | pf-023635 | Riks | SWE | AI reading (right-wing populist): channel of the right-wing populist Sweden Democrats |
 | pf-023074 | Samhällsnytt | SWE | AI reading (right-wing populist): Wikipedia: right-wing populist news website |

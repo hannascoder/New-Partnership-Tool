@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-127 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+136 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -73,6 +73,11 @@
 | pf-002926 | Indonesia Raya | IDN | no longer published: Wikipedia: permanently closed in 1974 |
 | pf-008127 | Koran Sindo | IDN | no longer published: Wikipedia: Koran Sindo 'was' a newspaper |
 | pf-001615 | TV Edukasi | IDN | no longer published: Wikipedia: TV Edukasi 'was' a TV station |
+| pf-001244 | Channel 1 | ISR | no longer published: Wikipedia: Channel 1 'was' a TV channel |
+| pf-002812 | Channel 2 | ISR | no longer published: Wikipedia: Channel 2 'was' a channel |
+| pf-006614 | Hagada Hasmalit | ISR | no longer published: Wikipedia: 'was' a website |
+| pf-003105 | Israel Post | ISR | no longer published: Wikipedia: existed 2007-2016 |
+| pf-002399 | Vesti | ISR | no longer published: Wikipedia: Vesty 'was' a newspaper (now website) |
 | pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
 | pf-005240 | Arrouiah | KWT | no longer published: Wikidata: published 2008-201x |
 | pf-026819 | Homat Alwatan | KWT | no longer published: Wikipedia: 'was' a magazine |
@@ -96,6 +101,10 @@
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |
 | pf-001845 | Ogoniok | RUS | no longer published: Wikipedia: circulated from 1899 to 2020 |
 | pf-001970 | Russkiy Mir Foundation | RUS | not a media outlet: government-sponsored foundation promoting the Russian language, not a media outlet |
+| pf-000219 | 24 sata | SRB | no longer published: Wikipedia: 24 sata 'was' a newspaper |
+| pf-001902 | International Radio of Serbia | SRB | no longer published: Wikipedia: 'was' the international broadcaster |
+| pf-003913 | Press | SRB | no longer published: Wikipedia: published 2005-2012 |
+| pf-013927 | TV Palma Plus | SRB | no longer published: Wikipedia: 'was' a TV station |
 | pf-001481 | Dagny | SWE | no longer published: Wikipedia: published 1886-1913 |
 | pf-012760 | Folkbladet | SWE | no longer published: Wikipedia: Folkbladet 'was' a newspaper |
 | pf-003874 | SVT HD | SWE | no longer published: Wikipedia: SVT HD 'was' a channel |
