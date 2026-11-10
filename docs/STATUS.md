@@ -155,6 +155,21 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
 
+## NGOs (phase 2) - in progress since 10.11.2026
+Owner's decisions 10.11.2026: box "Include NGOs in this search" under Organisation type (off by default);
+NGO filters fold out (UN status incl. "Associated with UN DGC", "Only NGOs with ECOSOC status", type of work);
+same filters as media (country, language, topics/SDGs, audience, contact, Top 10/50); classic NGOs only;
+ALL ECOSOC NGOs also without status (note on the card); far-right NGOs and GONGOs not shown; mixed with
+media on the site, separate section in the export; updated every 2 months (step 9); no national registers
+(country filter works with the NGOs' own country). Config: config/ngo.yaml, config/sources/ecosoc_fields.yaml.
+- Built: pipeline/ngo/build.py -> work/ngos.json -> site/data/ngos-N.json (loaded only when the box is ticked),
+  finder.js (box, fold-out filters, NGO cards, export section "NGOs"). Reports: reports/ngos.md, ngos_excluded.md.
+- Sources: UN Geneva (1,471) and IATI (1,339) in; ECOSOC iCSO (all lists + profiles, slow server, resumes;
+  workflow "Fetch NGOs", re-run by hand until complete) and Wikidata NGOs (with a Wikipedia page) running.
+  DESA COSP list refuses automatic downloads (HTTP 403): not worked around; owner may save it by hand.
+- Next: parse ECOSOC profile pages (check raw/ecosoc/samples first: country, languages, website labels),
+  run the website check for NGO websites (texts workflow), AI reading of top NGOs per country later.
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
