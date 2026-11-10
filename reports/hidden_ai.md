@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-55 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+66 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -10,6 +10,10 @@
 | pf-003254 | The Bulletin | AUS | no longer published: Wikipedia: The Bulletin 'was' an Australian magazine (closed 2008) |
 | pf-004167 | The Lone Hand | AUS | no longer published: Wikipedia: published 1907-1928 |
 | pf-000763 | مجلة نينتندو الرسمية | AUS | no longer published: Wikipedia: ran from 2006 to 2014 |
+| pf-014573 | Associated Whistleblowing Press | BEL | no longer published: Wikipedia: AWP 'was' an agency |
+| pf-000981 | Bessy | BEL | not a media outlet: comics series, not a media outlet |
+| pf-002762 | Blokwatch | BEL | no longer published: Wikipedia: Blokwatch 'was' a news site |
+| pf-003784 | Metro | BEL | no longer published: Wikipedia: Metro 'was' a newspaper |
 | pf-000175 | G Magazine | BRA | no longer published: published from 1997 until 2013 |
 | pf-002778 | digest size | BRA | not a media outlet: a magazine paper size (Wikidata error), not a media outlet |
 | pf-000147 | .ch | CHE | no longer published: Wikipedia: '.ch' 'was' a newspaper; the website now sells phones |
@@ -35,6 +39,13 @@
 | pf-000307 | Gay Krant | NLD | no longer published: Wikipedia: Gay Krant 'was' a magazine |
 | pf-001908 | Mot Dag | NOR | not a media outlet: political group of the 1920s-30s, not a media outlet |
 | pf-008730 | Nylænde | NOR | no longer published: Wikipedia: Nylænde 'was' a magazine (historic) |
+| pf-025349 | Ciberayllu | PER | no longer published: Wikipedia: Ciberayllu 'was' a publication |
+| pf-006459 | Freak Out! | PER | no longer published: Wikipedia: Freak Out! 'was' a magazine |
+| pf-016279 | Gol Perú | PER | no longer published: Wikipedia: Golperu 'fue' (was) a channel |
+| pf-008203 | La Industria (Trujillo) | PER | no longer published: Wikipedia: La Industria 'fue' (was) a newspaper |
+| pf-008205 | La Nación | PER | no longer published: Wikipedia: published 1913-1914 |
+| pf-008449 | Mercurio Peruano | PER | no longer published: Wikipedia: published 1790-1795 |
+| pf-016405 | Radio A La Radio del Amor | PER | no longer published: Wikipedia: Radio A 'was' a radio station |
 | pf-000928 | CKM | POL | no longer published: Wikipedia: CKM 'was' a magazine |
 | pf-001427 | Contimporanul | ROU | no longer published: Wikipedia: 'was' a Romanian magazine (historic) |
 | pf-016924 | Dzen | RUS | not a media outlet: recommendation platform (VK), not a media outlet |

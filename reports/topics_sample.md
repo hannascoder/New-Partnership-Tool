@@ -3,18 +3,18 @@
 Per topic up to 6 random outlets (2 per strength where possible). Wrong? Tell Claude the id,
 or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 
-## Poverty (SDG 1) — 626 outlets
+## Poverty (SDG 1) — 628 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-071321 | CableCheck | NGA | main focus | description mentions "poverty rate" |
 | pf-009383 | Street Roots | USA | main focus | description mentions "poverty" |
 | pf-000945 | Bakinski Rabochi | AZE | own section | website section "Социальная защита" |
-| pf-067871 | Vida Nueva - noticias y recursos para inmigrantes hispanos e | USA | own section | website section "Development" |
-| pf-038829 | Canal 7 TeleValencia | ESP | covers it | website About page: "seguridad social" |
-| pf-033780 | Radio Vaticana Portuguese | VAT | covers it | website About page: "pobreza" |
+| pf-067626 | tj.news | CAN | own section | website section "Poverty" |
+| pf-038525 | Canal 10 Goya | ARG | covers it | website headlines: "pobreza" |
+| pf-033152 | Radio Kollasuyo | BOL | covers it | website headlines: "pobreza" |
 
-## Hunger & food (SDG 2) — 1,044 outlets
+## Hunger & food (SDG 2) — 1,045 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -22,43 +22,43 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-024686 | K21 News | PAK | main focus | description mentions "hunger" |
 | pf-010088 | The Standard | KEN | own section | website section "Nutrition & Wellness" |
 | pf-008016 | KVAK-FM | USA | own section | website section "VSC Food Bank Volunteering" |
-| pf-064336 | africannewsagency.com | ZAF | covers it | website About page: "wasting" |
-| pf-054228 | vichadaaldia.co | COL | covers it | website headlines: "pequenos productores" |
+| pf-064249 | gazettengr.com | NGA | covers it | website headlines: "hunger" |
+| pf-054160 | folhadeguanhaes.com.br | BRA | covers it | website headlines: "aleitamento materno", "obesidade" |
 
-## Health & well-being (SDG 3) — 8,453 outlets
+## Health & well-being (SDG 3) — 8,482 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-003176 | Canadian Jewish News | CAN | main focus | Wikipedia: "covid", "covid 19", "pandemic" |
 | pf-002920 | IB3 | ESP | main focus | website About page: "cancer" |
-| pf-007953 | KTRE | USA | own section | website section /health/dr-ed/ |
-| pf-021876 | Diario El Clarín | VEN | own section | website section "Salud" |
-| pf-034500 | Hoy se cumplen 100 años del natalicio de Paco Pérez - Stereo | GTM | covers it | website headlines: "cancer" |
-| pf-068102 | Pacifista | COL | covers it | website About page: "salud mental" |
+| pf-007941 | KTMD | USA | own section | website section "SALUD" |
+| pf-021807 | GorodBRYANSK24 | RUS | own section | website section "Здоровье" |
+| pf-034206 | RTP Madeira | PRT | covers it | website headlines: "depressao", "profissionais de saude" |
+| pf-068025 | Latribune algerie - l’actualité en continue | DZA | covers it | website About page: "toxicomanie" |
 
-## Quality education (SDG 4) — 9,561 outlets
+## Quality education (SDG 4) — 9,582 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-041126 | FCTV Education Channel 14 | USA | main focus | iptv-org category "education" |
 | pf-003535 | KEZI | USA | main focus | description mentions "education" |
-| pf-064160 | abc.az | AZE | own section | website section "Образование и Наука" |
-| pf-018944 | Bureau County Republican | USA | own section | website section "Education(Opens in new window)" |
-| pf-058470 | ntelemicro.com | DOM | covers it | website headlines: "maestros" |
-| pf-055240 | Enfoque Informativo | MEX | covers it | website headlines: "educacion" |
+| pf-064060 | biz570.com | USA | own section | website section "Education" |
+| pf-018813 | Austin Weekly News | USA | own section | website section "Education" |
+| pf-058418 | Info Huella | ARG | covers it | website headlines: "docentes" |
+| pf-055151 | O Celeiro | BRA | covers it | website About page: "educacao" |
 
-## Gender equality (SDG 5) — 3,297 outlets
+## Gender equality (SDG 5) — 3,309 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-057150 | periodicas.com.ar | ARG | main focus | description mentions "feminismos" |
 | pf-031627 | Liberté FM | FRA | main focus | description mentions "sportives" |
-| pf-029430 | Antena Libre 89.1 FM | ARG | own section | website section "GÉNEROS Y FEMINISMOS" |
-| pf-059636 | honolulumagazine.com | USA | own section | website section "Hawai‘i LGBT Legacy Foundation" |
-| pf-055176 | in-cyprus: The English Edition of Phileleftheros News Cyprus | CYP | covers it | website headlines: "rape" |
-| pf-015420 | Les Mouches Fantastiques | CAN | covers it | Wikipedia: "lgbt" |
+| pf-028975 | 88.7 KTRM (Truman State University, Kirksville, Missouri) | USA | own section | website section "Revisiting Abortion Rights" |
+| pf-059607 | The O'Colly | USA | own section | website section "Women's Basketball" |
+| pf-054944 | cuestionpublica.com | COL | covers it | website About page: "feministas" |
+| pf-015337 | Le Petit Bleu d'Agen | FRA | covers it | website headlines: "feminine" |
 
-## Clean water & sanitation (SDG 6) — 748 outlets
+## Clean water & sanitation (SDG 6) — 749 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -69,29 +69,29 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-033505 | Rádio Regional - Mirandela | PRT | covers it | website headlines: "abastecimento de agua" |
 | pf-026116 | Le Ndjam Post | TCD | covers it | website headlines: "assainissement", "hygiene" |
 
-## Responsible consumption & production (SDG 12) — 706 outlets
+## Responsible consumption & production (SDG 12) — 708 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-020913 | Leavenworth Echo | USA | main focus | website About page: "food waste" |
 | pf-024880 | Eco-Business | SGP | main focus | description mentions "esg" |
-| pf-069033 | G1 Globo SP Santos Regiao | BRA | own section | website section "Sustentabilidade​" |
-| pf-039530 | City of Pueblo Channel 17 | USA | own section | website section "Recycling" |
+| pf-069001 | G1 Globo SP Mogi das Cruzes Suzano | BRA | own section | website section "Sustentabilidade​" |
+| pf-039516 | City of College Station Channel 19 | USA | own section | website section "Trash and Recycling" |
 | pf-011182 | WWAY | USA | covers it | website headlines: "recycling" |
 | pf-009927 | The Neighbor | USA | covers it | website About page: "waste management" |
 
-## Climate action (SDG 13) — 4,914 outlets
+## Climate action (SDG 13) — 4,928 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-035304 | WOOC 105.3 FM - Troy NY - The Sanctuary for Independent Medi | USA | main focus | website About page: "environmental" |
 | pf-006470 | Frequency: The Snowboarder's Journal | USA | main focus | description mentions "environment" |
-| pf-036308 | 日喀则综合广播 | CHN | own section | website section "生态" |
-| pf-034057 | REPLAY NEWS - Svenska | SWE | own section | website section "Écologie" |
-| pf-063785 | TechWave テックウェーブ | JPN | covers it | words in another language (via Wikidata): "持続可能性", "環境" |
-| pf-025971 | The Seattle Globalist | USA | covers it | website About page: "environment" |
+| pf-036260 | 怀来人民广播电台 | CHN | own section | website section "青山入镜风华成诗 镜头定格“大好河山张家口”生态之美" |
+| pf-034055 | REPLAY NEWS - Story (Français) | FRA | own section | website section "Écologie" |
+| pf-063661 | Noticias regionales como nacionales de El Salvador | SLV | covers it | website headlines: "sostenibilidad" |
+| pf-025953 | TRT Español | TUR | covers it | website headlines: "cop31" |
 
-## Life below water (SDG 14) — 442 outlets
+## Life below water (SDG 14) — 443 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -102,16 +102,16 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-013646 | KWLM | USA | covers it | website headlines: "fishermen" |
 | pf-058939 | coastalvirginiamag.com | USA | covers it | website headlines: "seafood" |
 
-## Life on land (SDG 15) — 1,382 outlets
+## Life on land (SDG 15) — 1,388 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-013688 | WIGN | USA | main focus | Wikipedia: "cites" |
-| pf-061551 | El Libertador - Argentina - Corrientes | ARG | main focus | website About page: "biodiversidad", "fauna silvestre", "rewilding" |
-| pf-032858 | Radio Eco Natura | ROU | own section | website section "Biodiversitate" (another language, via Wikidata) |
-| pf-068560 | standardspeaker.com | USA | own section | website section "Wildlife" |
-| pf-054904 | tri-statedefender.com | USA | covers it | website About page: "conservation" |
-| pf-068454 | lakeregionbulletin.co.ke | KEN | covers it | website headlines: "extinction" |
+| pf-061549 | La Republica de Corrientes | ARG | main focus | website About page: "fauna silvestre" |
+| pf-032789 | Radio Costa Esmeralda | ESP | own section | website section "naturaleza" |
+| pf-068312 | journaldusenegal.com | SEN | own section | website section "Biodiversité" |
+| pf-054696 | 8 Columnas | La nueva era del periodismo | MEX | covers it | website headlines: "incendios forestales" |
+| pf-068411 | bolanderlifestyle.co.za | ZAF | covers it | website headlines: "conservation" |
 
 ## Affordable & clean energy (SDG 7) — 834 outlets
 
@@ -124,7 +124,7 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-027042 | Meteored Portugal | PRT | covers it | website About page: "eletrificacao" |
 | pf-039361 | Channel247 | GHA | covers it | website headlines: "clean energy", "energy transition" |
 
-## Decent work & economic growth (SDG 8) — 2,606 outlets
+## Decent work & economic growth (SDG 8) — 2,614 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -132,21 +132,21 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-026026 | Women's Agenda | AUS | main focus | description mentions "entrepreneurs" |
 | pf-008308 | Prachatai | THA | own section | website section /labour/newsletter/ |
 | pf-043556 | Local Origination Channel 26 | USA | own section | website section "Economic Development" |
-| pf-029734 | Cadena Ser + Bilbao | ESP | covers it | website headlines: "huelga" |
-| pf-053931 | economy.com.bo | BOL | covers it | website About page: "emprendedores" |
+| pf-029732 | Cadena Ser + Alcoy | ESP | covers it | website headlines: "huelga" |
+| pf-053847 | Light and Champion | USA | covers it | website About page: "entrepreneurship" |
 
-## Industry, innovation & infrastructure (SDG 9) — 4,237 outlets
+## Industry, innovation & infrastructure (SDG 9) — 4,243 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-050021 | Wayra TV | PER | main focus | description mentions "venture capital" |
-| pf-062831 | regioncaribe.com.co | COL | main focus | website About page: "industria" |
-| pf-053169 | データ・マックス NETIB-NEWS | JPN | own section | website section /category/business/construction/ |
-| pf-018713 | Maquoketa Sentinel-Press | USA | own section | website section "JACKSON COUNTY SECONDARY ROADS" |
-| pf-053981 | hondudiario.com | HND | covers it | website headlines: "innovacion" |
-| pf-051935 | Gold Torch | USA | covers it | words in another language (via Wikidata): "创新", "制造业" |
+| pf-050388 | Zona Norte Noticias | ARG | main focus | website About page: "infraestructura" |
+| pf-063046 | Oundle Chronicle | GBR | main focus | description mentions "研发" |
+| pf-052776 | Sun - United States - Wisconsin | USA | own section | website section "Railway News" |
+| pf-018623 | Savannah Business Journal | USA | own section | website section /news/construction/ |
+| pf-053961 | eldiadigital.es | ESP | covers it | website About page: "industria" |
+| pf-051730 | canalmynews.com.br | BRA | covers it | website About page: "inovacao" |
 
-## Reduced inequalities (SDG 10) — 1,151 outlets
+## Reduced inequalities (SDG 10) — 1,154 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -154,43 +154,43 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-016967 | Pressenza | ECU | main focus | Wikipedia: "歧视" |
 | pf-007676 | KJAN | USA | own section | website section "Non-discrimination Policy" |
 | pf-069220 | owu.edu | USA | own section | website section /about/diversity/ |
-| pf-022829 | BBM Noticias | MEX | covers it | website headlines: "discriminacion" |
-| pf-032502 | Radio 3 Bodø | NOR | covers it | website headlines: "roms" |
+| pf-022570 | UNIMINUTO Radio | COL | covers it | website headlines: "racismo" |
+| pf-031846 | moonlitefm.com | GHA | covers it | website headlines: "remittances" |
 
-## Sustainable cities & communities (SDG 11) — 1,827 outlets
+## Sustainable cities & communities (SDG 11) — 1,832 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-005531 | Buffalo Rising | USA | main focus | Wikipedia: "urban planning" |
 | pf-015424 | Paso Robles Press | USA | main focus | website About page: "homeless" |
-| pf-052032 | Daily Post Athenian | USA | own section | website section /classifieds/housing/ |
-| pf-028707 | 101.1 Arroba FM (Hermosillo) - 101.1 FM - XHVSS-FM - Radiora | MEX | own section | website section /CDMX/ciudades/ |
-| pf-062238 | Bom Dia Feira | BRA | covers it | website headlines: "minha casa minha vida" |
-| pf-064107 | chathamdailynews.ca | CAN | covers it | website headlines: "affordable housing", "housing crisis" |
+| pf-051964 | South Coast Shopper | USA | own section | website section /cities/bandon/ |
+| pf-028705 | 1000 W Radio (Tapachula) - 1000 AM - XETAC-AM - Grupo Radio  | MEX | own section | website section /ciudades/guadalajara/ |
+| pf-062198 | Sertao 24 Horas | BRA | covers it | website headlines: "espacos publicos", "urbanizacao" |
+| pf-064070 | scsun-news.com | USA | covers it | website headlines: "homeless" |
 
-## Peace, justice & strong institutions (SDG 16) — 3,350 outlets
+## Peace, justice & strong institutions (SDG 16) — 3,358 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-071502 | Cuestión Pública | COL | main focus | OCCRP network (investigative journalism) |
 | pf-028022 | Baltimore Witness | USA | main focus | website About page: "accountability", "justice system", "transparency" |
-| pf-062361 | Jornal Quinzenario | BRA | own section | website section "Transparência e Financiamento" |
-| pf-027162 | Delta13News | ESP | own section | website section /category/justicia/ |
+| pf-062300 | Bastidores do Poder | BRA | own section | website section "JUSTIÇA" |
+| pf-027158 | North Dakota Monitor | USA | own section | website section "Justice" |
 | pf-006606 | Peace FM | GHA | covers it | website About page: "access to information" |
-| pf-026613 | The Brussels Morning Newspaper | BEL | covers it | website headlines: "human trafficking" |
+| pf-026531 | Snoop.ro | ROU | covers it | words in another language (via Wikidata): "spalare de bani", "transparenta" |
 
-## Partnerships for the goals (SDG 17) — 896 outlets
+## Partnerships for the goals (SDG 17) — 903 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-069131 | sierraleonetimes.com | SLE | main focus | website About page: "imf", "international monetary fund" |
-| pf-003449 | Golos Armenii | ARM | main focus | website About page: "всемирный банк" |
+| pf-068969 | Birmingham Star | USA | main focus | website About page: "imf", "international monetary fund" |
+| pf-002050 | Inter Press Service | ITA | main focus | AI reading: focus on development and global issues |
 | pf-054452 | Malawi News | MWI | own section | website section "Development" |
 | pf-059728 | newsweekjapan.jp | JPN | own section | website section /list/stories/sdgs/ |
-| pf-025434 | Thailand Business News | THA | covers it | website headlines: "imf", "world bank" |
-| pf-004111 | TC Televisión | ECU | covers it | website headlines: "fmi" |
+| pf-052358 | Enquete Plus | SEN | covers it | website headlines: "banque mondiale" |
+| pf-010021 | The Punch | NGA | covers it | website headlines: "united nations", "world bank" |
 
-## Fact-checking & misinformation — 1,127 outlets
+## Fact-checking & misinformation — 1,130 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -198,65 +198,65 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-071137 | Del dicho al hecho | CHL | main focus | Wikipedia list of fact-checking websites |
 | pf-044875 | News Daily 24 | IND | own section | website section "Factcheck" |
 | pf-026948 | Initiatives News | MRT | own section | website section "Fact-Check" |
-| pf-060561 | vecer.com | SVN | covers it | website headlines: "deepfake" |
-| pf-054482 | Mast Media | USA | covers it | website About page: "media literacy" |
+| pf-060388 | agazetanews.com.br | BRA | covers it | website headlines: "fake news" |
+| pf-054412 | uzdaily.com | UZB | covers it | website About page: "fact checking" |
 
-## Science — 5,435 outlets
+## Science — 5,449 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-024991 | Revista Vascongada | ESP | main focus | Wikipedia: "cientifico" |
-| pf-047585 | Space Channel | USA | main focus | iptv-org category "science" |
-| pf-047809 | Strongman | USA | own section | website section "History + Science" |
-| pf-010088 | The Standard | KEN | own section | website section "Health & Science" |
+| pf-025041 | Rashtriya sahara | IND | main focus | website About page: "विज्ञान" |
+| pf-047503 | Smithsonian Channel Selects | USA | main focus | iptv-org category "science" |
+| pf-047613 | SpongeBob Schwammkopf | DEU | own section | website section "History + Science" |
+| pf-010082 | The Spectator | USA | own section | website section "Science" |
 | pf-018591 | Franklin County Citizen | USA | covers it | website headlines: "science" |
 | pf-009025 | Radio Student | HRV | covers it | Wikipedia: "sciences" |
 
-## Business & economy — 17,654 outlets
+## Business & economy — 17,694 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-029761 | Cadena SER Almería 88.2 FM | ESP | main focus | description mentions "economia" |
-| pf-034944 | Utuntu FM | ZMB | main focus | website About page: "economic" |
-| pf-071268 | Rádio Brasil Atual | BRA | own section | website section "Economia" |
-| pf-059150 | newsnow | CAN | own section | website section "Business Connections" |
-| pf-069712 | derechoenzapatillas.com | ARG | covers it | website About page: "empresas" |
-| pf-047807 | STR News TV | AFG | covers it | website About page: "finances", "financial" |
+| pf-029736 | Cadena Ser + Cadiz - 93.2 FM | ESP | main focus | description mentions "economia" |
+| pf-034883 | UgOnlineMedia - Kampala (MP3) | UGA | main focus | Radio Browser tag "business" |
+| pf-070641 | NAGASAKI SHIMBUN | JPN | own section | website section /business/newspaper/newspaper-order/ |
+| pf-059079 | Peekskill Herald 2.0 | USA | own section | website section "Financial Statements" |
+| pf-069518 | todojujuy.com | ARG | covers it | website headlines: "economia", "empresas" |
+| pf-047752 | Star Sports 1 Telugu | IND | covers it | website About page: "business" |
 
-## Culture — 22,001 outlets
+## Culture — 22,056 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-028368 | 88.9 NOTICIAS (CDMX) - 88.9 FM - XHM-FM - Grupo ACIR - Ciuda | MEX | main focus | website About page: "music" |
-| pf-026303 | Ficción | ARG | main focus | Wikidata: literary magazine |
-| pf-024437 | Amazônia Real | BRA | own section | website section "CULTURA" |
-| pf-012393 | MyNewsJapan | JPN | own section | website section /books/ |
-| pf-066461 | delawaretoday.com | USA | covers it | website About page: "arts" |
-| pf-064308 | caasimada.net | SOM | covers it | website About page: "culture" |
+| pf-028327 | Radio Capital | ITA | main focus | description mentions "musica" |
+| pf-026183 | Lucensia | ESP | main focus | Wikipedia: "cultura" |
+| pf-024391 | Agidigbo Fm 88.7, Ibadan | NGA | own section | website section /category/music/trending/ |
+| pf-012354 | Jornal San Wa Ou | CHN | own section | website section "澳門青少年赴四川北川研學 體驗羌族非遺感知民族文化魅力" |
+| pf-066341 | cvilletomorrow.org | USA | covers it | website headlines: "culture" |
+| pf-064256 | sunrise.ug | UGA | covers it | website headlines: "arts", "culture", "festival" |
 
-## Religion — 8,489 outlets
+## Religion — 8,500 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-024798 | Qaf TV | GBR | main focus | Wikipedia: "الدين" |
 | pf-010241 | Tricycle: The Buddhist Review | USA | main focus | name mentions "buddhist" |
-| pf-070334 | dailysentinel.com | USA | own section | website section "Faith Directory" |
+| pf-070320 | lockhaven.com | USA | own section | website section "Religion" |
 | pf-009193 | Santa Monica College Corsair | USA | own section | website section "Christian Martinez" |
-| pf-011961 | SBT MS | BRA | covers it | Wikipedia: "church" |
-| pf-013405 | "Azerbaijan muallimi" newspaper | AZE | covers it | website headlines: "dini" |
+| pf-011934 | Rádio Educadora | BRA | covers it | website headlines: "catolica", "cristiano", "igreja" |
+| pf-013065 | Kino.dk | DNK | covers it | website headlines: "faith" |
 
-## Community & local — 22,375 outlets
+## Community & local — 22,389 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-058679 | theroundupnews.com | USA | main focus | scope local |
-| pf-008491 | Mississippi Business Journal | USA | main focus | scope local |
-| pf-044935 | NFL Sunday Ticket 17 | USA | own section | website section "Community" |
-| pf-044847 | News12 Westchester | USA | own section | website section "Local" |
-| pf-050816 | indonesianews.net | IDN | covers it | website About page: "local news" |
-| pf-059530 | kualalumpurnews.net | MYS | covers it | website About page: "local news" |
+| pf-058671 | Sonxeber.az - En Son xeberler, Azerbaycan xeberleri 2020 , X | AZE | main focus | scope local |
+| pf-008482 | Ming Pao Daily News | CAN | main focus | scope local |
+| pf-044930 | NFL Sunday Ticket 12 | USA | own section | website section "Community" |
+| pf-044836 | bronx.news12.com | USA | own section | website section "Local" |
+| pf-050948 | Lianhe Wanbao | SGP | covers it | website About page: "本地新闻" |
+| pf-059648 | Inicio - **RNMA** | ARG | covers it | website headlines: "medios comunitarios" |
 
-## Humanitarian aid — 783 outlets
+## Humanitarian aid — 784 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -267,84 +267,84 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-010382 | WAGA-TV | USA | covers it | website headlines: "red cross", "relief" |
 | pf-066405 | bizneworleans.com | USA | covers it | website headlines: "relief" |
 
-## Human rights — 1,552 outlets
+## Human rights — 1,553 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-068311 | garoweonline.com | SOM | main focus | website About page: "freedom of expression", "human rights" |
-| pf-023657 | Wayka | PER | main focus | Wikipedia: "human rights" |
+| pf-068920 | Global Voices Online | NLD | main focus | description mentions "activists" |
+| pf-024148 | Areo | GBR | main focus | Wikipedia: "social justice" |
 | pf-069665 | Cross River Watch | NGA | own section | website section "Civic Space" |
 | pf-046626 | Rede Metropole | BRA | own section | website section "Direitos Humanos" |
-| pf-006273 | El Tiempo | VEN | covers it | website headlines: "presos politicos" |
-| pf-020279 | QNS | USA | covers it | website headlines: "activists" |
+| pf-006255 | El Grito del Norte | USA | covers it | Wikipedia: "political prisoners" |
+| pf-020233 | Ruidoso News | USA | covers it | website headlines: "civil society" |
 
-## Migration & refugees — 1,489 outlets
+## Migration & refugees — 1,494 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-053632 | cartelurbano.com | COL | main focus | website About page: "migrantes" |
 | pf-012447 | Nikkey Shimbun | BRA | main focus | description mentions "移民" |
-| pf-037703 | Arizona's Family First Alert Weather | USA | own section | website section "Immigration" |
+| pf-037393 | Alsacias Television | HND | own section | website section "MIGRANTES" |
 | pf-000018 | Le Monde | FRA | own section | website section "Immigration et diversité" |
-| pf-059547 | gara.net | ESP | covers it | website headlines: "inmigrantes" |
-| pf-067803 | kemptonexpress.co.za | ZAF | covers it | website headlines: "refugee", "resettlement" |
+| pf-071349 | France 24 - Les Observateurs | FRA | covers it | website headlines: "immigration", "migrants", "migration" |
+| pf-059497 | lowvelder.co.za | ZAF | covers it | website headlines: "refugee" |
 
-## Conflict & security — 2,270 outlets
+## Conflict & security — 2,279 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-068099 | frontpageafricaonline.com | LBR | main focus | description mentions "war crimes" |
+| pf-068079 | en.lb.ua | UKR | main focus | website About page: "military" |
 | pf-017083 | Socio-political weekly Young Far East 21st century | RUS | main focus | Wikidata subject: war |
-| pf-061622 | Palermo Tour | ARG | own section | website section "La Sastrería Militar" |
-| pf-014802 | NK News | KOR | own section | website section "Military Affairs" |
-| pf-057740 | Notícias, Imóveis e Classificados de Sorocaba e região. | BRA | covers it | website headlines: "armas" |
-| pf-009586 | The California Courier | USA | covers it | website headlines: "military" |
+| pf-061587 | Portal Paso de los Libres | ARG | own section | website section "Military (34)" |
+| pf-014451 | Asia-Plus | TJK | own section | website section "Безопасность" |
+| pf-057675 | metrodakar.net | SEN | covers it | website headlines: "armes", "militaire" |
+| pf-009513 | The Advocate-Messenger | USA | covers it | website headlines: "rebels" |
 
-## Technology, digital & AI — 8,230 outlets
+## Technology, digital & AI — 8,247 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-031737 | marandua.com.co | COL | main focus | description mentions "tecnologia" |
-| pf-063435 | News From India,Online Indian News - Home | IND | main focus | description mentions "technology" |
-| pf-025580 | HealthDay News | USA | own section | website section "Health Technology" |
-| pf-018260 | Conejos County Citizen | USA | own section | website section "Tech" |
-| pf-048590 | Time Television | USA | covers it | website About page: "technology" |
-| pf-018188 | La Mesa Courier | USA | covers it | website headlines: "tech" |
+| pf-063379 | niagarathisweek.com | CAN | main focus | website About page: "artificial intelligence", "technology" |
+| pf-025474 | Algérie 360 | DZA | own section | website section "High-tech" |
+| pf-018207 | Willow Glen Resident | USA | own section | website section "Technology" |
+| pf-048410 | Television Avilena | CUB | covers it | website About page: "tecnologia" |
+| pf-018187 | Mission Valley News | USA | covers it | website headlines: "tech" |
 
-## Agriculture & rural — 3,494 outlets
+## Agriculture & rural — 3,506 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-058157 | agrinews-pubs.com | USA | main focus | description mentions "farm" |
 | pf-057261 | accesoinvestigativo.com | BOL | main focus | description mentions "agricultura" |
 | pf-000012 | France 3 Régions | FRA | own section | website section "agriculture" |
-| pf-061068 | Ludlow & Tenbury Wells News, Sport, Leisure, Homes, Jobs and | GBR | own section | website section "Farming" |
-| pf-030966 | HeartSong Live | GBR | covers it | website About page: "cultures" |
-| pf-056439 | nocomment | MDG | covers it | website headlines: "cultures" |
+| pf-060929 | Zambia Invest | ZMB | own section | website section "Agriculture" |
+| pf-030596 | Festival | CHL | covers it | website headlines: "agricultores", "agricultura" |
+| pf-056316 | economist-na | NAM | covers it | website About page: "agriculture" |
 
-## Disasters & emergencies — 2,398 outlets
+## Disasters & emergencies — 2,404 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-003536 | KGMB | USA | main focus | description mentions "severe weather" |
 | pf-010849 | WLUK-TV | USA | main focus | description mentions "severe weather" |
-| pf-026264 | 62INFO | RUS | own section | website section "МЧС" |
-| pf-018036 | Campbell Reporter | USA | own section | website section "San Jose Earthquakes" |
+| pf-026240 | BFM2 | FRA | own section | website section "Inondations" |
+| pf-017985 | Payson Roundup | USA | own section | website section "Forest Management - Wildfires" |
 | pf-024578 | ENewsRoom | IND | covers it | website headlines: "cyclone" |
 | pf-005864 | Channel 9 | BGD | covers it | words in another language (via Wikidata): "টাইফুন", "বন্যা" |
 
-## Children & youth — 9,741 outlets
+## Children & youth — 9,764 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-025262 | Terra Nova Times | USA | main focus | Wikidata: student newspaper |
-| pf-055285 | The Rocket | USA | main focus | website About page: "students" |
+| pf-025276 | The OutCrowd Magazine | USA | main focus | Wikidata: student newspaper |
+| pf-055460 | latinotimes.org | USA | main focus | website About page: "children", "kids", "students" |
 | pf-008216 | WTOP-FM | USA | own section | website section "Youth Sports" |
 | pf-008873 | Pine City Pioneer | USA | own section | website section "Students" |
-| pf-063239 | madisoncourier.com | USA | covers it | website headlines: "students" |
-| pf-007425 | KALX | USA | covers it | Wikipedia: "students" |
+| pf-062906 | straight.com | CAN | covers it | website headlines: "kids", "youth" |
+| pf-007399 | Juárez Hoy | MEX | covers it | website headlines: "estudiantes" |
 
-## Indigenous peoples — 889 outlets
+## Indigenous peoples — 892 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -352,10 +352,10 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-008801 | Overland | AUS | main focus | website About page: "first nations", "indigenous", "maori" |
 | pf-011974 | Super Notícia | BRA | own section | website section "Yanomami" |
 | pf-064201 | kenoraminerandnews.com | CAN | own section | website section "Indigenous" |
-| pf-054219 | revistaentornos.com | COL | covers it | website headlines: "indigenas", "wayuu" |
-| pf-008099 | KYUK-FM | USA | covers it | website About page: "native american" |
+| pf-054160 | folhadeguanhaes.com.br | BRA | covers it | website headlines: "indigenas", "povos indigenas", "quilombolas" |
+| pf-008037 | KVRR | USA | covers it | website headlines: "native american" |
 
-## Disability & inclusion — 1,112 outlets
+## Disability & inclusion — 1,113 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -364,42 +364,42 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-062894 | Roseville in Roseville CA News and Yellow Pages Rocklin Cali | USA | own section | website section "Disabilities" |
 | pf-026332 | Chosen TV | NGA | own section | website section "Deaf & Dumb" |
 | pf-055790 | apfdigital.com.ar | ARG | covers it | website headlines: "discapacidad", "personas con discapacidad" |
-| pf-067035 | northantstelegraph.co.uk | GBR | covers it | website headlines: "disabled" |
+| pf-066998 | victorharbortimes.com.au | AUS | covers it | website headlines: "blind" |
 
-## Media freedom & journalism — 771 outlets
+## Media freedom & journalism — 773 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-026621 | Mikroskop Media | AZE | main focus | OCCRP network (investigative journalism) |
-| pf-055691 | cyprus-mail | CYP | main focus | description mentions "independent journalism" |
+| pf-026799 | Sludge | USA | main focus | description mentions "investigative journalism" |
+| pf-055876 | losirreverentes.com | COL | main focus | description mentions "censura" |
 | pf-059727 | reporterbrasil.org.br | BRA | own section | website section "JORNALISMO" |
 | pf-057293 | ovaradouro.com.br | BRA | own section | website section "Jornalismo" |
-| pf-043997 | mereja.com | ETH | covers it | website headlines: "rsf" |
-| pf-056574 | invisibles.info | ARG | covers it | website About page: "periodismo de investigacion" |
+| pf-040820 | ethio360media.com | ETH | covers it | website About page: "investigative journalism" |
+| pf-056237 | Al Sabah Al Jadeed | IRQ | covers it | website headlines: "الرقابة" |
 
-## Elections & governance — 10,707 outlets
+## Elections & governance — 10,734 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-039933 | CVTV | USA | main focus | iptv-org category "legislative" |
-| pf-009268 | Sioux City Journal | USA | main focus | website About page: "ballot", "elections", "legislature" |
-| pf-012090 | TV Vitória | BRA | own section | website section "Eleições 2026" |
-| pf-011038 | WSAZ-TV | USA | own section | website section "Election Results" |
-| pf-006405 | Fitzrovia News | GBR | covers it | website About page: "democracy" |
-| pf-045749 | Paraguay TV | PRY | covers it | website headlines: "congreso" |
+| pf-039917 | CURRENTTV-Government | USA | main focus | iptv-org category "legislative" |
+| pf-009151 | Sabato's Crystal Ball | USA | main focus | description mentions "election" |
+| pf-012037 | TV Guará | BRA | own section | website section "Eleições 2026" |
+| pf-010999 | WRGA | USA | own section | website section "November 2026 Election Results" |
+| pf-006390 | Fiji Focus | FJI | covers it | website headlines: "parliament" |
+| pf-045556 | Online TV Nusantara | IDN | covers it | website headlines: "congress" |
 
-## Sports — 21,405 outlets
+## Sports — 21,448 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-001129 | Magyar Hírlap | HUN | main focus | description mentions "sport" |
 | pf-044366 | MTRSPT1 | USA | main focus | iptv-org category "sports" |
-| pf-060182 | villavonoticias.com | COL | own section | website section "Deportes" |
-| pf-023276 | Andalucía Información | ESP | own section | website section "Deportes" |
+| pf-060062 | Turkmenistan Live | TKM | own section | website section "Спорт" |
+| pf-023122 | MENAFN | JOR | own section | website section "Sport" |
 | pf-052489 | telquel.ma | MAR | covers it | website headlines: "football", "soccer" |
 | pf-011729 | Gazeta FM | BRA | covers it | website headlines: "mundial" |
 
-## Diaspora — 539 outlets
+## Diaspora — 541 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -410,7 +410,7 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-003050 | Aujourd'hui Le Maroc | MAR | covers it | website headlines: "diaspora" |
 | pf-016153 | Obiteljska televizija Valentino | BIH | covers it | Wikipedia: "diaspora" |
 
-## Older persons & ageing — 1,478 outlets
+## Older persons & ageing — 1,481 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -418,6 +418,6 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-003581 | L'Itinéraire | CAN | main focus | Wikipedia: "dependance" |
 | pf-020501 | Purcell Register | USA | own section | website section "Seniors" |
 | pf-003918 | Prions en Église | FRA | own section | website section "Nos retraites et formations" |
-| pf-051026 | sitiosargentina.com.ar | ARG | covers it | website headlines: "jubilados", "pensiones" |
-| pf-020328 | Syosset Jericho Tribune | USA | covers it | website headlines: "dementia" |
+| pf-050748 | ledgertranscript.com | USA | covers it | website headlines: "aging", "seniors" |
+| pf-020318 | Great Neck Record | USA | covers it | website headlines: "dementia" |
 

@@ -6,12 +6,12 @@ Built 2026-11-10. Sources: wikidata_ngo 58399, un_geneva 1471, iati 1339
 
 | Information | Share |
 |---|---|
-| Topic | 38 % |
+| Topic | 57 % |
 | Topic from ECOSOC fields of activity | 0 % |
-| Target audience | 3 % |
-| Language | 1 % |
+| Target audience | 7 % |
+| Language | 37 % |
 | Website | 48 % |
-| E-mail | 9 % |
+| E-mail | 16 % |
 | ECOSOC consultative status | 0 % |
 | Only registered in ECOSOC (note on the card) | 0 % |
 

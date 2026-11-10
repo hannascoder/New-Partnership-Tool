@@ -219,12 +219,13 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (6)
+## AI reading: probably in another country (7)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
 | Id | Name | Country now | AI reading says |
 |---|---|---|---|
+| pf-000004 | Euronews | BEL | FRA (headquartered in Lyon, France) |
 | pf-000115 | Ozono Television | CHL | PER (TV channel in Trujillo, Peru) |
 | pf-000344 | Disney Jr. | TUR | USA (American pay TV network) |
 | pf-000695 | مک‌ورلد | GBR | USA (published by Foundry, founded in the USA) |
@@ -237,7 +238,7 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 | Id | Name | Country | Note |
 |---|---|---|---|
 
-## Possible duplicates: same website, several entries (2915)
+## Possible duplicates: same website, several entries (2914)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 

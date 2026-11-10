@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-150 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+152 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -16,6 +16,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-028600 | Sky News Australia | AUS | AI reading (right-wing populist): general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia |
 | pf-001091 | Die Aula | AUT | Wikipedia Category:Far-right periodicals |
 | pf-040973 | eXXpress TV | AUT | AI reading (right-wing populist): general knowledge, not in the profile text (please check): right-wing populist Austrian channel |
+| pf-002954 | 't Pallieterke | BEL | AI reading (right-wing populist): Wikipedia: Flemish nationalist (advocates Flemish independence), largely conservative; general knowledge: close to Vlaams Belang circles (please check) |
 | pf-021359 | The Morning News | BGD | AI reading (right-wing populist): Wikipedia: right-wing newspaper |
 | pf-011735 | Gazeta do Povo | BRA | AI reading (right-wing populist): Wikipedia: since 2015 an outlet for Brazilian conservatism (right-wing) |
 | pf-011893 | Jovem Pan | BRA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): aligned with Bolsonaro's right-wing movement |
@@ -102,6 +103,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-024429 | Nationalt Tidsskrift | NOR | Wikipedia Category:Far-right periodicals |
 | pf-024919 | Subjekt | NOR | Wikipedia Category:Alt-right websites |
 | pf-027100 | The Nexus | NZL | Wikidata political ideology: neo-Nazism |
+| pf-026717 | Arriba España | PER | AI reading: Wikidata: Peruvian Falangist magazine |
 | pf-017409 | SMNI News Channel | PHL | AI reading (right-wing populist): Wikipedia: right-wing militarist religious network |
 | pf-008550 | Myśl.pl | POL | AI reading (right-wing populist): Wikipedia: right-wing journal |
 | pf-002675 | Nasz Dziennik | POL | AI reading: Wikipedia: right-wing to far-right |

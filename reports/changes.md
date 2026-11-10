@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 159 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 190, scope 3
+- No longer shown: 172 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 205, scope 3
 
 ### Examples: ownership
 
@@ -28,18 +28,18 @@
 
 ### Examples: no longer shown
 
+- 't Pallieterke (BEL, pf-002954)
 - .ch (CHE, pf-000147)
 - 0404 News (ISR, pf-015038)
 - A Muvra (FRA, pf-004329)
 - Aaj Tak (IND, pf-003906)
 - American Thinker (USA, pf-004610)
 - Apollo News (DEU, pf-025589)
+- Arriba España (PER, pf-026717)
+- Associated Whistleblowing Press (BEL, pf-014573)
 - Athens News Agency (GRC, pf-002878)
 - Avriani (GRC, pf-004254)
 - BC Report (CAN, pf-005351)
+- Bessy (BEL, pf-000981)
 - Blaze Media (USA, pf-009508)
-- Boletín Oficial del Estado (ESP, pf-002425)
-- Cadena Súper (COL, pf-005776)
-- Cahiers du Cercle Proudhon (FRA, pf-003169)
-- Causeur (FRA, pf-003202)
-- Chess.com (USA, pf-014292)
+- Blokwatch (BEL, pf-002762)

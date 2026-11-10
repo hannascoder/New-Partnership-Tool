@@ -36,6 +36,24 @@
    ]
   ]
  },
+ "pf-000004": {
+  "country_hint": "FRA (headquartered in Lyon, France)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pan-European news network"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "many language editions"
+   ]
+  ]
+ },
  "pf-000005": {
   "date": "2026-11-10",
   "ownership": [
@@ -164,6 +182,38 @@
    [
     "multilingual",
     "French and English editions"
+   ]
+  ]
+ },
+ "pf-000019": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Flemish newspaper"
+   ]
+  ]
+ },
+ "pf-000020": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: national broadcaster for the Flemish community"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Flemish public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
    ]
   ]
  },
@@ -1503,6 +1553,29 @@
    ]
   ]
  },
+ "pf-000158": {
+  "audience": [
+   [
+    "minority_language",
+    "German speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "hit music radio"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "German-speaking Belgium"
+   ]
+  ]
+ },
  "pf-000161": {
   "date": "2026-11-09",
   "topics": [
@@ -2114,6 +2187,22 @@
    ]
   ]
  },
+ "pf-000227": {
+  "date": "2026-11-10",
+  "owner": "DPG Media",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by DPG Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
+   ]
+  ]
+ },
  "pf-000228": {
   "date": "2026-11-10",
   "owner": "Tapt Media",
@@ -2547,6 +2636,34 @@
     "gender_identity",
     1,
     "magazine for the gay community"
+   ]
+  ]
+ },
+ "pf-000311": {
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned by the VRT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
    ]
   ]
  },
@@ -3476,6 +3593,27 @@
    ]
   ]
  },
+ "pf-000487": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by DPG Media and Groupe Rossel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000488": {
   "date": "2026-11-10",
   "ownership": [
@@ -3676,6 +3814,33 @@
   "date": "2026-11-10",
   "far_right": "Wikipedia: editorial stance perceived as far-right since 2023",
   "topics": []
+ },
+ "pf-000536": {
+  "audience": [
+   [
+    "policy_makers",
+    "EU policy readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: published by an ASBL (non-profit)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent EU online newspaper"
+   ],
+   [
+    "partnerships",
+    "global_cooperation",
+    1,
+    "EU policy news"
+   ]
+  ]
  },
  "pf-000540": {
   "date": "2026-11-10",
@@ -4136,6 +4301,27 @@
    [
     "public_service_mandate",
     "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-000620": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -5440,6 +5626,17 @@
    ]
   ]
  },
+ "pf-000801": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily newspaper"
+   ]
+  ]
+ },
  "pf-000803": {
   "date": "2026-11-10",
   "ownership": [
@@ -6234,6 +6431,27 @@
    ]
   ]
  },
+ "pf-000919": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-000921": {
   "date": "2026-11-10",
   "owner": "South African Broadcasting Corporation",
@@ -6412,6 +6630,44 @@
    ]
   ]
  },
+ "pf-000960": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
+ "pf-000962": {
+  "audience": [
+   [
+    "minority_language",
+    "German-speaking Belgians"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public-service broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster of the German-speaking Community"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
+   ]
+  ]
+ },
  "pf-000963": {
   "date": "2026-11-10",
   "owner": "Éditions Philippe Amaury",
@@ -6519,6 +6775,11 @@
     "only daily wholly in Basque"
    ]
   ]
+ },
+ "pf-000981": {
+  "date": "2026-11-10",
+  "not_media": "comics series, not a media outlet",
+  "topics": []
  },
  "pf-000986": {
   "audience": [
@@ -7671,6 +7932,27 @@
    ]
   ]
  },
+ "pf-001245": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: TV network"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001248": {
   "audience": [
    [
@@ -8284,6 +8566,34 @@
     null,
     1,
     "public 24-hour news channel"
+   ]
+  ]
+ },
+ "pf-001340": {
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: VRT channel"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV with culture and documentaries"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "current affairs"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
    ]
   ]
  },
@@ -8969,6 +9279,28 @@
    ]
   ]
  },
+ "pf-001440": {
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the VRT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public radio channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
+   ]
+  ]
+ },
  "pf-001442": {
   "date": "2026-11-10",
   "topics": [
@@ -9478,6 +9810,50 @@
    ]
   ]
  },
+ "pf-001508": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial station"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "main commercial TV station"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-001512": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Flemish newspaper"
+   ]
+  ]
+ },
+ "pf-001513": {
+  "date": "2026-11-10",
+  "owner": "Mediahuis",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Flemish daily newspaper"
+   ]
+  ]
+ },
  "pf-001515": {
   "date": "2026-11-10",
   "topics": [
@@ -9562,6 +9938,33 @@
     null,
     1,
     "French-language TV network"
+   ]
+  ]
+ },
+ "pf-001526": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster of the French Community"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language public broadcaster"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
    ]
   ]
  },
@@ -10048,6 +10451,29 @@
    ]
   ]
  },
+ "pf-001665": {
+  "audience": [
+   [
+    "policy_makers",
+    "EU policy readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website on EU policies"
+   ],
+   [
+    "partnerships",
+    "global_cooperation",
+    1,
+    "EU policy news"
+   ]
+  ]
+ },
  "pf-001667": {
   "date": "2026-11-10",
   "topics": [
@@ -10174,6 +10600,17 @@
     null,
     1,
     "Lviv"
+   ]
+  ]
+ },
+ "pf-001685": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest newspaper of Peru"
    ]
   ]
  },
@@ -10344,6 +10781,23 @@
     null,
     1,
     "music TV channel"
+   ]
+  ]
+ },
+ "pf-001705": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main national newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "football"
    ]
   ]
  },
@@ -10747,6 +11201,17 @@
    ]
   ]
  },
+ "pf-001824": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Dutch-language newspaper"
+   ]
+  ]
+ },
  "pf-001825": {
   "date": "2026-11-10",
   "topics": [
@@ -10822,6 +11287,21 @@
     null,
     1,
     "weekly illustrated magazine"
+   ]
+  ]
+ },
+ "pf-001846": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Play Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "commercial TV channel"
    ]
   ]
  },
@@ -11787,6 +12267,34 @@
    ]
   ]
  },
+ "pf-002118": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: owned and operated by the VRT"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "public children's channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
+   ]
+  ]
+ },
  "pf-002125": {
   "date": "2026-11-10",
   "owner": "El Mercurio SAP",
@@ -12423,6 +12931,17 @@
    ]
   ]
  },
+ "pf-002264": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language newspaper"
+   ]
+  ]
+ },
  "pf-002277": {
   "closed": "Wikidata: children's channel 1998-2025",
   "date": "2026-11-10",
@@ -12673,6 +13192,28 @@
    ]
   ]
  },
+ "pf-002320": {
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: operated by the VRT"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "classical music and culture radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
+   ]
+  ]
+ },
  "pf-002330": {
   "date": "2026-11-09",
   "owner": "Grupo Abril",
@@ -12751,6 +13292,21 @@
     "decent_jobs",
     1,
     "focus on trade union issues"
+   ]
+  ]
+ },
+ "pf-002348": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official newspaper of Peru"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official daily newspaper (publishes laws)"
    ]
   ]
  },
@@ -13542,6 +14098,49 @@
    ]
   ]
  },
+ "pf-002575": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: underground radio"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "underground radio in Antwerp"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "alternative radio"
+   ]
+  ]
+ },
+ "pf-002583": {
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: news channel of the VRT"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "main public news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
+   ]
+  ]
+ },
  "pf-002588": {
   "date": "2026-11-10",
   "owner": "Gremi Media",
@@ -13632,6 +14231,28 @@
     null,
     2,
     "Tamil Nadu"
+   ]
+  ]
+ },
+ "pf-002602": {
+  "date": "2026-11-10",
+  "owner": "VRT",
+  "ownership": [
+   "public_service",
+   "Wikipedia: VRT brand"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "public sports brand"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Belgian public broadcaster"
    ]
   ]
  },
@@ -13884,6 +14505,23 @@
    ]
   ]
  },
+ "pf-002690": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Brussels"
+   ]
+  ]
+ },
  "pf-002697": {
   "audience": [
    [
@@ -14031,6 +14669,23 @@
    ]
   ]
  },
+ "pf-002745": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Liège"
+   ]
+  ]
+ },
  "pf-002746": {
   "date": "2026-11-10",
   "ownership": [
@@ -14049,6 +14704,21 @@
     null,
     1,
     "Sichuan Province"
+   ]
+  ]
+ },
+ "pf-002752": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "website: DPG Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Flemish TV station"
    ]
   ]
  },
@@ -14091,6 +14761,35 @@
    [
     "multilingual",
     "Ukrainian, Russian, English"
+   ]
+  ]
+ },
+ "pf-002762": {
+  "closed": "Wikipedia: Blokwatch 'was' a news site",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "human_rights",
+    null,
+    1,
+    "research on the far right"
+   ]
+  ]
+ },
+ "pf-002771": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Antwerp"
    ]
   ]
  },
@@ -14158,6 +14857,17 @@
    ]
   ]
  },
+ "pf-002785": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ]
+  ]
+ },
  "pf-002788": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: official organ of the National Bolshevik Party",
@@ -14200,6 +14910,34 @@
     null,
     1,
     "public children's channel"
+   ]
+  ]
+ },
+ "pf-002807": {
+  "date": "2026-11-10",
+  "owner": "América Multimedia",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by América Multimedia"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "free-to-air TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
    ]
   ]
  },
@@ -14366,6 +15104,17 @@
    ]
   ]
  },
+ "pf-002863": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly news magazine"
+   ]
+  ]
+ },
  "pf-002864": {
   "date": "2026-11-10",
   "topics": [
@@ -14514,6 +15263,33 @@
     null,
     1,
     "independent TV channel"
+   ]
+  ]
+ },
+ "pf-002896": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: non-commercial"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Dutch-language city media"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Brussels"
+   ],
+   [
+    "culture",
+    null,
+    2,
+    "culture"
    ]
   ]
  },
@@ -14895,6 +15671,18 @@
    ]
   ]
  },
+ "pf-002954": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: Flemish nationalist (advocates Flemish independence), largely conservative; general knowledge: close to Vlaams Belang circles (please check)",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satirical Flemish weekly"
+   ]
+  ]
+ },
  "pf-002958": {
   "date": "2026-11-10",
   "owner": "NRK",
@@ -14930,6 +15718,22 @@
     null,
     1,
     "classical music radio"
+   ]
+  ]
+ },
+ "pf-002969": {
+  "date": "2026-11-10",
+  "owner": "Grupo ATV",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Grupo ATV"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
    ]
   ]
  },
@@ -15239,6 +16043,23 @@
    ]
   ],
   "website_warning": "the website address leads to an audience research site (saarf.co.za), not the newspaper"
+ },
+ "pf-003201": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newsmagazine known for investigations"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    2,
+    "investigative journalism"
+   ]
+  ]
  },
  "pf-003202": {
   "date": "2026-11-10",
@@ -15680,6 +16501,22 @@
    ]
   ]
  },
+ "pf-003371": {
+  "date": "2026-11-10",
+  "owner": "IRTP",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: state-owned, owned by the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public TV network of state broadcaster IRTP"
+   ]
+  ]
+ },
  "pf-003376": {
   "date": "2026-11-09",
   "topics": [
@@ -15784,6 +16621,28 @@
     "gender_identity",
     1,
     "gay magazine"
+   ]
+  ]
+ },
+ "pf-003430": {
+  "date": "2026-11-10",
+  "owner": "Grupo RPP",
+  "ownership": [
+   "private",
+   "Wikipedia: Grupo RPP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio and TV broadcasting company"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "politics"
    ]
   ]
  },
@@ -15950,6 +16809,23 @@
    ]
   ]
  },
+ "pf-003482": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "local TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Mons-Borinage"
+   ]
+  ]
+ },
  "pf-003486": {
   "date": "2026-11-10",
   "topics": [
@@ -16030,6 +16906,23 @@
    ]
   ],
   "website_warning": "the website now shows online casino and betting reviews, not the newspaper"
+ },
+ "pf-003590": {
+  "audience": [
+   [
+    "business_professionals",
+    "business newspaper"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business daily newspaper"
+   ]
+  ]
  },
  "pf-003604": {
   "date": "2026-11-10",
@@ -16324,6 +17217,18 @@
    ]
   ]
  },
+ "pf-003784": {
+  "closed": "Wikipedia: Metro 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free daily newspaper"
+   ]
+  ]
+ },
  "pf-003785": {
   "date": "2026-11-10",
   "owner": "DMG Media",
@@ -16367,6 +17272,23 @@
     "housing",
     2,
     "website section Vivienda"
+   ]
+  ]
+ },
+ "pf-003816": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "weekly magazine on culture and TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "current affairs"
    ]
   ]
  },
@@ -17687,6 +18609,21 @@
    ]
   ]
  },
+ "pf-004564": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Telenet brand"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channels"
+   ]
+  ]
+ },
  "pf-004567": {
   "date": "2026-11-10",
   "topics": [
@@ -17695,6 +18632,21 @@
     null,
     1,
     "24-hour news channel"
+   ]
+  ]
+ },
+ "pf-004571": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the Peruvian government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government news agency"
    ]
   ]
  },
@@ -18975,6 +19927,17 @@
   "right_populist": "Wikipedia: right-wing or conservative editorial stance",
   "topics": []
  },
+ "pf-005361": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-005366": {
   "audience": [
    [
@@ -19453,6 +20416,21 @@
     null,
     1,
     "public institutional channel"
+   ]
+  ]
+ },
+ "pf-005810": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: joint venture of El Comercio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pay TV news channel"
    ]
   ]
  },
@@ -20313,6 +21291,18 @@
    ]
   ]
  },
+ "pf-006459": {
+  "closed": "Wikipedia: Freak Out! 'was' a magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music magazine"
+   ]
+  ]
+ },
  "pf-006485": {
   "date": "2026-11-09",
   "owner": "Grupo Globo",
@@ -20561,6 +21551,21 @@
    ]
   ]
  },
+ "pf-006732": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: owned by Telefónica"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports pay TV channel"
+   ]
+  ]
+ },
  "pf-006734": {
   "audience": [
    [
@@ -20694,6 +21699,17 @@
     null,
     1,
     "Catholic TV channel"
+   ]
+  ]
+ },
+ "pf-006828": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national daily newspaper"
    ]
   ]
  },
@@ -20831,6 +21847,17 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): TV channel of the right-wing Libertad Digital",
   "topics": []
+ },
+ "pf-007073": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "horse racing TV channel"
+   ]
+  ]
  },
  "pf-007078": {
   "date": "2026-11-10",
@@ -21048,6 +22075,27 @@
    ]
   ]
  },
+ "pf-007209": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Grupo RPP"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV news channel"
+   ],
+   [
+    "elections",
+    null,
+    2,
+    "Elecciones 2026"
+   ]
+  ]
+ },
  "pf-007213": {
   "date": "2026-11-10",
   "topics": [
@@ -21124,6 +22172,38 @@
     null,
     1,
     "Puerto Aysén"
+   ]
+  ]
+ },
+ "pf-007230": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio"
+   ]
+  ]
+ },
+ "pf-007233": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state radio (IRTP)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest public radio"
    ]
   ]
  },
@@ -21243,6 +22323,27 @@
     null,
     1,
     "TV of the Chamber of Deputies"
+   ]
+  ]
+ },
+ "pf-007308": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: owned by the university"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "university TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Arequipa"
    ]
   ]
  },
@@ -21510,6 +22611,24 @@
    ]
   ]
  },
+ "pf-008203": {
+  "closed": "Wikipedia: La Industria 'fue' (was) a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Trujillo"
+   ]
+  ]
+ },
  "pf-008204": {
   "date": "2026-11-09",
   "owner": "National University of Tucumán",
@@ -21523,6 +22642,18 @@
     null,
     1,
     "TV channel in Tucumán"
+   ]
+  ]
+ },
+ "pf-008205": {
+  "closed": "Wikipedia: published 1913-1914",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
    ]
   ]
  },
@@ -21757,6 +22888,18 @@
     null,
     1,
     "publisher of Daily Trust"
+   ]
+  ]
+ },
+ "pf-008449": {
+  "closed": "Wikipedia: published 1790-1795",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "science",
+    null,
+    1,
+    "first scientific paper of Peru"
    ]
   ]
  },
@@ -24148,6 +25291,23 @@
    ]
   ]
  },
+ "pf-013583": {
+  "audience": [
+   [
+    "youth_students",
+    "dance music"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "dance music radio"
+   ]
+  ]
+ },
  "pf-013732": {
   "date": "2026-11-10",
   "owner": "Jawa Pos Group",
@@ -24373,6 +25533,61 @@
    ]
   ]
  },
+ "pf-014226": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "free-to-air TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Cusco and Arequipa"
+   ]
+  ]
+ },
+ "pf-014227": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "women's lifestyle magazine"
+   ]
+  ]
+ },
+ "pf-014231": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: university channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "university TV channel"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Trujillo"
+   ]
+  ]
+ },
  "pf-014263": {
   "audience": [
    [
@@ -24560,6 +25775,18 @@
    ]
   ]
  },
+ "pf-014573": {
+  "closed": "Wikipedia: AWP 'was' an agency",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "whistleblowing information agency"
+   ]
+  ]
+ },
  "pf-014729": {
   "audience": [
    [
@@ -24744,6 +25971,21 @@
     null,
     1,
     "sports channel"
+   ]
+  ]
+ },
+ "pf-014971": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public news channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news TV channel"
    ]
   ]
  },
@@ -25400,6 +26642,29 @@
    ]
   ]
  },
+ "pf-016098": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Chiclayo and Lambayeque"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "website section Educación"
+   ]
+  ]
+ },
  "pf-016110": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: pro-Kremlin, Russian Orthodox stances; owner Konstantin Malofeev (nationalist)",
@@ -25547,6 +26812,33 @@
    ]
   ]
  },
+ "pf-016279": {
+  "closed": "Wikipedia: Golperu 'fue' (was) a channel",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football channel"
+   ]
+  ]
+ },
+ "pf-016283": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Corporación Universal"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio network"
+   ]
+  ]
+ },
  "pf-016313": {
   "date": "2026-11-10",
   "topics": [
@@ -25626,6 +26918,18 @@
     null,
     1,
     "Lagos"
+   ]
+  ]
+ },
+ "pf-016405": {
+  "closed": "Wikipedia: Radio A 'was' a radio station",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "music radio"
    ]
   ]
  },
@@ -25884,6 +27188,27 @@
    ]
   ]
  },
+ "pf-016786": {
+  "audience": [
+   [
+    "older_persons",
+    "music of past decades"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: CRP Radios"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "oldies music radio"
+   ]
+  ]
+ },
  "pf-016915": {
   "date": "2026-11-10",
   "owner": "TV Azteca",
@@ -25900,10 +27225,42 @@
    ]
   ]
  },
+ "pf-016921": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "cumbia music radio"
+   ]
+  ]
+ },
  "pf-016924": {
   "date": "2026-11-10",
   "not_media": "recommendation platform (VK), not a media outlet",
   "topics": []
+ },
+ "pf-016945": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: co-operatively owned and reader-funded"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "reader-funded investigative news website"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigative journalism"
+   ]
+  ]
  },
  "pf-016954": {
   "date": "2026-11-10",
@@ -26068,6 +27425,33 @@
     null,
     1,
     "national daily covering business and financial markets"
+   ]
+  ]
+ },
+ "pf-017356": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "Peruvians abroad"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: owned by the Government of Peru"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "international pay TV channel"
+   ],
+   [
+    "diaspora",
+    null,
+    1,
+    "Peruvians abroad"
    ]
   ]
  },
@@ -26326,6 +27710,17 @@
    ]
   ]
  },
+ "pf-022001": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language news channel"
+   ]
+  ]
+ },
  "pf-022009": {
   "date": "2026-11-09",
   "owner": "Socialist Workers' Party (PTS)",
@@ -26369,6 +27764,24 @@
     "extreme_poverty",
     2,
     "poverty alleviation and rural revitalisation"
+   ]
+  ]
+ },
+ "pf-022627": {
+  "date": "2026-11-10",
+  "owner": "Grupo La República",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "popular tabloid newspaper"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
    ]
   ]
  },
@@ -26469,10 +27882,36 @@
    ]
   ]
  },
+ "pf-023264": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "website: DPG Media"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ]
+  ]
+ },
  "pf-023337": {
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing orientation",
   "topics": []
+ },
+ "pf-023344": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news radio"
+   ]
+  ]
  },
  "pf-023479": {
   "audience": [
@@ -26515,6 +27954,44 @@
     null,
     1,
     "sports pay TV channel"
+   ]
+  ]
+ },
+ "pf-023523": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online newspaper for investigative journalism against corruption"
+   ],
+   [
+    "peace_justice",
+    "corruption_institutions",
+    1,
+    "investigative journalism against corruption"
+   ]
+  ]
+ },
+ "pf-023536": {
+  "audience": [
+   [
+    "children",
+    "children's channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Disney"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
    ]
   ]
  },
@@ -26564,6 +28041,33 @@
     null,
     2,
     "website section Vida y Salud"
+   ]
+  ]
+ },
+ "pf-023657": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: nonprofit online newspaper"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nonprofit community online newspaper"
+   ],
+   [
+    "human_rights",
+    null,
+    2,
+    "social issues"
+   ],
+   [
+    "indigenous",
+    null,
+    3,
+    "Quechua name"
    ]
   ]
  },
@@ -26900,6 +28404,23 @@
    ]
   ]
  },
+ "pf-024664": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "local section"
+   ]
+  ]
+ },
  "pf-024743": {
   "date": "2026-11-10",
   "topics": [
@@ -27039,6 +28560,84 @@
    ]
   ]
  },
+ "pf-025186": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-025246": {
+  "date": "2026-11-10",
+  "ownership": [
+   "community_nonprofit",
+   "Wikipedia: run by the Amakella communication centre"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "community radio in Arequipa"
+   ],
+   [
+    "human_rights",
+    null,
+    3,
+    "campaigns"
+   ]
+  ]
+ },
+ "pf-025291": {
+  "audience": [
+   [
+    "diaspora_migrants",
+    "English-speaking readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language digital newspaper"
+   ]
+  ]
+ },
+ "pf-025297": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football pay TV and streaming"
+   ]
+  ]
+ },
+ "pf-025349": {
+  "closed": "Wikipedia: Ciberayllu 'was' a publication",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "digital magazine of Peruvian intellectuals"
+   ]
+  ]
+ },
  "pf-025496": {
   "date": "2026-11-10",
   "owner": "Televisión Nacional de Chile",
@@ -27059,6 +28658,23 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): right-wing German news website",
   "topics": []
+ },
+ "pf-025655": {
+  "audience": [
+   [
+    "religious",
+    "evangelical viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Pentecostal TV channel"
+   ]
+  ]
  },
  "pf-025723": {
   "date": "2026-11-10",
@@ -27101,6 +28717,23 @@
    [
     "public_service_mandate",
     "Romanian public broadcaster"
+   ]
+  ]
+ },
+ "pf-025781": {
+  "audience": [
+   [
+    "religious",
+    "Christian listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio network"
    ]
   ]
  },
@@ -27239,6 +28872,18 @@
    ]
   ]
  },
+ "pf-026717": {
+  "date": "2026-11-10",
+  "far_right": "Wikidata: Peruvian Falangist magazine",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Falangist magazine"
+   ]
+  ]
+ },
  "pf-026750": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: nationalist outlet linked to an ultranationalist organisation, anti-Rohingya reports",
@@ -27248,6 +28893,23 @@
   "date": "2026-11-10",
   "far_right": "Wikidata (fr): French far-right weekly owned by Vincent Bolloré",
   "topics": []
+ },
+ "pf-026873": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "pan-European online newspaper"
+   ],
+   [
+    "partnerships",
+    "global_cooperation",
+    1,
+    "EU policy news"
+   ]
+  ]
  },
  "pf-026893": {
   "date": "2026-11-10",
@@ -27270,6 +28932,23 @@
    ]
   ]
  },
+ "pf-027606": {
+  "audience": [
+   [
+    "business_professionals",
+    "business magazine"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business and finance magazine"
+   ]
+  ]
+ },
  "pf-027761": {
   "date": "2026-11-10",
   "far_right": "Wikidata: far-right commentary website",
@@ -27279,6 +28958,17 @@
   "date": "2026-11-10",
   "far_right": "Wikidata: American far-right newspaper",
   "topics": []
+ },
+ "pf-028104": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "digital media and TV channel on Peruvian football"
+   ]
+  ]
  },
  "pf-028387": {
   "date": "2026-11-10",
@@ -27324,6 +29014,17 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-029431": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "regional music radio"
    ]
   ]
  },
