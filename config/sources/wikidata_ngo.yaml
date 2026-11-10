@@ -1,0 +1,15 @@
+# Which Wikidata items count as NGOs (phase 2, owner 10.11.2026: "erstmal nur klassische NGOs").
+# An item is fetched when it is an instance of one of these classes (or a sub-class), its country
+# (P17) is one of the 195 and it has at least one Wikipedia page. The label is checked on every
+# run, like for media (config/sources/wikidata.yaml).
+root_classes:
+  - {qid: Q79913, expected_label: non-governmental organization}
+# Not used for now (owner: classic NGOs first, extend later): foundation Q157031,
+# nonprofit organization Q163740, umbrella organization Q1714376, youth organization Q4677783,
+# religious organization Q1530022, think tank Q138765.
+search_classes:
+  - international non-governmental organization
+  - humanitarian organization
+  - human rights organization
+  - environmental organization
+  - government-organized non-governmental organization

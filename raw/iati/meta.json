@@ -1,0 +1,14 @@
+{
+  "source": "iati",
+  "fetched_at": "2026-11-06T15:45:50Z",
+  "records": 1338,
+  "url": "https://iatiregistry.org/api/3/action/organization_list",
+  "total_in_source": 2133,
+  "ngo_types": {
+    "21": "international NGO",
+    "22": "national NGO",
+    "23": "regional NGO",
+    "24": "partner country based NGO"
+  },
+  "licence": "IATI Registry metadata (open)"
+}

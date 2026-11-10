@@ -1,0 +1,14 @@
+# NGO sources (phase 2, docs/BACKLOG.md). First run: save pages to learn their structure.
+# ECOSOC iCSO lists are public (no login): "withOutLogin" pages.
+base_ecosoc: "https://esango.un.org/civilsociety/withOutLogin.do"
+pages:
+  - {id: ecosoc_status_general, url: "https://esango.un.org/civilsociety/withOutLogin.do?method=getOrgsByConsultativeCode&orgByConsCode=1&orgByConsName=General"}
+  - {id: ecosoc_status_special, url: "https://esango.un.org/civilsociety/withOutLogin.do?method=getOrgsByConsultativeCode&orgByConsCode=2&orgByConsName=Special"}
+  - {id: ecosoc_status_roster,  url: "https://esango.un.org/civilsociety/withOutLogin.do?method=getOrgsByConsultativeCode&orgByConsCode=3&orgByConsName=Roster"}
+  - {id: ecosoc_field_gender,   url: "https://esango.un.org/civilsociety/withOutLogin.do?method=getFieldsOfActivityCode&orgByFieldOfActivityCode=3&orgByFieldOfActivityName=Gender Issues and Advancement of Women"}
+  - {id: ecosoc_type_media,     url: "https://esango.un.org/civilsociety/withOutLogin.do?method=getOrgsByTypesCode&orgTypeCode=7&orgTypName=Media"}
+  - {id: ecosoc_aow_search,     url: "https://esango.un.org/civilsociety/displayAowSearch.do?method=search&sessionCheck=false"}
+  - {id: ecosoc_advanced_search, url: "https://esango.un.org/civilsociety/displayAdvancedSearch.do?method=search&sessionCheck=false"}
+  - {id: un_geneva_ngo_list,    url: "https://www.ungeneva.org/en/engage/civil-society/ngo-list"}
+  # added 10.11.2026: NGOs accredited to the Conference of States Parties (disability) -> topic "Disability"
+  - {id: desa_cosp_list,        url: "https://social.desa.un.org/issues/disability/cosp/list-of-non-governmental-organization-accredited-to-the-conference-of-states"}

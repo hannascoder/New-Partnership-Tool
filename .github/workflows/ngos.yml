@@ -1,0 +1,79 @@
+# NGOs (phase 2, owner 10.11.2026): ECOSOC iCSO (all NGOs, step by step, the server is slow),
+# Wikidata NGOs (with a Wikipedia page), UN Geneva list, DESA COSP list, IATI.
+# Every run continues where the last one stopped. Runs when the NGO fetchers change on a
+# working branch, or by hand (Actions -> "Fetch NGOs"). Later part of the 2-monthly update (step 9).
+name: Fetch NGOs
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**", "ngo-*"]
+    paths: ["pipeline/fetch/ecosoc.py", "pipeline/fetch/ngo_pages.py", "pipeline/fetch/iati.py",
+            "config/sources/ngo_pages.yaml", "config/sources/wikidata_ngo.yaml", ".github/workflows/ngos.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: ngos-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  lists:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: UN Geneva list, DESA COSP list
+        continue-on-error: true
+        run: python pipeline/fetch/ngo_pages.py
+      - name: IATI (NGOs)
+        continue-on-error: true
+        run: python pipeline/fetch/iati.py
+      - name: Save raw data
+        run: bash pipeline/fetch/commit_raw.sh "NGO lists"
+
+  wikidata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Wikidata NGOs
+        continue-on-error: true
+        timeout-minutes: 220
+        env:
+          WIKIDATA_KIND: ngo
+          WIKIDATA_MINUTES: "200"
+        run: python pipeline/fetch/wikidata.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "Wikidata NGOs"
+
+  ecosoc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: ECOSOC iCSO (continues where the last run stopped)
+        continue-on-error: true
+        timeout-minutes: 330
+        env:
+          ECOSOC_MINUTES: "310"
+        run: python pipeline/fetch/ecosoc.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "ECOSOC"
