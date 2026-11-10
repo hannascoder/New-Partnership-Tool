@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-166 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+168 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -93,6 +93,8 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-016697 | Republic TV | IND | AI reading (right-wing populist): Wikipedia: right-wing news channel |
 | pf-015121 | Swarajya | IND | AI reading (right-wing populist): Wikipedia: right-wing magazine, favourable to the BJP |
 | pf-006177 | Zee News | IND | AI reading (right-wing populist): Wikipedia: right-wing news channel |
+| pf-001836 | Kayhan | IRN | AI reading (right-wing populist): Wikipedia: considered the most conservative and hardline newspaper |
+| pf-009073 | Resalat | IRN | AI reading (right-wing populist): Wikipedia: principlist, pro-Khamenei and pro-Ahmadinejad newspaper |
 | pf-015038 | 0404 News | ISR | AI reading (right-wing populist): Wikipedia: right-wing news website |
 | pf-000825 | Arutz Sheva | ISR | AI reading (right-wing populist): Wikipedia: identifies with religious Zionism (the settler movement); general knowledge: right-wing (please check) |
 | pf-003094 | B'Sheva | ISR | AI reading (right-wing populist): Wikipedia: published by Arutz Sheva (religious Zionism, settler movement); please check |

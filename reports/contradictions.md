@@ -219,7 +219,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (16)
+## AI reading: probably in another country (17)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
@@ -241,6 +241,7 @@ The tool keeps the country from Wikidata / the sources; tell Claude if one shoul
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
 | pf-021377 | Televen América | VEN | USA (US pay TV channel) |
 | pf-021565 | VPItv | VEN | USA (US-based online TV) |
+| pf-029014 | 91.3 Lift Worship US | UGA | USA (station in the United States) |
 
 ## AI reading: please check (0)
 

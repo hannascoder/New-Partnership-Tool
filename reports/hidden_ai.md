@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-136 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+145 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -73,6 +73,8 @@
 | pf-002926 | Indonesia Raya | IDN | no longer published: Wikipedia: permanently closed in 1974 |
 | pf-008127 | Koran Sindo | IDN | no longer published: Wikipedia: Koran Sindo 'was' a newspaper |
 | pf-001615 | TV Edukasi | IDN | no longer published: Wikipedia: TV Edukasi 'was' a TV station |
+| pf-006994 | Baba Shamal | IRN | no longer published: Wikidata: discontinued (1943-1947) |
+| pf-011442 | Zanan magazine | IRN | no longer published: Wikidata: defunct (1992-2015) |
 | pf-001244 | Channel 1 | ISR | no longer published: Wikipedia: Channel 1 'was' a TV channel |
 | pf-002812 | Channel 2 | ISR | no longer published: Wikipedia: Channel 2 'was' a channel |
 | pf-006614 | Hagada Hasmalit | ISR | no longer published: Wikipedia: 'was' a website |
@@ -117,6 +119,13 @@
 | pf-001646 | Thai Global Network | THA | no longer published: Wikipedia: former channel |
 | pf-001896 | Official Gazette of the Republic of Turkey | TUR | not a media outlet: official journal that publishes laws, not a media outlet |
 | pf-008304 | Sızıntı | TUR | no longer published: Wikidata: defunct magazine (1979-2016) |
+| pf-026503 | Emambya Esaze | UGA | no longer published: Wikipedia: 'was' a newspaper |
+| pf-026508 | Etop | UGA | no longer published: Wikipedia: 'was' a newspaper |
+| pf-026506 | Mengo Notes | UGA | no longer published: Wikipedia: historic (from 1900) |
+| pf-026510 | Munnansi | UGA | no longer published: Wikipedia: historic newspaper |
+| pf-026507 | Munno | UGA | no longer published: Wikipedia: ceased publication |
+| pf-023238 | Uganda Argus | UGA | no longer published: Wikipedia: Uganda Argus 'was' a newspaper |
+| pf-026530 | Voice of Uganda | UGA | no longer published: Wikipedia: historic (founded 1972) |
 | pf-004746 | Kievskaia starina | UKR | no longer published: Wikipedia: 'was' a monthly chronicle (historic) |
 | pf-002891 | TVi | UKR | no longer published: Wikipedia: TVi 'was' a TV channel |
 | pf-010283 | Ukraina | UKR | no longer published: Wikipedia: TRC Ukraina 'was' a TV channel |

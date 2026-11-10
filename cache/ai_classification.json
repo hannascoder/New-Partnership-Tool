@@ -534,6 +534,22 @@
    ]
   ]
  },
+ "pf-000046": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic-language state news channel"
+   ]
+  ]
+ },
  "pf-000048": {
   "date": "2026-11-09",
   "topics": [
@@ -5313,6 +5329,29 @@
    ]
   ]
  },
+ "pf-000552": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national English daily"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "education section"
+   ],
+   [
+    "health",
+    null,
+    2,
+    "health section"
+   ]
+  ]
+ },
  "pf-000555": {
   "date": "2026-11-10",
   "topics": [
@@ -6733,6 +6772,21 @@
    [
     "public_service_mandate",
     "Portuguese public broadcaster RTP"
+   ]
+  ]
+ },
+ "pf-000726": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official government news agency"
    ]
   ]
  },
@@ -10118,6 +10172,22 @@
     null,
     1,
     "national private radio"
+   ]
+  ]
+ },
+ "pf-001167": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state-owned English-language news"
    ]
   ]
  },
@@ -14336,6 +14406,17 @@
    ]
   ]
  },
+ "pf-001744": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Persian daily of record"
+   ]
+  ]
+ },
  "pf-001745": {
   "audience": [
    [
@@ -14458,6 +14539,22 @@
    ]
   ]
  },
+ "pf-001768": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state news channel"
+   ]
+  ]
+ },
  "pf-001769": {
   "date": "2026-11-10",
   "topics": [
@@ -14493,6 +14590,21 @@
     null,
     1,
     "Linz, Upper Austria"
+   ]
+  ]
+ },
+ "pf-001772": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: close to the Revolutionary Guard Corps"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency"
    ]
   ]
  },
@@ -14880,6 +14992,33 @@
     null,
     2,
     "TV4 Nyheterna"
+   ]
+  ]
+ },
+ "pf-001836": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: considered the most conservative and hardline newspaper",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
+ "pf-001843": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: sponsored by the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "semi-official news agency"
    ]
   ]
  },
@@ -15616,6 +15755,28 @@
    ]
   ]
  },
+ "pf-001957": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national Persian daily"
+   ]
+  ]
+ },
+ "pf-001958": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary and art monthly"
+   ]
+  ]
+ },
  "pf-001970": {
   "date": "2026-11-10",
   "not_media": "government-sponsored foundation promoting the Russian language, not a media outlet",
@@ -15984,6 +16145,45 @@
    [
     "multilingual",
     "several languages"
+   ]
+  ]
+ },
+ "pf-002060": {
+  "audience": [
+   [
+    "youth_students",
+    "students"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency run by students"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "student news"
+   ]
+  ]
+ },
+ "pf-002061": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state broadcaster"
    ]
   ]
  },
@@ -19444,6 +19644,28 @@
    ]
   ]
  },
+ "pf-002783": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Spanish-language state news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Spanish"
+   ]
+  ]
+ },
  "pf-002785": {
   "date": "2026-11-10",
   "topics": [
@@ -20010,6 +20232,21 @@
     null,
     1,
     "lifestyle entertainment channel"
+   ]
+  ]
+ },
+ "pf-002902": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: voice of the Islamic Revolution"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English-language daily ('voice of the Islamic Revolution')"
    ]
   ]
  },
@@ -20654,6 +20891,27 @@
     null,
     1,
     "public news agency"
+   ]
+  ]
+ },
+ "pf-003004": {
+  "audience": [
+   [
+    "minority_language",
+    "Armenian"
+   ],
+   [
+    "ethnic_minorities",
+    "Armenian community in Iran"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Armenian daily in Tehran"
    ]
   ]
  },
@@ -23822,6 +24080,28 @@
    ]
   ]
  },
+ "pf-004138": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Tehran TV station"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Tehran"
+   ]
+  ]
+ },
  "pf-004141": {
   "date": "2026-11-10",
   "owner": "Grupo de Medios Telemicro",
@@ -24482,6 +24762,28 @@
    ]
   ]
  },
+ "pf-004355": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-004358": {
   "date": "2026-11-10",
   "topics": [
@@ -25113,6 +25415,27 @@
    ]
   ]
  },
+ "pf-004650": {
+  "audience": [
+   [
+    "religious",
+    "Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Arabic religious TV"
+   ]
+  ]
+ },
  "pf-004660": {
   "date": "2026-11-10",
   "ownership": [
@@ -25638,6 +25961,44 @@
    ]
   ]
  },
+ "pf-004921": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "youth and sport TV"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
+ "pf-004922": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "intellectual and cultural TV"
+   ]
+  ]
+ },
  "pf-004930": {
   "audience": [
    [
@@ -25697,6 +26058,38 @@
     null,
     1,
     "Tornedalen"
+   ]
+  ]
+ },
+ "pf-004952": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "documentary channel"
+   ]
+  ]
+ },
+ "pf-004953": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports channel"
    ]
   ]
  },
@@ -26274,6 +26667,17 @@
    ]
   ]
  },
+ "pf-005091": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "reformist daily"
+   ]
+  ]
+ },
  "pf-005095": {
   "date": "2026-11-10",
   "topics": [
@@ -26508,6 +26912,23 @@
     null,
     1,
     "Arabic newspaper"
+   ]
+  ]
+ },
+ "pf-005256": {
+  "audience": [
+   [
+    "minority_language",
+    "Azerbaijani"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Azerbaijani-Persian literary quarterly"
    ]
   ]
  },
@@ -29530,6 +29951,33 @@
    ]
   ]
  },
+ "pf-006662": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: affiliated with IRIB"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency of IRIB"
+   ]
+  ]
+ },
+ "pf-006718": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationalist-religious periodical"
+   ]
+  ]
+ },
  "pf-006732": {
   "date": "2026-11-10",
   "ownership": [
@@ -29801,6 +30249,27 @@
    ]
   ]
  },
+ "pf-006906": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional state TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Zanjan"
+   ]
+  ]
+ },
  "pf-006912": {
   "audience": [
    [
@@ -29893,6 +30362,94 @@
    [
     "multilingual",
     "local editions in several countries"
+   ]
+  ]
+ },
+ "pf-006988": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website affiliated with Mohsen Rezaee"
+   ]
+  ]
+ },
+ "pf-006990": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional state TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Ardabil"
+   ]
+  ]
+ },
+ "pf-006991": {
+  "audience": [
+   [
+    "religious",
+    "Muslim viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Quran channel"
+   ]
+  ]
+ },
+ "pf-006992": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "book news agency"
+   ]
+  ]
+ },
+ "pf-006994": {
+  "closed": "Wikidata: discontinued (1943-1947)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "political satire magazine"
+   ]
+  ]
+ },
+ "pf-007003": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
    ]
   ]
  },
@@ -30093,6 +30650,23 @@
     null,
     1,
     "nationwide TV channel close to the CHP"
+   ]
+  ]
+ },
+ "pf-007141": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "labour news agency"
+   ],
+   [
+    "work_economy",
+    "decent_jobs",
+    1,
+    "labour news"
    ]
   ]
  },
@@ -32592,6 +33166,18 @@
    ]
   ]
  },
+ "pf-009073": {
+  "date": "2026-11-10",
+  "right_populist": "Wikipedia: principlist, pro-Khamenei and pro-Ahmadinejad newspaper",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "principlist daily"
+   ]
+  ]
+ },
  "pf-009112": {
   "date": "2026-11-10",
   "owner": "FTV Prima",
@@ -33284,6 +33870,27 @@
    ]
   ]
  },
+ "pf-010282": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcaster"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "public broadcaster"
+   ]
+  ]
+ },
  "pf-010283": {
   "closed": "Wikipedia: TRC Ukraina 'was' a TV channel",
   "date": "2026-11-10",
@@ -33596,6 +34203,24 @@
     null,
     1,
     "San Luis Potosí"
+   ]
+  ]
+ },
+ "pf-011442": {
+  "audience": [
+   [
+    "women",
+    "women's magazine"
+   ]
+  ],
+  "closed": "Wikidata: defunct (1992-2015)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "gender_equality",
+    null,
+    1,
+    "women's magazine"
    ]
   ]
  },
@@ -34645,6 +35270,33 @@
    ]
   ]
  },
+ "pf-012258": {
+  "audience": [
+   [
+    "minority_language",
+    "Azerbaijani"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "regional state TV"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "West Azerbaijan province"
+   ]
+  ]
+ },
  "pf-012281": {
   "date": "2026-11-10",
   "topics": [
@@ -34682,6 +35334,21 @@
     null,
     1,
     "general programming"
+   ]
+  ]
+ },
+ "pf-012286": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official newspaper of the government"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official government daily"
    ]
   ]
  },
@@ -36720,6 +37387,23 @@
    ]
   ]
  },
+ "pf-013881": {
+  "audience": [
+   [
+    "business_professionals",
+    "business weekly"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business weekly"
+   ]
+  ]
+ },
  "pf-013896": {
   "date": "2026-11-10",
   "topics": [
@@ -37418,6 +38102,24 @@
    ]
   ]
  },
+ "pf-014312": {
+  "audience": [
+   [
+    "minority_language",
+    "Luganda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Vision Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading Luganda daily"
+   ]
+  ]
+ },
  "pf-014328": {
   "closed": "Wikidata: former newspaper",
   "date": "2026-11-10",
@@ -37827,6 +38529,55 @@
     null,
     2,
     "Mindanao"
+   ]
+  ]
+ },
+ "pf-014789": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ],
+   [
+    "technology",
+    null,
+    2,
+    "technology"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "education"
+   ]
+  ]
+ },
+ "pf-014793": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: associated with the Revolutionary Guard Corps"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "semi-official news agency"
+   ]
+  ]
+ },
+ "pf-014794": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news magazine"
    ]
   ]
  },
@@ -38246,6 +38997,27 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing news website",
   "topics": []
+ },
+ "pf-015041": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: government news agency of parliament"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament news agency"
+   ]
+  ]
  },
  "pf-015088": {
   "date": "2026-11-10",
@@ -38998,6 +39770,61 @@
   "far_right": "Wikipedia: junction of right and far-right currents",
   "topics": []
  },
+ "pf-015697": {
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "education",
+    null,
+    1,
+    "education channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "education channel"
+   ]
+  ]
+ },
+ "pf-015698": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
+ "pf-015708": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "English music radio"
+   ]
+  ]
+ },
  "pf-015709": {
   "date": "2026-11-10",
   "topics": [
@@ -39327,6 +40154,23 @@
    ]
   ]
  },
+ "pf-016088": {
+  "audience": [
+   [
+    "religious",
+    "Shia Muslims"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Shia news agency"
+   ]
+  ]
+ },
  "pf-016094": {
   "audience": [
    [
@@ -39622,6 +40466,28 @@
     null,
     1,
     "news TV station"
+   ]
+  ]
+ },
+ "pf-016276": {
+  "audience": [
+   [
+    "youth_students",
+    "teens"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "IRIB",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Islamic Republic of Iran Broadcasting (state)"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "teen channel"
    ]
   ]
  },
@@ -40370,6 +41236,27 @@
    ]
   ]
  },
+ "pf-016889": {
+  "audience": [
+   [
+    "youth_students",
+    "students"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikidata: official news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official news agency on university and student news"
+   ]
+  ]
+ },
  "pf-016897": {
   "date": "2026-11-10",
   "ownership": [
@@ -40388,6 +41275,17 @@
    [
     "public_service_mandate",
     "Danish public broadcaster"
+   ]
+  ]
+ },
+ "pf-016900": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "political news website and channel"
    ]
   ]
  },
@@ -40441,6 +41339,23 @@
     "corruption_institutions",
     1,
     "investigative journalism"
+   ]
+  ]
+ },
+ "pf-016947": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent news website"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Rwenzori region"
    ]
   ]
  },
@@ -40929,6 +41844,17 @@
    ]
   ]
  },
+ "pf-017345": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Quran news agency"
+   ]
+  ]
+ },
  "pf-017356": {
   "audience": [
    [
@@ -41053,6 +41979,22 @@
    ]
   ]
  },
+ "pf-017637": {
+  "date": "2026-11-10",
+  "owner": "Nation Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Nation Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV station"
+   ]
+  ]
+ },
  "pf-017792": {
   "date": "2026-11-10",
   "ownership": [
@@ -41129,6 +42071,22 @@
     null,
     1,
     "Russian-language TV channel of RFE/RL"
+   ]
+  ]
+ },
+ "pf-021054": {
+  "date": "2026-11-10",
+  "owner": "Next Media",
+  "ownership": [
+   "private",
+   "Wikipedia: Next Media"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "leading TV station"
    ]
   ]
  },
@@ -41300,6 +42258,23 @@
     null,
     2,
     "entertainment programmes"
+   ]
+  ]
+ },
+ "pf-021476": {
+  "audience": [
+   [
+    "business_professionals",
+    "economic news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "economic news agency"
    ]
   ]
  },
@@ -42221,6 +43196,23 @@
    ]
   ]
  },
+ "pf-023149": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news agency of Azad University"
+   ],
+   [
+    "education",
+    null,
+    2,
+    "university"
+   ]
+  ]
+ },
  "pf-023162": {
   "date": "2026-11-10",
   "topics": [
@@ -42250,6 +43242,18 @@
     null,
     1,
     "private radio"
+   ]
+  ]
+ },
+ "pf-023238": {
+  "closed": "Wikipedia: Uganda Argus 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -42467,6 +43471,21 @@
     null,
     1,
     "sports pay TV channel"
+   ]
+  ]
+ },
+ "pf-023509": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: MultiChoice"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "Ugandan entertainment channel"
    ]
   ]
  },
@@ -43068,6 +44087,17 @@
    ]
   ]
  },
+ "pf-024301": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment news website"
+   ]
+  ]
+ },
  "pf-024321": {
   "date": "2026-11-10",
   "topics": [
@@ -43246,6 +44276,23 @@
    ]
   ]
  },
+ "pf-024522": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio"
+   ]
+  ]
+ },
  "pf-024577": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: extreme-right French media",
@@ -43421,6 +44468,18 @@
    [
     "storytelling",
     "tells the story of the Kivu region from Kivu"
+   ]
+  ]
+ },
+ "pf-024780": {
+  "date": "2026-11-10",
+  "owner": "Next Media",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports TV"
    ]
   ]
  },
@@ -43682,6 +44741,18 @@
    ]
   ]
  },
+ "pf-025569": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "tabloid on celebrities"
+   ]
+  ],
+  "website_warning": "the website shows an adult content page, not the newspaper"
+ },
  "pf-025579": {
   "date": "2026-11-10",
   "topics": [
@@ -43863,6 +44934,23 @@
    ]
   ]
  },
+ "pf-025811": {
+  "audience": [
+   [
+    "religious",
+    "Christian viewers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Adventist Christian TV"
+   ]
+  ]
+ },
  "pf-025825": {
   "date": "2026-11-10",
   "topics": [
@@ -43957,6 +45045,23 @@
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
  },
+ "pf-026324": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio network"
+   ],
+   [
+    "business_economy",
+    null,
+    2,
+    "business"
+   ]
+  ]
+ },
  "pf-026333": {
   "date": "2026-11-10",
   "topics": [
@@ -43974,6 +45079,17 @@
    ]
   ]
  },
+ "pf-026444": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent news website"
+   ]
+  ]
+ },
  "pf-026479": {
   "date": "2026-11-10",
   "topics": [
@@ -43982,6 +45098,78 @@
     null,
     1,
     "AM radio"
+   ]
+  ]
+ },
+ "pf-026503": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Luganda newspaper"
+   ]
+  ]
+ },
+ "pf-026506": {
+  "closed": "Wikipedia: historic (from 1900)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "first newspaper of Uganda"
+   ]
+  ]
+ },
+ "pf-026507": {
+  "closed": "Wikipedia: ceased publication",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Luganda daily"
+   ]
+  ]
+ },
+ "pf-026508": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Ateso local newspaper"
+   ]
+  ]
+ },
+ "pf-026510": {
+  "closed": "Wikipedia: historic newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly newspaper"
+   ]
+  ]
+ },
+ "pf-026530": {
+  "closed": "Wikipedia: historic (founded 1972)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "government newspaper"
    ]
   ]
  },
@@ -44328,6 +45516,34 @@
    ]
   ]
  },
+ "pf-026931": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "entertainment radio"
+   ]
+  ]
+ },
+ "pf-026934": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "urban English radio"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
+   ]
+  ]
+ },
  "pf-027051": {
   "date": "2026-11-10",
   "topics": [
@@ -44459,6 +45675,80 @@
    ]
   ]
  },
+ "pf-027793": {
+  "audience": [
+   [
+    "minority_language",
+    "Luganda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Luganda radio"
+   ]
+  ]
+ },
+ "pf-027794": {
+  "audience": [
+   [
+    "minority_language",
+    "Luganda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "radio"
+   ]
+  ]
+ },
+ "pf-027795": {
+  "audience": [
+   [
+    "religious",
+    "Catholic listeners"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "diocesan radio"
+   ],
+   [
+    "peace_justice",
+    "violence_peace",
+    2,
+    "'Blessed are the Peacemakers'"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "Lira"
+   ]
+  ]
+ },
+ "pf-027796": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "urban English radio"
+   ]
+  ]
+ },
  "pf-027880": {
   "date": "2026-11-10",
   "far_right": "Wikidata: American far-right newspaper",
@@ -44501,6 +45791,17 @@
   "right_populist": "general knowledge, not in the profile text (please check): right-wing opinion channel of News Corp Australia",
   "topics": []
  },
+ "pf-028722": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic radio (Radio Maria)"
+   ]
+  ]
+ },
  "pf-028728": {
   "date": "2026-11-10",
   "topics": [
@@ -44523,6 +45824,56 @@
     "agro-veterinary guide"
    ]
   ]
+ },
+ "pf-028751": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    2,
+    "radio in Gulu (name)"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "Gulu"
+   ]
+  ]
+ },
+ "pf-028757": {
+  "audience": [
+   [
+    "minority_language",
+    "Luganda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Luganda radio"
+   ]
+  ]
+ },
+ "pf-028786": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "BBC radio relay"
+   ]
+  ],
+  "website_warning": "the website is the BBC homepage, not a local station"
+ },
+ "pf-028792": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-028904": {
   "audience": [
@@ -44569,6 +45920,41 @@
    ]
   ]
  },
+ "pf-028959": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Luganda radio"
+   ]
+  ],
+  "website_warning": "the website address leads to SuperSport, not the radio"
+ },
+ "pf-029014": {
+  "country_hint": "USA (station in the United States)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian worship radio"
+   ]
+  ]
+ },
+ "pf-029020": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Christian radio (name)"
+   ]
+  ]
+ },
  "pf-029150": {
   "date": "2026-11-10",
   "ownership": [
@@ -44587,6 +45973,23 @@
     null,
     2,
     "local news"
+   ]
+  ]
+ },
+ "pf-029316": {
+  "audience": [
+   [
+    "minority_language",
+    "Luganda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Luganda radio"
    ]
   ]
  },
@@ -45836,6 +47239,17 @@
    ]
   ]
  },
+ "pf-033601": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "radio news"
+   ]
+  ]
+ },
  "pf-033617": {
   "date": "2026-11-10",
   "topics": [
@@ -46074,6 +47488,17 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-036831": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Adventist TV"
+   ]
+  ]
+ },
  "pf-036838": {
   "audience": [
    [
@@ -46195,6 +47620,10 @@
  "pf-037078": {
   "date": "2026-11-09",
   "note": "no text about this outlet in the sources or on its website",
+  "topics": []
+ },
+ "pf-037086": {
+  "date": "2026-11-10",
   "topics": []
  },
  "pf-037103": {
@@ -46383,6 +47812,17 @@
  "pf-037348": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-037379": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV of Impact Media Consortium"
+   ]
+  ]
  },
  "pf-037392": {
   "date": "2026-11-10",
@@ -46777,6 +48217,23 @@
     null,
     1,
     "Binh Duong"
+   ]
+  ]
+ },
+ "pf-038068": {
+  "audience": [
+   [
+    "minority_language",
+    "Luganda speakers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV of the Buganda Kingdom"
    ]
   ]
  },
@@ -47334,6 +48791,17 @@
    ]
   ]
  },
+ "pf-049501": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "TV in western Uganda"
+   ]
+  ]
+ },
  "pf-050095": {
   "date": "2026-11-10",
   "topics": [
@@ -47367,6 +48835,11 @@
     "news website"
    ]
   ]
+ },
+ "pf-051089": {
+  "date": "2026-11-10",
+  "topics": [],
+  "website_warning": "the website shows a slot gambling page"
  },
  "pf-052294": {
   "date": "2026-11-10",
@@ -47593,6 +49066,17 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-058786": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news aggregation service"
+   ]
+  ]
+ },
  "pf-059068": {
   "date": "2026-11-10",
   "topics": [
@@ -47739,6 +49223,23 @@
   "right_populist": "general knowledge, not in the profile text (please check): far-right, Falun Gong-affiliated newspaper",
   "topics": []
  },
+ "pf-064259": {
+  "audience": [
+   [
+    "business_professionals",
+    "business news"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business news"
+   ]
+  ]
+ },
  "pf-064443": {
   "audience": [
    [
@@ -47876,6 +49377,21 @@
     "independent daily newspaper"
    ]
   ]
+ },
+ "pf-067212": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "Acholi news (name)"
+   ]
+  ]
+ },
+ "pf-068228": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-068307": {
   "date": "2026-11-10",

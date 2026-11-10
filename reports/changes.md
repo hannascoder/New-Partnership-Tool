@@ -1,8 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 0
-- No longer shown: 254 (merged into another entry, excluded, or gone from all sources)
-- Changed values: ownership 365, scope 3
+- No longer shown: 265 (merged into another entry, excluded, or gone from all sources)
+- Changed values: ownership 391, scope 3
 
 ### Examples: ownership
 
@@ -11,11 +11,11 @@
 - France Bleu (pf-000032): unknown → public_service
 - France Culture (pf-000033): unknown → public_service
 - France Musique (pf-000034): unknown → public_service
+- Al-Alam News Network (pf-000046): unknown → state_controlled
 - Agence France-Presse (pf-000057): unknown → public_service
 - Associated Press (pf-000058): unknown → community_nonprofit
 - Das Erste (pf-000073): unknown → public_service
 - Radiotelevisione svizzera di lingua italiana (pf-000105): unknown → public_service
-- Tokyo MX (pf-000106): unknown → private
 
 ### Examples: scope
 
