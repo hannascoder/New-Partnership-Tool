@@ -1,9 +1,12 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-145 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+153 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
+| pf-005147 | Albania | ALB | no longer published: Wikipedia: 'was' a newspaper |
+| pf-005148 | Albania Today | ALB | no longer published: Wikipedia: Albania Today 'was' a newspaper |
+| pf-015206 | Demokratia | ALB | no longer published: Wikipedia: published 1925-1939 |
 | pf-003262 | Disney Channel | ARG | no longer published: defunct Brazilian channel (2001-2025) |
 | pf-002277 | Nick Jr. | AUS | no longer published: Wikidata: children's channel 1998-2025 |
 | pf-001574 | Official PlayStation Magazine | AUS | no longer published: Wikipedia: 'was' a magazine |
@@ -46,6 +49,11 @@
 | pf-004108 | Světozor | CZE | no longer published: Wikipedia: published in the 19th and 20th century |
 | pf-000239 | The Prague Post | CZE | no longer published: Wikipedia: The Prague Post 'was' a newspaper |
 | pf-003867 | Land og Folk | DNK | no longer published: Wikipedia: 'was' a newspaper |
+| pf-070576 | Algerian Television Broadcasting | DZA | no longer published: Wikipedia: existed 1962-1986 ('était') |
+| pf-025935 | El Ouma | DZA | no longer published: Wikipedia: founded 1930 (historic) |
+| pf-003642 | La Tribune | DZA | no longer published: Wikipedia: print edition disappeared |
+| pf-023731 | Le Petit Oranais | DZA | no longer published: Wikipedia: historic newspaper |
+| pf-008269 | Le Rail Maghreb | DZA | no longer published: Wikipedia: 'was' a magazine |
 | pf-023757 | El Día | ECU | no longer published: Wikipedia: published 1913-1952 |
 | pf-022961 | Hélice | ECU | no longer published: Wikipedia: 'fue' (was) a magazine |
 | pf-021058 | La Mujer | ECU | no longer published: Wikipedia: historic magazine (1905) |

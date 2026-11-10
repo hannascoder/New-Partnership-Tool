@@ -1,31 +1,31 @@
 # Coverage: how complete is the information? (step 5)
 
-70,765 outlets shown on the website, 195 countries. Data date: 2026-11-10.
+70,757 outlets shown on the website, 195 countries. Data date: 2026-11-10.
 
 Share of outlets that have this information. A filter only finds outlets with a value
 (soft filters like topics never hide anyone; "Also show outlets without this information" helps for the others).
 
 | Information | All | Africa | Americas | Asia | Europe | Oceania |
 |---|---|---|---|---|---|---|
-| Language | **89 %** (63,202) | 91 % | 89 % | 91 % | 90 % | 80 % |
-| Channel | **99 %** (70,116) | 99 % | 100 % | 98 % | 99 % | 99 % |
-| Organisation type (not just 'news outlet' by default) | **3 %** (1,945) | 2 % | 3 % | 3 % | 3 % | 3 % |
-| Ownership known | **12 %** (8,236) | 7 % | 11 % | 14 % | 13 % | 13 % |
-| Scope known | **63 %** (44,848) | 79 % | 71 % | 64 % | 47 % | 39 % |
+| Language | **89 %** (63,198) | 91 % | 89 % | 91 % | 90 % | 80 % |
+| Channel | **99 %** (70,109) | 99 % | 100 % | 98 % | 99 % | 99 % |
+| Organisation type (not just 'news outlet' by default) | **3 %** (1,944) | 2 % | 3 % | 3 % | 3 % | 3 % |
+| Ownership known | **12 %** (8,248) | 7 % | 11 % | 14 % | 13 % | 13 % |
+| Scope known | **63 %** (44,848) | 80 % | 71 % | 64 % | 47 % | 39 % |
 | Reaches other countries | **2 %** (1,122) | 1 % | 1 % | 2 % | 2 % | 1 % |
-| Topic (other than general news) | **71 %** (50,148) | 65 % | 78 % | 60 % | 67 % | 74 % |
-| Topic: Specialist or own section | **67 %** (47,610) | 61 % | 75 % | 56 % | 63 % | 68 % |
-| Target audience | **23 %** (16,120) | 34 % | 24 % | 19 % | 18 % | 32 % |
-| UN profile | **10 %** (7,074) | 16 % | 8 % | 13 % | 10 % | 7 % |
+| Topic (other than general news) | **71 %** (50,152) | 65 % | 78 % | 60 % | 67 % | 74 % |
+| Topic: Specialist or own section | **67 %** (47,617) | 62 % | 75 % | 56 % | 63 % | 68 % |
+| Target audience | **23 %** (16,121) | 34 % | 24 % | 19 % | 18 % | 32 % |
+| UN profile | **10 %** (7,075) | 16 % | 8 % | 13 % | 10 % | 7 % |
 | Public contact (e-mail or contact page) | **38 %** (26,656) | 32 % | 41 % | 24 % | 42 % | 40 % |
 | E-mail | **7 %** (5,238) | 8 % | 7 % | 4 % | 9 % | 6 % |
 | Social media | **51 %** (36,324) | 40 % | 57 % | 39 % | 52 % | 46 % |
-| Website | **84 %** (59,254) | 81 % | 86 % | 82 % | 83 % | 77 % |
-| Website checked and answered | **63 %** (44,423) | 56 % | 64 % | 56 % | 67 % | 59 % |
+| Website | **84 %** (59,252) | 82 % | 86 % | 82 % | 83 % | 77 % |
+| Website checked and answered | **63 %** (44,421) | 56 % | 64 % | 56 % | 67 % | 59 % |
 | Active (article in the last 3 months) | **24 %** (17,272) | 24 % | 27 % | 14 % | 27 % | 17 % |
-| Verified (2+ sources) | **20 %** (13,877) | 14 % | 21 % | 19 % | 19 % | 17 % |
+| Verified (2+ sources) | **20 %** (13,876) | 14 % | 21 % | 19 % | 19 % | 17 % |
 
-Outlets per region: Africa 5,541 · Americas 33,276 · Asia 11,448 · Europe 18,747 · Oceania 1,753
+Outlets per region: Africa 5,536 · Americas 33,276 · Asia 11,448 · Europe 18,744 · Oceania 1,753
 
 ## Countries with the least information (20+ outlets)
 

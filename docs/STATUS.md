@@ -136,7 +136,7 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   outlets without topic 13 %.
 - Organisation types renamed (owner, 09.11.2026): "Newspaper, TV, radio or news site", "News agency
   (supplies other media)", "Public broadcaster (independent)", "Community radio & local media", "Fact-checker".
-- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA, CHN, IND, AUS, GBR, RUS, ITA, JPN, COL, IDN, NGA, POL, UKR, CHL, GRC, ZAF, ROU, TUR, NOR, FIN, SWE, CHE, NLD, PER, BEL, BGD, VEN, KOR, HUN, DOM, AUT, PRT, KEN, URY, GHA, PAK, VNM, BOL, CZE, BGR, PHL, ECU, DNK, KWT, THA, SRB, ISR, IRN, UGA (2,900 outlets).
+- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA, CHN, IND, AUS, GBR, RUS, ITA, JPN, COL, IDN, NGA, POL, UKR, CHL, GRC, ZAF, ROU, TUR, NOR, FIN, SWE, CHE, NLD, PER, BEL, BGD, VEN, KOR, HUN, DOM, AUT, PRT, KEN, URY, GHA, PAK, VNM, BOL, CZE, BGR, PHL, ECU, DNK, KWT, THA, SRB, ISR, IRN, UGA, ALB, DZA (3,000 outlets).
   Next: TUR ... (order of outlet count).
 - Right-wing media (owner, 10.11.2026: "ausblenden und rechte Medien wie Junge Freiheit auch"): the AI reading
   of the Wikipedia text marks far-right outlets ("far_right", 29 hidden, e.g. Junge Freiheit, OAN, Newsmax,
@@ -167,6 +167,9 @@ media on the site, separate section in the export; updated every 2 months (step 
 - Sources: UN Geneva (1,471) and IATI (1,339) in; ECOSOC iCSO (all lists + profiles, slow server, resumes;
   workflow "Fetch NGOs", re-run by hand until complete) and Wikidata NGOs (with a Wikipedia page) running.
   DESA COSP list refuses automatic downloads (HTTP 403): not worked around; owner may save it by hand.
+- ECOSOC server mostly times out (10.11.2026: 1,607 orgs, 78 profiles in 5 h). Fetcher now pauses on
+  failure streaks and resumes long lists (resume_index); profile parser built; ECOSOC entries without a
+  profile are matched by unique name. 505 NGOs with ECOSOC status shown so far. Re-run 'Fetch NGOs' until complete.
 - Next: parse ECOSOC profile pages (check raw/ecosoc/samples first: country, languages, website labels),
   run the website check for NGO websites (texts workflow), AI reading of top NGOs per country later.
 

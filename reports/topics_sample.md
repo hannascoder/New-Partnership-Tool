@@ -179,14 +179,14 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-006606 | Peace FM | GHA | covers it | website About page: "access to information" |
 | pf-026672 | Ristretti Orizzonti | ITA | covers it | words in another language (via Wikidata): "giudiziario", "responsabilita" |
 
-## Partnerships for the goals (SDG 17) — 904 outlets
+## Partnerships for the goals (SDG 17) — 905 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
 | pf-068950 | Philippines News | PHL | main focus | website About page: "imf", "international monetary fund" |
 | pf-002050 | Inter Press Service | ITA | main focus | AI reading: focus on development and global issues |
-| pf-054914 | uis.edu | USA | own section | website section "Model United Nations" |
-| pf-059862 | Infoabad | TKM | own section | website section "Международное сотрудничество" |
+| pf-054798 | Vgoru | UKR | own section | website section /cooperation/ |
+| pf-059812 | La Tribuna Los Angeles | CHL | own section | website section "Desarrollo" |
 | pf-052187 | mendozapost.com | ARG | covers it | website headlines: "fmi" |
 | pf-010021 | The Punch | NGA | covers it | website headlines: "united nations", "world bank" |
 
@@ -216,43 +216,43 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-029761 | Cadena SER Almería 88.2 FM | ESP | main focus | description mentions "economia" |
-| pf-034944 | Utuntu FM | ZMB | main focus | website About page: "economic" |
+| pf-029736 | Cadena Ser + Cadiz - 93.2 FM | ESP | main focus | description mentions "economia" |
+| pf-034883 | UgOnlineMedia - Kampala (MP3) | UGA | main focus | Radio Browser tag "business" |
 | pf-070691 | The Japan Newspaper Publishers & Editors Association | JPN | own section | website section "Financial Affairs" |
 | pf-059098 | Dainiksylhet.com | Most popular Bangla News Portal | BGD | own section | website section /newscat/business/ |
-| pf-069733 | nevadanewsgroup.com | USA | covers it | website About page: "business" |
-| pf-048375 | Telesucesos | ECU | covers it | website About page: "economico" |
+| pf-069734 | tastingvictoria.com | CAN | covers it | website About page: "markets" |
+| pf-048470 | Telewizja Relax | POL | covers it | words in another language (via Wikidata): "finanse", "inwestycje" |
 
-## Culture — 22,166 outlets
-
-| Id | Name | Country | Strength | Reason |
-|---|---|---|---|---|
-| pf-027471 | El Correo de Burgos | ESP | main focus | description mentions "cultura" |
-| pf-024864 | Kosmos Jazz | GRC | main focus | description mentions "music" |
-| pf-024543 | WSWG | USA | own section | website section "Entertainment" |
-| pf-012467 | Izu Shimbun | JPN | own section | website section "教育・学校・文化" |
-| pf-066889 | lasemanadelsur.com | USA | covers it | website headlines: "arts", "cultura", "culture" |
-| pf-064782 | Albia Newspapers | USA | covers it | website About page: "music" |
-
-## Religion — 8,498 outlets
+## Culture — 22,173 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-024579 | Anabaptist World | USA | main focus | website About page: "christianity", "church", "churches" |
-| pf-009997 | The Pilot | USA | main focus | description mentions "catholique" |
+| pf-027395 | Barbecue News Magazine | USA | main focus | description mentions "culture" |
+| pf-024808 | TV5 Monde Europe | FRA | main focus | description mentions "cinema" |
+| pf-024551 | Lamula.pe | PER | own section | website section "LA MULA HACE CINE" |
+| pf-012468 | Saga Shimbun | JPN | own section | website section "文化" |
+| pf-066904 | fagersta-posten.se | SWE | covers it | website headlines: "film" |
+| pf-064798 | Fredericksburg Standard | USA | covers it | website headlines: "festival", "heritage" |
+
+## Religion — 8,499 outlets
+
+| Id | Name | Country | Strength | Reason |
+|---|---|---|---|---|
+| pf-024522 | Radio Maria Uganda | UGA | main focus | Radio Browser tag "christian" |
+| pf-009968 | The Occident and American Jewish Advocate | USA | main focus | name mentions "jewish" |
 | pf-070360 | kinston.com | USA | own section | website section "Faith" |
 | pf-009199 | Sardarabad | ARG | own section | website section "IGLESIA" |
 | pf-011994 | TV Apoio | BRA | covers it | website headlines: "catolica" |
 | pf-013543 | Daily Democrat | USA | covers it | website headlines: "christian" |
 
-## Community & local — 22,553 outlets
+## Community & local — 22,556 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-058345 | NJ Jewish News | USA | main focus | scope local |
-| pf-070440 | wiltonbulletin.com | USA | main focus | scope local |
+| pf-058343 | metronc.com | USA | main focus | scope local |
+| pf-070437 | mtpioneer.com | USA | main focus | scope local |
 | pf-005350 | BCN Mes | ESP | own section | website section "Noticias locales" |
-| pf-044886 | Newsmax Balkans | BIH | own section | website section "REGION" |
+| pf-044856 | News1st | LKA | own section | website section "Local" |
 | pf-030074 | CKRP-FM 95.7 "Nord Ouest FM" Falher, AB | CAN | covers it | website About page: "radio communautaire" |
 | pf-053320 | pilas.com.co | COL | covers it | website About page: "periodismo ciudadano" |
 
@@ -267,11 +267,11 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-001622 | Las Vegas Weekly | USA | covers it | website headlines: "relief" |
 | pf-010382 | WAGA-TV | USA | covers it | website headlines: "red cross", "relief" |
 
-## Human rights — 1,555 outlets
+## Human rights — 1,556 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-064755 | Business Barbados | BRB | main focus | website About page: "civil society" |
+| pf-064613 | debteraw.com | ETH | main focus | website About page: "human rights", "human rights defenders" |
 | pf-056833 | equaltimes.org | BEL | main focus | description mentions "human rights" |
 | pf-029403 | America Out Loud | USA | own section | website section "Human Rights" |
 | pf-068906 | fhsu.edu | USA | own section | website section "Freedom of Expression" |
@@ -377,11 +377,11 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-040820 | ethio360media.com | ETH | covers it | website About page: "investigative journalism" |
 | pf-056237 | Al Sabah Al Jadeed | IRQ | covers it | website headlines: "الرقابة" |
 
-## Elections & governance — 10,732 outlets
+## Elections & governance — 10,731 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-039873 | CTTV | USA | main focus | iptv-org category "legislative" |
+| pf-039909 | Cupertino City Channel | USA | main focus | iptv-org category "legislative" |
 | pf-009151 | Sabato's Crystal Ball | USA | main focus | description mentions "election" |
 | pf-012036 | TV Guarapari | BRA | own section | website section "ELEIÇÕES 2026" |
 | pf-010993 | WRDW-TV | USA | own section | website section "Election Results" |

@@ -3570,6 +3570,29 @@
    ]
   ]
  },
+ "pf-000376": {
+  "audience": [
+   [
+    "religious",
+    "Catholic readers"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "religion",
+    null,
+    1,
+    "Catholic cultural periodical"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "culture"
+   ]
+  ]
+ },
  "pf-000377": {
   "date": "2026-11-10",
   "owner": "Prasar Bharati",
@@ -5578,6 +5601,17 @@
    ]
   ]
  },
+ "pf-000584": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-000585": {
   "date": "2026-11-10",
   "ownership": [
@@ -6171,6 +6205,17 @@
     null,
     1,
     "literary magazine"
+   ]
+  ]
+ },
+ "pf-000665": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
    ]
   ]
  },
@@ -10795,6 +10840,28 @@
    ]
   ]
  },
+ "pf-001247": {
+  "date": "2026-11-10",
+  "owner": "Top Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: commercial"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "national commercial TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001248": {
   "audience": [
    [
@@ -12952,6 +13019,21 @@
    ]
   ]
  },
+ "pf-001492": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: state news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national news agency"
+   ]
+  ]
+ },
  "pf-001496": {
   "audience": [
    [
@@ -13683,6 +13765,18 @@
    ]
   ]
  },
+ "pf-001592": {
+  "date": "2026-11-10",
+  "owner": "Top Media Group",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-001593": {
   "date": "2026-11-10",
   "ownership": [
@@ -13701,6 +13795,22 @@
    [
     "open_to_partner_content",
     "viewers upload videos"
+   ]
+  ]
+ },
+ "pf-001596": {
+  "date": "2026-11-10",
+  "owner": "RTSH",
+  "ownership": [
+   "public_service",
+   "website: RTSH"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public radio"
    ]
   ]
  },
@@ -14003,6 +14113,27 @@
    ]
   ]
  },
+ "pf-001680": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: privately owned"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private national TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001683": {
   "date": "2026-11-10",
   "owner": "France Télévisions",
@@ -14133,6 +14264,23 @@
     null,
     1,
     "national newspaper"
+   ]
+  ]
+ },
+ "pf-001691": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ],
+   [
+    "sports",
+    null,
+    2,
+    "sport"
    ]
   ]
  },
@@ -14324,6 +14472,27 @@
    ]
   ]
  },
+ "pf-001712": {
+  "date": "2026-11-10",
+  "ownership": [
+   "public_service",
+   "Wikipedia: public broadcasting company"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public broadcaster"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Albanian public broadcaster"
+   ]
+  ]
+ },
  "pf-001716": {
   "date": "2026-11-10",
   "owner": "Sky Group",
@@ -14348,6 +14517,17 @@
     null,
     1,
     "music magazine"
+   ]
+  ]
+ },
+ "pf-001725": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "politically unaffiliated daily"
    ]
   ]
  },
@@ -15380,6 +15560,17 @@
    ]
   ]
  },
+ "pf-001884": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national magazine"
+   ]
+  ]
+ },
  "pf-001886": {
   "date": "2026-11-10",
   "ownership": [
@@ -15777,6 +15968,27 @@
    ]
   ]
  },
+ "pf-001966": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private TV network"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
  "pf-001970": {
   "date": "2026-11-10",
   "not_media": "government-sponsored foundation promoting the Russian language, not a media outlet",
@@ -15928,6 +16140,21 @@
    ]
   ]
  },
+ "pf-002012": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private radio and TV"
+   ]
+  ]
+ },
  "pf-002017": {
   "date": "2026-11-09",
   "topics": [
@@ -16020,6 +16247,17 @@
    [
     "public_service_mandate",
     "Swiss public broadcaster SRG SSR"
+   ]
+  ]
+ },
+ "pf-002036": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "football daily"
    ]
   ]
  },
@@ -17992,6 +18230,21 @@
    ]
   ]
  },
+ "pf-002409": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national state radio"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "national radio company"
+   ]
+  ]
+ },
  "pf-002417": {
   "audience": [
    [
@@ -18609,6 +18862,29 @@
     "Austrian public broadcaster ORF"
    ]
   ]
+ },
+ "pf-002551": {
+  "date": "2026-11-10",
+  "owner": "RTSH",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTSH"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "international public radio"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "foreign-language services"
+   ]
+  ],
+  "website_warning": "the website shows an empty directory listing"
  },
  "pf-002565": {
   "audience": [
@@ -19296,6 +19572,17 @@
    ]
   ]
  },
+ "pf-002726": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "politically unaffiliated newspaper"
+   ]
+  ]
+ },
  "pf-002729": {
   "date": "2026-11-10",
   "owner": "TRT",
@@ -19719,6 +20006,17 @@
     null,
     1,
     "public children's channel"
+   ]
+  ]
+ },
+ "pf-002803": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "independent French-language newspaper"
    ]
   ]
  },
@@ -20894,6 +21192,91 @@
    ]
   ]
  },
+ "pf-002999": {
+  "date": "2026-11-10",
+  "owner": "Radio Algérienne",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Radio Algérienne"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic-language public radio"
+   ]
+  ]
+ },
+ "pf-003000": {
+  "audience": [
+   [
+    "minority_language",
+    "Berber (Tamazight) speakers"
+   ],
+   [
+    "indigenous",
+    "Amazigh people"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "Radio Algérienne",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Radio Algérienne"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Tamazight-language public radio"
+   ]
+  ]
+ },
+ "pf-003001": {
+  "date": "2026-11-10",
+  "owner": "Radio Algérienne",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Radio Algérienne"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language public radio"
+   ]
+  ]
+ },
+ "pf-003002": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
+ "pf-003003": {
+  "date": "2026-11-10",
+  "owner": "EPTV",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national public channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public news channel"
+   ]
+  ]
+ },
  "pf-003004": {
   "audience": [
    [
@@ -21711,6 +22094,39 @@
    ]
   ]
  },
+ "pf-003295": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public daily newspaper"
+   ]
+  ]
+ },
+ "pf-003303": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ]
+  ]
+ },
+ "pf-003304": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
+   ]
+  ]
+ },
  "pf-003307": {
   "date": "2026-11-10",
   "topics": [
@@ -21725,6 +22141,17 @@
     null,
     1,
     "Barranquilla"
+   ]
+  ]
+ },
+ "pf-003309": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
    ]
   ]
  },
@@ -22315,6 +22742,42 @@
    ]
   ]
  },
+ "pf-003480": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: one of six titles of the public press"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public French-language daily"
+   ]
+  ]
+ },
+ "pf-003481": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public establishment (state)"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public television establishment"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Arabic, Tamazight, English, French"
+   ]
+  ]
+ },
  "pf-003482": {
   "date": "2026-11-10",
   "topics": [
@@ -22548,6 +23011,18 @@
    ]
   ]
  },
+ "pf-003642": {
+  "closed": "Wikipedia: print edition disappeared",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ]
+  ]
+ },
  "pf-003674": {
   "date": "2026-11-10",
   "owner": "Québecor",
@@ -22617,10 +23092,32 @@
    ]
   ]
  },
+ "pf-003705": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ]
+  ]
+ },
  "pf-003710": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: extreme-right collaborationist review (1936-1944)",
   "topics": []
+ },
+ "pf-003711": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language evening newspaper"
+   ]
+  ]
  },
  "pf-003712": {
   "date": "2026-11-10",
@@ -22808,6 +23305,28 @@
    ]
   ]
  },
+ "pf-003776": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (now online)"
+   ]
+  ]
+ },
+ "pf-003783": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
+   ]
+  ]
+ },
  "pf-003784": {
   "closed": "Wikipedia: Metro 'was' a newspaper",
   "date": "2026-11-10",
@@ -22902,6 +23421,17 @@
     null,
     1,
     "large Urdu daily newspaper"
+   ]
+  ]
+ },
+ "pf-003832": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "oldest independent newspaper"
    ]
   ]
  },
@@ -26392,6 +26922,17 @@
    ]
   ]
  },
+ "pf-005036": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV"
+   ]
+  ]
+ },
  "pf-005041": {
   "date": "2026-11-10",
   "owner": "ABS-CBN",
@@ -26695,6 +27236,17 @@
    ]
   ]
  },
+ "pf-005096": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-005112": {
   "date": "2026-11-10",
   "topics": [
@@ -26720,6 +27272,45 @@
     null,
     1,
     "Arabic daily"
+   ]
+  ]
+ },
+ "pf-005147": {
+  "closed": "Wikipedia: 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
+ "pf-005148": {
+  "closed": "Wikipedia: Albania Today 'was' a newspaper",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "English daily"
+   ]
+  ]
+ },
+ "pf-005149": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: official national news agency"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "official news agency"
    ]
   ]
  },
@@ -27365,6 +27956,17 @@
     null,
     1,
     "comedy portal"
+   ]
+  ]
+ },
+ "pf-005451": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business newspaper"
    ]
   ]
  },
@@ -28843,6 +29445,28 @@
    ]
   ]
  },
+ "pf-006245": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "economy newspaper"
+   ]
+  ]
+ },
+ "pf-006249": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic daily"
+   ]
+  ]
+ },
  "pf-006252": {
   "date": "2026-11-10",
   "topics": [
@@ -29577,6 +30201,17 @@
     null,
     1,
     "19th-century newspaper"
+   ]
+  ]
+ },
+ "pf-006513": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -31828,6 +32463,27 @@
    ]
   ]
  },
+ "pf-008228": {
+  "audience": [
+   [
+    "minority_language",
+    "Greek minority"
+   ],
+   [
+    "ethnic_minorities",
+    "Greek community"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Greek-language newspaper of the Greek minority"
+   ]
+  ]
+ },
  "pf-008235": {
   "audience": [
    [
@@ -31865,6 +32521,18 @@
     null,
     1,
     "middle-market tabloid"
+   ]
+  ]
+ },
+ "pf-008269": {
+  "closed": "Wikipedia: 'was' a magazine",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "industry_innovation",
+    "infrastructure",
+    1,
+    "rail transport magazine"
    ]
   ]
  },
@@ -32983,6 +33651,17 @@
    ]
   ]
  },
+ "pf-008991": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news channel"
+   ]
+  ]
+ },
  "pf-008993": {
   "closed": "Wikidata: defunct newspaper",
   "date": "2026-11-10",
@@ -33819,6 +34498,22 @@
     null,
     1,
     "daily newspaper of the Communist Youth Union"
+   ]
+  ]
+ },
+ "pf-010214": {
+  "date": "2026-11-10",
+  "owner": "Top Media Group",
+  "ownership": [
+   "private",
+   "Wikipedia: Top Media Group"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news channel"
    ]
   ]
  },
@@ -35909,6 +36604,17 @@
    ]
   ]
  },
+ "pf-012987": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "24-hour news TV"
+   ]
+  ]
+ },
  "pf-012996": {
   "date": "2026-11-10",
   "topics": [
@@ -36861,6 +37567,83 @@
    ]
   ]
  },
+ "pf-013468": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "satire magazine"
+   ]
+  ]
+ },
+ "pf-013469": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local newspaper of Pogradec"
+   ]
+  ]
+ },
+ "pf-013470": {
+  "audience": [
+   [
+    "youth_students",
+    "students"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "university student newspaper"
+   ]
+  ]
+ },
+ "pf-013471": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal"
+   ],
+   [
+    "community_local",
+    null,
+    2,
+    "local editions"
+   ]
+  ]
+ },
+ "pf-013472": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: DigitAlb"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel (1-14)"
+   ]
+  ]
+ },
  "pf-013480": {
   "audience": [
    [
@@ -37754,6 +38537,86 @@
    ]
   ]
  },
+ "pf-014058": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
+ "pf-014059": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: DigitAlb"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children's channel"
+   ]
+  ]
+ },
+ "pf-014063": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "culture and literary quarterly"
+   ]
+  ]
+ },
+ "pf-014064": {
+  "date": "2026-11-10",
+  "owner": "RTSH",
+  "ownership": [
+   "public_service",
+   "Wikidata: RTSH"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "external public radio"
+   ]
+  ]
+ },
+ "pf-014068": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "channel for kids and teenagers"
+   ]
+  ]
+ },
  "pf-014104": {
   "date": "2026-11-10",
   "owner": "HTV",
@@ -38365,6 +39228,23 @@
     null,
     1,
     "free-to-air TV channel"
+   ]
+  ]
+ },
+ "pf-014439": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "political and finance weekly"
+   ],
+   [
+    "general_news",
+    null,
+    1,
+    "politics"
    ]
   ]
  },
@@ -39302,6 +40182,29 @@
    ]
   ]
  },
+ "pf-015206": {
+  "closed": "Wikipedia: published 1925-1939",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "weekly"
+   ]
+  ]
+ },
+ "pf-015208": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "literary quarterly"
+   ]
+  ]
+ },
  "pf-015216": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: Spanish far right of the 1930s",
@@ -39412,6 +40315,17 @@
     null,
     1,
     "architecture news website"
+   ]
+  ]
+ },
+ "pf-015332": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "daily newspaper"
    ]
   ]
  },
@@ -40310,6 +41224,17 @@
    ]
   ]
  },
+ "pf-016173": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "sports",
+    null,
+    1,
+    "sports TV"
+   ]
+  ]
+ },
  "pf-016174": {
   "date": "2026-11-10",
   "topics": [
@@ -41006,6 +41931,27 @@
    ]
   ]
  },
+ "pf-016567": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: Tring"
+  ],
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "children and teenagers channel"
+   ]
+  ]
+ },
  "pf-016578": {
   "date": "2026-11-10",
   "owner": "MTVA",
@@ -41097,6 +42043,17 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing and conservative",
   "topics": []
+ },
+ "pf-016655": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language daily"
+   ]
+  ]
  },
  "pf-016658": {
   "date": "2026-11-10",
@@ -41203,6 +42160,27 @@
   "date": "2026-11-10",
   "right_populist": "Wikipedia: right-wing news channel",
   "topics": []
+ },
+ "pf-016725": {
+  "audience": [
+   [
+    "youth_students",
+    "young audience"
+   ]
+  ],
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "youth TV"
+   ]
+  ]
  },
  "pf-016740": {
   "date": "2026-11-10",
@@ -41415,6 +42393,22 @@
    [
     "public_service_mandate",
     "Israeli public broadcaster"
+   ]
+  ]
+ },
+ "pf-016962": {
+  "date": "2026-11-10",
+  "owner": "Radio Algérienne",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: Radio Algérienne"
+  ],
+  "topics": [
+   [
+    "community_local",
+    null,
+    1,
+    "local public radio of Boumerdès"
    ]
   ]
  },
@@ -41937,6 +42931,17 @@
    ]
   ]
  },
+ "pf-017424": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news TV"
+   ]
+  ]
+ },
  "pf-017480": {
   "date": "2026-11-10",
   "ownership": [
@@ -41958,10 +42963,32 @@
    ]
   ]
  },
+ "pf-017614": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Arabic TV channel"
+   ]
+  ]
+ },
  "pf-017615": {
   "date": "2026-11-10",
   "far_right": "Wikipedia: organ of the extreme right (1977-1980)",
   "topics": []
+ },
+ "pf-017633": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "satellite TV"
+   ]
+  ]
  },
  "pf-017635": {
   "date": "2026-11-10",
@@ -42899,6 +43926,34 @@
    ]
   ]
  },
+ "pf-022552": {
+  "date": "2026-11-10",
+  "owner": "RTSH",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTSH"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public TV channel"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ],
+  "un_profile": [
+   [
+    "public_service_mandate",
+    "Albanian public broadcaster"
+   ]
+  ]
+ },
  "pf-022561": {
   "date": "2026-11-10",
   "topics": [
@@ -43056,6 +44111,21 @@
     null,
     1,
     "state TV network"
+   ]
+  ]
+ },
+ "pf-022739": {
+  "date": "2026-11-10",
+  "ownership": [
+   "private",
+   "Wikipedia: private"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "private generalist TV"
    ]
   ]
  },
@@ -43227,6 +44297,17 @@
     null,
     2,
     "news programmes"
+   ]
+  ]
+ },
+ "pf-023164": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "Euronews franchise TV"
    ]
   ]
  },
@@ -43754,6 +44835,19 @@
    ]
   ]
  },
+ "pf-023731": {
+  "closed": "Wikipedia: historic newspaper",
+  "date": "2026-11-10",
+  "far_right": "Wikipedia: antisemitic newspaper",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper"
+   ]
+  ]
+ },
  "pf-023757": {
   "closed": "Wikipedia: published 1913-1952",
   "date": "2026-11-10",
@@ -44134,6 +45228,27 @@
     null,
     1,
     "sports channel"
+   ]
+  ]
+ },
+ "pf-024372": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public channel"
+  ],
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "public international news channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "multilingual",
+    "Arabic, French and English"
    ]
   ]
  },
@@ -44539,6 +45654,28 @@
    ]
   ]
  },
+ "pf-024917": {
+  "audience": [
+   [
+    "policy_makers",
+    "parliament channel"
+   ]
+  ],
+  "date": "2026-11-10",
+  "owner": "EPTV",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: national public channel"
+  ],
+  "topics": [
+   [
+    "elections",
+    null,
+    1,
+    "parliament channel"
+   ]
+  ]
+ },
  "pf-024994": {
   "date": "2026-11-10",
   "topics": [
@@ -44603,6 +45740,17 @@
     null,
     2,
     "documentaries"
+   ]
+  ]
+ },
+ "pf-025144": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV and news agency"
    ]
   ]
  },
@@ -44722,6 +45870,17 @@
     null,
     1,
     "TV station"
+   ]
+  ]
+ },
+ "pf-025474": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "French-language news website"
    ]
   ]
  },
@@ -44973,6 +46132,17 @@
   "far_right": "Wikipedia: right-wing satirical magazine, called far-right by Libération",
   "topics": []
  },
+ "pf-025926": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "online news (since 2020)"
+   ]
+  ]
+ },
  "pf-025930": {
   "date": "2026-11-10",
   "topics": [
@@ -44981,6 +46151,39 @@
     null,
     1,
     "music radio"
+   ]
+  ]
+ },
+ "pf-025935": {
+  "closed": "Wikipedia: founded 1930 (historic)",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "nationalist newspaper (historic)"
+   ]
+  ]
+ },
+ "pf-025955": {
+  "date": "2026-11-10",
+  "ownership": [
+   "state_controlled",
+   "Wikipedia: public radio"
+  ],
+  "topics": [
+   [
+    "partnerships",
+    null,
+    2,
+    "pan-African voice"
+   ],
+   [
+    "culture",
+    null,
+    1,
+    "public radio for Africa"
    ]
   ]
  },
@@ -45044,6 +46247,29 @@
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller",
   "topics": []
+ },
+ "pf-026220": {
+  "audience": [
+   [
+    "children",
+    "children"
+   ]
+  ],
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "children_youth",
+    null,
+    1,
+    "educational children's channel"
+   ]
+  ],
+  "un_profile": [
+   [
+    "educational",
+    "educational programmes"
+   ]
+  ]
  },
  "pf-026324": {
   "date": "2026-11-10",
@@ -45277,6 +46503,17 @@
     null,
     1,
     "public sports channel"
+   ]
+  ]
+ },
+ "pf-026635": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel"
    ]
   ]
  },
@@ -45579,6 +46816,39 @@
     null,
     1,
     "daily newspaper"
+   ]
+  ]
+ },
+ "pf-027091": {
+  "date": "2026-11-10",
+  "owner": "RTSH",
+  "ownership": [
+   "public_service",
+   "Wikipedia: RTSH"
+  ],
+  "topics": [
+   [
+    "culture",
+    null,
+    1,
+    "public generalist TV"
+   ],
+   [
+    "general_news",
+    null,
+    2,
+    "news"
+   ]
+  ]
+ },
+ "pf-027229": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "TV channel"
    ]
   ]
  },
@@ -46109,6 +47379,17 @@
     null,
     1,
     "audio readings of Quran commentary"
+   ]
+  ]
+ },
+ "pf-029345": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news portal"
    ]
   ]
  },
@@ -47763,6 +49044,14 @@
   "date": "2026-11-10",
   "topics": []
  },
+ "pf-037236": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-037239": {
+  "date": "2026-11-10",
+  "topics": []
+ },
  "pf-037254": {
   "date": "2026-11-10",
   "topics": []
@@ -48841,6 +50130,17 @@
   "topics": [],
   "website_warning": "the website shows a slot gambling page"
  },
+ "pf-051750": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "newspaper (Arabic)"
+   ]
+  ]
+ },
  "pf-052294": {
   "date": "2026-11-10",
   "topics": [
@@ -49028,6 +50328,17 @@
    ]
   ]
  },
+ "pf-057869": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "human_rights",
+    null,
+    1,
+    "human rights documentation (name: Algeria-Watch)"
+   ]
+  ]
+ },
  "pf-057871": {
   "date": "2026-11-10",
   "topics": [
@@ -49065,6 +50376,21 @@
  "pf-058124": {
   "date": "2026-11-10",
   "topics": []
+ },
+ "pf-058734": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-058745": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "business_economy",
+    null,
+    1,
+    "business news"
+   ]
+  ]
  },
  "pf-058786": {
   "date": "2026-11-10",
@@ -49119,6 +50445,23 @@
     null,
     1,
     "news website"
+   ]
+  ]
+ },
+ "pf-060036": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
+   ],
+   [
+    "community_local",
+    null,
+    1,
+    "eastern Algeria (Annaba)"
    ]
   ]
  },
@@ -49218,6 +50561,17 @@
    ]
   ]
  },
+ "pf-063393": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news"
+   ]
+  ]
+ },
  "pf-064102": {
   "date": "2026-11-10",
   "right_populist": "general knowledge, not in the profile text (please check): far-right, Falun Gong-affiliated newspaper",
@@ -49271,6 +50625,17 @@
     null,
     2,
     "Dominican community in New York"
+   ]
+  ]
+ },
+ "pf-064485": {
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "news website"
    ]
   ]
  },
@@ -49340,6 +50705,14 @@
     "website section Salud"
    ]
   ]
+ },
+ "pf-064822": {
+  "date": "2026-11-10",
+  "topics": []
+ },
+ "pf-064824": {
+  "date": "2026-11-10",
+  "topics": []
  },
  "pf-065076": {
   "date": "2026-11-10",
@@ -49707,6 +51080,18 @@
     null,
     1,
     "Melo"
+   ]
+  ]
+ },
+ "pf-070576": {
+  "closed": "Wikipedia: existed 1962-1986 ('était')",
+  "date": "2026-11-10",
+  "topics": [
+   [
+    "general_news",
+    null,
+    1,
+    "state radio and TV"
    ]
   ]
  },

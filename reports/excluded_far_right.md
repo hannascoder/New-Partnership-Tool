@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-168 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+169 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -39,6 +39,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-000142 | Junge Freiheit | DEU | AI reading: Wikipedia: conservative, right-wing, nationalistic; 'ideological supply ship of right-wing populism' |
 | pf-000349 | National Zeitung | DEU | Wikipedia Category:Far-right periodicals published in Germany |
 | pf-016621 | Tichys Einblick | DEU | AI reading (right-wing populist): Wikipedia: right-wing and conservative |
+| pf-023731 | Le Petit Oranais | DZA | AI reading: Wikipedia: antisemitic newspaper |
 | pf-006825 | Azul | ESP | Wikidata political ideology of the owner Falange Española Tradicionalista y de las JONS: fascism |
 | pf-015686 | Crónica Global | ESP | AI reading: Wikipedia: junction of right and far-right currents |
 | pf-015216 | El Fascio | ESP | AI reading: Wikipedia: Spanish far right of the 1930s |

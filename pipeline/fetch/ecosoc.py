@@ -32,7 +32,7 @@ import re
 import time
 import urllib.parse
 import urllib.request
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 
 from common import RAW, USER_AGENT, save
 
@@ -58,18 +58,28 @@ def minutes():
     return (time.time() - START) / 60
 
 
-def fetch(path, tries=3):
+FAILS = {"row": 0}  # failures in a row: the server is often down for a while (10.11.2026: most requests timed out)
+
+
+def fetch(path, tries=2):
     url = path if path.startswith("http") else BASE + path.lstrip("/").replace("civilsociety/", "", 1)
     url = urllib.parse.quote(htmllib.unescape(url), safe=":/?&=%$+,;@")
     last = None
+    if FAILS["row"] >= 10:  # many failures in a row: wait for the server instead of burning the time budget
+        print(f"server not answering ({FAILS['row']} failures in a row): pause 10 minutes", flush=True)
+        time.sleep(600)
+        FAILS["row"] = 5
     for attempt in range(tries):
         try:
             time.sleep(0.4)
-            with opener.open(url, timeout=90) as r:
-                return r.read().decode("utf-8", "replace")
+            with opener.open(url, timeout=40) as r:
+                body = r.read().decode("utf-8", "replace")
+            FAILS["row"] = 0
+            return body
         except Exception as e:
             last = e
-            time.sleep(5 * (attempt + 1) ** 2)
+            time.sleep(5)
+    FAILS["row"] += 1
     raise RuntimeError(f"failed: {url} ({last})")
 
 
@@ -159,13 +169,21 @@ def rows(html):
 
 
 def read_list(meta, orgs):
+    """reads a list page by page; a long list that did not finish continues at the page where the
+    last run stopped (meta["resume_index"]), the server keeps the list in the session"""
     html = fetch(meta["url"])
     sample("list_" + meta["kind"], html)
     i = html.find("Search results")
     if i > 0:  # the heading names the list (e.g. the field of activity), kept to label code-only lists
         meta["heading"] = text(re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", html[i:i + 3000]))[:300]
     pages = int((PAGES.search(html) or [0, 1])[1])
-    codes, seen_next = [], set()
+    codes, seen_next = list(meta.get("codes") or []), set()
+    m0 = NEXT.search(html)
+    if meta.get("resume_index") and m0:  # jump to where the last run stopped
+        try:
+            html = fetch(re.sub(r"index=\d+", f"index={meta['resume_index']}", m0.group(1)))
+        except RuntimeError:
+            return codes, False, pages
     while True:
         for code, name, acc in rows(html):
             codes.append(code)
@@ -180,6 +198,9 @@ def read_list(meta, orgs):
         if minutes() > BUDGET_MIN:
             return codes, False, pages
         seen_next.add(m.group(1))
+        idx = re.search(r"index=(\d+)", m.group(1))
+        if idx:
+            meta["resume_index"] = int(idx.group(1))
         try:
             html = fetch(m.group(1))
         except RuntimeError as e:
@@ -206,7 +227,7 @@ def profile_text(html):
 
 def fresh(stamp, days):
     try:
-        return (datetime.utcnow() - datetime.fromisoformat(stamp)).days < days
+        return (datetime.now(timezone.utc).replace(tzinfo=None) - datetime.fromisoformat(stamp)).days < days
     except Exception:
         return False
 
@@ -225,7 +246,7 @@ def main():
                   key=lambda lid: (order.get(lists[lid]["kind"], 9), lid))
     print(f"lists to read: {len(todo)} of {len(lists)}", flush=True)
     for i, lid in enumerate(todo):
-        if minutes() > BUDGET_MIN * 0.6:
+        if minutes() > BUDGET_MIN * 0.5:
             print("time for lists used up: continue next run")
             break
         m = lists[lid]
@@ -234,9 +255,11 @@ def main():
         except RuntimeError as e:
             print("list failed", m["label"], e)
             continue
-        if complete or len(codes) > len(m.get("codes") or []):
+        if complete:
+            m.pop("resume_index", None)
+        if complete or len(set(codes)) >= len(m.get("codes") or []):
             m.update({"codes": sorted(set(codes), key=int), "complete": complete, "pages": pages,
-                      "fetched": datetime.utcnow().isoformat(timespec="seconds")})
+                      "fetched": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")})
         print(f"[{i + 1}/{len(todo)}] {m['kind']}: {m['label'][:60]} - {len(set(codes))} orgs,"
               f" {pages} pages, {'complete' if complete else 'INCOMPLETE'} ({minutes():.0f} min)", flush=True)
         store("lists.json.gz", lists)
@@ -260,7 +283,7 @@ def main():
             print("profile failed", code, e)
             continue
         sample("profile", html)
-        profiles[code] = {**profile_text(html), "fetched": datetime.utcnow().isoformat(timespec="seconds")}
+        profiles[code] = {**profile_text(html), "fetched": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")}
         done += 1
         if done % 200 == 0:
             store("profiles.json.gz", profiles)

@@ -72,25 +72,43 @@ def field_label(meta):
     return lab
 
 
-PROFILE_FIELDS = {  # label on the profile page -> our key (checked against raw/ecosoc/samples)
-    "country": r"(?:Country|Pays|Headquarters? address.*?Country)\s*:?\s*\|?\s*([A-Za-z][A-Za-z .,'()-]{2,60})",
-    "website": r"(?:Web ?site|Site web)\s*:?\s*\|?\s*((?:https?://)?[\w.-]+\.[a-z]{2,}[^\s|]*)",
-    "languages": r"(?:Working languages?|Languages?)\s*:?\s*\|?\s*([A-Za-z ,;/()-]{3,200})",
-    "type": r"(?:Organi[sz]ation type|Type of organi[sz]ation)\s*:?\s*\|?\s*([A-Za-z ,/-]{3,80})",
-    "mission": r"(?:Mission statement|Mission|Purpose|Aims and purposes)\s*:?\s*\|?\s*([^|]{20,1500})",
-}
-
-
 def parse_profile(p):
+    """ECOSOC profile page (short text version, cells separated by "|"), checked 10.11.2026:
+    ... Headquarters address | Address: | <street> | <city> | <Country> | Phone: | ... | Email: | x |
+    Web site: | x | Organization type: | x | Languages: | a | b | Civil Society Database ..."""
     t = p.get("text") or ""
+    cells = [c.strip() for c in t.split("|")]
     out = {}
-    for k, rx in PROFILE_FIELDS.items():
-        m = re.search(rx, t, re.I | re.S)
-        if m:
-            out[k] = m.group(1).strip(" |,;")
+
+    def after(label):
+        for i, c in enumerate(cells):
+            if c == label and i + 1 < len(cells):
+                return i + 1
+        return None
+    i = after("Phone:") 
+    if i:  # the country is the cell just before "Phone:"
+        out["country"] = cells[i - 2]
+    else:
+        j = after("Address:")
+        if j:
+            k = next((n for n in range(j, min(j + 8, len(cells))) if cells[n].endswith(":")), None)
+            if k:
+                out["country"] = cells[k - 1]
+    for label, key in (("Web site:", "website"), ("Organization type:", "type"), ("Email:", "email")):
+        j = after(label)
+        if j and not cells[j].endswith(":"):
+            out[key] = cells[j]
+    j = after("Languages:")
+    if j:
+        langs = []
+        for c in cells[j:j + 12]:
+            if c.endswith(":") or c.startswith("Civil Society"):
+                break
+            langs.append(c)
+        out["languages"] = ", ".join(langs)
     if not out.get("website"):
         out["website"] = next((u for u in p.get("links") or [] if not any(g in u for g in GENERIC_DOMAINS)), None)
-    out["email"] = (p.get("emails") or [None])[0]
+    out["email"] = out.get("email") or (p.get("emails") or [None])[0]
     return out
 
 
@@ -120,9 +138,11 @@ def ecosoc():
     out = []
     for code, o in orgs.items():
         r = member[code]
+        prof = parse_profile(profiles.get(code) or {})
         if type_lists_known and not (r["types"] & ngo_type):
             continue  # not of type "Non-governmental organization" (owner: classic NGOs first)
-        prof = parse_profile(profiles.get(code) or {})
+        if prof.get("type") and prof["type"] not in ngo_type:
+            continue
         status = r["status"]
         if not status:  # accreditations column, e.g. "Special 2016"
             for a in o.get("accreditations") or []:
@@ -197,12 +217,18 @@ def iati_ngos():
 # ------------------------------------------------------------------ merge
 def merge(records):
     """same website (not a social network or blog host) or same name in the same country = same NGO"""
-    groups, by_domain, by_name = [], {}, {}
+    groups, by_domain, by_name, by_name_only = [], {}, {}, {}
+    # records with a country first; ECOSOC entries without a profile yet (no country) are then
+    # matched by name alone, when exactly one NGO has that name
+    records = sorted(records, key=lambda r: r.get("country") is None)
     for r in records:
         d = (r.get("domain") or "").split("/")[0]
         dk = d if d and not any(d == g or d.endswith("." + g) for g in GENERIC_DOMAINS) else None
         nk = (name_key(r["name"]), r.get("country")) if r.get("country") else None
         g = (by_domain.get(r.get("domain")) if dk else None) or (by_name.get(nk) if nk else None)
+        if g is None and not r.get("country"):
+            cand = by_name_only.get(name_key(r["name"]))
+            g = cand if cand not in (None, "ambiguous") else None
         if g is None:
             g = {"members": []}
             groups.append(g)
@@ -211,6 +237,9 @@ def merge(records):
             by_domain.setdefault(r["domain"], g)
         if nk:
             by_name.setdefault(nk, g)
+        if r.get("country"):
+            k = name_key(r["name"])
+            by_name_only[k] = g if by_name_only.get(k) in (None, g) else "ambiguous"
         for a in r.get("alt_names") or []:
             if r.get("country"):
                 by_name.setdefault((name_key(a), r["country"]), g)
