@@ -4,7 +4,6 @@
 set -e
 git config user.name "partner-finder-bot"
 git config user.email "partner-finder-bot@users.noreply.github.com"
-python pipeline/shared/scrub_raw.py || true  # personal e-mail addresses never saved (config/rules.yaml)
 git add raw/
 if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
 git commit -q -m "Raw data: $1, $(date -u +%Y-%m-%d)"

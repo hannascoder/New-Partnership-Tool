@@ -304,8 +304,8 @@ un_profile_words:
     sections: [development, global development, international development, développement, desarrollo,
                desenvolvimento, التنمية, maendeleo]
 
-# Only ORGANISATION e-mail addresses are kept (owner 06.11.2026); personal ones (j.smith@, maria.lopez@) are
-# left out, also from the stored raw data (11.11.2026, before making the repository public).
+# Only ORGANISATION e-mail addresses are SHOWN in the tool (owner 06.11.2026); personal ones (j.smith@,
+# maria.lopez@) are not shown. The stored raw data (raw/) keeps ALL addresses (owner 11.11.2026: needed later).
 # An address is kept when the part before "@" STARTS WITH one of these words, or CONTAINS one of the
 # words in "contains".
 org_email:
