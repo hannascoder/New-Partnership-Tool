@@ -8,6 +8,7 @@ import csv
 import gzip
 import json
 import re
+import sys
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -16,6 +17,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 CFG = ROOT / "config"
+sys.path.insert(0, str(ROOT / "pipeline" / "shared"))
+from org_email import org_email  # noqa: E402
 SOCIAL_URL = {"youtube": "https://www.youtube.com/channel/{}", "facebook": "https://www.facebook.com/{}",
               "instagram": "https://www.instagram.com/{}", "tiktok": "https://www.tiktok.com/@{}",
               "x": "https://x.com/{}", "telegram": "https://t.me/{}"}
@@ -160,8 +163,8 @@ def main():
             e["cp"] = o["contact_page"]
         if o.get("last_post"):
             e["lp"] = o["last_post"]
-        if o.get("email"):
-            e["em"] = o["email"].replace("mailto:", "").strip()
+        if org_email(o.get("email")):  # only organisation addresses (config/rules.yaml org_email)
+            e["em"] = org_email(o["email"])
         e["s"] = o["sources"]
         e["f"] = o["first_seen"]
         if (o.get("cat") or {}).get("website_status") == "error":

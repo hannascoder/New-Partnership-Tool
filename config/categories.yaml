@@ -327,7 +327,9 @@ new_months: 4
 active_months: 3
 
 # "Report an error" link on every card opens an e-mail to this address (owner, 09.11.2026).
-feedback_email: stevenshanna20@gmail.com
+# e-mail for "Report an error" on the cards. Left empty on 11.11.2026 before making the repository public
+# (owner's private address must not be public); "Report an error" in the footer goes to GitHub issues.
+feedback_email: ""
 
 # How strongly an outlet is connected to a topic (shown on the cards, in this order).
 # Wording chosen by the owner on 09.11.2026 (option A).

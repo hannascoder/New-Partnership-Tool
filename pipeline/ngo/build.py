@@ -266,20 +266,8 @@ def first(members, key):
     return None
 
 
-ORG_MAIL = ("info", "contact", "office", "secretariat", "secretaria", "secretariado", "admin", "mail", "hello",
-            "general", "enquir", "inquir", "communication", "press", "media", "team", "geneva", "genev", "newyork",
-            "ngo", "org", "director", "board", "hq", "headquarter", "central", "welcome", "bureau", "sede", "accueil",
-            "advocacy", "program", "partnership", "membership", "network", "un.", "ecosoc", "global", "intl", "international")
-
-
-def org_email(e):
-    """only organisation addresses (owner, 06.11.2026): info@, office@, secretariat@ ...;
-    personal addresses (j.smith@, maria.lopez@) are left out"""
-    e = (e or "").replace("mailto:", "").strip().lower()
-    if not re.match(r"^[\w.+-]+@[\w-]+\.[\w.-]+$", e):
-        return None
-    local = e.split("@")[0]
-    return e if any(w in local for w in ORG_MAIL) else None
+sys.path.insert(0, str(ROOT / "pipeline" / "shared"))
+from org_email import org_email  # noqa: E402  (one rule for all: config/rules.yaml org_email)
 
 
 def contains_word(text, words):

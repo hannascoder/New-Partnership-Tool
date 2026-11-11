@@ -303,3 +303,18 @@ un_profile_words:
               uandishi wa habari za maendeleo]
     sections: [development, global development, international development, développement, desarrollo,
                desenvolvimento, التنمية, maendeleo]
+
+# Only ORGANISATION e-mail addresses are kept (owner 06.11.2026); personal ones (j.smith@, maria.lopez@) are
+# left out, also from the stored raw data (11.11.2026, before making the repository public).
+# An address is kept when the part before "@" STARTS WITH one of these words, or CONTAINS one of the
+# words in "contains".
+org_email:
+  starts: [info, contact, contacto, contato, kontakt, redac, redaction, redaccion, redacao, redazione, redaktion,
+           newsroom, news, noticias, nouvelles, editor, editors, editorial, desk, hello, hola, bonjour, office,
+           admin, press, presse, prensa, imprensa, mail, communication, comunicacion, comunicacao, media, secretariat,
+           secretaria, secretariado, reception, support, webmaster, tips, letters, studio, programs, programmes,
+           radio, tv, online, general, enquir, inquir, team, welcome, bureau, sede, accueil, feedback, informativos,
+           ngo, hq, headquarter, central, membership, partnership, advocacy, program, service, servicio, servico,
+           kontor, post, correo, courrier, jornal, journal, tele, direccion, direction, director, board]
+  contains: [info, contact, redac, news, noticia, press, prensa, media, office, secretariat, radio, tv,
+             editor, geneva, genev, newyork, ecosoc, global, intl, international, network]

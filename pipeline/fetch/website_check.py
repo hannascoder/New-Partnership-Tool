@@ -32,6 +32,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import RAW, ROOT, USER_AGENT  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "shared"))
+from org_email import org_email  # noqa: E402  only organisation addresses are stored (config/rules.yaml)
 
 OUT = RAW / "website_check"
 MAX_RANK = int(os.environ.get("WEBSITE_MAX_RANK", "100"))
@@ -212,8 +214,8 @@ def _check(outlet):
         h = host(full)
         if href.startswith("mailto:"):
             e = href[7:].split("?")[0].strip()
-            if EMAIL.fullmatch(e) and e not in emails:
-                emails.append(e)
+            if EMAIL.fullmatch(e) and org_email(e) and org_email(e) not in emails:
+                emails.append(org_email(e))
             continue
         for dom, name in SOCIAL.items():
             if h == dom or h.endswith("." + dom):
@@ -232,8 +234,8 @@ def _check(outlet):
         if contact is None and (CONTACT.search(text or "") or CONTACT.search(path)) and path not in ("", "/"):
             contact = full
     for e in EMAIL.findall(" ".join(p.paras[-30:])):
-        if e not in emails and not e.lower().endswith((".png", ".jpg")):
-            emails.append(e)
+        if org_email(e) and org_email(e) not in emails:
+            emails.append(org_email(e))
     res.update({"nav": nav, "heads": p.heads[:60], "emails": emails[:8], "social": social,
                 "feeds": [urllib.parse.urljoin(final, f) for f in p.feeds[:5]], "home_text": " ".join(p.paras[:6])[:800],
                 "v": VERSION, "extra": extra})
@@ -268,8 +270,8 @@ def _check(outlet):
                 res["about_url"] = about
                 res["about"] = " ".join(a.paras)[:1500] or a.desc
                 for e in EMAIL.findall(" ".join(a.paras)):
-                    if e not in res["emails"] and len(res["emails"]) < 8:
-                        res["emails"].append(e)
+                    if org_email(e) and org_email(e) not in res["emails"] and len(res["emails"]) < 8:
+                        res["emails"].append(org_email(e))
         except Exception as e:
             res["about_error"] = str(e)[:80]
     return outlet["i"], res
