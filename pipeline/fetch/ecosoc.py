@@ -30,6 +30,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timezone
@@ -71,6 +72,10 @@ LAST_OK = {"t": time.time()}
 FAILS = {"row": 0}  # failures in a row: the server is often down for a while (10.11.2026: most requests timed out)
 
 
+class NotAvailable(Exception):
+    """the page exists for the server but is not public (HTTP 403/404): not retried"""
+
+
 def fetch(path, tries=2):
     url = path if path.startswith("http") else BASE + path.lstrip("/").replace("civilsociety/", "", 1)
     url = urllib.parse.quote(htmllib.unescape(url), safe=":/?&=%$+,;@")
@@ -92,6 +97,13 @@ def fetch(path, tries=2):
             FAILS["row"] = 0
             LAST_OK["t"] = time.time()
             return body
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 404, 410):  # 11.11.2026: some profiles are not public (403): the server did answer
+                FAILS["row"] = 0
+                LAST_OK["t"] = time.time()
+                raise NotAvailable(f"{e.code}: {url}")
+            last = e
+            time.sleep(5)
         except Exception as e:
             last = e
             time.sleep(5)
@@ -296,6 +308,9 @@ def main():
             break
         try:
             html = fetch(f"showProfileDetail.do?method=showProfileDetails&profileCode={code}")
+        except NotAvailable:
+            profiles[code] = {"not_public": True, "fetched": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")}
+            continue
         except RuntimeError as e:
             print("profile failed", code, e)
             continue
