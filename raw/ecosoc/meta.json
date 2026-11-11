@@ -1,15 +1,15 @@
 {
   "source": "ecosoc",
-  "fetched_at": "2026-11-11T03:36:27Z",
+  "fetched_at": "2026-11-11T09:21:55Z",
   "records": 0,
   "url": "https://esango.un.org/civilsociety/",
   "lists": 68,
   "lists_complete": 1,
-  "organisations": 3207,
+  "organisations": 4257,
   "ngo_type_codes": 0,
   "profiles": 191,
-  "profiles_fetched_now": 113,
-  "profiles_still_to_fetch": 3016,
+  "profiles_fetched_now": 0,
+  "profiles_still_to_fetch": 4066,
   "date": "2026-11-11",
   "licence": "UN ECOSOC iCSO public database (public listing)"
 }
