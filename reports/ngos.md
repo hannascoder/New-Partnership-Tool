@@ -1,8 +1,8 @@
 # NGOs (phase 2)
 
-Built 2026-11-10. Sources: ecosoc 1605, wikidata_ngo 58399, un_geneva 1471, iati 1339
+Built 2026-11-11. Sources: ecosoc 3200, wikidata_ngo 58399, un_geneva 1471, iati 1339
 
-**6,972 NGOs** shown (only when 'Include NGOs in this search' is ticked), 1,475 not shown (reports/ngos_excluded.md).
+**7,014 NGOs** shown (only when 'Include NGOs in this search' is ticked), 2,595 not shown (reports/ngos_excluded.md).
 
 | Information | Share |
 |---|---|
@@ -10,37 +10,37 @@ Built 2026-11-10. Sources: ecosoc 1605, wikidata_ngo 58399, un_geneva 1471, iati
 | Topic from ECOSOC fields of activity | 0 % |
 | Target audience | 6 % |
 | Language | 37 % |
-| Website | 48 % |
+| Website | 49 % |
 | E-mail | 16 % |
-| ECOSOC consultative status | 7 % |
+| ECOSOC consultative status | 14 % |
 | Only registered in ECOSOC (note on the card) | 0 % |
 
 ## UN status
 
 - un_geneva: 1,437
 - iati_publisher: 1,328
-- ecosoc_special: 411
-- ecosoc_general: 94
+- ecosoc_special: 875
+- ecosoc_general: 99
 
 ## Countries with most NGOs
 
-- USA: 953
+- USA: 960
 - GBR: 707
-- DEU: 409
+- DEU: 410
 - CHE: 304
-- CAN: 220
-- FRA: 211
-- BEL: 210
+- CAN: 222
+- BEL: 216
+- FRA: 212
 - UKR: 168
-- BRA: 142
-- NLD: 136
-- ESP: 131
-- IND: 131
-- RUS: 126
+- BRA: 143
+- NLD: 137
+- IND: 134
+- ESP: 133
+- RUS: 127
 - SWE: 115
+- ITA: 101
 - FIN: 100
-- ITA: 98
 - AUS: 93
 - NOR: 90
+- AUT: 79
 - KOR: 79
-- HUN: 78
