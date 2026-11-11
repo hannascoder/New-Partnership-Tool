@@ -301,7 +301,7 @@ def main():
         sample("profile", html)
         profiles[code] = {**profile_text(html), "fetched": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")}
         done += 1
-        if done % 200 == 0:
+        if done % 50 == 0:  # save often: a run can be stopped any time
             store("profiles.json.gz", profiles)
             print(f"profiles: {done} fetched now, {len(profiles)} in total ({minutes():.0f} min)", flush=True)
     store("profiles.json.gz", profiles)

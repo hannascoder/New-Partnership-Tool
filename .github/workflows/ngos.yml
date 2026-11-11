@@ -59,7 +59,7 @@ jobs:
 
   ecosoc:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v5
         with:
@@ -70,9 +70,9 @@ jobs:
       - run: pip install pyyaml
       - name: ECOSOC iCSO (continues where the last run stopped)
         continue-on-error: true
-        timeout-minutes: 135
+        timeout-minutes: 335
         env:
-          ECOSOC_MINUTES: "120"
+          ECOSOC_MINUTES: "320"
         run: python pipeline/fetch/ecosoc.py
       - name: Save raw data
         if: always()
