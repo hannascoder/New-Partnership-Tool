@@ -182,6 +182,10 @@ media on the site, separate section in the export; updated every 2 months (step 
   allows esango.un.org and unglobalcompact.org). UN Global Compact: owner wants it as an extra box like the
   NGOs; questions to the owner still open (ask again later), list readable page by page (robots.txt forbids
   only the search pages): ~25,700 participants, 12 per page.
+- Owner 11.11.2026: ECOSOC type "Non-governmental organization" only for now (other types later, reminder);
+  ECOSOC organisations without a readable profile (no country) are left out completely; raw data keeps all
+  e-mail addresses (repository is public since 11.11.2026, owner's decision). ECOSOC is now fetched from the
+  cloud session (server answers there; from GitHub it was silent for hours).
 - Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
   without an English label show their local name.
 - Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.
