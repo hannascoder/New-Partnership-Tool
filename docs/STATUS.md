@@ -177,6 +177,11 @@ media on the site, separate section in the export; updated every 2 months (step 
   accreditation (ECOSOC status, UN Geneva) are never left out as "not a classic NGO" (bar associations,
   Rotary ...); hand-checked exclusions (exclude.manual, e.g. FAIR); duplicates merged when names differ only by
   a bracket at the end ("Caritas Internationalis (…)"). Result: 6,961 NGOs shown.
+- 11.11.2026: GitHub Actions minutes for the month are USED UP (private repo, 2,000 min). Workflows do not
+  start until the monthly reset. Fetching continues from the cloud session (environment "New-Partnership-Tool"
+  allows esango.un.org and unglobalcompact.org). UN Global Compact: owner wants it as an extra box like the
+  NGOs; questions to the owner still open (ask again later), list readable page by page (robots.txt forbids
+  only the search pages): ~25,700 participants, 12 per page.
 - Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
   without an English label show their local name.
 - Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.
