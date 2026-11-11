@@ -62,7 +62,7 @@ def minutes():
 
 # 11.11.2026: after a few minutes the server stopped answering for 5 hours. Ask slowly (one request
 # every 3 seconds) and stop the run when nothing has worked for 20 minutes; the next run continues.
-DELAY_S = 3
+DELAY_S = float(os.environ.get("ECOSOC_DELAY", "3"))
 SILENT_STOP_MIN = 20
 GIVE_UP = {"yes": False}
 LAST_OK = {"t": time.time()}
@@ -257,8 +257,9 @@ def main():
         lists[lid] = {**old, **meta}
     # 1. lists: status and type first (small, most important), then fields of activity, then the rest
     order = {"status": 0, "dpi": 1, "type": 2, "field": 3}
+    skip = set(os.environ.get("ECOSOC_SKIP_KINDS", "").split(","))  # e.g. "field" when those lists fail (HTTP 500)
     todo = sorted((lid for lid, m in lists.items()
-                   if not (m.get("complete") and fresh(m.get("fetched", ""), LIST_DAYS))),
+                   if not (m.get("complete") and fresh(m.get("fetched", ""), LIST_DAYS)) and m["kind"] not in skip),
                   key=lambda lid: (order.get(lists[lid]["kind"], 9), lid))
     print(f"lists to read: {len(todo)} of {len(lists)}", flush=True)
     for i, lid in enumerate(todo):
