@@ -55,7 +55,17 @@ opener.addheaders = [("User-Agent", USER_AGENT), ("Accept", "text/html")]
 
 
 def minutes():
+    if GIVE_UP["yes"]:  # server silent for a long time: end this run early (saves GitHub minutes)
+        return float("inf")
     return (time.time() - START) / 60
+
+
+# 11.11.2026: after a few minutes the server stopped answering for 5 hours. Ask slowly (one request
+# every 3 seconds) and stop the run when nothing has worked for 20 minutes; the next run continues.
+DELAY_S = 3
+SILENT_STOP_MIN = 20
+GIVE_UP = {"yes": False}
+LAST_OK = {"t": time.time()}
 
 
 FAILS = {"row": 0}  # failures in a row: the server is often down for a while (10.11.2026: most requests timed out)
@@ -65,16 +75,22 @@ def fetch(path, tries=2):
     url = path if path.startswith("http") else BASE + path.lstrip("/").replace("civilsociety/", "", 1)
     url = urllib.parse.quote(htmllib.unescape(url), safe=":/?&=%$+,;@")
     last = None
+    if GIVE_UP["yes"] or (time.time() - LAST_OK["t"]) / 60 > SILENT_STOP_MIN:
+        if not GIVE_UP["yes"]:
+            print(f"server silent for {SILENT_STOP_MIN} minutes: stop this run, continue next run", flush=True)
+        GIVE_UP["yes"] = True
+        raise RuntimeError("server silent: run stopped")
     if FAILS["row"] >= 10:  # many failures in a row: wait for the server instead of burning the time budget
-        print(f"server not answering ({FAILS['row']} failures in a row): pause 10 minutes", flush=True)
-        time.sleep(600)
+        print(f"server not answering ({FAILS['row']} failures in a row): pause 5 minutes", flush=True)
+        time.sleep(300)
         FAILS["row"] = 5
     for attempt in range(tries):
         try:
-            time.sleep(0.4)
+            time.sleep(DELAY_S)
             with opener.open(url, timeout=40) as r:
                 body = r.read().decode("utf-8", "replace")
             FAILS["row"] = 0
+            LAST_OK["t"] = time.time()
             return body
         except Exception as e:
             last = e

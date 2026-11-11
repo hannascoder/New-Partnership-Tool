@@ -1888,6 +1888,7 @@
 | ngo-ecosoc-695568 | ISFMI Pty Ltd | - | no country of the 195 in the sources |
 | ngo-ecosoc-691153 | ISIC Association (International Student Identity Card Association) | - | no country of the 195 in the sources |
 | ngo-ecosoc-649116 | ISKCON Communications International | - | no country of the 195 in the sources |
+| ngo-ecosoc-6813 | IT for Change | - | no country of the 195 in the sources |
 | ngo-ecosoc-653501 | Idara-i-Talim-o-Aaghai (Centre for Education and Consciousness) Public Trust | - | no country of the 195 in the sources |
 | ngo-ecosoc-649365 | Ideosync Media Combine | - | no country of the 195 in the sources |
 | ngo-ecosoc-646331 | Idheas, Litigio Estratégico en Derechos Humanos, Asociación Civil | - | no country of the 195 in the sources |
@@ -2184,7 +2185,777 @@
 | ngo-ecosoc-653871 | Israel Trauma Coalition for Response and Preparedness (R.A.) | - | no country of the 195 in the sources |
 | ngo-ecosoc-640952 | Istituto Diplomatico Internazionale | - | no country of the 195 in the sources |
 | ngo-ecosoc-641215 | Isät lasten asialla ry | - | no country of the 195 in the sources |
+| ngo-ecosoc-1630 | Italian Association for Women in Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-874 | Italian Centre of Solidarity | - | no country of the 195 in the sources |
+| ngo-ecosoc-663464 | Italian Climate Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-682036 | Ivy League Consult Limited | - | no country of the 195 in the sources |
+| ngo-ecosoc-670011 | J'ai Rêvé Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-618221 | J.P. Foundation Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-617386 | JACE (Japan Asia Cultural Exchanges) | - | no country of the 195 in the sources |
+| ngo-ecosoc-652188 | JFMO Servicios en Intermediación Pública A en P | - | no country of the 195 in the sources |
+| ngo-ecosoc-682923 | JKCS Edu India Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1632 | JMJ Children's Fund of Canada | - | no country of the 195 in the sources |
+| ngo-ecosoc-678417 | Jaaniv Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-671708 | Jacobs-Abbey Global Institute for Leadership Studies Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-670408 | Jagriti Child and Youth Concern Nepal | - | no country of the 195 in the sources |
+| ngo-ecosoc-2092 | Jaime Guzman Errazuriz Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-691421 | Jamesayobamidele Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-677072 | Jami al Hakeem Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-680839 | Jan Lok Kalyan Parishad | - | no country of the 195 in the sources |
+| ngo-ecosoc-618005 | Janaseva Foundation, Pune | - | no country of the 195 in the sources |
+| ngo-ecosoc-643003 | Janmitra Nyas | - | no country of the 195 in the sources |
+| ngo-ecosoc-614328 | Japan Center for a Sustainable Environment and Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-677176 | Japan Civil Society Network on SDGs | - | no country of the 195 in the sources |
+| ngo-ecosoc-641920 | Japan Federation of Democratic Medical Institutions (MIN-IREN) | - | no country of the 195 in the sources |
+| ngo-ecosoc-635842 | Japan NGO Center for International Cooperation | - | no country of the 195 in the sources |
+| ngo-ecosoc-636723 | Japan National Assembly of Disabled Peoples' International | - | no country of the 195 in the sources |
+| ngo-ecosoc-3063 | Japan National Committee for UN Women | - | no country of the 195 in the sources |
+| ngo-ecosoc-616803 | Japanese Association for the Right to Freedom of Speech | - | no country of the 195 in the sources |
+| ngo-ecosoc-1631 | Japanese Association of International Women's Rights (JAIWR) | - | no country of the 195 in the sources |
+| ngo-ecosoc-674574 | Japanese Liaison Council of Second-Generation Atomic Bomb Survivors | - | no country of the 195 in the sources |
+| ngo-ecosoc-689583 | Jeevan Rekha Parishad | - | no country of the 195 in the sources |
+| ngo-ecosoc-664664 | Jeju Olle Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-650817 | Jeunes Verts - Togo | - | no country of the 195 in the sources |
+| ngo-ecosoc-23041 | Jeunes Volontaires pour l'Environnement | - | no country of the 195 in the sources |
+| ngo-ecosoc-2446 | Jeunesse Horizon | - | no country of the 195 in the sources |
+| ngo-ecosoc-686216 | Jeunesse-Enfance-Migration-Développement (JMED) | - | no country of the 195 in the sources |
+| ngo-ecosoc-615557 | Jewish Voice Ministries International | - | no country of the 195 in the sources |
+| ngo-ecosoc-692499 | Jnana Prabodhini Foundation Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-48585 | John D. and Catherine T. MacArthur Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-681483 | John Retreat Center Cameroon | - | no country of the 195 in the sources |
+| ngo-ecosoc-3046 | Join Together Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-682507 | Jordan Youth Innovation Forum | - | no country of the 195 in the sources |
+| ngo-ecosoc-2225 | Jose Marti Cultural Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-672268 | Joseph Adedayo Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-605023 | Jossour Forum des Femmes Marocaines | - | no country of the 195 in the sources |
+| ngo-ecosoc-672807 | Judicial Administrative Drug Rehabilitation Association of China | - | no country of the 195 in the sources |
+| ngo-ecosoc-692394 | Jumeaux Republicains du Togo | - | no country of the 195 in the sources |
+| ngo-ecosoc-667095 | Junior Medical Academy | - | no country of the 195 in the sources |
+| ngo-ecosoc-649198 | Jus Cogens | - | no country of the 195 in the sources |
+| ngo-ecosoc-684385 | Just Clean It Limited | - | no country of the 195 in the sources |
+| ngo-ecosoc-663489 | Just Planet | - | no country of the 195 in the sources |
+| ngo-ecosoc-667141 | Jyothirgamya Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-694991 | KACB Worldwork Alliance Canada-KAWAC | - | no country of the 195 in the sources |
+| ngo-ecosoc-614618 | KAFA (enough) Violence & Exploitation | - | no country of the 195 in the sources |
+| ngo-ecosoc-607132 | KARP | - | no country of the 195 in the sources |
+| ngo-ecosoc-694627 | KRF KinderRechteForum gemeinnützige GmbH | - | no country of the 195 in the sources |
+| ngo-ecosoc-681507 | KTDA Foundation Limited | - | no country of the 195 in the sources |
+| ngo-ecosoc-692322 | Ka'uikiokapo | - | no country of the 195 in the sources |
+| ngo-ecosoc-687325 | Kaani Assistance | - | no country of the 195 in the sources |
+| ngo-ecosoc-695914 | Kadana Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-688036 | Kaduna Youths Empowerment Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-664831 | Kadın Sağlıkçılar Eğitim ve Dayanışma Vakfı | - | no country of the 195 in the sources |
+| ngo-ecosoc-646470 | Kadın ve Demokrasi Derneği | - | no country of the 195 in the sources |
+| ngo-ecosoc-682392 | Kahrizak Charity Institute for the Disabled & Elderly | - | no country of the 195 in the sources |
+| ngo-ecosoc-651175 | Kailash Satyarthi Children's Foundation of America, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-656884 | Kaleidoscope Human Rights Foundation Ltd. | - | no country of the 195 in the sources |
+| ngo-ecosoc-663512 | Kallipatira | - | no country of the 195 in the sources |
+| ngo-ecosoc-629893 | Kalyani | - | no country of the 195 in the sources |
+| ngo-ecosoc-656580 | Kamer-Kadın Merkezi Eğitim Üretim Danışma, ve Dayanışma (KAMER) Vakfı | - | no country of the 195 in the sources |
+| ngo-ecosoc-4145 | Karamah: Muslim Women Lawyers for Human Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-638892 | Karlen Communications | - | no country of the 195 in the sources |
+| ngo-ecosoc-695434 | Karman Project | - | no country of the 195 in the sources |
+| ngo-ecosoc-631920 | Karna-Subarna Welfare Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-683311 | Kartyé lib Mémoire & Patrimoine Océan Indien | - | no country of the 195 in the sources |
+| ngo-ecosoc-642048 | Kaurareg Aboriginal Land Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-634062 | Kaushalya Gramodyog Sansthan | - | no country of the 195 in the sources |
+| ngo-ecosoc-640781 | Kawish Resource Center | - | no country of the 195 in the sources |
+| ngo-ecosoc-662177 | Kazit Children Development Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-623301 | Kebibetkache Women Development and Resource Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-658423 | Kedner Stiven Foundation, Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-671223 | Keen and Care Initiative Ltd/Gte | - | no country of the 195 in the sources |
+| ngo-ecosoc-694383 | Kenya Education Fund | - | no country of the 195 in the sources |
+| ngo-ecosoc-612680 | Kevoy Community Development Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-631422 | Keystone Human Services International | - | no country of the 195 in the sources |
+| ngo-ecosoc-639296 | Khmer National Liberation Front | - | no country of the 195 in the sources |
+| ngo-ecosoc-674004 | KidSpirit Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-659857 | Kids' Educational Engagement Project - KEEP | - | no country of the 195 in the sources |
+| ngo-ecosoc-609326 | Kikandwa Rural Communities Development Organization (KIRUCODO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-695441 | Kind Hope Organisation | - | no country of the 195 in the sources |
+| ngo-ecosoc-625627 | KinderEnergy Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-2448 | Kindernothilfe, Help for Children in Need | - | no country of the 195 in the sources |
+| ngo-ecosoc-666188 | King Khalid Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-675281 | King Saud Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-2226 | Kitakyushu Forum on Asian Women (KFAW) | - | no country of the 195 in the sources |
+| ngo-ecosoc-634264 | Kiyana Karaj Group | - | no country of the 195 in the sources |
+| ngo-ecosoc-648208 | Klumpfußprojekt Mali – ein Verein zur Klumpfußbekämpfung in Mali, Westafrika | - | no country of the 195 in the sources |
+| ngo-ecosoc-671743 | Knights of Iraq Charitable Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-623688 | Knowledge Mill International Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-642039 | Knowledge for Development Corp. | - | no country of the 195 in the sources |
+| ngo-ecosoc-662671 | Knowledge for Development Without Borders (KFDWB) | - | no country of the 195 in the sources |
+| ngo-ecosoc-673122 | Knowmad Institut gemeinnützige UG (haftungsbeschränkt) | - | no country of the 195 in the sources |
+| ngo-ecosoc-680199 | Kolkata Society for Cultural Heritage | - | no country of the 195 in the sources |
+| ngo-ecosoc-1633 | Kongres Wanita Indonesia | - | no country of the 195 in the sources |
+| ngo-ecosoc-615834 | Korea Center for United Nations Human Rights Policy | - | no country of the 195 in the sources |
+| ngo-ecosoc-676150 | Korea Council of Children's Organizations | - | no country of the 195 in the sources |
+| ngo-ecosoc-632601 | Korea Differently Abled Federation | - | no country of the 195 in the sources |
+| ngo-ecosoc-656497 | Korea Disaster Relief | - | no country of the 195 in the sources |
+| ngo-ecosoc-630142 | Korea Food for the Hungry International | - | no country of the 195 in the sources |
+| ngo-ecosoc-2228 | Korea Freedom Federation | - | no country of the 195 in the sources |
+| ngo-ecosoc-624742 | Korea Green Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-2229 | Korea International Volunteer Organization (KVO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-641041 | Korea LOHAS Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-678356 | Korea Leaders Forum : Caring and Serving People | - | no country of the 195 in the sources |
+| ngo-ecosoc-2036 | Korea Women's Associations United (KWAU) | - | no country of the 195 in the sources |
+| ngo-ecosoc-607153 | Korea Women's Hot-Line | - | no country of the 195 in the sources |
+| ngo-ecosoc-607981 | Korean Bar Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-2639 | Korean Council for Local Agenda 21 | - | no country of the 195 in the sources |
+| ngo-ecosoc-680186 | Korean Disability Forum | - | no country of the 195 in the sources |
+| ngo-ecosoc-1807 | Korean Institute for Women and Politics | - | no country of the 195 in the sources |
+| ngo-ecosoc-1635 | Korean National Council of Women | - | no country of the 195 in the sources |
+| ngo-ecosoc-6810 | Kosmos Associates, Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-649720 | Krida Vikas Sanstha, Nagpur | - | no country of the 195 in the sources |
+| ngo-ecosoc-697452 | Kristne Friskolers Forbund | - | no country of the 195 in the sources |
+| ngo-ecosoc-3515 | Krityanand UNESCO Club Jamshedpur | - | no country of the 195 in the sources |
+| ngo-ecosoc-668176 | Kuentai Non-Profit Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-666135 | Kuentai-USA | - | no country of the 195 in the sources |
+| ngo-ecosoc-690254 | KurNiv Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-613307 | Kuwait Association for The Basic Evaluators for Human Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-650623 | Kuwaiti Society for Autism | - | no country of the 195 in the sources |
+| ngo-ecosoc-5766 | L'Arche internationale | - | no country of the 195 in the sources |
+| ngo-ecosoc-691478 | LABRATS (Legacy of the Atomic Bomb. Recognition for Atomic Test Survivors) CIC | - | no country of the 195 in the sources |
+| ngo-ecosoc-602896 | LDC Watch | - | no country of the 195 in the sources |
+| ngo-ecosoc-616560 | LG Electronics Union | - | no country of the 195 in the sources |
+| ngo-ecosoc-2938 | LGBT Denmark - The National Organization for Gay Men, Lesbians, Bisexuals and Transgendered People | - | no country of the 195 in the sources |
+| ngo-ecosoc-603548 | LICHT FÜR DIE WELT - Christoffel Entwicklungszusammenarbeit | - | no country of the 195 in the sources |
+| ngo-ecosoc-695221 | La Maison Du Futur | - | no country of the 195 in the sources |
+| ngo-ecosoc-682477 | La Proteccion de la Infancia, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-693319 | La Voix des Affamés de la Republique Democratique du Congo | - | no country of the 195 in the sources |
+| ngo-ecosoc-687974 | La fondation Paul Gérin-Lajoie pour la coopération internationale | - | no country of the 195 in the sources |
+| ngo-ecosoc-38943 | Labour, Health and Human Rights Development Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-674448 | Ladli Foundation Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-689997 | Lady Helen Child Health Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-644556 | Landsrådet for Norges barne- og ungdomsorganisasjoner | - | no country of the 195 in the sources |
+| ngo-ecosoc-670518 | Lanka Fundamental Rights Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-668331 | Lantuun Dohio | - | no country of the 195 in the sources |
+| ngo-ecosoc-685192 | Larsa Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-700416 | Latinas On the Verge of Excellence - LOVE | - | no country of the 195 in the sources |
+| ngo-ecosoc-655455 | LatinoJustice PRLDEF | - | no country of the 195 in the sources |
+| ngo-ecosoc-683145 | Law & Justice Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-5565 | Law Enforcement Action Partnership, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-668958 | Law Explorer Development & Assistance Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-2553 | Lawyers Without Borders | - | no country of the 195 in the sources |
+| ngo-ecosoc-623316 | Laya | - | no country of the 195 in the sources |
+| ngo-ecosoc-621735 | Le Collectif des Femmes Africaines du Hainaut | - | no country of the 195 in the sources |
+| ngo-ecosoc-649540 | Le Monde des Possibles | - | no country of the 195 in the sources |
+| ngo-ecosoc-669062 | Le conseil promotionnel pour l'action des jeunes en Afrique | - | no country of the 195 in the sources |
+| ngo-ecosoc-654076 | Le conseil universel des droits de l'homme | - | no country of the 195 in the sources |
+| ngo-ecosoc-676581 | Leadership Development Association Albania | - | no country of the 195 in the sources |
+| ngo-ecosoc-633315 | Leadership Initiative for Transformation & Empowerment | - | no country of the 195 in the sources |
+| ngo-ecosoc-2884 | Leadership Watch | - | no country of the 195 in the sources |
+| ngo-ecosoc-673618 | League of Arab People Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-649100 | League of European Research Universities (LERU) | - | no country of the 195 in the sources |
+| ngo-ecosoc-692425 | League of Queens International Empowerment | - | no country of the 195 in the sources |
+| ngo-ecosoc-668064 | League of Women Voters of Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-1449 | League of Women Voters of the United States | - | no country of the 195 in the sources |
+| ngo-ecosoc-642153 | Leah Charity Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1450 | Learning for a Sustainable Future | - | no country of the 195 in the sources |
+| ngo-ecosoc-632283 | Lebanese American Renaissance Partnership, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-691005 | Ledunfly Philanthropy | - | no country of the 195 in the sources |
+| ngo-ecosoc-646779 | Legal Action Worldwide | - | no country of the 195 in the sources |
+| ngo-ecosoc-672629 | Legal Aid & Human Development Foundation-LAHDF | - | no country of the 195 in the sources |
+| ngo-ecosoc-5426 | Legal Aid and Consultancy Centre (LACC) | - | no country of the 195 in the sources |
+| ngo-ecosoc-635182 | Legal Resources Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-685858 | Legal Rights Council for Awareness of Law | - | no country of the 195 in the sources |
+| ngo-ecosoc-699980 | Legal and Justice Aid International | - | no country of the 195 in the sources |
+| ngo-ecosoc-700404 | Legale Genchi Diplomatic ETS | - | no country of the 195 in the sources |
+| ngo-ecosoc-700261 | Legend Golden Care Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-691448 | Les Amis des Droits de l’Homme | - | no country of the 195 in the sources |
+| ngo-ecosoc-636439 | Les Amis du Projet Imagine | - | no country of the 195 in the sources |
+| ngo-ecosoc-5512 | Les Enfants de Frankie | - | no country of the 195 in the sources |
+| ngo-ecosoc-685622 | Les amis de l'arbre | - | no country of the 195 in the sources |
+| ngo-ecosoc-659415 | Les femmes, la force du changement | - | no country of the 195 in the sources |
+| ngo-ecosoc-674605 | Les orchidées rouges | - | no country of the 195 in the sources |
+| ngo-ecosoc-622353 | Les rencontres du Mont-Blanc - Forum international de l'économie sociale / The Mont-Blanc Meetings - International Forum of the social economy | - | no country of the 195 in the sources |
+| ngo-ecosoc-2937 | Lesbian and Gay Federation in Germany | - | no country of the 195 in the sources |
+| ngo-ecosoc-606927 | Let's Breakthrough, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-694438 | Liberia Entrepreneur Educational Foundation (LEEF) | - | no country of the 195 in the sources |
+| ngo-ecosoc-613916 | Liberian United Youth for Community Safety and Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-7400 | Liberians United to Expose Hidden Weapons | - | no country of the 195 in the sources |
+| ngo-ecosoc-681386 | Liberty and Rights Advocacy Organisation | - | no country of the 195 in the sources |
+| ngo-ecosoc-674545 | Life Crown Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1809 | Life Ethics Educational Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-669220 | Life Project 4 Youth (LP4Y) | - | no country of the 195 in the sources |
+| ngo-ecosoc-1800 | Life for Relief and Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-682271 | Life of the Children | - | no country of the 195 in the sources |
+| ngo-ecosoc-660929 | Lifelong Learning Platform | - | no country of the 195 in the sources |
+| ngo-ecosoc-652411 | Lift Saxum Ltd/Gte | - | no country of the 195 in the sources |
+| ngo-ecosoc-615871 | Lift up Care Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-653328 | Lightup Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-2303 | Ligue internationale contre le racisme et l'antisémitisme | - | no country of the 195 in the sources |
+| ngo-ecosoc-661377 | Ligue pour la solidarité congolaise | - | no country of the 195 in the sources |
+| ngo-ecosoc-699178 | Linens N Love | - | no country of the 195 in the sources |
+| ngo-ecosoc-2450 | Links Incorporated, The | - | no country of the 195 in the sources |
+| ngo-ecosoc-689874 | Living Arrangements for the Developmentally Disabled Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-608646 | Living Bread International Church Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-656681 | Living Proof Initiative for Hope | - | no country of the 195 in the sources |
+| ngo-ecosoc-687300 | Lokole International Asbl | - | no country of the 195 in the sources |
+| ngo-ecosoc-649094 | Lotus Initiative for the Blind | - | no country of the 195 in the sources |
+| ngo-ecosoc-635704 | Lotus World | - | no country of the 195 in the sources |
+| ngo-ecosoc-658889 | Love Alliance Foundation for Orphans, Disabled and Abandoned Persons in Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-686233 | Love Justice International | - | no country of the 195 in the sources |
+| ngo-ecosoc-689280 | Love March Movement | - | no country of the 195 in the sources |
+| ngo-ecosoc-641762 | Luxembourg Income Study | - | no country of the 195 in the sources |
+| ngo-ecosoc-3052 | L´auravetli´an Information and Education Network of Indigenous People (LIENIP) | - | no country of the 195 in the sources |
+| ngo-ecosoc-660588 | Líderes Promoviendo la Cultura de la Legalidad, AC | - | no country of the 195 in the sources |
+| ngo-ecosoc-690037 | M-Kids Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-633441 | MARUAH (Working Group for an ASEAN Human Rights Mechanism, Singapore) | - | no country of the 195 in the sources |
+| ngo-ecosoc-659573 | MESCH (Medical and Educational Sustainable Community Help) Incorporated | - | no country of the 195 in the sources |
+| ngo-ecosoc-2015 | MINBYUN - Lawyers for a Democratic Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-3060 | MIR (Mission International Rescue) Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-604052 | MIROSLAVA International Alliance | - | no country of the 195 in the sources |
+| ngo-ecosoc-645276 | MOHAN Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-2037 | MSI Reproductive Choices Ltd | - | no country of the 195 in the sources |
+| ngo-ecosoc-695048 | MYVIE Foundation For Youth Development And Advancement | - | no country of the 195 in the sources |
+| ngo-ecosoc-661087 | Maalkop Trading and Projects | - | no country of the 195 in the sources |
+| ngo-ecosoc-7574 | Maasai Aid Association (M.A.A.) | - | no country of the 195 in the sources |
+| ngo-ecosoc-682157 | Maasai Indigeneous Projects | - | no country of the 195 in the sources |
+| ngo-ecosoc-684278 | Mabade'a Society for Human Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-682014 | Mac-Jim Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-674931 | Macao Youth Federation | - | no country of the 195 in the sources |
+| ngo-ecosoc-667412 | Machshava Tova | - | no country of the 195 in the sources |
+| ngo-ecosoc-681268 | Madinaty | - | no country of the 195 in the sources |
+| ngo-ecosoc-654098 | Magdalene Iyamu Cancer Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-660134 | Magyar Női Unió Egyesület | - | no country of the 195 in the sources |
+| ngo-ecosoc-1331 | Mahila Dakshata Samiti | - | no country of the 195 in the sources |
+| ngo-ecosoc-617716 | Maiti Nepal | - | no country of the 195 in the sources |
+| ngo-ecosoc-656084 | Majlis Kanser Nasional | - | no country of the 195 in the sources |
+| ngo-ecosoc-646308 | Makhzoumi Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-637012 | Malankara Social Service Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-3057 | Malaysian Medical Relief Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-644378 | Malteser International e.V. | - | no country of the 195 in the sources |
+| ngo-ecosoc-684432 | Mamanet Mothers’ Cachibol League in Kfar Saba – for the Community (registered association) | - | no country of the 195 in the sources |
+| ngo-ecosoc-641501 | Man Up Campaign US, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-3249 | Management Sciences for Health, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-690530 | Management and Sustainable Development Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-634754 | Managing Committee of Kalinga Institute of Social Sciences | - | no country of the 195 in the sources |
+| ngo-ecosoc-639148 | Manav Pragati Sansthan, Rajgarh | - | no country of the 195 in the sources |
+| ngo-ecosoc-608579 | Manavata | - | no country of the 195 in the sources |
+| ngo-ecosoc-640177 | Manhattan Multicultural Counseling | - | no country of the 195 in the sources |
+| ngo-ecosoc-621307 | Mankind Welfare Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-696201 | Manluku Youth Development Initiatives Tanzania (Mydia-tz) | - | no country of the 195 in the sources |
+| ngo-ecosoc-686199 | Mano River Sustainable Development Association PTY LTD | - | no country of the 195 in the sources |
+| ngo-ecosoc-632869 | Manusher Jonno Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-638146 | Maori Women's Welfare League Incorporated | - | no country of the 195 in the sources |
+| ngo-ecosoc-622809 | Mar Adentro de México A.C. | - | no country of the 195 in the sources |
+| ngo-ecosoc-1638 | Marangopoulos Foundation for Human Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-642612 | March of Dimes Canada | - | no country of the 195 in the sources |
+| ngo-ecosoc-2526 | Marianna V. Vardinoyannis Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-684545 | Markaaz Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-662348 | Markaz Toseeh Tehran | - | no country of the 195 in the sources |
+| ngo-ecosoc-2143 | Marmara Group Strategic and Social Research Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-639701 | Martial Arts Academy | - | no country of the 195 in the sources |
+| ngo-ecosoc-634857 | Martin und Gerda Essl Sozialpreis gemeinnützige Privatstiftung | - | no country of the 195 in the sources |
+| ngo-ecosoc-637361 | Martina Centre for Sustainable Dev | - | no country of the 195 in the sources |
+| ngo-ecosoc-689312 | Martins Awofadeju Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-697740 | Mary Dinah Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1639 | Maryknoll Fathers and Brothers | - | no country of the 195 in the sources |
+| ngo-ecosoc-1640 | Maryknoll Sisters of St. Dominic, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-2766 | Mata Amritanandamayi Math | - | no country of the 195 in the sources |
+| ngo-ecosoc-682428 | Mathare Environmental Conservation Youth Group | - | no country of the 195 in the sources |
+| ngo-ecosoc-681517 | Matilda Carepath Health Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-639920 | Mayama, Asociación Civil | - | no country of the 195 in the sources |
+| ngo-ecosoc-1030 | Mayors for Peace | - | no country of the 195 in the sources |
+| ngo-ecosoc-690945 | Mazowiecka Uczelnia Medyczna w Warszawie | - | no country of the 195 in the sources |
+| ngo-ecosoc-667364 | Mbarara Development Agency | - | no country of the 195 in the sources |
+| ngo-ecosoc-681777 | MedGlobal, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-680420 | MedWish International | - | no country of the 195 in the sources |
+| ngo-ecosoc-695579 | Media Matters for Women | - | no country of the 195 in the sources |
+| ngo-ecosoc-602666 | Mediators Beyond Borders | - | no country of the 195 in the sources |
+| ngo-ecosoc-689302 | Medical Surgical Aid | - | no country of the 195 in the sources |
+| ngo-ecosoc-607435 | Medical Women's Association of Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-2772 | Mediterranean Information Office for Environment, Culture and Sustainable Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-672854 | Mediterranean Youth Foundation for Development "MYF | - | no country of the 195 in the sources |
+| ngo-ecosoc-675152 | Mednarodna zveza za zdravje mladih - International Youth Health Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-641700 | Medrar | - | no country of the 195 in the sources |
+| ngo-ecosoc-668885 | Meg Wah (My Earth) | - | no country of the 195 in the sources |
+| ngo-ecosoc-685001 | Meglio Legale – APS | - | no country of the 195 in the sources |
+| ngo-ecosoc-649318 | Memory Trees Corporation | - | no country of the 195 in the sources |
+| ngo-ecosoc-680389 | Men End FGM Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1642 | Mennonite Central Committee | - | no country of the 195 in the sources |
+| ngo-ecosoc-2890 | Mental Disability Rights International | - | no country of the 195 in the sources |
+| ngo-ecosoc-675973 | Mentoring Assistance for Youths and Entrepreneurs Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-681759 | Merciful Souls (Al-Qolub Al-Rahima)(R/A) | - | no country of the 195 in the sources |
+| ngo-ecosoc-695136 | Mercy For Animals, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-1171 | Mercy-USA for Aid and Development, Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-681293 | MerryYear International | - | no country of the 195 in the sources |
+| ngo-ecosoc-619476 | Message Welfare Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-6905 | Metro Toronto Chinese & Southeast Asian Legal Clinic | - | no country of the 195 in the sources |
+| ngo-ecosoc-631681 | Metta Center for Nonviolence | - | no country of the 195 in the sources |
+| ngo-ecosoc-2038 | Mexican Foundation for Family Planning (MEXFAM) | - | no country of the 195 in the sources |
+| ngo-ecosoc-2039 | MiRA Resource Center for Black Immigrant and Refugee Women | - | no country of the 195 in the sources |
+| ngo-ecosoc-681413 | Michael and Francisca Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-686179 | Michibushinbito | - | no country of the 195 in the sources |
+| ngo-ecosoc-681128 | Migrant Clinicians Network Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-665756 | Migrant Offshore Aid Station Foundation (MOAS) | - | no country of the 195 in the sources |
+| ngo-ecosoc-660396 | Milagros Day Worldwide, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-685184 | Millennium Child Support Group | - | no country of the 195 in the sources |
+| ngo-ecosoc-654300 | Millennium Network for Community Development Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-674926 | Minority Community Aid | - | no country of the 195 in the sources |
+| ngo-ecosoc-691635 | Mira USA Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-691280 | Mirella and Lino Saputo Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-692967 | Misbah Al-Hussein Foundation for Relief and Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-663868 | Miss Caricom Int’l. Foundation CIP, INC | - | no country of the 195 in the sources |
+| ngo-ecosoc-669906 | Mission Kids | - | no country of the 195 in the sources |
+| ngo-ecosoc-685306 | Mitraniketan | - | no country of the 195 in the sources |
+| ngo-ecosoc-605301 | Mobility International USA | - | no country of the 195 in the sources |
+| ngo-ecosoc-609213 | Modern Advocacy, Humanitarian, Social and Rehabilitation Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-692667 | Modern Thinkers Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-640325 | Mongolian Family Welfare Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-677610 | Mongolian Remote Sensing Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-619642 | Montage Initiative, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-649624 | Montréal International | - | no country of the 195 in the sources |
+| ngo-ecosoc-694873 | Moomken Organization for Awareness and Media | - | no country of the 195 in the sources |
+| ngo-ecosoc-617645 | Moorish Holy Temple of Science/Moorish Science Temple | - | no country of the 195 in the sources |
+| ngo-ecosoc-651591 | Mor Çatı Kadın Sığınağı Vakfı | - | no country of the 195 in the sources |
+| ngo-ecosoc-613816 | Moremi Initiative for Women's Leadership in Africa | - | no country of the 195 in the sources |
+| ngo-ecosoc-688317 | Mother Africa International | - | no country of the 195 in the sources |
+| ngo-ecosoc-5065 | Mother Child Education Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-659118 | Mother of Hope Cameroon Common Initiative Group | - | no country of the 195 in the sources |
+| ngo-ecosoc-1999 | Mother's Union | - | no country of the 195 in the sources |
+| ngo-ecosoc-624108 | Mothers Legacy Project | - | no country of the 195 in the sources |
+| ngo-ecosoc-661828 | Mothers Pride and Development Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-675211 | Motus Health Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-1326 | Mouvement International d'Apostolate des Milieux Sociaux Independants | - | no country of the 195 in the sources |
+| ngo-ecosoc-634611 | Mouvement alternatives citoyennes | - | no country of the 195 in the sources |
+| ngo-ecosoc-638632 | Mouvement des Jeunes pour le Réveil et le Développement | - | no country of the 195 in the sources |
+| ngo-ecosoc-644074 | Mouvement d’organisation des ruraux pour le développement (M.O.R.D) | - | no country of the 195 in the sources |
+| ngo-ecosoc-660132 | Mouvement panafricain Jeunes pour la reconstruction, la reforme et la revolution culturelle au Tchad et en Afrique (JRRRC) | - | no country of the 195 in the sources |
+| ngo-ecosoc-761 | Movement for a Better World | - | no country of the 195 in the sources |
+| ngo-ecosoc-6391 | Movement for the Protection of African Child (MOPOTAC) | - | no country of the 195 in the sources |
+| ngo-ecosoc-1645 | Movimento Italiano Casalinghe | - | no country of the 195 in the sources |
+| ngo-ecosoc-690132 | Mtree Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-607686 | Muhammadiyah Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-2893 | Mujer para la Mujer A.C. | - | no country of the 195 in the sources |
+| ngo-ecosoc-695481 | Mujeres Impulsando Sueños, Asociación Civil | - | no country of the 195 in the sources |
+| ngo-ecosoc-1935 | Mukono Multi-purpose Youth Organisation | - | no country of the 195 in the sources |
+| ngo-ecosoc-674270 | Mukti | - | no country of the 195 in the sources |
+| ngo-ecosoc-631716 | Mumbai Smiles Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-615519 | Murna Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-664691 | Muslim American Leadership Alliance | - | no country of the 195 in the sources |
+| ngo-ecosoc-695412 | Muslim Peace Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-620370 | Muzaffarabad Poverty Alleviation Programme (MPAP) | - | no country of the 195 in the sources |
+| ngo-ecosoc-640374 | My Chosen Vessels inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-663803 | My Heart's Appeal, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-638163 | México Unido contra la Delincuencia, A.C. | - | no country of the 195 in the sources |
+| ngo-ecosoc-7246 | NABU - Knowledge Transfer Beyond Boundaries | - | no country of the 195 in the sources |
+| ngo-ecosoc-674849 | NAMA Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-686530 | NEU Global,Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-655693 | NGO Committee on Sustainable Development - NY Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-604768 | NGO Coordination post Beijing Switzerland | - | no country of the 195 in the sources |
+| ngo-ecosoc-613097 | NGO Sustainability, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-602091 | NGOs Computer Literacy Shelter Welfare, Rawalpindi Cantt. | - | no country of the 195 in the sources |
+| ngo-ecosoc-610000 | NIGH World | - | no country of the 195 in the sources |
+| ngo-ecosoc-691267 | NIPE FAGIO | - | no country of the 195 in the sources |
+| ngo-ecosoc-681746 | NTC-Hands off Cain | - | no country of the 195 in the sources |
+| ngo-ecosoc-663703 | Nacionalinė nevyriausybinių vystomojo bendradarbiavimo organizacijų platforma | - | no country of the 195 in the sources |
+| ngo-ecosoc-694648 | Nada'a Foundation for Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-674917 | Nadam Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-690232 | Nadační fond pro výzkum psychedelik | - | no country of the 195 in the sources |
+| ngo-ecosoc-650988 | Nagorik Uddyog | - | no country of the 195 in the sources |
+| ngo-ecosoc-662647 | Nagrik Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-682266 | Nahda Makers Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-637958 | Naija Worldwide Charities Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-679571 | Narconon Nigeria initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-1455 | Narcotics Anonymous World Services | - | no country of the 195 in the sources |
+| ngo-ecosoc-620245 | Nation Builders Organisation | - | no country of the 195 in the sources |
+| ngo-ecosoc-636513 | National Aboriginal Circle Against Family Violence | - | no country of the 195 in the sources |
+| ngo-ecosoc-674329 | National Agro Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-658571 | National Alliance for Rare Diseases Support - Malta | - | no country of the 195 in the sources |
+| ngo-ecosoc-2144 | National Assembly of Youth Organizations of the Republic of Azerbaijan (NaYORA) | - | no country of the 195 in the sources |
+| ngo-ecosoc-1646 | National Association for Resource Improvement | - | no country of the 195 in the sources |
+| ngo-ecosoc-1459 | National Association of Cuban Economists | - | no country of the 195 in the sources |
+| ngo-ecosoc-635258 | National Association of Drug Court Professionals | - | no country of the 195 in the sources |
+| ngo-ecosoc-7479 | National Association of Friendship Centres | - | no country of the 195 in the sources |
+| ngo-ecosoc-2709 | National Association of Housing and Redevelopment Officials | - | no country of the 195 in the sources |
+| ngo-ecosoc-699635 | National Association of Non-Governmental Non-Commercial Organizations of Uzbekistan | - | no country of the 195 in the sources |
+| ngo-ecosoc-669709 | National Association of Professional Social Workers in India | - | no country of the 195 in the sources |
+| ngo-ecosoc-629591 | National Association of Seadogs | - | no country of the 195 in the sources |
+| ngo-ecosoc-674933 | National Association of Women Entrepreneurs | - | no country of the 195 in the sources |
+| ngo-ecosoc-681424 | National Campaign for Sustainable Development Nepal | - | no country of the 195 in the sources |
+| ngo-ecosoc-694441 | National Center for Economics | - | no country of the 195 in the sources |
+| ngo-ecosoc-682817 | National Center on Sexual Exploitation, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-3062 | National Children´s and Youth Law Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-4827 | National Council for Science and the Environment | - | no country of the 195 in the sources |
+| ngo-ecosoc-694483 | National Council for the Child | - | no country of the 195 in the sources |
+| ngo-ecosoc-609974 | National Council of Catholic Women | - | no country of the 195 in the sources |
+| ngo-ecosoc-610576 | National Council of Child Rights Advocates, Nigeria: South West Zone | - | no country of the 195 in the sources |
+| ngo-ecosoc-663053 | National Council of Juvenile and Family Court Judges | - | no country of the 195 in the sources |
+| ngo-ecosoc-2000 | National Council of Women in Great Britain | - | no country of the 195 in the sources |
+| ngo-ecosoc-2646 | National Council of Women of Malta | - | no country of the 195 in the sources |
+| ngo-ecosoc-2761 | National Council on Family Relations | - | no country of the 195 in the sources |
+| ngo-ecosoc-672961 | National Ethnic Disability Alliance Incorporated | - | no country of the 195 in the sources |
+| ngo-ecosoc-684541 | National Federation of Business and Professional Women's Clubs of Japan | - | no country of the 195 in the sources |
+| ngo-ecosoc-652451 | National Forum for Human Rights [Yemen] | - | no country of the 195 in the sources |
+| ngo-ecosoc-663686 | National Foundation for development and Humanitarian Response | - | no country of the 195 in the sources |
+| ngo-ecosoc-688201 | National Indian Health Board | - | no country of the 195 in the sources |
+| ngo-ecosoc-7285 | National Native Title Council | - | no country of the 195 in the sources |
+| ngo-ecosoc-680807 | National Ocean Policy Coalition | - | no country of the 195 in the sources |
+| ngo-ecosoc-637927 | National Old Folks of Liberia, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-650413 | National Organization for Global Education Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-668587 | National Peace Corps Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-652811 | National Research Council Nepal, Kathmandu | - | no country of the 195 in the sources |
+| ngo-ecosoc-681462 | National Resource Center on Domestic Violence, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-1817 | National Right to Life Educational Trust Fund | - | no country of the 195 in the sources |
+| ngo-ecosoc-2898 | National Rural Support Programme | - | no country of the 195 in the sources |
+| ngo-ecosoc-665696 | National Rural Women's Coalition Ltd | - | no country of the 195 in the sources |
+| ngo-ecosoc-613214 | National Shooting Sports Foundation, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-683997 | National Solar Energy Federation of India | - | no country of the 195 in the sources |
+| ngo-ecosoc-1463 | National Tropical Botanical Garden | - | no country of the 195 in the sources |
+| ngo-ecosoc-3064 | National Union of the Association of Protection of Motherhood, Childhood and Families | - | no country of the 195 in the sources |
+| ngo-ecosoc-1819 | National Women's Council of Catalonia - Consell Nacional de Dones de Catalunya | - | no country of the 195 in the sources |
+| ngo-ecosoc-662876 | Native American Fatherhood & Families Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-674402 | Native American Journalists Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-619276 | Native Children's Survival | - | no country of the 195 in the sources |
+| ngo-ecosoc-2648 | Native Women's Association of Canada | - | no country of the 195 in the sources |
+| ngo-ecosoc-681767 | Native and Tribal Human Rights in Action | - | no country of the 195 in the sources |
+| ngo-ecosoc-687400 | Natural Disaster Research Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-662295 | Nature's Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-694397 | Naval Officers Wives Association of Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-688882 | Nde Zachariah's Descendants Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-700376 | Ndola Nutrition Organisation | - | no country of the 195 in the sources |
+| ngo-ecosoc-694132 | Neduchuks- MultiBusiness Concept | - | no country of the 195 in the sources |
+| ngo-ecosoc-601440 | Negev Coexistence Forum | - | no country of the 195 in the sources |
+| ngo-ecosoc-45749 | Nehru Foundation for Development - Centre for Environment Education Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-613406 | Neighbour Organization Nepal (NEO-Nepal) | - | no country of the 195 in the sources |
+| ngo-ecosoc-6853 | Neighbourhood Community Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-633099 | Neighbourhood Environment Watch Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-646158 | Nepperhan Community Center, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-658692 | Nerds Rule Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-649764 | Nesakkarangal Charitable Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-2020 | Netherlands Association of Women’s Interests, Women’s Work and Equal Citizenship | - | no country of the 195 in the sources |
+| ngo-ecosoc-2240 | Netherlands Centre for Indigenous Peoples (NCIV) | - | no country of the 195 in the sources |
+| ngo-ecosoc-2149 | Network "Earth Village | - | no country of the 195 in the sources |
+| ngo-ecosoc-602898 | Network for Women's Rights in Ghana | - | no country of the 195 in the sources |
+| ngo-ecosoc-675966 | Network of African Youths for Development (NAYD) | - | no country of the 195 in the sources |
+| ngo-ecosoc-3554 | Network of Non-Governmental Organisations of Trinidad and Tobago for the Advancement of Women, The | - | no country of the 195 in the sources |
+| ngo-ecosoc-602010 | New Era Educational and Charitable Support Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-647899 | New Generation in Action | - | no country of the 195 in the sources |
+| ngo-ecosoc-2309 | New Japan Women's Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-641680 | New Jersey Minority Educational Development NJ-MED | - | no country of the 195 in the sources |
+| ngo-ecosoc-670180 | New Nigeria Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-621291 | New Progressive Alliance | - | no country of the 195 in the sources |
+| ngo-ecosoc-2900 | New South Wales council for Civil Liberties | - | no country of the 195 in the sources |
+| ngo-ecosoc-2649 | New Zealand Family Planning Association, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-617651 | News Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-680786 | Ngece Rinjeu Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-614050 | Ngoma Club | - | no country of the 195 in the sources |
+| ngo-ecosoc-691758 | Nievre action droits de l'homme | - | no country of the 195 in the sources |
+| ngo-ecosoc-656528 | Niger Delta Budget Monitoring Group | - | no country of the 195 in the sources |
+| ngo-ecosoc-694026 | Niger Delta Peoples Movement Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-677294 | Niger Delta Womens Forum (Limited by Guarantee) | - | no country of the 195 in the sources |
+| ngo-ecosoc-610429 | Nigeria Network of Non-Governmental Organisations (NNNGO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-692277 | Nigeria Youth Climate Preservation Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-661740 | Nigerian Association of Commercial Commuters | - | no country of the 195 in the sources |
+| ngo-ecosoc-2650 | Nigerian Institute of Homeopathy, The | - | no country of the 195 in the sources |
+| ngo-ecosoc-603985 | Nigerian Network of Women Exporters of Services | - | no country of the 195 in the sources |
+| ngo-ecosoc-658062 | Nigerian Women Trust Fund LTD/GTE | - | no country of the 195 in the sources |
+| ngo-ecosoc-678340 | Nikan Mammut Charity Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1337 | Nippon International Cooperation for Community Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-672181 | Nitzan - National Center, Society for the Advancement of Children and Adults with Adjustment, Functioning and Learning Disabilities | - | no country of the 195 in the sources |
+| ngo-ecosoc-673391 | No Food Waste | - | no country of the 195 in the sources |
+| ngo-ecosoc-655694 | NoBox Transitions Foundation, Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-642227 | Noahs Arc Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-660294 | Nobel Laurate Mother Teresa Charitable Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-602547 | Noble Delta Women for Peace and Development International (NDWPD) | - | no country of the 195 in the sources |
+| ngo-ecosoc-653311 | Nobre Ordem para Excelencia Humana - NOHE | - | no country of the 195 in the sources |
+| ngo-ecosoc-2312 | Non-Aligned Students and Youth Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-2382 | Non-Governmental Ecological Vernadsky Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-669233 | Non-Governmental Organization Association of Mothers and Wives of Ukraine's Defenders | - | no country of the 195 in the sources |
+| ngo-ecosoc-610295 | Non-Governmental Organization Federation of Nepal | - | no country of the 195 in the sources |
+| ngo-ecosoc-649263 | Non-Profit Foundation "The Foundation for the Study of Democracy and Geopolitics | - | no country of the 195 in the sources |
+| ngo-ecosoc-686340 | Non-profit Fund Supporting Children with Autistic and Genetic Disorders "I am special | - | no country of the 195 in the sources |
+| ngo-ecosoc-655850 | Nonprofit Incorporated Association Africa Insight | - | no country of the 195 in the sources |
+| ngo-ecosoc-662032 | Nonprofit Partnership "Strategic Partnership with the Islamic World | - | no country of the 195 in the sources |
+| ngo-ecosoc-674517 | Nor Luyce Mentoring Center for Youth | - | no country of the 195 in the sources |
+| ngo-ecosoc-668629 | North America Photography Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-604858 | North Indian Educational Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-664969 | North-East Affected Area Development Society (NEADS) | - | no country of the 195 in the sources |
+| ngo-ecosoc-610860 | Northern CCB | - | no country of the 195 in the sources |
+| ngo-ecosoc-663542 | Northern Council for Global Cooperation | - | no country of the 195 in the sources |
+| ngo-ecosoc-3092 | Norwegian Forum for Environment and Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-2456 | Nour Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-604238 | Nouveaux droits de l'homme (NDH) | - | no country of the 195 in the sources |
+| ngo-ecosoc-667666 | NunatuKavut Community Council | - | no country of the 195 in the sources |
+| ngo-ecosoc-689304 | Nurturing Minds Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-642425 | Nusroto Al- Anashid Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-666023 | O.N.G Malachie | - | no country of the 195 in the sources |
+| ngo-ecosoc-618507 | O.N.G. ACHE Internacional | - | no country of the 195 in the sources |
+| ngo-ecosoc-652114 | O.N.G. Derechos Digitales | - | no country of the 195 in the sources |
+| ngo-ecosoc-692463 | O.S. Ocean Sea Foundation Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-619285 | OIPA - Organizzazione Internazionale Protezione Animali | - | no country of the 195 in the sources |
+| ngo-ecosoc-3068 | OISCA International, South India Chapter | - | no country of the 195 in the sources |
+| ngo-ecosoc-676877 | OM Vishwa Guru Deep Hindu Mandir Mahaprabhuji a Világmindenség Guruja Hindu Vallási Közösség és Szellemi Iskola | - | no country of the 195 in the sources |
+| ngo-ecosoc-683876 | ONG Cruz Verde Ambiental | - | no country of the 195 in the sources |
+| ngo-ecosoc-694130 | ONG Cœur en Éveil | - | no country of the 195 in the sources |
+| ngo-ecosoc-647194 | ONG Funsocial Crecer Colombia | - | no country of the 195 in the sources |
+| ngo-ecosoc-633304 | ONG Génération Femme du 3ème Millénaire (GFM3) | - | no country of the 195 in the sources |
+| ngo-ecosoc-679455 | ONG L'Ange Gardien | - | no country of the 195 in the sources |
+| ngo-ecosoc-7515 | ONG Playdoo - Cote d’Ivoire | - | no country of the 195 in the sources |
+| ngo-ecosoc-659716 | Observatoire National pour les Droits de l'Electeur | - | no country of the 195 in the sources |
+| ngo-ecosoc-699595 | Observatoire congolais de lutte contre l'apatridie (OCLA) | - | no country of the 195 in the sources |
+| ngo-ecosoc-695785 | Observatoire de la Jeunesse et de l'Enfant pour le Développement | - | no country of the 195 in the sources |
+| ngo-ecosoc-617324 | Observatorio Mexicano de la Crisis, Asociación Civil | - | no country of the 195 in the sources |
+| ngo-ecosoc-699043 | Observatório Internacional da Juventude | - | no country of the 195 in the sources |
+| ngo-ecosoc-642717 | Observatório Nacional de Segurança Viária e Veicular | - | no country of the 195 in the sources |
+| ngo-ecosoc-47774 | Occupational Knowledge International | - | no country of the 195 in the sources |
+| ngo-ecosoc-620416 | Ocean Conservancy, Inc (The) | - | no country of the 195 in the sources |
+| ngo-ecosoc-659242 | OceanElders Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-47775 | Oceana Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-660384 | Oceanic Global Foundation Corp | - | no country of the 195 in the sources |
+| ngo-ecosoc-665922 | Ofanim - non-profit association for the advancement of children and youths in Israel | - | no country of the 195 in the sources |
+| ngo-ecosoc-637567 | Office of The Overseer, Noiato Assembly of God, and His Successors | - | no country of the 195 in the sources |
+| ngo-ecosoc-637587 | Office of the Gatekeeper, Ethereal Sanctuary | - | no country of the 195 in the sources |
+| ngo-ecosoc-669107 | Offthehook Foundation For Rural Dwellers | - | no country of the 195 in the sources |
+| ngo-ecosoc-52598 | Ogiek Peoples' Development Program (OPDP) | - | no country of the 195 in the sources |
+| ngo-ecosoc-7089 | Okedongmu Children in Korea | - | no country of the 195 in the sources |
+| ngo-ecosoc-607063 | Okogun Odigie Safewomb International Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-691770 | Older Persons' Rights Project | - | no country of the 195 in the sources |
+| ngo-ecosoc-680538 | Omega Psi Phi Fraternity Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-695395 | Omid Keshvar Charity | - | no country of the 195 in the sources |
+| ngo-ecosoc-672242 | Omnyati | - | no country of the 195 in the sources |
+| ngo-ecosoc-700301 | One Africa Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-695078 | One Planet One Earth Foundation Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-671372 | One Voice Initiative For Women And Children Emancipation | - | no country of the 195 in the sources |
+| ngo-ecosoc-689693 | One World U Foundation (U: Unique United You) | - | no country of the 195 in the sources |
+| ngo-ecosoc-654674 | OneMama Incorporated | - | no country of the 195 in the sources |
+| ngo-ecosoc-663331 | OneNess Foundation for the Aged, Disabled and Children | - | no country of the 195 in the sources |
+| ngo-ecosoc-667458 | Onelife Initiative for Human Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-648084 | Onhappy Corporation | - | no country of the 195 in the sources |
+| ngo-ecosoc-649421 | Open Data Watch, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-678744 | Open Dreams Organization Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-689339 | Open Lunar Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-651546 | Open Net Incorporated Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-680813 | Operation Eyesight Canada | - | no country of the 195 in the sources |
+| ngo-ecosoc-661018 | Operation Friendship International | - | no country of the 195 in the sources |
+| ngo-ecosoc-656101 | Operation HOPE Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-656661 | Operation Underground Railroad Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-693086 | Opes Oceani Foundation, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-652256 | Opportunity Two Excel Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-681624 | Option2world initiative Against Drug Abuse | - | no country of the 195 in the sources |
+| ngo-ecosoc-669596 | Orchid Project Limited | - | no country of the 195 in the sources |
+| ngo-ecosoc-1826 | Order of St. John, The | - | no country of the 195 in the sources |
+| ngo-ecosoc-5489 | Ordre des Avocats a la Cour de Paris | - | no country of the 195 in the sources |
+| ngo-ecosoc-675676 | Organisation Apposition et Engagement Civiques "O.A.B.C. | - | no country of the 195 in the sources |
+| ngo-ecosoc-652011 | Organisation Constellée pour le Développement Economique et Social de la Commune des Gonaïves | - | no country of the 195 in the sources |
+| ngo-ecosoc-673370 | Organisation EL INSANIYA | - | no country of the 195 in the sources |
+| ngo-ecosoc-644136 | Organisation Européenne des Radioamateurs (EURAO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-698245 | Organisation Féministe Marijàn (OFMA) | - | no country of the 195 in the sources |
+| ngo-ecosoc-675815 | Organisation Internationale pour le Développement Economique Social et Humanitaire | - | no country of the 195 in the sources |
+| ngo-ecosoc-657569 | Organisation Internationale pour l’Avancement politique des Africaines (L’OIAPA) | - | no country of the 195 in the sources |
+| ngo-ecosoc-621064 | Organisation Non gouvernementale Internationale de Bienfaisance "NART" (ONGIB "NART") | - | no country of the 195 in the sources |
+| ngo-ecosoc-658936 | Organisation Sociale des Missionnaires pour l'Education des Enfants Démunis | - | no country of the 195 in the sources |
+| ngo-ecosoc-652267 | Organisation Suisse d'aide aux réfugiés | - | no country of the 195 in the sources |
+| ngo-ecosoc-676971 | Organisation africaine pour l'éducation et la culture | - | no country of the 195 in the sources |
+| ngo-ecosoc-602139 | Organisation des Hommes demunis et enfants orphelins pour le developpement | - | no country of the 195 in the sources |
+| ngo-ecosoc-623654 | Organisation des Jeunes pour le Monde d'Avenir | - | no country of the 195 in the sources |
+| ngo-ecosoc-625598 | Organisation des Laics Engagés du Sacré-Coeur pour le Développement de Kimbondo | - | no country of the 195 in the sources |
+| ngo-ecosoc-615044 | Organisation des Nations Autochtones de Guyane ONAG | - | no country of the 195 in the sources |
+| ngo-ecosoc-696175 | Organisation des Visionnaires Dévoués pour un Développement de Haute Modernisation (OVDDHMO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-675583 | Organisation européenne non gouvernementale des sports (ENGSO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-622082 | Organisation for Gender, Civic Engagement & Youth Development (OGCEYOD) | - | no country of the 195 in the sources |
+| ngo-ecosoc-668746 | Organisation internationale des sciences chimiques pour le développement | - | no country of the 195 in the sources |
+| ngo-ecosoc-664464 | Organisation internationale pour l'enfance | - | no country of the 195 in the sources |
+| ngo-ecosoc-620763 | Organisation of African Youth | - | no country of the 195 in the sources |
+| ngo-ecosoc-666037 | Organisation pour de nouvelles Initiatives en Développement et Santé au Burkina Faso | - | no country of the 195 in the sources |
+| ngo-ecosoc-611489 | Organización de Entidades Mutuales de las Américas, ODEMA, Asociación Civil | - | no country of the 195 in the sources |
+| ngo-ecosoc-699177 | Organización no Gubernamental del Desarrollo Amaranta u ONG Amaranta | - | no country of the 195 in the sources |
+| ngo-ecosoc-662566 | Organización no gubernamental de Desarrollo Piensa Discapacidad | - | no country of the 195 in the sources |
+| ngo-ecosoc-663433 | Organization For Community Development Project | - | no country of the 195 in the sources |
+| ngo-ecosoc-667350 | Organization for Culture of Hispanic Origins | - | no country of the 195 in the sources |
+| ngo-ecosoc-682905 | Organization for Poverty Alleviation & Development Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-689898 | Organization for the Professional Empowerment of Women Civil Nonprofit Company | - | no country of the 195 in the sources |
+| ngo-ecosoc-669288 | Organização Nova Acrópole Lago Norte | - | no country of the 195 in the sources |
+| ngo-ecosoc-606936 | Organização das Famílias da Ásia e do Pacífico | - | no country of the 195 in the sources |
+| ngo-ecosoc-635520 | Organizzazione Mondiale Degli Agricoltori | - | no country of the 195 in the sources |
+| ngo-ecosoc-689463 | Oromia Relief Association Australia - South Pacific Region Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-619358 | Oromia Support Group in Australia Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-618786 | Orphélins, Déplacés et Incarcérés de Côte D'Ivoire (ORDIN-CI) | - | no country of the 195 in the sources |
+| ngo-ecosoc-681215 | Orr Shalom for Children and Youth at Risk L.T.D (P.B.C) | - | no country of the 195 in the sources |
+| ngo-ecosoc-2727 | Osservatorio per la Comunicazione Culturale e l'Audiovisivo nel Mediterraneo e nel Mondo | - | no country of the 195 in the sources |
+| ngo-ecosoc-672288 | Osteogenesis Imperfecta Foundation Nigeria [OIFN] | - | no country of the 195 in the sources |
+| ngo-ecosoc-646719 | Otro Tiempo México, Asociación Civil | - | no country of the 195 in the sources |
+| ngo-ecosoc-663316 | Our Lady of Perpetual Help Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-617671 | Outreach Social Care Project | - | no country of the 195 in the sources |
+| ngo-ecosoc-649074 | Oyoun Center Foundation for Studying and Developing Human Rights and Democracy in Assuit | - | no country of the 195 in the sources |
+| ngo-ecosoc-656848 | PARTENARIAT FRANÇAIS POUR L'EAU (PFE) | - | no country of the 195 in the sources |
+| ngo-ecosoc-637913 | PECB (Professional Evaluation & Certification Board – Educational & Welfare Society) | - | no country of the 195 in the sources |
+| ngo-ecosoc-604313 | PFI Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-697509 | POP Movement, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-667455 | POS Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-663108 | PRO Leadership Global Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-617580 | Pacific Disability Forum | - | no country of the 195 in the sources |
+| ngo-ecosoc-612748 | Pacific Islands Association of Non-Governmental Organisations | - | no country of the 195 in the sources |
+| ngo-ecosoc-625578 | Pacific Links Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-1829 | Pacific Rim Institute for Development & Education | - | no country of the 195 in the sources |
+| ngo-ecosoc-601405 | Pacific Women's Watch (New Zealand) | - | no country of the 195 in the sources |
+| ngo-ecosoc-669079 | Pacifica (Pacific Allied Women’s Council Inspires Faith In Ideals Concerning All) Incorporated | - | no country of the 195 in the sources |
+| ngo-ecosoc-663849 | Page Verte | - | no country of the 195 in the sources |
+| ngo-ecosoc-633852 | Pak Women | - | no country of the 195 in the sources |
+| ngo-ecosoc-655280 | Pakistan Council for Social Welfare and Human Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-604650 | Pakistan Institute of Legislative Development And Transparency (PILDAT) | - | no country of the 195 in the sources |
+| ngo-ecosoc-608254 | Pakistan Rural Workers Social Welfare Organization (PRWSWO) | - | no country of the 195 in the sources |
+| ngo-ecosoc-614417 | Pakistan Youth Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-3069 | Palakkad District Consumers´ Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-684808 | Palestinian Association of Medical Radiation Technologists - PAMRT | - | no country of the 195 in the sources |
+| ngo-ecosoc-618631 | Pallium India | - | no country of the 195 in the sources |
+| ngo-ecosoc-651443 | Pan Africa Girl Child Education Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-643302 | Pan African Institute for Entrepreneurship and Community Development (Ltd/Gte) | - | no country of the 195 in the sources |
+| ngo-ecosoc-2564 | Pan European Forest Certification Council | - | no country of the 195 in the sources |
+| ngo-ecosoc-534 | Pan Pacific and South East Asia Women's Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-1831 | Pan Pacific and South East Asia Women's Association of Thailand | - | no country of the 195 in the sources |
+| ngo-ecosoc-1177 | PanAmerican-PanAfrican Association, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-659554 | Panafrican Women Association (PAWA) | - | no country of the 195 in the sources |
+| ngo-ecosoc-662589 | Panoramic Charity Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-642980 | Paradise Mission for Widows & Teenage Girls | - | no country of the 195 in the sources |
+| ngo-ecosoc-7418 | Parents Forum | - | no country of the 195 in the sources |
+| ngo-ecosoc-624747 | Parker Peace Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-622238 | Parlement africain de la société civile | - | no country of the 195 in the sources |
+| ngo-ecosoc-608622 | Partage et Action en Synergie pour le Développement | - | no country of the 195 in the sources |
+| ngo-ecosoc-664415 | Partenaires pour le développement rural (PDR) | - | no country of the 195 in the sources |
+| ngo-ecosoc-633724 | Participatory Rural Development Society (PRDS) | - | no country of the 195 in the sources |
+| ngo-ecosoc-647915 | Partners for Peace and Prosperity, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-1470 | Partnership Africa Canada | - | no country of the 195 in the sources |
+| ngo-ecosoc-690260 | Partnership With Native Americans | - | no country of the 195 in the sources |
+| ngo-ecosoc-649644 | Partnership for Change | - | no country of the 195 in the sources |
+| ngo-ecosoc-642581 | Partnership for Human Rights | - | no country of the 195 in the sources |
+| ngo-ecosoc-2459 | Partnership for Indigenous Peoples Environment | - | no country of the 195 in the sources |
+| ngo-ecosoc-639372 | Partnership for Justice Ltd/Gte | - | no country of the 195 in the sources |
+| ngo-ecosoc-681528 | Partnership for Policy Integrity, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-610425 | Partnership for Sustainable Development (PaSD) | - | no country of the 195 in the sources |
+| ngo-ecosoc-686928 | Partnership for Transparency Fund Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-629869 | Paryavaran Mitra, Thaltej Ahmedabad | - | no country of the 195 in the sources |
+| ngo-ecosoc-6675 | Passionists International | - | no country of the 195 in the sources |
+| ngo-ecosoc-669331 | Pastoralist Child Foundation Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-658071 | PathFinders Justice Initiative, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-978 | Pathways to Peace | - | no country of the 195 in the sources |
+| ngo-ecosoc-680987 | Patient Access Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-608277 | Patim | - | no country of the 195 in the sources |
+| ngo-ecosoc-687577 | Patriotic Citizen Initiatives | - | no country of the 195 in the sources |
+| ngo-ecosoc-688960 | Pax Press | - | no country of the 195 in the sources |
+| ngo-ecosoc-2152 | Peace Boat | - | no country of the 195 in the sources |
+| ngo-ecosoc-610040 | Peace Brigades International | - | no country of the 195 in the sources |
+| ngo-ecosoc-626053 | Peace Brigades International Switzerland | - | no country of the 195 in the sources |
+| ngo-ecosoc-1471 | Peace Child International | - | no country of the 195 in the sources |
+| ngo-ecosoc-604348 | Peace Development Fund | - | no country of the 195 in the sources |
+| ngo-ecosoc-1339 | Peace Education Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-642462 | Peace Foundation Pakistan | - | no country of the 195 in the sources |
+| ngo-ecosoc-668796 | Peace Initiative Network | - | no country of the 195 in the sources |
+| ngo-ecosoc-612084 | Peace Operation Training Institute Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-7185 | Peace Parks Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-629382 | Peace Research Institute Oslo | - | no country of the 195 in the sources |
+| ngo-ecosoc-668436 | Peace Society of Kenya | - | no country of the 195 in the sources |
+| ngo-ecosoc-696024 | Peace and Sport | - | no country of the 195 in the sources |
+| ngo-ecosoc-662804 | PeaceTrees Vietnam | - | no country of the 195 in the sources |
+| ngo-ecosoc-47340 | Peaceways | - | no country of the 195 in the sources |
+| ngo-ecosoc-650237 | Pearl Initiative Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-690086 | Peculiar Women of Destiny International, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-638539 | Peivande Gole Narges Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-686969 | People Centered Lighthouse | - | no country of the 195 in the sources |
+| ngo-ecosoc-638792 | People Empowering People, Africa | - | no country of the 195 in the sources |
+| ngo-ecosoc-634525 | People Forum for Human Rights (People Forum) | - | no country of the 195 in the sources |
+| ngo-ecosoc-6436 | People to People | - | no country of the 195 in the sources |
+| ngo-ecosoc-2654 | People with Disability Australia, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-682235 | People's Action for Learning Network (PAL) | - | no country of the 195 in the sources |
+| ngo-ecosoc-2565 | People's Solidarity for Participatory Democracy | - | no country of the 195 in the sources |
+| ngo-ecosoc-630433 | People’s Development Initiatives (PDI) | - | no country of the 195 in the sources |
 | ngo-ecosoc-618497 | Perfect Union | - | no country of the 195 in the sources |
+| ngo-ecosoc-612874 | Perkins School for the Blind | - | no country of the 195 in the sources |
+| ngo-ecosoc-670486 | Perkumpulan Teknologi Informasi Dan Open Source | - | no country of the 195 in the sources |
+| ngo-ecosoc-695064 | Persatuan Menggalakkan Kesamarataan Respek Dan Amanah Seluruh Sabah | - | no country of the 195 in the sources |
+| ngo-ecosoc-657249 | Persatuan Pakatan Berintegriti Sabah (Sabah Integrity Alliance Association) (SINAR) | - | no country of the 195 in the sources |
+| ngo-ecosoc-625858 | Personhood Education | - | no country of the 195 in the sources |
+| ngo-ecosoc-634940 | Persons with Disability Initiative, Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-672697 | Pertubuhan Bulan Sabit Hijau Malaysia (Green Crescent) | - | no country of the 195 in the sources |
+| ngo-ecosoc-686521 | Pertubuhan Kebajikan Erth Ul Mustafa Johor Bahru | - | no country of the 195 in the sources |
+| ngo-ecosoc-687642 | Pertubuhan Sains Dan Kesejahteraan | - | no country of the 195 in the sources |
+| ngo-ecosoc-669260 | Pesticide Action Network India | - | no country of the 195 in the sources |
+| ngo-ecosoc-610336 | Pesticide Action Nexus Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-7231 | Pew Environment Group | - | no country of the 195 in the sources |
+| ngo-ecosoc-696093 | Philippine Center for Islam & Democracy Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-687059 | Phoenix Zones Initiative | - | no country of the 195 in the sources |
+| ngo-ecosoc-682251 | Photo Start | - | no country of the 195 in the sources |
+| ngo-ecosoc-689185 | Pikes Peak Justice and Pro Bono Center, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-695984 | Pink Africa Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-677667 | Pionero Philanthropy Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-675229 | Piramal Swasthya Management and Research Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-620932 | Pitirim Sorokin - Nikolai Kondratieff International Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-671198 | Places for People Group Limited | - | no country of the 195 in the sources |
+| ngo-ecosoc-2566 | Planetary Association for Clean Energy, Inc., The | - | no country of the 195 in the sources |
+| ngo-ecosoc-1835 | Planned Parenthood Federation of America | - | no country of the 195 in the sources |
+| ngo-ecosoc-675789 | Plant Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-653413 | Plataforma Mulheres em Acção | - | no country of the 195 in the sources |
+| ngo-ecosoc-613231 | Plataforma Portuguesa para os Direitos das Mulheres - Associação | - | no country of the 195 in the sources |
+| ngo-ecosoc-678461 | Plateforme Océan et Climat | - | no country of the 195 in the sources |
+| ngo-ecosoc-675639 | Plateforme des Organisations de Femmes Haitiennes pour le Développement | - | no country of the 195 in the sources |
+| ngo-ecosoc-7558 | Plateforme pour le Developpement Durable des Caraibes (PLAC 21) | - | no country of the 195 in the sources |
+| ngo-ecosoc-669277 | Platform for Youth Integration and Volunteerism | - | no country of the 195 in the sources |
+| ngo-ecosoc-693676 | Platform for Youth and Women Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-672121 | Pleasant Gathering Club of Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-624215 | Plymouth Marine Laboratory | - | no country of the 195 in the sources |
+| ngo-ecosoc-665544 | Poka Healthcare Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-687418 | Police Treatment and Community Collaborative | - | no country of the 195 in the sources |
+| ngo-ecosoc-608914 | Policy Research | - | no country of the 195 in the sources |
+| ngo-ecosoc-647693 | Policy Studies Organization | - | no country of the 195 in the sources |
+| ngo-ecosoc-692137 | Pollination Foundation Ltd | - | no country of the 195 in the sources |
+| ngo-ecosoc-695444 | Polylat | - | no country of the 195 in the sources |
+| ngo-ecosoc-657847 | Pop Culture Hero Coalition, Inc | - | no country of the 195 in the sources |
+| ngo-ecosoc-615212 | Population Connection | - | no country of the 195 in the sources |
+| ngo-ecosoc-642 | Population Council, The | - | no country of the 195 in the sources |
+| ngo-ecosoc-604366 | Population Media Center, Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-660761 | Populous Education Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-613613 | Portafolio Verde S.A.S | - | no country of the 195 in the sources |
+| ngo-ecosoc-7171 | Pos Keadilan Peduli Ummat | - | no country of the 195 in the sources |
+| ngo-ecosoc-629818 | Potohar Organization for Development Advocacy (PODA) | - | no country of the 195 in the sources |
+| ngo-ecosoc-683697 | Pouya Hamyaran Farhang-o-Honar Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-611254 | Poverty Elimination and Community Education Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-617340 | Pragya | - | no country of the 195 in the sources |
+| ngo-ecosoc-653355 | Pramacare | - | no country of the 195 in the sources |
+| ngo-ecosoc-3072 | Prasad Project, Inc, The | - | no country of the 195 in the sources |
+| ngo-ecosoc-685435 | Prashanthi Balamandira Trust | - | no country of the 195 in the sources |
+| ngo-ecosoc-671324 | Prayas Juvenile Aid Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-647215 | Presbyterian Women in the Presbyterian Church (U.S.A.), Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-680997 | Prime Diamond Initiative for Community Health | - | no country of the 195 in the sources |
+| ngo-ecosoc-641545 | Prime Initiative for Green Development | - | no country of the 195 in the sources |
+| ngo-ecosoc-617880 | Prince Sultan Bin Abdulaziz International Prize for Water | - | no country of the 195 in the sources |
+| ngo-ecosoc-826 | Prison Fellowship International | - | no country of the 195 in the sources |
+| ngo-ecosoc-691745 | Private Foundation Institut d’Estudis Financers | - | no country of the 195 in the sources |
+| ngo-ecosoc-689656 | Pro Criança Cardíaca | - | no country of the 195 in the sources |
+| ngo-ecosoc-682413 | Pro Rural | - | no country of the 195 in the sources |
+| ngo-ecosoc-602001 | Pro-Life Campaign | - | no country of the 195 in the sources |
+| ngo-ecosoc-693038 | ProSociedad Hacer bien el bien A.C. | - | no country of the 195 in the sources |
+| ngo-ecosoc-675509 | ProVeg Deutschland e.V. | - | no country of the 195 in the sources |
+| ngo-ecosoc-658202 | Proactive Gender Initiatives | - | no country of the 195 in the sources |
+| ngo-ecosoc-1181 | Program for Appropriate Technology in Health (PATH) | - | no country of the 195 in the sources |
+| ngo-ecosoc-7141 | Program in International Human Rights Law | - | no country of the 195 in the sources |
+| ngo-ecosoc-627834 | Programme d'appui à la femme et à l'enfance déshéritée | - | no country of the 195 in the sources |
+| ngo-ecosoc-678853 | Progressive People of Yorubaland Worldwide Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-2712 | Project Kesher | - | no country of the 195 in the sources |
+| ngo-ecosoc-51484 | Projonma Academy | - | no country of the 195 in the sources |
+| ngo-ecosoc-610781 | Promotion of Sustainable Development in Donga-Mantung Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-681782 | Prosami | - | no country of the 195 in the sources |
+| ngo-ecosoc-630395 | Proslavi Oporavak | - | no country of the 195 in the sources |
+| ngo-ecosoc-675736 | Protsahan India Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-673118 | Public Association "Green Crescent Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-685614 | Public Association "Peace through Spirituality | - | no country of the 195 in the sources |
+| ngo-ecosoc-629662 | Public Association Women’s Organization “ALGA” | - | no country of the 195 in the sources |
+| ngo-ecosoc-682150 | Public Association “Zhasylai” | - | no country of the 195 in the sources |
+| ngo-ecosoc-656571 | Public Eye, Verein auf der Grundlage der Erklärung von Bern, Bern | - | no country of the 195 in the sources |
+| ngo-ecosoc-690450 | Public Foundation "Nash Vek | - | no country of the 195 in the sources |
+| ngo-ecosoc-605445 | Public Health Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-652438 | Public Organization "Institute for the Study of Dependencies, Drug Policy Issues and Monitoring the Drug Situation | - | no country of the 195 in the sources |
+| ngo-ecosoc-695223 | Public interest incorporated foundation Drug Abuse Prevention Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-610073 | Public-Private Alliance Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-678030 | Purposeful Productions | - | no country of the 195 in the sources |
+| ngo-ecosoc-1476 | Qatar Charitable Society | - | no country of the 195 in the sources |
+| ngo-ecosoc-694909 | Qendra "Durrësi Aktiv | - | no country of the 195 in the sources |
+| ngo-ecosoc-674891 | Qendra per Nisma Ligjore Qytetare, QNL | - | no country of the 195 in the sources |
+| ngo-ecosoc-601546 | Quaker Earthcare Witness | - | no country of the 195 in the sources |
+| ngo-ecosoc-656979 | Queensland Advocacy Incorporated | - | no country of the 195 in the sources |
+| ngo-ecosoc-642161 | Quintessential Business Women Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-674286 | Raad Al-Ghadir Charity Institute | - | no country of the 195 in the sources |
+| ngo-ecosoc-7014 | Raad Rehabilitation Goodwill Complex | - | no country of the 195 in the sources |
+| ngo-ecosoc-659150 | Radha Soami Sat Sang Beas | - | no country of the 195 in the sources |
 | ngo-ungva-977 | Rural Mother & Child Health Care Society | - | no country of the 195 in the sources |
 | ngo-ecosoc-645162 | SEG" Civil Society Support Center NGO | - | no country of the 195 in the sources |
 | ngo-ungva-984 | Sambhali Trust | - | no country of the 195 in the sources |
@@ -2198,6 +2969,7 @@
 | ngo-ecosoc-3109 | Yayasan Cinta Anak Bangsa | - | no country of the 195 in the sources |
 | ngo-ecosoc-675283 | femLENS MTÜ | - | no country of the 195 in the sources |
 | ngo-ecosoc-660126 | i-Smile International | - | no country of the 195 in the sources |
+| ngo-ecosoc-685946 | primelocation care givers foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-681708 | İnformasiya Təşəbbüslərinə Dəstək” ictimai birliyi | - | no country of the 195 in the sources |
 | ngo-ecosoc-662499 | İqtisadi və Sosial İnkişaf Mərkəzi" ictimai birliyi | - | no country of the 195 in the sources |
 | ngo-wd-q4791267 | Arizona Chamber of Commerce and Industry | USA | not a classic NGO (Wikidata: chamber of commerce) |
@@ -2387,6 +3159,7 @@
 | ngo-ecosoc-1802 | International Association of Women Judges | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q6053401 | International Society for Prevention of Child Abuse and Neglect | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q17007981 | National Association for Female Executives | USA | not a classic NGO (Wikidata: professional association) |
+| ngo-ecosoc-2237 | National Association of Criminal Defense Lawyers | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q23308151 | National Association of Women Judges | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q20858136 | National Association of Women Lawyers | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-ecosoc-1111 | National Council of Negro Women | USA | not a classic NGO (Wikidata: professional association) |
@@ -2463,6 +3236,7 @@
 | ngo-wd-q7742289 | The International Centre for the Study of Radicalisation and Political Violence | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q3662220 | Young Foundation | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q20526419 | Udruga Obnova | HRV | not a classic NGO (Wikidata: think tank) |
+| ngo-ecosoc-2380 | Millennium Institute | HUN | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5333360 | Economic Cooperation Foundation | ISR | not a classic NGO (Wikidata: think tank) |
 | ngo-ecosoc-793 | Society for International Development | ITA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q20431667 | IDIS "Viitorul" | MDA | not a classic NGO (Wikidata: think tank) |
@@ -2560,6 +3334,13 @@
 | ngo-ecosoc-695002 | Globe Eagle University | None | not a classic NGO (name contains "university") |
 | ngo-ecosoc-1063 | International Association of University Presidents | None | not a classic NGO (name contains "university") |
 | ngo-ecosoc-690808 | International Open University of Humanity Health Science and Peace | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-629884 | James Madison University | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-688191 | Kalinga Institute of Industrial Technology Deemed to be University | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-7562 | Kyung Hee University | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-609920 | Lehigh University | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-39161 | New York University | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-617484 | Northeastern University | None | not a classic NGO (name contains "university") |
+| ngo-ecosoc-626133 | Pace University | None | not a classic NGO (name contains "university") |
 | ngo-wd-q5030647 | Burman University | CAN | not a classic NGO (name contains "university") |
 | ngo-ecosoc-2874 | International Relations Students' Association of McGill University | CAN | not a classic NGO (name contains "university") |
 | ngo-wd-q7252500 | Providence University College and Theological Seminary | CAN | not a classic NGO (name contains "university") |
