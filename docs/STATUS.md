@@ -167,11 +167,19 @@ media on the site, separate section in the export; updated every 2 months (step 
 - Sources: UN Geneva (1,471) and IATI (1,339) in; ECOSOC iCSO (all lists + profiles, slow server, resumes;
   workflow "Fetch NGOs", re-run by hand until complete) and Wikidata NGOs (with a Wikipedia page) running.
   DESA COSP list refuses automatic downloads (HTTP 403): not worked around; owner may save it by hand.
-- ECOSOC server mostly times out (10.11.2026: 1,607 orgs, 78 profiles in 5 h). Fetcher now pauses on
-  failure streaks and resumes long lists (resume_index); profile parser built; ECOSOC entries without a
-  profile are matched by unique name. 505 NGOs with ECOSOC status shown so far. Re-run 'Fetch NGOs' until complete.
-- Next: parse ECOSOC profile pages (check raw/ecosoc/samples first: country, languages, website labels),
-  run the website check for NGO websites (texts workflow), AI reading of top NGOs per country later.
+- ECOSOC server mostly times out (10.11.2026: 1,607 orgs, 78 profiles in 5 h; 11.11.2026 run 4: server silent
+  after 2 minutes for 5 hours). Fetcher now asks slowly (3 s between requests), stops a run after 20 minutes of
+  silence, 2 h budget (repo is PRIVATE: GitHub free plan = 2,000 Actions minutes/month, owner to check usage).
+  State 11.11.2026: 4,257 ECOSOC organisations listed, 191 profiles (~4,000 still to fetch). ECOSOC entries
+  without a profile have no country and are not shown until their profile is read (or matched by unique name).
+- Quality check 11.11.2026 (samples): schools, hospitals, clubs, museums, monasteries left out by Wikidata class
+  words (config/ngo.yaml wikidata_not_ngo_class_words; service clubs like Rotary/Lions/Zonta kept); NGOs with UN
+  accreditation (ECOSOC status, UN Geneva) are never left out as "not a classic NGO" (bar associations,
+  Rotary ...); hand-checked exclusions (exclude.manual, e.g. FAIR); duplicates merged when names differ only by
+  a bracket at the end ("Caritas Internationalis (…)"). Result: 6,961 NGOs shown.
+- Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
+  without an English label show their local name.
+- Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.
 
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).

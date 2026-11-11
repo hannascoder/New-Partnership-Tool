@@ -53,9 +53,12 @@ def clean_name(s):
 
 
 def name_key(s):
-    k = norm(clean_name(s))
+    # 11.11.2026: "Article19" = "ARTICLE 19", "Caritas Internationalis (International Confederation ...)" =
+    # "Caritas Internationalis": brackets at the end (abbreviation or local name) are left out
+    s = re.sub(r"\s*\([^()]*\)?\s*$", "", clean_name(s)) or clean_name(s)
+    k = norm(s)
     k = re.sub(r"\b(the|of|for|and|de|la|le|les|des|du|el|los|las|et|y|e|da|do|das|dos)\b", " ", k)
-    return " ".join(k.split())
+    return "".join(k.split()) if len(k.split()) <= 2 else " ".join(k.split())
 
 
 # ------------------------------------------------------------------ ECOSOC
@@ -298,6 +301,9 @@ def website_data():
     return web
 
 
+UN_ACCREDITED = {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "un_geneva", "dgc_associated", "desa_cosp"}
+
+
 def main():
     recs = ecosoc() + wikidata() + geneva() + iati_ngos()
     web = website_data()
@@ -324,6 +330,8 @@ def main():
     gongo = {x.lower() for x in CFG["exclude"]["wikidata_classes"]}
     right = {x.lower() for x in CFG["exclude"].get("wikidata_ideologies_right") or []}
     not_ngo = {x.lower() for x in CFG["exclude"].get("wikidata_not_ngo_classes") or []}
+    not_ngo_words = [x.lower() for x in CFG["exclude"].get("wikidata_not_ngo_class_words") or []]
+    keep_cls = {x.lower() for x in CFG["exclude"].get("wikidata_class_words_keep") or []}
     first_seen_file = ROOT / "cache" / "ngo_first_seen.json"
     first_seen = json.load(open(first_seen_file, encoding="utf-8")) if first_seen_file.exists() else {}
     out, excluded = [], []
@@ -335,6 +343,9 @@ def main():
         nid = nid_guess(keys)
         # exclusions
         why_out = None
+        # 11.11.2026: NGOs accredited by the UN (ECOSOC consultative status, UN Geneva) count as NGOs even when
+        # Wikidata calls them a club, professional association ... (Rotary, Lions, Zonta, bar associations)
+        accredited = any(s in UN_ACCREDITED for m in ms for s in m.get("un_status") or [])
         for m in ms:
             hit = [i for i in m.get("wd_ideology") or [] if i.lower() in ideos]
             if hit:
@@ -345,11 +356,16 @@ def main():
             cls = [c for c in m.get("wd_classes") or [] if c.lower() in gongo]
             if cls:
                 why_out = "government-organised NGO (Wikidata: " + cls[0] + ")"
-            cls = [c for c in m.get("wd_classes") or [] if c.lower() in not_ngo]
-            if cls and not why_out:
+            cls = [c for c in m.get("wd_classes") or [] if c.lower() in not_ngo
+                   or (c.lower() not in keep_cls
+                       and any(re.search(r"\b" + re.escape(w) + r"\b", c.lower()) for w in not_ngo_words))]
+            if cls and not why_out and not accredited:
                 why_out = "not a classic NGO (Wikidata: " + cls[0] + ")"
+        man = next((x["reason"] for x in CFG["exclude"].get("manual") or [] if x["name"].lower() == (name or "").lower()), None)
+        if man and not why_out:
+            why_out = man + " (checked by hand)"
         w = contains_word(name, CFG["exclude"]["name_words"])
-        if w and not why_out:
+        if w and not why_out and not accredited:
             why_out = f'not a classic NGO (name contains "{w.strip()}")'
         if why_out:
             excluded.append((nid, name, country, why_out))

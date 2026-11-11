@@ -7,6 +7,7 @@
 | ngo-wd-q22340635 | Soldiers of Odin | FIN | far-right (Wikidata political ideology: white supremacy) |
 | ngo-ecosoc-2501 | China Association for Science and Technology | CHN | government-organised NGO (Wikidata: government-organized non-governmental organization) |
 | ngo-ecosoc-673360 | China Foundation for Human Rights Development | CHN | government-organised NGO (Wikidata: government-organized non-governmental organization) |
+| ngo-ecosoc-1576 | China Society for Human Rights Studies (CSHRS) | CHN | government-organised NGO (Wikidata: government-organized non-governmental organization) |
 | ngo-ecosoc-2059 | Chinese People's Association for Friendship with Foreign Countries | CHN | government-organised NGO (Wikidata: government-organized non-governmental organization) |
 | ngo-wd-q7505348 | Shurat HaDin | ISR | government-organised NGO (Wikidata: government-organized non-governmental organization) |
 | ngo-wd-q343978 | IHH | TUR | government-organised NGO (Wikidata: government-organized non-governmental organization) |
@@ -81,8 +82,8 @@
 | ngo-ecosoc-627076 | Action Works Nepal, Kathmandu-10, Baneshwor | - | no country of the 195 in the sources |
 | ngo-ecosoc-692178 | Action collective pour le développement intégral de l'enfance et de la jeune fille | - | no country of the 195 in the sources |
 | ngo-ecosoc-606524 | Action des Chrétiens activistes des droits de l'homme à Shabunda | - | no country of the 195 in the sources |
+| ngo-ecosoc-630253 | Action for Development (Suisse) | - | no country of the 195 in the sources |
 | ngo-ecosoc-671780 | Action for Pune Development | - | no country of the 195 in the sources |
-| ngo-ecosoc-615997 | Action on Smoking and Health | - | no country of the 195 in the sources |
 | ngo-ecosoc-675494 | Action pour la Protection des Droits de l'Enfant (APDE) | - | no country of the 195 in the sources |
 | ngo-ecosoc-692338 | Action pour la paix et le developpement | - | no country of the 195 in the sources |
 | ngo-ecosoc-644202 | Action pour la promotion des initiatives locales | - | no country of the 195 in the sources |
@@ -153,7 +154,6 @@
 | ngo-ecosoc-646788 | African Woman and Child Feature Service | - | no country of the 195 in the sources |
 | ngo-ecosoc-2735 | African Women Empowerment Guild | - | no country of the 195 in the sources |
 | ngo-ecosoc-676020 | African Women Lawyers Association, Nigeria Chapter | - | no country of the 195 in the sources |
-| ngo-ecosoc-1313 | African Women's Development & Communication Network (FEMNET) | - | no country of the 195 in the sources |
 | ngo-ecosoc-674056 | African Women's Health Project International | - | no country of the 195 in the sources |
 | ngo-ecosoc-664657 | African Youth Employment Initiatives (AYEI) | - | no country of the 195 in the sources |
 | ngo-ecosoc-2786 | African Youth Movement | - | no country of the 195 in the sources |
@@ -252,6 +252,7 @@
 | ngo-ecosoc-698604 | Amazing Nepal Times | - | no country of the 195 in the sources |
 | ngo-ecosoc-654657 | Amazon Conservation Team | - | no country of the 195 in the sources |
 | ngo-ecosoc-23162 | Amazon Watch | - | no country of the 195 in the sources |
+| ngo-ecosoc-4347 | American Association of University Women | - | no country of the 195 in the sources |
 | ngo-ecosoc-615071 | American Heart Association, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-654140 | American Human Rights Council | - | no country of the 195 in the sources |
 | ngo-ecosoc-1711 | American Indian Law Alliance | - | no country of the 195 in the sources |
@@ -389,7 +390,6 @@
 | ngo-ecosoc-696055 | Association Initiatives Afro-Canadiennes du Nouveau-Brunswick | - | no country of the 195 in the sources |
 | ngo-ecosoc-695083 | Association Institute of Total Environment" (INTEV) | - | no country of the 195 in the sources |
 | ngo-ecosoc-631475 | Association Internationale Droits Homme | - | no country of the 195 in the sources |
-| ngo-ecosoc-630544 | Association Internationale pour l'égalité des femmes | - | no country of the 195 in the sources |
 | ngo-ecosoc-2415 | Association Jeunesse Action Developpement | - | no country of the 195 in the sources |
 | ngo-ecosoc-694846 | Association Jeunesse pour Christ International | - | no country of the 195 in the sources |
 | ngo-ecosoc-675885 | Association Liaison Universelle pour le Bien-être des enfants et des Jeunes | - | no country of the 195 in the sources |
@@ -401,7 +401,6 @@
 | ngo-ecosoc-607128 | Association Mondiale de Psychanalyse du Champ Freudien AMP | - | no country of the 195 in the sources |
 | ngo-ecosoc-699394 | Association Moulkhair pour le Droit Social, l'Education Citoyenne et le Développement | - | no country of the 195 in the sources |
 | ngo-ecosoc-2966 | Association Nationale Al Hidn - A.N.H. | - | no country of the 195 in the sources |
-| ngo-ecosoc-613335 | Association Nationale des Echanges Entre Jeunes | - | no country of the 195 in the sources |
 | ngo-ecosoc-659718 | Association Nationale pour Promouvoir la Société Civile et la Citoyenneté | - | no country of the 195 in the sources |
 | ngo-ecosoc-646038 | Association Of Professional Social Workers And Development Practitioners | - | no country of the 195 in the sources |
 | ngo-ecosoc-2968 | Association Proyecto Hombre | - | no country of the 195 in the sources |
@@ -441,7 +440,6 @@
 | ngo-ecosoc-674380 | Association des femmes et filles de l'Adamaoua (AFADA) | - | no country of the 195 in the sources |
 | ngo-ecosoc-691710 | Association des femmes solidaires du monde | - | no country of the 195 in the sources |
 | ngo-ecosoc-625171 | Association des jeunes volontaires au service du monde environnemental | - | no country of the 195 in the sources |
-| ngo-ecosoc-637262 | Association des relais communautaires d'Oshwé | - | no country of the 195 in the sources |
 | ngo-ecosoc-614974 | Association du Centre des Études et des Recherches en Sciences Sociales | - | no country of the 195 in the sources |
 | ngo-ecosoc-657850 | Association du développement communautaire en Mauritanie | - | no country of the 195 in the sources |
 | ngo-ecosoc-650383 | Association femmes leadership et développement durable AFLED | - | no country of the 195 in the sources |
@@ -478,9 +476,11 @@
 | ngo-ecosoc-692807 | Association of Lady Entrepreneurs of India | - | no country of the 195 in the sources |
 | ngo-ecosoc-695284 | Association of Legal Entities "Kazakhstan Association of Regional Ecological Initiatives "EcoJer | - | no country of the 195 in the sources |
 | ngo-ecosoc-1556 | Association of Presbyterian Women of Aoteaora, New Zealand | - | no country of the 195 in the sources |
+| ngo-ecosoc-685293 | Association of University Radiologists | - | no country of the 195 in the sources |
 | ngo-ecosoc-611783 | Association of War-Affected Women | - | no country of the 195 in the sources |
 | ngo-ecosoc-678142 | Association of Women Professional Financial Managers | - | no country of the 195 in the sources |
 | ngo-ecosoc-614685 | Association of Women in Technology in Nigeria | - | no country of the 195 in the sources |
+| ngo-ecosoc-605494 | Association of Women with University Education" Social Organization | - | no country of the 195 in the sources |
 | ngo-ecosoc-615585 | Association of the Indigenous Peoples in the Ryukyus | - | no country of the 195 in the sources |
 | ngo-ecosoc-615734 | Association on American Indian Affairs, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-675852 | Association on Development of Civil Society of The Republic Of Kazakhstan “ARGO” | - | no country of the 195 in the sources |
@@ -684,6 +684,7 @@
 | ngo-ecosoc-660135 | Canadian Canola Growers Association | - | no country of the 195 in the sources |
 | ngo-ecosoc-2976 | Canadian Centre on Substance Abuse (CCSA) | - | no country of the 195 in the sources |
 | ngo-ecosoc-5329 | Canadian Council for Refugees | - | no country of the 195 in the sources |
+| ngo-ecosoc-1565 | Canadian Federation of University Women | - | no country of the 195 in the sources |
 | ngo-ecosoc-2186 | Canadian HIV/AIDS Legal Network | - | no country of the 195 in the sources |
 | ngo-ecosoc-1939 | Canadian Labour Congress | - | no country of the 195 in the sources |
 | ngo-ecosoc-685416 | Canadian Lutheran World Relief | - | no country of the 195 in the sources |
@@ -704,7 +705,6 @@
 | ngo-ecosoc-616848 | Casa Generalizia della Societa' del Sacro Cuore | - | no country of the 195 in the sources |
 | ngo-ecosoc-668437 | Casa Hunter Associação Brasileira Dos Portadores Da Doença De Hunter E Outras Doenças Raras | - | no country of the 195 in the sources |
 | ngo-ecosoc-679054 | Cashew Gardens Community Council | - | no country of the 195 in the sources |
-| ngo-ecosoc-610926 | Catholic Agency for Overseas Development | - | no country of the 195 in the sources |
 | ngo-ecosoc-675956 | Catholic Caritas Foundation of Nigeria | - | no country of the 195 in the sources |
 | ngo-ecosoc-676661 | Catholic Health Care Association (CATHCA) | - | no country of the 195 in the sources |
 | ngo-ecosoc-1482 | Catholic Organization for Relief and Development Aid | - | no country of the 195 in the sources |
@@ -752,7 +752,6 @@
 | ngo-ecosoc-642435 | Centre For Social Justice Limited by Guarantee | - | no country of the 195 in the sources |
 | ngo-ecosoc-664978 | Centre International de Conseil, de Recherche et d'Expertise en Droits de l'Homme (CICREDHO) | - | no country of the 195 in the sources |
 | ngo-ecosoc-674494 | Centre Thérèsia La Fleurette | - | no country of the 195 in the sources |
-| ngo-ecosoc-621361 | Centre d'Encadrement et Développement des Anciens Combattants | - | no country of the 195 in the sources |
 | ngo-ecosoc-602676 | Centre d'accompagnement des alternatives locales de développement | - | no country of the 195 in the sources |
 | ngo-ecosoc-2356 | Centre d'accompagnement des autochtones pygmees et minoritaires vulnerables | - | no country of the 195 in the sources |
 | ngo-ecosoc-2754 | Centre d'études diplomatiques et stratégiques | - | no country of the 195 in the sources |
@@ -787,7 +786,6 @@
 | ngo-ecosoc-662835 | Centre for Promoting Alternatives to Violence (PAVe) | - | no country of the 195 in the sources |
 | ngo-ecosoc-629792 | Centre for Renewable Energy and Action on Climate Change | - | no country of the 195 in the sources |
 | ngo-ecosoc-687833 | Centre for Research and Development | - | no country of the 195 in the sources |
-| ngo-ecosoc-675737 | Centre for Rights Education and Awareness (CREAW) | - | no country of the 195 in the sources |
 | ngo-ecosoc-694663 | Centre for Support for Women in Unpaid and Informal Employment in Nigeria | - | no country of the 195 in the sources |
 | ngo-ecosoc-653052 | Centre for Women Studies and Intervention | - | no country of the 195 in the sources |
 | ngo-ecosoc-656004 | Centre for Youth and Literacy Development | - | no country of the 195 in the sources |
@@ -967,7 +965,6 @@
 | ngo-ecosoc-649751 | Confederación Española de Personas con Discapacidad Física y Orgánica (COCEMFE) | - | no country of the 195 in the sources |
 | ngo-ecosoc-654854 | Confederation of Indian Healthcare Foundation (CIHF) | - | no country of the 195 in the sources |
 | ngo-ecosoc-625509 | Confederation of NGOs of Rural India | - | no country of the 195 in the sources |
-| ngo-ecosoc-2108 | Conference of Non-Governmental Organizations in Consultative Relationship with the United Nations | - | no country of the 195 in the sources |
 | ngo-ecosoc-639662 | Conflict Armament Research Ltd. | - | no country of the 195 in the sources |
 | ngo-ecosoc-631026 | Confédération des organisations familiales de l'Union européenne | - | no country of the 195 in the sources |
 | ngo-ecosoc-673547 | Congregation Pirchei Shoshanim, a New Jersey Nonprofit Corporation | - | no country of the 195 in the sources |
@@ -1063,8 +1060,10 @@
 | ngo-ecosoc-694285 | Dawadawa Impact Initiatives | - | no country of the 195 in the sources |
 | ngo-ecosoc-1586 | Dayemi Complex Bangladesh | - | no country of the 195 in the sources |
 | ngo-ecosoc-641780 | Days for Girls International | - | no country of the 195 in the sources |
+| ngo-ecosoc-672481 | De Montfort University | - | no country of the 195 in the sources |
 | ngo-ecosoc-658025 | De Regenboog Groep | - | no country of the 195 in the sources |
 | ngo-ecosoc-687490 | De-Tomes Ghana LBG | - | no country of the 195 in the sources |
+| ngo-ecosoc-52573 | DePaul University | - | no country of the 195 in the sources |
 | ngo-ecosoc-7319 | Deaf Aid | - | no country of the 195 in the sources |
 | ngo-ecosoc-5856 | Deafblind International (DbI) | - | no country of the 195 in the sources |
 | ngo-ecosoc-642333 | Death Penalty Focus | - | no country of the 195 in the sources |
@@ -1077,6 +1076,7 @@
 | ngo-ecosoc-666744 | Dementia Alliance International | - | no country of the 195 in the sources |
 | ngo-ecosoc-668321 | Democratic Youth Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-659335 | Denis Miki Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-637501 | Department of Political Science and Public Administration of the University of Athens Alumni Association | - | no country of the 195 in the sources |
 | ngo-ecosoc-680516 | Derechos Infancia México AC | - | no country of the 195 in the sources |
 | ngo-ecosoc-699834 | Design for America Inc | - | no country of the 195 in the sources |
 | ngo-ecosoc-646732 | Destination Justice | - | no country of the 195 in the sources |
@@ -1097,7 +1097,6 @@
 | ngo-ecosoc-689554 | Development Research and Project Centre Kano Ltd/Gte | - | no country of the 195 in the sources |
 | ngo-ecosoc-639923 | Development and Relief Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-6950 | Dharma Drum Mountain Buddhist Association | - | no country of the 195 in the sources |
-| ngo-ecosoc-47556 | Diakonia | - | no country of the 195 in the sources |
 | ngo-ecosoc-674228 | Dialogue & Development Forum | - | no country of the 195 in the sources |
 | ngo-ecosoc-636495 | Dialogue of Cultures - United World" International Public Charity Fund | - | no country of the 195 in the sources |
 | ngo-ecosoc-670834 | Didi Oparaku Health Foundation | - | no country of the 195 in the sources |
@@ -1225,9 +1224,7 @@
 | ngo-ecosoc-676969 | EnerGeo Alliance | - | no country of the 195 in the sources |
 | ngo-ecosoc-1680 | Engender | - | no country of the 195 in the sources |
 | ngo-ecosoc-656282 | Engineering Association for Development and Environment | - | no country of the 195 in the sources |
-| ngo-ecosoc-681183 | Engineers Without Borders | - | no country of the 195 in the sources |
 | ngo-ecosoc-687383 | Enjaz Foundation for development | - | no country of the 195 in the sources |
-| ngo-ecosoc-641708 | Ensemble contre la Peine de Mort | - | no country of the 195 in the sources |
 | ngo-ecosoc-673834 | Entraide Et Action Sans Frontiere | - | no country of the 195 in the sources |
 | ngo-ecosoc-691584 | Entre Nous Mesdames | - | no country of the 195 in the sources |
 | ngo-ecosoc-636501 | Entrepreneurship Development and Support Initiative | - | no country of the 195 in the sources |
@@ -1279,7 +1276,6 @@
 | ngo-ecosoc-692108 | European Noise Barrier Federation | - | no country of the 195 in the sources |
 | ngo-ecosoc-690142 | European Parents' Association | - | no country of the 195 in the sources |
 | ngo-ecosoc-2936 | European Region of the International Lesbian and Gay Federation | - | no country of the 195 in the sources |
-| ngo-ecosoc-615220 | European Society for Medical Oncology (ESMO) | - | no country of the 195 in the sources |
 | ngo-ecosoc-604027 | European Space Policy Institute | - | no country of the 195 in the sources |
 | ngo-ecosoc-603640 | European Union Association in the United States | - | no country of the 195 in the sources |
 | ngo-ecosoc-653481 | European coalition for just and effective drug policies (ENCOD) | - | no country of the 195 in the sources |
@@ -1417,7 +1413,6 @@
 | ngo-ecosoc-633597 | Forum des femmes autochtones du Cameroon (FFAC) | - | no country of the 195 in the sources |
 | ngo-ecosoc-681716 | Forum for Women Law and Development | - | no country of the 195 in the sources |
 | ngo-ecosoc-1775 | Forum for Women and Development - FOKUS | - | no country of the 195 in the sources |
-| ngo-ecosoc-606276 | Forum for Women in Democracy (FOWODE) | - | no country of the 195 in the sources |
 | ngo-ecosoc-692288 | Forum for Women in Development, Democracy and Justice | - | no country of the 195 in the sources |
 | ngo-ecosoc-691923 | Forum for the Democracy and Human Rights France | - | no country of the 195 in the sources |
 | ngo-ecosoc-689864 | Forum for the Promotion of Gender Equity and Moral Values | - | no country of the 195 in the sources |
@@ -1482,7 +1477,6 @@
 | ngo-ecosoc-682138 | Fundacion para el Cuidado, Atención de la Salud e Integración Social para Discapacitados (C.A.S.I.D.) | - | no country of the 195 in the sources |
 | ngo-ecosoc-679595 | Fundació Josep Irla | - | no country of the 195 in the sources |
 | ngo-ecosoc-643977 | Fundación Acción Pro Derechos Humanos | - | no country of the 195 in the sources |
-| ngo-ecosoc-49046 | Fundación Ambiente y Recursos Naturales | - | no country of the 195 in the sources |
 | ngo-ecosoc-3017 | Fundación Antonio Núñez Jiménez de la Naturaleza y el Hombre | - | no country of the 195 in the sources |
 | ngo-ecosoc-7486 | Fundación Argentina a las Naciones Camino a la Verdad | - | no country of the 195 in the sources |
 | ngo-ecosoc-646530 | Fundación BBVA para las Microfinanzas | - | no country of the 195 in the sources |
@@ -1672,6 +1666,7 @@
 | ngo-ecosoc-683996 | Globales Frauennetzwerk für die Energiewende (GWNET), Global Women´s Network for the Energy Transition (GWNET) | - | no country of the 195 in the sources |
 | ngo-ecosoc-697746 | Globalwealth Management initiative, Inc. (GWMI) | - | no country of the 195 in the sources |
 | ngo-ecosoc-6990 | Globe Aware | - | no country of the 195 in the sources |
+| ngo-ecosoc-695002 | Globe Eagle University | - | no country of the 195 in the sources |
 | ngo-ecosoc-1782 | Globe International | - | no country of the 195 in the sources |
 | ngo-ecosoc-614080 | Globethics | - | no country of the 195 in the sources |
 | ngo-ecosoc-1784 | Globetree | - | no country of the 195 in the sources |
@@ -1925,6 +1920,7 @@
 | ngo-ecosoc-37927 | Indigenous Information Network | - | no country of the 195 in the sources |
 | ngo-ecosoc-2100 | Indigenous Peoples' International Centre for Policy Research and Education | - | no country of the 195 in the sources |
 | ngo-ecosoc-606989 | Indira Gandhi Integral Education Centre | - | no country of the 195 in the sources |
+| ngo-ecosoc-601541 | Indo-European Chamber of Commerce and Industry | - | no country of the 195 in the sources |
 | ngo-ecosoc-695891 | Indonesia AIDS Coalition | - | no country of the 195 in the sources |
 | ngo-ecosoc-2134 | Indonesian Child Welfare Foundation, The | - | no country of the 195 in the sources |
 | ngo-ecosoc-691812 | Information Management and Support Services for Rural and Agricultural Development | - | no country of the 195 in the sources |
@@ -2029,6 +2025,7 @@
 | ngo-ecosoc-685853 | International Association of Fish Inspectors Inc | - | no country of the 195 in the sources |
 | ngo-ecosoc-735 | International Association of Gerontology and Geriatrics | - | no country of the 195 in the sources |
 | ngo-ecosoc-2291 | International Association of Homes and Services for the Ageing | - | no country of the 195 in the sources |
+| ngo-ecosoc-1063 | International Association of University Presidents | - | no country of the 195 in the sources |
 | ngo-ecosoc-870 | International Association of Women in Radio and Television | - | no country of the 195 in the sources |
 | ngo-ecosoc-638804 | International Association of World Peace Advocate | - | no country of the 195 in the sources |
 | ngo-ecosoc-681535 | International Association of Youth and Students for Peace, Inc. | - | no country of the 195 in the sources |
@@ -2039,7 +2036,6 @@
 | ngo-ecosoc-689214 | International Center For Living Aquatic Resource Management | - | no country of the 195 in the sources |
 | ngo-ecosoc-674847 | International Center for Cultural Studies USA Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-640359 | International Center for Ethno-Religious Mediation, Inc. | - | no country of the 195 in the sources |
-| ngo-ecosoc-2365 | International Center for Not-for-Profit Law (INCPL) | - | no country of the 195 in the sources |
 | ngo-ecosoc-682990 | International Center for the Study, Prevention and Treatment of Multigenerational Trauma Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-609837 | International Center of the Roerichs | - | no country of the 195 in the sources |
 | ngo-ecosoc-638483 | International Centre for Development Initiatives (ICDI) | - | no country of the 195 in the sources |
@@ -2111,6 +2107,7 @@
 | ngo-ecosoc-1617 | International Network for Sustainable Energy | - | no country of the 195 in the sources |
 | ngo-ecosoc-3120 | International Network of Basin Organizations / Reseau International des Organismes de Basin | - | no country of the 195 in the sources |
 | ngo-ecosoc-1799 | International Ontopsychology Association | - | no country of the 195 in the sources |
+| ngo-ecosoc-690808 | International Open University of Humanity Health Science and Peace | - | no country of the 195 in the sources |
 | ngo-ecosoc-676998 | International Organization for Human Right Development and Environment | - | no country of the 195 in the sources |
 | ngo-ecosoc-643981 | International Organization for Promoting Public Diplomacy, Science, Education and Youth Cooperation “Eurasian Commonwealth” | - | no country of the 195 in the sources |
 | ngo-ecosoc-602724 | International Organization for Victim Assistance | - | no country of the 195 in the sources |
@@ -2140,7 +2137,6 @@
 | ngo-ecosoc-666219 | International Union of Interventional Radiologists | - | no country of the 195 in the sources |
 | ngo-ecosoc-105 | International Union of Railways (UIC) | - | no country of the 195 in the sources |
 | ngo-ecosoc-688828 | International Urban Health Society | - | no country of the 195 in the sources |
-| ngo-ecosoc-638591 | International Veterinary Students Association (Ivsa) | - | no country of the 195 in the sources |
 | ngo-ecosoc-683815 | International Visitors Utah Council | - | no country of the 195 in the sources |
 | ngo-ecosoc-602612 | International Volunteer Organization for Women Education Development | - | no country of the 195 in the sources |
 | ngo-ecosoc-52654 | International Water Management Institute | - | no country of the 195 in the sources |
@@ -2199,6 +2195,7 @@
 | ngo-ecosoc-671708 | Jacobs-Abbey Global Institute for Leadership Studies Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-670408 | Jagriti Child and Youth Concern Nepal | - | no country of the 195 in the sources |
 | ngo-ecosoc-2092 | Jaime Guzman Errazuriz Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-629884 | James Madison University | - | no country of the 195 in the sources |
 | ngo-ecosoc-691421 | Jamesayobamidele Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-677072 | Jami al Hakeem Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-680839 | Jan Lok Kalyan Parishad | - | no country of the 195 in the sources |
@@ -2249,6 +2246,7 @@
 | ngo-ecosoc-682392 | Kahrizak Charity Institute for the Disabled & Elderly | - | no country of the 195 in the sources |
 | ngo-ecosoc-651175 | Kailash Satyarthi Children's Foundation of America, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-656884 | Kaleidoscope Human Rights Foundation Ltd. | - | no country of the 195 in the sources |
+| ngo-ecosoc-688191 | Kalinga Institute of Industrial Technology Deemed to be University | - | no country of the 195 in the sources |
 | ngo-ecosoc-663512 | Kallipatira | - | no country of the 195 in the sources |
 | ngo-ecosoc-629893 | Kalyani | - | no country of the 195 in the sources |
 | ngo-ecosoc-656580 | Kamer-Kadın Merkezi Eğitim Üretim Danışma, ve Dayanışma (KAMER) Vakfı | - | no country of the 195 in the sources |
@@ -2312,6 +2310,7 @@
 | ngo-ecosoc-690254 | KurNiv Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-613307 | Kuwait Association for The Basic Evaluators for Human Rights | - | no country of the 195 in the sources |
 | ngo-ecosoc-650623 | Kuwaiti Society for Autism | - | no country of the 195 in the sources |
+| ngo-ecosoc-7562 | Kyung Hee University | - | no country of the 195 in the sources |
 | ngo-ecosoc-5766 | L'Arche internationale | - | no country of the 195 in the sources |
 | ngo-ecosoc-691478 | LABRATS (Legacy of the Atomic Bomb. Recognition for Atomic Test Survivors) CIC | - | no country of the 195 in the sources |
 | ngo-ecosoc-602896 | LDC Watch | - | no country of the 195 in the sources |
@@ -2344,7 +2343,6 @@
 | ngo-ecosoc-633315 | Leadership Initiative for Transformation & Empowerment | - | no country of the 195 in the sources |
 | ngo-ecosoc-2884 | Leadership Watch | - | no country of the 195 in the sources |
 | ngo-ecosoc-673618 | League of Arab People Organization | - | no country of the 195 in the sources |
-| ngo-ecosoc-649100 | League of European Research Universities (LERU) | - | no country of the 195 in the sources |
 | ngo-ecosoc-692425 | League of Queens International Empowerment | - | no country of the 195 in the sources |
 | ngo-ecosoc-668064 | League of Women Voters of Nigeria | - | no country of the 195 in the sources |
 | ngo-ecosoc-1449 | League of Women Voters of the United States | - | no country of the 195 in the sources |
@@ -2360,6 +2358,7 @@
 | ngo-ecosoc-699980 | Legal and Justice Aid International | - | no country of the 195 in the sources |
 | ngo-ecosoc-700404 | Legale Genchi Diplomatic ETS | - | no country of the 195 in the sources |
 | ngo-ecosoc-700261 | Legend Golden Care Foundation | - | no country of the 195 in the sources |
+| ngo-ecosoc-609920 | Lehigh University | - | no country of the 195 in the sources |
 | ngo-ecosoc-691448 | Les Amis des Droits de l’Homme | - | no country of the 195 in the sources |
 | ngo-ecosoc-636439 | Les Amis du Projet Imagine | - | no country of the 195 in the sources |
 | ngo-ecosoc-5512 | Les Enfants de Frankie | - | no country of the 195 in the sources |
@@ -2636,6 +2635,7 @@
 | ngo-ecosoc-670180 | New Nigeria Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-621291 | New Progressive Alliance | - | no country of the 195 in the sources |
 | ngo-ecosoc-2900 | New South Wales council for Civil Liberties | - | no country of the 195 in the sources |
+| ngo-ecosoc-39161 | New York University | - | no country of the 195 in the sources |
 | ngo-ecosoc-2649 | New Zealand Family Planning Association, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-617651 | News Network | - | no country of the 195 in the sources |
 | ngo-ecosoc-680786 | Ngece Rinjeu Foundation | - | no country of the 195 in the sources |
@@ -2671,6 +2671,7 @@
 | ngo-ecosoc-668629 | North America Photography Association | - | no country of the 195 in the sources |
 | ngo-ecosoc-604858 | North Indian Educational Trust | - | no country of the 195 in the sources |
 | ngo-ecosoc-664969 | North-East Affected Area Development Society (NEADS) | - | no country of the 195 in the sources |
+| ngo-ecosoc-617484 | Northeastern University | - | no country of the 195 in the sources |
 | ngo-ecosoc-610860 | Northern CCB | - | no country of the 195 in the sources |
 | ngo-ecosoc-663542 | Northern Council for Global Cooperation | - | no country of the 195 in the sources |
 | ngo-ecosoc-3092 | Norwegian Forum for Environment and Development | - | no country of the 195 in the sources |
@@ -2784,6 +2785,7 @@
 | ngo-ecosoc-697509 | POP Movement, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-667455 | POS Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-663108 | PRO Leadership Global Inc. | - | no country of the 195 in the sources |
+| ngo-ecosoc-626133 | Pace University | - | no country of the 195 in the sources |
 | ngo-ecosoc-617580 | Pacific Disability Forum | - | no country of the 195 in the sources |
 | ngo-ecosoc-612748 | Pacific Islands Association of Non-Governmental Organisations | - | no country of the 195 in the sources |
 | ngo-ecosoc-625578 | Pacific Links Foundation | - | no country of the 195 in the sources |
@@ -2833,6 +2835,7 @@
 | ngo-ecosoc-608277 | Patim | - | no country of the 195 in the sources |
 | ngo-ecosoc-687577 | Patriotic Citizen Initiatives | - | no country of the 195 in the sources |
 | ngo-ecosoc-688960 | Pax Press | - | no country of the 195 in the sources |
+| ngo-ecosoc-505 | Pax Romana (International Catholic Movement for Intellectual and Cultural Affairs and International Movement of Catholic Students) | - | no country of the 195 in the sources |
 | ngo-ecosoc-2152 | Peace Boat | - | no country of the 195 in the sources |
 | ngo-ecosoc-610040 | Peace Brigades International | - | no country of the 195 in the sources |
 | ngo-ecosoc-626053 | Peace Brigades International Switzerland | - | no country of the 195 in the sources |
@@ -2972,7 +2975,39 @@
 | ngo-ecosoc-685946 | primelocation care givers foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-681708 | İnformasiya Təşəbbüslərinə Dəstək” ictimai birliyi | - | no country of the 195 in the sources |
 | ngo-ecosoc-662499 | İqtisadi və Sosial İnkişaf Mərkəzi" ictimai birliyi | - | no country of the 195 in the sources |
+| ngo-wd-q513666 | German Alpine Club | DEU | not a classic NGO (Wikidata: Alpine Club) |
+| ngo-wd-q4967069 | Briercrest College and Seminary | CAN | not a classic NGO (Wikidata: Bible college) |
+| ngo-wd-q5149619 | Columbia Bible College | CAN | not a classic NGO (Wikidata: Bible college) |
+| ngo-wd-q5738694 | Heritage Baptist College and Heritage Theological Seminary | CAN | not a classic NGO (Wikidata: Bible college) |
+| ngo-wd-q6858490 | Millar College of the Bible | CAN | not a classic NGO (Wikidata: Bible college) |
+| ngo-wd-q7252500 | Providence University College and Theological Seminary | CAN | not a classic NGO (Wikidata: Bible college) |
+| ngo-wd-q7637845 | Summit Pacific College | CAN | not a classic NGO (Wikidata: Bible college) |
+| ngo-wd-q4815630 | Athol Murray College of Notre Dame | CAN | not a classic NGO (Wikidata: Catholic school) |
+| ngo-wd-q7589134 | St. Joseph's College | CAN | not a classic NGO (Wikidata: Catholic school) |
+| ngo-wd-q13125313 | Caldey Abbey | GBR | not a classic NGO (Wikidata: Trappist monastery) |
+| ngo-wd-q3423622 | Regis College | CAN | not a classic NGO (Wikidata: affiliated school) |
+| ngo-wd-q27922184 | The Lobkowicz Collections | CZE | not a classic NGO (Wikidata: art museum) |
+| ngo-wd-q134126419 | Rootes Car Club Norway | NOR | not a classic NGO (Wikidata: car club) |
 | ngo-wd-q4791267 | Arizona Chamber of Commerce and Industry | USA | not a classic NGO (Wikidata: chamber of commerce) |
+| ngo-wd-q5030647 | Burman University | CAN | not a classic NGO (Wikidata: church college) |
+| ngo-wd-q6411128 | The King's University | CAN | not a classic NGO (Wikidata: church college) |
+| ngo-wd-q1391246 | FH Diakonie, Bielefeld | DEU | not a classic NGO (Wikidata: church college) |
+| ngo-wd-q1565761 | HOSI Linz | AUT | not a classic NGO (Wikidata: club) |
+| ngo-wd-q106311308 | Animal Rights Switzerland | CHE | not a classic NGO (Wikidata: club) |
+| ngo-wd-q47510201 | Athleten Deutschland | DEU | not a classic NGO (Wikidata: club) |
+| ngo-wd-q1008917 | Bundesverband Leseförderung | DEU | not a classic NGO (Wikidata: club) |
+| ngo-wd-q100743737 | Forum Queeres Archiv München e. V.– LGBTIQ* in History and Culture | DEU | not a classic NGO (Wikidata: club) |
+| ngo-wd-q112993250 | Queer Bayreuth | DEU | not a classic NGO (Wikidata: club) |
+| ngo-wd-q69504640 | Safia | DEU | not a classic NGO (Wikidata: club) |
+| ngo-wd-q2513778 | Verband der Ersatzkassen | DEU | not a classic NGO (Wikidata: club) |
+| ngo-wd-q5154811 | Community Media Association | GBR | not a classic NGO (Wikidata: club) |
+| ngo-wd-q15854859 | Wirtschaftskammer Liechtenstein | LIE | not a classic NGO (Wikidata: club) |
+| ngo-wd-q989665 | Student Association of Energy | HUN | not a classic NGO (Wikidata: college for advanced studies) |
+| ngo-wd-q3339096 | Newbold College | GBR | not a classic NGO (Wikidata: college) |
+| ngo-wd-q18483769 | Centro Dramático de Évora | PRT | not a classic NGO (Wikidata: college) |
+| ngo-wd-q23138 | Chaos Computer Club | DEU | not a classic NGO (Wikidata: computer club) |
+| ngo-wd-q1162013 | Hungarian Cyclists’ Club | HUN | not a classic NGO (Wikidata: cycling club) |
+| ngo-wd-q136801422 | Nomad Cycling Club | MNG | not a classic NGO (Wikidata: cycling club) |
 | ngo-wd-q1009131 | Bundesverband Öffentlicher Banken Deutschlands | DEU | not a classic NGO (Wikidata: employers' organization) |
 | ngo-wd-q19365640 | Association of French Industry and Agriculture | FRA | not a classic NGO (Wikidata: employers' organization) |
 | ngo-wd-q1769256 | Confederation of Norwegian Enterprise | NOR | not a classic NGO (Wikidata: employers' organization) |
@@ -2980,6 +3015,8 @@
 | ngo-wd-q7061138 | Norwegian Hospitality Association | NOR | not a classic NGO (Wikidata: employers' organization) |
 | ngo-wd-q116251665 | Renewables Norway | NOR | not a classic NGO (Wikidata: employers' organization) |
 | ngo-wd-q5440856 | Virke - Federation of Norwegian Enterprise | NOR | not a classic NGO (Wikidata: employers' organization) |
+| ngo-wd-q3152392 | Institut national de l'image et du son | CAN | not a classic NGO (Wikidata: film school) |
+| ngo-wd-q448807 | National Film and Television School | GBR | not a classic NGO (Wikidata: film school) |
 | ngo-wd-q131678692 | Hind Rajab Foundation | BEL | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q10286369 | FUMDHAM | BRA | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q135406899 | Latin American Center for Internet Research | CHL | not a classic NGO (Wikidata: foundation) |
@@ -3004,7 +3041,6 @@
 | ngo-wd-q6886227 | Mo Ibrahim Foundation | GBR | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q98590334 | Dagbani Wikimedians User Group | GHA | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q113720624 | Sung Biela Foundation | GHA | not a classic NGO (Wikidata: foundation) |
-| ngo-wd-q138184487 | Pondok Pesantren Daarut Tauhiid | IDN | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q6961753 | Namibia Nature Foundation | NAM | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q17320511 | Caritas Norway | NOR | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q106916609 | Cyber-Complex Foundation | POL | not a classic NGO (Wikidata: foundation) |
@@ -3018,15 +3054,25 @@
 | ngo-wd-q137486301 | Music for Ukraine | UKR | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q137473739 | Protect Ukraine | UKR | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q4813718 | Athlete Ally | USA | not a classic NGO (Wikidata: foundation) |
-| ngo-ecosoc-2740 | Center for Inquiry | USA | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q5570513 | Global Network Initiative | USA | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q1798416 | Rainforest Fund | USA | not a classic NGO (Wikidata: foundation) |
-| ngo-wd-q16932185 | Robert & Ethel Kennedy Human Rights Center | USA | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q60741070 | Tech:NYC | USA | not a classic NGO (Wikidata: foundation) |
+| ngo-wd-q5123283 | City Literary Institute | GBR | not a classic NGO (Wikidata: further education college) |
+| ngo-wd-q7840079 | Triangle Program | CAN | not a classic NGO (Wikidata: high school) |
+| ngo-wd-q626235 | Harvey Milk High School | USA | not a classic NGO (Wikidata: high school) |
+| ngo-wd-q62071013 | Association of bavarian hiking clubs | DEU | not a classic NGO (Wikidata: hiking club) |
+| ngo-wd-q1611040 | Association of german hiking clubs | DEU | not a classic NGO (Wikidata: hiking club) |
+| ngo-wd-q1580546 | Odenwald Club | DEU | not a classic NGO (Wikidata: hiking club) |
+| ngo-wd-q897078 | Schwarzwaldverein | DEU | not a classic NGO (Wikidata: hiking club) |
+| ngo-wd-q1739346 | Wiehengebirgsverband Weser-Ems | DEU | not a classic NGO (Wikidata: hiking club) |
+| ngo-wd-q1492844 | Swedish Tourist Association | SWE | not a classic NGO (Wikidata: hiking club) |
+| ngo-wd-q58308940 | Gonoshasthaya Kendra | BGD | not a classic NGO (Wikidata: hospital) |
+| ngo-wd-q5908758 | Hospital of St John and St Elizabeth | GBR | not a classic NGO (Wikidata: hospital) |
+| ngo-wd-q126425943 | Moscow house of war and armed forces veterans | RUS | not a classic NGO (Wikidata: hospital) |
+| ngo-wd-q1624742 | Woldingham School | GBR | not a classic NGO (Wikidata: independent school) |
 | ngo-wd-q4823783 | Australian Academy of Technology and Engineering | AUS | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q115095 | Institut de Droit International | CHE | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q110700173 | China Folklore Society | CHN | not a classic NGO (Wikidata: learned society) |
-| ngo-ecosoc-2301 | International Sociological Association | ESP | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q31210699 | Association for Nutrition | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q4809560 | Association for the Scientific Study of Anomalous Phenomena | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q894631 | Botanical Society of Britain and Ireland | GBR | not a classic NGO (Wikidata: learned society) |
@@ -3042,14 +3088,12 @@
 | ngo-wd-q1230936 | Geological Society of London | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q24026234 | German History Society | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q48809780 | Historical Model Railway Society | GBR | not a classic NGO (Wikidata: learned society) |
-| ngo-wd-q6040741 | Institute of Physics and Engineering in Medicine | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q1666310 | International African Institute | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q114932805 | International Association for the Study of Scottish Literatures | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q44093201 | Lincolnshire Naturalists' Union | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q30591773 | Manchester Geographical Society | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q3285345 | Manchester Literary and Philosophical Society | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q7552132 | Microbiology Society | GBR | not a classic NGO (Wikidata: learned society) |
-| ngo-wd-q7067964 | Nuclear Institute | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q7309168 | Regional Studies Association | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q1419633 | Royal Anthropological Institute of Great Britain and Ireland | GBR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q1032739 | Royal Horticultural Society | GBR | not a classic NGO (Wikidata: learned society) |
@@ -3071,22 +3115,19 @@
 | ngo-wd-q94247227 | Польское токсикологическое общество | POL | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q7362527 | Romanian Academic Society | ROU | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q4330293 | Obshchestvo izuchenii͡a russkoĭ usadʹby | RUS | not a classic NGO (Wikidata: learned society) |
-| ngo-ecosoc-2247 | Russian Academy of Natural Sciences | RUS | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q12164002 | Українське мінералогічне товариство | UKR | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q97277839 | Українське товариство генетиків і селекціонерів імені М. І. Вавилова | UKR | not a classic NGO (Wikidata: learned society) |
-| ngo-ecosoc-608800 | American Academy of Arts and Sciences | USA | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q67145373 | Global Association of Economics Education | USA | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q29098023 | Heterodox Academy | USA | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q2660414 | International Association for the Study of Pain | USA | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q1358200 | Society for Conservation Biology | USA | not a classic NGO (Wikidata: learned society) |
 | ngo-wd-q42026765 | Society for Ecological Restoration | USA | not a classic NGO (Wikidata: learned society) |
+| ngo-wd-q7591976 | St. Thomas More College | CAN | not a classic NGO (Wikidata: liberal arts college) |
 | ngo-wd-q3523113 | European Alliance of Associations for Rheumatology | CHE | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q2655368 | World Heart Federation | CHE | not a classic NGO (Wikidata: medical association) |
-| ngo-wd-q180442 | World Medical Association | FRA | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q21999978 | Association of British Neurologists | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q96372915 | BASICS Scotland | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q4969513 | British Association for Counselling and Psychotherapy | GBR | not a classic NGO (Wikidata: medical association) |
-| ngo-wd-q15994954 | British Orthopaedic Association | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q4970609 | British Pharmacological Society | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q16246767 | British Society of Antimicrobial Chemotherapy | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q4096600 | British Society of Gastroenterology | GBR | not a classic NGO (Wikidata: medical association) |
@@ -3094,26 +3135,38 @@
 | ngo-wd-q22905863 | International Society of Ultrasound in Obstetrics and Gynecology | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q7002150 | Neuroblastoma UK | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q7144821 | Pathological Society of Great Britain and Ireland | GBR | not a classic NGO (Wikidata: medical association) |
+| ngo-wd-q7373980 | Royal College of General Practitioners | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q7373986 | Royal College of Radiologists | GBR | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q7374849 | Royal Society of Tropical Medicine and Hygiene | GBR | not a classic NGO (Wikidata: medical association) |
-| ngo-ecosoc-6555 | American Academy of Pediatrics, The | USA | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q5146628 | College of American Pathologists | USA | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q5463391 | Flying Doctors of America | USA | not a classic NGO (Wikidata: medical association) |
 | ngo-wd-q5528673 | Health Professionals Advancing LGBTQ+ Equality | USA | not a classic NGO (Wikidata: medical association) |
+| ngo-wd-q1235173 | Documentation and Cultural Centre of German Sinti and Roma | DEU | not a classic NGO (Wikidata: military museum) |
+| ngo-wd-q139806283 | Boryviter Military School | UKR | not a classic NGO (Wikidata: military school) |
+| ngo-wd-q24349 | ADFC | DEU | not a classic NGO (Wikidata: motor club) |
+| ngo-wd-q2516162 | Verkehrsclub Deutschland | DEU | not a classic NGO (Wikidata: motor club) |
+| ngo-wd-q42559106 | Centrum voor Religieuze Kunst en Cultuur | BEL | not a classic NGO (Wikidata: museum) |
+| ngo-wd-q61931556 | Mask and Carnival Museum | BEL | not a classic NGO (Wikidata: museum) |
+| ngo-wd-q565296 | Anne Frank Zentrum | DEU | not a classic NGO (Wikidata: museum) |
+| ngo-wd-q3072229 | Sons of the American Revolution | USA | not a classic NGO (Wikidata: museum) |
+| ngo-wd-q18479916 | Child Citizen Orchestra | BRA | not a classic NGO (Wikidata: music school) |
+| ngo-wd-q116471317 | Carrefour mondial de l'accordéon | CAN | not a classic NGO (Wikidata: music school) |
 | ngo-wd-q1894381 | Dignity Party | AUS | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q63351055 | Unabhängiger Bauernbund | AUT | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q4672493 | Accessibility without Exclusion | CRI | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q4922091 | Black Unity and Freedom Party | GBR | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q5163036 | Conservative Democratic Alliance | GBR | not a classic NGO (Wikidata: political party) |
-| ngo-wd-q1657077 | Women's International Zionist Organization | ISR | not a classic NGO (Wikidata: political party) |
-| ngo-ecosoc-1115 | Nonviolent Radical Party, Transnational and Transparty | ITA | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q641600 | Japanese Communist Party | JPN | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q15717618 | Morena | MEX | not a classic NGO (Wikidata: political party) |
 | ngo-wd-q56367550 | Democratic Axe Party | UKR | not a classic NGO (Wikidata: political party) |
+| ngo-wd-q43081007 | National Woman's Press Association | USA | not a classic NGO (Wikidata: press club) |
+| ngo-wd-q115566157 | Woman's National Press Association | USA | not a classic NGO (Wikidata: press club) |
+| ngo-wd-q7157432 | Peace River Bible Institute | CAN | not a classic NGO (Wikidata: private college in Alberta) |
+| ngo-wd-q7237816 | Prairie College | CAN | not a classic NGO (Wikidata: private college in Alberta) |
+| ngo-wd-q7914822 | Vanguard College | CAN | not a classic NGO (Wikidata: private college in Alberta) |
 | ngo-wd-q5326610 | Early Childhood Australia | AUS | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q16980506 | European Writers' Council | BEL | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4855354 | Bangladesh National Women Lawyers' Association | BGD | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-674633 | Canadian Medical Association | CAN | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q627483 | Arbeitsgemeinschaft Dokumentarfilm | DEU | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q1008913 | Bundesverband Kunsthandwerk | DEU | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q782391 | German Bar Association | DEU | not a classic NGO (Wikidata: professional association) |
@@ -3147,28 +3200,41 @@
 | ngo-wd-q16717661 | Union Advocates Of Ukraine | UKR | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4743266 | American Business Women's Association | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q463665 | American Cancer Society | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-2411 | American Planning Association | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-634474 | American Psychiatric Association | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-1978 | American Psychological Association | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4809535 | Association for Women Geoscientists | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q2867685 | Association for Women in Mathematics | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4809540 | Association for Women in Sports Media | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-wd-q4809652 | Association of Black Women Historians | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q128123357 | Baddies in Tech | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q5138339 | Coastal and Estuarine Research Federation | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-1802 | International Association of Women Judges | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q6053401 | International Society for Prevention of Child Abuse and Neglect | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q17007981 | National Association for Female Executives | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-2237 | National Association of Criminal Defense Lawyers | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q23308151 | National Association of Women Judges | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q20858136 | National Association of Women Lawyers | USA | not a classic NGO (Wikidata: professional association) |
-| ngo-ecosoc-1111 | National Council of Negro Women | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q6972861 | National Gay & Lesbian Chamber of Commerce | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q6974089 | National Lesbian and Gay Journalists Association | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q30645149 | Pacific Coast Women's Press Association | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q20031587 | Southern Association for Women Historians | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q12163964 | Ukrainian Medical Association of North America | USA | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q8031441 | Women in German | USA | not a classic NGO (Wikidata: professional association) |
+| ngo-wd-q24069172 | Deutscher Rat für Vogelschutz | DEU | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q20643349 | Academy of Medical Educators, United Kingdom | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q15994954 | British Orthopaedic Association | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q5086816 | Chartered Institute of Linguists | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q20656561 | Faculty of Medical Leadership and Management | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q20657450 | Faculty of Occupational Medicine | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q6040741 | Institute of Physics and Engineering in Medicine | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q7067964 | Nuclear Institute | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q55098928 | Royal College of Speech and Language Therapists | GBR | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q1226145 | Hungarian National Mining and Metallurgical Association | HUN | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q1162038 | Kárpitművészek Egyesülete | HUN | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q112961434 | Japan Network of Women Engineers and Scientists | JPN | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q4743104 | American Association of University Professors | USA | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q4809538 | Association for Women in Science | USA | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q4809652 | Association of Black Women Historians | USA | not a classic NGO (Wikidata: regulatory college) |
+| ngo-wd-q4650304 | ABET | USA | not a classic NGO (Wikidata: school accreditor) |
+| ngo-wd-q744144 | Association to Advance Collegiate Schools of Business | USA | not a classic NGO (Wikidata: school accreditor) |
+| ngo-wd-q5643629 | Halton Catholic District School Board | CAN | not a classic NGO (Wikidata: school district of Canada) |
+| ngo-wd-q464214 | Hong Kong Academy for Gifted Education | CHN | not a classic NGO (Wikidata: school) |
+| ngo-wd-q138184487 | Pondok Pesantren Daarut Tauhiid | IDN | not a classic NGO (Wikidata: school) |
 | ngo-wd-q1849551 | Spanish Ornithological Society | ESP | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q2986489 | Commission for the Geological Map of the World | FRA | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q4752272 | Anatomical Society | GBR | not a classic NGO (Wikidata: scientific society) |
@@ -3183,14 +3249,17 @@
 | ngo-wd-q12592630 | Association of Korean Woman Scientists and Engineers | KOR | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q7015226 | New Zealand Association of Scientists | NZL | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q11822781 | Polish Ethnological Society | POL | not a classic NGO (Wikidata: scientific society) |
-| ngo-ecosoc-1698 | International Union of Economists | RUS | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q926957 | Ukraine Nature Conservation Society | UKR | not a classic NGO (Wikidata: scientific society) |
-| ngo-ecosoc-695108 | American Geophysical Union | USA | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q1127365 | Conservation International | USA | not a classic NGO (Wikidata: scientific society) |
-| ngo-ecosoc-2741 | International Association of Applied Psychology | USA | not a classic NGO (Wikidata: scientific society) |
 | ngo-wd-q7554882 | Soil Science Society of America | USA | not a classic NGO (Wikidata: scientific society) |
+| ngo-wd-q25402775 | Los Dogos | ARG | not a classic NGO (Wikidata: sports club) |
+| ngo-wd-q1445060 | Frankfurter Volleyball Verein | DEU | not a classic NGO (Wikidata: sports club) |
+| ngo-wd-q35387684 | SC Janus Sport | DEU | not a classic NGO (Wikidata: sports club) |
+| ngo-wd-q2333314 | Startschuss, Schwul/Lesbischer Sportverein Hamburg | DEU | not a classic NGO (Wikidata: sports club) |
+| ngo-wd-q1554434 | Vorspiel – Queerer Sportverein Berlin e.V. | DEU | not a classic NGO (Wikidata: sports club) |
+| ngo-wd-q3362465 | Panteres Grogues | ESP | not a classic NGO (Wikidata: sports club) |
+| ngo-wd-q12641191 | Ri rock climbing klub | HRV | not a classic NGO (Wikidata: sports club) |
 | ngo-wd-q15809820 | Floorball Association Berlin-Brandenburg | DEU | not a classic NGO (Wikidata: sports governing body) |
-| ngo-wd-q513666 | German Alpine Club | DEU | not a classic NGO (Wikidata: sports governing body) |
 | ngo-wd-q6978115 | National Rifle Association | GBR | not a classic NGO (Wikidata: sports governing body) |
 | ngo-wd-q16932353 | National Small-bore Rifle Association | GBR | not a classic NGO (Wikidata: sports governing body) |
 | ngo-wd-q62395768 | World Silambam Association | MYS | not a classic NGO (Wikidata: sports governing body) |
@@ -3198,6 +3267,7 @@
 | ngo-wd-q30897653 | Judo Federation of Ukraine | UKR | not a classic NGO (Wikidata: sports governing body) |
 | ngo-wd-q50413583 | Асоціація футболу інвалідів України | UKR | not a classic NGO (Wikidata: sports governing body) |
 | ngo-wd-q123755659 | International Gay Figure Skating Union | USA | not a classic NGO (Wikidata: sports governing body) |
+| ngo-wd-q5891423 | Halegatos | ESP | not a classic NGO (Wikidata: sports team) |
 | ngo-wd-q16982131 | Instituto para la Gobernanza Mundial | BEL | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1072857 | International Crisis Group | BEL | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5062536 | Centre for Policy Dialogue | BGD | not a classic NGO (Wikidata: think tank) |
@@ -3210,9 +3280,6 @@
 | ngo-wd-q756504 | Atlantik-Brücke | DEU | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q317555 | Bertelsmann Stiftung | DEU | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1376496 | European Council on Foreign Relations | DEU | not a classic NGO (Wikidata: think tank) |
-| ngo-ecosoc-2704 | Foundation for the Rights of Future Generations | DEU | not a classic NGO (Wikidata: think tank) |
-| ngo-wd-q836469 | Friedrich Ebert Foundation | DEU | not a classic NGO (Wikidata: think tank) |
-| ngo-wd-q338433 | Friedrich Naumann Foundation | DEU | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q879172 | German Council on Foreign Relations | DEU | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1439265 | Green Budget Germany | DEU | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1663580 | Initiative Neue Soziale Marktwirtschaft | DEU | not a classic NGO (Wikidata: think tank) |
@@ -3228,7 +3295,6 @@
 | ngo-wd-q6040807 | Institute of Race Relations | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1206709 | International Institute for Strategic Studies | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q6973640 | National Institute of Economic and Social Research | GBR | not a classic NGO (Wikidata: think tank) |
-| ngo-wd-q17012403 | Next Century Foundation | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q2042808 | Oxford Research Group | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q48739401 | Prosperity Institute | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q7380092 | Runnymede Trust | GBR | not a classic NGO (Wikidata: think tank) |
@@ -3236,9 +3302,7 @@
 | ngo-wd-q7742289 | The International Centre for the Study of Radicalisation and Political Violence | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q3662220 | Young Foundation | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q20526419 | Udruga Obnova | HRV | not a classic NGO (Wikidata: think tank) |
-| ngo-ecosoc-2380 | Millennium Institute | HUN | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5333360 | Economic Cooperation Foundation | ISR | not a classic NGO (Wikidata: think tank) |
-| ngo-ecosoc-793 | Society for International Development | ITA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q20431667 | IDIS "Viitorul" | MDA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q15895866 | Institute for Strategic Studies | POL | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q11713087 | The Kosciuszko Institute | POL | not a classic NGO (Wikidata: think tank) |
@@ -3250,14 +3314,11 @@
 | ngo-wd-q756373 | Atlantic Council | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q4961241 | Brennan Center for Justice | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1153595 | Carnegie Endowment for International Peace | USA | not a classic NGO (Wikidata: think tank) |
-| ngo-ecosoc-2062 | Center for Migration Studies of New York, The | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1053614 | Center for Strategic and International Studies | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5059931 | Center for a New American Security | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5122658 | Citizens Against Government Waste | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5403461 | Ethics and Public Policy Center | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5476101 | Fourth Freedom Forum | USA | not a classic NGO (Wikidata: think tank) |
-| ngo-ecosoc-1143 | Freedom House | USA | not a classic NGO (Wikidata: think tank) |
-| ngo-ecosoc-1241 | Institute for Agriculture and Trade Policy | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q1191051 | International Food Policy Research Institute | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q6052366 | International Peace Institute | USA | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q380412 | Jewish Institute for National Security Affairs | USA | not a classic NGO (Wikidata: think tank) |
@@ -3269,15 +3330,11 @@
 | ngo-wd-q6955391 | NSW Minerals Council | AUS | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q1398808 | Alliance of Community Radio Austria | AUT | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q15852557 | Alliance of Community Television Austria | AUT | not a classic NGO (Wikidata: trade association) |
-| ngo-ecosoc-1618 | International Organization of Supreme Audit Institutions | AUT | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q110892229 | Alliance of Passenger Rail New Entrants in Europe | BEL | not a classic NGO (Wikidata: trade association) |
-| ngo-wd-q29581743 | European Association of Automotive Suppliers | BEL | not a classic NGO (Wikidata: trade association) |
-| ngo-wd-q1376673 | European Industrial Gases Association | BEL | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q21393356 | International Union of Wagon Keepers | BEL | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q594178 | Union des Industries Ferroviaires Européennes | BEL | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q16955235 | Canadian Association of Petroleum Producers | CAN | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q86680386 | Conseil de la culture de l'Abitibi-Témiscamingue | CAN | not a classic NGO (Wikidata: trade association) |
-| ngo-ecosoc-544 | International Commission of Jurists | CHE | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q1009100 | Bundesverband Evangelische Behindertenhilfe | DEU | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q897107 | Confederation of German Employers' Associations | DEU | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q2513578 | Deutscher Verband für Kunstgeschichte | DEU | not a classic NGO (Wikidata: trade association) |
@@ -3313,7 +3370,12 @@
 | ngo-wd-q5074427 | Charitable Society for Social Welfare | YEM | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q6413788 | Kingswood University | CAN | not a classic NGO (Wikidata: university) |
 | ngo-wd-q6569551 | Trinity Western University | CAN | not a classic NGO (Wikidata: university) |
-| ngo-ecosoc-601541 | Indo-European Chamber of Commerce and Industry | None | not a classic NGO (name contains "chamber of commerce") |
+| ngo-wd-q104843240 | Jivdaya Charitable Trust | IND | not a classic NGO (Wikidata: veterinary hospital) |
+| ngo-wd-q2319576 | St. Josef-Stiftung | CHE | not a classic NGO (Wikidata: vocational school) |
+| ngo-wd-q24273550 | Lykeion ton Ellinidon | GRC | not a classic NGO (Wikidata: women's club) |
+| ngo-wd-q7889725 | National Society of United States Daughters of 1812 | USA | not a classic NGO (Wikidata: women's club) |
+| ngo-wd-q6515853 | Norwegian Automobile Federation | NOR | not a classic NGO (name contains "automobile federation") |
+| ngo-wd-q12076057 | Automobile Federation of Ukraine | UKR | not a classic NGO (name contains "automobile federation") |
 | ngo-wd-q4743336 | American Chamber of Commerce to the European Union | BEL | not a classic NGO (name contains "chamber of commerce") |
 | ngo-wd-q848633 | International Chamber of Commerce | FRA | not a classic NGO (name contains "chamber of commerce") |
 | ngo-iati-ukgcc | UK-Ghana Chamber of Commerce | GHA | not a classic NGO (name contains "chamber of commerce") |
@@ -3324,32 +3386,9 @@
 | ngo-wd-q7862988 | U.S.-Azerbaijan Chamber of Commerce | USA | not a classic NGO (name contains "chamber of commerce") |
 | ngo-wd-q132153770 | Chambre de commerce internationale de la république démocratique du Congo | COD | not a classic NGO (name contains "chambre de commerce") |
 | ngo-wd-q16952238 | Ministry of Human Rights (Pakistan) | PAK | not a classic NGO (name contains "ministry of") |
-| ngo-ecosoc-4347 | American Association of University Women | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-685293 | Association of University Radiologists | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-605494 | Association of Women with University Education" Social Organization | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-1565 | Canadian Federation of University Women | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-672481 | De Montfort University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-52573 | DePaul University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-637501 | Department of Political Science and Public Administration of the University of Athens Alumni Association | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-695002 | Globe Eagle University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-1063 | International Association of University Presidents | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-690808 | International Open University of Humanity Health Science and Peace | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-629884 | James Madison University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-688191 | Kalinga Institute of Industrial Technology Deemed to be University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-7562 | Kyung Hee University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-609920 | Lehigh University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-39161 | New York University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-617484 | Northeastern University | None | not a classic NGO (name contains "university") |
-| ngo-ecosoc-626133 | Pace University | None | not a classic NGO (name contains "university") |
-| ngo-wd-q5030647 | Burman University | CAN | not a classic NGO (name contains "university") |
-| ngo-ecosoc-2874 | International Relations Students' Association of McGill University | CAN | not a classic NGO (name contains "university") |
-| ngo-wd-q7252500 | Providence University College and Theological Seminary | CAN | not a classic NGO (name contains "university") |
-| ngo-wd-q6411128 | The King's University | CAN | not a classic NGO (name contains "university") |
 | ngo-wd-q57939861 | University of Western Ontario Libraries | CAN | not a classic NGO (name contains "university") |
 | ngo-iati-wusc | World University Service of Canada | CAN | not a classic NGO (name contains "university") |
-| ngo-ecosoc-689964 | China Agricultural University | CHN | not a classic NGO (name contains "university") |
 | ngo-wd-q6979185 | National Union of University Students in Finland | FIN | not a classic NGO (name contains "university") |
-| ngo-ecosoc-293 | International Association of University Professors and Lecturers | FRA | not a classic NGO (name contains "university") |
 | ngo-wd-q5038475 | Cardiff University Students' Union | GBR | not a classic NGO (name contains "university") |
 | ngo-wd-q5338282 | Edinburgh University Students' Association | GBR | not a classic NGO (name contains "university") |
 | ngo-wd-q6516152 | Leeds University Union | GBR | not a classic NGO (name contains "university") |
@@ -3359,13 +3398,8 @@
 | ngo-wd-q7895997 | University of Nottingham Students' Union | GBR | not a classic NGO (name contains "university") |
 | ngo-wd-q7896338 | University of Southampton Students' Union | GBR | not a classic NGO (name contains "university") |
 | ngo-wd-q7896674 | University of York Students' Union | GBR | not a classic NGO (name contains "university") |
-| ngo-ecosoc-1524 | Brahma Kumaris World Spiritual University | IND | not a classic NGO (name contains "university") |
-| ngo-ecosoc-657548 | Center for Human Rights Studies of Mofid University | IRN | not a classic NGO (name contains "university") |
 | ngo-wd-q22369348 | Maidan Open University | UKR | not a classic NGO (name contains "university") |
-| ngo-wd-q4743104 | American Association of University Professors | USA | not a classic NGO (name contains "university") |
 | ngo-wd-q4810103 | Association of University Centers on Disabilities | USA | not a classic NGO (name contains "university") |
-| ngo-ecosoc-5115 | Georgetown University (The) | USA | not a classic NGO (name contains "university") |
-| ngo-ecosoc-685223 | Association Pour La Diffusion Des Droits De L'homme Dans L'universite De Lyon | FRA | not a classic NGO (name contains "université") |
 | ngo-ecosoc-7579 | Alliance Defending Freedom | USA | right-wing (Wikidata political ideology: Christian right) |
 | ngo-ecosoc-2131 | Family Research Council | USA | right-wing (Wikidata political ideology: Christian right) |
 | ngo-ecosoc-2362 | Heritage Foundation, The | USA | right-wing (Wikidata political ideology: Christian right) |
@@ -3378,3 +3412,4 @@
 | ngo-wd-q1326235 | NumbersUSA | USA | right-wing (Wikidata political ideology: opposition to immigration) |
 | ngo-wd-q585727 | John Birch Society | USA | right-wing (Wikidata political ideology: paleoconservatism) |
 | ngo-wd-q111947549 | Republicans for National Renewal | USA | right-wing (Wikidata political ideology: right-wing populism) |
+| ngo-wd-q5440746 | Federation for American Immigration Reform | USA | right-wing (anti-immigration group; English Wikipedia; listed as a hate group by the Southern Poverty Law Center) (checked by hand) |

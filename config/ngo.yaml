@@ -106,16 +106,26 @@ exclude:
   wikidata_not_ngo_classes: [trade association, professional association, employers' organization, business association,
                              chamber of commerce, trade union, political party, sports governing body, medical association,
                              learned society, scientific society, think tank, university, foundation]
+  # 11.11.2026 sample check: schools, hospitals, clubs ... that Wikidata also calls "charitable organization" or
+  # "NGO": left out when any Wikidata class CONTAINS one of these words
+  wikidata_not_ngo_class_words: [school, college, hospital, museum, club, monastery, abbey, parish, convent,
+                                 political faction, sports team, kindergarten]
+  # ... except these classes (service clubs like Rotary, Lions, Zonta, Kiwanis are classic partner NGOs)
+  wikidata_class_words_keep: [service club]
   # right-wing NGOs (owner 10.11.2026: "alles raus was rechts ist"; mainstream conservative stays, like for media):
   # Wikidata political ideology, in addition to the far-right list of config/rules.yaml
   wikidata_ideologies_right: [right-wing populism, national conservatism, ultraconservatism, paleoconservatism, Christian right,
                               ethnic nationalism, white nationalism, Identitarian movement, opposition to immigration, Islamophobia,
                               anti-gender movement, anti-transgender activism, anti-feminism, homophobia, racism, anti-abortion movement,
                               Russian nationalism]
+  # checked by hand (Wikidata has no fitting ideology); name exactly as in the sources + public evidence
+  manual:
+    - {name: "Federation for American Immigration Reform", reason: "right-wing (anti-immigration group; English Wikipedia; listed as a hate group by the Southern Poverty Law Center)"}
   # same far-right ideologies as for media: config/rules.yaml exclude_far_right.wikidata_ideologies
   # words in the name that show it is not a classic NGO (companies, government bodies, universities)
   name_words: [ministry of, ministère, ministerio, government of, university, université, universidad, universidade,
-               city council, municipality, chamber of commerce, chambre de commerce, cámara de comercio]
+               city council, municipality, chamber of commerce, chambre de commerce, cámara de comercio,
+               automobile club, automobile federation, automobile association]
 
 # Ranking within a country (size filter "Top 10 / Top 50"): UN status weight (highest), then the
 # number of Wikipedia language versions, then the number of sources.
