@@ -283,8 +283,8 @@ def save_shards(shards):
 
 def main():
     outlets = []  # website data files (site/data/outlets-N.json, older: outlets.json)
-    for f in sorted((ROOT / "site" / "data").glob("outlets*.json")):
-        outlets += json.load(open(f, encoding="utf-8"))
+    for f in sorted((ROOT / "site" / "data").glob("outlets*.json")) + sorted((ROOT / "site" / "data").glob("ngos*.json")):
+        outlets += json.load(open(f, encoding="utf-8"))  # NGO websites too (phase 2): language, contact, social
     todo = sorted((o for o in outlets if o.get("w") and o["r"] <= MAX_RANK), key=lambda o: (o["r"], o["i"]))
     OUT.mkdir(parents=True, exist_ok=True)
     shards = {}

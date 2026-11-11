@@ -1,10 +1,21 @@
 # Changelog
 
+## 2026-11-11
+- NGOs: quality check. Schools, hospitals, clubs, museums and monasteries are no longer counted as NGOs;
+  service clubs (Rotary, Lions, Zonta, Kiwanis) and all NGOs accredited by the UN stay in; the Federation for
+  American Immigration Reform is hidden (right-wing, checked by hand); duplicates such as "Caritas
+  Internationalis" / "Caritas Internationalis (International Confederation …)" merged. 6,961 NGOs shown,
+  1,200+ with ECOSOC consultative status.
+- ECOSOC download asks the UN server more slowly and stops early when the server does not answer.
+
 ## 2026-11-10
 - AI reading (in the chat, no paid API) for the top 50 outlets of DR Congo, USA, Brazil, Argentina, Canada,
-  Spain, Germany, Mexico and France (500 outlets): topics, target audience, UN profile, owner.
+  Spain, Germany, Mexico, France, China, India, Australia, the UK, Russia, Italy, Japan, Colombia, Indonesia, Nigeria, Poland, Ukraine, Chile, Greece, South Africa, Romania, Turkey, Norway, Finland, Sweden, Switzerland, the Netherlands, Peru, Belgium, Bangladesh, Venezuela, South Korea, Hungary, Dominican Republic, Austria, Portugal, Kenya, Uruguay, Ghana, Pakistan, Vietnam, Bolivia, Czechia, Bulgaria, the Philippines, Ecuador, Denmark, Kuwait, Thailand, Serbia, Israel, Iran, Uganda, Albania and Algeria (3,000 outlets): topics, target audience, UN profile, owner.
 - Far-right media hidden also by reading the Wikipedia text (29 more, e.g. Junge Freiheit); right-wing
-  populist media listed for the owner's decision.
+  populist and partisan right-wing media hidden as well (owner: "alles raus was rechts ist"), e.g. Fox News,
+  GB News, Aaj Tak, Die Weltwoche; 143 in total, each with its reason in reports/excluded_far_right.md.
+- 7 outlets moved to their real country (UPI, Fox News Radio, Univision, Mexicanal, Gamereactor, Azteca
+  Guatemala, i24NEWS).
 - Entries that are not media (platforms, official gazettes) or no longer published are hidden.
 
 ## 2026-11-09 (evening)

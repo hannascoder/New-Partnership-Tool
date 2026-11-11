@@ -8,6 +8,7 @@ import csv
 import gzip
 import json
 import re
+import sys
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -16,6 +17,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 CFG = ROOT / "config"
+sys.path.insert(0, str(ROOT / "pipeline" / "shared"))
+from org_email import org_email  # noqa: E402
 SOCIAL_URL = {"youtube": "https://www.youtube.com/channel/{}", "facebook": "https://www.facebook.com/{}",
               "instagram": "https://www.instagram.com/{}", "tiktok": "https://www.tiktok.com/@{}",
               "x": "https://x.com/{}", "telegram": "https://t.me/{}"}
@@ -32,7 +35,8 @@ SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org"
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
                 "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
                 "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU",
-                "occrp_network": "OCCRP"}
+                "occrp_network": "OCCRP", "ecosoc": "ECOSOC iCSO", "wikidata_ngo": "Wikidata",
+                "un_geneva": "UN Geneva NGO list", "iati": "IATI"}
 
 
 def fix_text(s):
@@ -135,9 +139,9 @@ def main():
 
     def w(text):
         return why.setdefault(text, len(why))
-    for o in outlets:
+    def build_entry(o):
         e = {"i": o["id"], "n": fix_text(o["name"]), "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
-        alt = [a for a in o["alt_names"] if a.isascii()][:3]
+        alt = [a for a in o["alt_names"] if a.isascii() and "@" not in a][:3]
         if alt:
             e["a"] = alt
         if o.get("website"):
@@ -159,8 +163,8 @@ def main():
             e["cp"] = o["contact_page"]
         if o.get("last_post"):
             e["lp"] = o["last_post"]
-        if o.get("email"):
-            e["em"] = o["email"].replace("mailto:", "").strip()
+        if org_email(o.get("email")):  # only organisation addresses (config/rules.yaml org_email)
+            e["em"] = org_email(o["email"])
         e["s"] = o["sources"]
         e["f"] = o["first_seen"]
         if (o.get("cat") or {}).get("website_status") == "error":
@@ -207,8 +211,43 @@ def main():
             + [n for n in o.get("networks", []) if n in NETWORK_FILTER and n != "sdg_media_compact"]
         if nets:
             e["nw"] = nets
-        out.append(e)
+
+        return e
+
+    for o in outlets:
+        out.append(build_entry(o))
     out.sort(key=lambda e: (e["n"] or "").lower())
+
+    # NGOs (phase 2, config/ngo.yaml): own files, loaded by the page only when
+    # "Include NGOs in this search" is ticked. Same entry format + NGO fields:
+    # ng 1, us UN status ids, nt [[type of work, reason]], ro 1 = only registered in ECOSOC, pu profile link
+    ngo_file = ROOT / "work" / "ngos.json"
+    ngos = json.load(open(ngo_file, encoding="utf-8")) if ngo_file.exists() else []
+    ngo_cfg = yaml.safe_load(open(CFG / "ngo.yaml", encoding="utf-8"))
+    by_c = defaultdict(list)
+    for o in ngos:
+        o["_prom"] = o.get("prominence", 0)
+        by_c[o["country"]].append(o)
+    for lst in by_c.values():
+        lst.sort(key=lambda o: (-o["_prom"], (o["name"] or "").lower()))
+        for i, o in enumerate(lst, 1):
+            o["_rank"] = i
+    ngo_out = []
+    for o in ngos:
+        o.setdefault("alt_names", [])
+        e = build_entry(o)
+        e["ng"] = 1
+        e["us"] = o["ngo"]["un_status"]
+        if o["ngo"]["type_of_work"]:
+            e["nt"] = [[t, w(r)] for t, r in o["ngo"]["type_of_work"]]
+        if o["ngo"].get("registered_only"):
+            e["ro"] = 1
+        if o.get("profile_url"):
+            e["pu"] = o["profile_url"]
+        if set(e["us"]) & {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "dgc_associated", "un_geneva", "desa_cosp"}:
+            e["nw"] = ["un_relationship"]  # "Member of: Existing UN relationship" also finds these NGOs
+        ngo_out.append(e)
+    ngo_out.sort(key=lambda e: (e["n"] or "").lower())
     codes = compact(out)  # repeated values -> short codes; the page expands them (finder.js expand())
 
     atlas_file = ROOT / "raw" / "atlas" / "data.json.gz"
@@ -241,6 +280,9 @@ def main():
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
         "codes": codes,
+        "ngo": {k: ngo_cfg[k] for k in ("checkbox_label", "checkbox_hint", "un_status", "only_ecosoc_label")}
+               | {"type_of_work": [{"id": t["id"], "label": t["label"]} for t in ngo_cfg["type_of_work"]],
+                  "count": len(ngo_out)},
     }
     data = ROOT / "site" / "data"
     data.mkdir(parents=True, exist_ok=True)
@@ -253,6 +295,14 @@ def main():
         json.dump(out[i:i + 25000], open(data / name, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
         files.append(name)
     config["outlet_files"] = files
+    for f in data.glob("ngos*.json"):
+        f.unlink()
+    nfiles = []
+    for i in range(0, len(ngo_out), 25000):
+        name = f"ngos-{i // 25000 + 1}.json"
+        json.dump(ngo_out[i:i + 25000], open(data / name, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        nfiles.append(name)
+    config["ngo_files"] = nfiles
     json.dump(config, open(data / "config.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     # scripts and styles get the build time as version, so browsers load the new ones after an update
     import re as _re
@@ -262,7 +312,7 @@ def main():
     html = _re.sub(r'(assets/[a-z\-]+\.(?:js|css))(\?v=[^"]*)?"', lambda m: f'{m.group(1)}?v={ver}"', html)
     idx.write_text(html, encoding="utf-8")
     sizes = ", ".join(f"{f} {(data / f).stat().st_size / 1e6:.1f} MB" for f in files)
-    print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes})")
+    print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes}); {len(ngo_out)} NGOs in {len(nfiles)} files")
 
 
 if __name__ == "__main__":

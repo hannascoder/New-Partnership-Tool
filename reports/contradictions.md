@@ -1,6 +1,6 @@
 # Contradictions and things to check (step 5)
 
-## Sources disagree on the country (213)
+## Sources disagree on the country (212)
 
 The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is listed.
 
@@ -26,7 +26,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-000450 | BBC World Service | GBR | GBR, SGP |
 | pf-000497 | An Phoblacht | GBR | GBR, IRL |
 | pf-000505 | Radio Free Europe/Radio Liberty | CZE | CZE, USA |
-| pf-000519 | United Press International | ESP | ESP, USA |
+| pf-000519 | United Press International | USA | ESP, USA |
 | pf-000545 | Sol Television | CHL | CHL, PER |
 | pf-000698 | Nautical Channel | GBR | GBR, ITA |
 | pf-000738 | Neue Zürcher Zeitung | CHE | CHE, CHN |
@@ -34,14 +34,14 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-000762 | ID | USA | AUS, USA |
 | pf-000792 | VOX | DEU | AUT, DEU |
 | pf-000818 | Choson Sinbo | JPN | JPN, PRK |
-| pf-000841 | Univision | MEX | MEX, USA |
+| pf-000841 | Univision | USA | MEX, USA |
 | pf-000852 | Suroyo TV | IRQ | IRQ, SWE |
 | pf-000889 | Golf Channel | USA | MYS, USA |
 | pf-000959 | Radio Racyja | POL | BLR, POL |
 | pf-000975 | God TV | USA | USA, ZAF |
 | pf-001098 | BET | USA | CAN, USA |
 | pf-001133 | Da Vinci | DEU | DEU, SVN |
-| pf-001224 | Azteca Guatemala | MEX | GTM, MEX |
+| pf-001224 | Azteca Guatemala | GTM | GTM, MEX |
 | pf-001348 | Le Nouvel Obs | FRA | FRA, SEN |
 | pf-001571 | Die Neue Zeit TV | CHE | CHE, DEU |
 | pf-001597 | Jeune Afrique | FRA | FRA, SYC |
@@ -99,7 +99,6 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-005823 | Capital Radio Sierra Leone | SLE | SLE, SVN |
 | pf-005906 | City Park Radio | AUS | AUS, USA |
 | pf-005916 | Classic Arts Showcase | USA | CHN, USA |
-| pf-006436 | Fox News Radio | CAN | CAN, USA |
 | pf-006505 | Gatopardo | MEX | COL, MEX |
 | pf-006759 | Canal Sur | USA | ESP, USA |
 | pf-006976 | Jativisión | CUB | CUB, MYS |
@@ -137,7 +136,7 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-012988 | Alyaum TV | IRQ | IRQ, SYR |
 | pf-013013 | Antxeta Irratia | ESP | ESP, FRA |
 | pf-013324 | Pūkas | GBR | GBR, LTU |
-| pf-013558 | i24NEWS | FRA | FRA, ISR |
+| pf-013558 | i24NEWS | ISR | FRA, ISR |
 | pf-013959 | Nickelodeon Serbia | SRB | HRV, SRB |
 | pf-014019 | Lancaster Newspapers, Inc. | IND | IND, USA |
 | pf-014174 | ESPN 3 (Brasil) | USA | BRA, USA |
@@ -220,27 +219,36 @@ The tool uses Wikidata's country (KATEGORIEN 4). The other source's country is l
 | pf-070536 | Arte | DEU | DEU, ISL |
 | pf-070552 | Television Blong Vanuatu | TUV | TUV, VUT |
 
-## AI reading: probably in another country (8)
+## AI reading: probably in another country (17)
 
 The tool keeps the country from Wikidata / the sources; tell Claude if one should change.
 
 | Id | Name | Country now | AI reading says |
 |---|---|---|---|
-| pf-000519 | United Press International | ESP | USA (American news agency) |
-| pf-000841 | Univision | MEX | USA (American Spanish-language network) |
-| pf-001224 | Azteca Guatemala | MEX | GTM (Guatemalan channel of TV Azteca) |
-| pf-001293 | Gamereactor | DEU | DNK (Nordic network, website gamereactor.dk) |
-| pf-006382 | Mexicanal | MEX | USA (pay-TV network for Mexican Americans, studios in the USA) |
-| pf-006436 | Fox News Radio | CAN | USA (American radio network) |
-| pf-013558 | i24NEWS | FRA | ISR (news channel broadcasting from Tel Aviv) |
+| pf-000004 | Euronews | BEL | FRA (headquartered in Lyon, France) |
+| pf-000115 | Ozono Television | CHL | PER (TV channel in Trujillo, Peru) |
+| pf-000344 | Disney Jr. | TUR | USA (American pay TV network) |
+| pf-000695 | مک‌ورلد | GBR | USA (published by Foundry, founded in the USA) |
+| pf-001553 | The Moscow Times | RUS | NLD (based in Amsterdam) |
+| pf-002049 | The New Humanitarian | KEN | CHE (based in Geneva, Switzerland) |
+| pf-002947 | Urdu 1 | PAK | ARE (based in Dubai, United Arab Emirates) |
+| pf-003263 | Disney Channel India | BGD | IND (Indian channel) |
+| pf-004132 | TV Venezuela | VEN | USA (channel airing in the United States) |
+| pf-007156 | Perú Mágico | CHL | PER (Peruvian channel) |
+| pf-007321 | Televisión Dominicana | DOM | USA (channel in the United States for Dominican residents) |
+| pf-012126 | Allt om Historia | DNK | SWE (Swedish magazine based in Malmö) |
+| pf-014802 | NK News | KOR | USA (American news website) |
 | pf-014965 | Claro Sports | BRA | MEX (channel of Mexican origin) |
+| pf-021377 | Televen América | VEN | USA (US pay TV channel) |
+| pf-021565 | VPItv | VEN | USA (US-based online TV) |
+| pf-029014 | 91.3 Lift Worship US | UGA | USA (station in the United States) |
 
 ## AI reading: please check (0)
 
 | Id | Name | Country | Note |
 |---|---|---|---|
 
-## Possible duplicates: same website, several entries (2922)
+## Possible duplicates: same website, several entries (2912)
 
 Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 
@@ -324,7 +332,6 @@ Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 | aab-tv.co.jp | Akita Asahi Broadcasting (pf-001155); AAB秋田朝日放送 (pf-053022) |
 | aabc.tv | AABC TV (pf-036928); KIIO-LD 10.4 (pf-042946) |
 | aachener-zeitung.de | Aachener Zeitung (pf-000319); Dürener Zeitung (pf-021447) |
-| aajtak.in | Aaj Tak (pf-003906); https://www.aajtak.in/ (pf-057837) |
 | aasthatv.tv | Aastha (pf-036935); Aastha Bhajan (pf-036936); Aastha Gujarati (pf-036937); Aastha International (pf-036938); Aastha Kannada (pf-036939) |
 | abbynews.com | abbynews.com (pf-057839); Abbotsford News - Abbotsford News (pf-063837) |
 | abc.com.py | ABC Color (pf-002456); Radio Cardinal (pf-016000); ABC Cardinal 730AM (pf-029161); Radio ABC Cardinal 730 AM (pf-032539); ABC-TV Paraguay (pf-036978) |
@@ -546,6 +553,7 @@ Often fine (a TV channel and its radio share a website), sometimes a duplicate.
 | bermudafunk.org | bermuda.funk (pf-000040); Bermudafunk Mannheim (pf-029577) |
 | berrymedia.co.kr | BallTV (pf-037993); Life Sports TV (pf-043441) |
 | bestcableperu.com.pe | Best Cable Peru (pf-038176); Best Cable Sports Peru (pf-038177) |
+| bet.com | BET (pf-001098); BET Gospel (pf-003062); BET Jams (pf-008373); BET Soul (pf-010320); BET Gospel (pf-038186) |
 
 ## Public broadcasters listed as state-controlled (59)
 

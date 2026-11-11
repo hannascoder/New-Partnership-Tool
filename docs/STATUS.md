@@ -136,13 +136,17 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   outlets without topic 13 %.
 - Organisation types renamed (owner, 09.11.2026): "Newspaper, TV, radio or news site", "News agency
   (supplies other media)", "Public broadcaster (independent)", "Community radio & local media", "Fact-checker".
-- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA (500 outlets).
-  Next: CHN, IND, AUS, GBR, RUS, ITA, JPN ... (order of outlet count).
+- AI reading order (owner): countries with the most outlets first. Done: COD, USA, BRA, ARG, CAN, ESP, DEU, MEX, FRA, CHN, IND, AUS, GBR, RUS, ITA, JPN, COL, IDN, NGA, POL, UKR, CHL, GRC, ZAF, ROU, TUR, NOR, FIN, SWE, CHE, NLD, PER, BEL, BGD, VEN, KOR, HUN, DOM, AUT, PRT, KEN, URY, GHA, PAK, VNM, BOL, CZE, BGR, PHL, ECU, DNK, KWT, THA, SRB, ISR, IRN, UGA, ALB, DZA (3,000 outlets).
+  Next: TUR ... (order of outlet count).
 - Right-wing media (owner, 10.11.2026: "ausblenden und rechte Medien wie Junge Freiheit auch"): the AI reading
   of the Wikipedia text marks far-right outlets ("far_right", 29 hidden, e.g. Junge Freiheit, OAN, Newsmax,
   Valeurs actuelles) and right-wing populist / party-aligned ones ("right_populist", 23, e.g. GB News, Aaj Tak,
-  Die Weltwoche) - the latter are SHOWN until the owner decides (config/rules.yaml hide_right_wing_populist).
-  Mainstream conservative media (Le Figaro, Le Point, FAZ ...) stay. List: reports/excluded_far_right.md.
+  Die Weltwoche). Owner, 10.11.2026: "alles raus was rechts ist, auch die größeren" -> hide_right_wing_populist: true,
+  plus 45 more found in the Wikipedia texts or well known (Fox News, Estadão, Veja, Jovem Pan, Epoch Times, Sky News
+  Australia, Magyar Nemzet, Origo, Okdiario ...; reasons marked "general knowledge" where the text does not say it).
+  Mainstream conservative media (Le Figaro, FAZ, Telegraph, Daily Mail, Bild, NY Post ...) stay for now - asked owner.
+  List: reports/excluded_far_right.md. Country corrections (owner, 10.11.2026): UPI, Fox News Radio, Univision,
+  Mexicanal -> USA; Gamereactor -> DNK; Azteca Guatemala -> GTM; i24NEWS -> ISR (overrides.csv).
 - Platforms and non-media (Reddit, Google News, official gazettes ...) stay hidden (owner, 10.11.2026).
   The AI reading also hides entries that are not media or no longer published (reports/hidden_ai.md)
   and lists outlets that are probably in another country (reports/contradictions.md).
@@ -150,6 +154,37 @@ does not count. Honest limits told to the owner: only coverage can be measured, 
   Runner's World USA, Space ARG. Owner asked WHY non-media are hidden (answer: KATEGORIEN 0) - decision open.
 - PR #15 merged 20:34 (everything up to the keyword labels). Not yet on main: menu entries in other
   languages = "Has a section on it", step 5 reports, data of the full website check (still running).
+
+## NGOs (phase 2) - in progress since 10.11.2026
+Owner's decisions 10.11.2026: box "Include NGOs in this search" under Organisation type (off by default);
+NGO filters fold out (UN status incl. "Associated with UN DGC", "Only NGOs with ECOSOC status", type of work);
+same filters as media (country, language, topics/SDGs, audience, contact, Top 10/50); classic NGOs only;
+ALL ECOSOC NGOs also without status (note on the card); far-right NGOs and GONGOs not shown; mixed with
+media on the site, separate section in the export; updated every 2 months (step 9); no national registers
+(country filter works with the NGOs' own country). Config: config/ngo.yaml, config/sources/ecosoc_fields.yaml.
+- Built: pipeline/ngo/build.py -> work/ngos.json -> site/data/ngos-N.json (loaded only when the box is ticked),
+  finder.js (box, fold-out filters, NGO cards, export section "NGOs"). Reports: reports/ngos.md, ngos_excluded.md.
+- Sources: UN Geneva (1,471) and IATI (1,339) in; ECOSOC iCSO (all lists + profiles, slow server, resumes;
+  workflow "Fetch NGOs", re-run by hand until complete) and Wikidata NGOs (with a Wikipedia page) running.
+  DESA COSP list refuses automatic downloads (HTTP 403): not worked around; owner may save it by hand.
+- ECOSOC server mostly times out (10.11.2026: 1,607 orgs, 78 profiles in 5 h; 11.11.2026 run 4: server silent
+  after 2 minutes for 5 hours). Fetcher now asks slowly (3 s between requests), stops a run after 20 minutes of
+  silence, 2 h budget (repo is PRIVATE: GitHub free plan = 2,000 Actions minutes/month, owner to check usage).
+  State 11.11.2026: 4,257 ECOSOC organisations listed, 191 profiles (~4,000 still to fetch). ECOSOC entries
+  without a profile have no country and are not shown until their profile is read (or matched by unique name).
+- Quality check 11.11.2026 (samples): schools, hospitals, clubs, museums, monasteries left out by Wikidata class
+  words (config/ngo.yaml wikidata_not_ngo_class_words; service clubs like Rotary/Lions/Zonta kept); NGOs with UN
+  accreditation (ECOSOC status, UN Geneva) are never left out as "not a classic NGO" (bar associations,
+  Rotary ...); hand-checked exclusions (exclude.manual, e.g. FAIR); duplicates merged when names differ only by
+  a bracket at the end ("Caritas Internationalis (…)"). Result: 6,961 NGOs shown.
+- 11.11.2026: GitHub Actions minutes for the month are USED UP (private repo, 2,000 min). Workflows do not
+  start until the monthly reset. Fetching continues from the cloud session (environment "New-Partnership-Tool"
+  allows esango.un.org and unglobalcompact.org). UN Global Compact: owner wants it as an extra box like the
+  NGOs; questions to the owner still open (ask again later), list readable page by page (robots.txt forbids
+  only the search pages): ~25,700 participants, 12 per page.
+- Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
+  without an English label show their local name.
+- Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.
 
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).

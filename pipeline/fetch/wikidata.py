@@ -1,4 +1,8 @@
-"""Wikidata: media outlets in the 195 allowed countries.
+"""Wikidata: media outlets (or, with WIKIDATA_KIND=ngo, NGOs) in the 195 allowed countries.
+
+WIKIDATA_KIND=ngo (phase 2, owner 10.11.2026): classes from config/sources/wikidata_ngo.yaml,
+only items with at least one Wikipedia/Wikimedia page (known NGOs, not every registered
+association), output raw/wikidata_ngo/.
 
 1. checks the root classes in config/sources/wikidata.yaml (label must match)
 2. finds the Wikidata item of each allowed country (by ISO alpha-3, P298)
@@ -14,6 +18,12 @@ from datetime import datetime, timezone
 import yaml
 
 from common import ROOT, countries, fresh, get, save  # noqa: F401
+
+KIND = __import__("os").environ.get("WIKIDATA_KIND", "media")
+SOURCE = "wikidata_ngo" if KIND == "ngo" else "wikidata"
+CONFIG = "wikidata_ngo.yaml" if KIND == "ngo" else "wikidata.yaml"
+# NGOs: only items that have a page in at least one Wikipedia (sitelinks > 0)
+EXTRA = " ?item wikibase:sitelinks ?sl . FILTER(?sl > 0) " if KIND == "ngo" else ""
 
 SPARQL = "https://query.wikidata.org/sparql"
 API = "https://www.wikidata.org/w/api.php"
@@ -32,10 +42,10 @@ PROPS = {
     "P571": "inception", "P576": "dissolved", "P3999": "date_of_closure",
     "P2397": "youtube_channel_id", "P2013": "facebook_id", "P2003": "instagram_username",
     "P7085": "tiktok_username", "P2002": "x_username", "P3789": "telegram_username",
-    "P1813": "short_name",
+    "P1813": "short_name", "P1142": "political_ideology", "P2936": "language_used",
 }
 ITEM_VALUED = {"P31", "P17", "P495", "P159", "P131", "P2541", "P1001", "P407", "P364",
-               "P127", "P749", "P463", "P1454", "P921", "P136", "P101", "P452"}
+               "P127", "P749", "P463", "P1454", "P921", "P136", "P101", "P452", "P1142", "P2936"}
 
 
 def sparql(query):
@@ -135,10 +145,10 @@ def chunks(seq, n):
 
 
 def main():
-    if fresh("wikidata", FRESH_DAYS):
+    if fresh(SOURCE, FRESH_DAYS):
         print("Wikidata was fetched less than 7 days ago: skipped (set FORCE_FETCH=1 to force)")
         return
-    cfg = yaml.safe_load(open(ROOT / "config" / "sources" / "wikidata.yaml", encoding="utf-8"))
+    cfg = yaml.safe_load(open(ROOT / "config" / "sources" / CONFIG, encoding="utf-8"))
     report = {"class_check": [], "class_search": {}, "countries_missing": [], "timeouts": []}
 
     # 1. check root classes
@@ -171,7 +181,7 @@ def main():
     print(f"countries found in Wikidata: {len(country_qid)} of {len(allowed)}")
 
     # 3. outlets per country (checkpoint per country in raw/wikidata/items/)
-    items_dir = ROOT / "raw" / "wikidata" / "items"
+    items_dir = ROOT / "raw" / SOURCE / "items"
     items_dir.mkdir(parents=True, exist_ok=True)
     found = {}  # qid -> {"countries": set(), "roots": set()}
     values = " ".join(f"wd:{q}" for q in roots)
@@ -189,12 +199,12 @@ def main():
             res, failed = [], []
             try:
                 res = sparql(f"SELECT DISTINCT ?item ?root WHERE {{ VALUES ?root {{ {values} }} "
-                             f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . }}")
+                             f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . {EXTRA}}}")
             except RuntimeError:
                 for q in roots:  # too big at once: one class at a time
                     try:
                         res += sparql(f"SELECT DISTINCT ?item ?root WHERE {{ VALUES ?root {{ wd:{q} }} "
-                                      f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . }}")
+                                      f"?item wdt:P17 wd:{cq} . ?item wdt:P31/wdt:P279* ?root . {EXTRA}}}")
                     except RuntimeError:
                         failed.append(q)
                         report["timeouts"].append({"country": iso, "class": q})
@@ -208,7 +218,7 @@ def main():
         print(f"[{n}/{len(country_qid)}] {iso}: {len(rows)} rows, total items {len(found)}", flush=True)
 
     # 4. details (cache in raw/wikidata/details_cache.json.gz, slimmed per batch)
-    cache_file = ROOT / "raw" / "wikidata" / "details_cache.json.gz"
+    cache_file = ROOT / "raw" / SOURCE / "details_cache.json.gz"
     cache = json.load(gzip.open(cache_file, "rt", encoding="utf-8")) if cache_file.exists() else {}
     todo = sorted(q for q in found if not checkpoint_fresh_record(cache.get(q)))
     print(f"details: {len(found) - len(todo)} from cache, {len(todo)} to fetch", flush=True)
@@ -244,14 +254,14 @@ def main():
         for q, e in entities(chunk, props="labels").items():
             names[q] = e.get("labels", {}).get("en", {}).get("value")
     records.sort(key=lambda r: int(r["qid"][1:]))
-    save("wikidata", records, {
+    save(SOURCE, records, {
         "url": SPARQL + " + " + API,
         "root_classes_used": roots,
         "country_items": country_qid,
         "licence": "Wikidata: CC0 (public domain)",
         **report,
     })
-    with open(ROOT / "raw" / "wikidata" / "linked_labels.json", "w", encoding="utf-8") as fh:
+    with open(ROOT / "raw" / SOURCE / "linked_labels.json", "w", encoding="utf-8") as fh:
         json.dump(names, fh, ensure_ascii=False, sort_keys=True, indent=0)
 
 

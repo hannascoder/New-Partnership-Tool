@@ -483,10 +483,8 @@ def partner_content(w, words):
     return None
 
 
-ORG_MAIL = re.compile(r"^(info|contact|contacto|contato|kontakt|redac|redaction|redaccion|redacao|newsroom|news|noticias|"
-                      r"editor|editors|editorial|desk|hello|hola|office|admin|press|presse|prensa|imprensa|mail|"
-                      r"communication|comunicacion|media|secretariat|reception|support|webmaster|tips|letters|studio|"
-                      r"programs|programmes|radio|tv|online)", re.I)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "shared"))
+from org_email import org_email  # noqa: E402  (one rule for all: config/rules.yaml org_email)
 
 
 def apply_ai(o, cat, ai, un_order, aud_order):
@@ -723,7 +721,7 @@ def main():
         cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov, txt)
         w = {} if taken_over else (web.get(o["id"]) or {})
         if w.get("status") == "ok":  # contacts and social links from the website (owner's to-do 6)
-            mails = [e for e in w.get("emails") or [] if ORG_MAIL.match(e)]
+            mails = [x for x in (org_email(e) for e in w.get("emails") or []) if x]
             if mails and not o.get("email"):
                 o["email"] = mails[0]
                 o["email_source"] = "website"

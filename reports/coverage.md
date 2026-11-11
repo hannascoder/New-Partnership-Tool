@@ -1,31 +1,31 @@
 # Coverage: how complete is the information? (step 5)
 
-70,989 outlets shown on the website, 195 countries. Data date: 2026-11-10.
+70,757 outlets shown on the website, 195 countries. Data date: 2026-11-11.
 
 Share of outlets that have this information. A filter only finds outlets with a value
 (soft filters like topics never hide anyone; "Also show outlets without this information" helps for the others).
 
 | Information | All | Africa | Americas | Asia | Europe | Oceania |
 |---|---|---|---|---|---|---|
-| Language | **89 %** (63,309) | 91 % | 88 % | 91 % | 90 % | 80 % |
-| Channel | **99 %** (70,339) | 99 % | 100 % | 98 % | 99 % | 99 % |
-| Organisation type (not just 'news outlet' by default) | **3 %** (1,951) | 2 % | 3 % | 3 % | 3 % | 3 % |
-| Ownership known | **11 %** (7,935) | 6 % | 11 % | 13 % | 12 % | 13 % |
-| Scope known | **63 %** (44,942) | 79 % | 71 % | 64 % | 47 % | 39 % |
-| Reaches other countries | **2 %** (1,126) | 1 % | 1 % | 2 % | 2 % | 1 % |
-| Topic (other than general news) | **70 %** (49,841) | 64 % | 77 % | 59 % | 66 % | 73 % |
-| Topic: Specialist or own section | **66 %** (47,142) | 60 % | 74 % | 55 % | 61 % | 68 % |
-| Target audience | **22 %** (15,806) | 34 % | 24 % | 19 % | 18 % | 31 % |
-| UN profile | **9 %** (6,688) | 15 % | 8 % | 13 % | 9 % | 6 % |
-| Public contact (e-mail or contact page) | **37 %** (26,138) | 31 % | 40 % | 24 % | 41 % | 40 % |
-| E-mail | **7 %** (5,105) | 8 % | 7 % | 4 % | 9 % | 6 % |
-| Social media | **51 %** (36,019) | 39 % | 56 % | 39 % | 52 % | 46 % |
-| Website | **84 %** (59,400) | 81 % | 85 % | 82 % | 83 % | 77 % |
-| Website checked and answered | **62 %** (43,665) | 55 % | 62 % | 55 % | 66 % | 59 % |
-| Active (article in the last 3 months) | **24 %** (16,967) | 23 % | 26 % | 14 % | 27 % | 17 % |
-| Verified (2+ sources) | **20 %** (13,973) | 14 % | 21 % | 19 % | 20 % | 17 % |
+| Language | **89 %** (63,198) | 91 % | 89 % | 91 % | 90 % | 80 % |
+| Channel | **99 %** (70,109) | 99 % | 100 % | 98 % | 99 % | 99 % |
+| Organisation type (not just 'news outlet' by default) | **3 %** (1,944) | 2 % | 3 % | 3 % | 3 % | 3 % |
+| Ownership known | **12 %** (8,248) | 7 % | 11 % | 14 % | 13 % | 13 % |
+| Scope known | **63 %** (44,848) | 80 % | 71 % | 64 % | 47 % | 39 % |
+| Reaches other countries | **2 %** (1,122) | 1 % | 1 % | 2 % | 2 % | 1 % |
+| Topic (other than general news) | **71 %** (50,152) | 65 % | 78 % | 60 % | 67 % | 74 % |
+| Topic: Specialist or own section | **67 %** (47,617) | 62 % | 75 % | 56 % | 63 % | 68 % |
+| Target audience | **23 %** (16,121) | 34 % | 24 % | 19 % | 18 % | 32 % |
+| UN profile | **10 %** (7,075) | 16 % | 8 % | 13 % | 10 % | 7 % |
+| Public contact (e-mail or contact page) | **38 %** (27,056) | 32 % | 42 % | 24 % | 43 % | 40 % |
+| E-mail | **9 %** (6,286) | 9 % | 9 % | 5 % | 11 % | 6 % |
+| Social media | **51 %** (36,324) | 40 % | 57 % | 39 % | 52 % | 46 % |
+| Website | **84 %** (59,252) | 82 % | 86 % | 82 % | 83 % | 77 % |
+| Website checked and answered | **63 %** (44,421) | 56 % | 64 % | 56 % | 67 % | 59 % |
+| Active (article in the last 3 months) | **24 %** (17,264) | 24 % | 27 % | 14 % | 27 % | 17 % |
+| Verified (2+ sources) | **20 %** (13,876) | 14 % | 21 % | 19 % | 19 % | 17 % |
 
-Outlets per region: Africa 5,552 · Americas 33,326 · Asia 11,497 · Europe 18,853 · Oceania 1,761
+Outlets per region: Africa 5,536 · Americas 33,276 · Asia 11,448 · Europe 18,744 · Oceania 1,753
 
 ## Countries with the least information (20+ outlets)
 
@@ -34,25 +34,25 @@ Average of: topic, language, public contact, ownership known.
 | Country | Outlets | Topic | Language | Contact | Ownership known |
 |---|---|---|---|---|---|
 | Central African Republic | 25 | 40 % | 72 % | 16 % | 8 % |
-| Sudan | 63 | 38 % | 84 % | 14 % | 5 % |
 | Afghanistan | 113 | 38 % | 88 % | 15 % | 6 % |
 | Democratic People's Republic of Korea | 21 | 43 % | 67 % | 5 % | 33 % |
+| Sudan | 63 | 41 % | 87 % | 16 % | 5 % |
 | Brunei Darussalam | 20 | 30 % | 55 % | 10 % | 55 % |
-| Finland | 485 | 44 % | 95 % | 6 % | 6 % |
-| China | 1,814 | 44 % | 88 % | 11 % | 9 % |
-| Indonesia | 898 | 44 % | 90 % | 8 % | 11 % |
-| South Sudan | 27 | 37 % | 89 % | 26 % | 4 % |
-| Madagascar | 70 | 43 % | 91 % | 19 % | 3 % |
-| Somalia | 80 | 41 % | 81 % | 29 % | 5 % |
+| China | 1,814 | 45 % | 88 % | 11 % | 9 % |
+| Finland | 483 | 47 % | 95 % | 6 % | 6 % |
+| Indonesia | 894 | 45 % | 90 % | 9 % | 12 % |
+| Madagascar | 70 | 43 % | 91 % | 20 % | 3 % |
+| Somalia | 80 | 41 % | 82 % | 29 % | 5 % |
 | Mongolia | 85 | 46 % | 93 % | 16 % | 2 % |
-| Viet Nam | 283 | 52 % | 89 % | 8 % | 10 % |
-| Liberia | 44 | 48 % | 91 % | 20 % | 2 % |
-| Belgium | 387 | 53 % | 67 % | 29 % | 13 % |
-| Georgia | 146 | 47 % | 92 % | 20 % | 3 % |
-| Maldives | 49 | 61 % | 92 % | 10 % | 0 % |
-| Uzbekistan | 92 | 36 % | 96 % | 25 % | 8 % |
 | Nicaragua | 115 | 45 % | 98 % | 17 % | 4 % |
-| Myanmar | 79 | 56 % | 89 % | 14 % | 6 % |
+| Georgia | 146 | 47 % | 92 % | 22 % | 3 % |
+| Armenia | 109 | 46 % | 91 % | 25 % | 4 % |
+| Oman | 26 | 38 % | 88 % | 27 % | 12 % |
+| Myanmar | 79 | 56 % | 89 % | 15 % | 6 % |
+| Liberia | 44 | 50 % | 91 % | 23 % | 2 % |
+| Iceland | 68 | 66 % | 90 % | 3 % | 7 % |
+| Uzbekistan | 92 | 37 % | 96 % | 26 % | 8 % |
+| South Sudan | 27 | 41 % | 93 % | 30 % | 4 % |
 
 ## Countries with the fewest outlets
 

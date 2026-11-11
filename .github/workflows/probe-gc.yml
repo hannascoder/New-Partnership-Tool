@@ -1,0 +1,47 @@
+# Checks once how the UN Global Compact participant list can be read (owner 11.11.2026). Nothing is saved.
+name: Probe UN Global Compact
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: [".github/workflows/probe-gc.yml"]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe pages
+        shell: bash
+        run: |
+          UA="UN-Partner-Finder/0.1 (internal research tool; github.com/hannascoder)"
+          B=https://unglobalcompact.org
+          get () { curl -sS -L -m 40 -A "$UA" -o /tmp/p -w "%{http_code} %{size_download} %{content_type} %{url_effective}\n" "$1" || true; }
+          echo "== robots.txt"; curl -sS -m 30 -A "$UA" $B/robots.txt | head -40 || true
+          for u in "$B/interactive" "$B/what-is-gc/participants" "$B/what-is-gc/participants/search?search%5Bkeywords%5D=&search%5Bper_page%5D=50" \
+                   "$B/what-is-gc/participants/search?search%5Borganization_types%5D%5B%5D=NGO+Global" "$B/what-is-gc/participants.csv" \
+                   "$B/what-is-gc/participants/search.csv" "$B/what-is-gc/participants/search.json" "$B/terms-of-use" "$B/about/terms-of-use"; do
+            echo "== $u"; get "$u"
+            grep -o -i -E '<title>[^<]*' /tmp/p | head -2
+            grep -o -E 'href="[^"]*(search|participants|csv|export|download|api|json|organization_types|countries|sectors)[^"]*"' /tmp/p | sort -u | head -40
+            grep -o -E 'name="search\[[^"]*"|value="[^"]{1,60}"' /tmp/p | sort -u | head -120
+            grep -o -i -E '[0-9,]+ (results|participants|organizations)' /tmp/p | head -5
+          done
+          echo "== sample result table"
+          get "$B/what-is-gc/participants/search?search%5Bkeywords%5D=&search%5Bper_page%5D=50"
+          python3 - <<'E'
+          import re
+          s=open('/tmp/p',encoding='utf-8',errors='replace').read()
+          i=s.find('<table')
+          print(re.sub(r'\s+',' ',s[i:i+5000]))
+          m=re.findall(r'href="(/what-is-gc/participants/\d+[^"]*)"',s)[:3]
+          print(m)
+          open('/tmp/first','w').write(m[0] if m else '')
+          E
+          f=$(cat /tmp/first)
+          if [ -n "$f" ]; then echo "== participant page $f"; get "$B$f"; python3 -c "
+          import re;s=open('/tmp/p',encoding='utf-8',errors='replace').read();i=s.find('<main');t=re.sub(r'<script.*?</script>','',s[i:],flags=re.S);t=re.sub(r'<[^>]+>',' | ',t);print(re.sub(r'(\s*\|\s*)+',' | ',t)[:3000])"; fi
+          echo "== interactive page scripts / data urls"
+          get "$B/interactive"
+          grep -o -E '(src|href|data-[a-z-]+)="[^"]*"' /tmp/p | grep -i -E 'json|api|data|map|interactive|js' | sort -u | head -40

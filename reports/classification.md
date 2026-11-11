@@ -14,11 +14,11 @@
 
 | Value | Outlets | Main sources |
 |---|---|---|
-| state_controlled | 1171 | Wikipedia list of state media (State Media Monitor) 851; Wikidata: owner (government agency) 57; Wikidata: owner (political party) 50; Wikidata: owner's owner (executive branch) 48 |
-| public_service | 395 | Wikidata: owner (public broadcaster) 211; organisation type public service broadcaster 127; Wikidata: owner (public broadcasting) 27; Wikidata: owner's owner (public broadcaster) 7 |
-| community_nonprofit | 1305 | organisation type community media 808; Wikidata: owner (university) 135; Wikidata: owner (nonprofit organization) 119; Wikidata: owner (public university) 74 |
-| private | 5084 | Wikidata: owner (business) 3128; Wikidata: owner (media company) 505; Wikidata: owner (human) 403; Wikidata: owner (publishing house) 287 |
-| unknown | 63121 | no ownership information in the sources 63121 |
+| state_controlled | 1275 | Wikipedia list of state media (State Media Monitor) 851; Wikidata: owner (government agency) 57; Wikidata: owner (political party) 50; Wikidata: owner's owner (executive branch) 48 |
+| public_service | 471 | Wikidata: owner (public broadcaster) 211; organisation type public service broadcaster 127; Wikidata: owner (public broadcasting) 27; AI reading: website: public regional broadcaster 14 |
+| community_nonprofit | 1368 | organisation type community media 808; Wikidata: owner (university) 135; Wikidata: owner (nonprofit organization) 119; Wikidata: owner (public university) 74 |
+| private | 5211 | Wikidata: owner (business) 3128; Wikidata: owner (media company) 505; Wikidata: owner (human) 403; Wikidata: owner (publishing house) 287 |
+| unknown | 62751 | no ownership information in the sources 62751 |
 
 Listed as public service broadcaster AND news outlet (private owner): 2
 
@@ -28,9 +28,9 @@ Listed as public service broadcaster AND news outlet (private owner): 2
 |---|---|---|
 | international | 182 | iptv-org 111; list of international broadcasters 57; Wikidata: international broadcasting 14 |
 | regional | 790 | iptv-org 790 |
-| national | 27452 | iptv-org broadcast area: whole country 14212; Media Cloud collection 13240 |
+| national | 27453 | iptv-org broadcast area: whole country 14214; Media Cloud collection 13239 |
 | local | 16544 | Media Cloud collection 13649; iptv-org broadcast area: city / region 2070; organisation type community media 312; Wikidata: student newspaper 250 |
-| unknown | 26108 | no scope information in the sources 26108 |
+| unknown | 26107 | no scope information in the sources 26107 |
 
-Outlets that reach more than their home country: 1127
+Outlets that reach more than their home country: 1125
 International broadcasters not found in the data: none

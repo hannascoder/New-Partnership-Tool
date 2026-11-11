@@ -75,8 +75,9 @@ org_type:
     label: Fact-checker
     description: Checks claims and fights misinformation (e.g. members of IFCN or EFCSN). Fact-checking units of big media keep their own type.
   - id: ngo
-    label: NGO / civil society
-    later: true
+    label: NGO
+    later: true  # not a button: NGOs come in with the box "Include NGOs in this search" (config/ngo.yaml)
+    description: Non-governmental organisation (classic NGOs; foundations, networks and universities follow later).
   - id: network
     label: Network / association
     later: true
@@ -326,7 +327,9 @@ new_months: 4
 active_months: 3
 
 # "Report an error" link on every card opens an e-mail to this address (owner, 09.11.2026).
-feedback_email: stevenshanna20@gmail.com
+# e-mail for "Report an error" on the cards. Left empty on 11.11.2026 before making the repository public
+# (owner's private address must not be public); "Report an error" in the footer goes to GitHub issues.
+feedback_email: ""
 
 # How strongly an outlet is connected to a topic (shown on the cards, in this order).
 # Wording chosen by the owner on 09.11.2026 (option A).

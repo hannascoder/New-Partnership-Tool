@@ -1,0 +1,43 @@
+{
+  "source": "ngo",
+  "fetched_at": "2026-11-11T04:14:24Z",
+  "records": 0,
+  "pages": {
+    "ecosoc_status_general": {
+      "ok": true,
+      "bytes": 45703
+    },
+    "ecosoc_status_special": {
+      "ok": true,
+      "bytes": 46190
+    },
+    "ecosoc_status_roster": {
+      "ok": true,
+      "bytes": 45988
+    },
+    "ecosoc_field_gender": {
+      "ok": true,
+      "bytes": 45057
+    },
+    "ecosoc_type_media": {
+      "ok": true,
+      "bytes": 43062
+    },
+    "ecosoc_aow_search": {
+      "ok": true,
+      "bytes": 25920
+    },
+    "ecosoc_advanced_search": {
+      "ok": true,
+      "bytes": 249322
+    },
+    "un_geneva_ngo_list": {
+      "ok": true,
+      "bytes": 1008806
+    },
+    "desa_cosp_list": {
+      "ok": false,
+      "error": "failed after 4 tries: https://social.desa.un.org/issues/disability/cosp/list-of-non-governmental-organization-accredited-to-the-conference-of-states (HTTP Error 403: Forbidden)"
+    }
+  }
+}
