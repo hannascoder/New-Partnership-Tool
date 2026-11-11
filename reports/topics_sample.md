@@ -212,7 +212,7 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-018633 | Villa Rican | USA | covers it | website headlines: "chemistry", "research" |
 | pf-009025 | Radio Student | HRV | covers it | Wikipedia: "sciences" |
 
-## Business & economy — 17,673 outlets
+## Business & economy — 17,672 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -220,10 +220,10 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-034883 | UgOnlineMedia - Kampala (MP3) | UGA | main focus | Radio Browser tag "business" |
 | pf-070691 | The Japan Newspaper Publishers & Editors Association | JPN | own section | website section "Financial Affairs" |
 | pf-059098 | Dainiksylhet.com | Most popular Bangla News Portal | BGD | own section | website section /newscat/business/ |
-| pf-069734 | tastingvictoria.com | CAN | covers it | website About page: "markets" |
+| pf-069751 | rochellenews-leader.com | USA | covers it | website headlines: "business" |
 | pf-048470 | Telewizja Relax | POL | covers it | words in another language (via Wikidata): "finanse", "inwestycje" |
 
-## Culture — 22,173 outlets
+## Culture — 22,172 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
@@ -231,8 +231,8 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-024808 | TV5 Monde Europe | FRA | main focus | description mentions "cinema" |
 | pf-024551 | Lamula.pe | PER | own section | website section "LA MULA HACE CINE" |
 | pf-012468 | Saga Shimbun | JPN | own section | website section "文化" |
-| pf-066904 | fagersta-posten.se | SWE | covers it | website headlines: "film" |
-| pf-064798 | Fredericksburg Standard | USA | covers it | website headlines: "festival", "heritage" |
+| pf-066913 | ibmadison.com | USA | covers it | website About page: "art" |
+| pf-064804 | Glenville, WV's Award-Winning News Source! | USA | covers it | website headlines: "cultural", "festival", "heritage" |
 
 ## Religion — 8,499 outlets
 
@@ -388,7 +388,7 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-006421 | Fort Collins Weekly | USA | covers it | Wikipedia: "congress" |
 | pf-045716 | Palestine TV | PSE | covers it | website About page: "الديمقراطية" |
 
-## Sports — 21,433 outlets
+## Sports — 21,432 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|

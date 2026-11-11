@@ -17,8 +17,8 @@ Share of outlets that have this information. A filter only finds outlets with a 
 | Topic: Specialist or own section | **67 %** (47,617) | 62 % | 75 % | 56 % | 63 % | 68 % |
 | Target audience | **23 %** (16,121) | 34 % | 24 % | 19 % | 18 % | 32 % |
 | UN profile | **10 %** (7,075) | 16 % | 8 % | 13 % | 10 % | 7 % |
-| Public contact (e-mail or contact page) | **38 %** (26,656) | 32 % | 41 % | 24 % | 42 % | 40 % |
-| E-mail | **7 %** (5,238) | 8 % | 7 % | 4 % | 9 % | 6 % |
+| Public contact (e-mail or contact page) | **38 %** (27,056) | 32 % | 42 % | 24 % | 43 % | 40 % |
+| E-mail | **9 %** (6,286) | 9 % | 9 % | 5 % | 11 % | 6 % |
 | Social media | **51 %** (36,324) | 40 % | 57 % | 39 % | 52 % | 46 % |
 | Website | **84 %** (59,252) | 82 % | 86 % | 82 % | 83 % | 77 % |
 | Website checked and answered | **63 %** (44,421) | 56 % | 64 % | 56 % | 67 % | 59 % |
@@ -40,19 +40,19 @@ Average of: topic, language, public contact, ownership known.
 | Brunei Darussalam | 20 | 30 % | 55 % | 10 % | 55 % |
 | China | 1,814 | 45 % | 88 % | 11 % | 9 % |
 | Finland | 483 | 47 % | 95 % | 6 % | 6 % |
-| Indonesia | 894 | 45 % | 90 % | 8 % | 12 % |
-| Madagascar | 70 | 43 % | 91 % | 19 % | 3 % |
+| Indonesia | 894 | 45 % | 90 % | 9 % | 12 % |
+| Madagascar | 70 | 43 % | 91 % | 20 % | 3 % |
 | Somalia | 80 | 41 % | 82 % | 29 % | 5 % |
 | Mongolia | 85 | 46 % | 93 % | 16 % | 2 % |
-| Georgia | 146 | 47 % | 92 % | 21 % | 3 % |
 | Nicaragua | 115 | 45 % | 98 % | 17 % | 4 % |
-| Myanmar | 79 | 56 % | 89 % | 14 % | 6 % |
+| Georgia | 146 | 47 % | 92 % | 22 % | 3 % |
 | Armenia | 109 | 46 % | 91 % | 25 % | 4 % |
 | Oman | 26 | 38 % | 88 % | 27 % | 12 % |
+| Myanmar | 79 | 56 % | 89 % | 15 % | 6 % |
 | Liberia | 44 | 50 % | 91 % | 23 % | 2 % |
 | Iceland | 68 | 66 % | 90 % | 3 % | 7 % |
 | Uzbekistan | 92 | 37 % | 96 % | 26 % | 8 % |
-| Ethiopia | 176 | 54 % | 89 % | 23 % | 1 % |
+| South Sudan | 27 | 41 % | 93 % | 30 % | 4 % |
 
 ## Countries with the fewest outlets
 

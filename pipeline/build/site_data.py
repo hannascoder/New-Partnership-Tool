@@ -141,7 +141,7 @@ def main():
         return why.setdefault(text, len(why))
     def build_entry(o):
         e = {"i": o["id"], "n": fix_text(o["name"]), "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
-        alt = [a for a in o["alt_names"] if a.isascii()][:3]
+        alt = [a for a in o["alt_names"] if a.isascii() and "@" not in a][:3]
         if alt:
             e["a"] = alt
         if o.get("website"):

@@ -1,6 +1,6 @@
 # Step 4d: topics, target audience and UN profile
 
-Topic matches by strength: main focus 83,923 · own section 79,470 · covers it 54,573
+Topic matches by strength: main focus 83,923 · own section 79,470 · covers it 54,570
 
 70,757 outlets shown on the website. An outlet can have several topics and profiles.
 Topics and UN profiles never hide an outlet; they only change the order (unless the user
@@ -32,8 +32,8 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | General news | 36,375 | 26,907 | 0 | 0 | 0 | 0 | Wikidata: newspaper (9,741); no topic in the sources: general news (9,073); iptv-org category "general" (6,937) |
 | Fact-checking & misinformation | 1,128 | 38 | 267 | 0 | 108 | 0 | IFCN (150); Wikipedia list of fact-checking websites (96); website About page: "verification" (87) |
 | Science | 5,445 | 153 | 0 | 0 | 838 | 0 | website section "Science" (281); website section "History + Science" (280); website About page: "research" (224) |
-| Business & economy | 17,673 | 578 | 0 | 0 | 3,764 | 0 | website section "Business" (2,617); description mentions "business" (1,241); website About page: "business" (724) |
-| Culture | 22,173 | 1,372 | 0 | 0 | 5,239 | 0 | website section "Entertainment" (2,069); website section "Cultura" (1,055); description mentions "music" (925) |
+| Business & economy | 17,672 | 578 | 0 | 0 | 3,764 | 0 | website section "Business" (2,617); description mentions "business" (1,241); website About page: "business" (723) |
+| Culture | 22,172 | 1,372 | 0 | 0 | 5,239 | 0 | website section "Entertainment" (2,069); website section "Cultura" (1,055); description mentions "music" (925) |
 | Religion | 8,499 | 3,622 | 0 | 0 | 908 | 0 | iptv-org category "religious" (1,901); Radio Browser tag "christian" (820); website section "Religion" (299) |
 | Community & local | 22,556 | 2,427 | 0 | 16,081 | 767 | 0 | scope local (15,452); Radio Browser tag "community radio" (704); organisation type community media (629) |
 | Humanitarian aid | 784 | 0 | 0 | 0 | 35 | 0 | website headlines: "relief" (158); website headlines: "shelter" (78); website About page: "relief" (33) |
@@ -48,7 +48,7 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Disability & inclusion | 1,113 | 0 | 0 | 0 | 51 | 0 | website headlines: "discapacidad", "personas con discapacidad" (151); website headlines: "blind" (124); website About page: "blind", "disabilities" (74) |
 | Media freedom & journalism | 776 | 22 | 58 | 0 | 228 | 0 | website About page: "independent journalism" (66); OCCRP network (investigative journalism) (58); website About page: "investigative journalism" (37) |
 | Elections & governance | 10,731 | 959 | 0 | 0 | 683 | 0 | iptv-org category "legislative" (610); website section "Elections" (330); website headlines: "election" (325) |
-| Sports | 21,433 | 3,113 | 0 | 0 | 4,925 | 0 | website section "Sports" (4,087); iptv-org category "sports" (2,174); description mentions "sports" (2,031) |
+| Sports | 21,432 | 3,113 | 0 | 0 | 4,925 | 0 | website section "Sports" (4,087); iptv-org category "sports" (2,174); description mentions "sports" (2,031) |
 | Diaspora | 547 | 15 | 0 | 0 | 118 | 0 | website About page: "diaspora" (72); website section "Diaspora" (62); website headlines: "diaspora" (53) |
 | Older persons & ageing | 1,481 | 0 | 0 | 0 | 59 | 0 | website headlines: "seniors" (135); website section "Seniors" (108); website headlines: "adultos mayores" (89) |
 
