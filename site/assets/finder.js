@@ -174,8 +174,9 @@
       l.querySelector("input").addEventListener("change", () => { S.size = s.id; apply(); });
       $("f-size").append(l);
     });
-    $("sizeNote").textContent = CFG.size_note || "";
-    if ($("strengthNote")) $("strengthNote").textContent = CFG.topic_strength_note || "";
+    const forPage = (t) => (MODE === "ngo" ? (t || "").replace(/outlets/g, "NGOs").replace(/outlet/g, "NGO") : t || "");
+    $("sizeNote").textContent = forPage(CFG.size_note);
+    if ($("strengthNote")) $("strengthNote").textContent = forPage(CFG.topic_strength_note);
     const tpCount = {}, subCount = {};
     ALL.forEach((o) => {
       topicsOf(o).forEach((t) => { tpCount[t] = (tpCount[t] || 0) + 1; });

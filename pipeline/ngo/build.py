@@ -102,6 +102,8 @@ def parse_activities(t):
             out["scope"] = c
         elif part == "countries":
             out["countries"].append(c)
+        elif part == "mission" and (c.endswith(":") or low.startswith("civil society database")):
+            part = None  # next field ("Funding structure:", "Membership:" ...) or the page menu
         elif part == "mission":
             out["mission"] = (out["mission"] + " " + c).strip()
             if len(out["mission"]) > 1500:
@@ -476,7 +478,8 @@ def main():
             "profile_url": first(ms, "profile_url"),
             "description": (desc or "")[:600],
             "active_in": sorted({c for m in ms for c in m.get("active_in") or []} - {country}),
-            "geo_scope": next((m["geo_scope"].split()[0].lower() for m in ms if m.get("geo_scope")), None),
+            "geo_scope": next((g["id"] for m in ms if m.get("geo_scope") for g in CFG.get("geo_scope") or []
+                               if m["geo_scope"].lower().startswith(g["id"][:6])), None),  # config/ngo.yaml geo_scope
             "ngo": {"un_status": us, "type_of_work": tow, "fields": fields,
                     "registered_only": us[:1] == ["ecosoc_registered"] and len(ms) == 1},
             "prominence": max([weight.get(s, 0) for s in us] or [0]) * 10 + wl + len({m["source"] for m in ms}),
@@ -491,7 +494,7 @@ def main():
     n = len(out) or 1
     pct = lambda f: f"{sum(1 for o in out if f(o)) / n * 100:.0f} %"  # noqa: E731
     lines = ["# NGOs (phase 2)", "", f"Built {TODAY}. Sources: " + ", ".join(f"{k} {v}" for k, v in Counter(r['source'] for r in recs).items()), "",
-             f"**{len(out):,} NGOs** shown (only when 'Include NGOs in this search' is ticked), {len(excluded):,} not shown "
+             f"**{len(out):,} NGOs** shown on the NGO page, {len(excluded):,} not shown "
              "(reports/ngos_excluded.md).", "",
              "| Information | Share |", "|---|---|",
              f"| Topic | {pct(lambda o: o['cat']['topics'])} |",
