@@ -321,6 +321,34 @@ def main():
             store("profiles.json.gz", profiles)
             print(f"profiles: {done} fetched now, {len(profiles)} in total ({minutes():.0f} min)", flush=True)
     store("profiles.json.gz", profiles)
+    # 3. "Activities" tab of each profile (12.11.2026): fields of activity (-> topics), countries of activity,
+    #    mission statement. Only with ECOSOC_ACTIVITIES=1 (about 12,000 pages, 6-7 hours).
+    if os.environ.get("ECOSOC_ACTIVITIES") == "1":
+        done_a = 0
+        for code in targets:
+            p = profiles.get(code) or {}
+            if not p.get("text") or "activities" in p:
+                continue
+            if minutes() > BUDGET_MIN:
+                print("activities: time used up, continue next run")
+                break
+            try:
+                html = fetch(f"showProfileDetail.do?method=showProfileDetails&profileCode={code}&tab=3")
+            except NotAvailable:
+                p["activities"] = ""
+                continue
+            except RuntimeError as e:
+                print("activities failed", code, e)
+                continue
+            t = profile_text(html)["text"]
+            i = t.find("Areas of expertise")
+            p["activities"] = (t[i:] if i >= 0 else "")[:4000]
+            done_a += 1
+            if done_a % 50 == 0:
+                store("profiles.json.gz", profiles)
+                print(f"activities: {done_a} fetched now, "
+                      f"{sum(1 for x in profiles.values() if 'activities' in x)} in total ({minutes():.0f} min)", flush=True)
+        store("profiles.json.gz", profiles)
     complete = sum(1 for m in lists.values() if m.get("complete"))
     left = sum(1 for c in targets if not fresh(profiles.get(c, {}).get("fetched", ""), PROFILE_DAYS))
     save("ecosoc", [], {"url": BASE, "lists": len(lists), "lists_complete": complete, "organisations": len(orgs),
