@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-12
+- NGOs: all ECOSOC NGOs read (12,838 organisations, 12,845 profile pages: country, website, e-mail,
+  languages). 16,536 NGOs in the tool now, 5,336 of them with ECOSOC consultative status.
+
 ## 2026-11-11
 - NGOs: quality check. Schools, hospitals, clubs, museums and monasteries are no longer counted as NGOs;
   service clubs (Rotary, Lions, Zonta, Kiwanis) and all NGOs accredited by the UN stay in; the Federation for

@@ -186,6 +186,10 @@ media on the site, separate section in the export; updated every 2 months (step 
   ECOSOC organisations without a readable profile (no country) are left out completely; raw data keeps all
   e-mail addresses (repository is public since 11.11.2026, owner's decision). ECOSOC is now fetched from the
   cloud session (server answers there; from GitHub it was silent for hours).
+- 12.11.2026: ECOSOC COMPLETE (local run in the cloud session; GitHub runners get no answers after ~5 min):
+  12,838 organisations of type NGO, 12,845 profiles read (some not public: HTTP 403, skipped). 16,536 NGOs shown
+  (5,336 with ECOSOC consultative status, 5,858 only registered). The 60 lists by field of activity answer HTTP 500
+  (skipped with ECOSOC_SKIP_KINDS=field); the fields are on the profile's "Activities" tab, not read yet.
 - Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
   without an English label show their local name.
 - Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.
