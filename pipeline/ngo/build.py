@@ -75,6 +75,40 @@ def field_label(meta):
     return lab
 
 
+def parse_activities(t):
+    """'Activities' tab of an ECOSOC profile (fetched since 12.11.2026), cells separated by "|":
+    Areas of expertise & Fields of activity: | <group> | : | <field> | ... | Geographic scope: | International |
+    Country of activity: | <country> | ... | Millennium Development Goals: | ... | Mission statement: | <text>"""
+    cells = [c.strip() for c in (t or "").split("|")]
+    out = {"fields": [], "scope": None, "countries": [], "mission": ""}
+    part = None
+    for c in cells:
+        if not c or c == ":":
+            continue
+        low = c.lower()
+        if low.startswith("areas of expertise"):
+            part = "fields"
+        elif low.startswith("geographic scope"):
+            part = "scope"
+        elif low.startswith("country of activity"):
+            part = "countries"
+        elif low.startswith("millennium development goals") or low.startswith("year established") or low.startswith("view "):
+            part = None
+        elif low.startswith("mission statement"):
+            part = "mission"
+        elif part == "fields":
+            out["fields"].append(c)
+        elif part == "scope" and not out["scope"]:
+            out["scope"] = c
+        elif part == "countries":
+            out["countries"].append(c)
+        elif part == "mission":
+            out["mission"] = (out["mission"] + " " + c).strip()
+            if len(out["mission"]) > 1500:
+                part = None
+    return out
+
+
 def parse_profile(p):
     """ECOSOC profile page (short text version, cells separated by "|"), checked 10.11.2026:
     ... Headquarters address | Address: | <street> | <city> | <Country> | Phone: | ... | Email: | x |
@@ -155,14 +189,17 @@ def ecosoc():
                     break
         website, domain = norm_url(prof.get("website"))
         country = to_iso3(prof["country"]) if prof.get("country") else None
+        act = parse_activities((profiles.get(code) or {}).get("activities"))
+        active_in = sorted({x for x in (to_iso3(c) for c in act["countries"]) if x})
         us = [status or "ecosoc_registered"] + (["dgc_associated"] if r["dgc"] else [])
         out.append({
             "key": f"ecosoc:{code}", "source": "ecosoc", "name": clean_name(o["name"]), "alt_names": [],
             "website": website, "domain": domain, "country": country,
             "languages": LANG.codes_of(re.split(r"[,;/]| and ", prof.get("languages") or "")),
             "email": prof.get("email"), "social": {},
-            "fields": sorted(r["fields"]), "un_status": us,
-            "description": prof.get("mission") or "",
+            "fields": sorted(set(r["fields"]) | set(act["fields"])), "un_status": us,
+            "description": act["mission"] or prof.get("mission") or "",
+            "active_in": active_in, "geo_scope": act["scope"],
             "profile_url": f"https://esango.un.org/civilsociety/showProfileDetail.do?method=showProfileDetails&profileCode={code}",
         })
     return out
@@ -372,24 +409,32 @@ def main():
                 t["subs"].add(sub)
             if strength < t["strength"]:
                 t["strength"], t["source"] = strength, source
+        # topic strength (owner 12.11.2026): ECOSOC fields of activity = "Desk" (2); "Focus" (1) when the topic is
+        # also in the NGO's name or own description; topics only from the website = "Covers" (3)
         for f in fields:
             for x in field_map.get(f.lower(), []):
                 tp, _, sub = x.partition("/")
-                add(tp, sub or None, 1, f"ECOSOC field of activity: {f}")
+                add(tp, sub or None, 2, f"ECOSOC field of activity: {f}")
+        from_fields = set(tps)
         shorts = [x for m in ms for x in m.get("short") or []]
-        # long texts (mission, IATI description) like an About page: first sentence = Specialist, rest = Reports on it
         abouts = [("description", desc)] if desc else []
+        own = topics.match(name=name, descriptions=shorts, abouts=abouts, menu=[], headlines=[])
+        for tp, r in own.items():
+            if tp in from_fields:
+                tps[tp]["strength"], tps[tp]["source"] = 1, tps[tp]["source"] + "; also " + r["why"]
+                tps[tp]["subs"] |= set(r["subs"] or [])
+            else:
+                for sub in r["subs"] or [None]:
+                    add(tp, sub, r["s"], r["why"])
         wsite = web.get(nid_guess(keys)) or {}
-        menu, heads = [], []
         if wsite.get("status") == "ok":
-            shorts += [x for x in (wsite.get("desc"), wsite.get("title")) if x]
-            if wsite.get("about"):
-                abouts.append(("website About page", wsite["about"]))
+            wshort = [x for x in (wsite.get("desc"), wsite.get("title")) if x]
+            wabout = [("website About page", wsite["about"])] if wsite.get("about") else []
             menu = [tuple(x) for x in wsite.get("nav") or []]
             heads = (wsite.get("heads") or []) + ([wsite["home_text"]] if wsite.get("home_text") else [])
-        for tp, r in topics.match(name=name, descriptions=shorts, abouts=abouts, menu=menu, headlines=heads).items():
-            for sub in r["subs"] or [None]:
-                add(tp, sub, r["s"], r["why"])
+            for tp, r in topics.match(name="", descriptions=wshort, abouts=wabout, menu=menu, headlines=heads).items():
+                for sub in r["subs"] or [None]:
+                    add(tp, sub, 3 if tp not in tps else r["s"], r["why"])
         cat_topics = [{**t, "subs": sorted(t["subs"]), "method": "source_field" if t["source"].startswith("ECOSOC") else "keyword"}
                       for t in tps.values()]
         aud = {}
@@ -429,6 +474,9 @@ def main():
             "social": social, "email": next((x for x in [org_email(m.get("email")) for m in ms] + [org_email(e) for e in wsite.get("emails") or []] if x), None), "sources": sorted({m["source"] for m in ms}),
             "members": keys, "first_seen": first_seen[nid], "wikipedia_languages": wl,
             "profile_url": first(ms, "profile_url"),
+            "description": (desc or "")[:600],
+            "active_in": sorted({c for m in ms for c in m.get("active_in") or []} - {country}),
+            "geo_scope": next((m["geo_scope"].split()[0].lower() for m in ms if m.get("geo_scope")), None),
             "ngo": {"un_status": us, "type_of_work": tow, "fields": fields,
                     "registered_only": us[:1] == ["ecosoc_registered"] and len(ms) == 1},
             "prominence": max([weight.get(s, 0) for s in us] or [0]) * 10 + wl + len({m["source"] for m in ms}),

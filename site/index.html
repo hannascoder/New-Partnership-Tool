@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Partner Finder</title>
-<link rel="stylesheet" href="assets/atlas.css?v=2026-11-120536UTC">
-<link rel="stylesheet" href="assets/finder.css?v=2026-11-120536UTC">
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-121541UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-121541UTC">
 </head>
-<body>
+<body data-mode="media">
 <a class="skip-link" href="#results">Skip to results</a>
 <header class="site">
   <div class="brand">
@@ -19,6 +19,9 @@
     </div>
   </div>
   <div class="spacer"></div>
+  <nav class="mode-switch" aria-label="Choose what to search">
+    <a href="./" aria-current="page">Media</a><a href="ngos.html">NGOs</a>
+  </nav>
   <span class="preview-badge" title="All filters work with open data. The final design of the website follows (steps 6-7).">Preview</span>
 </header>
 
@@ -63,18 +66,6 @@
         <h2 class="sect">Organisation type</h2>
         <div class="chips" id="f-orgType"></div>
         <details class="explain"><summary>What do these types mean?</summary><dl id="orgTypeHelp"></dl></details>
-        <label class="check ngo-check"><input type="checkbox" id="f-ngo"> <b id="ngoLabel">Include NGOs in this search</b></label>
-        <p class="hint" id="ngoHint"></p>
-        <details class="subtopics ngo-box" id="f-ngoBox" hidden>
-          <summary>NGO filters <span class="pending" id="ngoCount"></span></summary>
-          <p class="hint">These filters only apply to NGOs; media are not affected.</p>
-          <h3 class="minor">UN status</h3>
-          <div class="chips" id="f-ngoStatus"></div>
-          <label class="check"><input type="checkbox" id="f-ngoEcosoc"> <span id="ngoEcosocLabel"></span></label>
-          <h3 class="minor">Type of work</h3>
-          <div class="chips" id="f-ngoType"></div>
-          <p class="hint">Type of work comes from the ECOSOC fields of activity or from words in the NGO’s name.</p>
-        </details>
       </section>
 
       <section class="fgroup">
@@ -166,7 +157,7 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an outlet</a>
 </footer>
-<script src="assets/finder.js?v=2026-11-120536UTC"></script>
-<script src="assets/finder-export.js?v=2026-11-120536UTC"></script>
+<script src="assets/finder.js?v=2026-11-121541UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-121541UTC"></script>
 </body>
 </html>

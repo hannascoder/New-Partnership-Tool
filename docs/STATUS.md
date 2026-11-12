@@ -190,6 +190,10 @@ media on the site, separate section in the export; updated every 2 months (step 
   12,838 organisations of type NGO, 12,845 profiles read (some not public: HTTP 403, skipped). 16,536 NGOs shown
   (5,336 with ECOSOC consultative status, 5,858 only registered). The 60 lists by field of activity answer HTTP 500
   (skipped with ECOSOC_SKIP_KINDS=field); the fields are on the profile's "Activities" tab, not read yet.
+- 12.11.2026: own NGO page (site/ngos.html, same script finder.js with <body data-mode="ngo">), switch Media | NGOs,
+  NGO export layout (finder.js NGO_LAYOUT). ECOSOC "Activities" tab being fetched in the cloud session
+  (ECOSOC_ACTIVITIES=1; fields of activity -> topics, countries of activity, geographic scope, mission statement);
+  rebuild NGOs when it is complete.
 - Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
   without an English label show their local name.
 - Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.

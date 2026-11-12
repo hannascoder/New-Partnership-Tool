@@ -79,8 +79,13 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .explain dd { margin: 0 0 0 0; color: var(--muted); }
 .row.warn { color: #9a5b00; }
 /* NGOs (phase 2): checkbox under "Organisation type", fold-out NGO filters */
-.ngo-check { margin-top: 10px; }
-.ngo-box summary { cursor: pointer; font-weight: 600; margin: 4px 0; }
-.ngo-box h3.minor { font-size: 0.85rem; margin: 8px 0 4px; }
 .badge.ngo { background: var(--accent-soft); color: inherit; }
 .card.is-ngo { border-left: 3px solid var(--accent-soft); }
+/* switch "Media | NGOs" at the top right (owner 12.11.2026) */
+.mode-switch { display: inline-flex; flex-shrink: 0; border: 1px solid var(--border); border-radius: var(--r-pill); overflow: hidden; margin-right: 12px; }
+.mode-switch a { white-space: nowrap; padding: 6px 16px; font-weight: 600; text-decoration: none; color: var(--un-blue-ink); background: var(--surface); }
+.mode-switch a + a { border-left: 1px solid var(--border); }
+/* the chosen page uses the Atlas style for header links (atlas.css: header.site nav a[aria-current]) */
+@media (max-width: 600px) { .mode-switch { margin-right: 0; } .mode-switch a { padding: 6px 12px; } header.site .preview-badge { display: none; } }
+.mode-switch a:focus-visible { outline: 2px solid var(--un-blue-ink); outline-offset: -2px; }
+.card .row.desc { color: var(--muted); font-style: italic; }

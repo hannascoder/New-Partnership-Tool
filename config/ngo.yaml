@@ -8,8 +8,17 @@
 # - Far-right NGOs and government-organised NGOs (GONGOs) are not shown.
 # - Shown together with media on the website, but in separate sections in the export.
 
-checkbox_label: "Include NGOs in this search"
-checkbox_hint: "Adds non-governmental organisations (NGOs) to the results: ECOSOC, UN Geneva, Wikidata and IATI. NGO filters open below."
+# Own page "NGOs" (owner 12.11.2026): switch "Media | NGOs" at the top right, same layout, filters and export
+# as the media page; the box "Include NGOs" on the media page was removed.
+page_hint: "Non-governmental organisations from ECOSOC, UN Geneva, Wikidata and IATI."
+hide_registered_label: "Hide NGOs only registered in ECOSOC (not checked by the UN)"
+hq_only_label: "Only NGOs based in this country (not those only active there)"
+# "Geographic scope" from the ECOSOC "Activities" tab (first word of the value)
+geo_scope:
+  - {id: international, label: "International"}
+  - {id: regional, label: "Regional"}
+  - {id: national, label: "National"}
+  - {id: local, label: "Local"}
 
 # UN status / accreditation ("Member of" for NGOs). Order = strength for the ranking.
 un_status:

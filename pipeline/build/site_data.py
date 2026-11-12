@@ -244,6 +244,12 @@ def main():
             e["ro"] = 1
         if o.get("profile_url"):
             e["pu"] = o["profile_url"]
+        if o.get("active_in"):
+            e["ca"] = o["active_in"]  # countries of activity (ECOSOC "Activities" tab)
+        if o.get("geo_scope"):
+            e["gs"] = o["geo_scope"]
+        if o.get("description"):
+            e["ds"] = fix_text(o["description"])[:600]
         if set(e["us"]) & {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "dgc_associated", "un_geneva", "desa_cosp"}:
             e["nw"] = ["un_relationship"]  # "Member of: Existing UN relationship" also finds these NGOs
         ngo_out.append(e)
@@ -280,7 +286,8 @@ def main():
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
         "codes": codes,
-        "ngo": {k: ngo_cfg[k] for k in ("checkbox_label", "checkbox_hint", "un_status", "only_ecosoc_label")}
+        "ngo": {k: ngo_cfg[k] for k in ("un_status", "only_ecosoc_label", "hide_registered_label", "hq_only_label",
+                                        "geo_scope", "page_hint")}
                | {"type_of_work": [{"id": t["id"], "label": t["label"]} for t in ngo_cfg["type_of_work"]],
                   "count": len(ngo_out)},
     }
@@ -306,11 +313,13 @@ def main():
     json.dump(config, open(data / "config.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     # scripts and styles get the build time as version, so browsers load the new ones after an update
     import re as _re
-    idx = ROOT / "site" / "index.html"
-    html = idx.read_text(encoding="utf-8")
     ver = config["built"].replace(" ", "").replace(":", "")
-    html = _re.sub(r'(assets/[a-z\-]+\.(?:js|css))(\?v=[^"]*)?"', lambda m: f'{m.group(1)}?v={ver}"', html)
-    idx.write_text(html, encoding="utf-8")
+    for idx in (ROOT / "site" / "index.html", ROOT / "site" / "ngos.html"):  # media page and NGO page
+        if not idx.exists():
+            continue
+        html = idx.read_text(encoding="utf-8")
+        html = _re.sub(r'(assets/[a-z\-]+\.(?:js|css))(\?v=[^"]*)?"', lambda m: f'{m.group(1)}?v={ver}"', html)
+        idx.write_text(html, encoding="utf-8")
     sizes = ", ".join(f"{f} {(data / f).stat().st_size / 1e6:.1f} MB" for f in files)
     print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes}); {len(ngo_out)} NGOs in {len(nfiles)} files")
 

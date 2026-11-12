@@ -6,9 +6,9 @@ Built 2026-11-12. Sources: ecosoc 12838, wikidata_ngo 58399, un_geneva 1471, iat
 
 | Information | Share |
 |---|---|
-| Topic | 43 % |
+| Topic | 44 % |
 | Topic from ECOSOC fields of activity | 0 % |
-| Target audience | 3 % |
+| Target audience | 2 % |
 | Language | 74 % |
 | Website | 55 % |
 | E-mail | 18 % |

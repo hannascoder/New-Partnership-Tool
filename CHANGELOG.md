@@ -1,6 +1,9 @@
 # Changelog
 
 ## 2026-11-12
+- **NGOs have their own page.** Switch "Media | NGOs" at the top right. Same layout and export as the media
+  page, with NGO filters: based in or active in a country, geographic scope, UN status, hide NGOs only
+  registered in ECOSOC, type of work, topics, target audience. NGO cards show the NGO's own description.
 - NGOs: all ECOSOC NGOs read (12,838 organisations, 12,845 profile pages: country, website, e-mail,
   languages). 16,536 NGOs in the tool now, 5,336 of them with ECOSOC consultative status.
 

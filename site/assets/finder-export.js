@@ -7,22 +7,22 @@
 (function () {
   "use strict";
   const TOOL = "Partner Finder";
-  const FILE = "partner-finder";
+  let FILE = "partner-finder";
   const BLUE = "009EDB", INK = "003D6B", MUTED = "5C6B7E", LIGHT = "E6F4FB";
-  const NOTE = "Orientation only. Please confirm that an outlet is active before contacting it.";
+  let NOTE = "Orientation only. Please confirm that an outlet is active before contacting it.";
   // landscape: one column per field
-  const COLS = [
+  let COLS = [
     ["name", "Name", 24], ["type", "Type", 18], ["country", "Country", 16], ["reaches", "Reaches", 20],
     ["scope", "Scope", 17], ["languages", "Languages", 18], ["channels", "Channels", 16], ["ownership", "Ownership", 19],
     ["topic", "Topic", 14], ["audience", "Target audience", 14], ["unProfile", "UN profile", 13], ["memberOf", "Member of", 14], ["website", "Website", 20],
     ["contact", "Contact", 19], ["social", "Social media", 16], ["notes", "Notes", 20]];
   // portrait: the same fields grouped into five columns (labels inside the cell)
-  const GROUPS = {
+  let GROUPS = {
     outlet: [["name", ""], ["type", "Type"], ["country", "Country"], ["scope", "Scope"], ["ownership", "Ownership"]],
     reach: [["reaches", "Reaches"], ["languages", "Languages"], ["channels", "Channels"], ["topic", "Topic"],
             ["audience", "Target audience"], ["unProfile", "UN profile"], ["memberOf", "Member of"]],
     more: [["social", "Social media"], ["notes", "Notes"]]};
-  const COLS_PORTRAIT = [["outlet", "Outlet", 52], ["reach", "Reach & content", 64], ["website", "Website", 26],
+  let COLS_PORTRAIT = [["outlet", "Outlet", 52], ["reach", "Reach & content", 64], ["website", "Website", 26],
                          ["contact", "Contact", 26], ["more", "Social media & notes", 26]];
   const BASE = (document.currentScript && document.currentScript.src.replace(/[^/]*$/, "")) || "assets/";
 
@@ -67,7 +67,7 @@
       ["Exported", today()],
       ["Data as of", list.updated || ""],
       ["Filters", list.filters && list.filters.length ? list.filters.map((f) => f[1] ? `${f[0]}: ${f[1]}` : f[0]).join(" · ") : "None (all items)"],
-      ["Items", `${list.count} outlet${list.count === 1 ? "" : "s"}${counts ? ` (${counts})` : ""}`]];
+      ["Items", `${list.count} ${list.itemWord || "outlet"}${list.count === 1 ? "" : "s"}${counts ? ` (${counts})` : ""}`]];
   }
 
   /* ------------------------------------------------------------------ PDF */
@@ -224,9 +224,13 @@
   }
 
   /* opts.orientation: "landscape" (default) or "portrait" (PDF and Word) */
+  const DEFAULT = { cols: COLS, groups: GROUPS, portrait: COLS_PORTRAIT, note: NOTE, file: FILE };
   async function download(format, list, opts = {}) {
     const make = { pdf, xlsx: excel, docx: word }[format];
     if (!make) throw new Error("Unknown format " + format);
+    // the NGO page sends its own columns (list.layout: cols, groups, portrait, note, file)
+    const L = Object.assign({}, DEFAULT, list.layout || {});
+    COLS = L.cols; GROUPS = L.groups; COLS_PORTRAIT = L.portrait; NOTE = L.note; FILE = L.file;
     const blob = await make(list, opts);
     save(blob, format);
     return blob;
