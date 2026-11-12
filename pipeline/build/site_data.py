@@ -111,7 +111,9 @@ def compact(out):
 def main():
     outlets = json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))
     outlets = [o for o in outlets if not (o.get("cat") or {}).get("excluded")  # far-right: not shown (rules.yaml)
-               and not (o.get("cat") or {}).get("hidden")]  # AI reading: not media / closed (reports/hidden_ai.md)
+               and not (o.get("cat") or {}).get("hidden")  # AI reading: not media / closed (reports/hidden_ai.md)
+               and re.search(r"[^\W_]", fix_text(o.get("name") or "") or "")
+               and "\ufffd" not in (o.get("name") or "")]  # no real name ("-", "|", broken characters): left out
     countries = list(csv.DictReader(open(CFG / "countries.csv", encoding="utf-8")))
     langs_all = {r["code"]: r for r in csv.DictReader(open(CFG / "languages.csv", encoding="utf-8"))}
     cats = yaml.safe_load(open(CFG / "categories.yaml", encoding="utf-8"))
