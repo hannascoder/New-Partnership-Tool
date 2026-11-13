@@ -44,6 +44,7 @@
 .card .add { font-size: 12px; }
 .card .add[aria-pressed="true"] { background: var(--accent-soft); }
 .more { margin: 16px auto; display: block; }
+.more[hidden] { display: none; }
 footer.site { text-align: center; padding: 16px; font-size: 12px; color: var(--muted); }
 dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); max-width: 480px; }
 
@@ -90,3 +91,80 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .mode-switch a:focus-visible { outline: 2px solid var(--un-blue-ink); outline-offset: -2px; }
 .card .row.desc { color: var(--muted); font-style: italic; }
 .badge.partner { background: var(--un-blue); color: #fff; margin-left: auto; margin-right: 6px; }
+
+/* ---------- Loading: an open yellow "partner pages" directory riffles its pages while the data loads ---------- */
+.loader { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 56px 16px; }
+.pb-text { margin: 0; color: var(--muted); font-size: 15px; text-align: center; }
+
+.pb-stage { width: min(300px, 72vw); }
+/* preserve-3d: the leaves in the air are drawn in real 3D order, so several can turn at once */
+.pb-book { position: relative; width: 100%; aspect-ratio: 440 / 300; perspective: 650px; transform-style: preserve-3d; container-type: inline-size; }
+.pb-back { position: absolute; top: -2.5%; bottom: -2.5%; width: 51%; background: #E5B800; box-shadow: var(--shadow-lg); }
+.pb-back-r { left: 50%; border-radius: 0 6px 6px 0; }
+.pb-back-l { right: 50%; border-radius: 6px 0 0 6px; }
+
+/* a page of listings: header with the UN emblem, two columns of entries, some names in bold */
+.pb-page { position: absolute; top: 0; bottom: 0; width: 50%; overflow: hidden; background-color: #FBE680;
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 15px, rgba(15,26,43,.55) 15px 18px, transparent 18px 63px),
+    repeating-linear-gradient(to bottom, transparent 0 6px, rgba(15,26,43,.28) 6px 8px, transparent 8px 9px),
+    repeating-linear-gradient(to bottom, transparent 0 15px, rgba(15,26,43,.55) 15px 18px, transparent 18px 45px),
+    repeating-linear-gradient(to bottom, transparent 0 6px, rgba(15,26,43,.28) 6px 8px, transparent 8px 9px);
+  background-size: 18% calc(100% - 22%), 38% calc(100% - 22%), 18% calc(100% - 22%), 38% calc(100% - 22%);
+  background-position: 8% 88%, 8% 88%, 92% 88%, 92% 88%;
+  background-repeat: no-repeat; box-shadow: inset 0 0 0 1px rgba(15,26,43,.06); }
+.pb-page::before { content: "DGC PARTNER PAGES"; position: absolute; top: 4.5%; left: 8%; right: 8%;
+  padding: 0 0 1.2cqw 5.4cqw; min-height: 4.2cqw; display: flex; align-items: center;
+  background: url("un_emblem.png") left top / 4.2cqw auto no-repeat;
+  border-bottom: .5cqw solid var(--un-blue-ink); color: var(--un-blue-ink);
+  font: 800 2.6cqw/1 system-ui, sans-serif; letter-spacing: .08em; }
+.pb-r { left: 50%; border-radius: 0 4px 4px 0; background-color: #FAE277; }
+.pb-l { left: 0; border-radius: 4px 0 0 4px; }
+.pb-l::after { content: ""; position: absolute; inset: 0 0 0 auto; width: 12%; background: linear-gradient(to left, rgba(15,26,43,.16), transparent); }
+.pb-r::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 12%; background: linear-gradient(to right, rgba(15,26,43,.16), transparent); }
+
+/* 6 leaves turn from right to left, a new one every 0.15 s, each turn takes 0.4 s: 2-3 pages are always in the air.
+   A landed leaf is hidden (visibility, not opacity: opacity would flatten the 3D turn); the page beneath looks the same.
+   Negative delays: the riffling is already under way when the book appears. */
+.pb-leaf { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; transform-origin: left center;
+  transform-style: preserve-3d; animation: pb-flip .9s calc(var(--i) * -.15s) linear infinite; }
+.pb-face { position: absolute; inset: 0; width: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  box-shadow: 0 0 8px rgba(15,26,43,.14); border-radius: 0 4px 4px 0; }
+.pb-face-back { transform: rotateY(180deg); border-radius: 4px 0 0 4px; }
+
+@keyframes pb-flip {
+  0%     { transform: rotateY(0); visibility: visible; animation-timing-function: cubic-bezier(.45, .05, .55, .95); }
+  44%    { transform: rotateY(-180deg); visibility: visible; }
+  60%    { transform: rotateY(-180deg); visibility: visible; }
+  60.1%  { transform: rotateY(-180deg); visibility: hidden; }
+  60.2%, 99.9% { transform: rotateY(0); visibility: hidden; }
+  100%   { transform: rotateY(0); visibility: visible; }
+}
+/* ---------- hand-drawn look (option, owner 13.11.2026): ink outlines, wobbly lines that "boil" like a cartoon,
+   handwritten header. The wobble is the SVG filter #pb-wobble in the page (seed changes 8 times a second). ---------- */
+@font-face { font-family: "Patrick Hand"; src: url("vendor/patrick-hand.woff2") format("woff2"); font-display: swap; }
+.loader.sketch { --pb-ink: #24211c; }
+.sketch .pb-page, .sketch .pb-back { filter: url(#pb-wobble); }
+.sketch .pb-back { background: #F2C200; border: 2.5px solid var(--pb-ink); box-shadow: 4px 5px 0 rgba(36,33,28,.18);
+  top: -3.5%; bottom: -3.5%; }
+.sketch .pb-back-r { border-radius: 4px 14px 9px 3px / 3px 9px 14px 6px; }
+.sketch .pb-back-l { border-radius: 14px 4px 3px 9px / 9px 3px 6px 14px; }
+.sketch .pb-page { background-color: #FFE97A; border: 2px solid var(--pb-ink); box-shadow: none;
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 14px, rgba(36,33,28,.85) 14px 17px, transparent 17px 63px),
+    repeating-linear-gradient(to bottom, transparent 0 7px, rgba(36,33,28,.55) 7px 8.5px, transparent 8.5px 10px),
+    repeating-linear-gradient(to bottom, transparent 0 14px, rgba(36,33,28,.85) 14px 17px, transparent 17px 50px),
+    repeating-linear-gradient(to bottom, transparent 0 7px, rgba(36,33,28,.55) 7px 8.5px, transparent 8.5px 10px); }
+.sketch .pb-r { border-radius: 2px 10px 6px 2px / 2px 6px 10px 3px; border-left-width: 1px; background-color: #FFE56C; }
+.sketch .pb-l { border-radius: 10px 2px 2px 6px / 6px 2px 3px 10px; border-right-width: 1px; }
+.sketch .pb-face { border-radius: 2px 10px 6px 2px / 2px 6px 10px 3px; box-shadow: 2px 2px 0 rgba(36,33,28,.15); }
+.sketch .pb-face-back { border-radius: 10px 2px 2px 6px / 6px 2px 3px 10px; }
+.sketch .pb-l::after, .sketch .pb-r::after { width: 9%; background: repeating-linear-gradient(115deg, rgba(36,33,28,.35) 0 1px, transparent 1px 4px); }
+.sketch .pb-page::before { content: "DGC Partner Pages"; font: 400 4.2cqw/1 "Patrick Hand", "Comic Sans MS", cursive;
+  letter-spacing: .02em; color: var(--pb-ink); border-bottom: .6cqw solid var(--pb-ink); padding-bottom: .6cqw; top: 3.5%; }
+.sketch .pb-text { font: 400 20px/1 "Patrick Hand", "Comic Sans MS", cursive; color: var(--pb-ink); }
+
+/* people who switch off motion see the open directory without riffling */
+@media (prefers-reduced-motion: reduce) {
+  .pb-leaf { display: none; }
+}

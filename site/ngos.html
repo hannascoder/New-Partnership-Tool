@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Partner Finder – Organisations &amp; NGOs</title>
-<link rel="stylesheet" href="assets/atlas.css?v=2026-11-131931UTC">
-<link rel="stylesheet" href="assets/finder.css?v=2026-11-131931UTC">
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-131932UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-131932UTC">
 </head>
 <body data-mode="ngo">
 <a class="skip-link" href="#results">Skip to results</a>
@@ -118,7 +118,7 @@
 
   <main id="results" class="results" tabindex="-1">
     <div class="results-head">
-      <p class="counter" id="counter" aria-live="polite">Loading data…</p>
+      <p class="counter" id="counter" aria-live="polite"></p>
       <div class="actions">
         <label class="sortlabel">Sort
           <select id="sort"></select>
@@ -126,6 +126,20 @@
         <button class="btn-quiet" id="reset">Reset filters</button>
         <button class="btn-quiet" id="addAll" disabled>Add all to export list</button>
       </div>
+    </div>
+    <div class="loader sketch" id="loader">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="pb-wobble" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="1" result="n"><animate attributeName="seed" values="1;4;7;10" dur="0.5s" calcMode="discrete" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+      <div class="pb-stage" aria-hidden="true"><div class="pb-book">
+          <div class="pb-back pb-back-l"></div><div class="pb-back pb-back-r"></div>
+          <div class="pb-page pb-l"></div><div class="pb-page pb-r"></div>
+          <div class="pb-leaf" style="--i:0"><div class="pb-face pb-page"></div><div class="pb-face pb-page pb-face-back"></div></div>
+          <div class="pb-leaf" style="--i:1"><div class="pb-face pb-page"></div><div class="pb-face pb-page pb-face-back"></div></div>
+          <div class="pb-leaf" style="--i:2"><div class="pb-face pb-page"></div><div class="pb-face pb-page pb-face-back"></div></div>
+          <div class="pb-leaf" style="--i:3"><div class="pb-face pb-page"></div><div class="pb-face pb-page pb-face-back"></div></div>
+          <div class="pb-leaf" style="--i:4"><div class="pb-face pb-page"></div><div class="pb-face pb-page pb-face-back"></div></div>
+          <div class="pb-leaf" style="--i:5"><div class="pb-face pb-page"></div><div class="pb-face pb-page pb-face-back"></div></div>
+      </div></div>
+      <p class="pb-text" id="loaderText" role="status" aria-live="polite">Loading…</p>
     </div>
     <ol class="cards" id="cards"></ol>
     <button class="btn-quiet more" id="more" hidden>Show more</button>
@@ -154,7 +168,7 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an NGO</a>
 </footer>
-<script src="assets/finder.js?v=2026-11-131931UTC"></script>
-<script src="assets/finder-export.js?v=2026-11-131931UTC"></script>
+<script src="assets/finder.js?v=2026-11-131932UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-131932UTC"></script>
 </body>
 </html>
