@@ -98,7 +98,7 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .loader.failed .pb-text { color: var(--danger); font-weight: 600; }
 .loader.failed * { animation-play-state: paused !important; }
 
-.pb-stage { width: min(440px, 86vw); }
+.pb-stage { width: min(260px, 64vw); }
 .pb-shift { transform: translateX(-25%); animation: pb-center .9s .5s ease-in-out forwards; }
 .pb-book { position: relative; width: 100%; aspect-ratio: 440 / 300; perspective: 1600px; container-type: inline-size; }
 .pb-back { position: absolute; top: -2.5%; bottom: -2.5%; width: 51%; background: #E5B800; border-radius: 6px; }
