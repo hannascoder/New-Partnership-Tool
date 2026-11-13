@@ -36,11 +36,16 @@
     });
 
   /* loading screen (the flipping directory in index.html / ngos.html) fades out once the list is ready */
+  /* shown for at least LOADER_MIN_MS after the page started, so the book opens and flips a few pages
+     even when the data comes quickly from the browser cache (owner 13.11.2026) */
+  const LOADER_MIN_MS = 2500;
   function hideLoader() {
     const l = $("loader");
     if (!l) return;
-    l.classList.add("done");
-    setTimeout(() => l.remove(), 500);
+    setTimeout(() => {
+      l.classList.add("done");
+      setTimeout(() => l.remove(), 500);
+    }, Math.max(0, LOADER_MIN_MS - performance.now()));
   }
 
   /* outlets.json stores repeated values as short codes (pipeline/build/site_data.py compact()) */
