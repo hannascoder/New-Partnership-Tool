@@ -14,7 +14,6 @@
 | ngo-wd-q343978 | IHH | TUR | government-organised NGO (Wikidata: government-organized non-governmental organization) |
 | ngo-ecosoc-46871 | 21st Century News | - | no country of the 195 in the sources |
 | ngo-ecosoc-609433 | ACADEMY OF FINE ARTS AND LITERATURE (AFAL) | - | no country of the 195 in the sources |
-| ngo-ecosoc-48818 | ACDI/VOCA | - | no country of the 195 in the sources |
 | ngo-ecosoc-609445 | AGUDATH ISRAEL WORLD ORGANIZATION | - | no country of the 195 in the sources |
 | ngo-ecosoc-685735 | AI for Rural | - | no country of the 195 in the sources |
 | ngo-ecosoc-609449 | ALIANZA ESPIRITUALISTA INTERNACIONAL | - | no country of the 195 in the sources |
@@ -54,6 +53,7 @@
 | ngo-ecosoc-47436 | African Water Forum | - | no country of the 195 in the sources |
 | ngo-ecosoc-7046 | African Youth Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-47437 | Afriques Sans Frontières | - | no country of the 195 in the sources |
+| ngo-gc-156818 | Agile_Freaks NGO | - | no country of the 195 in the sources |
 | ngo-ecosoc-2484 | Agricultural Missions, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-451 | Airlines Worldwide Telecommunications and Information Service | - | no country of the 195 in the sources |
 | ngo-ecosoc-601288 | All China Youth Federation (ACFY) | - | no country of the 195 in the sources |
@@ -154,6 +154,7 @@
 | ngo-ecosoc-48256 | Aynimundo | - | no country of the 195 in the sources |
 | ngo-ecosoc-48127 | Azerbaijan Society for the Protection of Animals | - | no country of the 195 in the sources |
 | ngo-ecosoc-609568 | B'NAI OR--VIBE SIENDO TUS SUENOS A.C. | - | no country of the 195 in the sources |
+| ngo-gc-165423 | BAC RDC | - | no country of the 195 in the sources |
 | ngo-ecosoc-609556 | BAHRAIN WOMEN ASSOCIATION FOR HUMAN DEVELOPMENT | - | no country of the 195 in the sources |
 | ngo-ecosoc-47935 | BAIF - Development Research Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-609558 | BANCO ALIMENTOS MANA A.C. | - | no country of the 195 in the sources |
@@ -185,7 +186,6 @@
 | ngo-ecosoc-603462 | Building Africa, Inc. | - | no country of the 195 in the sources |
 | ngo-ecosoc-47930 | Bund für Umwelt und Naturschutz Deutschland e.V. | - | no country of the 195 in the sources |
 | ngo-ecosoc-45746 | Business Council of Australia | - | no country of the 195 in the sources |
-| ngo-ecosoc-48994 | Business for Social Responsibility | - | no country of the 195 in the sources |
 | ngo-ecosoc-45780 | C.P.R. Environmental Education Centre | - | no country of the 195 in the sources |
 | ngo-ecosoc-48037 | CARE - USA | - | no country of the 195 in the sources |
 | ngo-ecosoc-48159 | CASLE (Commonwealth Association of Surveying & Land Economy | - | no country of the 195 in the sources |
@@ -202,12 +202,11 @@
 | ngo-ecosoc-609606 | CENTRO DE INVESTIGACION, INFORMACION Y APOYO A LA CULTURA A.C. | - | no country of the 195 in the sources |
 | ngo-ecosoc-48354 | CERISDI - Centro Ricerche e Studi Direzionali | - | no country of the 195 in the sources |
 | ngo-ecosoc-609610 | CHAKAAN BUULAAN A.C. | - | no country of the 195 in the sources |
+| ngo-gc-168616 | CHAMBRE DE COMMERCE ET D'INDUSTRIE FRANCO CONGOLAISE "CCIFC | - | no country of the 195 in the sources |
 | ngo-ecosoc-609623 | CHRISTIANS ASSOCIATED FOR RELATIONSHIPS WITH EASTERN EUROPE (CAREE) | - | no country of the 195 in the sources |
 | ngo-ecosoc-609627 | CITIZENS FOR GLOBAL SOLUTIONS EDUCATION FUND | - | no country of the 195 in the sources |
-| ngo-ecosoc-609628 | CITIZENS FOUNDATION, THE (TCF) | - | no country of the 195 in the sources |
 | ngo-ecosoc-42873 | COALITION ON VIOLENCE AGAINST WOMEN-KENYA | - | no country of the 195 in the sources |
 | ngo-ecosoc-609633 | COLEGIO DE ABOGADOS DE PUERTO RICO | - | no country of the 195 in the sources |
-| ngo-ecosoc-48316 | COMITE 21 | - | no country of the 195 in the sources |
 | ngo-ecosoc-609639 | COMITE POR LA LIBRE EXPRESION (C-LIBRE) | - | no country of the 195 in the sources |
 | ngo-ecosoc-609640 | COMMISSION INTERNATIONALE DE L'ECLAIRAGE | - | no country of the 195 in the sources |
 | ngo-ecosoc-609642 | COMMONWEALTH BROADCASTING ORGANISATION | - | no country of the 195 in the sources |
@@ -489,6 +488,7 @@
 | ngo-ecosoc-602718 | Evangelical Lutheran Mission Leipzig | - | no country of the 195 in the sources |
 | ngo-ecosoc-46657 | Experimental Cities | - | no country of the 195 in the sources |
 | ngo-ecosoc-609705 | FEDERACION DE ORGANIZACIONES NO GUBERNAMENTALES PARA EL DESAROLLO DE HONDURAS (FOPRIDEH) | - | no country of the 195 in the sources |
+| ngo-gc-168742 | FEDERATION DES ENTREPRISES DU CONGO | - | no country of the 195 in the sources |
 | ngo-ecosoc-609709 | FEDERATION OF AMERICAN-ARAB ORGANIZATIONS | - | no country of the 195 in the sources |
 | ngo-ecosoc-47600 | FOCARFE | - | no country of the 195 in the sources |
 | ngo-ecosoc-609719 | FONDAZIONE FILIPPO TURATI - ENTE MORALE ONLUS | - | no country of the 195 in the sources |
@@ -555,7 +555,6 @@
 | ngo-ecosoc-48286 | Fundacion Futuro Latino-Americano | - | no country of the 195 in the sources |
 | ngo-ecosoc-6082 | Fundacion Instituto Psicopedagogico Uruguayo | - | no country of the 195 in the sources |
 | ngo-ecosoc-48287 | Fundacion Tierra Viva | - | no country of the 195 in the sources |
-| ngo-ecosoc-48229 | Fundación Agreste (Ecología y Medio Ambiente) | - | no country of the 195 in the sources |
 | ngo-ecosoc-46442 | Fundación Ambiental Francisco Tamayo | - | no country of the 195 in the sources |
 | ngo-ecosoc-47620 | Fundación Ecologica Universal | - | no country of the 195 in the sources |
 | ngo-ecosoc-47619 | Fundación Ecología y Desarrollo | - | no country of the 195 in the sources |
@@ -575,7 +574,6 @@
 | ngo-ecosoc-46436 | Fundaçao Grupo Esquel | - | no country of the 195 in the sources |
 | ngo-ecosoc-46439 | Fundaçao Ondazul | - | no country of the 195 in the sources |
 | ngo-ecosoc-48511 | Futuros Lideres de America A.C. Mexico | - | no country of the 195 in the sources |
-| ngo-ecosoc-48283 | GERMANWATCH | - | no country of the 195 in the sources |
 | ngo-ecosoc-609360 | GLOBAL HEALTH ACTION, INC | - | no country of the 195 in the sources |
 | ngo-ecosoc-609363 | GLOBAL NETWORK AGAINST WEAPONS AND NUCLEAR POWER IN SPACE | - | no country of the 195 in the sources |
 | ngo-ecosoc-609365 | GLOBAL VISION FOR PEACE (GVP) | - | no country of the 195 in the sources |
@@ -1259,6 +1257,7 @@
 | ngo-ecosoc-684691 | Swapna Foundation | - | no country of the 195 in the sources |
 | ngo-ecosoc-45377 | Swiss Coalition of Development Organizations | - | no country of the 195 in the sources |
 | ngo-ecosoc-2729 | Swiss Peace Foundation | - | no country of the 195 in the sources |
+| ngo-gc-132147 | Syri i Vizionit | - | no country of the 195 in the sources |
 | ngo-ecosoc-48485 | Syrian Environment Association | - | no country of the 195 in the sources |
 | ngo-ecosoc-610157 | TANZANIA YOUNG MEN'S CHRISTIAN ASSOCIATION | - | no country of the 195 in the sources |
 | ngo-ecosoc-610163 | THE INTERFAITH ALLIANCE FOUNDATION (TIAF) | - | no country of the 195 in the sources |
@@ -1483,7 +1482,6 @@
 | ngo-wd-q15849277 | Stiftung Familienunternehmen | DEU | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q135975109 | Sustainable Villages Foundation | DEU | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q787736 | Verein Naturschutzpark | DEU | not a classic NGO (Wikidata: foundation) |
-| ngo-wd-q18632554 | WWF Germany | DEU | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q134277477 | Fundación Nzuri Daima | ESP | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q6886227 | Mo Ibrahim Foundation | GBR | not a classic NGO (Wikidata: foundation) |
 | ngo-wd-q98590334 | Dagbani Wikimedians User Group | GHA | not a classic NGO (Wikidata: foundation) |
@@ -1624,7 +1622,6 @@
 | ngo-wd-q20919127 | Linja-autoliitto | FIN | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q18690909 | The Central Organisation of Finnish Film Producers | FIN | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q6048438 | International Association of Conference Interpreters | FRA | not a classic NGO (Wikidata: professional association) |
-| ngo-wd-q4809589 | Association of Accounting Technicians | GBR | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4809701 | Association of Chief Executives of Voluntary Organisations | GBR | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4809852 | Association of Independent Museums | GBR | not a classic NGO (Wikidata: professional association) |
 | ngo-wd-q4810123 | Association of Women Solicitors | GBR | not a classic NGO (Wikidata: professional association) |
@@ -1724,7 +1721,6 @@
 | ngo-ecosoc-623570 | Polaris Institute | CAN | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q2993810 | The Council of Canadians | CAN | not a classic NGO (Wikidata: think tank) |
 | ngo-ecosoc-48892 | The Club of Rome | CHE | not a classic NGO (Wikidata: think tank) |
-| ngo-wd-q170418 | World Economic Forum | CHE | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q116943539 | Instituto Igualdad | CHL | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q6048789 | Océanos Azules | CHL | not a classic NGO (Wikidata: think tank) |
 | ngo-ecosoc-624302 | Civic Exchange | CHN | not a classic NGO (Wikidata: think tank) |
@@ -1738,7 +1734,6 @@
 | ngo-wd-q1664831 | Institute of Democracy and Cooperation | FRA | not a classic NGO (Wikidata: think tank) |
 | ngo-ecosoc-3320 | British American Security Information Council | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q16953931 | British Influence | GBR | not a classic NGO (Wikidata: think tank) |
-| ngo-wd-q263016 | Chatham House | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q3022242 | Demos | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5062218 | Education Policy Institute | GBR | not a classic NGO (Wikidata: think tank) |
 | ngo-wd-q5602276 | Green Alliance | GBR | not a classic NGO (Wikidata: think tank) |
@@ -1805,7 +1800,6 @@
 | ngo-wd-q190840 | Zentralverband Sanitär Heizung Klima | DEU | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q1282012 | eco - Association of the Internet Industry | DEU | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q23786249 | professional association for queer people in psychology | DEU | not a classic NGO (Wikidata: trade association) |
-| ngo-wd-q12323628 | Danish Agriculture & Food Council | DNK | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q10551117 | Danish Women Workers' Union | DNK | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q11856466 | EMMA Finland | FIN | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q11859404 | Finnish AutoSound Challenge Association | FIN | not a classic NGO (Wikidata: trade association) |
@@ -1814,7 +1808,6 @@
 | ngo-wd-q7864794 | UKSG | GBR | not a classic NGO (Wikidata: trade association) |
 | ngo-ecosoc-48257 | Water UK | GBR | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q3152360 | World Coal Association | GBR | not a classic NGO (Wikidata: trade association) |
-| ngo-wd-q1391345 | World Gold Council | GBR | not a classic NGO (Wikidata: trade association) |
 | ngo-ecosoc-46318 | World Travel and Tourism Council | GBR | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q7060983 | Norwegian Airline Pilots Association | NOR | not a classic NGO (Wikidata: trade association) |
 | ngo-wd-q11992430 | Norwegian Sommelier Association | NOR | not a classic NGO (Wikidata: trade association) |
@@ -1840,7 +1833,6 @@
 | ngo-wd-q6515853 | Norwegian Automobile Federation | NOR | not a classic NGO (name contains "automobile federation") |
 | ngo-wd-q12076057 | Automobile Federation of Ukraine | UKR | not a classic NGO (name contains "automobile federation") |
 | ngo-wd-q4743336 | American Chamber of Commerce to the European Union | BEL | not a classic NGO (name contains "chamber of commerce") |
-| ngo-ecosoc-461 | International Chamber of Commerce | FRA | not a classic NGO (name contains "chamber of commerce") |
 | ngo-iati-ukgcc | UK-Ghana Chamber of Commerce | GHA | not a classic NGO (name contains "chamber of commerce") |
 | ngo-wd-q12488848 | Indonesian Chamber of Commerce and Industry | IDN | not a classic NGO (name contains "chamber of commerce") |
 | ngo-wd-q113903669 | Indian Chamber of Commerce | IND | not a classic NGO (name contains "chamber of commerce") |

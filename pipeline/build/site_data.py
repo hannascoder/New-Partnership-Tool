@@ -35,7 +35,7 @@ SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org"
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
                 "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
                 "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU",
-                "occrp_network": "OCCRP", "ecosoc": "ECOSOC iCSO", "wikidata_ngo": "Wikidata",
+                "occrp_network": "OCCRP", "ecosoc": "ECOSOC iCSO", "global_compact": "UN Global Compact", "wikidata_ngo": "Wikidata",
                 "un_geneva": "UN Geneva NGO list", "iati": "IATI"}
 
 
@@ -250,6 +250,12 @@ def main():
             e["ca"] = o["active_in"]  # countries of activity (ECOSOC "Activities" tab)
         if o.get("geo_scope"):
             e["gs"] = o["geo_scope"]
+        e["ok"] = o.get("org_kind") or "ngo"  # organisation type (config/ngo.yaml org_kind)
+        if o.get("un_partner"):
+            e["up"] = 1  # existing UN partner (config/ngo.yaml un_partner)
+        if o.get("global_compact"):
+            g = o["global_compact"]
+            e["gc"] = [g.get("since") or "", g.get("status") or "", g.get("sector") or "", g.get("url") or ""]
         if o.get("description"):
             e["ds"] = fix_text(o["description"])[:600]
         if set(e["us"]) & {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "dgc_associated", "un_geneva", "desa_cosp"}:
@@ -289,7 +295,8 @@ def main():
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
         "codes": codes,
         "ngo": {k: ngo_cfg[k] for k in ("un_status", "only_ecosoc_label", "hide_registered_label", "hq_only_label",
-                                        "geo_scope", "page_hint")}
+                                        "geo_scope", "page_hint", "page_title", "all_status_label", "un_partner", "org_kind")}
+               | {"gc_status_note": yaml.safe_load(open(CFG / "sources" / "global_compact.yaml", encoding="utf-8"))["status_note"]}
                | {"type_of_work": [{"id": t["id"], "label": t["label"]} for t in ngo_cfg["type_of_work"]],
                   "count": len(ngo_out)},
     }

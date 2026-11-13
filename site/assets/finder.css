@@ -90,6 +90,7 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 @media (max-width: 600px) { .mode-switch { margin-right: 0; } .mode-switch a { padding: 6px 12px; } header.site .preview-badge { display: none; } }
 .mode-switch a:focus-visible { outline: 2px solid var(--un-blue-ink); outline-offset: -2px; }
 .card .row.desc { color: var(--muted); font-style: italic; }
+.badge.partner { background: var(--un-blue); color: #fff; margin-left: auto; margin-right: 6px; }
 
 /* ---------- Loading: an open yellow "partner pages" directory riffles its pages while the data loads ---------- */
 .loader { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 56px 16px; }

@@ -1,6 +1,6 @@
 # Coverage: how complete is the information? (step 5)
 
-70,757 outlets shown on the website, 195 countries. Data date: 2026-11-12.
+70,757 outlets shown on the website, 195 countries. Data date: 2026-11-13.
 
 Share of outlets that have this information. A filter only finds outlets with a value
 (soft filters like topics never hide anyone; "Also show outlets without this information" helps for the others).
@@ -22,7 +22,7 @@ Share of outlets that have this information. A filter only finds outlets with a 
 | Social media | **51 %** (36,324) | 40 % | 57 % | 39 % | 52 % | 46 % |
 | Website | **84 %** (59,252) | 82 % | 86 % | 82 % | 83 % | 77 % |
 | Website checked and answered | **63 %** (44,421) | 56 % | 64 % | 56 % | 67 % | 59 % |
-| Active (article in the last 3 months) | **24 %** (17,251) | 23 % | 27 % | 14 % | 27 % | 17 % |
+| Active (article in the last 3 months) | **24 %** (17,240) | 23 % | 27 % | 14 % | 27 % | 17 % |
 | Verified (2+ sources) | **20 %** (13,876) | 14 % | 21 % | 19 % | 19 % | 17 % |
 
 Outlets per region: Africa 5,536 · Americas 33,276 · Asia 11,448 · Europe 18,744 · Oceania 1,753

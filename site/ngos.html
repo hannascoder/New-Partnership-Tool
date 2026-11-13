@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Partner Finder – NGOs</title>
-<link rel="stylesheet" href="assets/atlas.css?v=2026-11-131900UTC">
-<link rel="stylesheet" href="assets/finder.css?v=2026-11-131900UTC">
+<title>Partner Finder – Organisations &amp; NGOs</title>
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-131932UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-131932UTC">
 </head>
 <body data-mode="ngo">
 <a class="skip-link" href="#results">Skip to results</a>
@@ -20,7 +20,7 @@
   </div>
   <div class="spacer"></div>
   <nav class="mode-switch" aria-label="Choose what to search">
-    <a href="./">Media</a><a href="ngos.html" aria-current="page">NGOs</a>
+    <a href="./">Media</a><a href="ngos.html" aria-current="page">Organisations &amp; NGOs</a>
   </nav>
   <span class="preview-badge" title="All filters work with open data. The final design of the website follows (steps 6-7).">Preview</span>
 </header>
@@ -32,6 +32,12 @@
       <!-- the search bar is left out of v1 for now (decision 06.11.2026); space kept here -->
 
       <p class="hint" id="ngoPageHint"></p>
+
+      <section class="fgroup">
+        <h2 class="sect">Organisation type</h2>
+        <div class="chips" id="f-orgKind"></div>
+        <p class="hint">Choose “NGO” to see only NGOs. Universities, cities and foundations come mostly from the UN Global Compact.</p>
+      </section>
 
       <section class="fgroup">
         <h2 class="sect">Language</h2>
@@ -65,7 +71,16 @@
         <h2 class="sect">UN status</h2>
         <div class="chips" id="f-ngoStatus"></div>
         <label class="check"><input type="checkbox" id="f-ngoEcosoc"> <span id="ngoEcosocLabel"></span></label>
+        <label class="check"><input type="checkbox" id="f-ngoAll"> <span id="ngoAllLabel"></span></label>
         <label class="check"><input type="checkbox" id="f-ngoHideReg"> <span id="ngoHideRegLabel"></span></label>
+        <label class="check"><input type="checkbox" id="f-unPartner"> <b id="unPartnerLabel"></b></label>
+        <p class="hint" id="unPartnerHint"></p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Sector</h2>
+        <div class="chips" id="f-sector"></div>
+        <p class="hint">Sector as listed by the UN Global Compact (most NGOs have none).</p>
       </section>
 
       <section class="fgroup">
@@ -153,7 +168,7 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an NGO</a>
 </footer>
-<script src="assets/finder.js?v=2026-11-131900UTC"></script>
-<script src="assets/finder-export.js?v=2026-11-131900UTC"></script>
+<script src="assets/finder.js?v=2026-11-131932UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-131932UTC"></script>
 </body>
 </html>

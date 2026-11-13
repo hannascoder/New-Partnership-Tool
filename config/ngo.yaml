@@ -10,7 +10,8 @@
 
 # Own page "NGOs" (owner 12.11.2026): switch "Media | NGOs" at the top right, same layout, filters and export
 # as the media page; the box "Include NGOs" on the media page was removed.
-page_hint: "Non-governmental organisations from ECOSOC, UN Geneva, Wikidata and IATI."
+page_title: "Organisations & NGOs"
+page_hint: "NGOs and other organisations from ECOSOC, the UN Global Compact, UN Geneva, Wikidata and IATI."
 hide_registered_label: "Hide NGOs only registered in ECOSOC (not checked by the UN)"
 hq_only_label: "Only NGOs based in this country (not those only active there)"
 # "Geographic scope" from the ECOSOC "Activities" tab (first word of the value)
@@ -31,6 +32,26 @@ un_status:
   - {id: ecosoc_registered, label: "Registered in the ECOSOC database (no status)", weight: 1,
      note: "Only registered in the UN civil society database: not checked by the UN."}
   - {id: iati_publisher, label: "Publishes its projects (IATI)", weight: 2}
+  - {id: un_global_compact, label: "UN Global Compact participant", weight: 5}
+all_status_label: "Must have all chosen statuses (e.g. ECOSOC and Global Compact)"
+
+# "Existing UN partner" (owner 13.11.2026): badge on the card, filter, export column; explained on the page.
+# "Associated with UN DGC" is left out for now (no list yet).
+un_partner:
+  statuses: [ecosoc_general, ecosoc_special, ecosoc_roster, un_global_compact, un_geneva]
+  label: "Existing UN partner"
+  filter_label: "Only existing UN partners"
+  explanation: "Existing UN partner = has ECOSOC consultative status (General, Special or Roster), takes part in the UN Global Compact, or is accredited at the UN in Geneva. Only being registered in the ECOSOC database or publishing projects in IATI does not count."
+
+# Organisation type (owner 13.11.2026: page "Organisations & NGOs"; filter to show only NGOs or other types)
+org_kind:
+  - {id: ngo, label: "NGO"}
+  - {id: foundation, label: "Foundation"}
+  - {id: academic, label: "University / academic"}
+  - {id: city, label: "City / local government"}
+  - {id: labour, label: "Labour organisation"}
+  - {id: business_association, label: "Business association"}
+
 only_ecosoc_label: "Only NGOs with ECOSOC consultative status"
 
 # Type of work: from the ECOSOC fields of activity, else from words in the name (descriptions name too much).
