@@ -194,6 +194,9 @@ media on the site, separate section in the export; updated every 2 months (step 
   NGO export layout (finder.js NGO_LAYOUT). ECOSOC "Activities" tab COMPLETE (12.11.2026, 11,828 profiles) - fetched in the cloud session
   (ECOSOC_ACTIVITIES=1; fields of activity -> topics, countries of activity, geographic scope, mission statement);
   rebuild NGOs when it is complete.
+- 13.11.2026: UN Global Compact merged (pipeline/fetch/global_compact.py, list pages + profiles; search pages are
+  forbidden by robots.txt, so initiatives cannot be read; sector is empty for almost all non-business participants).
+  Page renamed "Organisations & NGOs"; filters org type, sector (hidden while < 50 entries), UN partner, all statuses.
 - Known gaps: some state-close Russian organisations have no GONGO class in Wikidata; NGOs from Wikidata
   without an English label show their local name.
 - Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.

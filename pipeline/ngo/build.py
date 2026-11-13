@@ -263,7 +263,7 @@ GC = yaml.safe_load(open(ROOT / "config" / "sources" / "global_compact.yaml", en
 def global_compact():
     out = []
     for r in load_gz("global_compact/data.json.gz", []):
-        if r.get("status") and r["status"] not in GC["status_shown"]:
+        if r.get("status") and r["status"].lower() not in [x.lower() for x in GC["status_shown"]]:
             continue  # e.g. expelled / delisted
         website, domain = norm_url(r.get("website"))
         code = (re.search(r"/participants/(\d+)", r["path"]) or [None, r["path"]])[1]
@@ -272,7 +272,7 @@ def global_compact():
             "key": f"gc:{code}", "source": "global_compact", "name": clean_name(r["name"]), "alt_names": [],
             "website": website, "domain": domain, "country": to_iso3(r["country"]) if r.get("country") else None,
             "languages": [], "email": None, "social": {}, "fields": [], "un_status": ["un_global_compact"],
-            "description": "", "gc": {"since": since, "status": r.get("status") or "Active", "sector": r.get("sector") or "",
+            "description": "", "gc": {"since": since, "status": (r.get("status") or "Active").capitalize(), "sector": r.get("sector") or "",
                                       "type": r["type"], "url": GC["base"] + r["path"]},
         })
     return out

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-13
+- **UN Global Compact** on the page, now called "Organisations & NGOs": 2,300 participants that are NGOs,
+  foundations, universities, cities, labour organisations or business associations (no companies), merged with
+  the ECOSOC NGOs (179 are in both). "Non-communicating" participants stay in with a note.
+- New filters: organisation type (show only NGOs, or universities, foundations ...), "Only existing UN partners"
+  (ECOSOC status, Global Compact or UN Geneva; explained on the page) with a badge on the card, and "Must have
+  all chosen statuses" (e.g. ECOSOC and Global Compact together).
+
 ## 2026-11-12
 - NGO page filled with the ECOSOC "Activities" tab (11,828 profiles): topics from the NGOs' own fields of
   activity (71 % of NGOs have a topic now, was 43 %), countries of activity (2,299 NGOs), geographic scope

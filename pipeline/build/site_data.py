@@ -35,7 +35,7 @@ SOURCE_LABEL = {"wikidata": "Wikidata", "media_cloud": "Media Cloud", "iptv_org"
                 "efcsn_signatories": "EFCSN", "news_agencies": "Wikipedia: news agencies",
                 "state_media": "Wikipedia: state media", "fact_checking_sites": "Wikipedia: fact-checking websites",
                 "ebu_members": "EBU", "abu_members": "ABU", "asbu_members": "ASBU", "cbu_members": "CBU",
-                "occrp_network": "OCCRP", "ecosoc": "ECOSOC iCSO", "wikidata_ngo": "Wikidata",
+                "occrp_network": "OCCRP", "ecosoc": "ECOSOC iCSO", "global_compact": "UN Global Compact", "wikidata_ngo": "Wikidata",
                 "un_geneva": "UN Geneva NGO list", "iati": "IATI"}
 
 

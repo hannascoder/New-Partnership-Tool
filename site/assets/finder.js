@@ -293,7 +293,7 @@
     (N.org_kind || []).forEach((k) => $("f-orgKind").append(chip(esc(k.label) + ` <span class="sdg">${(kc[k.id] || 0).toLocaleString("en")}</span>`, false, toggle(S.orgKind, k.id),
       kc[k.id] ? {} : { disabled: true, title: "None in the sources yet" })));
     const secs = Object.keys(sc).sort();
-    if (secs.length) secs.forEach((x) => $("f-sector").append(chip(esc(x) + ` <span class="sdg">${sc[x].toLocaleString("en")}</span>`, false, toggle(S.sector, x))));
+    if (secs.reduce((n, x) => n + sc[x], 0) >= 50) secs.forEach((x) => $("f-sector").append(chip(esc(x) + ` <span class="sdg">${sc[x].toLocaleString("en")}</span>`, false, toggle(S.sector, x))));
     else $("f-sector").closest(".fgroup").hidden = true;
     $("ngoAllLabel").textContent = N.all_status_label || "Must have all chosen statuses";
     const UP = N.un_partner || {};
