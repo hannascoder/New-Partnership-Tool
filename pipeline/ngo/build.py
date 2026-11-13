@@ -256,6 +256,45 @@ def iati_ngos():
     return out
 
 
+# ------------------------------------------------------------------ UN Global Compact (owner 13.11.2026)
+GC = yaml.safe_load(open(ROOT / "config" / "sources" / "global_compact.yaml", encoding="utf-8"))
+
+
+def global_compact():
+    out = []
+    for r in load_gz("global_compact/data.json.gz", []):
+        if r.get("status") and r["status"] not in GC["status_shown"]:
+            continue  # e.g. expelled / delisted
+        website, domain = norm_url(r.get("website"))
+        code = (re.search(r"/participants/(\d+)", r["path"]) or [None, r["path"]])[1]
+        since = (re.search(r"(\d{4})", r.get("since") or r.get("joined") or "") or [None, None])[1]
+        out.append({
+            "key": f"gc:{code}", "source": "global_compact", "name": clean_name(r["name"]), "alt_names": [],
+            "website": website, "domain": domain, "country": to_iso3(r["country"]) if r.get("country") else None,
+            "languages": [], "email": None, "social": {}, "fields": [], "un_status": ["un_global_compact"],
+            "description": "", "gc": {"since": since, "status": r.get("status") or "Active", "sector": r.get("sector") or "",
+                                      "type": r["type"], "url": GC["base"] + r["path"]},
+        })
+    return out
+
+
+def org_kind(name, members):
+    """organisation type for the filter (config/ngo.yaml org_kind): from the Global Compact type, else from
+    words in the name (config/sources/global_compact.yaml kind_words), else NGO"""
+    for m in members:
+        t = (m.get("gc") or {}).get("type", "")
+        if t == "Labour Organization":
+            return "labour"
+        if t == "Business Association":
+            return "business_association"
+    # only for Global Compact entries: ECOSOC, UN Geneva and IATI list these organisations as NGOs already
+    if any(m.get("gc") for m in members) and not any(m["source"] in ("ecosoc", "un_geneva", "iati") for m in members):
+        for kind, words in GC["kind_words"].items():
+            if contains_word(name or "", words):
+                return kind
+    return "ngo"
+
+
 # ------------------------------------------------------------------ merge
 def merge(records):
     """same website (not a social network or blog host) or same name in the same country = same NGO"""
@@ -288,8 +327,8 @@ def merge(records):
     return groups
 
 
-ORDER = ["ecosoc", "wikidata_ngo", "un_geneva", "iati"]
-PREF = {"ecosoc": 0, "wd": 1, "ungva": 2, "iati": 3}
+ORDER = ["ecosoc", "global_compact", "wikidata_ngo", "un_geneva", "iati"]
+PREF = {"ecosoc": 0, "gc": 1, "wd": 2, "ungva": 3, "iati": 4}
 
 
 def nid_guess(keys):
@@ -328,11 +367,16 @@ def website_data():
     return web
 
 
-UN_ACCREDITED = {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "un_geneva", "dgc_associated", "desa_cosp"}
+UN_ACCREDITED = {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "un_geneva", "dgc_associated", "desa_cosp",
+                 "un_global_compact"}  # also: Global Compact participants (owner 13.11.2026: universities, cities ... all in)
+
+
+UN_PARTNER = set()  # filled from config/ngo.yaml un_partner (owner 13.11.2026)
 
 
 def main():
-    recs = ecosoc() + wikidata() + geneva() + iati_ngos()
+    UN_PARTNER.update(CFG["un_partner"]["statuses"])
+    recs = ecosoc() + global_compact() + wikidata() + geneva() + iati_ngos()
     web = website_data()
     import csv
     iso1 = {r["iso639_1"]: r["code"] for r in csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")) if r["iso639_1"]}
@@ -351,6 +395,7 @@ def main():
     topics = Matcher()
     audience = Matcher(ROOT / "config" / "audience_keywords.yaml")
     field_map = {k.lower(): v for k, v in FIELDS["fields"].items()}
+    sector_map = {k.lower(): v for k, v in GC["sector_topics"].items()}
     aud_fields = {k.lower(): v for k, v in CFG["audience_from_fields"].items()}
     weight = {s["id"]: s["weight"] for s in CFG["un_status"]}
     ideos = {x.lower() for x in RULES["exclude_far_right"]["wikidata_ideologies"]}
@@ -446,6 +491,12 @@ def main():
                 aud.setdefault(a, f"ECOSOC field of activity: {f}")
         for a, r in audience.match(name=name, descriptions=shorts, abouts=abouts).items():
             aud.setdefault(a, r["why"])
+        # Global Compact sector -> topics, "Has a section on it" (config/sources/global_compact.yaml sector_topics)
+        gcs = [m["gc"] for m in ms if m.get("gc")]
+        for g in gcs:
+            for x in sector_map.get(g["sector"].lower(), []):
+                tp, _, sub = x.partition("/")
+                add(tp, sub or None, 2, f"UN Global Compact sector: {g['sector']}")
         tow = []
         for t in CFG["type_of_work"]:
             f = next((f for f in fields if f.lower() in [x.lower() for x in t["fields"]]), None)
@@ -480,6 +531,11 @@ def main():
             "active_in": sorted({c for m in ms for c in m.get("active_in") or []} - {country}),
             "geo_scope": next((g["id"] for m in ms if m.get("geo_scope") for g in CFG.get("geo_scope") or []
                                if m["geo_scope"].lower().startswith(g["id"][:6])), None),  # config/ngo.yaml geo_scope
+            "org_kind": org_kind(name, ms),
+            "global_compact": ({"since": min((g["since"] for g in gcs if g["since"]), default=None),
+                                "status": gcs[0]["status"], "sector": next((g["sector"] for g in gcs if g["sector"]), ""),
+                                "url": gcs[0]["url"]} if gcs else None),
+            "un_partner": any(s in UN_PARTNER for s in us),
             "ngo": {"un_status": us, "type_of_work": tow, "fields": fields,
                     "registered_only": us[:1] == ["ecosoc_registered"] and len(ms) == 1},
             "prominence": max([weight.get(s, 0) for s in us] or [0]) * 10 + wl + len({m["source"] for m in ms}),
