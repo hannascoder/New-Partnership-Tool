@@ -13,3 +13,7 @@ Versions are fixed; each was published at least two weeks before it was added (0
 
 The fonts are embedded in the PDF so that accented and non-English Latin, Greek and Cyrillic
 names print correctly. Limit: Arabic and Chinese names may not render in the PDF; Excel and Word are fine.
+
+| `patrick-hand.woff2` | Patrick Hand, latin 400 (via @fontsource/patrick-hand) | 5.0.13 | 2024 | SIL Open Font License 1.1 | `licenses/patrick-hand-OFL.txt` |
+
+Patrick Hand is the handwritten font of the hand-drawn loading book (finder.css, "Loading" section).
