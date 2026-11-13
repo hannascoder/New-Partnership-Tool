@@ -1,0 +1,54 @@
+# UN Global Compact participants (owner 13.11.2026): on the page "Organisations & NGOs", merged with ECOSOC.
+# Read page by page from the public participant list (robots.txt allows /what-is-gc/participants?page=N,
+# it forbids the search pages /what-is-gc/participants/search), then each included participant's profile page.
+base: "https://unglobalcompact.org"
+list_path: "/what-is-gc/participants"
+delay_seconds: 3
+
+# participant types taken in (owner: "b" = civil society & other, labour, business associations; no companies)
+types_included:
+  - "Civil Society Organization & Other"
+  - "Labour Organization"
+  - "Business Association"
+
+# status on the profile page; "Non-communicating" stays in with a note (owner 13.11.2026)
+status_shown: [Active, Non-communicating]
+status_note:
+  Non-communicating: "Has not reported to the UN Global Compact on time (status: non-communicating)."
+
+# Sector (column "Sector" in the list) -> topics (strength "Has a section on it"). Most NGOs and associations
+# have no sector in the list; companies (not taken in for now) almost always have one.
+sector_topics:
+  alternative electricity: [energy]
+  renewable energy equipment: [energy]
+  conventional electricity: [energy]
+  gas, water & multiutilities: [energy, water_sanitation]
+  water: [water_sanitation]
+  health care providers: [health]
+  health care equipment & services: [health]
+  pharmaceuticals: [health]
+  pharmaceuticals and biotechnology: [health]
+  medical equipment: [health]
+  education: [education]
+  business training and employment agencies: [education, work_economy]
+  farming, fishing and plantations: [agriculture]
+  food producers: [hunger_food]
+  waste and disposal services: [consumption/waste_plastic]
+  banks: [business_economy]
+  financial services: [business_economy]
+  investment services: [business_economy]
+  software: [technology]
+  computer services: [technology]
+  telecommunications service providers: [technology]
+  travel and tourism: [work_economy]
+  forestry and paper: [life_on_land/forests]
+  real estate investment and services: [cities/housing]
+  construction and materials: [industry_innovation/infrastructure]
+  industrial transportation: [cities/urban_mobility]
+  media: [media_freedom]
+
+# what kind of organisation, from words in the name (the list only says "Civil Society Organization & Other")
+kind_words:
+  academic: [university, universidad, université, universidade, università, universität, college, school of, institute of technology, business school, escuela, école]
+  city: [city of, municipality, municipalidad, municipio, ville de, comune di, city council, prefecture, county]
+  foundation: [foundation, fundación, fondation, fundação, fondazione, stiftung]
