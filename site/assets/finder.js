@@ -28,8 +28,20 @@
   fetch("data/config.json", { cache: "no-cache" }).then((r) => r.json())
     .then((cfg) => Promise.all((MODE === "ngo" ? cfg.ngo_files || [] : cfg.outlet_files || ["outlets.json"]).map((f) => fetch("data/" + f + "?v=" + encodeURIComponent(cfg.built || "")).then((r) => r.json())))
       .then((parts) => [cfg, [].concat(...parts)]))
-    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); })
-    .catch(() => { $("counter").textContent = "The data could not be loaded. Please reload the page."; });
+    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); hideLoader(); })
+    .catch(() => {
+      const msg = "The data could not be loaded. Please reload the page.";
+      $("counter").textContent = msg;
+      if ($("loader")) { $("loader").classList.add("failed"); $("loaderText").textContent = msg; }
+    });
+
+  /* loading screen (the flipping directory in index.html / ngos.html) fades out once the list is ready */
+  function hideLoader() {
+    const l = $("loader");
+    if (!l) return;
+    l.classList.add("done");
+    setTimeout(() => l.remove(), 500);
+  }
 
   /* outlets.json stores repeated values as short codes (pipeline/build/site_data.py compact()) */
   function expand(list, codes) {
