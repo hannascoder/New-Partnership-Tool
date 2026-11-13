@@ -125,16 +125,110 @@ def main():
         if subs:
             t["subtopics"] = [{"id": s["id"], "label": s["label"]} for s in subs]
 
-    # prominence and rank within the country (briefing J)
+    rules = yaml.safe_load(open(CFG / "rules.yaml", encoding="utf-8"))
+    ngo_file = ROOT / "work" / "ngos.json"
+    ngos = json.load(open(ngo_file, encoding="utf-8")) if ngo_file.exists() else []
+
+    # not media (config/rules.yaml not_media): government websites and NGOs listed as "media"
+    def host_of(u):
+        u = (u or "").strip().lower()
+        if not u:
+            return ""
+        h = re.sub(r"^https?://", "", u).split("/")[0].split(":")[0]
+        return re.sub(r"^(www\d?|m)\.", "", h)
+    nm = rules.get("not_media") or {}
+    gov = re.compile(nm["government_host"]) if nm.get("government_host") else None
+    ngo_hosts = {}
+    if nm.get("ngo_website"):
+        cnt = defaultdict(int)
+        for g in ngos:
+            cnt[host_of(g.get("website"))] += 1
+        for g in ngos:  # a host used by one organisation only (not facebook.com, blogspot ...)
+            h = host_of(g.get("website"))
+            if h and cnt[h] == 1:
+                ngo_hosts[h] = g["name"]
+    dropped, kept = [], []
     for o in outlets:
-        o["_prom"] = (o.get("wikipedia_languages") or 0) + len(o["sources"])
+        h = host_of(o.get("website"))
+        why_out = None
+        if nm and h and set(o["sources"]) <= set(nm.get("only_sources", [])) and not set(o["channels"]) & set(nm.get("not_channels", [])):
+            if gov and gov.search(h):
+                why_out = "government website"
+            elif h in ngo_hosts:
+                why_out = "organisation on the Organisations & NGOs page: " + ngo_hosts[h]
+        (dropped if why_out else kept).append((o, why_out))
+    (ROOT / "reports" / "not_media.md").write_text("\n".join(
+        ["# Not shown in the media list: government websites and NGOs (config/rules.yaml not_media)", "",
+         f"{len(dropped)} entries that a media list names but that are not media. To bring one back: tell Claude the id.", "",
+         "| Id | Name | Country | Website | Reason |", "|---|---|---|---|---|"]
+        + [f"| {o['id']} | {(o['name'] or '')[:70]} | {o['country']} | {o.get('website') or ''} | {y} |"
+           for o, y in sorted(dropped, key=lambda x: (x[0]["country"] or "", x[0]["name"] or ""))]) + "\n", encoding="utf-8")
+    outlets = [o for o, _ in kept]
+
+    # prominence and rank within the country (briefing J; config/rules.yaml prominence)
+    pr = rules.get("prominence") or {}
+    bonus = pr.get("bonus") or {}
+    special = set(pr.get("special_interest_classes") or [])
+    sys.path.insert(0, str(ROOT / "pipeline" / "classify"))
+    from classify import not_news, wd_classes  # the rule itself: pipeline/classify/classify.py
+    data_date = max(o["first_seen"] for o in outlets) if outlets else str(date.today())
+    y, m_ = int(data_date[:4]), int(data_date[5:7]) - cats.get("active_months", 3)
+    while m_ < 1:
+        y, m_ = y - 1, m_ + 12
+    active_since = f"{y:04d}-{m_:02d}-{data_date[8:10]}"
+    for o in outlets:
+        cat = o.get("cat") or {}
+        wl = (pr.get("wikipedia_languages_fix") or {}).get(o["id"], o.get("wikipedia_languages") or 0)
+        o["_prom"] = wl + len(o["sources"])
+        score = float(o["_prom"])
+        cat["not_news"] = not_news(o, cat, rules.get("not_news") or {}) if cat.get("org_type") else None
+        tps = [t for t in cat.get("topics", []) if t["method"] != "default" and t["value"] != "community_local"]
+        is_general = any(t["value"] == "general_news" for t in tps)
+        declared = any(t["method"] == "source_field" and t.get("strength", 1) == 1 for t in tps)
+        if cat.get("not_news"):
+            score *= pr.get("not_news_factor", 1)
+        elif (cat.get("org_type") or {}).get("value") == "news_outlet" and (
+                (not is_general and declared) or (special and wd_classes(o) & special)):
+            score *= pr.get("special_interest_factor", 1)
+        if (o.get("last_post") or "") >= active_since:
+            score += bonus.get("active", 0)
+        if cat.get("website_status") == "ok":
+            score += bonus.get("website_ok", 0)
+        if o.get("social") or o.get("social_urls"):
+            score += bonus.get("social_media", 0)
+        if o.get("contact_page") or org_email(o.get("email")):
+            score += bonus.get("public_contact", 0)
+        o["_score"] = score
     by_country = defaultdict(list)
     for o in outlets:
         by_country[o["country"]].append(o)
     for lst in by_country.values():
-        lst.sort(key=lambda o: (-o["_prom"], (o["name"] or "").lower()))
+        lst.sort(key=lambda o: (-o["_score"], -o["_prom"], (o["name"] or "").lower()))
         for i, o in enumerate(lst, 1):
             o["_rank"] = i
+
+    # a name in another script than the outlet's languages -> a name in Latin letters (rules.yaml name_scripts)
+    SCRIPT_RX = {"Arabic": r"[\u0600-\u06FF]", "Cyrillic": r"[\u0400-\u04FF]", "CJK": r"[\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]",
+                 "Hebrew": r"[\u0590-\u05FF]", "Greek": r"[\u0370-\u03FF]", "Devanagari": r"[\u0900-\u097F]", "Thai": r"[\u0E00-\u0E7F]"}
+    scripts = rules.get("name_scripts") or {}
+    official = {r["iso3"]: set(filter(None, r["official_languages"].split(";")))
+                for r in csv.DictReader(open(CFG / "official_languages.csv", encoding="utf-8"))}
+
+    def latin_name(o):
+        name = fix_text(o["name"])
+        if re.search(r"[A-Za-z]", name or ""):
+            return name
+        for sc, langs in scripts.items():
+            if re.search(SCRIPT_RX[sc], name or ""):
+                own = set(o.get("languages") or []) | official.get(o["country"], set())
+                if own & set(langs):
+                    return name
+                alt = [a for a in o.get("alt_names") or [] if re.search(r"[A-Za-z]{2}", a) and not re.search(r"[^\u0000-\u024F]", a)
+                       and "@" not in a and "." not in a]
+                if alt:
+                    o["alt_names"] = [name] + [a for a in o["alt_names"] if a != min(alt, key=len)]
+                    return min(alt, key=len)
+        return name
 
     out, used_langs = [], set()
     why = {}  # repeated "source of a value" texts stored once (keeps outlets.json small)
@@ -142,7 +236,7 @@ def main():
     def w(text):
         return why.setdefault(text, len(why))
     def build_entry(o):
-        e = {"i": o["id"], "n": fix_text(o["name"]), "c": o["country"], "p": o["_prom"], "r": o["_rank"]}
+        e = {"i": o["id"], "n": latin_name(o), "c": o["country"], "p": round(o["_score"], 2), "r": o["_rank"]}
         alt = [a for a in o["alt_names"] if a.isascii() and "@" not in a][:3]
         if alt:
             e["a"] = alt
@@ -174,6 +268,8 @@ def main():
         if (o.get("cat") or {}).get("website_warning"):
             e["ww"] = o["cat"]["website_warning"]  # website seems to belong to someone else now
         cat = o.get("cat", {})
+        if cat.get("not_news"):
+            e["nn"] = 1  # pure sports / music / children's / religious channel (rules.yaml not_news)
         # topics (step 4d): ids in "tp", the reason of each in "tw" (same order).
         # Left out when the only topic is the default "general news" (no evidence).
         # [topic, strength (1 focus, 2 desk, 3 covers), reason, [sub-topics]]
@@ -223,8 +319,6 @@ def main():
     # NGOs (phase 2, config/ngo.yaml): own files, loaded by the page only when
     # "Include NGOs in this search" is ticked. Same entry format + NGO fields:
     # ng 1, us UN status ids, nt [[type of work, reason]], ro 1 = only registered in ECOSOC, pu profile link
-    ngo_file = ROOT / "work" / "ngos.json"
-    ngos = json.load(open(ngo_file, encoding="utf-8")) if ngo_file.exists() else []
     ngo_cfg = yaml.safe_load(open(CFG / "ngo.yaml", encoding="utf-8"))
     by_c = defaultdict(list)
     for o in ngos:
@@ -237,6 +331,7 @@ def main():
     ngo_out = []
     for o in ngos:
         o.setdefault("alt_names", [])
+        o.setdefault("_score", o["_prom"])
         e = build_entry(o)
         e["ng"] = 1
         e["us"] = o["ngo"]["un_status"]
@@ -271,7 +366,7 @@ def main():
         regions.setdefault(c["region"], set()).add(c["intermediate_region"] or c["subregion"])
     config = {
         "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-        "data_date": max(o["first_seen"] for o in outlets) if outlets else str(date.today()),
+        "data_date": data_date,
         "countries": [{"iso3": c["iso3"], "name": c["name"], "aliases": c["aliases"], "status": c["status"],
                        "region": c["region"], "subregion": c["intermediate_region"] or c["subregion"],
                        "freedom": atlas.get(c["iso3"])}
@@ -287,6 +382,7 @@ def main():
         "new_months": cats.get("new_months", 4),
         "active_months": cats.get("active_months", 3),
         "feedback_email": cats.get("feedback_email"),
+        "feedback_url": cats.get("feedback_url"),
         "topic_strength": cats.get("topic_strength"),
         "topic_strength_note": cats.get("topic_strength_note"),
         "source_labels": SOURCE_LABEL,

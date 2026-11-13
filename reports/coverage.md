@@ -13,10 +13,10 @@ Share of outlets that have this information. A filter only finds outlets with a 
 | Ownership known | **12 %** (8,248) | 7 % | 11 % | 14 % | 13 % | 13 % |
 | Scope known | **63 %** (44,848) | 80 % | 71 % | 64 % | 47 % | 39 % |
 | Reaches other countries | **2 %** (1,122) | 1 % | 1 % | 2 % | 2 % | 1 % |
-| Topic (other than general news) | **71 %** (50,152) | 65 % | 78 % | 60 % | 67 % | 74 % |
-| Topic: Specialist or own section | **67 %** (47,617) | 62 % | 75 % | 56 % | 63 % | 68 % |
+| Topic (other than general news) | **71 %** (50,151) | 65 % | 78 % | 60 % | 67 % | 74 % |
+| Topic: Specialist or own section | **65 %** (46,243) | 60 % | 73 % | 54 % | 60 % | 65 % |
 | Target audience | **23 %** (16,121) | 34 % | 24 % | 19 % | 18 % | 32 % |
-| UN profile | **10 %** (7,075) | 16 % | 8 % | 13 % | 10 % | 7 % |
+| UN profile | **9 %** (6,511) | 15 % | 7 % | 13 % | 9 % | 6 % |
 | Public contact (e-mail or contact page) | **38 %** (27,056) | 32 % | 42 % | 24 % | 43 % | 40 % |
 | E-mail | **9 %** (6,286) | 9 % | 9 % | 5 % | 11 % | 6 % |
 | Social media | **51 %** (36,324) | 40 % | 57 % | 39 % | 52 % | 46 % |
@@ -25,7 +25,7 @@ Share of outlets that have this information. A filter only finds outlets with a 
 | Active (article in the last 3 months) | **24 %** (17,240) | 23 % | 27 % | 14 % | 27 % | 17 % |
 | Verified (2+ sources) | **20 %** (13,876) | 14 % | 21 % | 19 % | 19 % | 17 % |
 
-Outlets per region: Africa 5,536 · Americas 33,276 · Asia 11,448 · Europe 18,744 · Oceania 1,753
+Outlets per region: Africa 5,535 · Americas 33,276 · Asia 11,448 · Europe 18,745 · Oceania 1,753
 
 ## Countries with the least information (20+ outlets)
 

@@ -122,6 +122,9 @@ scope:
   #   one region or 2+ countries -> regional; the home country -> national;
   #   a city or subdivision -> local
   # Media Cloud collections: "<Country> - National" -> national, "... - State & Local" -> local
+  # iptv-org: "regional" needs a region or at least this many countries besides the home country
+  # (CNN: USA + Canada and Bild: Germany + Switzerland are national, not regional; review 13.11.2026)
+  regional_min_other_countries: 2
   wikidata_classes:
     international: [international broadcasting]
     local: [local newspaper, local radio station, local TV channel, community newspaper, regional weekly,
@@ -157,6 +160,10 @@ topics:
   # A "name" that lists sections like a tagline ("Noticias, Deportes, Economía, ...")
   # is not used: those are general news sites.
   name_keywords_max_commas: 1
+  # "Specialist" from the outlet's own texts (description, About page, Wikipedia) for more than this
+  # many topics at once = a general outlet that lists its sections: those matches then count as
+  # "Reports on it" (review 13.11.2026). Topics from the name, a source or a network are not touched.
+  max_text_specialist: 3
   # Words in other languages (from Wikidata) found in more than this share of all outlets
   # are everyday words, not topic words, and are not used (0.003 = 0.3 % = ~210 outlets).
   auto_words_max_share: 0.003
@@ -225,6 +232,70 @@ exclude_far_right:
   # Republic TV, Die Weltwoche): listed in reports/excluded_far_right.md; hidden only if set to true.
   hide_right_wing_populist: true
 
+# ---------------------------------------------------------------- not news
+# Pure sports, music/culture, children's and religious channels (owner, 13.11.2026): they stay in the
+# data but are hidden by the checkbox "Only news media", which is ticked by default.
+# An outlet counts when: its type is one of org_types, it is on TV or radio and not in print, ALL its
+# topics (apart from ignore_topics and weak "Reports on it" mentions) are in "topics", and at least one
+# of them comes from a source's own category (iptv-org category, Radio Browser tag, Wikidata class).
+# A sports NEWSPAPER, a channel that also has a news topic or a politics section on its website, and
+# members of the lists in not_networks (general broadcasters) are not affected.
+not_news:
+  org_types: [news_outlet]
+  channels_any: [tv, radio]
+  not_channels: [print]
+  topics: [sports, culture, religion, children_youth]
+  ignore_topics: [community_local]
+  not_networks: [ebu_members, abu_members, asbu_members, cbu_members, state_media, sdg_media_compact]
+
+# ---------------------------------------------------------------- not media
+# Government websites and NGOs that a media list (Media Cloud) lists as "media" are not shown in the
+# media list (owner, 13.11.2026); every one is listed in reports/not_media.md.
+# TV and radio stations run by public bodies (e.g. state radio stations in Mexico) stay.
+not_media:
+  only_sources: [media_cloud]          # only entries known from these lists alone
+  not_channels: [tv, radio]
+  # the part of the web address that marks a government site (".gov", ".go.ke", ".gob.mx", ".gouv.fr" ...)
+  government_host: '\.(gov|go|gob|gouv|gub|govt|mil|gv|government)(\.[a-z]{2,3})?$'
+  # the website is also the website of an organisation on the "Organisations & NGOs" page
+  ngo_website: true
+
+# ---------------------------------------------------------------- prominence ("Top 10 / Top 50")
+# Rank within the country (review 13.11.2026). Base = Wikipedia language versions + number of sources.
+# Then: news media before pure sports / music / children's / religious channels and before outlets
+# with a special subject only (France Football, Billboard); and, so that the many outlets with the same
+# base value do not stand in random order: points for a working website, recent articles, social media
+# and a public contact.
+prominence:
+  not_news_factor: 0.25        # pure sports / music / children's / religious channels
+  # special-interest outlets (France Football, Marie Claire, Disney Channel, Charlie Hebdo): no
+  # "General news" among the topics AND a source itself names a special subject, or one of these classes
+  special_interest_factor: 0.5
+  special_interest_classes: [satirical newspaper, satirical magazine, "women's magazine", "children's interest channel",
+                             sports magazine, sports newspaper, music magazine, fashion magazine, lifestyle magazine,
+                             "men's magazine", celebrity magazine, video game magazine, automobile magazine]
+  # Hand corrections of the number of Wikipedia language versions, where Wikidata links the outlet to
+  # the wrong article: outlet id -> number. (Şalom, a Turkish weekly, was linked to the article about
+  # the word "shalom" with 124 languages and stood second worldwide.)
+  wikipedia_languages_fix:
+    pf-000037: 12
+  bonus:
+    active: 2          # article in the last active_months
+    website_ok: 1
+    social_media: 1
+    public_contact: 1
+
+# Names in another script (review 13.11.2026: "ARD" was shown in Arabic): when the name has no Latin
+# letter and none of the outlet's languages is written in that script, a name in Latin letters is used.
+name_scripts:
+  Arabic: [ara, fas, urd, pus, kur, ckb, uig, snd, prs]
+  Cyrillic: [rus, ukr, bel, bul, srp, mkd, kaz, kir, tgk, mon, uzb, tat, bak, che, abk, oss, sah, tuk, aze]
+  CJK: [zho, cmn, yue, jpn, kor, wuu, nan, hak]
+  Hebrew: [heb, yid]
+  Greek: [ell]
+  Devanagari: [hin, mar, nep, mai, bho, san, kok]
+  Thai: [tha]
+
 # ---------------------------------------------------------------- website check
 # Channels found on the outlet's own website (menu entries, feed addresses).
 # Whole menu entry or a word in it; 9 UN News languages.
@@ -237,13 +308,10 @@ website_language: true
 # "Open to partner content" (UN profile; suggestion 1, owner's go 09.11.2026):
 # the outlet's website shows it publishes content from others. Words in link texts /
 # addresses on the website and in its About page. 9 UN News languages.
+# NOT used (review 13.11.2026): "syndication", "republish", "Creative Commons" - they mean the outlet
+# GIVES its content to others (Le Monde "Réutiliser nos contenus"), not that it takes content in;
+# "partner with us" is mostly advertising.
 open_to_partner_content:
-  - creativecommons.org
-  - creative commons
-  - republish
-  - republishing
-  - syndication
-  - content syndication
   - submit a story
   - submit your story
   - submit news
@@ -256,16 +324,13 @@ open_to_partner_content:
   - pitch us
   - submit a press release
   - submit press release
-  - partner with us
   - content partnership
   - content partners
-  - republier
   - proposer un article
   - envoyez vos articles
   - envoyez-nous
   - devenir contributeur
   - publiez votre communiqué
-  - republicar
   - envía tu nota
   - envíanos tu noticia
   - publica tu noticia
@@ -294,15 +359,20 @@ un_profile_words:
               journalisme d'impact, periodismo de soluciones, periodismo constructivo, jornalismo de soluções,
               jornalismo construtivo, конструктивная журналистика, صحافة الحلول, الصحافة البناءة, 建设性新闻,
               समाधान पत्रकारिता, uandishi wa suluhisho]
-    sections: [solutions, solutions journalism, good news, positive news, constructive, solutions reporting]
+    # only clear names of the method: a menu entry "Good News" or "Solutions" alone is not
+    # solutions journalism (review 13.11.2026: AP, local TV stations were matched)
+    sections: [solutions journalism, solutions reporting, constructive journalism, journalisme de solutions,
+               periodismo de soluciones, jornalismo de soluções]
   development:
     phrases: [development journalism, development reporting, global development, international development,
               development news, development issues, journalisme de développement, information pour le développement,
               periodismo para el desarrollo, periodismo de desarrollo, jornalismo de desenvolvimento,
               журналистика развития, الصحافة التنموية, صحافة التنمية, 发展新闻, विकास पत्रकारिता,
               uandishi wa habari za maendeleo]
-    sections: [development, global development, international development, développement, desarrollo,
-               desenvolvimento, التنمية, maendeleo]
+    # "Development" alone as a menu entry is too vague (software, personal, real estate development)
+    sections: [global development, international development, development news, sustainable development,
+               développement durable, desarrollo sostenible, desenvolvimento sustentável, التنمية المستدامة,
+               maendeleo endelevu]
 
 # Only ORGANISATION e-mail addresses are SHOWN in the tool (owner 06.11.2026); personal ones (j.smith@,
 # maria.lopez@) are not shown. The stored raw data (raw/) keeps ALL addresses (owner 11.11.2026: needed later).

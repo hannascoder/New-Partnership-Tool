@@ -188,3 +188,12 @@ Die genaue Liste „Quell-Kategorie → unser Thema“ erstelle ich aus den **ta
 - **Filter „Member of“** (SDG Media Compact, Rundfunkunionen, Faktenchecker-Netzwerke).
 - **EBU-Vollmitglieder mit privatem Eigentümer** (ITV, TV 2) erscheinen unter beiden Typen.
 
+## Entscheidungen vom 13.11.2026 (Prüfung des Filters)
+- **„Only news media“** (Standard an): reine Sport-, Musik-, Kinder- und Religionssender sind ausgeblendet, per Klick zuschaltbar.
+- **„Hide state-controlled media“** ist Standard an.
+- **Namenssuche** ist eingebaut (nur Namen; die große Suche bleibt für später).
+- Behörden-Seiten und NGOs stehen nicht in der Medienliste (Bericht: reports/not_media.md).
+- **„Specialist“** nur mit klarem Beleg (Name, zwei verschiedene Wörter, kurze Definition oder Quelle); ein einzelnes Wort = „Reports on it“.
+- **„Top 10 / Top 50“** = die bekanntesten Nachrichtenmedien unter denen, die zu den anderen Filtern passen.
+- **„My material“ Video** = TV oder Konto auf YouTube / TikTok / Instagram / Facebook (nicht mehr jede Website).
+- Mehrere Themen: Standard „eines davon“, Schalter „Must match ALL chosen topics“.

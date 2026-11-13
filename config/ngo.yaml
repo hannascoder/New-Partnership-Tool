@@ -159,3 +159,8 @@ exclude:
 
 # Ranking within a country (size filter "Top 10 / Top 50"): UN status weight (highest), then the
 # number of Wikipedia language versions, then the number of sources.
+
+# Topic strength (review 13.11.2026): an organisation whose ECOSOC fields of activity lead to this many
+# topics or more ticked "everything"; a field alone then only counts as "Reports on it" (not "Has a
+# section on it"). "Specialist" always needs the topic in the name or 2 clear words in its own description.
+many_fields: 10

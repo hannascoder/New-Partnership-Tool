@@ -38,19 +38,24 @@ audience_basis:
 # What the user has. Each material is translated into channels:
 # choosing "Video" shows outlets on TV, Website or Social media.
 # "Text" also finds news agencies (an organisation type, not a channel).
+# "platforms" = social media platforms that also count (review 13.11.2026: "Website" used to count for
+# video, so "Video" found 9 of 10 outlets; now video = TV or a video platform account).
 material:
   - id: video
     label: Video
-    channels: [tv, website, social_media]
+    channels: [tv]
+    platforms: [youtube, tiktok, instagram, facebook]
   - id: audio
     label: Audio
     channels: [radio, podcast]
   - id: photo
     label: Photo
-    channels: [print, website, social_media]
+    channels: [print, website]
+    platforms: [instagram, facebook, x]
   - id: graphic
     label: Graphic / Infographic
-    channels: [print, website, social_media]
+    channels: [print, website]
+    platforms: [instagram, facebook, x]
   - id: text
     label: Text
     channels: [print, website, newsletter]
@@ -279,17 +284,25 @@ size:
   - id: top10
     label: Top 10 per country
 size_note: >-
-  "Top" means the best-known outlets (prominence), not the largest, because
-  audience figures hardly exist. Prominence = number of Wikipedia language
-  versions (from Wikidata) + number of independent sources listing the outlet.
+  "Top" means the best-known news outlets of a country, not the largest, because audience figures
+  hardly exist. It counts Wikipedia language versions and independent sources, then adds points for
+  a working website, recent articles, social media and a public contact. Pure sports, music or
+  special-interest outlets rank lower. "Top 10" = the 10 best-known per country among the outlets
+  that fit your other filters (e.g. the top 10 radio stations when "Radio" is chosen).
 
 checkboxes:
   - id: only_verified
     label: Only verified (2+ sources)
     default: false
+  # owner, 13.11.2026: hidden unless the user unticks the box
+  - id: only_news
+    label: Only news media (hide pure sports, music, children's and religious channels)
+    description: Channels whose only subjects are sports, music/culture, children or religion are hidden. Untick for campaigns aimed at them.
+    default: true
   - id: hide_state_controlled
-    label: Hide state-controlled
-    default: false
+    label: Hide state-controlled media
+    description: Media controlled by a government (State Media Monitor / Wikidata), e.g. RT, CCTV. In some countries almost all media are state-controlled - untick to see them.
+    default: true   # owner, 13.11.2026 (was off)
   - id: has_social_media
     label: Has social media
     default: false
@@ -315,9 +328,14 @@ checkboxes:
     default: false
   # decision 06.11.2026: switch, default off. Shown under "UN profile".
   - id: only_topic_matches
-    label: Only show topic, audience and UN profile matches
+    label: Only show outlets that match a chosen topic
     description: Hides outlets that match none of the chosen topics, target audiences or UN profiles.
     default: true   # owner, 09.11.2026 (was off)
+  # review 13.11.2026: several topics used to mean "any of them" only
+  - id: all_topic_matches
+    label: Must match ALL chosen topics (not just one of them)
+    description: With two or more chosen topics, audiences or UN profiles, only outlets that match every one of them are shown.
+    default: false
 
 # Outlets count as "new" for this many months after they were first found.
 new_months: 4
@@ -330,6 +348,8 @@ active_months: 3
 # e-mail for "Report an error" on the cards. Left empty on 11.11.2026 before making the repository public
 # (owner's private address must not be public); "Report an error" in the footer goes to GitHub issues.
 feedback_email: ""
+# "Report an error" on the cards opens a pre-filled report here while feedback_email is empty.
+feedback_url: "https://github.com/hannascoder/New-Partnership-Tool/issues/new"
 
 # How strongly an outlet is connected to a topic (shown on the cards, in this order).
 # Wording chosen by the owner on 09.11.2026 (option A).
@@ -346,11 +366,10 @@ sort:
   - id: best_match
     label: Best match
     description: >-
-      Number of chosen topics and UN profiles that match; ties by
-      prominence, then A-Z. Default as soon as a filter is set.
+      Number and strength of the chosen topics, audiences and UN profiles that match;
+      ties by prominence (best known first), then A-Z. The default.
   - id: az
     label: A-Z
-    description: Default when no filter is set.
   - id: country
     label: Country
 

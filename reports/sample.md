@@ -13,7 +13,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Languages: spa · Channels: website, social_media, newsletter
 - Topics: health (Has a section on it: website section "Especial vacunas"); peace_justice (Has a section on it: website section "Transparencia"); fact_checking (Specialist: IFCN); science (Has a section on it: website section /category/investigacion/); community_local (Specialist: scope local); human_rights (Has a section on it: website section "Discurso de odio"); elections (Has a section on it: website section "Elecciones")
 - Target audience: -
-- UN profile: fact_checking_ifcn (IFCN)
+- UN profile: solutions (website section "Periodismo de Soluciones"); fact_checking_ifcn (IFCN)
 - Contact: info@boliviaverifica.bo · contact page: - · latest article: 2026-11-09
 
 ## abcyola.com.ng — Nigeria · pf-057786
@@ -24,7 +24,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (Media Cloud collection "Nigeria - National")
 - Languages: eng · Channels: website, social_media
-- Topics: sports (Specialist: description mentions "sports")
+- Topics: sports (Has a section on it: website section "BC Game Sports Betting")
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: https://abcyola.com.ng/contact-us/ · latest article: -
@@ -37,7 +37,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Ownership: community_nonprofit (Wikidata: owner Boise State University (university))
 - Scope: unknown (no scope information in the sources)
 - Languages: eng · Channels: radio, website, social_media, podcast, newsletter
-- Topics: climate (Has a section on it: website section "Environment"); science (Reports on it: Wikipedia: "research"); business_economy (Has a section on it: website section "Business Partners"); culture (Specialist: description mentions "music"); community_local (Specialist: description mentions "local news")
+- Topics: climate (Has a section on it: website section "Environment"); science (Reports on it: Wikipedia: "research"); business_economy (Has a section on it: website section "Business Partners"); culture (Has a section on it: website section "Arts & Culture"); community_local (Has a section on it: website section "Endowment for Local News")
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: https://www.boisestatepublicradio.org/contact · latest article: -
@@ -100,7 +100,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: regional (iptv-org broadcast area FRA, USA)
+- Scope: national (iptv-org broadcast area: whole country)
 - Languages: fra, eng · Channels: tv
 - Topics: children_youth (Specialist: iptv-org category "kids")
 - Target audience: children (iptv-org category "kids")
@@ -115,7 +115,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Ownership: unknown (no ownership information in the sources)
 - Scope: unknown (no scope information in the sources)
 - Languages: fra · Channels: print, website, social_media, newsletter
-- Topics: science (Reports on it: words in another language (via Wikidata): "chercheur", "chercheuse"); culture (Specialist: website About page: "art")
+- Topics: science (Reports on it: words in another language (via Wikidata): "chercheur", "chercheuse"); culture (Reports on it: website About page: "art")
 - Target audience: -
 - UN profile: -
 - Contact: contact@kometarevue.com · contact page: - · latest article: -
@@ -167,7 +167,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (iptv-org broadcast area: whole country)
 - Languages: slk · Channels: tv, website, social_media
-- Topics: general_news (Specialist: iptv-org category "general"); sports (Specialist: description mentions "sport")
+- Topics: general_news (Specialist: iptv-org category "general"); sports (Has a section on it: website section "Šport")
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
@@ -362,7 +362,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (iptv-org broadcast area: city / region)
 - Languages: eng · Channels: tv, website, social_media
-- Topics: general_news (Specialist: iptv-org category "general"); business_economy (Has a section on it: website section "Business"); culture (Has a section on it: website section "Entertainment"); community_local (Specialist: scope local); technology (Has a section on it: website section "Technology"); sports (Specialist: description mentions "sport")
+- Topics: general_news (Specialist: iptv-org category "general"); business_economy (Has a section on it: website section "Business"); culture (Has a section on it: website section "Entertainment"); community_local (Specialist: scope local); technology (Has a section on it: website section "Technology"); sports (Specialist: website About page: "football", "olympics", "rugby")
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: https://www.nine.com.au/contact-us · latest article: -

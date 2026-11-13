@@ -1,5 +1,49 @@
 # Changelog
 
+## 2026-11-13 (evening): full review of the filter, all findings corrected
+Errors fixed
+- "Reset filters" really resets (the page address kept the filters and restored them).
+- The hint texts no longer say "never hides an outlet" while "Only show matches" is on by default.
+- "General news (Specialist)" is gone: General news has no strength.
+- "Only new" is hidden until the first automatic update (everything was "new").
+- The numbers on the buttons follow the other filters (with Kenya chosen they show Kenya, not the world).
+- "Report an error" on every card again (opens a pre-filled report on GitHub; no e-mail address needed).
+- Phone: the switch "Media | Organisations & NGOs" is no longer cut off.
+- Outlet ids are stable now: at every data run about 19 outlets used to get a new id (two entries with
+  the same source key swapped ids), which could empty export lists and break hand corrections.
+
+Better matches
+- "Specialist" is stricter: one word in a long description or on the About page is not enough any more
+  (2 different words, or the name, or a short definition, or a source). Specialist matches: 56,670 -> 41,524;
+  outlets that were "Specialist" in 4 or more topics: 1,074 -> 91; "Life below water" specialists: 28 -> 6.
+- UN profile: "Solutions journalism" no longer from a menu entry "Good News" / "Solutions" (147 -> 40),
+  "Development journalism" not from a menu entry "Development" (115 -> 34), "Open to partner content" not
+  from "syndication / republish" (that means the outlet gives content away; 1,891 -> 1,444). The page says
+  these are automatic hints to be checked.
+- New box **"Only news media"** (ticked by default): 6,564 pure sports, music, children's and religious
+  channels are hidden unless the box is unticked.
+- **"Hide state-controlled media" is ticked by default** (1,261 outlets, e.g. RT, CCTV).
+- 79 government websites and NGOs are no longer in the media list (reports/not_media.md).
+- "Top 10 / Top 50": news media before special-interest outlets (France Football, Charlie Hebdo, Cartoon
+  Network), points for a working website, recent articles, social media and contact (so outlets with the
+  same Wikipedia value are no longer in random order), and the top 10 are counted among the outlets that
+  fit the other filters (hiding state media no longer leaves "top 4").
+- "My material": Video = TV or an account on YouTube / TikTok / Instagram / Facebook (was: any website;
+  64,388 -> 38,810 outlets). Photo and Graphic: print, website, Instagram / Facebook / X.
+- New box "Must match ALL chosen topics".
+- Scope: CNN (USA + Canada) and Bild (Germany + Switzerland) are national, not regional (regional: 788 -> 466).
+- Names: "ARD" was shown in Arabic letters; names in a script the outlet does not use are replaced by the
+  Latin name. The New Humanitarian is in Switzerland, not Kenya.
+- Organisations & NGOs: "Specialist" only when the name or 2 clear words in the organisation's own text
+  say so (19,370 -> 9,832); organisations that ticked 10 or more fields count as "Reports on it" for them.
+
+Easier to use
+- Filter groups fold in and out; the heading shows how many choices are active.
+- "Active filters" above the results, each removable with one click.
+- Short cards (about half the height) with "Details and reasons": every topic, audience and UN profile with
+  the reason in plain text (was only visible when hovering with a mouse).
+- Search by name, several countries at once, "Copy link" button.
+
 ## 2026-11-13
 - **UN Global Compact** on the page, now called "Organisations & NGOs": 2,300 participants that are NGOs,
   foundations, universities, cities, labour organisations or business associations (no companies), merged with

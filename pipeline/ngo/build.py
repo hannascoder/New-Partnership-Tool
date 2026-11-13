@@ -466,9 +466,18 @@ def main():
         shorts = [x for m in ms for x in m.get("short") or []]
         abouts = [("description", desc)] if desc else []
         own = topics.match(name=name, descriptions=shorts, abouts=abouts, menu=[], headlines=[])
+        # an NGO that ticks very many fields of activity is not specialised in each of them:
+        # from "many_fields" topics on (config/ngo.yaml), a field alone only counts as "Reports on it"
+        many = len(from_fields) >= CFG.get("many_fields", 99)
+        if many:
+            for t in tps.values():
+                t["strength"] = 3
+                t["source"] += f" (one of {len(fields)} fields the organisation ticked)"
         for tp, r in own.items():
             if tp in from_fields:
-                tps[tp]["strength"], tps[tp]["source"] = 1, tps[tp]["source"] + "; also " + r["why"]
+                # Specialist only when the name or the organisation's own description clearly says so
+                # (matcher strength 1: in the name, or 2 different words); one word = "Has a section on it"
+                tps[tp]["strength"], tps[tp]["source"] = (1 if r["s"] == 1 else 2), tps[tp]["source"] + "; also " + r["why"]
                 tps[tp]["subs"] |= set(r["subs"] or [])
             else:
                 for sub in r["subs"] or [None]:
