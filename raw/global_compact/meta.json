@@ -1,0 +1,15 @@
+{
+  "source": "global_compact",
+  "fetched_at": "2026-11-13T19:28:54Z",
+  "records": 2331,
+  "url": "https://unglobalcompact.org/what-is-gc/participants",
+  "participants_in_list": 25724,
+  "list_complete": true,
+  "profiles_still_to_fetch": 0,
+  "types_included": [
+    "Business Association",
+    "Civil Society Organization & Other",
+    "Labour Organization"
+  ],
+  "licence": "UN Global Compact public participant list"
+}
