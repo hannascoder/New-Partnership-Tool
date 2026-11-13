@@ -30,6 +30,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timezone
@@ -62,13 +63,17 @@ def minutes():
 
 # 11.11.2026: after a few minutes the server stopped answering for 5 hours. Ask slowly (one request
 # every 3 seconds) and stop the run when nothing has worked for 20 minutes; the next run continues.
-DELAY_S = 3
+DELAY_S = float(os.environ.get("ECOSOC_DELAY", "3"))
 SILENT_STOP_MIN = 20
 GIVE_UP = {"yes": False}
 LAST_OK = {"t": time.time()}
 
 
 FAILS = {"row": 0}  # failures in a row: the server is often down for a while (10.11.2026: most requests timed out)
+
+
+class NotAvailable(Exception):
+    """the page exists for the server but is not public (HTTP 403/404): not retried"""
 
 
 def fetch(path, tries=2):
@@ -92,6 +97,13 @@ def fetch(path, tries=2):
             FAILS["row"] = 0
             LAST_OK["t"] = time.time()
             return body
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 404, 410):  # 11.11.2026: some profiles are not public (403): the server did answer
+                FAILS["row"] = 0
+                LAST_OK["t"] = time.time()
+                raise NotAvailable(f"{e.code}: {url}")
+            last = e
+            time.sleep(5)
         except Exception as e:
             last = e
             time.sleep(5)
@@ -257,8 +269,9 @@ def main():
         lists[lid] = {**old, **meta}
     # 1. lists: status and type first (small, most important), then fields of activity, then the rest
     order = {"status": 0, "dpi": 1, "type": 2, "field": 3}
+    skip = set(os.environ.get("ECOSOC_SKIP_KINDS", "").split(","))  # e.g. "field" when those lists fail (HTTP 500)
     todo = sorted((lid for lid, m in lists.items()
-                   if not (m.get("complete") and fresh(m.get("fetched", ""), LIST_DAYS))),
+                   if not (m.get("complete") and fresh(m.get("fetched", ""), LIST_DAYS)) and m["kind"] not in skip),
                   key=lambda lid: (order.get(lists[lid]["kind"], 9), lid))
     print(f"lists to read: {len(todo)} of {len(lists)}", flush=True)
     for i, lid in enumerate(todo):
@@ -295,16 +308,47 @@ def main():
             break
         try:
             html = fetch(f"showProfileDetail.do?method=showProfileDetails&profileCode={code}")
+        except NotAvailable:
+            profiles[code] = {"not_public": True, "fetched": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")}
+            continue
         except RuntimeError as e:
             print("profile failed", code, e)
             continue
         sample("profile", html)
         profiles[code] = {**profile_text(html), "fetched": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")}
         done += 1
-        if done % 200 == 0:
+        if done % 50 == 0:  # save often: a run can be stopped any time
             store("profiles.json.gz", profiles)
             print(f"profiles: {done} fetched now, {len(profiles)} in total ({minutes():.0f} min)", flush=True)
     store("profiles.json.gz", profiles)
+    # 3. "Activities" tab of each profile (12.11.2026): fields of activity (-> topics), countries of activity,
+    #    mission statement. Only with ECOSOC_ACTIVITIES=1 (about 12,000 pages, 6-7 hours).
+    if os.environ.get("ECOSOC_ACTIVITIES") == "1":
+        done_a = 0
+        for code in targets:
+            p = profiles.get(code) or {}
+            if not p.get("text") or "activities" in p:
+                continue
+            if minutes() > BUDGET_MIN:
+                print("activities: time used up, continue next run")
+                break
+            try:
+                html = fetch(f"showProfileDetail.do?method=showProfileDetails&profileCode={code}&tab=3")
+            except NotAvailable:
+                p["activities"] = ""
+                continue
+            except RuntimeError as e:
+                print("activities failed", code, e)
+                continue
+            t = profile_text(html)["text"]
+            i = t.find("Areas of expertise")
+            p["activities"] = (t[i:] if i >= 0 else "")[:4000]
+            done_a += 1
+            if done_a % 50 == 0:
+                store("profiles.json.gz", profiles)
+                print(f"activities: {done_a} fetched now, "
+                      f"{sum(1 for x in profiles.values() if 'activities' in x)} in total ({minutes():.0f} min)", flush=True)
+        store("profiles.json.gz", profiles)
     complete = sum(1 for m in lists.values() if m.get("complete"))
     left = sum(1 for c in targets if not fresh(profiles.get(c, {}).get("fetched", ""), PROFILE_DAYS))
     save("ecosoc", [], {"url": BASE, "lists": len(lists), "lists_complete": complete, "organisations": len(orgs),

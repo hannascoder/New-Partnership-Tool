@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Partner Finder – NGOs</title>
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-122341UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-122341UTC">
+</head>
+<body data-mode="ngo">
+<a class="skip-link" href="#results">Skip to results</a>
+<header class="site">
+  <div class="brand">
+    <img class="logo" src="assets/un_emblem.png" alt="United Nations emblem" width="40" height="33">
+    <div>
+      <div class="un">United Nations · DGC Partnerships</div>
+      <h1 class="title">Partner Finder</h1>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <nav class="mode-switch" aria-label="Choose what to search">
+    <a href="./">Media</a><a href="ngos.html" aria-current="page">NGOs</a>
+  </nav>
+  <span class="preview-badge" title="All filters work with open data. The final design of the website follows (steps 6-7).">Preview</span>
+</header>
+
+<div class="layout">
+  <aside class="filters" id="filters" aria-label="Filters">
+    <button class="btn-quiet filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filterBody">Filters</button>
+    <div id="filterBody" class="filter-body">
+      <!-- the search bar is left out of v1 for now (decision 06.11.2026); space kept here -->
+
+      <p class="hint" id="ngoPageHint"></p>
+
+      <section class="fgroup">
+        <h2 class="sect">Language</h2>
+        <div class="chips" id="f-langButtons"></div>
+        <label class="field">Other language
+          <select id="f-otherLang"><option value="">Choose…</option></select>
+        </label>
+        <div class="chips" id="f-otherChosen"></div>
+        <label class="check"><input type="checkbox" id="f-noLang"> Also show NGOs without language information</label>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Region / Country</h2>
+        <label class="field">Region
+          <select id="f-region"><option value="">All regions</option></select>
+        </label>
+        <label class="field">Country
+          <select id="f-country"><option value="">All countries</option></select>
+        </label>
+        <label class="check"><input type="checkbox" id="f-hqOnly"> <span id="hqOnlyLabel"></span></label>
+        <p class="hint">A country finds NGOs based there and NGOs that name it as a country of activity (ECOSOC).</p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Geographic scope</h2>
+        <div class="chips" id="f-gscope"></div>
+        <p class="hint">As the NGO states it in its ECOSOC profile.</p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">UN status</h2>
+        <div class="chips" id="f-ngoStatus"></div>
+        <label class="check"><input type="checkbox" id="f-ngoEcosoc"> <span id="ngoEcosocLabel"></span></label>
+        <label class="check"><input type="checkbox" id="f-ngoHideReg"> <span id="ngoHideRegLabel"></span></label>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Type of work</h2>
+        <div class="chips" id="f-ngoType"></div>
+        <p class="hint">From the ECOSOC fields of activity or from words in the NGO’s name.</p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Size</h2>
+        <div class="radios" id="f-size"></div>
+        <p class="hint" id="sizeNote"></p>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Topics</h2>
+        <p class="hint">Topics never hide an NGO, they only change the order. The number on each button = NGOs with this topic.</p>
+        <p class="hint" id="strengthNote"></p>
+        <div id="f-topics"></div>
+        <label class="check"><input type="checkbox" id="f-onlyMatches"> <span id="onlyMatchesLabel"></span></label>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">Target audience</h2>
+        <p class="hint">Who the NGO works for, as the NGO or a source describes it. Changes the order, never hides an NGO.</p>
+        <div class="chips" id="f-audience"></div>
+      </section>
+
+      <section class="fgroup">
+        <h2 class="sect">More</h2>
+        <div id="f-checks"></div>
+      </section>
+    </div>
+  </aside>
+
+  <main id="results" class="results" tabindex="-1">
+    <div class="results-head">
+      <p class="counter" id="counter" aria-live="polite">Loading data…</p>
+      <div class="actions">
+        <label class="sortlabel">Sort
+          <select id="sort"></select>
+        </label>
+        <button class="btn-quiet" id="reset">Reset filters</button>
+        <button class="btn-quiet" id="addAll" disabled>Add all to export list</button>
+      </div>
+    </div>
+    <ol class="cards" id="cards"></ol>
+    <button class="btn-quiet more" id="more" hidden>Show more</button>
+  </main>
+</div>
+
+<div class="export-bar" id="exportBar" hidden role="region" aria-label="Export list">
+  <div class="export-info">
+    <b id="exportCount">0 NGOs in the export list</b>
+    <span class="export-filters" id="exportFilters"></span>
+    <span class="export-error" id="exportError" role="alert"></span>
+  </div>
+  <div class="export-actions">
+    <span class="orient" role="group" aria-label="Page orientation for PDF and Word">
+      <label><input type="radio" name="orient" value="landscape" checked> Landscape</label>
+      <label><input type="radio" name="orient" value="portrait"> Portrait</label>
+    </span>
+    <button class="btn-primary" data-format="pdf">PDF</button>
+    <button class="btn-primary" data-format="xlsx">Excel</button>
+    <button class="btn-primary" data-format="docx">Word</button>
+    <button class="btn-quiet" id="clearExport">Clear list</button>
+  </div>
+</div>
+
+<footer class="site">
+  <span id="dataInfo"></span> ·
+  <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an NGO</a>
+</footer>
+<script src="assets/finder.js?v=2026-11-122341UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-122341UTC"></script>
+</body>
+</html>

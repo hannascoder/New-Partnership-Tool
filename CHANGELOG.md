@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-12
+- NGO page filled with the ECOSOC "Activities" tab (11,828 profiles): topics from the NGOs' own fields of
+  activity (71 % of NGOs have a topic now, was 43 %), countries of activity (2,299 NGOs), geographic scope
+  (7,347 NGOs) and the NGOs' own description (mission statement).
+- **NGOs have their own page.** Switch "Media | NGOs" at the top right. Same layout and export as the media
+  page, with NGO filters: based in or active in a country, geographic scope, UN status, hide NGOs only
+  registered in ECOSOC, type of work, topics, target audience. NGO cards show the NGO's own description.
+- NGOs: all ECOSOC NGOs read (12,838 organisations, 12,845 profile pages: country, website, e-mail,
+  languages). 16,536 NGOs in the tool now, 5,336 of them with ECOSOC consultative status.
+
 ## 2026-11-11
 - NGOs: quality check. Schools, hospitals, clubs, museums and monasteries are no longer counted as NGOs;
   service clubs (Rotary, Lions, Zonta, Kiwanis) and all NGOs accredited by the UN stay in; the Federation for
