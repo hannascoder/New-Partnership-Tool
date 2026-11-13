@@ -216,8 +216,9 @@ The owner asked for a complete critique and then for all findings to be correcte
   foldable groups; active-filter bar; short cards with details; name search; several countries; copy link;
   "Top N" counted among the outlets that fit the other filters).
 - The whole pipeline runs in the cloud session in about 10 minutes (classify.py ~8 min); no GitHub Actions needed.
-- NOT changed (owner to decide / later): "Existing UN partner" still includes UN Global Compact participants
-  (42 % of all organisations); ~8,400 outlets are named like their web address (Media Cloud); ~11,600 outlets
+- Owner 14.11.2026: "Existing UN partner" = ECOSOC status or UN Geneva only, WITHOUT the UN Global Compact
+  (config/ngo.yaml un_partner; 7,780 -> 5,633 organisations).
+- NOT changed (later): ~8,400 outlets are named like their web address (Media Cloud); ~11,600 outlets
   share a website with another entry (many are real network stations, some duplicates); scope unknown for
   37 % of outlets; e-mail only for 9 %; the UN status boxes on the NGO page overlap.
 - Next: owner checks the live site; then continue with the agreed order (AI reading of further countries,

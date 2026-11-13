@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-14
+- Organisations & NGOs: **"Existing UN partner" is narrower** (owner's decision): ECOSOC consultative status or
+  accreditation at the UN in Geneva. Taking part in the UN Global Compact alone no longer counts
+  (7,780 -> 5,633 organisations, 42 % -> 30 %). Global Compact participants keep their own button and note.
+
 ## 2026-11-13 (evening): full review of the filter, all findings corrected
 Errors fixed
 - "Reset filters" really resets (the page address kept the filters and restored them).
