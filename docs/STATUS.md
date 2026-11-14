@@ -237,12 +237,28 @@ The owner asked for a complete critique and then for all findings to be correcte
 - Known misses (right topics the rules do not find): specialist outlets in other languages, e.g.
   Landbrugsavisen (Danish farming paper) and Océans connectés only get "Reports on it".
 - **OWNER'S PRIORITY (14.11.2026): "das Wichtigste ist, dass es sich selbst erhält und regelmäßig von alleine
-  kostenlos und open source aktualisiert".** State today: everything is open source and free, every rule is
-  in config files and the whole pipeline runs without hand work - but NOTHING RUNS ON ITS OWN YET. Data runs
-  are started by hand in a Claude session; only single fetch workflows exist. The automation (step 9: every
-  2 months re-fetch, re-check websites, rebuild, safety brake, publish) is the next thing to build.
-  Not self-maintaining by nature: the AI reading (cache/ai_classification.json, done in chat) and hand
-  corrections (overrides.csv); both are optional extras on top of the automatic rules.
+  kostenlos und open source aktualisiert".**
+
+## 14.11.2026 (evening): step 9 automation BUILT (owner: "alles ja"), first real run still to come
+- `.github/workflows/update.yml` "Automatic update": cron on the 3rd of every month; full update in odd months
+  (sources -> Wikidata -> texts/ECOSOC/Global Compact short try -> website check in 2 parts -> build -> safety
+  brake -> commit to main), "still alive" commit in even months (GitHub disables schedules after 60 days
+  without repository activity). Manual start: Actions -> Automatic update -> Run workflow.
+- `pipeline/run.sh` (whole pipeline), `pipeline/automation/website_state.py` (cache/website_fails.json),
+  `pipeline/automation/safety_brake.py` (site/data/stats.json vs last commit), carry-over of vanished outlets
+  in `pipeline/build/site_data.py` (only with PF_SCHEDULED=1; cache/missing.json; card note "ms").
+  Settings: config/rules.yaml `automation`.
+- Decision made while building: "website failed" for hiding = the address no longer exists (DNS / connection
+  refused). HTTP 403 / 429 / time-outs do not count - AFP, All India Radio and many others block robots.
+- Tested locally: run.sh end to end, safety brake, dead-website counter, vanishing outlets over two simulated
+  runs. NOT tested yet (only possible on GitHub after the merge): the workflow itself, the push to main by
+  the workflow (fails if main is protected against direct pushes), Cloudflare publishing after a bot commit,
+  how long the website check takes on GitHub. -> After the merge: start it once by hand and watch it.
+- Not automatic by nature: AI reading (cache/ai_classification.json), hand corrections (overrides.csv),
+  the 200-outlet check (config/quality_sample.csv: re-evaluated automatically, but new assignments are only
+  listed as "not checked yet"), ECOSOC / Global Compact when their servers refuse GitHub.
+- Still open from step 9 (CLAUDE.md "Access"): Cloudflare API token, e-mail code login for colleagues,
+  list of allowed e-mails as a file. Not built.
 
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).

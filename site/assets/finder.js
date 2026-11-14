@@ -659,6 +659,7 @@
       <p class="row"><b>Topics:</b> ${tshort}</p>
       ${(o.au || []).length ? row("Target audience", esc(o.au.map((a) => lab(C.audience, a)).join(", "))) : ""}
       ${(o.un || []).length ? row("UN profile", esc(o.un.map((u) => lab(C.un_profile, u)).join(", "))) : ""}
+      ${o.ms ? `<p class="row warn">ⓘ Not found in the sources at the last update. It will be removed at the next update unless it comes back.</p>` : ""}
       ${o.ww ? `<p class="row warn">⚠ Website may no longer belong to this outlet: ${esc(o.ww)}</p>` : ""}
       ${site || contact ? `<p class="row">${site ? `<b>Website:</b> ${site}${o.wd ? ' <span class="warn">(did not answer at the last check)</span>' : ""}` : ""}${site && contact ? " · " : ""}${contact ? `<b>Contact:</b> ${contact}` : ""}</p>` : ""}
       ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id, s]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id) + (k2 === "tp" && strengthOf(id, s) ? ` (${strengthOf(id, s)})` : "")).join(", "))}</span>` : ""}
@@ -797,6 +798,7 @@
     if (o.s.length < 2 && !o.ng) f.push("Unverified");
     if (o.wd) f.push("Website not reachable");
     if (o.ww) f.push("Website may no longer belong to the outlet");
+    if (o.ms) f.push("Not found in the sources at the last update");
     if (o.lp && o.lp < activeSince()) f.push("No recent article (last " + o.lp + ")");
     return f.join(", ");
   }

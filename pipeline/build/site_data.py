@@ -149,6 +149,24 @@ def main():
             h = host_of(g.get("website"))
             if h and cnt[h] == 1:
                 ngo_hosts[h] = g["name"]
+    # automatic update: an outlet whose website was dead at N checks in a row is not shown
+    # (rules.yaml automation; counted by pipeline/automation/website_state.py)
+    auto = rules.get("automation") or {}
+    ff = ROOT / "cache" / "website_fails.json"
+    fails = json.load(open(ff, encoding="utf-8")) if ff.exists() else {}
+    dead_limit = auto.get("hide_after_dead_checks", 3)
+    dead_ids = {k for k, v in fails.items() if v[0] >= dead_limit}
+    dead_rows = [o for o in outlets if o["id"] in dead_ids]
+    outlets = [o for o in outlets if o["id"] not in dead_ids]
+    ngos_dead = [g for g in ngos if g["id"] in dead_ids]
+    ngos = [g for g in ngos if g["id"] not in dead_ids]
+    (ROOT / "reports" / "hidden_websites.md").write_text("\n".join(
+        ["# Not shown: the website was dead at the last " + str(dead_limit) + " checks in a row", "",
+         f"{len(dead_rows)} outlets and {len(ngos_dead)} organisations. They come back on their own as soon as the website answers.",
+         f"Counting towards it: {sum(1 for v in fails.values() if v[0] < dead_limit)} websites that were dead at the last check(s).", "",
+         "| Id | Name | Country | Website |", "|---|---|---|---|"]
+        + [f"| {o['id']} | {(o['name'] or '')[:70]} | {o['country']} | {o.get('website') or ''} |"
+           for o in sorted(dead_rows + ngos_dead, key=lambda x: (x["country"] or "", x["name"] or ""))]) + "\n", encoding="utf-8")
     dropped, kept = [], []
     for o in outlets:
         h = host_of(o.get("website"))
@@ -361,6 +379,67 @@ def main():
             e["nw"] = ["un_relationship"]  # "Member of: Existing UN relationship" also finds these NGOs
         ngo_out.append(e)
     ngo_out.sort(key=lambda e: (e["n"] or "").lower())
+    # automatic update: an outlet that is in no source any more stays for one update, with a note
+    # (rules.yaml automation.remove_after_missing_runs). Only counted in the scheduled update
+    # (PF_SCHEDULED=1), so a data run by hand never changes the counters.
+    import os
+    if os.environ.get("PF_SCHEDULED") == "1":
+        all_ids = {o["id"] for o in json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))}
+        mf = ROOT / "cache" / "missing.json"
+        missing = json.load(open(mf, encoding="utf-8")) if mf.exists() else {}
+        keep_runs = auto.get("remove_after_missing_runs", 2)
+        carried, removed = [], []
+        old_cfg_file = ROOT / "site" / "data" / "config.json"
+        if old_cfg_file.exists():
+            old_cfg = json.load(open(old_cfg_file, encoding="utf-8"))
+            oc, ow_ = old_cfg.get("codes") or {}, old_cfg.get("why") or []
+            for fn in old_cfg.get("outlet_files") or []:
+                for e in json.load(open(ROOT / "site" / "data" / fn, encoding="utf-8")):
+                    if e["i"] in all_ids:
+                        continue
+                    n_ = missing.get(e["i"], 0) + 1
+                    if n_ >= keep_runs:
+                        removed.append(e)
+                        continue
+                    missing[e["i"]] = n_
+                    for k in ("ch", "s", "oa", "nw"):  # undo the short codes of the old file
+                        if k in e:
+                            e[k] = [oc[k][v] if isinstance(v, int) else v for v in e[k]]
+                    for k in ("o", "ow", "sc"):
+                        if k in e:
+                            e[k] = [oc[k][e[k][0]] if isinstance(e[k][0], int) else e[k][0], w(ow_[e[k][1]])]
+                    for t in e.get("tp") or []:
+                        t[2] = w(ow_[t[2]])
+                    for k in ("aw", "uw"):
+                        if k in e:
+                            e[k] = [w(ow_[x]) for x in e[k]]
+                    if "rc" in e:
+                        e["rc"] = {c: w(ow_[x]) for c, x in e["rc"].items()}
+                    e.setdefault("f", oc.get("f"))
+                    origin = re.sub(r"^(https?://[^/]+).*$", r"\1", e.get("w") or "")
+                    if e.get("cp", "").startswith("/"):
+                        e["cp"] = origin + e["cp"]
+                    for t in e.get("tp") or []:
+                        if len(t) >= 5 and str(t[4]).startswith("/"):
+                            t[4] = origin + t[4]
+                    for k, u in list((e.get("so") or {}).items()):
+                        if (oc.get("so") or {}).get(k) and not u.startswith("http"):
+                            e["so"][k] = oc["so"][k].replace("{}", u)
+                    e["ms"] = 1  # not found in the sources at the last update
+                    out.append(e)
+                    carried.append(e)
+        shown_ids = {e["i"] for e in out}
+        missing = {k: v for k, v in missing.items() if k in shown_ids and k not in all_ids}
+        json.dump(missing, open(mf, "w", encoding="utf-8"), sort_keys=True, indent=0)
+        (ROOT / "reports" / "missing_outlets.md").write_text("\n".join(
+            ["# Outlets that are no longer in any source", "",
+             f"Still shown with a note (first update without them): {len(carried)}. Removed now (update no. {keep_runs} without them): {len(removed)}.", "",
+             "| Id | Name | Country | State |", "|---|---|---|---|"]
+            + [f"| {e['i']} | {e['n'][:70]} | {e['c']} | still shown |" for e in carried]
+            + [f"| {e['i']} | {e['n'][:70]} | {e['c']} | removed |" for e in removed]) + "\n", encoding="utf-8")
+        out.sort(key=lambda e: (e["n"] or "").lower())
+    from collections import Counter as _Counter
+    stats = {"outlets": len(out), "ngos": len(ngo_out), "sources": dict(sorted(_Counter(s_ for e in out for s_ in e["s"]).items()))}
     codes = compact(out)  # repeated values -> short codes; the page expands them (finder.js expand())
 
     atlas_file = ROOT / "raw" / "atlas" / "data.json.gz"
@@ -421,6 +500,8 @@ def main():
         nfiles.append(name)
     config["ngo_files"] = nfiles
     json.dump(config, open(data / "config.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # numbers for the safety brake of the automatic update (pipeline/automation/safety_brake.py)
+    json.dump({**stats, "built": config["built"]}, open(data / "stats.json", "w", encoding="utf-8"), indent=1)
     # scripts and styles get the build time as version, so browsers load the new ones after an update
     import re as _re
     ver = config["built"].replace(" ", "").replace(":", "")

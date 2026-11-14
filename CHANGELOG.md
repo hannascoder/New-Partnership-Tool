@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-11-14 (evening): the automatic update is built
+- New workflow **"Automatic update"** (`.github/workflows/update.yml`): every 2 months (3rd of January, March,
+  May, July, September, November) it downloads all sources again, visits the websites again, rebuilds the
+  data and publishes it - without anybody doing anything, free of charge (public repository, open data only).
+- **Safety brake:** nothing is published when more than 10 % of the outlets or organisations (or 25 % of one
+  large source) disappeared at once.
+- **If it fails:** an issue "Automatic update failed" is opened (GitHub e-mails the owner); the website stays as it was.
+- An outlet whose website no longer exists at 3 checks in a row is hidden and comes back when the website
+  answers. Websites that only block robots (many large outlets) do not count.
+- An outlet that is in no source any more stays for one update with a note and is removed at the second.
+- In the months in between, a small "still alive" note is saved, because GitHub switches schedules off after
+  60 days without changes.
+- `bash pipeline/run.sh` runs the whole pipeline in one go.
+- Honest limits: ECOSOC and the UN Global Compact often do not answer GitHub's computers (their last
+  download is kept); the AI reading and hand corrections are not renewed automatically.
+
 ## 2026-11-14 (later): fewer, clearer filters and a measured quality check
 - **Quality is measured now.** 200 outlets drawn at random were checked by hand once
   (config/quality_sample.csv); `reports/quality.md` is rewritten at every data run. Wrong topic assignments

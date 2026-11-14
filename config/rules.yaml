@@ -424,3 +424,22 @@ org_email:
            kontor, post, correo, courrier, jornal, journal, tele, direccion, direction, director, board]
   contains: [info, contact, redac, news, noticia, press, prensa, media, office, secretariat, radio, tv,
              editor, geneva, genev, newyork, ecosoc, global, intl, international, network]
+
+# ---------------------------------------------------------------- automatic update
+# The update that runs on its own (.github/workflows/update.yml; owner's rules of 06.11.2026).
+automation:
+  # Safety brake: the update is not published when more than this share disappears at once
+  max_drop: 0.10            # of all outlets / of all organisations
+  max_source_drop: 0.25     # of the outlets of one source ...
+  min_source_size: 1000     # ... that had at least this many outlets
+  # A website counts as DEAD when the website check ends with one of these errors (the address no
+  # longer exists). Refused visits (HTTP 403 / 429), time-outs and certificate problems do not count:
+  # many large outlets block robots.
+  dead_errors: ["Name or service not known", "No address associated with hostname", "Connection refused"]
+  # An outlet is not shown when its website was dead at this many checks in a row; it comes back
+  # as soon as the website answers. Listed in reports/hidden_websites.md.
+  hide_after_dead_checks: 3
+  # An outlet that is no longer in any source is still shown at the first update without it
+  # (with a note) and removed at this one.
+  remove_after_missing_runs: 2
+

@@ -1,6 +1,9 @@
 # Pipeline
 
-Run in this order (from the repository root):
+All steps in one go: `bash pipeline/run.sh` (about 10-15 minutes). The automatic update
+(`.github/workflows/update.yml`, every 2 months) runs exactly this after downloading the sources.
+
+The single steps, in this order (from the repository root):
 
 ```
 python pipeline/normalize/networks.py      # members of network lists   -> work/networks.json
@@ -25,3 +28,7 @@ python pipeline/build/site_data.py         # website data               -> site/
 Reference lists (run only when a reference file in `raw/reference/` changes):
 `pipeline/setup/build_reference_lists.py` (countries, languages) and
 `pipeline/setup/build_official_languages.py` (official languages per country, from Unicode CLDR).
+
+Automatic update (`pipeline/automation/`): `website_state.py` counts dead websites
+(`cache/website_fails.json`), `safety_brake.py` stops the update when too much disappeared
+(`site/data/stats.json`). Settings: `config/rules.yaml`, section `automation`.
