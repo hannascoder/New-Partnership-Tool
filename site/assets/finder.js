@@ -179,14 +179,16 @@
   function controlsOf(g) {
     const out = [];
     g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub)').forEach((c) => out.push([c.childNodes[0].textContent.replace(" ✕", "").trim(), () => c.click()]));
-    g.querySelectorAll('.chip.sub[aria-pressed="false"]').forEach((c) => { if (!c.closest("[hidden]")) out.push(["without: " + c.childNodes[0].textContent.trim(), () => c.click()]); });
+    g.querySelectorAll('.chip.sub[aria-pressed="false"]').forEach((c) => { if (!c.closest("[hidden]:not(.fbody)")) out.push(["without: " + c.childNodes[0].textContent.trim(), () => c.click()]); });
     g.querySelectorAll("select").forEach((sel) => { if (sel.value && !sel.dataset.adder) out.push([sel.selectedOptions[0].textContent.trim(), () => { sel.value = ""; sel.dispatchEvent(new Event("change")); }]); });
     g.querySelectorAll('input[type="radio"]:checked').forEach((r) => { if (!r.defaultChecked) out.push([r.parentElement.textContent.trim(), () => { const d = g.querySelector('input[type="radio"][name="' + r.name + '"]'); const def = [...g.querySelectorAll('input[type="radio"]')].find((x) => x.defaultChecked) || d; def.checked = true; def.dispatchEvent(new Event("change")); }]); });
     g.querySelectorAll('input[type="checkbox"]').forEach((c) => {
-      if (c.checked !== c.defaultChecked && !c.closest("[hidden]")) out.push([(c.checked ? "" : "off: ") + c.parentElement.textContent.replace("no data yet", "").trim(), () => c.click()]);
+      if (c.checked !== c.defaultChecked && !c.closest("[hidden]:not(.fbody)")) out.push([(c.checked ? "" : "off: ") + boxLabel(c), () => c.click()]);
     });
     return out;
   }
+  /* the name of a checkbox without its explanation */
+  function boxLabel(c) { const l = c.parentElement.querySelector(".clabel"); return (l || c.parentElement).textContent.replace("no data yet", "").trim(); }
   function drawActive() {
     const bar = $("activeBar"); if (!bar) return;
     bar.innerHTML = "";
@@ -335,8 +337,8 @@
       && !(MODE === "ngo" && ["hide_state_controlled", "only_news", "hide_taken_over"].includes(c.id))).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
-      l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> <span>${esc(MODE === "ngo" ? forPage(c.label) : c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">no data yet</span>'}</span>`;
-      if (c.description) l.title = c.description;
+      // the explanation is shown under the box (owner, 14.11.2026), not only as a tooltip
+      l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> <span><span class="clabel">${esc(MODE === "ngo" ? forPage(c.label) : c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">no data yet</span>'}</span>${c.description ? `<span class="cdesc">${esc(forPage(c.description))}</span>` : ""}</span>`;
       const inp = l.querySelector("input");
       inp.dataset.v = c.id;
       if (c.default && checkAvail[c.id]) { inp.checked = true; inp.defaultChecked = true; S.checks.add(c.id); DEFAULT_CHECKS.add(c.id); }
@@ -753,7 +755,7 @@
       if (values.length) out.push([label, values.join(", ")]);
       // ticked checkboxes (those ticked by default, like "include reach", only when changed)
       g.querySelectorAll('input[type="checkbox"]').forEach((c) => {
-        if (c.checked !== c.defaultChecked) out.push([c.parentElement.textContent.replace("no data yet", "").trim(), c.checked ? "" : "off"]);
+        if (c.checked !== c.defaultChecked) out.push([boxLabel(c), c.checked ? "" : "off"]);
       });
     });
     Object.entries(S.subOff).forEach(([t, off]) => {
