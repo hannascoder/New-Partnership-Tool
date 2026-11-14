@@ -11,7 +11,7 @@
   const WORD = MODE === "ngo" ? ["organisation", "organisations"] : ["outlet", "outlets"];
   const KEY = MODE === "ngo" ? "pf-ngo-export" : "pf-export";
   const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", countries: new Set(),
-              channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, allMatches: false, checks: new Set(), sort: "auto",
+              channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, allMatches: false, weak: false, checks: new Set(), sort: "auto",
               ngoStatus: new Set(), ngoType: new Set(), ngoEcosoc: false, ngoHideReg: false, hqOnly: false, gscope: new Set(),
               orgKind: new Set(), sector: new Set(), ngoAll: false, unPartner: false, q: "", qAll: false };
   let CFG, ALL = [], shown = 0, current = [], nMatch = 0, DEFAULT_CHECKS = new Set();
@@ -67,9 +67,14 @@
     platform: (o) => Object.keys(o.so || {}), nets: (o) => o.nw || [], langs: (o) => o.l || [],
     ngoStatus: (o) => o.us || [], ngoType: (o) => (o.nt || []).map((t) => t[0]), gscope: (o) => (o.gs ? [o.gs] : []),
     orgKind: (o) => [o.ok || "ngo"], sector: (o) => (o.gc && o.gc[2] ? [o.gc[2]] : []),
-    tp: (o) => topicsOf(o), sub: (o) => [].concat(...(o.tp || []).map((e) => (e[3] || []).map((x) => e[0] + "/" + x))), au: (o) => o.au || [], un: (o) => o.un || [],
+    // topics: weak "Reports on it" matches only count when the box "Also count weak matches" is ticked
+    tp: (o) => (o.tp ? o.tp.filter(countsNow).map((e) => e[0]) : ["general_news"]),
+    sub: (o) => [].concat(...(o.tp || []).filter(countsNow).map((e) => (e[3] || []).map((x) => e[0] + "/" + x))), au: (o) => o.au || [], un: (o) => o.un || [],
   };
   const SOFT = ["tp", "sub", "au", "un"];
+  const countsNow = (e) => S.weak || e[1] < 3 || e[0] === "general_news";
+  /* a button that is not offered on this page (categories.yaml hide_on: the same list as another filter) */
+  const offered = (x) => !(x.hide_on || []).includes(MODE);
   function totals(group) { const c = {}; ALL.forEach((o) => FACET[group](o).forEach((v) => { c[v] = (c[v] || 0) + 1; })); return c; }
   function counted(group, value, label) {  // button label with a number that apply() keeps up to date
     return `${label} <span class="sdg" data-g="${esc(group)}" data-c="${esc(value)}"></span>`;
@@ -94,7 +99,7 @@
   /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
   const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", pl: "platforms", ns: "ngoStatus", nt: "ngoType", gs: "gscope", ok: "orgKind", se: "sector" };
   const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
-  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", om: "f-onlyMatches", am: "f-allMatches", ne: "f-ngoEcosoc", nr: "f-ngoHideReg", hq: "f-hqOnly", na: "f-ngoAll", up: "f-unPartner" };  // saved when different from the default
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", om: "f-onlyMatches", am: "f-allMatches", wk: "f-weak", ne: "f-ngoEcosoc", nr: "f-ngoHideReg", hq: "f-hqOnly", na: "f-ngoAll", up: "f-unPartner" };  // saved when different from the default
   let restoring = false;
   function saveHash() {
     if (restoring) return;
@@ -125,6 +130,7 @@
     (p.get("c") || "").split(",").filter((c) => CFG.countryName[c]).forEach((c) => S.countries.add(c));
     drawChosenCountries();
     Object.keys(SETS).forEach((k) => (p.get(k) || "").split(",").filter(Boolean).forEach((v) => {
+      if (k === "tp" && (CFG.topic_merge || {})[v]) v = CFG.topic_merge[v];  // older shared links: merged topics
       const b = document.querySelector(`.chip[data-f="${k}"][data-v="${CSS.escape(v)}"]`);
       if (b && !b.disabled) b.click();
       else if (k === "l") { S.langs.add(v); drawOtherLangs(); }
@@ -201,7 +207,9 @@
     CFG.countryName = countryName;
     CFG.langName = {}; CFG.languages.concat(CFG.language_buttons).forEach((l) => { CFG.langName[l.code] = l.name; });
     setupGroups();
-    const T = {}; Object.keys(FACET).forEach((g) => { T[g] = totals(g); });  // whole list: decides which buttons have data at all
+    S.weak = true;  // whole list, weak matches included: decides which buttons have data at all
+    const T = {}; Object.keys(FACET).forEach((g) => { T[g] = totals(g); });
+    S.weak = false;
 
     const chName = (c) => (C.channel.find((x) => x.id === c) || {}).label || c, plName = (c) => ((C.social_platform || []).find((x) => x.id === c) || {}).label || c;
     if ($("f-material")) C.material.forEach((m) => $("f-material").append(chip(esc(m.label), false, toggle(S.material, m.id), { title: "Finds outlets on: " + m.channels.map(chName).concat((m.platforms || []).map(plName)).join(", ") })));
@@ -264,7 +272,7 @@
       d.innerHTML = `<h3>${esc(g.label)}</h3>`;
       const ch = document.createElement("div"); ch.className = "chips";
       const subBoxes = [];
-      C.topics.filter((t) => t.group === g.id).forEach((t) => {
+      C.topics.filter((t) => t.group === g.id && offered(t)).forEach((t) => {
         const n = T.tp[t.id] || 0;
         let box = null;
         if (t.subtopics) {  // sub-topics: shown when the topic is chosen, all included until unticked
@@ -292,13 +300,14 @@
           apply();
         }, Object.assign({ f: "tp", v: t.id }, n ? { title: t.default ? "Includes all outlets without a topic in the sources" : "" } : { disabled: true, title: "No outlet found for this topic yet" })));
       });
+      if (!ch.children.length) return;
       d.append(ch); subBoxes.forEach((b) => d.append(b)); $("f-topics").append(d);
     });
-    C.audience.forEach((a) => {
+    C.audience.filter(offered).forEach((a) => {
       $("f-audience").append(chip(counted("au", a.id, esc(a.label)), false, toggle(S.au, a.id),
         T.au[a.id] ? { title: a.description || "" } : { disabled: true, title: "No open source for this yet (the website check may add it later)" }));
     });
-    if ($("f-unProfile")) C.un_profile.filter((u) => !u.shown_in).forEach((u) => {
+    if ($("f-unProfile")) C.un_profile.filter((u) => !u.shown_in && offered(u)).forEach((u) => {
       $("f-unProfile").append(chip(counted("un", u.id, esc(u.label)), false, toggle(S.un, u.id),
         T.un[u.id] ? { title: u.description || "" } : { disabled: true, title: "No open source for this yet (hand corrections or the website check may add it later)" }));
     });
@@ -307,18 +316,23 @@
     S.onlyMatches = !!om.default; $("f-onlyMatches").checked = S.onlyMatches; $("f-onlyMatches").defaultChecked = S.onlyMatches;
     if (om.description) $("onlyMatchesLabel").parentElement.title = om.description;
     $("f-onlyMatches").addEventListener("change", (e) => { S.onlyMatches = e.target.checked; apply(); });
+    const wk = C.checkboxes.find((c) => c.id === "weak_topic_matches");
+    if ($("f-weak")) {
+      if (wk) { $("weakLabel").textContent = wk.label; $("f-weak").parentElement.title = wk.description || ""; }
+      $("f-weak").addEventListener("change", (e) => { S.weak = e.target.checked; apply(); });
+    }
     const am = C.checkboxes.find((c) => c.id === "all_topic_matches");
     if ($("f-allMatches")) {
       if (am) { $("allMatchesLabel").textContent = am.label; $("f-allMatches").parentElement.title = am.description || ""; }
       $("f-allMatches").addEventListener("change", (e) => { S.allMatches = e.target.checked; apply(); });
     }
     const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
-                         hide_website_down: true, only_new: true, only_active: true, only_news: true };
+                         hide_website_down: true, only_new: true, only_active: true, only_news: true, hide_taken_over: true };
     // "Only new" is of no use while everything was found in the same weeks (before the first automatic update)
     const since = newSince(); if (!ALL.some((o) => o.f < since)) checkAvail.only_new = "hide";
     // NGO page: no state-controlled media, no "news media" box; "verified" = more than one NGO list
-    C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches", "all_topic_matches"].includes(c.id) && checkAvail[c.id] !== "hide"
-      && !(MODE === "ngo" && ["hide_state_controlled", "only_news"].includes(c.id))).forEach((c) => {
+    C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches", "all_topic_matches", "weak_topic_matches"].includes(c.id) && checkAvail[c.id] !== "hide"
+      && !(MODE === "ngo" && ["hide_state_controlled", "only_news", "hide_taken_over"].includes(c.id))).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
       l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> <span>${esc(MODE === "ngo" ? forPage(c.label) : c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">no data yet</span>'}</span>`;
@@ -449,7 +463,7 @@
   /* o.tp entries: [topic, strength (1 main focus, 2 own section, 3 covers it), reason, [sub-topics]] */
   function tpEntry(o, t) { return o.tp ? o.tp.find((e) => e[0] === t) : (t === "general_news" ? ["general_news", 3, -1] : null); }
   function topicMatch(o, t) {
-    const e = tpEntry(o, t); if (!e) return null;
+    const e = tpEntry(o, t); if (!e || !countsNow(e)) return null;
     const off = S.subOff[t]; if (!off || !off.size) return e;
     return (e[3] || []).some((s) => !off.has(s)) ? e : null;  // narrowed: only outlets with a chosen sub-topic
   }
@@ -509,7 +523,7 @@
     if (S.nets.size) T.push(["nets", (o) => (o.nw || []).some((n) => S.nets.has(n))]);
     if (S.checks.size) {
       const k = S.checks, act = activeSince(), nw = newSince();
-      T.push(["checks", (o) => !(k.has("only_news") && o.nn) && !(k.has("hide_state_controlled") && o.ow && o.ow[0] === "state_controlled")
+      T.push(["checks", (o) => !(k.has("only_news") && o.nn) && !(k.has("hide_taken_over") && o.ww) && !(k.has("hide_state_controlled") && o.ow && o.ow[0] === "state_controlled")
         && !(k.has("only_verified") && o.s.length < 2) && !(k.has("has_social_media") && !o.so) && !(k.has("has_public_contact") && !o.em && !o.cp)
         && !(k.has("only_active") && !(o.lp && o.lp >= act)) && !(k.has("hide_website_down") && (o.wd || o.ww)) && !(k.has("only_new") && o.f < nw)]);
     }
@@ -574,7 +588,7 @@
       + (nSoft && !S.onlyMatches && !S.allMatches ? ` · <span class="matchcount"><b>${num(nMatch)}</b> match your ${MODE === "ngo" ? "topics / audience" : "topics / audience / UN profile"} (shown first)</span>` : "");
     // say what the boxes that are ticked by default hide (state-controlled media, non-news channels)
     const hid = (nearly.checks || []).length, defOn = [...DEFAULT_CHECKS].some((c) => S.checks.has(c));
-    if (hid && defOn && !S.qAll) $("counter").insertAdjacentHTML("beforeend", ` · <button type="button" class="linklike" id="showMore" title="State-controlled media and pure sports, music, children's or religious channels are hidden by default. Click to change this under “More”.">${num(hid)} hidden by the boxes under “More”</button>`);
+    if (hid && defOn && !S.qAll) $("counter").insertAdjacentHTML("beforeend", ` · <button type="button" class="linklike" id="showMore" title="State-controlled media, pure sports, music, children's or religious channels and outlets whose website was taken over are hidden by default. Click to change this under “More”.">${num(hid)} hidden by the boxes under “More”</button>`);
     // a name search that other filters cut down: say so and offer to search everything
     let note = "";
     if (S.q && !S.qAll) {
@@ -599,7 +613,8 @@
     const N = CFG.ngo || {};
     // topics: the chosen ones first, then the strongest; the short card shows 4, the details all with their reason
     const matched = new Set((o._m || []).filter((m) => m[0] === "tp").map((m) => m[1]));
-    const tlist = topicsOf(o).map((t) => [t, tpEntry(o, t)]).sort((a, b) => (matched.has(b[0]) - matched.has(a[0])) || ((a[1] ? a[1][1] : 9) - (b[1] ? b[1][1] : 9)));
+    const hiddenTopic = new Set(C.topics.filter((t) => !offered(t)).map((t) => t.id));  // e.g. "Community & local" = Scope "Local"
+    const tlist = topicsOf(o).filter((t) => !hiddenTopic.has(t) || topicsOf(o).length === 1).map((t) => [t, tpEntry(o, t)]).sort((a, b) => (matched.has(b[0]) - matched.has(a[0])) || ((a[1] ? a[1][1] : 9) - (b[1] ? b[1][1] : 9)));
     const tshort = tlist.slice(0, 4).map(([t, e]) => `<span class="tag${matched.has(t) ? " hit" : ""}">${esc(lab(C.topics, t))}</span>` + (o.tp && strengthOf(t, e[1]) ? ` <span class="pending">(${esc(strengthOf(t, e[1]))})</span>` : "")).join(", ")
       + (tlist.length > 4 ? ` <span class="pending">+${tlist.length - 4} more in the details</span>` : "");
     const reason = (text, url) => `<span class="why">${esc(text)}${url && /^https?:/.test(url) ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">open section ↗</a>` : ""}</span>`;
@@ -611,8 +626,10 @@
     const typeLine = o.ng
       ? (o.ok && o.ok !== "ngo" ? esc(lab(N.org_kind || [], o.ok)) + " · " : "") + (esc((o.us || []).map((u) => lab(N.un_status || [], u)).join(", ")) || "<span class='pending'>no UN status</span>")
       : esc((C.org_type.find((x) => x.id === (o.o || [])[0]) || {}).label || (o.o || [])[0] || "") + (o.ow && o.ow[0] === "state_controlled" ? ' · <span class="warn">State-controlled</span>' : "");
-    const contact = (o.em ? `<a href="mailto:${esc(o.em)}">${esc(o.em)}</a>` : "") + (o.em && o.cp ? " · " : "") + (o.cp ? `<a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : "");
-    const site = o.w ? `<a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>` : "";
+    const contact = o.ww ? "" : (o.em ? `<a href="mailto:${esc(o.em)}">${esc(o.em)}</a>` : "") + (o.em && o.cp ? " · " : "") + (o.cp ? `<a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : "");
+    // a website that seems to belong to someone else now (betting, adult content) is named but not linked
+    const site = !o.w ? "" : o.ww ? `<span class="pending">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))} (not linked)</span>`
+      : `<a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>`;
     const ownRow = o.ng ? "" : o.ow && o.ow[0] !== "unknown" ? `<p class="row"><b>Ownership:</b> ${esc((C.ownership.find((x) => x.id === o.ow[0]) || {}).label || o.ow[0])}${o.on ? ` · <b>Owner:</b> ${esc(o.on.join(", "))}` : ""} ${reason(CFG.why[o.ow[1]])}</p>`
       : `<p class="row"><b>Ownership:</b> Unknown${o.on ? ` · <b>Owner:</b> ${esc(o.on.join(", "))}` : ""} <span class="why">No open source says what kind of owner this is. This does not mean it is independent or state-run.</span></p>`;
     const details = `
@@ -642,6 +659,7 @@
       <p class="row"><b>Topics:</b> ${tshort}</p>
       ${(o.au || []).length ? row("Target audience", esc(o.au.map((a) => lab(C.audience, a)).join(", "))) : ""}
       ${(o.un || []).length ? row("UN profile", esc(o.un.map((u) => lab(C.un_profile, u)).join(", "))) : ""}
+      ${o.ms ? `<p class="row warn">ⓘ Not found in the sources at the last update. It will be removed at the next update unless it comes back.</p>` : ""}
       ${o.ww ? `<p class="row warn">⚠ Website may no longer belong to this outlet: ${esc(o.ww)}</p>` : ""}
       ${site || contact ? `<p class="row">${site ? `<b>Website:</b> ${site}${o.wd ? ' <span class="warn">(did not answer at the last check)</span>' : ""}` : ""}${site && contact ? " · " : ""}${contact ? `<b>Contact:</b> ${contact}` : ""}</p>` : ""}
       ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id, s]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id) + (k2 === "tp" && strengthOf(id, s) ? ` (${strengthOf(id, s)})` : "")).join(", "))}</span>` : ""}
@@ -780,6 +798,7 @@
     if (o.s.length < 2 && !o.ng) f.push("Unverified");
     if (o.wd) f.push("Website not reachable");
     if (o.ww) f.push("Website may no longer belong to the outlet");
+    if (o.ms) f.push("Not found in the sources at the last update");
     if (o.lp && o.lp < activeSince()) f.push("No recent article (last " + o.lp + ")");
     return f.join(", ");
   }
@@ -806,7 +825,7 @@
         topic: topicsOf(o).filter((t) => !topicFilter || !topicFilter.size || topicFilter.has(t)).map((t) => lab(C.topics, t)).join(", "),
         audience: (o.au || []).map((a) => lab(C.audience, a)).join(", "),
         unProfile: [o.pu, o.gc && o.gc[3]].filter(Boolean).join(" "), memberOf: "",
-        website: o.w || "", contact: o.em || o.cp || "",
+        website: o.ww ? "" : o.w || "", contact: o.ww ? "" : o.em || o.cp || "",
         social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
         notes: flags(o),
       };
@@ -822,7 +841,7 @@
       unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
       memberOf: o.ng ? (o.us || []).map((u) => lab((CFG.ngo || {}).un_status || [], u)).concat((o.nt || []).map((t) => "Type of work: " + lab((CFG.ngo || {}).type_of_work || [], t[0]))).join(", ")
         : (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
-      website: o.w || "", contact: o.em || o.cp || "",
+      website: o.ww ? "" : o.w || "", contact: o.ww ? "" : o.em || o.cp || "",
       social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
       notes: flags(o),
     };

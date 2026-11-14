@@ -1,0 +1,263 @@
+# THE AUTOMATIC UPDATE (step 9; owner's rules of 06.11.2026 and priority of 14.11.2026:
+# "it must maintain itself and update regularly on its own, free and open source").
+#
+# What it does, without anybody doing anything:
+#   every 2 months (3rd day of January, March, May, July, September, November):
+#     1. downloads all open sources again              (raw/)
+#     2. visits the outlets' websites again            (raw/website_check/)
+#     3. merges, classifies and builds the website data (bash pipeline/run.sh)
+#     4. safety brake: if more than 10 % of the outlets disappeared, NOTHING is published
+#     5. saves the result on the main branch -> Cloudflare publishes the website
+#   in the months in between: only a small "still alive" note is saved. GitHub switches scheduled
+#   workflows off after 60 days without any change in the repository; this prevents it.
+#
+# If something fails: an issue "Automatic update failed" is opened in this repository (GitHub sends
+# the owner an e-mail about it) and the published website stays as it was.
+#
+# Cost: nothing. The repository is public, so GitHub Actions minutes are free; only open data sources.
+# Start by hand: Actions -> "Automatic update" -> Run workflow.
+name: Automatic update
+on:
+  schedule:
+    - cron: "23 2 3 * *"   # 3rd of every month, 02:23 UTC (full update only in odd months, see "plan")
+  workflow_dispatch:
+    inputs:
+      websites:
+        description: "Also visit the websites again (takes several hours)"
+        type: boolean
+        default: true
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: automatic-update
+  cancel-in-progress: false
+env:
+  PYTHONUNBUFFERED: "1"
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      full: ${{ steps.decide.outputs.full }}
+      websites: ${{ steps.decide.outputs.websites }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - id: decide
+        run: |
+          month=$(date -u +%-m)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "full=true" >> "$GITHUB_OUTPUT"
+            echo "websites=${{ inputs.websites }}" >> "$GITHUB_OUTPUT"
+          elif [ $((month % 2)) -eq 1 ]; then
+            echo "full=true" >> "$GITHUB_OUTPUT"; echo "websites=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "full=false" >> "$GITHUB_OUTPUT"; echo "websites=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: "Month in between: save a 'still alive' note (keeps the schedule switched on)"
+        if: steps.decide.outputs.full == 'false'
+        run: |
+          date -u +"last check-in of the automatic update: %Y-%m-%d (next full update: 3rd of the next odd month)" > cache/heartbeat.txt
+          git config user.name "partner-finder-bot"
+          git config user.email "partner-finder-bot@users.noreply.github.com"
+          git add cache/heartbeat.txt
+          git commit -q -m "Automatic update: still alive, $(date -u +%Y-%m-%d) [skip ci]" || exit 0
+          git pull -q --rebase origin "$GITHUB_REF_NAME" && git push -q origin "HEAD:$GITHUB_REF_NAME"
+
+  sources:
+    needs: plan
+    if: needs.plan.outputs.full == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      # every source on its own: if one fails, its earlier data stays and the others go on
+      - { name: Radio Browser, continue-on-error: true, run: python pipeline/fetch/radio_browser.py }
+      - { name: iptv-org, continue-on-error: true, run: python pipeline/fetch/iptv_org.py }
+      - { name: Media Cloud, continue-on-error: true, run: python pipeline/fetch/media_cloud.py }
+      - { name: Network and member lists, continue-on-error: true, run: python pipeline/fetch/networks.py }
+      - { name: Atlas country context, continue-on-error: true, run: python pipeline/fetch/atlas.py }
+      - { name: Far-right evidence, continue-on-error: true, timeout-minutes: 15, run: python pipeline/fetch/far_right.py }
+      - { name: Wikidata owners, continue-on-error: true, timeout-minutes: 30, run: python pipeline/fetch/wikidata_owners.py }
+      - { name: NGO lists (UN Geneva), continue-on-error: true, timeout-minutes: 10, run: python pipeline/fetch/ngo_pages.py }
+      - { name: NGO lists (IATI), continue-on-error: true, timeout-minutes: 10, run: python pipeline/fetch/iati.py }
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "automatic update, quick sources"
+
+  wikidata:
+    needs: [plan, sources]
+    if: always() && needs.plan.outputs.full == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Wikidata (media)
+        continue-on-error: true
+        timeout-minutes: 190
+        env: { WIKIDATA_MINUTES: "170" }
+        run: python pipeline/fetch/wikidata.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "automatic update, Wikidata"
+      - name: Wikidata (organisations)
+        continue-on-error: true
+        timeout-minutes: 130
+        env: { WIKIDATA_KIND: ngo, WIKIDATA_MINUTES: "110" }
+        run: python pipeline/fetch/wikidata.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "automatic update, Wikidata organisations"
+
+  texts:
+    needs: [plan, wikidata]
+    if: always() && needs.plan.outputs.full == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - { name: Wikidata descriptions and Wikipedia introductions, continue-on-error: true, timeout-minutes: 80, run: python pipeline/fetch/texts.py }
+      - { name: Keyword names in all languages, continue-on-error: true, timeout-minutes: 50, run: python pipeline/fetch/keyword_labels.py }
+      # ECOSOC and the UN Global Compact often do not answer GitHub's computers. They are tried for a
+      # short time; when they stay silent, the data of the last successful download is kept.
+      - name: ECOSOC (short try)
+        continue-on-error: true
+        timeout-minutes: 45
+        env: { ECOSOC_MINUTES: "35", ECOSOC_SKIP_KINDS: field }
+        run: python pipeline/fetch/ecosoc.py
+      - name: UN Global Compact (short try)
+        continue-on-error: true
+        timeout-minutes: 45
+        env: { GC_MINUTES: "35" }
+        run: python pipeline/fetch/global_compact.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "automatic update, texts and organisations"
+
+  # The website check takes long (about 60,000 websites). Websites checked in the last 50 days are
+  # skipped, so the second part continues where the first one stopped.
+  websites-1:
+    needs: [plan, texts]
+    if: always() && needs.plan.outputs.websites == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Website check
+        continue-on-error: true
+        timeout-minutes: 335
+        env: { WEBSITE_MAX_RANK: "100000", WEBSITE_MINUTES: "320" }
+        run: python pipeline/fetch/website_check.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "automatic update, website check"
+  websites-2:
+    needs: [plan, websites-1]
+    if: always() && needs.plan.outputs.websites == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Website check
+        continue-on-error: true
+        timeout-minutes: 335
+        env: { WEBSITE_MAX_RANK: "100000", WEBSITE_MINUTES: "320" }
+        run: python pipeline/fetch/website_check.py
+      - name: Save raw data
+        if: always()
+        run: bash pipeline/fetch/commit_raw.sh "automatic update, website check"
+
+  build:
+    needs: [plan, texts, websites-2]
+    if: always() && needs.plan.outputs.full == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Check the config files
+        run: python pipeline/validate/check_config.py
+      - name: Count dead websites (hidden after 3 checks in a row)
+        run: python pipeline/automation/website_state.py
+      - name: Merge, classify, build the website data
+        env: { PF_SCHEDULED: "1" }
+        run: bash pipeline/run.sh
+      - name: Safety brake (stops when too much disappeared)
+        run: python pipeline/automation/safety_brake.py
+      - name: Publish (save on the main branch; Cloudflare publishes the website)
+        run: |
+          date -u +"last full automatic update: %Y-%m-%d" > cache/heartbeat.txt
+          git config user.name "partner-finder-bot"
+          git config user.email "partner-finder-bot@users.noreply.github.com"
+          git add cache reports site
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          numbers=$(python pipeline/automation/safety_brake.py --numbers)
+          git commit -q -m "Automatic update $(date -u +%Y-%m-%d): $numbers"
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin "$GITHUB_REF_NAME" && git push -q origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 15))
+          done
+          echo "could not save the update" >&2; exit 1
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Automatic update"
+            cat site/data/stats.json 2>/dev/null | head -4 || true
+            echo; sed -n 1,12p reports/changes.md 2>/dev/null || true
+            echo; sed -n 16,26p reports/quality.md 2>/dev/null || true
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  report-failure:
+    needs: [plan, sources, wikidata, texts, websites-1, websites-2, build]
+    if: always() && (needs.build.result == 'failure' || needs.plan.result == 'failure')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Open an issue (GitHub sends the owner an e-mail)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" \
+            --title "Automatic update failed ($(date -u +%Y-%m-%d))" \
+            --body "The automatic update did not finish. **The published website is unchanged.**
+
+          What happened: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID (open the red step: the safety brake names what disappeared, other steps show their error).
+
+          What to do: open a Claude session in this repository and say: \"Der automatische Lauf ist fehlgeschlagen, bitte prüfen\" (with this link)."

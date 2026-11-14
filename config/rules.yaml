@@ -164,6 +164,14 @@ topics:
   # many topics at once = a general outlet that lists its sections: those matches then count as
   # "Reports on it" (review 13.11.2026). Topics from the name, a source or a network are not touched.
   max_text_specialist: 3
+  # Menu entries that are legal notices, campaigns or widgets, not sections (review 14.11.2026:
+  # "Non-Discrimination" gave "Reduced inequalities", "Modern Slavery Statement" gave SDG 8).
+  # A menu entry containing one of these expressions is not used.
+  ignore_sections: [non discrimination, nondiscrimination, equal opportunity, eeo report, accessibility,
+                    modern slavery, privacy, terms of, public file, fcc, older polls, poll results, t shirts, t shirt,
+                    awareness, tornado outbreak, do not sell, cookie, advertise, subscribe, careers, jobs at]
+  # A menu entry made only of words of the outlet's own name is not a section ("planet" on "planet radio").
+  ignore_sections_in_own_name: true
   # Words in other languages (from Wikidata) found in more than this share of all outlets
   # are everyday words, not topic words, and are not used (0.003 = 0.3 % = ~210 outlets).
   auto_words_max_share: 0.003
@@ -232,6 +240,26 @@ exclude_far_right:
   # Republic TV, Die Weltwoche): listed in reports/excluded_far_right.md; hidden only if set to true.
   hide_right_wing_populist: true
 
+# ---------------------------------------------------------------- website texts
+# When the texts of a website are NOT used for topics, audiences and UN profiles (review 14.11.2026).
+website_texts:
+  # platforms many outlets only have a page on: their menu says nothing about the single outlet
+  ignore_hosts: [pluto.tv, zeno.fm, tunein.com, facebook.com, youtube.com, twitter.com, x.com, instagram.com,
+                 substack.com, blogspot.com, wordpress.com, wix.com, weebly.com, iheart.com, radio.net,
+                 chroniclingamerica.loc.gov, archive.org, wikipedia.org]
+  # ... and every website that this many outlets or more give as their own
+  ignore_hosts_shared_by: 100
+  # Signs that a website no longer belongs to the outlet: the card shows a warning, the website's
+  # texts are not used, and "Hide outlets whose website did not answer" hides it.
+  taken_over:
+    # most of the title / description is in a script that none of the outlet's languages uses
+    # (scripts and their languages: name_scripts below), e.g. Thai text on a Ghanaian news site
+    other_script_share: 0.5
+    # betting and shop words in the title or description
+    words: [slot gacor, situs slot, slot online, judi online, togel, sbobet, casino online, online casino,
+            bandar, pragmatic play, แทงบอล, วิเคราะห์บอล, บาคาร่า, สล็อต, t shirts, kids t shirts, 博彩, 娱乐城,
+            apuestas deportivas, casas de apuestas, sports betting tips, betting tips]
+
 # ---------------------------------------------------------------- not news
 # Pure sports, music/culture, children's and religious channels (owner, 13.11.2026): they stay in the
 # data but are hidden by the checkbox "Only news media", which is ticked by default.
@@ -259,6 +287,14 @@ not_media:
   government_host: '\.(gov|go|gob|gouv|gub|govt|mil|gv|government)(\.[a-z]{2,3})?$'
   # the website is also the website of an organisation on the "Organisations & NGOs" page
   ngo_website: true
+  # the only website is a newspaper ARCHIVE: a historic paper that is no longer published
+  archive_hosts: [chroniclingamerica.loc.gov, gallica.bnf.fr, hemerotecadigital.bne.es, digi.kansalliskirjasto.fi,
+                  trove.nla.gov.au, delpher.nl, anno.onb.ac.at, newspapers.com, archive.org, europeana.eu,
+                  paperspast.natlib.govt.nz, britishnewspaperarchive.co.uk, digitalcollections.nypl.org,
+                  news.google.com, e-newspaperarchives.ch, digipress.digitale-sammlungen.de, zefys.staatsbibliothek-berlin.de]
+  # academic journals that Wikidata lists as "magazine": words in the Wikidata description
+  description_words: [scientific journal, academic journal, peer-reviewed journal, peer reviewed journal,
+                      научный журнал, revue scientifique, revista científica, wissenschaftliche zeitschrift]
 
 # ---------------------------------------------------------------- prominence ("Top 10 / Top 50")
 # Rank within the country (review 13.11.2026). Base = Wikipedia language versions + number of sources.
@@ -388,3 +424,22 @@ org_email:
            kontor, post, correo, courrier, jornal, journal, tele, direccion, direction, director, board]
   contains: [info, contact, redac, news, noticia, press, prensa, media, office, secretariat, radio, tv,
              editor, geneva, genev, newyork, ecosoc, global, intl, international, network]
+
+# ---------------------------------------------------------------- automatic update
+# The update that runs on its own (.github/workflows/update.yml; owner's rules of 06.11.2026).
+automation:
+  # Safety brake: the update is not published when more than this share disappears at once
+  max_drop: 0.10            # of all outlets / of all organisations
+  max_source_drop: 0.25     # of the outlets of one source ...
+  min_source_size: 1000     # ... that had at least this many outlets
+  # A website counts as DEAD when the website check ends with one of these errors (the address no
+  # longer exists). Refused visits (HTTP 403 / 429), time-outs and certificate problems do not count:
+  # many large outlets block robots.
+  dead_errors: ["Name or service not known", "No address associated with hostname", "Connection refused"]
+  # An outlet is not shown when its website was dead at this many checks in a row; it comes back
+  # as soon as the website answers. Listed in reports/hidden_websites.md.
+  hide_after_dead_checks: 3
+  # An outlet that is no longer in any source is still shown at the first update without it
+  # (with a note) and removed at this one.
+  remove_after_missing_runs: 2
+

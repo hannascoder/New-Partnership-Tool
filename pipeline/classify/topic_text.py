@@ -8,7 +8,7 @@ Texts used (each with its role):
   about         Wikipedia introduction, website About page -> FOCUS on 2 different strong words
                 (one in the first sentence) or 3 anywhere; else COVERS
   menu          website menu / section names and their addresses -> DESK
-  headlines     website headlines and home page text      -> COVERS on 2+ strong words
+  headlines     website headlines and home page text      -> COVERS on 2+ DIFFERENT strong words
 Strength codes: 1 = focus, 2 = desk, 3 = covers (smaller = stronger).
 """
 import re
@@ -198,6 +198,8 @@ class Matcher:
             for topic, lst in per_topic.items():
                 terms = sorted({t for t, _ in lst})
                 s_ = FOCUS if (topic in in_first and len(terms) >= 2) or len(terms) >= 3 else COVERS
+                if s_ == COVERS and len(terms) < 2 and topic not in in_first:
+                    continue  # one word somewhere in a long text says nothing (check of 200 outlets, 14.11.2026)
                 for _, sub in lst:
                     add(topic, sub, s_, f'{label}: "' + '", "'.join(terms[:3]) + '"')
         # DESK: menu entries (section words or strong words), also in the address.
@@ -253,8 +255,10 @@ class Matcher:
                     for topic, sub in hs:
                         per_topic.setdefault(topic, []).append((term, sub))
             for topic, lst in per_topic.items():
-                if len(lst) >= 2:
-                    terms = sorted({t for t, _ in lst})
+                terms = sorted({t for t, _ in lst})
+                # 2 DIFFERENT words (until 14.11.2026 the same word twice was enough: "relief" in two
+                # headlines made a local paper a humanitarian outlet)
+                if len(terms) >= 2:
                     for _, sub in lst:
                         add(topic, sub, COVERS, 'website headlines: "' + '", "'.join(terms[:3]) + '"')
         return res

@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-169 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+177 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -38,6 +38,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-025065 | Disclose.tv | DEU | AI reading: Wikipedia: pushes far-right content and conspiracy theories |
 | pf-000142 | Junge Freiheit | DEU | AI reading: Wikipedia: conservative, right-wing, nationalistic; 'ideological supply ship of right-wing populism' |
 | pf-000349 | National Zeitung | DEU | Wikipedia Category:Far-right periodicals published in Germany |
+| pf-026877 | National-Zeitung | DEU | same name as an excluded outlet (Wikipedia Category:Far-right periodicals published in Germany) |
 | pf-016621 | Tichys Einblick | DEU | AI reading (right-wing populist): Wikipedia: right-wing and conservative |
 | pf-023731 | Le Petit Oranais | DZA | AI reading: Wikipedia: antisemitic newspaper |
 | pf-006825 | Azul | ESP | Wikidata political ideology of the owner Falange Española Tradicionalista y de las JONS: fascism |
@@ -70,6 +71,8 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-005814 | Candour | GBR | Wikipedia Category:Far-right periodicals published in the United Kingdom |
 | pf-028115 | Dark Lily | GBR | Wikipedia Category:Far-right periodicals published in the United Kingdom |
 | pf-023337 | GB News | GBR | AI reading (right-wing populist): Wikipedia: right-wing orientation |
+| pf-030834 | GB News | GBR | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: right-wing orientation) |
+| pf-030835 | GB News | GBR | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: right-wing orientation) |
 | pf-022640 | Guido Fawkes | GBR | AI reading (right-wing populist): Wikipedia: right-wing political website |
 | pf-009322 | Spearhead | GBR | Wikidata political ideology: fascism |
 | pf-002663 | Spiked | GBR | AI reading (right-wing populist): Wikipedia: promotes right-wing libertarianism |
@@ -94,6 +97,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-016697 | Republic TV | IND | AI reading (right-wing populist): Wikipedia: right-wing news channel |
 | pf-015121 | Swarajya | IND | AI reading (right-wing populist): Wikipedia: right-wing magazine, favourable to the BJP |
 | pf-006177 | Zee News | IND | AI reading (right-wing populist): Wikipedia: right-wing news channel |
+| pf-058148 | Zee News | IND | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: right-wing news channel) |
 | pf-001836 | Kayhan | IRN | AI reading (right-wing populist): Wikipedia: considered the most conservative and hardline newspaper |
 | pf-009073 | Resalat | IRN | AI reading (right-wing populist): Wikipedia: principlist, pro-Khamenei and pro-Ahmadinejad newspaper |
 | pf-015038 | 0404 News | ISR | AI reading (right-wing populist): Wikipedia: right-wing news website |
@@ -111,6 +115,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-000297 | Al-Manar | LBN | Wikidata political ideology of the owner Hezbollah: antisemitism |
 | pf-000308 | Al-Nour | LBN | Wikidata political ideology of the owner Hezbollah: antisemitism |
 | pf-001855 | Latvijas Avīze | LVA | AI reading (right-wing populist): Wikipedia: national conservative daily |
+| pf-015098 | Latvijas Avīze | LVA | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: national conservative daily) |
 | pf-000618 | The Epoch Times | MEX | Wikipedia Category:Far-right periodicals published in the United States |
 | pf-026750 | Myanmar National Post | MMR | AI reading: Wikipedia: nationalist outlet linked to an ultranationalist organisation, anti-Rohingya reports |
 | pf-006174 | Document.no | NOR | AI reading: Wikipedia: right-wing to far-right anti-immigration site |
@@ -151,6 +156,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-027761 | Counter-Currents | USA | AI reading: Wikidata: far-right commentary website |
 | pf-026219 | Daily Caller News Foundation | USA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller |
 | pf-064102 | Epoch Times | USA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): far-right, Falun Gong-affiliated newspaper |
+| pf-030715 | FOX NEWS | USA | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: conservative political commentary c) |
 | pf-000187 | Fox News | USA | AI reading (right-wing populist): Wikipedia: conservative political commentary channel founded to appeal to a conservative audience, hired a Republican consultant |
 | pf-041254 | Fox News International | USA | AI reading (right-wing populist): international channel of Fox News |
 | pf-006436 | Fox News Radio | USA | AI reading (right-wing populist): radio network of Fox News |
@@ -160,6 +166,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-015108 | Newsmax TV | USA | AI reading: Wikipedia: right-wing and far-right |
 | pf-008743 | Occidental Observer | USA | Wikidata political ideology of the owner The Occidental Quarterly: antisemitism |
 | pf-014857 | One America News Network | USA | AI reading: Wikipedia: far-right news channel |
+| pf-045532 | One America News Network | USA | same name as an excluded outlet (AI reading: Wikipedia: far-right news channel) |
 | pf-028167 | Race & Nation | USA | Wikidata political ideology: white supremacy |
 | pf-027424 | Racial Loyalty | USA | Wikidata political ideology: white supremacy |
 | pf-016610 | Right Side Broadcasting Network | USA | AI reading: Wikipedia: far-right conservative media company |
@@ -174,6 +181,7 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-010220 | Townhall | USA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): partisan right-wing site (Salem Media); Wikipedia: 'mainstream conservative' bias |
 | pf-027884 | Western Voices World News | USA | Wikidata political ideology: white supremacy |
 | pf-004307 | WorldNetDaily | USA | Wikipedia Category:Alt-right websites |
+| pf-030716 | fox news | USA | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: conservative political commentary c) |
 
 ## Right-wing populist / party-aligned right-wing media: SHOWN for now (0)
 

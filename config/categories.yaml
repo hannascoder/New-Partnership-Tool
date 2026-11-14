@@ -175,7 +175,7 @@ topics:
   - {id: life_on_land,       group: planet,      sdg: 15, label: Life on land}
   # Prosperity
   - {id: energy,             group: prosperity,  sdg: 7,  label: Affordable & clean energy}
-  - {id: work_economy,       group: prosperity,  sdg: 8,  label: Decent work & economic growth}
+  - {id: work_economy,       group: prosperity,  sdg: 8,  label: "Decent work, business & economy"}
   - {id: industry_innovation, group: prosperity, sdg: 9,  label: "Industry, innovation & infrastructure"}
   - {id: inequalities,       group: prosperity,  sdg: 10, label: Reduced inequalities}
   - {id: cities,             group: prosperity,  sdg: 11, label: Sustainable cities & communities}
@@ -187,10 +187,14 @@ topics:
   - {id: general_news,       group: beats, label: General news, default: true}
   - {id: fact_checking,      group: beats, label: Fact-checking & misinformation}
   - {id: science,            group: beats, label: Science}
-  - {id: business_economy,   group: beats, label: Business & economy}
+  # owner, 14.11.2026: merged into SDG 8 (82 % of its outlets were in both). The id stays for the
+  # source tables; "merged_into" = topic/sub-topic it is counted as. Not a button.
+  - {id: business_economy,   group: beats, label: Business & economy, merged_into: work_economy/business_finance}
   - {id: culture,            group: beats, label: Culture}
   - {id: religion,           group: beats, label: Religion}
-  - {id: community_local,    group: beats, label: Community & local}
+  # hide_on: no button on that page (review 14.11.2026: on the media page it was the same list as
+  # Scope "Local"); the value is still shown on the cards of the other page
+  - {id: community_local,    group: beats, label: Community & local, hide_on: [media]}
   - {id: humanitarian,       group: beats, label: Humanitarian aid}
   - {id: human_rights,       group: beats, label: Human rights}
   - {id: migration,          group: beats, label: Migration & refugees}
@@ -227,12 +231,15 @@ un_profile:
     shown_in: member_of
   - id: public_service_mandate
     label: Public service mandate
+    hide_on: [media, ngo]   # no button (same list as Organisation type "Public broadcaster"); still shown on the card
   - id: storytelling
     label: Storytelling & documentary
   - id: fact_checking_ifcn
     label: Fact-checking (IFCN signatory)
+    hide_on: [media, ngo]   # no button (same list as Member of "IFCN"); still shown on the card
   - id: multilingual
     label: Multilingual
+    hide_on: [media, ngo]   # no button (same as choosing 2 languages); still shown on the card
 
 # ------------------------------------------------------ Target audience
 # WHO an outlet is made for (the topic says what it reports on). Owner's
@@ -251,13 +258,16 @@ audience:
     label: Older persons
   - id: rural_farmers
     label: Rural communities & farmers
+    hide_on: [media]   # same outlets as topic "Agriculture & rural" on the media page; kept on the NGO page
   - id: local_communities
     label: Local communities
+    hide_on: [media]   # same outlets as Organisation type "Community radio & local media" on the media page; kept on the NGO page
     description: Community media made by and for a local community.
   - id: persons_with_disabilities
     label: Persons with disabilities
   - id: indigenous
     label: Indigenous peoples
+    hide_on: [media]   # same outlets as topic "Indigenous peoples" on the media page; kept on the NGO page
   - id: minority_language
     label: Minority-language speakers
     description: The outlet uses a language that is not official in its country.
@@ -265,10 +275,12 @@ audience:
     label: Ethnic & minority communities
   - id: diaspora_migrants
     label: Diaspora & migrants
+    hide_on: [media]   # same outlets as topic "Diaspora" on the media page; kept on the NGO page
   - id: lgbtq
     label: LGBTQ+ communities
   - id: religious
     label: Religious communities
+    hide_on: [media]   # same outlets as topic "Religion" on the media page; kept on the NGO page
   - id: business_professionals
     label: Business & professionals
   - id: policy_makers
@@ -303,15 +315,18 @@ checkboxes:
     label: Hide state-controlled media
     description: Media controlled by a government (State Media Monitor / Wikidata), e.g. RT, CCTV. In some countries almost all media are state-controlled - untick to see them.
     default: true   # owner, 13.11.2026 (was off)
-  - id: has_social_media
-    label: Has social media
-    default: false
+  # "Has social media" removed 14.11.2026: the same as Channel "Social media".
   - id: has_public_contact
     label: Has public contact
     description: Newsroom or organisation addresses only.
     default: false
+  # owner, 14.11.2026: hidden unless the user unticks the box (416 outlets; most no longer exist)
+  - id: hide_taken_over
+    label: Hide outlets whose website now belongs to someone else
+    description: The outlet's web address now shows betting, adult or other foreign content, so the outlet has probably closed.
+    default: true
   - id: hide_website_down
-    label: Hide outlets whose website did not answer (or no longer belongs to them)
+    label: Hide outlets whose website did not answer
     default: false
   - id: only_new
     label: Only new (found in the last 4 months)
@@ -332,6 +347,12 @@ checkboxes:
     description: Hides outlets that match none of the chosen topics, target audiences or UN profiles.
     default: true   # owner, 09.11.2026 (was off)
   # review 13.11.2026: several topics used to mean "any of them" only
+  # review 14.11.2026: "Reports on it" matches were wrong in about 1 of 3 checked cases
+  # (config/quality_sample.csv), so they only count when this box is ticked.
+  - id: weak_topic_matches
+    label: Also count weak matches (“Reports on it”)
+    description: Adds outlets where the topic only appears in single words in headlines or texts. More results, but about one in three is wrong.
+    default: false
   - id: all_topic_matches
     label: Must match ALL chosen topics (not just one of them)
     description: With two or more chosen topics, audiences or UN profiles, only outlets that match every one of them are shown.

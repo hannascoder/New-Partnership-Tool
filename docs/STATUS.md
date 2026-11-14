@@ -224,6 +224,42 @@ The owner asked for a complete critique and then for all findings to be correcte
 - Next: owner checks the live site; then continue with the agreed order (AI reading of further countries,
   step 5 decisions, step 8 Atlas link, step 9 automation).
 
+## 14.11.2026: fewer, clearer filters + quality check (owner: "ja" to all, business + SDG 8 merged)
+- Owner's question: are there too many filters, are they clearly separate, are outlets assigned well?
+  Measured: several filters were the same list (see CHANGELOG); 36 % of the weak topic matches were wrong.
+- **Quality check**: config/quality_sample.csv (200 random outlets, every topic judged ok / wrong by Claude
+  from the stored evidence, not by opening each website) + pipeline/validate/quality.py -> reports/quality.md
+  at every run. Honest limit: the rules were tuned on this same list, so the real error rate is somewhat
+  higher than the report says; draw a second, fresh list to confirm (not done yet).
+- Rules: rules.yaml `ignore_sections`, `ignore_sections_in_own_name`, `website_texts` (ignore_hosts, taken_over),
+  `not_media.archive_hosts` / `description_words`; categories.yaml `hide_on`, `merged_into`,
+  checkbox `weak_topic_matches`; topic_text.py (2 different words for "Reports on it").
+- Known misses (right topics the rules do not find): specialist outlets in other languages, e.g.
+  Landbrugsavisen (Danish farming paper) and Océans connectés only get "Reports on it".
+- **OWNER'S PRIORITY (14.11.2026): "das Wichtigste ist, dass es sich selbst erhält und regelmäßig von alleine
+  kostenlos und open source aktualisiert".**
+
+## 14.11.2026 (evening): step 9 automation BUILT (owner: "alles ja"), first real run still to come
+- `.github/workflows/update.yml` "Automatic update": cron on the 3rd of every month; full update in odd months
+  (sources -> Wikidata -> texts/ECOSOC/Global Compact short try -> website check in 2 parts -> build -> safety
+  brake -> commit to main), "still alive" commit in even months (GitHub disables schedules after 60 days
+  without repository activity). Manual start: Actions -> Automatic update -> Run workflow.
+- `pipeline/run.sh` (whole pipeline), `pipeline/automation/website_state.py` (cache/website_fails.json),
+  `pipeline/automation/safety_brake.py` (site/data/stats.json vs last commit), carry-over of vanished outlets
+  in `pipeline/build/site_data.py` (only with PF_SCHEDULED=1; cache/missing.json; card note "ms").
+  Settings: config/rules.yaml `automation`.
+- Decision made while building: "website failed" for hiding = the address no longer exists (DNS / connection
+  refused). HTTP 403 / 429 / time-outs do not count - AFP, All India Radio and many others block robots.
+- Tested locally: run.sh end to end, safety brake, dead-website counter, vanishing outlets over two simulated
+  runs. NOT tested yet (only possible on GitHub after the merge): the workflow itself, the push to main by
+  the workflow (fails if main is protected against direct pushes), Cloudflare publishing after a bot commit,
+  how long the website check takes on GitHub. -> After the merge: start it once by hand and watch it.
+- Not automatic by nature: AI reading (cache/ai_classification.json), hand corrections (overrides.csv),
+  the 200-outlet check (config/quality_sample.csv: re-evaluated automatically, but new assignments are only
+  listed as "not checked yet"), ECOSOC / Global Compact when their servers refuse GitHub.
+- Still open from step 9 (CLAUDE.md "Access"): Cloudflare API token, e-mail code login for colleagues,
+  list of allowed e-mails as a file. Not built.
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:

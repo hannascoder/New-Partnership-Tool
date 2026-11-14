@@ -1,0 +1,22 @@
+{
+ "outlets": 70444,
+ "ngos": 18594,
+ "sources": {
+  "abu_members": 134,
+  "asbu_members": 27,
+  "cbu_members": 15,
+  "ebu_members": 137,
+  "efcsn_signatories": 60,
+  "fact_checking_sites": 130,
+  "ifcn_signatories": 174,
+  "iptv_org": 17441,
+  "media_cloud": 27552,
+  "news_agencies": 188,
+  "occrp_network": 60,
+  "radio_browser": 11512,
+  "sdg_media_compact": 327,
+  "state_media": 848,
+  "wikidata": 27776
+ },
+ "built": "2026-11-14 19:01 UTC"
+}

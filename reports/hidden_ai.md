@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-153 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+220 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -8,6 +8,7 @@
 | pf-005148 | Albania Today | ALB | no longer published: Wikipedia: Albania Today 'was' a newspaper |
 | pf-015206 | Demokratia | ALB | no longer published: Wikipedia: published 1925-1939 |
 | pf-003262 | Disney Channel | ARG | no longer published: defunct Brazilian channel (2001-2025) |
+| pf-006590 | Griffith Review | AUS | not a media outlet: Wikidata describes it as "revue scientifique" |
 | pf-002277 | Nick Jr. | AUS | no longer published: Wikidata: children's channel 1998-2025 |
 | pf-001574 | Official PlayStation Magazine | AUS | no longer published: Wikipedia: 'was' a magazine |
 | pf-003254 | The Bulletin | AUS | no longer published: Wikipedia: The Bulletin 'was' an Australian magazine (closed 2008) |
@@ -25,7 +26,10 @@
 | pf-014573 | Associated Whistleblowing Press | BEL | no longer published: Wikipedia: AWP 'was' an agency |
 | pf-000981 | Bessy | BEL | not a media outlet: comics series, not a media outlet |
 | pf-002762 | Blokwatch | BEL | no longer published: Wikipedia: Blokwatch 'was' a news site |
+| pf-003114 | Bulletin de la Société de Linguistique de Paris | BEL | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-008267 | Le Muséon | BEL | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-003784 | Metro | BEL | no longer published: Wikipedia: Metro 'was' a newspaper |
+| pf-022959 | Revue belge de numismatique et de sigillographie | BEL | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-013484 | BTV World | BGD | no longer published: Wikipedia: BTV World 'was' a channel |
 | pf-016693 | Dhaka Prakash | BGD | no longer published: Wikipedia: historic newspaper ('was') |
 | pf-006511 | Gayda | BGR | no longer published: Wikipedia: historic newspaper |
@@ -34,20 +38,39 @@
 | pf-008993 | Rabotnichesko Delo | BGR | no longer published: Wikidata: defunct newspaper |
 | pf-004706 | State Gazette | BGR | not a media outlet: official gazette, not a media outlet |
 | pf-004336 | The Sofia Echo | BGR | no longer published: Wikipedia: The Sofia Echo 'was' a newspaper |
+| pf-013727 | Byelarusky histarychny chasopis | BLR | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-014415 | Bandera Roja | BOL | no longer published: Wikipedia: published 1926-1927 |
 | pf-014416 | Bandera Roja | BOL | no longer published: Wikipedia: historic newspaper (1947) |
 | pf-022520 | Bolivia | BOL | no longer published: Wikipedia: 'was' a newspaper |
 | pf-005781 | Cambio | BOL | no longer published: Wikipedia: 'was' a newspaper |
 | pf-014603 | La Humanidad | BOL | no longer published: Wikipedia: 'was' a newspaper |
 | pf-000175 | G Magazine | BRA | no longer published: published from 1997 until 2013 |
+| pf-017503 | Plural | BRA | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-017169 | Superinteressante | BRA | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-002778 | digest size | BRA | not a media outlet: a magazine paper size (Wikidata error), not a media outlet |
+| pf-015430 | BC Studies | CAN | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-023534 | Canadian Military History | CAN | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-024744 | L'Inconvénient | CAN | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-003732 | Lettres québécoises | CAN | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-021471 | Lurelu | CAN | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-003825 | Mœbius | CAN | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-021470 | Nouveaux Cahiers du socialisme | CAN | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-000147 | .ch | CHE | no longer published: Wikipedia: '.ch' 'was' a newspaper; the website now sells phones |
 | pf-003555 | Cosmoglotta | CHE | no longer published: Wikipedia text is about the language; historic magazine |
+| pf-013810 | Ingeniare: revista chilena de ingenieria | CHL | not a media outlet: Wikidata describes it as "revue scientifique" |
 | pf-005776 | Cadena Súper | COL | no longer published: Wikipedia: Cadena Super 'was' a radio network |
 | pf-012320 | El Mundo | COL | no longer published: Wikipedia: El Mundo 'was' a newspaper |
+| pf-016210 | Ingeniería y Competitividad | COL | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-006320 | W Radio | COL | no longer published: Wikipedia: W Radio Colombia 'was' a radio network |
+| pf-012844 | Staletá Praha | CZE | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-004108 | Světozor | CZE | no longer published: Wikipedia: published in the 19th and 20th century |
 | pf-000239 | The Prague Post | CZE | no longer published: Wikipedia: The Prague Post 'was' a newspaper |
+| pf-012372 | Časopis Matice moravské | CZE | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-000950 | Bankhistorisches Archiv | DEU | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-021629 | Istanbuler Mitteilungen | DEU | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-006995 | Kakteenkunde | DEU | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-002270 | Laborjournal | DEU | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-021627 | SportZeiten | DEU | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-003867 | Land og Folk | DNK | no longer published: Wikipedia: 'was' a newspaper |
 | pf-070576 | Algerian Television Broadcasting | DZA | no longer published: Wikipedia: existed 1962-1986 ('était') |
 | pf-025935 | El Ouma | DZA | no longer published: Wikipedia: founded 1930 (historic) |
@@ -59,12 +82,24 @@
 | pf-021058 | La Mujer | ECU | no longer published: Wikipedia: historic magazine (1905) |
 | pf-006443 | PP El Verdadero | ECU | no longer published: Wikipedia: 'fue' (was) a newspaper |
 | pf-023655 | XOX | ECU | no longer published: Wikipedia: published 1998-2000 |
+| pf-005199 | Anales de Física | ESP | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-002425 | Boletín Oficial del Estado | ESP | not a media outlet: official state gazette (laws and notices), not a media outlet |
 | pf-001694 | El Punt | ESP | no longer published: no longer published under this name (now El Punt Avui) |
 | pf-002676 | GP Racing | ESP | no longer published: published until December 2024, merged with a sister magazine |
+| pf-003571 | L'Avenç | ESP | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-016919 | Pyrenae | ESP | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-012155 | Historisk Tidskrift för Finland | FIN | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-015305 | Kerberos | FIN | no longer published: Wikipedia: published 1917-1921 |
 | pf-002852 | Yle Fem | FIN | no longer published: Wikipedia: Yle Fem 'was' a TV channel |
+| pf-003476 | Hermès | FRA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-014038 | Les Annales de la recherche urbaine | FRA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-003839 | Nice historique | FRA | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-016015 | Sociétés & Représentations | FRA | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-006738 | Hermetic Journal | GBR | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-000555 | New Scientist | GBR | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-015149 | Polin: Studies in Polish Jewry | GBR | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-001070 | The Illustrated London News | GBR | no longer published: Wikidata: former magazine (1842-2003) |
+| pf-016027 | Year book - Leo Baeck Institute | GBR | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-010352 | Viasat 1 | GHA | no longer published: Wikipedia: Viasat 1 'was' a channel (replaced) |
 | pf-002878 | Athens News Agency | GRC | no longer published: Wikipedia: 'was' one of two news agencies (merged into AMNA) |
 | pf-004254 | Avriani | GRC | no longer published: Wikipedia: closed down in October 2012 |
@@ -73,6 +108,7 @@
 | pf-000723 | Budapesti Hírlap | HUN | no longer published: Wikipedia: published 1881-1938 |
 | pf-001272 | Echo TV | HUN | no longer published: Wikipedia: Echo TV 'was' a channel |
 | pf-006373 | Familia | HUN | no longer published: Wikipedia: historic magazine (1865-1880 in Budapest) |
+| pf-000303 | Magyar Tudomány | HUN | not a media outlet: Wikidata describes it as "revue scientifique" |
 | pf-001511 | Music FM | HUN | no longer published: Wikipedia: Music FM 'was' a radio station (ceased) |
 | pf-000746 | Nyugat | HUN | no longer published: Wikipedia: historic journal (first half of the 20th century) |
 | pf-001127 | Népszava | HUN | no longer published: Wikipedia: Népszava 'was' a newspaper (ended 2026) |
@@ -88,6 +124,8 @@
 | pf-006614 | Hagada Hasmalit | ISR | no longer published: Wikipedia: 'was' a website |
 | pf-003105 | Israel Post | ISR | no longer published: Wikipedia: existed 2007-2016 |
 | pf-002399 | Vesti | ISR | no longer published: Wikipedia: Vesty 'was' a newspaper (now website) |
+| pf-013824 | Interni | ITA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-024503 | Quaderni fiorentini per la storia del pensiero giuridico moderno | ITA | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-001346 | Kono Light Novel ga Sugoi! | JPN | not a media outlet: annual guide book on light novels, not a media outlet |
 | pf-005240 | Arrouiah | KWT | no longer published: Wikidata: published 2008-201x |
 | pf-026819 | Homat Alwatan | KWT | no longer published: Wikipedia: 'was' a magazine |
@@ -95,6 +133,8 @@
 | pf-000307 | Gay Krant | NLD | no longer published: Wikipedia: Gay Krant 'was' a magazine |
 | pf-001908 | Mot Dag | NOR | not a media outlet: political group of the 1920s-30s, not a media outlet |
 | pf-008730 | Nylænde | NOR | no longer published: Wikipedia: Nylænde 'was' a magazine (historic) |
+| pf-012820 | Vagant | NOR | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-016062 | Trilepidea | NZL | not a media outlet: Wikidata describes it as "revue scientifique" |
 | pf-009649 | The Cricketer Magazine | PAK | no longer published: Wikidata: defunct magazine |
 | pf-016372 | VSH News | PAK | no longer published: Wikipedia: VSH News 'was' a network |
 | pf-025349 | Ciberayllu | PER | no longer published: Wikipedia: Ciberayllu 'was' a publication |
@@ -105,16 +145,25 @@
 | pf-008449 | Mercurio Peruano | PER | no longer published: Wikipedia: published 1790-1795 |
 | pf-016405 | Radio A La Radio del Amor | PER | no longer published: Wikipedia: Radio A 'was' a radio station |
 | pf-000928 | CKM | POL | no longer published: Wikipedia: CKM 'was' a magazine |
+| pf-014166 | Folia Morphologica | POL | not a media outlet: Wikidata describes it as "scientific journal" |
+| pf-014958 | Holocaust Studies and Materials | POL | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-012580 | Odrodzenie i Reformacja w Polsce | POL | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-016813 | Quaestiones Medii Aevi Novae | POL | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-003858 | O Século | PRT | no longer published: Wikidata: former newspaper (1880-1977) |
 | pf-001427 | Contimporanul | ROU | no longer published: Wikipedia: 'was' a Romanian magazine (historic) |
+| pf-023146 | Christianity in the Middle East | RUS | not a media outlet: Wikidata describes it as "scientific journal" |
+| pf-015956 | Dialog so vremenem | RUS | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-016924 | Dzen | RUS | not a media outlet: recommendation platform (VK), not a media outlet |
 | pf-000170 | Novaya Gazeta | RUS | no longer published: Wikipedia: 'was' an independent Russian newspaper |
 | pf-001845 | Ogoniok | RUS | no longer published: Wikipedia: circulated from 1899 to 2020 |
+| pf-004668 | Oriens | RUS | not a media outlet: Wikidata describes it as "научный журнал" |
+| pf-015580 | Pravoslavnyj palestinskij sbornik | RUS | not a media outlet: Wikidata describes it as "научный журнал" |
 | pf-001970 | Russkiy Mir Foundation | RUS | not a media outlet: government-sponsored foundation promoting the Russian language, not a media outlet |
 | pf-000219 | 24 sata | SRB | no longer published: Wikipedia: 24 sata 'was' a newspaper |
 | pf-001902 | International Radio of Serbia | SRB | no longer published: Wikipedia: 'was' the international broadcaster |
 | pf-003913 | Press | SRB | no longer published: Wikipedia: published 2005-2012 |
 | pf-013927 | TV Palma Plus | SRB | no longer published: Wikipedia: 'was' a TV station |
+| pf-014894 | Vojenská história | SVK | not a media outlet: Wikidata describes it as "academic journal" |
 | pf-001481 | Dagny | SWE | no longer published: Wikipedia: published 1886-1913 |
 | pf-012760 | Folkbladet | SWE | no longer published: Wikipedia: Folkbladet 'was' a newspaper |
 | pf-003874 | SVT HD | SWE | no longer published: Wikipedia: SVT HD 'was' a channel |
@@ -145,15 +194,33 @@
 | pf-024285 | Servicio Internacional SODRE | URY | no longer published: Wikipedia: 'fue' (was) an international service |
 | pf-070575 | Televisión Nacional Uruguay 8 | URY | no longer published: Wikipedia: Canal 8 'fue' (was) a channel |
 | pf-014328 | The Britannia and Montevideo Reporter | URY | no longer published: Wikidata: former newspaper |
+| pf-005190 | American Literary History | USA | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-005191 | American Medical News | USA | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-014292 | Chess.com | USA | not a media outlet: online chess platform, not a media outlet |
+| pf-006021 | Current History | USA | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-006151 | Diacritics | USA | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-003103 | Dissent | USA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-006544 | Glimmer Train | USA | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-000017 | Google News | USA | not a media outlet: news aggregator of Google, does not publish its own content |
+| pf-008507 | Montana: The Magazine of Western History | USA | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-028035 | Multi Academic Journal | USA | not a media outlet: Wikidata describes it as "peer-reviewed journal" |
+| pf-002376 | Natural History | USA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-008619 | New Times | USA | not a media outlet: Wikidata describes it as "revista científica" |
 | pf-000103 | Penthouse | USA | not a media outlet: erotic magazine (adult content is excluded, KATEGORIEN 0.4) |
 | pf-000001 | Reddit | USA | not a media outlet: social media platform and forum, not a media outlet |
+| pf-016614 | Skeptic | USA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-009290 | Social Anarchism: A Journal of Theory and Practice | USA | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-004112 | Telos | USA | not a media outlet: Wikidata describes it as "academic journal" |
+| pf-000248 | The Scientist | USA | not a media outlet: Wikidata describes it as "revue scientifique" |
+| pf-010238 | TriQuarterly | USA | not a media outlet: Wikidata describes it as "revista científica" |
+| pf-010362 | Virginia Quarterly Review | USA | not a media outlet: Wikidata describes it as "revue scientifique" |
 | pf-016215 | الباحث الدلالي | USA | not a media outlet: search engine for scientific papers, not a media outlet |
 | pf-006157 | Diario Panorama | VEN | no longer published: Wikipedia: Panorama 'was' a newspaper |
 | pf-006634 | El Diario de Lara | VEN | no longer published: Wikipedia: 'fue' (was) a newspaper |
 | pf-012231 | An Nam Tạp Chí | VNM | no longer published: historic magazine (no data) |
 | pf-012240 | Nông cổ mín đàm | VNM | no longer published: Wikipedia: published 1901-1924 |
+| pf-026772 | Civilization University journal | YEM | not a media outlet: Wikidata describes it as "scientific journal" |
+| pf-025824 | Queen Arwa University journal | YEM | not a media outlet: Wikidata describes it as "scientific journal" |
 | pf-003258 | Die Afrikaanse Patriot | ZAF | no longer published: Wikipedia: historic newspaper (first issue 1876) |
 | pf-002656 | South African Press Association | ZAF | no longer published: Wikipedia: closed on 31 March 2015 |
 | pf-021991 | e.tv News | ZAF | no longer published: Wikipedia: e.tv News & Sport 'was' a channel |

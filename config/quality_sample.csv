@@ -1,0 +1,748 @@
+outlet_id,topic,verdict,strength_when_checked,evidence_when_checked,name
+pf-004917,_entry,not_media,,"academic journal, not a news outlet",Цитология и генетика (журнал)
+pf-004917,science,ok,1,"description mentions ""genetics"", ""scientific""",
+pf-017430,_entry,ok,,,The Leader
+pf-041843,_entry,ok,,,Harvest USA
+pf-041843,religion,ok,1,"iptv-org category ""religious""",
+pf-041843,agriculture,wrong,1,"name mentions ""harvest""",
+pf-045115,_entry,ok,,,Niger 24
+pf-069114,_entry,ok,,,G1 Globo Mato Grosso do Sul
+pf-069114,health,ok,2,website section /saude/,
+pf-069114,education,ok,2,"website section ""Educação Financeira""",
+pf-069114,water_sanitation,ok,3,"website headlines: ""abastecimento de agua""",
+pf-069114,consumption,ok,2,"website section ""Sustentabilidade​""",
+pf-069114,climate,ok,2,website section /meio-ambiente/,
+pf-069114,work_economy,ok,2,"website section ""pequenas empresas""",
+pf-069114,industry_innovation,ok,2,"website section ""Inovação""",
+pf-069114,inequalities,ok,2,"website section ""Diversidade""",
+pf-069114,fact_checking,ok,2,"website section ""Fato ou Fake""",
+pf-069114,science,ok,2,website section /ciencia/,
+pf-069114,business_economy,ok,2,website section /economia/agronegocios/,
+pf-069114,culture,ok,2,"website section ""Cinema""",
+pf-069114,technology,ok,2,website section /tecnologia/games/,
+pf-069114,agriculture,ok,2,"website section ""+ agro""",
+pf-069114,indigenous,ok,3,"website headlines: ""indigenas""",
+pf-069114,elections,ok,2,"website section ""eleições 2026""",
+pf-035688,_entry,ok,,,Алания FM
+pf-037362,_entry,ok,,,Al Masirah Mubacher
+pf-058243,_entry,ok,,,http://elinformadordechiapas.info/
+pf-009521,_entry,ok,,,The Alcalde
+pf-036649,_entry,ok,,,鄂尔多斯蒙语综合广播
+pf-001927,_entry,ok,,,Lithuanian National Radio and Television
+pf-001927,education,ok,2,"website section ""Švietimas"" (another language, via Wikidata)",
+pf-001927,gender_equality,wrong,3,"website headlines: ""wnba""",
+pf-001927,fact_checking,ok,1,Wikidata: fact-checking organisation,
+pf-001927,business_economy,ok,2,"website section ""Verslas"" (another language, via Wikidata)",
+pf-001927,elections,ok,3,"Wikipedia: ""parliament""",
+pf-001927,sports,ok,2,"website section ""Eurovision Sport""",
+pf-031450,_entry,ok,,,KWCR Wildcat Radio
+pf-031450,education,ok,1,"Radio Browser tag ""college radio""",
+pf-031450,culture,ok,1,"description mentions ""culture"", ""music""",
+pf-059479,_entry,ok,,,ibj.com
+pf-059479,health,ok,2,"website section ""Health Care""",
+pf-059479,education,ok,2,"website section ""Education & Workforce Development""",
+pf-059479,climate,ok,2,"website section ""Energy & Environment""",
+pf-059479,work_economy,ok,2,"website section ""Government & Economic Development""",
+pf-059479,industry_innovation,ok,2,"website section ""Manufacturing""",
+pf-059479,inequalities,ok,2,"website section ""Diversity""",
+pf-059479,peace_justice,ok,2,"website section ""Law""",
+pf-059479,business_economy,ok,1,"description mentions ""business"", ""financial""",
+pf-059479,culture,ok,3,"description mentions ""arts""",
+pf-059479,technology,ok,2,"website section ""Tech""",
+pf-059479,elections,ok,3,"website headlines: ""election"", ""legislature""",
+pf-059479,sports,ok,2,"website section ""Sports Business""",
+pf-063519,_entry,ok,,,confirmado.com.ve
+pf-063519,health,ok,2,website section /category/salud/,
+pf-063519,gender_equality,wrong,3,"website headlines: ""violacion""",
+pf-063519,work_economy,ok,3,"website headlines: ""huelga"", ""pequenas empresas""",
+pf-063519,business_economy,ok,1,"website About page: ""bolsa"", ""empresas""",
+pf-063519,culture,ok,3,"website headlines: ""music""",
+pf-063519,religion,wrong,3,"website headlines: ""isla""",
+pf-063519,human_rights,ok,3,"website headlines: ""justicia social""",
+pf-063519,technology,ok,2,"website section ""Tecnología""",
+pf-063519,disasters,ok,3,"website headlines: ""terremoto"", ""tsunami""",
+pf-063519,sports,ok,2,"website section ""Deportes""",
+pf-017108,_entry,ok,,,Nasim Online
+pf-030716,_entry,not_media,,stream of an excluded outlet (Fox News) listed again under another name,fox news
+pf-056639,_entry,ok,,,ftonindependent.substack.com
+pf-011234,_entry,ok,,,WYMT-TV
+pf-011234,health,wrong,2,"website section ""March 2012 Tornado Outbreak""",
+pf-011234,education,ok,2,"website section ""Scholarships""",
+pf-011234,humanitarian,wrong,2,"website section ""Flood Relief""",
+pf-011234,disasters,ok,2,"website section ""Flood Relief""",
+pf-011234,elections,ok,2,"website section ""Election Results""",
+pf-011234,sports,ok,2,"website section ""Sports""",
+pf-002073,_entry,not_media,,"no real name (""News""), no website",News
+pf-063794,_entry,ok,,,韓国情報の宝庫 韓統連機関紙 民族時報 メニュー
+pf-029898,_entry,ok,,,Cerinza FM 100.6
+pf-062719,_entry,ok,,,Agora TO
+pf-062719,education,ok,1,"website About page: ""educacao"", ""ensino medio""",
+pf-062719,diaspora,ok,2,"website section ""Comunidades""",
+pf-047577,_entry,ok,,,South Haven Government Access
+pf-047577,elections,ok,1,"iptv-org category ""legislative""",
+pf-050931,_entry,ok,,,Svedok
+pf-058633,_entry,ok,,,obrasilianista.com.br
+pf-058633,industry_innovation,ok,3,"website About page: ""industria""",
+pf-058633,peace_justice,ok,2,"website section ""Justíca""",
+pf-058633,fact_checking,ok,3,"website About page: ""desinformacao""",
+pf-058633,business_economy,ok,2,"website section ""Economia""",
+pf-058633,elections,ok,1,"website About page: ""congresso"", ""eleicoes"", ""eleitoral""",
+pf-040407,_entry,ok,,,Duma TV
+pf-040407,technology,wrong,3,"website About page: ""технологии""",
+pf-040407,elections,ok,1,"iptv-org category ""legislative""",
+pf-026759,_entry,ok,,,Daily intel newspaper
+pf-028049,_entry,ok,,,Remind
+pf-028049,culture,ok,2,"website section ""Music""",
+pf-053734,_entry,ok,,,Sovetskaia Chuvashiya
+pf-053734,health,ok,2,"website section ""Медицина""",
+pf-053734,education,ok,2,"website section ""Образование""",
+pf-053734,climate,ok,2,"website section ""Экология""",
+pf-053734,work_economy,ok,2,"website section ""Занятость""",
+pf-053734,industry_innovation,ok,2,"website section ""Транспорт""",
+pf-053734,peace_justice,ok,2,"website section ""Суд""",
+pf-053734,science,ok,2,"website section ""Наука""",
+pf-053734,business_economy,ok,2,"website section ""Экономика""",
+pf-053734,culture,ok,2,"website section ""Культура""",
+pf-053734,religion,ok,2,"website section ""Религия""",
+pf-053734,agriculture,ok,2,"website section ""Сельское хозяйство""",
+pf-053734,elections,ok,2,"website section ""Выборы""",
+pf-053734,sports,ok,2,"website section ""Спорт""",
+pf-019428,_entry,ok,,,Winthrop Transcript
+pf-019428,elections,ok,3,"website headlines: ""ballot"", ""election"", ""voters""",
+pf-019428,sports,ok,2,"website section ""Sports""",
+pf-015951,_entry,ok,,,Macclesfield Express
+pf-015951,health,ok,2,"website section ""Health""",
+pf-015951,education,ok,2,"website section ""Education""",
+pf-015951,work_economy,ok,3,"website headlines: ""small businesses""",
+pf-015951,science,wrong,3,"website headlines: ""research""",
+pf-015951,business_economy,ok,2,"website section ""Business""",
+pf-015951,culture,ok,2,"website section ""Music & Nightlife""",
+pf-015951,agriculture,wrong,3,"website headlines: ""farm""",
+pf-015951,children_youth,ok,2,"website section ""Family & Kids""",
+pf-015951,sports,ok,2,"website section ""Sport""",
+pf-017284,_entry,ok,,,Het Vlaamsche land.
+pf-033034,_entry,ok,,,Radio Génération
+pf-033034,hunger_food,ok,2,"website section ""Agro écologie"" (another language, via Wikidata)",
+pf-033034,gender_equality,ok,2,"website section ""DD au Féminin""",
+pf-033034,water_sanitation,ok,2,"website section ""Eau et Assainissement""",
+pf-033034,consumption,ok,2,"website section ""Touche RSE""",
+pf-033034,climate,ok,2,"website section ""Agro écologie""",
+pf-033034,life_on_land,ok,2,"website section ""Reforestation""",
+pf-033034,energy,ok,2,"website section ""Energie Renouvelable""",
+pf-033034,industry_innovation,ok,2,"website section ""Innovation""",
+pf-033034,technology,ok,2,"website section ""Innovation""",
+pf-033034,agriculture,ok,2,"website section ""Agro écologie""",
+pf-010936,_entry,ok,,,WOSH
+pf-010936,elections,ok,1,"Radio Browser tag ""political talk""",
+pf-050992,_entry,ok,,,Carletonville Fochville Herald
+pf-050992,health,wrong,3,"website headlines: ""diabetes""",
+pf-050992,education,wrong,3,"website headlines: ""literacy""",
+pf-050992,climate,wrong,3,"website headlines: ""heatwave""",
+pf-050992,business_economy,ok,2,"website section ""Business""",
+pf-050992,culture,ok,3,"website About page: ""culture""",
+pf-050992,humanitarian,wrong,3,"website headlines: ""relief""",
+pf-050992,migration,ok,3,"website headlines: ""asylum"", ""immigration""",
+pf-050992,children_youth,ok,3,"website headlines: ""youth""",
+pf-050992,elections,ok,2,"website section ""Local Elections News""",
+pf-050992,sports,ok,2,"website section ""Sport""",
+pf-069649,_entry,ok,,,Cortland Standard
+pf-069649,hunger_food,wrong,3,"website headlines: ""hunger""",
+pf-069649,health,ok,2,"website section ""Health""",
+pf-069649,education,ok,2,"website section ""Education""",
+pf-069649,climate,ok,2,"website section ""Ag/Environment""",
+pf-069649,science,wrong,3,"website headlines: ""research""",
+pf-069649,business_economy,ok,2,"website section ""Business""",
+pf-069649,culture,ok,2,"website section ""Entertainment""",
+pf-069649,religion,ok,2,"website section ""Religion""",
+pf-069649,children_youth,ok,3,"website headlines: ""youth""",
+pf-069649,elections,ok,2,"website section ""Elections""",
+pf-069649,sports,ok,2,"website section ""Sports""",
+pf-038867,_entry,ok,,,Canal 9 La Rioja
+pf-038867,work_economy,ok,3,"website headlines: ""pymes""",
+pf-038867,business_economy,ok,2,"website section ""Economía""",
+pf-038867,culture,ok,2,"website section ""Cultura""",
+pf-038867,human_rights,ok,3,"website headlines: ""derechos humanos""",
+pf-038867,disability,ok,3,"website headlines: ""discapacidad"", ""personas con discapacidad""",
+pf-038867,elections,ok,3,"website headlines: ""elecciones"", ""electoral""",
+pf-038867,sports,ok,2,"website section ""Deportes""",
+pf-042997,_entry,ok,,,KKD News
+pf-015299,_entry,ok,,,Verkkouutiset
+pf-066171,_entry,ok,,,ctmirror.org
+pf-066171,health,ok,2,"website section ""Health""",
+pf-066171,education,ok,2,"website section ""Education""",
+pf-066171,climate,ok,2,"website section ""Environment""",
+pf-066171,cities,ok,2,"website section ""Housing""",
+pf-066171,peace_justice,ok,2,"website section ""Investigations""",
+pf-066171,fact_checking,ok,3,"website About page: ""fact checking""",
+pf-066171,business_economy,ok,2,"website section ""Money""",
+pf-066171,culture,ok,2,"website section ""Arts & Culture""",
+pf-066171,migration,ok,2,"website section ""Immigration""",
+pf-066171,children_youth,ok,3,"website About page: ""youth""",
+pf-066171,elections,ok,2,"website section ""2026 Elections""",
+pf-025951,_entry,ok,,,Océans connectés
+pf-025951,education,ok,2,"website section ""EDUCATION""",
+pf-025951,climate,ok,1,"website About page: ""climate change"", ""global warming""",
+pf-025951,life_below_water,ok,3,"words in another language (via Wikidata): ""oceanographie"", ""oceanography""",
+pf-025951,life_on_land,ok,2,"website section ""BIODIVERSITY""",
+pf-025951,science,ok,1,"description mentions ""sciences""",
+pf-025951,culture,ok,2,"website section ""CULTURE""",
+pf-025951,technology,ok,2,"website section ""TECHNOLOGIES""",
+pf-063540,_entry,ok,,,charlottefive.com
+pf-065952,_entry,ok,,,Costa Noticias
+pf-065952,business_economy,ok,3,"website headlines: ""empresas""",
+pf-068330,_entry,ok,,,somalilandstandard.com
+pf-068330,gender_equality,ok,3,"website headlines: ""rape"", ""women s representation""",
+pf-068330,business_economy,ok,2,"website section ""Business""",
+pf-068330,conflict_security,ok,3,"website About page: ""terrorism""",
+pf-068330,children_youth,ok,3,"website headlines: ""children""",
+pf-068330,elections,ok,3,"website headlines: ""election"", ""elections"", ""parliament""",
+pf-014037,_entry,ok,,,Le 1
+pf-014037,science,wrong,3,"Wikipedia: ""chercheurs""",
+pf-027890,_entry,ok,,,The Northlander
+pf-035388,_entry,ok,,,"WSOV 101.7 - Millheim, Pennsylvania - ""The Sound Of The Vall"
+pf-020734,_entry,ok,,,Fort Worth Business Press
+pf-020734,health,ok,2,"website section ""Health Care""",
+pf-020734,education,ok,2,"website section ""Education""",
+pf-020734,energy,ok,2,"website section ""Energy""",
+pf-020734,work_economy,ok,3,"website About page: ""entrepreneurs""",
+pf-020734,industry_innovation,ok,2,"website section ""Construction""",
+pf-020734,business_economy,ok,1,"name mentions ""business""",
+pf-020734,culture,ok,2,"website section ""Culture""",
+pf-020734,religion,wrong,3,"website headlines: ""catholic"", ""christian""",
+pf-020734,technology,ok,2,"website section ""Technology""",
+pf-020734,children_youth,wrong,3,"website headlines: ""kids""",
+pf-020734,elections,ok,2,"website section ""Government""",
+pf-020734,sports,ok,2,"website section ""Entertainment & Sports""",
+pf-059006,_entry,ok,,,lnr-dz
+pf-059006,culture,ok,2,"website section ""Culture""",
+pf-059006,sports,ok,2,"website section ""Sport""",
+pf-056221,_entry,ok,,,每日甘肅網
+pf-009239,_entry,ok,,,TV Justiça
+pf-049933,_entry,ok,,,VSCTV
+pf-013392,_entry,ok,,,Pendrek
+pf-042813,_entry,ok,,,Karavan TV
+pf-067595,_entry,ok,,,diariolalibertad.com
+pf-067595,climate,ok,3,"website headlines: ""ambiental""",
+pf-067595,partnerships,wrong,3,"website headlines: ""banco mundial""",
+pf-067595,business_economy,ok,3,"website headlines: ""bancos"", ""economico"", ""mercados""",
+pf-067595,culture,ok,3,"website headlines: ""cine"", ""musica""",
+pf-067595,elections,ok,3,"website headlines: ""elecciones"", ""senado""",
+pf-067595,sports,ok,3,"website headlines: ""futbol"", ""mundial""",
+pf-025249,_entry,ok,,,Odisha Bytes
+pf-025249,health,ok,2,"website section ""Health""",
+pf-025249,industry_innovation,ok,3,"website headlines: ""infrastructure""",
+pf-025249,cities,ok,2,"website section ""City""",
+pf-025249,business_economy,ok,2,"website section ""Business""",
+pf-025249,culture,ok,2,"website section ""Entertainment""",
+pf-025249,religion,wrong,3,"website headlines: ""faith""",
+pf-025249,humanitarian,wrong,3,"website headlines: ""relief""",
+pf-025249,migration,wrong,3,"website headlines: ""undocumented""",
+pf-025249,conflict_security,ok,3,"website headlines: ""terrorist""",
+pf-025249,technology,ok,2,"website section ""Tech""",
+pf-025249,disasters,ok,3,"website headlines: ""cyclone""",
+pf-025249,elections,ok,2,"website section ""Government""",
+pf-025249,sports,ok,2,"website section ""Sport""",
+pf-062112,_entry,ok,,,Pilbara Echo
+pf-012879,_entry,ok,,,Жизнь Луганска
+pf-033291,_entry,ok,,,Radio Marzahn
+pf-050075,_entry,ok,,,Wenshan News Channel
+pf-066951,_entry,ok,,,colliemail.com.au
+pf-066951,business_economy,ok,3,"website headlines: ""business"", ""financial""",
+pf-066951,culture,ok,2,"website section ""Entertainment""",
+pf-066951,human_rights,wrong,3,"website headlines: ""hate speech""",
+pf-066951,children_youth,ok,3,"website headlines: ""children"", ""kids""",
+pf-066951,sports,ok,2,"website section ""Sport""",
+pf-029835,_entry,ok,,,"CBC North - Iqaluit, NU"
+pf-029835,indigenous,ok,1,"Radio Browser tag ""indigenous""",
+pf-049448,_entry,ok,,,TV Taroba Londrina
+pf-066457,_entry,ok,,,rutartan.com
+pf-066457,peace_justice,wrong,3,"website headlines: ""accountability""",
+pf-066457,culture,ok,2,"website section ""Entertainment""",
+pf-066457,human_rights,wrong,3,"website headlines: ""activists""",
+pf-066457,children_youth,ok,3,"website headlines: ""students""",
+pf-066457,sports,ok,2,"website section ""Sports""",
+pf-049072,_entry,ok,,,TVC Popular
+pf-049072,climate,ok,3,"website About page: ""medio ambiente""",
+pf-049072,science,wrong,3,"website About page: ""fisica""",
+pf-049072,culture,ok,2,"website section ""Música""",
+pf-049072,religion,ok,2,"website section ""Religion""",
+pf-049072,sports,ok,2,"website section ""Deportes""",
+pf-010332,_entry,ok,,,Vallejo Times Herald
+pf-010332,health,ok,2,"website section ""Health""",
+pf-010332,education,ok,2,"website section ""Education""",
+pf-010332,water_sanitation,wrong,3,"website About page: ""wetlands""",
+pf-010332,industry_innovation,wrong,3,"website About page: ""industrial development""",
+pf-010332,cities,ok,2,"website section ""Housing""",
+pf-010332,peace_justice,ok,2,"website section ""Courts""",
+pf-010332,business_economy,ok,2,"website section ""Business""",
+pf-010332,culture,ok,2,"website section ""Entertainment""",
+pf-010332,religion,wrong,3,"website headlines: ""christian""",
+pf-010332,humanitarian,wrong,3,"website headlines: ""relief"", ""shelter""",
+pf-010332,human_rights,ok,3,"website headlines: ""human rights""",
+pf-010332,agriculture,wrong,3,"website About page: ""agriculture""",
+pf-010332,elections,ok,2,"website section ""Election""",
+pf-010332,sports,ok,2,"website section ""Sports""",
+pf-047188,_entry,not_media,,"entertainment stream on Pluto TV, not a news outlet",Sensing Murder
+pf-047188,science,wrong,2,"website section ""History + Science""",
+pf-047188,culture,wrong,2,"website section ""Entertainment""",
+pf-047188,conflict_security,wrong,3,"website headlines: ""military"", ""weapons""",
+pf-047188,children_youth,wrong,2,"website section ""Kids""",
+pf-047188,sports,wrong,2,"website section ""Sports""",
+pf-005634,_entry,ok,,,CHSR-FM
+pf-005634,education,ok,1,"Radio Browser tag ""campus radio""",
+pf-005634,climate,ok,2,"website section ""climate""",
+pf-005634,culture,ok,1,"description mentions ""arts"", ""culture"", ""music""",
+pf-005634,children_youth,ok,3,"Wikipedia: ""students""",
+pf-064149,_entry,ok,,,radiolavoz.com.ar
+pf-064149,health,ok,2,"website section ""SALUD""",
+pf-064149,education,ok,3,"website headlines: ""docentes"", ""educacion""",
+pf-064149,business_economy,ok,2,"website section ""ECONOMIA""",
+pf-064149,technology,ok,2,"website section ""TECNOLOGIA""",
+pf-064149,children_youth,ok,3,"website headlines: ""jovenes""",
+pf-064149,elections,ok,3,"website headlines: ""senado""",
+pf-064149,sports,ok,2,"website section ""DEPORTES""",
+pf-015907,_entry,ok,,,"Воля (газета, Теребовля)"
+pf-013318,_entry,ok,,,Laikas (Argentina)
+pf-008378,_entry,ok,,,Macworld Australia
+pf-025677,_entry,ok,,,Jennifer Mills News
+pf-039202,_entry,ok,,,CBS News Minnesota
+pf-039202,science,wrong,2,"website section ""History + Science""",
+pf-039202,culture,wrong,2,"website section ""Entertainment""",
+pf-039202,children_youth,wrong,2,"website section ""Kids""",
+pf-039202,sports,wrong,2,"website section ""Sports""",
+pf-012968,_entry,ok,,,رحاب المعرفة
+pf-049862,_entry,ok,,,Vision TV
+pf-049862,education,ok,2,"website section ""Təhsil"" (another language, via Wikidata)",
+pf-049862,business_economy,ok,2,"website section ""İqtisadiyyat"" (another language, via Wikidata)",
+pf-049862,culture,ok,2,"website section ""Mədəniyyət"" (another language, via Wikidata)",
+pf-049862,technology,ok,2,"website section ""Texnologiya"" (another language, via Wikidata)",
+pf-049862,elections,ok,2,"website section ""Seçim"" (another language, via Wikidata)",
+pf-023669,_entry,ok,,,Daily Trust
+pf-023669,poverty,ok,3,"website headlines: ""living in poverty"", ""poverty""",
+pf-023669,education,ok,2,"website section ""Education""",
+pf-023669,gender_equality,ok,2,"website section ""Women In Business""",
+pf-023669,climate,ok,2,"website section ""Environment""",
+pf-023669,work_economy,ok,2,"website section ""Entrepreneurship""",
+pf-023669,peace_justice,ok,2,"website section ""Law""",
+pf-023669,fact_checking,ok,2,"website section ""Factcheck""",
+pf-023669,business_economy,ok,2,"website section ""Women In Business""",
+pf-023669,culture,ok,2,"website section ""Art and Ideas""",
+pf-023669,religion,ok,2,"website section ""Islamic Forum""",
+pf-023669,humanitarian,ok,3,"website headlines: ""idps"", ""relief""",
+pf-023669,agriculture,ok,2,"website section ""Agriculture""",
+pf-023669,sports,ok,2,"website section ""Sports""",
+pf-052658,_entry,ok,,,radioquintanaroo.com
+pf-068795,_entry,ok,,,yourgv.com
+pf-068795,health,wrong,2,"website section ""Breast Cancer awareness""",
+pf-068795,education,ok,2,"website section ""Education""",
+pf-068795,business_economy,ok,2,"website section ""Business""",
+pf-068795,culture,ok,3,"website About page: ""festivals""",
+pf-068795,religion,ok,2,"website section ""Religion""",
+pf-068795,elections,ok,3,"website headlines: ""polls"", ""voters""",
+pf-068795,sports,ok,2,"website section ""Sports""",
+pf-061569,_entry,ok,,,Mejores Noticias
+pf-010260,_entry,ok,,,Tweed Daily News
+pf-061795,_entry,ok,,,Infor Mate Digital
+pf-061031,_entry,ok,,,https://www.thegreenvillestandard.com/
+pf-061031,elections,ok,3,"website headlines: ""election""",
+pf-061031,sports,ok,2,"website section ""Sports""",
+pf-031461,_entry,ok,,,"KXLU 88.9FM Los Angeles, CA"
+pf-031461,education,ok,1,"Radio Browser tag ""college radio""",
+pf-031461,culture,ok,3,"website headlines: ""festival"", ""music""",
+pf-031461,children_youth,wrong,3,"website About page: ""kids""",
+pf-020117,_entry,ok,,,Bedford Journal
+pf-012797,_entry,ok,,,Romsdal Folkeblad
+pf-010907,_entry,ok,,,WNIR
+pf-010907,sports,ok,3,"website headlines: ""football"", ""sports""",
+pf-026542,_entry,ok,,,Canal 13 TV Visión
+pf-056268,_entry,ok,,,Lawrence County Record
+pf-056268,business_economy,ok,3,"website headlines: ""business"", ""commerce""",
+pf-056268,elections,wrong,2,"website section ""Older polls""",
+pf-056268,sports,ok,2,"website section ""Sports""",
+pf-019014,_entry,ok,,,Hoosier Topics
+pf-061625,_entry,ok,,,Concordia Directo
+pf-061625,health,ok,3,"website headlines: ""vacunacion""",
+pf-061625,older_persons,ok,3,"website headlines: ""jubilados"", ""personas mayores"", ""tercera edad""",
+pf-010847,_entry,ok,,,WLTZ
+pf-010847,inequalities,wrong,3,"website About page: ""african american""",
+pf-010847,culture,ok,3,"website headlines: ""festival""",
+pf-010847,conflict_security,wrong,3,"website headlines: ""military""",
+pf-010847,children_youth,wrong,3,"website headlines: ""kids""",
+pf-010847,disability,wrong,3,"website headlines: ""autism""",
+pf-010847,elections,ok,3,"website headlines: ""election"", ""polls"", ""senate""",
+pf-010847,sports,ok,2,"website section ""Sports""",
+pf-016339,_entry,ok,,,NewsPim
+pf-016339,education,ok,2,"website section ""교육"" (another language, via Wikidata)",
+pf-016339,industry_innovation,ok,2,website section /section/industry/,
+pf-016339,science,ok,2,"website section ""화학"" (another language, via Wikidata)",
+pf-016339,business_economy,ok,2,website section /section/economy/,
+pf-016339,religion,ok,2,"website section ""종교"" (another language, via Wikidata)",
+pf-016339,sports,ok,2,website section /section/sports/,
+pf-013066,_entry,ok,,,Landbrugsavisen
+pf-013066,business_economy,ok,2,"website section ""Økonomi"" (another language, via Wikidata)",
+pf-013066,culture,wrong,3,"website headlines: ""art""",
+pf-013066,agriculture,ok,3,"website headlines: ""agro"", ""farming""",
+pf-004670,_entry,ok,,,Восьмой канал (Белоруссия)
+pf-010994,_entry,ok,,,WREG-TV
+pf-030066,_entry,ok,,,730 CKDM - The Parklands Best - 730 CKDM
+pf-030066,business_economy,ok,3,"description mentions ""business""",
+pf-030066,sports,ok,2,"website section ""Latest Sports""",
+pf-035110,_entry,ok,,,"WCBN 88.3 Ann Arbor, MI"
+pf-035110,education,ok,1,"Radio Browser tag ""university radio""",
+pf-037304,_entry,ok,,,Al Iraqia Sport
+pf-037304,business_economy,wrong,2,"website section ""الأعمال الأصلية""",
+pf-037304,agriculture,wrong,3,"website About page: ""الزراعة""",
+pf-037304,sports,ok,1,"iptv-org category ""sports""",
+pf-030242,_entry,ok,,,La Treinta TV
+pf-025213,_entry,ok,,,gundemhaberim.com
+pf-027617,_entry,ok,,,Il Liceale
+pf-027617,technology,ok,2,"website section ""Intelligenza Artificiale"" (another language, via Wikidata)",
+pf-027617,children_youth,ok,1,Wikidata: student newspaper,
+pf-046688,_entry,ok,,,Rete 8 VGA
+pf-046688,culture,ok,3,"description mentions ""cultura""",
+pf-046688,sports,ok,2,"website section ""Sport""",
+pf-071316,_entry,ok,,,AkhbarMeter
+pf-071316,climate,wrong,3,"website About page: ""environment""",
+pf-071316,peace_justice,ok,3,"website About page: ""accountability"", ""transparency""",
+pf-071316,fact_checking,ok,1,IFCN,
+pf-071316,human_rights,ok,3,"website About page: ""human rights""",
+pf-063821,_entry,ok,,,synodos.jp
+pf-063821,education,ok,3,"website About page: ""教育""",
+pf-063821,culture,ok,3,"website About page: ""文化""",
+pf-063821,elections,ok,3,"words in another language (via Wikidata): ""民主"", ""民主主義""",
+pf-011012,_entry,ok,,,WRMC-FM
+pf-011012,health,wrong,3,"website About page: ""pandemic""",
+pf-011012,culture,ok,3,"Wikipedia: ""festival"", ""music""",
+pf-023565,_entry,not_media,,"academic bulletin, not a news outlet",Magazine of the Sidi Khrebish Excavations
+pf-047796,_entry,ok,,,Stoneham TV
+pf-024995,_entry,ok,,,Fundaziun Medias Rumantschas
+pf-046822,_entry,ok,,,RTGA World
+pf-058131,_entry,not_media,,"think tank, not a media outlet",公益財団法人 国家基本問題研究所
+pf-058131,science,ok,3,"words in another language (via Wikidata): ""研究"", ""研究員""",
+pf-025582,_entry,ok,,,high-voltage.cz
+pf-059600,_entry,ok,,,rediff
+pf-059600,health,ok,2,"website section ""Health""",
+pf-059600,business_economy,ok,2,"website section ""Business""",
+pf-059600,culture,ok,2,"website section ""South Cinema""",
+pf-059600,conflict_security,ok,2,"website section ""Defence""",
+pf-059600,technology,ok,2,"website section ""Technology""",
+pf-059600,sports,ok,2,"website section ""Cricket""",
+pf-039210,_entry,ok,,,CBTV Internacional
+pf-039210,health,wrong,3,"website headlines: ""covid""",
+pf-039210,culture,ok,3,"website headlines: ""cultural"", ""patrimonio""",
+pf-039210,media_freedom,ok,2,"website section ""Jornalismo""",
+pf-071288,_entry,ok,,,Gem TV
+pf-071288,health,ok,2,website section /category/health/,
+pf-071288,education,ok,2,website section /category/education/,
+pf-071288,business_economy,ok,2,website section /category/business/,
+pf-071288,culture,ok,2,website section /category/cinema/,
+pf-071288,religion,ok,2,"website section ""கிறிஸ்தவம்"" (another language, via Wikidata)",
+pf-071288,technology,ok,2,"website section ""Tech""",
+pf-071288,agriculture,ok,2,website section /category/agriculture/,
+pf-071288,elections,ok,2,"website section ""Election updates""",
+pf-071288,sports,ok,2,website section /category/sports/,
+pf-014894,_entry,ok,,,Vojenská história
+pf-014894,culture,ok,1,Wikidata subject: history,
+pf-035928,_entry,ok,,,万宁综合广播
+pf-035928,education,ok,2,"website section ""教育""",
+pf-035928,fact_checking,ok,2,"website section ""辟谣""",
+pf-035928,business_economy,ok,1,"description mentions ""经济""",
+pf-035928,culture,ok,1,"description mentions ""文化""",
+pf-036374,_entry,ok,,,江西信息交通广播
+pf-069092,_entry,ok,,,tlz
+pf-069092,climate,ok,3,"website headlines: ""cop31""",
+pf-069092,science,wrong,2,"website section ""Science City Jena""",
+pf-069092,sports,ok,1,"description mentions ""sport""",
+pf-011274,_entry,ok,,,Wausau Daily Herald
+pf-022809,_entry,ok,,,Diario de Palenque
+pf-022809,peace_justice,wrong,3,"website headlines: ""transparencia""",
+pf-022809,sports,ok,2,"website section ""Deportes""",
+pf-036343,_entry,ok,,,梁山广播电视台综合广播
+pf-060642,_entry,ok,,,imatin.net
+pf-009128,_entry,ok,,,Russian Canadian Info
+pf-060748,_entry,ok,,,BD Morning
+pf-053610,_entry,not_media,,website taken over (betting site),INFO GHANA – วิเคราะห์บอลวันนี้
+pf-038030,_entry,ok,,,Baran TV
+pf-049505,_entry,ok,,,TV Yumuri
+pf-049505,education,ok,3,"website About page: ""maestros""",
+pf-049505,culture,ok,2,"website section ""Cultura""",
+pf-049505,children_youth,ok,3,"website About page: ""jovenes""",
+pf-049505,sports,ok,2,"website section ""Deportes""",
+pf-057147,_entry,ok,,,lamareanoticias.com.ar
+pf-063587,_entry,not_media,,"service company (e-edition vendor), not an outlet",etypeservices.com
+pf-063587,business_economy,ok,3,"website About page: ""business""",
+pf-063587,sports,ok,3,"website About page: ""football""",
+pf-033530,_entry,ok,,,Radio Riviera
+pf-033530,culture,ok,3,"description mentions ""musica""",
+pf-033530,sports,ok,2,"website section ""_Sport""",
+pf-017571,_entry,not_media,,"academic journal, not a news outlet",Известия высших учебных заведений. Математика
+pf-017571,health,wrong,2,"website section ""Здравоохранение""",
+pf-017571,education,wrong,2,"website section ""Образование""",
+pf-017571,industry_innovation,wrong,2,"website section ""Социальная инфраструктура""",
+pf-017571,science,ok,1,"description mentions ""наука""",
+pf-058367,_entry,ok,,,cnybj.com
+pf-031495,_entry,ok,,,la costeña 91.0 montería
+pf-031495,business_economy,wrong,3,"website About page: ""inversion""",
+pf-031495,culture,ok,3,"website About page: ""cine"", ""cultural""",
+pf-031495,sports,ok,2,"website section ""DEPORTES""",
+pf-038578,_entry,ok,,,Canal 15 Kantunilkin
+pf-026158,_entry,ok,,,Radio Sintony
+pf-018324,_entry,ok,,,Montrose Daily Press
+pf-014742,_entry,ok,,,Imagine Showbiz
+pf-014742,culture,ok,3,"Wikipedia: ""music""",
+pf-014742,children_youth,wrong,3,"Wikipedia: ""youth""",
+pf-046983,_entry,ok,,,Sadhna News Madhya Pradesh/Chhattisgarh
+pf-046983,business_economy,wrong,2,"website section ""Investors""",
+pf-046983,agriculture,wrong,3,"website About page: ""cultures""",
+pf-043081,_entry,ok,,,Kriti TV
+pf-043081,culture,ok,2,website section /tv-shows/entertainment/,
+pf-036487,_entry,ok,,,66 Ruian
+pf-033010,_entry,ok,,,Radio Frequenza Appennino
+pf-033010,culture,ok,2,"website section ""Cinema""",
+pf-033010,children_youth,ok,2,"website section ""Just Kids""",
+pf-033010,sports,ok,2,"website section ""Sport""",
+pf-046130,_entry,ok,,,Potosi TV Satelital
+pf-052303,_entry,ok,,,radio1.be
+pf-069891,_entry,ok,,,m.15min.lt - Žinios gyvai (Mobili versija)
+pf-069891,education,ok,2,"website section ""Švietimas"" (another language, via Wikidata)",
+pf-069891,peace_justice,ok,1,OCCRP network (investigative journalism),
+pf-069891,business_economy,ok,2,"website section ""Verslas"" (another language, via Wikidata)",
+pf-069891,culture,ok,2,"website section ""Literatūra""",
+pf-069891,media_freedom,ok,1,OCCRP network (investigative journalism),
+pf-069891,sports,ok,2,"website section ""Krepšinis"" (another language, via Wikidata)",
+pf-014197,_entry,ok,,,Qfant
+pf-051542,_entry,ok,,,Manchester Enterprise - United States - Kentucky
+pf-051542,health,ok,2,"website section ""Health""",
+pf-051542,education,ok,2,"website section ""Education""",
+pf-051542,science,ok,3,"website About page: ""research"", ""researchers""",
+pf-051542,business_economy,ok,2,"website section ""Business""",
+pf-051542,culture,ok,2,"website section ""Entertainment""",
+pf-051542,technology,ok,2,"website section ""Tech""",
+pf-051542,agriculture,ok,2,"website section ""Agriculture""",
+pf-051542,children_youth,ok,2,"website section ""Kids & Family""",
+pf-051542,sports,ok,2,"website section ""Sports""",
+pf-051542,older_persons,ok,2,"website section ""Seniors""",
+pf-002196,_entry,ok,,,Synste Møre
+pf-002196,sports,ok,2,"website section ""Sport""",
+pf-062206,_entry,not_media,,website taken over (online shop),Jurua Online
+pf-062206,gender_equality,wrong,2,"website section ""LGBTQIA Artists""",
+pf-062206,life_on_land,wrong,2,"website section ""animals""",
+pf-062206,children_youth,wrong,2,"website section ""Kids T-Shirts""",
+pf-062206,sports,wrong,2,"website section ""sports""",
+pf-062150,_entry,ok,,,Sharg Gapisi
+pf-062150,health,ok,2,"website section ""Səhiyyə"" (another language, via Wikidata)",
+pf-062150,climate,ok,2,"website section ""COP29""",
+pf-062150,business_economy,ok,2,"website section ""İqtisadiyyat"" (another language, via Wikidata)",
+pf-062150,culture,ok,2,"website section ""Mədəniyyət"" (another language, via Wikidata)",
+pf-053959,_entry,ok,,,lasirenedupaysbasque
+pf-053959,culture,ok,1,"description mentions ""culture""",
+pf-059754,_entry,ok,,,Coxim Agora
+pf-059754,cities,ok,2,"website section ""Cidades""",
+pf-059754,peace_justice,ok,2,"website section ""Justiça""",
+pf-059754,children_youth,ok,3,"website headlines: ""criancas""",
+pf-054660,_entry,ok,,,radiovaticana.va
+pf-027097,_entry,ok,,,The Underground
+pf-027097,gender_equality,ok,3,"website About page: ""misogyny""",
+pf-027097,partnerships,wrong,3,"website headlines: ""united nations""",
+pf-027097,science,ok,2,"website section ""April 2021: Science""",
+pf-027097,children_youth,ok,1,Wikidata: student newspaper,
+pf-027097,elections,ok,3,"website About page: ""elections""",
+pf-027097,sports,ok,3,"website About page: ""sports""",
+pf-023108,_entry,ok,,,Legal Agenda
+pf-023108,peace_justice,ok,3,"Wikipedia: ""etat de droit""",
+pf-023108,science,wrong,3,"Wikipedia: ""chercheurs""",
+pf-023108,conflict_security,ok,3,"website About page: ""جرائم الحرب""",
+pf-023108,disasters,wrong,3,"website About page: ""الإخلاء""",
+pf-013847,_entry,ok,,,The Official Guide of the Railways
+pf-013847,industry_innovation,ok,1,"name mentions ""railways""",
+pf-066336,_entry,ok,,,cknnigeria.com
+pf-066336,health,wrong,3,"website headlines: ""hiv""",
+pf-066336,business_economy,ok,2,"website section ""Business""",
+pf-066336,culture,ok,2,"website section ""Entertainment""",
+pf-066336,elections,ok,3,"website headlines: ""election"", ""electoral"", ""voters""",
+pf-066336,sports,ok,2,"website section ""Sports""",
+pf-066336,diaspora,ok,3,"website About page: ""diaspora""",
+pf-030973,_entry,ok,,,Hereti FM
+pf-030973,peace_justice,ok,2,"website section ""გამჭვირვალობა"" (another language, via Wikidata)",
+pf-052464,_entry,ok,,,lutherchips.com
+pf-052464,culture,ok,2,"website section ""Arts & Entertainment""",
+pf-052464,humanitarian,wrong,3,"website headlines: ""doctors without borders"", ""medecins sans frontieres"", ""msf""",
+pf-052464,children_youth,ok,3,"website About page: ""students""",
+pf-052464,sports,ok,2,"website section ""Sports""",
+pf-061529,_entry,ok,,,El Heraldo - Argentina - Cordoba
+pf-061529,health,ok,2,"website section ""Salud""",
+pf-061529,education,ok,2,"website section ""educación""",
+pf-061529,consumption,wrong,3,"website headlines: ""ecoturismo""",
+pf-061529,work_economy,ok,3,"website headlines: ""desempleo"", ""emprendedores"", ""pymes""",
+pf-061529,industry_innovation,wrong,3,"website About page: ""infraestructura""",
+pf-061529,business_economy,ok,3,"website headlines: ""economico""",
+pf-061529,culture,ok,2,"website section ""Cultura / Turismo""",
+pf-061529,migration,wrong,3,"website About page: ""inmigrantes""",
+pf-061529,disasters,wrong,3,"website headlines: ""huracan""",
+pf-061529,elections,ok,3,"website headlines: ""elecciones"", ""electoral""",
+pf-061529,sports,ok,2,"website section ""Deporte""",
+pf-030248,_entry,ok,,,Dadi Fm
+pf-030248,health,ok,2,"website section ""Health""",
+pf-030248,education,ok,2,"website section ""Education""",
+pf-030248,industry_innovation,wrong,1,"website About page: ""infrastructure"", ""roads""",
+pf-030248,business_economy,ok,2,"website section ""Business""",
+pf-030248,culture,ok,2,"website section ""Entertainment""",
+pf-030248,religion,wrong,1,"website About page: ""cristiano"", ""muslim""",
+pf-030248,children_youth,ok,3,"website About page: ""students""",
+pf-030248,sports,ok,1,"Radio Browser tag ""sports""",
+pf-011272,_entry,ok,,,Waterloo Region Record
+pf-011272,poverty,wrong,2,"website section ""Development""",
+pf-011272,health,ok,2,"website section ""Health""",
+pf-011272,water_sanitation,ok,2,"website section ""Regional Water Supply""",
+pf-011272,cities,ok,3,"website headlines: ""affordable housing"", ""homeless""",
+pf-011272,partnerships,wrong,2,"website section ""Development""",
+pf-011272,science,wrong,3,"website headlines: ""research""",
+pf-011272,business_economy,ok,2,"website section ""Business""",
+pf-011272,culture,ok,2,"website section ""Entertainment""",
+pf-011272,religion,wrong,3,"website headlines: ""islamic""",
+pf-011272,migration,wrong,3,"website headlines: ""immigration""",
+pf-011272,technology,ok,2,"website section ""Technology""",
+pf-011272,elections,ok,2,"website section ""Municipal Elections""",
+pf-011272,sports,ok,2,"website section ""Sports""",
+pf-067520,_entry,ok,,,lavieenvert.ek.la
+pf-036880,_entry,ok,,,7HD
+pf-036880,sports,ok,3,"description mentions ""sport""",
+pf-018523,_entry,ok,,,Wheeler County Eagle
+pf-039927,_entry,ok,,,CVC Public
+pf-039927,education,ok,2,"website section ""Education""",
+pf-039927,business_economy,ok,2,"website section ""Business Videos""",
+pf-039927,elections,ok,2,"website section ""Government""",
+pf-061612,_entry,ok,,,El Sol de San Telmo
+pf-061612,culture,ok,2,"website section ""Cultura""",
+pf-024794,_entry,ok,,,politiken.dk
+pf-026232,_entry,ok,,,Revista Crisis
+pf-026232,gender_equality,ok,2,"website section ""Feminismos""",
+pf-026232,climate,ok,2,"website section ""Ecología Política""",
+pf-026232,business_economy,ok,2,"website section ""Economía y Trabajo""",
+pf-026232,culture,ok,3,"website About page: ""cultural""",
+pf-026232,conflict_security,ok,3,"website headlines: ""militar"", ""terrorismo""",
+pf-026232,sports,wrong,3,"website About page: ""mundial""",
+pf-012529,_entry,ok,,,Keiba Ace
+pf-058332,_entry,ok,,,caribarena.com
+pf-067548,_entry,ok,,,ifinnmark.no
+pf-067548,sports,ok,2,"website section ""Sport""",
+pf-000949,_entry,ok,,,Bangkok Post
+pf-000949,education,ok,2,"website section ""LEARNING""",
+pf-000949,water_sanitation,ok,2,"website section ""Clean water can't wait""",
+pf-000949,consumption,ok,2,"website section ""SUSTAINABILITY""",
+pf-000949,climate,ok,2,"website section ""SUSTAINABILITY""",
+pf-000949,business_economy,ok,2,"website section ""BUSINESS""",
+pf-000949,culture,ok,2,"website section ""ARTS & ENTERTAINMENT""",
+pf-000949,religion,wrong,3,"website headlines: ""buddhist""",
+pf-000949,conflict_security,ok,3,"Wikipedia: ""military""",
+pf-000949,technology,ok,2,"website section ""TECH""",
+pf-000949,elections,ok,3,"website headlines: ""senate"", ""vote""",
+pf-000949,sports,ok,2,"website section ""SPORTS""",
+pf-000949,older_persons,wrong,3,"website headlines: ""elderly""",
+pf-008135,_entry,not_media,,"car price guide, not a news outlet",Kelley Blue Book
+pf-008135,science,wrong,1,"description mentions ""research""",
+pf-028641,_entry,ok,,,W RADIO 92.9 (Xalapa) - 92.9 FM - XHJH-FM - Grupo Radio Cañó
+pf-028641,elections,ok,3,"website headlines: ""electoral""",
+pf-065467,_entry,ok,,,Rumburske Noviny
+pf-012779,_entry,ok,,,KlæbuPosten
+pf-012779,sports,ok,2,"website section ""Sport""",
+pf-051218,_entry,ok,,,Scottsdale Airpark News
+pf-031541,_entry,ok,,,La Radio de la Gente LU12 AM 680 Rio Gallegos
+pf-031541,children_youth,ok,3,"website headlines: ""adolescentes"", ""estudiantes"", ""ninos""",
+pf-031541,elections,ok,3,"website headlines: ""elecciones"", ""electoral""",
+pf-031025,_entry,ok,,,Hospital Radio Hillingdon
+pf-008661,_entry,ok,,,NTV
+pf-008661,health,ok,2,website section /health/,
+pf-008661,education,ok,2,website section /education/,
+pf-008661,business_economy,ok,2,website section /economy/,
+pf-008661,technology,ok,2,website section /tech/,
+pf-008661,children_youth,ok,2,website section /kids/,
+pf-008661,elections,ok,2,website section /election/,
+pf-008661,sports,ok,2,website section /sports/,
+pf-008661,culture,ok,1,AI reading: TV channel,
+pf-009219,_entry,ok,,,Seara
+pf-009219,culture,ok,3,"Wikipedia: ""art""",
+pf-055272,_entry,ok,,,Connect Bridgeport
+pf-055272,education,ok,2,"website section ""Education""",
+pf-055272,business_economy,ok,3,"description mentions ""commerce""",
+pf-055272,culture,ok,2,"website section ""Arts & Entertainment""",
+pf-055272,religion,ok,2,"website section ""Churches""",
+pf-055272,sports,ok,2,"website section ""Sports""",
+pf-017052,_entry,ok,,,CEOWORLD magazine
+pf-017052,hunger_food,wrong,3,"website headlines: ""food production""",
+pf-017052,work_economy,ok,3,"website headlines: ""entrepreneurship"", ""gdp"", ""productivity""",
+pf-017052,industry_innovation,ok,2,"website section ""Best Unicorn Startups""",
+pf-017052,science,ok,2,"website section ""Research & Data""",
+pf-017052,business_economy,ok,1,"website About page: ""banking"", ""business"", ""finance""",
+pf-017052,technology,ok,2,"website section ""Best Unicorn Startups""",
+pf-017052,sports,wrong,3,"website headlines: ""basketball""",
+pf-031655,_entry,ok,,,Little Raleigh Radio: High quality 64 Kbps AAC+
+pf-031655,culture,ok,3,"website headlines: ""art"", ""culture"", ""music""",
+pf-065040,_entry,ok,,,Garupa Digital
+pf-010717,_entry,ok,,,WILX-TV
+pf-010717,health,ok,2,"website section ""Health""",
+pf-010717,education,ok,2,website section /news/education/schools-rule/,
+pf-010717,business_economy,ok,2,"website section ""Financial""",
+pf-010717,technology,ok,2,"website section ""What the Tech""",
+pf-010717,disasters,ok,2,"website section ""Weather Alerts""",
+pf-010717,elections,ok,2,"website section ""Election Results""",
+pf-010717,sports,ok,2,"website section ""Sports""",
+pf-010717,older_persons,ok,2,"website section ""Aging Untold""",
+pf-038600,_entry,ok,,,Canal 20
+pf-014932,_entry,ok,,,Africanews
+pf-014932,gender_equality,wrong,3,"website headlines: ""menstruation""",
+pf-014932,industry_innovation,wrong,3,"website headlines: ""railway""",
+pf-014932,science,ok,2,"website section ""Science & Technology""",
+pf-014932,business_economy,ok,2,"website section ""Business""",
+pf-014932,culture,ok,2,"website section ""Culture""",
+pf-014932,religion,wrong,3,"website headlines: ""pope""",
+pf-014932,migration,ok,3,"website headlines: ""deportation""",
+pf-014932,technology,ok,2,"website section ""Science & Technology""",
+pf-014932,children_youth,ok,3,"website headlines: ""children"", ""youth""",
+pf-014932,sports,ok,2,"website section ""Sport""",
+pf-056651,_entry,ok,,,nouvellesdici.com
+pf-056651,education,ok,2,"website section ""Éducation""",
+pf-056651,climate,ok,2,"website section ""Environnement""",
+pf-056651,work_economy,ok,2,"website section ""Travail""",
+pf-056651,industry_innovation,ok,2,"website section ""Transports""",
+pf-056651,cities,ok,2,"website section ""Urbanisme""",
+pf-056651,culture,ok,2,"website section ""Théâtre Desjardins""",
+pf-012294,_entry,ok,,,China Women's News
+pf-037589,_entry,ok,,,Apna Channel
+pf-047583,_entry,ok,,,Soyuzny
+pf-047583,business_economy,ok,2,"website section ""Экономика""",
+pf-047583,culture,ok,2,"website section ""Культура""",
+pf-047583,technology,ok,2,"website section ""Промышленность и технологии""",
+pf-047583,media_freedom,ok,2,"website section ""Медиа""",
+pf-047583,sports,ok,2,"website section ""Спорт""",
+pf-064140,_entry,ok,,,grazia.fr
+pf-064140,hunger_food,ok,2,"website section ""Forme et nutrition""",
+pf-064140,health,ok,3,"website headlines: ""hiv"", ""sante mentale""",
+pf-064140,gender_equality,ok,3,"website headlines: ""feminines""",
+pf-064140,business_economy,wrong,3,"website headlines: ""marches""",
+pf-064140,culture,ok,2,"website section ""Culture""",
+pf-064140,religion,wrong,3,"website headlines: ""christian""",
+pf-064140,technology,ok,2,"website section ""High-Tech""",
+pf-064140,elections,wrong,3,"website headlines: ""election""",
+pf-060999,_entry,ok,,,YemenOnline | Voice of Yemen
+pf-060999,peace_justice,ok,3,"website About page: ""transparency""",
+pf-060999,fact_checking,ok,3,"website About page: ""misinformation""",
+pf-060999,business_economy,ok,2,"website section ""Economy""",
+pf-060999,culture,ok,3,"website headlines: ""cultural"", ""heritage""",
+pf-060999,religion,ok,3,"website About page: ""muslim""",
+pf-060999,humanitarian,ok,3,"website headlines: ""humanitarian"", ""humanitarian crisis""",
+pf-060999,human_rights,ok,2,"website section ""Human Rights""",
+pf-060999,conflict_security,ok,3,"website About page: ""terrorist""",
+pf-060999,media_freedom,ok,3,"website About page: ""independent journalism""",
+pf-060999,elections,ok,3,"website About page: ""democracy""",
+pf-054070,_entry,ok,,,thepublicrecord.ca
+pf-054070,cities,ok,2,"website section ""Housing & Homelessness""",
+pf-054070,peace_justice,ok,2,"website section ""Government Accountability & Access""",
+pf-054070,culture,ok,2,"website section ""Heritage""",
+pf-054070,elections,ok,2,"website section ""Council & Governance""",
+pf-065892,_entry,ok,,,Lyman County Herald
+pf-019971,_entry,not_media,,"historic newspaper (archive website), no longer published",Philipsburg Mail
+pf-067211,_entry,ok,,,padailypost.com
+pf-067211,business_economy,wrong,3,"website About page: ""investment""",
+pf-067211,elections,ok,3,"website headlines: ""ballot"", ""election"", ""voting""",
+pf-056415,_entry,ok,,,http://southpeacenews.com/
