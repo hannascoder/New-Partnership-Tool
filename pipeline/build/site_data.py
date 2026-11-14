@@ -120,6 +120,8 @@ def main():
     # sub-topics (config/topic_keywords.yaml) shown under a chosen topic; the words stay hidden
     kw = yaml.safe_load(open(CFG / "topic_keywords.yaml", encoding="utf-8"))["topics"]
     general = {k: v["general_subtopic"] for k, v in kw.items() if v.get("subtopics")}
+    topic_merge = {t["id"]: t["merged_into"].split("/")[0] for t in cats["topics"] if t.get("merged_into")}
+    cats["topics"] = [t for t in cats["topics"] if not t.get("merged_into")]  # merged topics are no buttons
     for t in cats["topics"]:
         subs = (kw.get(t["id"]) or {}).get("subtopics") or []
         if subs:
@@ -151,14 +153,16 @@ def main():
     for o in outlets:
         h = host_of(o.get("website"))
         why_out = None
-        if nm and h and set(o["sources"]) <= set(nm.get("only_sources", [])) and not set(o["channels"]) & set(nm.get("not_channels", [])):
+        if h and any(h == x or h.endswith("." + x) for x in nm.get("archive_hosts") or []):
+            why_out = "historic newspaper: its only website is a newspaper archive"
+        elif nm and h and set(o["sources"]) <= set(nm.get("only_sources", [])) and not set(o["channels"]) & set(nm.get("not_channels", [])):
             if gov and gov.search(h):
                 why_out = "government website"
             elif h in ngo_hosts:
                 why_out = "organisation on the Organisations & NGOs page: " + ngo_hosts[h]
         (dropped if why_out else kept).append((o, why_out))
     (ROOT / "reports" / "not_media.md").write_text("\n".join(
-        ["# Not shown in the media list: government websites and NGOs (config/rules.yaml not_media)", "",
+        ["# Not shown in the media list: government websites, NGOs, historic papers (config/rules.yaml not_media)", "",
          f"{len(dropped)} entries that a media list names but that are not media. To bring one back: tell Claude the id.", "",
          "| Id | Name | Country | Website | Reason |", "|---|---|---|---|---|"]
         + [f"| {o['id']} | {(o['name'] or '')[:70]} | {o['country']} | {o.get('website') or ''} | {y} |"
@@ -383,6 +387,7 @@ def main():
         "active_months": cats.get("active_months", 3),
         "feedback_email": cats.get("feedback_email"),
         "feedback_url": cats.get("feedback_url"),
+        "topic_merge": topic_merge,  # old shared links: a merged topic id opens its new topic
         "topic_strength": cats.get("topic_strength"),
         "topic_strength_note": cats.get("topic_strength_note"),
         "source_labels": SOURCE_LABEL,

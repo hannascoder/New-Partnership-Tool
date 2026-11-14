@@ -780,6 +780,12 @@ topics:
     # matches from a source / section without a sub-topic count here
     general_subtopic: decent_jobs
     subtopics:
+      # the former topic "Business & economy" (merged 14.11.2026): its own words are under
+      # "business_economy" further down and are counted here (config/categories.yaml merged_into)
+      - id: business_finance
+        label: Business, markets and finance (companies, trade, banking, economy news)
+        strong:
+          en: [business news, stock market, financial markets]
       - id: decent_jobs
         label: Jobs, wages and workers' rights (unemployment, trade unions, informal work)
         targets: ["8.3", "8.5", "8.6", "8.8", "8.b"]

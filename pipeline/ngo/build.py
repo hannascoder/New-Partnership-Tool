@@ -35,6 +35,9 @@ from topic_text import Matcher, norm  # noqa: E402
 
 RAW = ROOT / "raw"
 CFG = yaml.safe_load(open(ROOT / "config" / "ngo.yaml", encoding="utf-8"))
+MERGED = {t["id"]: t["merged_into"] for t in yaml.safe_load(open(ROOT / "config" / "categories.yaml", encoding="utf-8"))["topics"]
+          if t.get("merged_into")}
+from classify import merge_topics  # noqa: E402
 FIELDS = yaml.safe_load(open(ROOT / "config" / "sources" / "ecosoc_fields.yaml", encoding="utf-8"))
 RULES = yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8"))
 TODAY = str(date.today())
@@ -491,8 +494,7 @@ def main():
             for tp, r in topics.match(name="", descriptions=wshort, abouts=wabout, menu=menu, headlines=heads).items():
                 for sub in r["subs"] or [None]:
                     add(tp, sub, 3 if tp not in tps else r["s"], r["why"])
-        cat_topics = [{**t, "subs": sorted(t["subs"]), "method": "source_field" if t["source"].startswith("ECOSOC") else "keyword"}
-                      for t in tps.values()]
+        cat_topics = None  # built after the Global Compact sectors (below)
         aud = {}
         for f in fields:
             a = aud_fields.get(f.lower())
@@ -506,6 +508,10 @@ def main():
             for x in sector_map.get(g["sector"].lower(), []):
                 tp, _, sub = x.partition("/")
                 add(tp, sub or None, 2, f"UN Global Compact sector: {g['sector']}")
+        cat_topics = [{**t, "subs": sorted(t["subs"]), "method": "source_field" if t["source"].startswith("ECOSOC") else "keyword"}
+                      for t in tps.values()]
+        if MERGED:
+            cat_topics = merge_topics(cat_topics, MERGED)
         tow = []
         for t in CFG["type_of_work"]:
             f = next((f for f in fields if f.lower() in [x.lower() for x in t["fields"]]), None)

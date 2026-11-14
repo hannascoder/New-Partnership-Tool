@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Partner Finder</title>
-<link rel="stylesheet" href="assets/atlas.css?v=2026-11-132346UTC">
-<link rel="stylesheet" href="assets/finder.css?v=2026-11-132346UTC">
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-141830UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-141830UTC">
 </head>
 <body data-mode="media">
 <a class="skip-link" href="#results">Skip to results</a>
@@ -31,10 +31,19 @@
     <div id="filterBody" class="filter-body">
       <!-- the search bar is left out of v1 for now (decision 06.11.2026); space kept here -->
 
+      <!-- "My material" and "Channel" are one group since 14.11.2026 (two ways to ask the same question) -->
       <section class="fgroup">
-        <h2 class="sect">My material</h2>
+        <h2 class="sect">Format &amp; channel</h2>
+        <p class="sublabel">I have … (finds the outlets that can use it)</p>
         <div class="chips" id="f-material"></div>
         <p class="hint" id="materialHint"></p>
+        <p class="sublabel">… or choose where the outlet publishes</p>
+        <div class="chips" id="f-channel"></div>
+        <div class="subtopics" id="f-platformBox" hidden>
+          <p class="hint">Social media: only outlets with an account on …</p>
+          <div class="chips" id="f-platform"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="f-chUnknown"> Also show outlets without channel information</label>
       </section>
 
       <section class="fgroup">
@@ -69,16 +78,6 @@
         <details class="explain"><summary>What do these types mean?</summary><dl id="orgTypeHelp"></dl></details>
       </section>
 
-      <section class="fgroup">
-        <h2 class="sect">Channel</h2>
-        <div class="chips" id="f-channel"></div>
-        <div class="subtopics" id="f-platformBox" hidden>
-          <p class="hint">Social media: only outlets with an account on …</p>
-          <div class="chips" id="f-platform"></div>
-        </div>
-        <label class="check"><input type="checkbox" id="f-chUnknown"> Also show outlets without channel information</label>
-      </section>
-
       <!-- Ownership buttons removed (owner, 09.11.2026): only 11 % of outlets have a known owner.
            The owner is shown on every card; "Hide state-controlled" is under "More". -->
 
@@ -97,6 +96,7 @@
         <h2 class="sect">Topics</h2>
         <p class="hint">Choose one or more topics to see the outlets that work on them, best match first. The number on each button = outlets with this topic among your current results. Outlets without any topic in the sources count as "General news".</p>
         <label class="check"><input type="checkbox" id="f-onlyMatches"> <span id="onlyMatchesLabel"></span></label>
+        <label class="check"><input type="checkbox" id="f-weak"> <span id="weakLabel">Also count weak matches (“Reports on it”)</span></label>
         <label class="check"><input type="checkbox" id="f-allMatches"> <span id="allMatchesLabel">Must match ALL chosen topics (not just one of them)</span></label>
         <p class="hint">These two boxes also apply to “Target audience” and “UN profile”. Untick the first one to keep all other outlets in the list, after the matches.</p>
         <p class="hint" id="strengthNote"></p>
@@ -180,7 +180,7 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an outlet</a>
 </footer>
-<script src="assets/finder.js?v=2026-11-132346UTC"></script>
-<script src="assets/finder-export.js?v=2026-11-132346UTC"></script>
+<script src="assets/finder.js?v=2026-11-141830UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-141830UTC"></script>
 </body>
 </html>

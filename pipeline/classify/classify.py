@@ -315,6 +315,60 @@ def far_right(o, rules, evidence, owners):
     return None
 
 
+SCRIPT_RX = {"Arabic": r"[\u0600-\u06FF]", "Cyrillic": r"[\u0400-\u04FF]", "CJK": r"[\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]",
+             "Hebrew": r"[\u0590-\u05FF]", "Greek": r"[\u0370-\u03FF]", "Devanagari": r"[\u0900-\u097F]", "Thai": r"[\u0E00-\u0E7F]"}
+
+
+def host_of(u):
+    u = (u or "").strip().lower()
+    if not u:
+        return ""
+    h = re.sub(r"^https?://", "", u).split("/")[0].split(":")[0]
+    return re.sub(r"^(www\d?|m)\.", "", h)
+
+
+def site_taken_over(o, w, cfg, scripts, official):
+    """Reason text if the website no longer seems to belong to the outlet (rules.yaml website_texts.taken_over)."""
+    if not cfg:
+        return None
+    from topic_text import norm
+    ok = bool(w) and w.get("status") == "ok"
+    head = " ".join(x for x in (w.get("title"), w.get("desc")) if x) if ok else ""
+    # the name counts too: a media list often stores the website's title as the name
+    for where, text in (("title", head), ("name", o.get("name") or "")):
+        hay = " " + norm(text) + " "
+        for x in cfg.get("words") or []:
+            if " " + norm(x) + " " in hay or (re.search(r"[^\x00-\u024F]", x) and x in text):
+                return f'its {where} shows "{x}" (betting or shop content)'
+    if not head:
+        return None
+    letters = [ch for ch in head if ch.isalpha()]
+    own = set(o.get("languages") or []) | official.get(o.get("country"), set())
+    if len(letters) >= 12 and o.get("languages"):
+        for sc, langs in scripts.items():
+            n = len(re.findall(SCRIPT_RX[sc], head))
+            if n / len(letters) >= cfg.get("other_script_share", 0.5) and not own & set(langs):
+                return f"its title is in {sc} script, which none of the outlet's languages uses"
+    return None
+
+
+def merge_topics(tps, merged):
+    """config/categories.yaml merged_into: a merged topic is counted as its target topic / sub-topic."""
+    out = {}
+    for t in tps:
+        if t["value"] in merged:
+            target, _, sub = merged[t["value"]].partition("/")
+            t = {**t, "value": target, "subs": sorted(set(t.get("subs") or []) | ({sub} if sub else set()))}
+        old = out.get(t["value"])
+        if not old:
+            out[t["value"]] = t
+        else:
+            best, other = (t, old) if t.get("strength", 1) < old.get("strength", 1) else (old, t)
+            subs = sorted(set(best.get("subs") or []) | set(other.get("subs") or []))
+            out[t["value"]] = {**best, **({"subs": subs} if subs else {}), **({"url": other["url"]} if other.get("url") and not best.get("url") else {})}
+    return list(out.values())
+
+
 def not_news(o, cat, r):
     """Reason text if the outlet is a pure sports / music / children's / religious channel
     (config/rules.yaml not_news): hidden by the checkbox "Only news media" (default on).
@@ -428,6 +482,13 @@ def topics(o, cat, rules, maps, kw, order, ov, texts=None):
         name = ""  # a tagline listing sections, not a name
     texts = dict(texts or {})
     base = texts.pop("base_url", None)
+    # menu entries that are no sections: legal notices / widgets, and the outlet's own name
+    from topic_text import norm as _norm
+    ign = [" " + _norm(x) + " " for x in rules.get("ignore_sections") or []]
+    own = set(_norm(o["name"] or "").split()) if rules.get("ignore_sections_in_own_name") else set()
+    texts["menu"] = [(t, u) for t, u in texts.get("menu") or []
+                     if not any(x in " " + _norm(t) + " " for x in ign)
+                     and not (own and _norm(t) and set(_norm(t).split()) <= own)]
     hits = kw.match(name=name, **texts)
     for topic, h in hits.items():
         old = ev.best.get(topic)
@@ -704,6 +765,13 @@ def main():
         print(f"other-language words dropped as too common: {len(dropped)} ({', '.join(dropped[:15])} ...)")
     official = {r["iso3"]: set(filter(None, r["official_languages"].split(";")))
                 for r in csv.DictReader(open(ROOT / "config" / "official_languages.csv", encoding="utf-8"))}
+    merged = {t["id"]: t["merged_into"] for t in cats_cfg["topics"] if t.get("merged_into")}
+    wt = rules.get("website_texts") or {}
+    host_n = Counter(host_of(o.get("website")) for o in outlets if o.get("website"))
+    shared = {h for h, n_ in host_n.items() if h and n_ >= wt.get("ignore_hosts_shared_by", 10 ** 9)}
+    ignore_hosts = set(wt.get("ignore_hosts") or [])
+    journal_words = [w_.casefold() for w_ in (rules.get("not_media") or {}).get("description_words") or []]
+    scripts = rules.get("name_scripts") or {}
     lang_rows = list(csv.DictReader(open(ROOT / "config" / "languages.csv", encoding="utf-8")))
     buttons = {r["code"] for r in lang_rows if r["button"]}
     lang_names = {r["code"]: r["name"] for r in lang_rows}
@@ -746,7 +814,11 @@ def main():
         ov = overrides.get(o["id"], {})
         # a website that no longer belongs to the outlet (AI reading) is not used at all
         taken_over = bool((ai.get(o["id"]) or {}).get("website_warning"))
-        txt = outlet_texts(o, wd_texts, {} if taken_over else web)
+        auto_warning = None if taken_over else site_taken_over(o, web.get(o["id"]), wt.get("taken_over"), scripts, official)
+        h_ = host_of(o.get("website"))
+        platform = bool(h_) and (h_ in shared or any(h_ == x or h_.endswith("." + x) for x in ignore_hosts))
+        taken_over = taken_over or bool(auto_warning)
+        txt = outlet_texts(o, wd_texts, {} if taken_over or platform else web)
         cat["topics"] = topics(o, cat, rules["topics"], maps, kw, topic_order, ov, txt)
         w = {} if taken_over else (web.get(o["id"]) or {})
         if w.get("status") == "ok":  # contacts and social links from the website (owner's to-do 6)
@@ -777,6 +849,17 @@ def main():
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
                                           lang_names, {t["value"] for t in cat["topics"]}, aud_matcher, txt)
         apply_ai(o, cat, ai, un_order, aud_order)
+        if auto_warning and not cat.get("website_warning"):
+            cat["website_warning"] = auto_warning
+        if merged:
+            cat["topics"] = sorted(merge_topics(cat["topics"], merged),
+                                   key=lambda v: topic_order.index(v["value"]) if v["value"] in topic_order else 999)
+        if journal_words and not cat.get("hidden"):
+            descs = " | ".join(d for q in [m[3:] for m in o["members"] if m.startswith("wd:")]
+                               for d in ((wd_texts.get(q) or {}).get("desc") or {}).values()).casefold()
+            hit = next((w_ for w_ in journal_words if w_ in descs), None)
+            if hit:
+                cat["hidden"] = f'not a media outlet: Wikidata describes it as "{hit}"'
         nn = not_news(o, cat, rules.get("not_news") or {})
         if nn:
             cat["not_news"] = nn
@@ -784,6 +867,15 @@ def main():
             if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")
         o["cat"] = cat
+    # an excluded outlet listed a second time under the same name in the same country (e.g. a radio
+    # stream called "fox news") is excluded too
+    from merge import clean_name
+    gone = {(o["country"], clean_name(o["name"])): o["cat"]["excluded"] for o in outlets if o["cat"].get("excluded")}
+    for o in outlets:
+        k = (o["country"], clean_name(o["name"]))
+        if not o["cat"].get("excluded") and k in gone and len(k[1]) >= 5 \
+                and (overrides.get(o["id"], {}).get("far_right") or {}).get("value") != "no":
+            o["cat"]["excluded"] = "same name as an excluded outlet (" + gone[k][:80] + ")"
     json.dump(outlets, open(ROOT / "work" / "classified.json", "w", encoding="utf-8"), ensure_ascii=False)
     report(outlets, intl_missing)
     report_4d(outlets, cats_cfg)

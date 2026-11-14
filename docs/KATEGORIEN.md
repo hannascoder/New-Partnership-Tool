@@ -197,3 +197,11 @@ Die genaue Liste „Quell-Kategorie → unser Thema“ erstelle ich aus den **ta
 - **„Top 10 / Top 50“** = die bekanntesten Nachrichtenmedien unter denen, die zu den anderen Filtern passen.
 - **„My material“ Video** = TV oder Konto auf YouTube / TikTok / Instagram / Facebook (nicht mehr jede Website).
 - Mehrere Themen: Standard „eines davon“, Schalter „Must match ALL chosen topics“.
+
+## Entscheidungen vom 14.11.2026 (weniger, klarere Filter)
+- Doppelte Knöpfe entfernt: Thema „Community & local“ (= Scope „Local“), UN profile „Public service mandate“, „Fact-checking (IFCN)“, „Multilingual“, Kästchen „Has social media“; auf der Medienseite die Zielgruppen, die dieselbe Liste wie ein Thema waren. Die Angaben stehen weiter auf den Karten.
+- **„Business & economy“ gehört jetzt zu SDG 8** („Decent work, business & economy“).
+- „My material“ und „Channel“ sind eine Gruppe: „Format & channel“.
+- **Schwache Treffer („Reports on it“) zählen nur mit dem Kästchen „Also count weak matches“.**
+- Gekaperte Websites (Wetten u. ä.) bekommen eine Warnung und werden nicht mehr verlinkt.
+- Qualität wird bei jedem Datenlauf gemessen: reports/quality.md (200 von Hand geprüfte Medien).

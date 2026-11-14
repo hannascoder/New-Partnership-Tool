@@ -3,295 +3,100 @@
 A new sample is drawn every day. For each value: what the tool says and why.
 Wrong? Tell Claude the id, or note it in overrides.csv.
 
-## boliviaverifica.bo — Bolivia (Plurinational State of) · pf-054777
-
-- Website: http://boliviaverifica.bo/ (check: ok)
-- Sources: fact_checking_sites, ifcn_signatories, media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: community_nonprofit (AI reading: website: non-profit digital outlet)
-- Scope: local (Media Cloud collection "La Paz, Bolivia - State & Local")
-- Languages: spa · Channels: website, social_media, newsletter
-- Topics: health (Has a section on it: website section "Especial vacunas"); peace_justice (Has a section on it: website section "Transparencia"); fact_checking (Specialist: IFCN); science (Has a section on it: website section /category/investigacion/); community_local (Specialist: scope local); human_rights (Has a section on it: website section "Discurso de odio"); elections (Has a section on it: website section "Elecciones")
-- Target audience: -
-- UN profile: solutions (website section "Periodismo de Soluciones"); fact_checking_ifcn (IFCN)
-- Contact: info@boliviaverifica.bo · contact page: - · latest article: 2026-11-09
-
-## abcyola.com.ng — Nigeria · pf-057786
-
-- Website: https://abcyola.com.ng/ (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Nigeria - National")
-- Languages: eng · Channels: website, social_media
-- Topics: sports (Has a section on it: website section "BC Game Sports Betting")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://abcyola.com.ng/contact-us/ · latest article: -
-
-## Boise State Public Radio — United States of America · pf-005476
-
-- Website: http://www.boisestatepublicradio.org (check: ok)
-- Sources: radio_browser, wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: community_nonprofit (Wikidata: owner Boise State University (university))
-- Scope: unknown (no scope information in the sources)
-- Languages: eng · Channels: radio, website, social_media, podcast, newsletter
-- Topics: climate (Has a section on it: website section "Environment"); science (Reports on it: Wikipedia: "research"); business_economy (Has a section on it: website section "Business Partners"); culture (Has a section on it: website section "Arts & Culture"); community_local (Has a section on it: website section "Endowment for Local News")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://www.boisestatepublicradio.org/contact · latest article: -
-
-## Local Horse Racing Nine 702 — Japan · pf-043552
-
-- Website: https://keiba9.com/ (check: ok)
-- Sources: iptv_org
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: jpn · Channels: tv, website, social_media
-- Topics: sports (Specialist: iptv-org category "sports")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: 2015-12-14
-
-## Photo Agencia — Brazil · pf-060858
-
-- Website: http://www.photoagencia.com.br/ (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Brazil - National")
-- Languages: por · Channels: website, social_media
-- Topics: general_news (Reports on it: no topic in the sources: general news)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://photoagencia.com.br/contato · latest article: -
-
-## Gundogar News — Turkmenistan · pf-059863
-
-- Website: http://gundogar-news.com/ (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Turkmenistan - National")
-- Languages: rus · Channels: website
-- Topics: education (Has a section on it: website section "Образование"); climate (Has a section on it: website section "Экология"); energy (Has a section on it: website section "Энергетика"); business_economy (Has a section on it: website section "Экономика"); culture (Has a section on it: website section "Культура"); sports (Has a section on it: website section "Спорт")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## Doc Bao Ninh Binh — Viet Nam · pf-065983
-
-- Website: http://baoninhbinh.net/ (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Viet Nam - National")
-- Languages: vie · Channels: website
-- Topics: general_news (Reports on it: no topic in the sources: general news)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## Pluto TV Kids Series — United States of America · pf-046034
+## La Voie — Côte d'Ivoire · pf-025869
 
 - Website: - (check: not checked)
-- Sources: iptv_org
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: fra, eng · Channels: tv
-- Topics: children_youth (Specialist: iptv-org category "kids")
-- Target audience: children (iptv-org category "kids")
-- UN profile: multilingual (2 languages)
-- Contact: - · contact page: - · latest article: -
-
-## Kometa — France · pf-026439
-
-- Website: https://kometarevue.com (check: ok)
 - Sources: wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: unknown (no scope information in the sources)
-- Languages: fra · Channels: print, website, social_media, newsletter
-- Topics: science (Reports on it: words in another language (via Wikidata): "chercheur", "chercheuse"); culture (Reports on it: website About page: "art")
-- Target audience: -
-- UN profile: -
-- Contact: contact@kometarevue.com · contact page: - · latest article: -
-
-## KAJ News — United States of America · pf-027953
-
-- Website: https://kajnews.com/ (check: ok)
-- Sources: wikidata
-- Type: news_outlet (no evidence for another type)
-- Ownership: private (Wikidata: owner VUGA Enterprises (publishing house))
-- Scope: unknown (no scope information in the sources)
-- Languages: eng · Channels: website
-- Topics: industry_innovation (Reports on it: website About page: "infrastructure"); general_news (Specialist: Wikidata: online newspaper); technology (Specialist: Wikidata subject: technology)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: https://kajnews.com/contact/ · latest article: 2026-11-05
-
-## al-binaa.com — Lebanon · pf-058320
-
-- Website: http://www.al-binaa.com/ (check: error)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Lebanon - National")
-- Languages: ara · Channels: website
-- Topics: general_news (Reports on it: no topic in the sources: general news)
+- Languages: fra · Channels: print
+- Topics: general_news (Specialist: Wikidata: daily newspaper)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Pikes Peak Bulletin — United States of America · pf-053796
+## Neovlivní.cz — Czechia · pf-016010
 
-- Website: http://www.pikespeakbulletin.com/ (check: error)
+- Website: https://neovlivni.cz/ (check: ok)
+- Sources: wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: ces · Channels: website, social_media
+- Topics: media_freedom (Specialist: description mentions "investigative journalism")
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: https://neovlivni.cz/kontakty/ · latest article: 2026-11-09
+
+## SNIP GmbH, Aachen — Germany · pf-053645
+
+- Website: http://www.regioblick.de/ (check: ok)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website
+- Scope: local (Media Cloud collection "Nordrhein-Westfalen, Germany - State & Local")
+- Languages: deu · Channels: website
 - Topics: community_local (Specialist: scope local)
 - Target audience: -
 - UN profile: -
-- Contact: - · contact page: - · latest article: -
+- Contact: - · contact page: - · latest article: 2022-01-31
 
-## Levicka televizia — Slovakia · pf-043413
-
-- Website: https://www.levickatelevizia.sk/ (check: ok)
-- Sources: iptv_org
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: slk · Channels: tv, website, social_media
-- Topics: general_news (Specialist: iptv-org category "general"); sports (Has a section on it: website section "Šport")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## Badalo — Brazil · pf-059555
-
-- Website: https://www.badalo.com.br (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: local (Media Cloud collection "Ceará, Brazil - State & Local")
-- Languages: por · Channels: website, social_media
-- Topics: health (Specialist: website About page: "covid", "covid 19", "pandemia"); culture (Reports on it: website About page: "cultural", "literatura"); community_local (Specialist: scope local)
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: 2026-11-09
-
-## T18 — France · pf-048049
+## Varendra TV — Bangladesh · pf-049717
 
 - Website: - (check: not checked)
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (iptv-org broadcast area: whole country)
-- Languages: fra · Channels: tv
+- Languages: ben · Channels: tv
 - Topics: general_news (Specialist: iptv-org category "general")
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Denisonian — United States of America · pf-024003
-
-- Website: http://www.denisonian.com/ (check: ok)
-- Sources: media_cloud, wikidata
-- Type: community_media (Wikidata: student newspaper)
-- Ownership: community_nonprofit (organisation type community media)
-- Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website, social_media
-- Topics: culture (Has a section on it: website section "Arts and Life"); community_local (Specialist: organisation type community media); children_youth (Specialist: Wikidata: student newspaper); elections (Reports on it: website About page: "governance"); sports (Has a section on it: website section "Sports")
-- Target audience: youth_students (Wikidata: student newspaper); local_communities (organisation type community media)
-- UN profile: -
-- Contact: - · contact page: https://denisonian.com/contact-us/request/ · latest article: 2026-11-04
-
-## Mayyazhi — India · pf-043875
+## De Katholyke Zondag — Belgium · pf-025583
 
 - Website: - (check: not checked)
-- Sources: iptv_org
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: mal · Channels: tv
-- Topics: general_news (Specialist: iptv-org category "general")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## EsperanzaTV Colombia — Colombia · pf-040763
-
-- Website: https://www.esperanzatv.co/ (check: error)
-- Sources: iptv_org
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: spa · Channels: tv, website
-- Topics: religion (Specialist: iptv-org category "religious")
-- Target audience: religious (iptv-org category "religious")
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## cba24n.com.ar — Argentina · pf-066788
-
-- Website: http://cba24n.com.ar/ (check: ok)
-- Sources: media_cloud
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Argentina - National")
-- Languages: spa · Channels: tv, website, social_media
-- Topics: culture (Reports on it: website headlines: "cultura", "cultural"); religion (Reports on it: website headlines: "catolica", "iglesia"); disability (Reports on it: website headlines: "discapacidad", "personas con discapacidad"); sports (Has a section on it: website section "Deportes")
-- Target audience: -
-- UN profile: -
-- Contact: comunicacion@srtunc.com.ar · contact page: - · latest article: 2026-11-09
-
-## Cambrian — United States of America · pf-021116
-
-- Website: http://www.thecambrian.com (check: error)
 - Sources: wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: unknown (no scope information in the sources)
-- Languages: - · Channels: print, website, social_media
-- Topics: general_news (Specialist: Wikidata: newspaper)
+- Languages: nld · Channels: print
+- Topics: religion (Specialist: Wikidata subject: religion)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Canal Cable Vision — Colombia · pf-038891
+## 东丰综合广播 — China · pf-035951
 
-- Website: - (check: not checked)
+- Website: https://baike.baidu.com/item/%E4%B8%9C%E4%B8%B0%E5%B9%BF%E6%92%AD%E7%94%B5%E8%A7%86%E5%8F%B0/13237491 (check: robots)
+- Sources: radio_browser
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: zho · Channels: radio, website
+- Topics: general_news (Specialist: Radio Browser tag "news")
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## MLB Extra Innings 723 — United States of America · pf-044190
+
+- Website: http://mlb.mlb.com/ (check: ok)
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: national (iptv-org broadcast area: whole country)
-- Languages: spa · Channels: tv
-- Topics: general_news (Specialist: iptv-org category "general")
+- Languages: eng, spa · Channels: tv, website, social_media, podcast
+- Topics: children_youth (Has a section on it: website section "Youth"); sports (Specialist: iptv-org category "sports")
 - Target audience: -
-- UN profile: -
+- UN profile: multilingual (2 languages)
 - Contact: - · contact page: - · latest article: -
 
-## GWARA MEDIA — Ukraine · pf-071120
+## JC Matao — Brazil · pf-062639
 
-- Website: https://gwaramedia.com/ (check: ok)
-- Sources: fact_checking_sites, ifcn_signatories
-- Type: fact_checker (IFCN)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: unknown (no scope information in the sources)
-- Languages: ukr · Channels: website, social_media
-- Topics: fact_checking (Specialist: IFCN); human_rights (Reports on it: website About page: "human rights")
-- Target audience: -
-- UN profile: fact_checking_ifcn (IFCN)
-- Contact: - · contact page: - · latest article: 2025-12-23
-
-## O Portuense — Brazil · pf-062359
-
-- Website: http://www.portuense.com.br/ (check: error)
+- Website: http://www.jcmatao.com.br/ (check: error)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
@@ -302,94 +107,289 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Prajatantra TV Bharat — India · pf-046149
+## Diario abc de Zihuatanejo — Mexico · pf-070462
+
+- Website: http://www.abcdezihuatanejo.com (check: not checked)
+- Sources: media_cloud
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (Media Cloud collection "Mexico - National")
+- Languages: spa · Channels: website
+- Topics: general_news (Reports on it: no topic in the sources: general news)
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## The Prodigy — United States of America · pf-014672
+
+- Website: http://prodigy.ucmerced.edu/ (check: error)
+- Sources: wikidata
+- Type: community_media (Wikidata: student newspaper)
+- Ownership: community_nonprofit (organisation type community media)
+- Scope: local (Wikidata: student newspaper)
+- Languages: eng · Channels: print, website
+- Topics: science (Reports on it: Wikipedia: "research"); community_local (Specialist: organisation type community media); children_youth (Specialist: Wikidata: student newspaper)
+- Target audience: youth_students (Wikidata: student newspaper); local_communities (organisation type community media)
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## Television Maldives — Maldives · pf-070564
+
+- Website: http://one.mnbc.com.mv/ (check: error)
+- Sources: abu_members, wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: - · Channels: tv, website, social_media
+- Topics: general_news (Reports on it: no topic in the sources: general news)
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## Courier Life News — United States of America · pf-020974
 
 - Website: - (check: not checked)
-- Sources: iptv_org
+- Sources: wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: hin · Channels: tv
-- Topics: general_news (Specialist: iptv-org category "news")
+- Scope: unknown (no scope information in the sources)
+- Languages: - · Channels: print, social_media
+- Topics: general_news (Specialist: Wikidata: newspaper)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## NFL Sunday Ticket 12 — United States of America · pf-044930
-
-- Website: http://www.nfl.com/ (check: ok)
-- Sources: iptv_org
-- Type: news_outlet (no evidence for another type)
-- Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: eng · Channels: tv, website, podcast
-- Topics: community_local (Has a section on it: website section "Community"); sports (Specialist: iptv-org category "sports")
-- Target audience: -
-- UN profile: -
-- Contact: - · contact page: - · latest article: -
-
-## DA News Plus — India · pf-039997
+## La Crónica de Córdoba — Spain · pf-017601
 
 - Website: - (check: not checked)
-- Sources: iptv_org
+- Sources: wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: hin · Channels: tv
-- Topics: general_news (Specialist: iptv-org category "news")
+- Scope: unknown (no scope information in the sources)
+- Languages: spa · Channels: print
+- Topics: general_news (Specialist: Wikidata: newspaper)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Ajker Patrika — Bangladesh · pf-025015
+## MCN TV (Abania) — Albania · pf-026635
 
-- Website: http://ajkerpatrika.com (check: ok)
-- Sources: media_cloud, wikidata
+- Website: https://www.mcntv.al (check: ok)
+- Sources: iptv_org, radio_browser, wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: national (Media Cloud collection "Bangladesh - National")
-- Languages: ben · Channels: print, website, social_media
-- Topics: health (Has a section on it: website section /lifestyle/mental-health/); general_news (Specialist: Wikidata: newspaper); fact_checking (Has a section on it: website section /fact-check/); business_economy (Has a section on it: website section /business/); culture (Has a section on it: website section /entertainment/); conflict_security (Reports on it: words in another language (via Wikidata): "অস্ত্র", "সামরিক"); sports (Has a section on it: website section /sports/)
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: sqi, eng · Channels: tv, radio, website
+- Topics: general_news (Specialist: iptv-org category "general"); sports (Reports on it: description mentions "sport")
 - Target audience: -
-- UN profile: multilingual (AI reading: English edition)
-- Contact: - · contact page: https://www.ajkerpatrika.com/contact · latest article: 2026-11-09
+- UN profile: multilingual (2 languages)
+- Contact: - · contact page: - · latest article: -
 
-## Channel 9 — Australia · pf-039379
+## ZTVGM radio — United States of America · pf-035558
 
-- Website: https://www.nine.com.au/ (check: ok)
+- Website: https://www.zapstech.net/feed (check: ok)
+- Sources: radio_browser
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: eng · Channels: radio, website
+- Topics: religion (Specialist: Radio Browser tag "christian"); community_local (Specialist: Radio Browser tag "community")
+- Target audience: religious (Radio Browser tag "christian")
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## alhaqaiq — Mauritania · pf-026952
+
+- Website: https://www.alhaqaiq.info/ (check: ok)
+- Sources: wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: ara · Channels: website, social_media
+- Topics: health (Has a section on it: website section "صحة"); general_news (Specialist: Wikidata: online newspaper); elections (Reports on it: website headlines: "البرلمان", "الديمقراطية"); sports (Has a section on it: website section "الرياضة")
+- Target audience: -
+- UN profile: -
+- Contact: alhaqaiqinfo@gmail.com · contact page: https://alhaqaiq.info/contact/ · latest article: 2026-11-09
+
+## B24 — Armenia · pf-062029
+
+- Website: http://b24.am/ (check: ok)
+- Sources: media_cloud
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (Media Cloud collection "Armenia - National")
+- Languages: hye · Channels: print, website, social_media
+- Topics: work_economy (Has a section on it: website section /./economy/); agriculture (Has a section on it: website section "Գյուղատնտեսություն" (another language, via Wikidata)); sports (Has a section on it: website section "ֆուտբոլ" (another language, via Wikidata))
+- Target audience: rural_farmers (topic agriculture)
+- UN profile: -
+- Contact: - · contact page: - · latest article: 2026-11-09
+
+## El Periódico Extremadura — Spain · pf-011500
+
+- Website: - (check: not checked)
+- Sources: wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: private (Wikidata: owner Prensa Ibérica (privately held company))
+- Scope: unknown (no scope information in the sources)
+- Languages: spa · Channels: print, social_media
+- Topics: general_news (Specialist: Wikidata: newspaper)
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## Sankofa TV — United States of America · pf-047060
+
+- Website: https://sankofatv.sankofaradio.com/ (check: error)
 - Sources: iptv_org
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: eng · Channels: tv, website
+- Topics: culture (Specialist: iptv-org category "culture")
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## WPDE-TV — United States of America · pf-010950
+
+- Website: http://wpde.com/ (check: ok)
+- Sources: iptv_org, media_cloud, wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (iptv-org broadcast area: city / region)
 - Languages: eng · Channels: tv, website, social_media
-- Topics: general_news (Specialist: iptv-org category "general"); business_economy (Has a section on it: website section "Business"); culture (Has a section on it: website section "Entertainment"); community_local (Specialist: scope local); technology (Has a section on it: website section "Technology"); sports (Specialist: website About page: "football", "olympics", "rugby")
+- Topics: work_economy (Has a section on it: website section "Money"); community_local (Specialist: scope local); sports (Reports on it: description mentions "sports"); older_persons (Reports on it: website headlines: "alzheimer", "alzheimer s")
 - Target audience: -
 - UN profile: -
-- Contact: - · contact page: https://www.nine.com.au/contact-us · latest article: -
+- Contact: - · contact page: https://wpde.com/station/contact#fcccontact · latest article: -
 
-## Paulnor TV — Democratic Republic of the Congo · pf-045799
+## Herald-Observer — United States of America · pf-018710
 
 - Website: - (check: not checked)
-- Sources: iptv_org
+- Sources: wikidata
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: national (iptv-org broadcast area: whole country)
-- Languages: fra · Channels: tv
-- Topics: general_news (Specialist: iptv-org category "general")
+- Scope: unknown (no scope information in the sources)
+- Languages: - · Channels: print, social_media
+- Topics: general_news (Specialist: Wikidata: newspaper)
 - Target audience: -
 - UN profile: -
 - Contact: - · contact page: - · latest article: -
 
-## Groton Herald — United States of America · pf-064419
+## The Reporter — United States of America · pf-010041
 
-- Website: http://www.grotonherald.com/ (check: ok)
+- Website: http://www.thereporteronline.com (check: ok)
+- Sources: media_cloud, wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: private (Wikidata: owner 21st Century Media (business))
+- Scope: local (Media Cloud collection "United States - State & Local")
+- Languages: eng · Channels: print, website, social_media
+- Topics: health (Has a section on it: website section "Health"); work_economy (Has a section on it: website section "Business"); general_news (Specialist: Wikidata: newspaper); culture (Has a section on it: website section "Entertainment"); religion (Reports on it: website headlines: "catholic", "pope"); community_local (Specialist: scope local); elections (Has a section on it: website section "Election"); sports (Has a section on it: website section "Sports")
+- Target audience: -
+- UN profile: open_to_partner_content (website link "Submit News")
+- Contact: - · contact page: https://www.thereporteronline.com/contact-us/ · latest article: 2026-11-09
+
+## CBS — Republic of Korea · pf-012285
+
+- Website: http://www.cbs.co.kr/ (check: ok)
+- Sources: iptv_org, radio_browser, wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: kor · Channels: tv, radio, website, social_media
+- Topics: general_news (Specialist: iptv-org category "general"); religion (Specialist: Wikipedia: "christian", "religious")
+- Target audience: religious (AI reading: Christian audience)
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## Hallelujah Radio — United States of America · pf-030942
+
+- Website: https://www.blindbatradio.com/ (check: ok)
+- Sources: radio_browser
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: eng · Channels: radio, website
+- Topics: religion (Specialist: Radio Browser tag "christian"); disability (Specialist: description mentions "blind")
+- Target audience: religious (Radio Browser tag "christian")
+- UN profile: -
+- Contact: - · contact page: https://www.blindbatradio.com/contact-us · latest article: -
+
+## XEIPN-TDT — Mexico · pf-016641
+
+- Website: https://canalonce.mx/ (check: ok)
+- Sources: iptv_org, wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: community_nonprofit (Wikidata: owner National Polytechnic Institute (university))
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: spa · Channels: tv, website, social_media
+- Topics: education (Specialist: iptv-org category "education"); industry_innovation (Has a section on it: website section "Innovación Politécnica Ver más"); culture (Specialist: description mentions "cultura", "cultural")
+- Target audience: -
+- UN profile: educational (iptv-org category "education"); open_to_partner_content (website link "Colabora con Nosotros")
+- Contact: - · contact page: https://canalonce.mx/sobre-canal-once/contacto · latest article: -
+
+## Rotana Kids — Saudi Arabia · pf-046784
+
+- Website: https://rotana.net/ (check: ok)
+- Sources: iptv_org
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: ara · Channels: tv, website, social_media
+- Topics: children_youth (Specialist: iptv-org category "kids"); sports (Reports on it: website headlines: "football", "sports")
+- Target audience: children (iptv-org category "kids")
+- UN profile: -
+- Contact: - · contact page: https://rotana.net/en/contactus · latest article: 2023-06-09
+
+## Radio Kita TV — Indonesia · pf-046410
+
+- Website: http://radiokita.tv/ (check: error)
+- Sources: iptv_org
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: national (iptv-org broadcast area: whole country)
+- Languages: ind · Channels: tv, website
+- Topics: religion (Specialist: iptv-org category "religious")
+- Target audience: religious (iptv-org category "religious")
+- UN profile: -
+- Contact: - · contact page: - · latest article: -
+
+## WNBZ-FM — United States of America · pf-011240
+
+- Website: http://wnbz.com/ (check: ok)
+- Sources: media_cloud, wikidata
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: local (Media Cloud collection "United States - State & Local")
+- Languages: eng · Channels: radio, tv, website
+- Topics: community_local (Specialist: scope local); sports (Has a section on it: website section "Sports")
+- Target audience: -
+- UN profile: -
+- Contact: - · contact page: https://www.wnbz.com/about-us/ · latest article: 2026-11-09
+
+## El Ave News Weekly — United States of America · pf-053851
+
+- Website: http://www.elavenews.com/ (check: ok)
 - Sources: media_cloud
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
 - Scope: local (Media Cloud collection "United States - State & Local")
-- Languages: eng · Channels: print, website
-- Topics: community_local (Specialist: scope local)
-- Target audience: -
+- Languages: eng · Channels: print, website, social_media
+- Topics: health (Has a section on it: website section "Santé"); education (Has a section on it: website section "Enseignement"); water_sanitation (Reports on it: website headlines: "assainissement", "hygiene"); climate (Has a section on it: website section "Environnement"); work_economy (Has a section on it: website section "Finance"); industry_innovation (Has a section on it: website section "Transport"); cities (Has a section on it: website section "Transport"); peace_justice (Has a section on it: website section "Droit"); science (Has a section on it: website section "Sciences"); culture (Has a section on it: website section "Culture"); community_local (Specialist: scope local); technology (Has a section on it: website section "Technologies"); agriculture (Has a section on it: website section "Agriculture"); children_youth (Reports on it: website headlines: "enfants", "jeunes"); sports (Has a section on it: website section "Sport")
+- Target audience: rural_farmers (topic agriculture)
 - UN profile: -
-- Contact: - · contact page: https://grotonherald.com/about-us/ · latest article: 2026-11-06
+- Contact: - · contact page: https://elavenews.com/contact/ · latest article: 2026-09-29
+
+## Paavo Pesusieni — Sweden · pf-045694
+
+- Website: https://pluto.tv/live-tv/paavo-pesusieni-fi/details (check: ok)
+- Sources: iptv_org
+- Type: news_outlet (no evidence for another type)
+- Ownership: unknown (no ownership information in the sources)
+- Scope: unknown (no scope information in the sources)
+- Languages: eng, fin · Channels: tv, website, social_media
+- Topics: children_youth (Specialist: iptv-org category "kids")
+- Target audience: children (iptv-org category "kids")
+- UN profile: multilingual (2 languages)
+- Contact: - · contact page: https://pluto.tv/us/watch/live-tv/ · latest article: -
 

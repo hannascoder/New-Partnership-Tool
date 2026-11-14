@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-11-14 (later): fewer, clearer filters and a measured quality check
+- **Quality is measured now.** 200 outlets drawn at random were checked by hand once
+  (config/quality_sample.csv); `reports/quality.md` is rewritten at every data run. Wrong topic assignments
+  in that list: **17 % -> 5 %** (shown by default: 8 % -> 4 %). The price: about 1 in 10 right assignments
+  of the check is no longer made.
+- "Reports on it" (the weak matches; 36 % of them were wrong) only count when the new box "Also count weak
+  matches" is ticked. They now need 2 different words (the same word in two headlines was enough before).
+- Menu entries that are legal notices or widgets ("Non-Discrimination", "Modern Slavery Statement",
+  "Older polls") and entries made of the outlet's own name ("planet" on "planet radio") are no sections.
+- Websites that many outlets share (Pluto TV, zeno.fm, Facebook ...) no longer give topics.
+- **Websites taken over by others** (betting, adult content: 400+ found by their title) get a warning, are
+  not linked any more (card and export) and their texts are not used.
+- Historic papers whose only website is a newspaper archive, academic journals and second entries of
+  excluded outlets are no longer shown.
+- **Duplicate buttons removed:** topic "Community & local" (= Scope "Local"), UN profile "Public service
+  mandate" / "Fact-checking (IFCN)" / "Multilingual", box "Has social media", and on the media page the
+  target audiences that were the same list as a topic. The values still show on the cards.
+- **"Business & economy" merged into SDG 8** ("Decent work, business & economy", with its own sub-topic).
+- "My material" and "Channel" are one group, "Format & channel". Media page: 13 -> 10 filter groups.
+
 ## 2026-11-14
 - Organisations & NGOs: **"Existing UN partner" is narrower** (owner's decision): ECOSOC consultative status or
   accreditation at the UN in Geneva. Taking part in the UN Global Compact alone no longer counts

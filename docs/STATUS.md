@@ -224,6 +224,26 @@ The owner asked for a complete critique and then for all findings to be correcte
 - Next: owner checks the live site; then continue with the agreed order (AI reading of further countries,
   step 5 decisions, step 8 Atlas link, step 9 automation).
 
+## 14.11.2026: fewer, clearer filters + quality check (owner: "ja" to all, business + SDG 8 merged)
+- Owner's question: are there too many filters, are they clearly separate, are outlets assigned well?
+  Measured: several filters were the same list (see CHANGELOG); 36 % of the weak topic matches were wrong.
+- **Quality check**: config/quality_sample.csv (200 random outlets, every topic judged ok / wrong by Claude
+  from the stored evidence, not by opening each website) + pipeline/validate/quality.py -> reports/quality.md
+  at every run. Honest limit: the rules were tuned on this same list, so the real error rate is somewhat
+  higher than the report says; draw a second, fresh list to confirm (not done yet).
+- Rules: rules.yaml `ignore_sections`, `ignore_sections_in_own_name`, `website_texts` (ignore_hosts, taken_over),
+  `not_media.archive_hosts` / `description_words`; categories.yaml `hide_on`, `merged_into`,
+  checkbox `weak_topic_matches`; topic_text.py (2 different words for "Reports on it").
+- Known misses (right topics the rules do not find): specialist outlets in other languages, e.g.
+  Landbrugsavisen (Danish farming paper) and Océans connectés only get "Reports on it".
+- **OWNER'S PRIORITY (14.11.2026): "das Wichtigste ist, dass es sich selbst erhält und regelmäßig von alleine
+  kostenlos und open source aktualisiert".** State today: everything is open source and free, every rule is
+  in config files and the whole pipeline runs without hand work - but NOTHING RUNS ON ITS OWN YET. Data runs
+  are started by hand in a Claude session; only single fetch workflows exist. The automation (step 9: every
+  2 months re-fetch, re-check websites, rebuild, safety brake, publish) is the next thing to build.
+  Not self-maintaining by nature: the AI reading (cache/ai_classification.json, done in chat) and hand
+  corrections (overrides.csv); both are optional extras on top of the automatic rules.
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
