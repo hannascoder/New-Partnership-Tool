@@ -19,6 +19,8 @@
   target audiences that were the same list as a topic. The values still show on the cards.
 - **"Business & economy" merged into SDG 8** ("Decent work, business & economy", with its own sub-topic).
 - "My material" and "Channel" are one group, "Format & channel". Media page: 13 -> 10 filter groups.
+- Outlets whose website now belongs to someone else are hidden by default (new box under "More").
+- Scheduled automation: see docs/STATUS.md (built next).
 
 ## 2026-11-14
 - Organisations & NGOs: **"Existing UN partner" is narrower** (owner's decision): ECOSOC consultative status or

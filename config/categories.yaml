@@ -320,8 +320,13 @@ checkboxes:
     label: Has public contact
     description: Newsroom or organisation addresses only.
     default: false
+  # owner, 14.11.2026: hidden unless the user unticks the box (416 outlets; most no longer exist)
+  - id: hide_taken_over
+    label: Hide outlets whose website now belongs to someone else
+    description: The outlet's web address now shows betting, adult or other foreign content, so the outlet has probably closed.
+    default: true
   - id: hide_website_down
-    label: Hide outlets whose website did not answer (or no longer belongs to them)
+    label: Hide outlets whose website did not answer
     default: false
   - id: only_new
     label: Only new (found in the last 4 months)

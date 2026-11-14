@@ -327,12 +327,12 @@
       $("f-allMatches").addEventListener("change", (e) => { S.allMatches = e.target.checked; apply(); });
     }
     const checkAvail = { only_verified: true, has_social_media: true, has_public_contact: true, hide_state_controlled: true,
-                         hide_website_down: true, only_new: true, only_active: true, only_news: true };
+                         hide_website_down: true, only_new: true, only_active: true, only_news: true, hide_taken_over: true };
     // "Only new" is of no use while everything was found in the same weeks (before the first automatic update)
     const since = newSince(); if (!ALL.some((o) => o.f < since)) checkAvail.only_new = "hide";
     // NGO page: no state-controlled media, no "news media" box; "verified" = more than one NGO list
     C.checkboxes.filter((c) => !["include_reach", "include_no_language", "only_topic_matches", "all_topic_matches", "weak_topic_matches"].includes(c.id) && checkAvail[c.id] !== "hide"
-      && !(MODE === "ngo" && ["hide_state_controlled", "only_news"].includes(c.id))).forEach((c) => {
+      && !(MODE === "ngo" && ["hide_state_controlled", "only_news", "hide_taken_over"].includes(c.id))).forEach((c) => {
       const l = document.createElement("label");
       l.className = "check" + (checkAvail[c.id] ? "" : " pending");
       l.innerHTML = `<input type="checkbox" ${checkAvail[c.id] ? "" : "disabled"}> <span>${esc(MODE === "ngo" ? forPage(c.label) : c.label)}${checkAvail[c.id] ? "" : ' <span class="soon">no data yet</span>'}</span>`;
@@ -523,7 +523,7 @@
     if (S.nets.size) T.push(["nets", (o) => (o.nw || []).some((n) => S.nets.has(n))]);
     if (S.checks.size) {
       const k = S.checks, act = activeSince(), nw = newSince();
-      T.push(["checks", (o) => !(k.has("only_news") && o.nn) && !(k.has("hide_state_controlled") && o.ow && o.ow[0] === "state_controlled")
+      T.push(["checks", (o) => !(k.has("only_news") && o.nn) && !(k.has("hide_taken_over") && o.ww) && !(k.has("hide_state_controlled") && o.ow && o.ow[0] === "state_controlled")
         && !(k.has("only_verified") && o.s.length < 2) && !(k.has("has_social_media") && !o.so) && !(k.has("has_public_contact") && !o.em && !o.cp)
         && !(k.has("only_active") && !(o.lp && o.lp >= act)) && !(k.has("hide_website_down") && (o.wd || o.ww)) && !(k.has("only_new") && o.f < nw)]);
     }
@@ -588,7 +588,7 @@
       + (nSoft && !S.onlyMatches && !S.allMatches ? ` · <span class="matchcount"><b>${num(nMatch)}</b> match your ${MODE === "ngo" ? "topics / audience" : "topics / audience / UN profile"} (shown first)</span>` : "");
     // say what the boxes that are ticked by default hide (state-controlled media, non-news channels)
     const hid = (nearly.checks || []).length, defOn = [...DEFAULT_CHECKS].some((c) => S.checks.has(c));
-    if (hid && defOn && !S.qAll) $("counter").insertAdjacentHTML("beforeend", ` · <button type="button" class="linklike" id="showMore" title="State-controlled media and pure sports, music, children's or religious channels are hidden by default. Click to change this under “More”.">${num(hid)} hidden by the boxes under “More”</button>`);
+    if (hid && defOn && !S.qAll) $("counter").insertAdjacentHTML("beforeend", ` · <button type="button" class="linklike" id="showMore" title="State-controlled media, pure sports, music, children's or religious channels and outlets whose website was taken over are hidden by default. Click to change this under “More”.">${num(hid)} hidden by the boxes under “More”</button>`);
     // a name search that other filters cut down: say so and offer to search everything
     let note = "";
     if (S.q && !S.qAll) {
