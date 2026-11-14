@@ -287,6 +287,7 @@ audience:
     label: Policy makers & decision makers
 
 # ---------------------------------------------- J. Size and checkboxes
+# "description" of a checkbox is shown as a small explanation under the box (owner, 14.11.2026).
 size:
   - id: all
     label: All
@@ -305,35 +306,38 @@ size_note: >-
 checkboxes:
   - id: only_verified
     label: Only verified (2+ sources)
+    description: "Shows only outlets that at least 2 independent sources list. They are more likely to exist and to be correctly described."
     default: false
   # owner, 13.11.2026: hidden unless the user unticks the box
   - id: only_news
     label: Only news media (hide pure sports, music, children's and religious channels)
-    description: Channels whose only subjects are sports, music/culture, children or religion are hidden. Untick for campaigns aimed at them.
+    description: "Hides channels whose only subjects are sports, music, children or religion (e.g. ESPN, Cartoon Network). Untick for campaigns aimed at them."
     default: true
   - id: hide_state_controlled
     label: Hide state-controlled media
-    description: Media controlled by a government (State Media Monitor / Wikidata), e.g. RT, CCTV. In some countries almost all media are state-controlled - untick to see them.
+    description: "Hides media controlled by a government (e.g. RT, CCTV), as listed by the State Media Monitor or Wikidata. In some countries almost all media are state-controlled: untick to see them."
     default: true   # owner, 13.11.2026 (was off)
   # "Has social media" removed 14.11.2026: the same as Channel "Social media".
   - id: has_public_contact
     label: Has public contact
-    description: Newsroom or organisation addresses only.
+    description: "Shows only outlets with a public e-mail address or contact page of the newsroom or organisation (no personal addresses)."
     default: false
   # owner, 14.11.2026: hidden unless the user unticks the box (416 outlets; most no longer exist)
   - id: hide_taken_over
     label: Hide outlets whose website now belongs to someone else
-    description: The outlet's web address now shows betting, adult or other foreign content, so the outlet has probably closed.
+    description: "Hides outlets whose web address now shows betting, adult or other foreign content. Most of them have probably closed."
     default: true
   - id: hide_website_down
     label: Hide outlets whose website did not answer
+    description: "Hides outlets whose website gave no answer at the last check. Some of them only block automatic visits, so real outlets can be among them."
     default: false
   - id: only_new
     label: Only new (found in the last 4 months)
+    description: "Shows only outlets that were found for the first time in the last 4 months."
     default: false
   - id: only_active
     label: Only active (article in the last 3 months)
-    description: The outlet's website showed an article from the last 3 months at the last website check.
+    description: "Shows only outlets whose website had an article from the last 3 months at the last check. Outlets without a readable date are left out, so this is strict."
     default: false
   - id: include_reach
     label: Include outlets that reach this country

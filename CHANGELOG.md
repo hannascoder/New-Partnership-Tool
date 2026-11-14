@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-14 (night)
+- "More": every box has a short explanation under it (what it does, and what you lose when you tick it).
+- Fixed: a filter chosen in a folded group was missing in the "Active filters" line.
+
 ## 2026-11-14 (evening): the automatic update is built
 - New workflow **"Automatic update"** (`.github/workflows/update.yml`): every 2 months (3rd of January, March,
   May, July, September, November) it downloads all sources again, visits the websites again, rebuilds the
