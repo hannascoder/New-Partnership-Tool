@@ -234,9 +234,9 @@ def scope_and_reach(o, rules, reach, intl, org):
             cs |= reach.iptv.get(r, set())
         if "WW" in regions or len(regions) >= 2:
             evidence.append(("international", "source_field", "iptv-org broadcast area " + ", ".join(sorted(regions))))
-        elif regions or len(cs - {home}) >= 1 and len(cs) >= 2:
+        elif regions or len(cs - {home}) >= rules.get("regional_min_other_countries", 1) and len(cs) >= 2:
             evidence.append(("regional", "source_field", "iptv-org broadcast area " + ", ".join(sorted(regions) or sorted(cs))))
-        elif cs == {home}:
+        elif home in cs:  # the home country (+ at most one neighbour, e.g. CNN: USA and Canada)
             evidence.append(("national", "source_field", "iptv-org broadcast area: whole country"))
         elif any(a.startswith(("s/", "ct/")) for a in areas):
             evidence.append(("local", "source_field", "iptv-org broadcast area: city / region"))
@@ -312,6 +312,27 @@ def far_right(o, rules, evidence, owners):
         for cat, titles in evidence["categories"].items():
             if o["wikipedia"] in titles:
                 return "Wikipedia " + cat
+    return None
+
+
+def not_news(o, cat, r):
+    """Reason text if the outlet is a pure sports / music / children's / religious channel
+    (config/rules.yaml not_news): hidden by the checkbox "Only news media" (default on).
+    Careful on purpose: a SOURCE must say so (its own category / tag / class), weak mentions
+    ("Reports on it") are ignored, and members of broadcasting unions or state media lists are
+    never counted (they are general broadcasters even when one of their channels is a sports channel)."""
+    if not r or cat["org_type"]["value"] not in r.get("org_types", []):
+        return None
+    ch = set(o.get("channels") or [])
+    if not ch & set(r.get("channels_any", [])) or ch & set(r.get("not_channels", [])):
+        return None
+    if set(o.get("networks") or []) & set(r.get("not_networks", [])):
+        return None
+    tps = [t for t in cat["topics"] if t["method"] != "default" and t.get("strength", 1) <= 2
+           and t["value"] not in r.get("ignore_topics", [])]
+    names = {t["value"] for t in tps}
+    if names and names <= set(r.get("topics", [])) and any(t["method"] == "source_field" for t in tps):
+        return "only " + ", ".join(sorted(names)).replace("_", " ")
     return None
 
 
@@ -418,6 +439,14 @@ def topics(o, cat, rules, maps, kw, order, ov, texts=None):
         if h.get("url") and base and ev.best[topic].get("strength") == 2:
             import urllib.parse
             ev.best[topic]["url"] = urllib.parse.urljoin(base, h["url"])
+    # an outlet that looks like a "specialist" for many topics at once from its own texts is a
+    # general outlet listing its sections: those matches only count as "Reports on it"
+    limit = rules.get("max_text_specialist")
+    text_focus = [v for v in ev.best.values() if v.get("strength") == 1 and v["method"] in ("keyword", "website_check")
+                  and not v["source"].startswith("name ")]
+    if limit and len(text_focus) > limit:
+        for v in text_focus:
+            v["strength"] = 3
     apply_list_overrides(ev, ov, "topics", "topic")
     for v in ev.best.values():
         v.setdefault("strength", 1)
@@ -748,6 +777,9 @@ def main():
         cat["audience_groups"] = audience_groups(o, cat, rules["audience"], maps, aud_kw, aud_order, ov, official, buttons,
                                           lang_names, {t["value"] for t in cat["topics"]}, aud_matcher, txt)
         apply_ai(o, cat, ai, un_order, aud_order)
+        nn = not_news(o, cat, rules.get("not_news") or {})
+        if nn:
+            cat["not_news"] = nn
         for field, row in overrides.get(o["id"], {}).items():
             if field in cat and isinstance(cat[field], dict):
                 cat[field] = val(row["value"], "override", row.get("note") or "hand correction")

@@ -27,8 +27,8 @@ Listed as public service broadcaster AND news outlet (private owner): 2
 | Scope | Outlets | Main sources |
 |---|---|---|
 | international | 182 | iptv-org 111; list of international broadcasters 57; Wikidata: international broadcasting 14 |
-| regional | 790 | iptv-org 790 |
-| national | 27453 | iptv-org broadcast area: whole country 14214; Media Cloud collection 13239 |
+| regional | 467 | iptv-org 467 |
+| national | 27776 | iptv-org broadcast area: whole country 14537; Media Cloud collection 13239 |
 | local | 16544 | Media Cloud collection 13649; iptv-org broadcast area: city / region 2070; organisation type community media 312; Wikidata: student newspaper 250 |
 | unknown | 26107 | no scope information in the sources 26107 |
 

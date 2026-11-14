@@ -645,6 +645,9 @@ topics:
       zh: [海洋, 渔业]
       hi: [महासागर, मत्स्य]
       sw: [bahari, uvuvi]
+    exclude:
+      # place names, not the topic (review 13.11.2026: "Current in Fishers" is a local paper in Fishers, Indiana)
+      en: [current in fishers, fishers indiana, city of fishers, fishers in]
     # matches from a source / section without a sub-topic count here
     general_subtopic: ocean_health
     subtopics:

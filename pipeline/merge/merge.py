@@ -332,6 +332,7 @@ def main():
     first_seen = json.load(open(first_seen_file, encoding="utf-8")) if first_seen_file.exists() else {}
 
     outlets, excluded, used_ids = [], Counter(), set()
+    key_seen = Counter()
     for members in groups:
         ok, why = verdict(members, nets_in(members))
         if not ok:
@@ -339,14 +340,22 @@ def main():
             continue
         # keep an existing id, but never give the same id to two outlets: when a
         # group split up, the part with the most members known under that id keeps it
-        known = Counter(id_map[m["key"]] for m in members if m["key"] in id_map)
+        # Two different outlets can carry the same source key (e.g. two list entries with the same
+        # name and country). The second one is stored as "<key>#2", so both keep their own id from run
+        # to run (until 13.11.2026 they swapped ids at every run: ~19 outlets got a new id each time).
+        keys = []
+        for m in members:
+            key_seen[m["key"]] += 1
+            n_ = key_seen[m["key"]]
+            keys.append(m["key"] if n_ == 1 else f"{m['key']}#{n_}")
+        known = Counter(id_map[k] for k in keys if k in id_map)
         oid = next((i for i, _ in known.most_common() if i not in used_ids), None)
         if not oid:
             oid = f"pf-{next_no:06d}"
             next_no += 1
         used_ids.add(oid)
-        for m in members:
-            id_map[m["key"]] = oid
+        for k in keys:
+            id_map[k] = oid
         first_seen.setdefault(oid, today)
         o = {"id": oid, **build(members, networks_by), "include_reason": why, "first_seen": first_seen[oid]}
         outlets.append(o)

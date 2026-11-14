@@ -201,6 +201,29 @@ media on the site, separate section in the export; updated every 2 months (step 
   without an English label show their local name.
 - Next: keep running 'Fetch NGOs' (gently) until ECOSOC is complete; AI reading of top NGOs per country later.
 
+## 13.11.2026 (evening): full review of the filter ("prüfe den Filter komplett ... berichtige alles")
+The owner asked for a complete critique and then for all findings to be corrected in one session
+(exception to "one step per session"). Details in CHANGELOG.md (2026-11-13 evening). Summary:
+- Owner's decisions 13.11.2026: box "Only news media" (default ON; pure sports / music / children's /
+  religious channels hidden, rules.yaml `not_news`); "Hide state-controlled media" default ON; name search
+  NOW (only names; the big search stays in the backlog); government websites and NGOs out of the media list
+  (rules.yaml `not_media`, reports/not_media.md).
+- Rules changed: topic strength (pipeline/classify/topic_text.py, rules.yaml `max_text_specialist`),
+  UN profile words, scope (`regional_min_other_countries`), prominence / rank (rules.yaml `prominence`),
+  name scripts (`name_scripts`), NGO strength (config/ngo.yaml `many_fields`), material (categories.yaml
+  `platforms`). Stable ids fixed in pipeline/merge/merge.py (duplicate source keys get "#2").
+- Website: site/assets/finder.js largely rewritten (one test per filter group -> live numbers on the buttons;
+  foldable groups; active-filter bar; short cards with details; name search; several countries; copy link;
+  "Top N" counted among the outlets that fit the other filters).
+- The whole pipeline runs in the cloud session in about 10 minutes (classify.py ~8 min); no GitHub Actions needed.
+- Owner 14.11.2026: "Existing UN partner" = ECOSOC status or UN Geneva only, WITHOUT the UN Global Compact
+  (config/ngo.yaml un_partner; 7,780 -> 5,633 organisations).
+- NOT changed (later): ~8,400 outlets are named like their web address (Media Cloud); ~11,600 outlets
+  share a website with another entry (many are real network stations, some duplicates); scope unknown for
+  37 % of outlets; e-mail only for 9 %; the UN status boxes on the NGO page overlap.
+- Next: owner checks the live site; then continue with the agreed order (AI reading of further countries,
+  step 5 decisions, step 8 Atlas link, step 9 automation).
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:

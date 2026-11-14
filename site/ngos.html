@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Partner Finder – Organisations &amp; NGOs</title>
-<link rel="stylesheet" href="assets/atlas.css?v=2026-11-131932UTC">
-<link rel="stylesheet" href="assets/finder.css?v=2026-11-131932UTC">
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-132346UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-132346UTC">
 </head>
 <body data-mode="ngo">
 <a class="skip-link" href="#results">Skip to results</a>
@@ -54,9 +54,10 @@
         <label class="field">Region
           <select id="f-region"><option value="">All regions</option></select>
         </label>
-        <label class="field">Country
+        <label class="field">Country (you can add several)
           <select id="f-country"><option value="">All countries</option></select>
         </label>
+        <div class="chips" id="f-countryChosen"></div>
         <label class="check"><input type="checkbox" id="f-hqOnly"> <span id="hqOnlyLabel"></span></label>
         <p class="hint">A country finds NGOs based there and NGOs that name it as a country of activity (ECOSOC).</p>
       </section>
@@ -97,15 +98,17 @@
 
       <section class="fgroup">
         <h2 class="sect">Topics</h2>
-        <p class="hint">Topics never hide an NGO, they only change the order. The number on each button = NGOs with this topic.</p>
+        <p class="hint">Choose one or more topics to see the NGOs that work on them, best match first. The number on each button = NGOs with this topic among your current results.</p>
+        <label class="check"><input type="checkbox" id="f-onlyMatches"> <span id="onlyMatchesLabel"></span></label>
+        <label class="check"><input type="checkbox" id="f-allMatches"> <span id="allMatchesLabel">Must match ALL chosen topics (not just one of them)</span></label>
+        <p class="hint">These two boxes also apply to “Target audience”. Untick the first one to keep all other NGOs in the list, after the matches.</p>
         <p class="hint" id="strengthNote"></p>
         <div id="f-topics"></div>
-        <label class="check"><input type="checkbox" id="f-onlyMatches"> <span id="onlyMatchesLabel"></span></label>
       </section>
 
       <section class="fgroup">
         <h2 class="sect">Target audience</h2>
-        <p class="hint">Who the NGO works for, as the NGO or a source describes it. Changes the order, never hides an NGO.</p>
+        <p class="hint">Who the NGO works for, as the NGO or a source describes it. Works like a topic.</p>
         <div class="chips" id="f-audience"></div>
       </section>
 
@@ -117,6 +120,10 @@
   </aside>
 
   <main id="results" class="results" tabindex="-1">
+    <div class="searchrow">
+      <label class="visually-hidden" for="q">Search by name</label>
+      <input type="search" id="q" autocomplete="off" spellcheck="false">
+    </div>
     <div class="results-head">
       <p class="counter" id="counter" aria-live="polite"></p>
       <div class="actions">
@@ -124,9 +131,11 @@
           <select id="sort"></select>
         </label>
         <button class="btn-quiet" id="reset">Reset filters</button>
+        <button class="btn-quiet" id="copyLink" title="Copies a link to this page with your filters, to share with colleagues">Copy link</button>
         <button class="btn-quiet" id="addAll" disabled>Add all to export list</button>
       </div>
     </div>
+    <div class="activebar" id="activeBar" hidden aria-label="Active filters"></div>
     <div class="loader sketch" id="loader">
       <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="pb-wobble" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="1" result="n"><animate attributeName="seed" values="1;4;7;10" dur="0.5s" calcMode="discrete" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
       <div class="pb-stage" aria-hidden="true"><div class="pb-book">
@@ -168,7 +177,7 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an NGO</a>
 </footer>
-<script src="assets/finder.js?v=2026-11-131932UTC"></script>
-<script src="assets/finder-export.js?v=2026-11-131932UTC"></script>
+<script src="assets/finder.js?v=2026-11-132346UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-132346UTC"></script>
 </body>
 </html>

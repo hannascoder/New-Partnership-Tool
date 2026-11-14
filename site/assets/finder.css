@@ -168,3 +168,54 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 @media (prefers-reduced-motion: reduce) {
   .pb-leaf { display: none; }
 }
+
+/* ---------- review 13.11.2026: foldable filter groups, active filters, name search, short cards ---------- */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fgroup { padding: 0; }
+.fgroup h2.sect { margin: 0; }
+.fhead { display: flex; align-items: center; gap: 8px; width: 100%; padding: 12px 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); text-align: left; }
+.fhead:hover .ftitle { color: var(--un-blue-ink); }
+.fhead .ftitle { flex: 1; }
+.fcount { background: var(--un-blue-dark); color: #fff; border-radius: var(--r-pill); padding: 0 7px; font-size: 11px; line-height: 18px; letter-spacing: 0; }
+.fcount[hidden] { display: none; }
+.farrow { width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin: 0 4px 3px 0; transition: transform .15s; }
+.fhead[aria-expanded="true"] .farrow { transform: rotate(-135deg); margin-bottom: -3px; }
+.fbody { padding: 0 0 12px; }
+.fbody[hidden] { display: none; }
+#f-countryChosen:not(:empty), #f-otherChosen:not(:empty) { margin: 6px 0; }
+.chip.empty { opacity: .55; }
+.check > span { flex: 1; }
+
+.searchrow { margin-bottom: 10px; }
+.searchrow input { width: 100%; padding: 9px 12px; font: inherit; font-size: 14px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); }
+.activebar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 12px; }
+.activebar[hidden] { display: none; }
+.alabel { font-size: 12px; color: var(--muted); margin-right: 2px; }
+.achip { border: 1px solid var(--un-blue-dark); background: var(--accent-soft); color: var(--un-blue-ink); border-radius: var(--r-pill);
+  padding: 3px 10px; font: inherit; font-size: 12px; cursor: pointer; }
+.achip:hover { background: var(--un-blue-dark); color: #fff; }
+.divider.note { border-top: 0; background: var(--accent-soft); border-radius: var(--r-sm); color: var(--ink); margin: 0 0 6px; }
+.divider.note .btn-quiet { margin-left: 6px; }
+
+.card-foot { display: flex; flex-wrap: wrap; gap: 4px 20px; align-items: flex-start; margin-top: 8px; }
+.card-foot .export-check { padding-top: 1px; }
+.more-info { flex: 1 1 60%; min-width: 0; font-size: 13px; }
+.more-info summary { cursor: pointer; color: var(--un-blue-ink); font-weight: 600; width: fit-content; }
+.more-info[open] summary { margin-bottom: 6px; }
+.reasons { margin: 2px 0 8px; padding-left: 18px; font-size: 13px; }
+.reasons li { margin: 2px 0; }
+.why { color: var(--muted); font-size: 12px; }
+.why::before { content: "– "; }
+.tag.hit { background: var(--accent-soft); border-radius: 3px; padding: 0 3px; font-weight: 600; }
+.warn { color: #9a5b00; }
+
+/* phone: the header wraps instead of cutting off "Organisations & NGOs" */
+@media (max-width: 700px) {
+  header.site { flex-wrap: wrap; row-gap: 8px; }
+  header.site .spacer { display: none; }
+  .mode-switch { margin-right: 0; width: 100%; }
+  .mode-switch a { flex: 1; text-align: center; }
+  .results-head { align-items: flex-start; }
+}
+.linklike { border: 0; background: none; padding: 0; font: inherit; color: var(--un-blue-dark); text-decoration: underline; cursor: pointer; }

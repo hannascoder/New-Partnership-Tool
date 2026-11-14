@@ -3,9 +3,10 @@ with config/topic_keywords.yaml and returns topics with a strength.
 
 Texts used (each with its role):
   name          outlet name                              -> FOCUS on 1 strong word
-  description   Wikidata description, website meta description / title -> FOCUS on 1 strong word
-  about         Wikipedia introduction, website About page -> FOCUS on 2 strong words
-                (or strong + context), COVERS on 1 strong word
+  description   Wikidata description, website meta description / title -> FOCUS when short
+                (a definition) or 2 different strong words; else COVERS
+  about         Wikipedia introduction, website About page -> FOCUS on 2 different strong words
+                (one in the first sentence) or 3 anywhere; else COVERS
   menu          website menu / section names and their addresses -> DESK
   headlines     website headlines and home page text      -> COVERS on 2+ strong words
 Strength codes: 1 = focus, 2 = desk, 3 = covers (smaller = stronger).
@@ -165,15 +166,28 @@ class Matcher:
             if strength < r["s"]:
                 r["s"], r["why"] = strength, why
 
-        # FOCUS: name / descriptions
-        for kind, texts in (("name", [name]), ("description", descriptions)):
-            for text in texts:
-                for term, hits in self._strong_hits(text):
-                    for topic, sub in hits:
-                        add(topic, sub, FOCUS, f'{kind} mentions "{term}"')
-        # About texts (Wikipedia introduction, website About page): the FIRST sentence
-        # says what the outlet is -> a strong word there = FOCUS; elsewhere = COVERS
-        # (FOCUS also when 3+ different strong words of the topic appear)
+        # FOCUS: the name. A description (Wikidata description, website title / meta description)
+        # gives FOCUS only when it is a short definition ("climate news website": at most 12 words,
+        # not a list with commas) or names 2 different strong words of the topic; one word in a
+        # long text or in a list of sections ("News, Sustainability, Business, Sports") = COVERS
+        # (review 13.11.2026: one word made too many "Specialists").
+        for term, hits in self._strong_hits(name):
+            for topic, sub in hits:
+                add(topic, sub, FOCUS, f'name mentions "{term}"')
+        for text in descriptions:
+            per_topic = {}
+            for term, hits in self._strong_hits(text):
+                for topic, sub in hits:
+                    per_topic.setdefault(topic, []).append((term, sub))
+            short = len((text or "").split()) <= 12 and len(re.findall(r"[,;|·•/]", text or "")) <= 1
+            for topic, lst in per_topic.items():
+                terms = sorted({t for t, _ in lst})
+                s_ = FOCUS if short or len(terms) >= 2 else COVERS
+                for _, sub in lst:
+                    add(topic, sub, s_, 'description mentions "' + '", "'.join(terms[:3]) + '"')
+        # About texts (Wikipedia introduction, website About page): the FIRST sentence says what
+        # the outlet is -> FOCUS when a strong word is there AND a second, different strong word
+        # of the topic appears in the text, or when 3+ different strong words appear; else COVERS
         for label, text in abouts:
             first = re.split(r"(?<=[.!?。])\s", (text or "").strip(), maxsplit=1)[0]
             in_first = {topic for _, hs in self._strong_hits(first) for topic, _ in hs}
@@ -183,7 +197,7 @@ class Matcher:
                     per_topic.setdefault(topic, []).append((term, sub))
             for topic, lst in per_topic.items():
                 terms = sorted({t for t, _ in lst})
-                s_ = FOCUS if topic in in_first or len(terms) >= 3 else COVERS
+                s_ = FOCUS if (topic in in_first and len(terms) >= 2) or len(terms) >= 3 else COVERS
                 for _, sub in lst:
                     add(topic, sub, s_, f'{label}: "' + '", "'.join(terms[:3]) + '"')
         # DESK: menu entries (section words or strong words), also in the address.

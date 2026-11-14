@@ -38,10 +38,12 @@ all_status_label: "Must have all chosen statuses (e.g. ECOSOC and Global Compact
 # "Existing UN partner" (owner 13.11.2026): badge on the card, filter, export column; explained on the page.
 # "Associated with UN DGC" is left out for now (no list yet).
 un_partner:
-  statuses: [ecosoc_general, ecosoc_special, ecosoc_roster, un_global_compact, un_geneva]
+  # owner, 14.11.2026: without the UN Global Compact (it made 42 % of all organisations "partners");
+  # Global Compact participants keep their own status button and the note on the card
+  statuses: [ecosoc_general, ecosoc_special, ecosoc_roster, un_geneva]
   label: "Existing UN partner"
   filter_label: "Only existing UN partners"
-  explanation: "Existing UN partner = has ECOSOC consultative status (General, Special or Roster), takes part in the UN Global Compact, or is accredited at the UN in Geneva. Only being registered in the ECOSOC database or publishing projects in IATI does not count."
+  explanation: "Existing UN partner = has ECOSOC consultative status (General, Special or Roster) or is accredited at the UN in Geneva. Taking part in the UN Global Compact, only being registered in the ECOSOC database or publishing projects in IATI does not count."
 
 # Organisation type (owner 13.11.2026: page "Organisations & NGOs"; filter to show only NGOs or other types)
 org_kind:
@@ -159,3 +161,8 @@ exclude:
 
 # Ranking within a country (size filter "Top 10 / Top 50"): UN status weight (highest), then the
 # number of Wikipedia language versions, then the number of sources.
+
+# Topic strength (review 13.11.2026): an organisation whose ECOSOC fields of activity lead to this many
+# topics or more ticked "everything"; a field alone then only counts as "Reports on it" (not "Has a
+# section on it"). "Specialist" always needs the topic in the name or 2 clear words in its own description.
+many_fields: 10
