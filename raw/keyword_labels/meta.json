@@ -1,9 +1,9 @@
 {
   "source": "keyword_labels",
-  "fetched_at": "2026-11-13T23:08:06Z",
+  "fetched_at": "2026-11-14T22:43:30Z",
   "records": 2,
-  "matched": 741,
-  "skipped": 383,
+  "matched": 742,
+  "skipped": 384,
   "languages": 403,
   "url": "https://www.wikidata.org/w/api.php"
 }
