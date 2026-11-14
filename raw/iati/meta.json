@@ -1,9 +1,9 @@
 {
   "source": "iati",
-  "fetched_at": "2026-11-11T19:06:52Z",
+  "fetched_at": "2026-11-14T19:29:11Z",
   "records": 1340,
   "url": "https://iatiregistry.org/api/3/action/organization_list",
-  "total_in_source": 2138,
+  "total_in_source": 2140,
   "ngo_types": {
     "21": "international NGO",
     "22": "national NGO",

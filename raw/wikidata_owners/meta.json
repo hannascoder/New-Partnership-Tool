@@ -1,8 +1,8 @@
 {
   "source": "wikidata_owners",
-  "fetched_at": "2026-11-06T20:08:30Z",
-  "records": 8787,
+  "fetched_at": "2026-11-14T19:11:59Z",
+  "records": 8788,
   "url": "https://www.wikidata.org/w/api.php",
-  "owners": 8787,
+  "owners": 8788,
   "licence": "Wikidata: CC0 (public domain)"
 }
