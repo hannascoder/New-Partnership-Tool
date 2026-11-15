@@ -1,17 +1,17 @@
 # NGOs (phase 2)
 
-Built 2026-11-14. Sources: ecosoc 12838, global_compact 2331, wikidata_ngo 58399, un_geneva 1471, iati 1340
+Built 2026-11-15. Sources: ecosoc 12838, global_compact 2331, wikidata_ngo 58399, un_geneva 1471, iati 1340
 
 **18,594 NGOs** shown on the NGO page, 1,903 not shown (reports/ngos_excluded.md).
 
 | Information | Share |
 |---|---|
-| Topic | 65 % |
+| Topic | 72 % |
 | Topic from ECOSOC fields of activity | 41 % |
 | Target audience | 28 % |
-| Language | 66 % |
+| Language | 74 % |
 | Website | 60 % |
-| E-mail | 16 % |
+| E-mail | 21 % |
 | ECOSOC consultative status | 29 % |
 | Only registered in ECOSOC (note on the card) | 30 % |
 

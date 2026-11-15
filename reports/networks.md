@@ -6,11 +6,11 @@
 | sdg_media_compact | 331 | 331 | 0 |
 | ifcn_signatories | 183 | 175 | 8 |
 | efcsn_signatories | 62 | 60 | 2 |
-| news_agencies | 195 | 193 | 2 |
-| state_media | 911 | 859 | 52 |
+| news_agencies | 196 | 194 | 2 |
+| state_media | 925 | 873 | 52 |
 | fact_checking_sites | 130 | 130 | 0 |
-| ebu_members | 153 | 151 | 2 |
-| abu_members | 146 | 140 | 6 |
+| ebu_members | 162 | 160 | 2 |
+| abu_members | 148 | 142 | 6 |
 | asbu_members | 28 | 28 | 0 |
 | cbu_members | 19 | 15 | 4 |
 

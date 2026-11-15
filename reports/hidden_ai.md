@@ -1,6 +1,6 @@
 # Not shown after the AI reading (not media, or no longer published)
 
-220 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
+219 entries. To bring one back: tell Claude the id (or remove its note in cache/ai_classification.json).
 
 | Id | Name | Country | Reason |
 |---|---|---|---|
@@ -109,7 +109,6 @@
 | pf-001272 | Echo TV | HUN | no longer published: Wikipedia: Echo TV 'was' a channel |
 | pf-006373 | Familia | HUN | no longer published: Wikipedia: historic magazine (1865-1880 in Budapest) |
 | pf-000303 | Magyar Tudomány | HUN | not a media outlet: Wikidata describes it as "revue scientifique" |
-| pf-001511 | Music FM | HUN | no longer published: Wikipedia: Music FM 'was' a radio station (ceased) |
 | pf-000746 | Nyugat | HUN | no longer published: Wikipedia: historic journal (first half of the 20th century) |
 | pf-001127 | Népszava | HUN | no longer published: Wikipedia: Népszava 'was' a newspaper (ended 2026) |
 | pf-000455 | Pesti Hírlap | HUN | no longer published: Wikidata: newspapers between 1841 and 1994 |

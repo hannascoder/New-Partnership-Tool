@@ -1,6 +1,6 @@
 # Excluded as far-right (not shown on the website)
 
-177 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
+175 outlets. Reason = the open evidence used (config/rules.yaml, exclude_far_right).
 To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 
 | Id | Name | Country | Reason |
@@ -156,11 +156,9 @@ To bring one back: add a line to overrides.csv: `<id>,far_right,no,<why>`.
 | pf-027761 | Counter-Currents | USA | AI reading: Wikidata: far-right commentary website |
 | pf-026219 | Daily Caller News Foundation | USA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): nonprofit arm of the right-wing Daily Caller |
 | pf-064102 | Epoch Times | USA | AI reading (right-wing populist): general knowledge, not in the profile text (please check): far-right, Falun Gong-affiliated newspaper |
-| pf-030715 | FOX NEWS | USA | same name as an excluded outlet (AI reading (right-wing populist): Wikipedia: conservative political commentary c) |
 | pf-000187 | Fox News | USA | AI reading (right-wing populist): Wikipedia: conservative political commentary channel founded to appeal to a conservative audience, hired a Republican consultant |
 | pf-041254 | Fox News International | USA | AI reading (right-wing populist): international channel of Fox News |
 | pf-006436 | Fox News Radio | USA | AI reading (right-wing populist): radio network of Fox News |
-| pf-017348 | Infowars | USA | Wikidata political ideology of the owner Alex Jones: white nationalism |
 | pf-027394 | National Renaissance Bulletin | USA | Wikidata political ideology: neo-Nazism |
 | pf-008582 | National Vanguard | USA | Wikidata political ideology: neo-Nazism |
 | pf-015108 | Newsmax TV | USA | AI reading: Wikipedia: right-wing and far-right |

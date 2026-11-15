@@ -3,8 +3,8 @@
 | Source | In file | Outside the 195 / no country | Included | Needs confirmation | Excluded |
 |---|---|---|---|---|---|
 | wikidata | 83677 | 0 | 61043 | 0 | 22634 |
-| radio_browser | 61495 | 0 | 10541 | 19948 | 31006 |
-| iptv_org | 30091 | 0 | 16397 | 4837 | 8857 |
+| radio_browser | 50991 | 0 | 8701 | 16640 | 25650 |
+| iptv_org | 30172 | 0 | 16429 | 4845 | 8898 |
 | media_cloud | 28384 | 555 | 27829 | 0 | 0 |
 
 Language values not recognised (top 30; add to config/sources/language_names.yaml):
@@ -13,7 +13,6 @@ Language values not recognised (top 30; add to config/sources/language_names.yam
 - Putonghua (4)
 - Luganda (4)
 - Haitian Creole (4)
-- grc (4)
 - iw (4)
 - mgx (4)
 - Sanskrit (3)
@@ -24,8 +23,6 @@ Language values not recognised (top 30; add to config/sources/language_names.yam
 - Q1348800 (3)
 - Peninsular Spanish (3)
 - English Wikipedia (3)
-- eo (3)
-- cz (3)
 - Judaeo-Spanish (2)
 - written vernacular Chinese (2)
 - Modern Hebrew (2)
@@ -39,3 +36,6 @@ Language values not recognised (top 30; add to config/sources/language_names.yam
 - Karakalpak (2)
 - Kyrgyz (2)
 - Hiberno-English (2)
+- Malaysian Tamil (2)
+- Flemish Dutch (2)
+- Kadazandusun (2)

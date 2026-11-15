@@ -1,42 +1,42 @@
 # Step 3b: merged outlets
 
-- Records read: 205232
-- **Outlets after merging and inclusion rules: 71076**
-- in 2+ sources (verified): 14002
-- merges refused because two different entries of the same source would have been joined: 21783
-- with a country conflict between sources: 215
+- Records read: 194835
+- **Outlets after merging and inclusion rules: 69932**
+- in 2+ sources (verified): 13933
+- merges refused because two different entries of the same source would have been joined: 18093
+- with a country conflict between sources: 214
 
 ## Which sources each outlet comes from
 
 | Sources | Outlets |
 |---|---|
-| media_cloud | 20094 |
-| wikidata | 15561 |
-| iptv_org | 13324 |
-| radio_browser | 7782 |
-| wikidata + media_cloud | 6195 |
-| wikidata + iptv_org | 2861 |
-| wikidata + radio_browser | 2604 |
-| network list only | 768 |
-| wikidata + media_cloud + iptv_org | 457 |
-| wikidata + media_cloud + radio_browser | 347 |
-| media_cloud + iptv_org | 274 |
-| iptv_org + radio_browser | 252 |
-| media_cloud + radio_browser | 234 |
-| wikidata + iptv_org + radio_browser | 199 |
-| wikidata + media_cloud + iptv_org + radio_browser | 81 |
+| media_cloud | 20089 |
+| wikidata | 15560 |
+| iptv_org | 13359 |
+| radio_browser | 6663 |
+| wikidata + media_cloud | 6202 |
+| wikidata + iptv_org | 2869 |
+| wikidata + radio_browser | 2541 |
+| network list only | 783 |
+| wikidata + media_cloud + iptv_org | 461 |
+| wikidata + media_cloud + radio_browser | 350 |
+| media_cloud + iptv_org | 275 |
+| iptv_org + radio_browser | 240 |
+| media_cloud + radio_browser | 224 |
+| wikidata + iptv_org + radio_browser | 192 |
+| wikidata + media_cloud + iptv_org + radio_browser | 79 |
 
 ## Merged groups that were left out
 
 | Reason | Groups |
 |---|---|
-| radio/TV only in Wikidata, no content information | 29978 |
-| no information tag | 26692 |
+| radio/TV only in Wikidata, no content information | 30127 |
+| no information tag | 23561 |
 | class excluded | 17012 |
-| no tags | 13952 |
-| category not included | 7222 |
+| no tags | 12868 |
+| category not included | 7265 |
 | closed according to Wikidata | 5527 |
-| no category | 3728 |
+| no category | 3737 |
 | closed 2012-01-01 (iptv-org) | 25 |
 | closed 2023-08-14 (iptv-org) | 20 |
 | closed 2020-01-01 (iptv-org) | 19 |
@@ -50,8 +50,8 @@
 
 Often different outlets with the same name (e.g. local stations); checked by hand.
 
-- MEX: 14 × "radio formula"
 - USA: 12 × "independent"
+- MEX: 11 × "radio formula"
 - USA: 8 × "collegian"
 - USA: 7 × "reporter"
 - USA: 7 × "tribune"
@@ -85,8 +85,8 @@ Often different outlets with the same name (e.g. local stations); checked by han
 - BRA: 4 × "jornal cidade brazil"
 - CHN: 4 × "national"
 - USA: 3 × "disney channel"
-- USA: 3 × "fox news"
 - ESP: 3 × "razon"
 - ESP: 3 × "vanguardia"
 - ARG: 3 × "cronica tv"
-- ITA: 3 × "rai radio 2"
+- ESP: 3 × "progreso"
+- RUS: 3 × "life"

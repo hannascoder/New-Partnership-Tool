@@ -17,11 +17,11 @@
 
 | Strength | Checked | Wrong | Share wrong |
 |---|---|---|---|
-| Specialist | 39 | 4 | 10 % |
-| Has a section on it | 303 | 9 | 3 % |
-| Reports on it | 71 | 7 | 10 % |
-| **All** | 413 | 20 | **5 %** |
-| **Shown by default** (without "Reports on it") | 342 | 13 | **4 %** |
+| Specialist | 37 | 4 | 11 % |
+| Has a section on it | 302 | 9 | 3 % |
+| Reports on it | 69 | 7 | 10 % |
+| **All** | 408 | 20 | **5 %** |
+| **Shown by default** (without "Reports on it") | 339 | 13 | **4 %** |
 
 - Right assignments from the check that are no longer made: 48
 - Assignments made now that were not there at the check (not checked yet): 0
