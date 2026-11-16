@@ -19,6 +19,8 @@ Decisions made after the briefing was written (these win over the briefing):
 
 - **Send mail** (owner, 16.11.2026): button "Send mail" on every card with an organisation e-mail (else "Open contact page"). Pop-up with the template from `config/email_templates.yaml` (media / organisation; all recipients treated as new partners; English; no signature, ends with "Best regards,"); gaps in [brackets] highlighted yellow; opens the Outlook app (mailto), Outlook on the web or Gmail with a plain-text draft and copies the text with the yellow marks. Mails are sent one by one; the export lists e-mail and contact page. The 2-monthly automatic update re-checks the websites and thus which e-mail addresses are still current.
 
+- **Start from a UN mail or text** (owner, 16.11.2026): box above the results on both pages; pasted text (UN VIDEO UPDATE, press release) -> country, topics, format, language are read in the browser by rules (`config/dropin.yaml` + topic keywords, no AI, text never leaves the browser) and the normal filters are set. Text only (no mail files); media and NGOs stay on separate pages. Stage 1 built 16.11.2026; stage 2 ("reporting on it right now", GDELT) comes after the owner's test with more real mails. Details: docs/STATUS.md.
+
 - **Topic keywords** (owner, 09.11.2026): every topic button must work. Hidden keyword lists per topic (`config/topic_keywords.yaml`, 9 UN News languages only), three strengths Focus / Desk / Covers; plan T1-T6 in docs/STATUS.md.
 
 - **Export feature:** built 06.11.2026 after the owner approved sample files (all 15 columns; PDF/Word landscape + portrait). Spec: `docs/EXPORT_SPEC.md`.

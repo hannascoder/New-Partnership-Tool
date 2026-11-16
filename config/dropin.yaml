@@ -1,0 +1,292 @@
+# ============================================================================
+# "Start from a UN text" (owner's request 16.11.2026).
+# Someone pastes a UN mail (e.g. a "UN VIDEO UPDATE"), a press release or a
+# story into the box above the results. The website reads country, topics,
+# format and language from the text and sets the normal filters. Everything
+# happens in the browser: the text is not stored or sent anywhere.
+#
+# No AI service is used. The text is compared with
+#   - the country names and everyday names in countries.csv, plus `places` below
+#   - the topic keywords in topic_keywords.yaml ("strong" and "context" words,
+#     all 9 languages), plus `extra_topic_words` below
+#   - `formats` and `language_words` below
+# pipeline/build/dropin.py writes all of this to site/data/dropin.json.
+# ============================================================================
+
+# ---- how many suggestions -------------------------------------------------
+max_topics: 3          # at most this many topic buttons are switched on
+min_topic_score: 2     # a strong word = 2 points, a context word = 1, in the headline = double
+topic_share: 0.4       # a topic needs at least this share of the best topic's points
+max_countries: 3
+country_share: 0.34    # a country needs at least this share of the best country's points
+                       # (so "funded by Germany" in a story about Lebanon does not add Germany)
+# Which list the suggestions show (tested 16.11.2026 with a mail about Lebanon):
+#   media: few general news outlets have a topic, so with "only matches" a country
+#          gives 2-3 outlets. Therefore: all outlets of the country that can use the
+#          format, those that work on the topic first (weak matches count).
+#   ngo:   only the organisations that work on the topic (enough of them have one).
+only_matches: {media: false, ngo: true}
+weak_matches: {media: true, ngo: false}
+apply_language: false  # false: the language is shown as a suggestion, one click adds it
+                       # (a video with English subtitles is also useful for other audiences)
+
+# ---- parts of a mail that say nothing about its subject --------------------
+# Lines that contain one of these are ignored (letterhead, footer, contact line).
+skip_lines:
+  - "UN VIDEO UPDATE"
+  - "Contact:"
+  - "Download the video"
+  - "Translations are AI-generated"
+  - "UN Video creates content"
+  - "Videos must be published in full"
+  - "Point of Contact"
+  - "United Nations Video Section"
+  - "Department of Global Communications"
+  - "News and Media Division"
+  - "youtube.com/"
+  - "Unsubscribe"
+  - "For more information"
+# Everything after such a line is read only for format and language
+# (in a UN Video mail: NEWS ["English Subtitles"] ["None"] Square 01:08).
+technical_markers:
+  - "TECHNICAL DETAILS"
+# Expressions in which a country name means something else; removed before matching.
+ignore_phrases:
+  - "US$"
+  - "Indian Ocean"
+  - "New Mexico"
+  - "Guinea worm"
+  - "Gulf of Guinea"
+  - "Gulf of Mexico"
+  - "Jordan River"
+  - "River Jordan"
+  - "Lake Chad"
+  - "Panama Canal"
+  - "Turkey meat"
+
+# ---- format -----------------------------------------------------------------
+# button under "Format & channel" -> words that show the material is of this kind
+formats:
+  video: [video, videos, footage, b-roll, broll, unifeed, subtitles, mp4]
+  audio: [audio, podcast, radio feature, soundbite, soundbites, mp3]
+  photo: [photo, photos, photo essay, photo gallery, photographs]
+  graphic: [infographic, infographics, social media card, social media cards, data visualisation, data visualization]
+  text: [press release, op-ed, feature story, news story, statement attributable]
+# shown next to the format as extra information (no filter yet; see the owner's
+# to-do "video format")
+shapes: [Square, Vertical, Horizontal, Landscape, Portrait, "16:9", "9:16", "1:1"]
+# a language counts when its English name stands directly before or after one of these
+language_words: [subtitles, subtitled, subtitle, version, narration, voice-over, voiceover, audio, dubbed, captions, language]
+
+# ---- extra topic words --------------------------------------------------------
+# Words typical for UN texts that are too general for classifying outlets
+# (topic_keywords.yaml) but clear in a UN mail. They count like strong words.
+extra_topic_words:
+  conflict_security: [peacekeeper, peace operation, peace operations, peacekeeping mission, unifil, minusca, undof, unficyp, hostilities, shelling, cessation of hostilities, blue line]
+  humanitarian: [humanitarian response, aid convoy, aid convoys, life-saving, lifesaving]
+  migration: [returnees, displaced, forcibly displaced]
+  climate: [cop30, cop31, cop32, unfccc, climate summit]
+  health: [who chief, world health organization, outbreak, vaccination campaign]
+  hunger_food: [food insecurity, world food programme, acute hunger, ipc]
+  children_youth: [unicef, schoolchildren]
+  gender_equality: [un women, women and girls]
+  human_rights: [ohchr, human rights council, high commissioner for human rights, rights office]
+  disasters: [earthquake, cyclone, hurricane, floods, flooding, typhoon, drought]
+
+# ---- places -------------------------------------------------------------------
+# Extra names that point to a country, besides its name and everyday names in
+# countries.csv: adjective ("Lebanese"), capital, well-known regions and cities,
+# UN missions. Names in CAPITALS (UNIFIL, DRC) must be written like that in the
+# text; all others are found in any spelling of upper and lower case.
+# Left out on purpose because they mean other things too: Male, Victoria,
+# Kingston, Georgetown, Santiago, San José, Indian, Korean, Guinean, American,
+# and the adjectives that are also UN languages (French, Spanish, Portuguese,
+# Russian, Chinese: "with French subtitles"). Congolese is added to DR Congo only.
+# Jerusalem is not assigned to a country (East Jerusalem: State of Palestine, as the UN does).
+places:
+  AFG: [Afghan, Afghans, Kabul, Kandahar, Herat, UNAMA]
+  ALB: [Albanian, Tirana]
+  DZA: [Algerian, Algiers]
+  AND: [Andorran]
+  AGO: [Angolan, Luanda]
+  ATG: [Antiguan]
+  ARG: [Argentine, Argentinian, Buenos Aires]
+  ARM: [Armenian, Yerevan]
+  AUS: [Australian, Canberra, Sydney, Melbourne]
+  AUT: [Austrian, Vienna]
+  AZE: [Azerbaijani, Baku]
+  BHS: [Bahamian, Nassau]
+  BHR: [Bahraini, Manama]
+  BGD: [Bangladeshi, Dhaka, "Cox's Bazar", Coxs Bazar]
+  BRB: [Barbadian, Bridgetown]
+  BLR: [Belarusian, Minsk]
+  BEL: [Belgian, Brussels]
+  BLZ: [Belizean, Belmopan]
+  BEN: [Beninese, Cotonou, Porto-Novo]
+  BTN: [Bhutanese, Thimphu]
+  BOL: [Bolivian, La Paz]
+  BIH: [Bosnian, Sarajevo, Srebrenica, Bosnia]
+  BWA: [Batswana, Gaborone]
+  BRA: [Brazilian, Brasília, Brasilia, Rio de Janeiro, São Paulo, Sao Paulo, Belém, Amazonas]
+  BRN: [Bruneian]
+  BGR: [Bulgarian, Sofia]
+  BFA: [Burkinabè, Burkinabe, Ouagadougou]
+  BDI: [Burundian, Bujumbura, Gitega]
+  CPV: [Cabo Verdean, Cape Verdean, Praia]
+  KHM: [Cambodian, Phnom Penh]
+  CMR: [Cameroonian, Yaoundé, Yaounde, Douala]
+  CAN: [Canadian, Ottawa, Toronto, Montreal]
+  CAF: [Central African, Bangui, MINUSCA, CAR]
+  TCD: [Chadian, "N'Djamena", Ndjamena]
+  CHL: [Chilean]
+  CHN: [Beijing, Shanghai]
+  COL: [Colombian, Bogotá, Bogota]
+  COM: [Comorian, Moroni]
+  COG: [Brazzaville]
+  CRI: [Costa Rican]
+  CIV: [Ivorian, Abidjan, Yamoussoukro]
+  HRV: [Croatian, Zagreb]
+  CUB: [Cuban, Havana]
+  CYP: [Cypriot, Nicosia, UNFICYP]
+  CZE: [Czech, Prague]
+  PRK: [North Korean, Pyongyang, DPRK]
+  COD: [Congolese, RDC, Kinshasa, Goma, Bukavu, Kivu, North Kivu, South Kivu, Ituri, MONUSCO]
+  DNK: [Danish, Copenhagen]
+  DJI: [Djiboutian]
+  DOM: [Santo Domingo]
+  ECU: [Ecuadorian, Quito, Guayaquil]
+  EGY: [Egyptian, Cairo, Sharm el-Sheikh]
+  SLV: [Salvadoran, San Salvador]
+  GNQ: [Equatoguinean, Malabo]
+  ERI: [Eritrean, Asmara]
+  EST: [Estonian, Tallinn]
+  SWZ: [Swazi, Mbabane]
+  ETH: [Ethiopian, Addis Ababa, Tigray, Amhara]
+  FJI: [Fijian, Suva]
+  FIN: [Finnish, Helsinki]
+  FRA: [Paris]
+  GAB: [Gabonese, Libreville]
+  GMB: [Gambian, Banjul]
+  GEO: [Georgian, Tbilisi]
+  DEU: [German, Berlin, Bonn]
+  GHA: [Ghanaian, Accra]
+  GRC: [Greek, Athens, Lesbos]
+  GRD: [Grenadian]
+  GTM: [Guatemalan, Guatemala City]
+  GIN: [Conakry]
+  GNB: [Bissau]
+  GUY: [Guyanese]
+  HTI: [Haitian, Port-au-Prince, BINUH]
+  HND: [Honduran, Tegucigalpa]
+  HUN: [Hungarian, Budapest]
+  ISL: [Icelandic, Reykjavik]
+  IND: [New Delhi, Delhi, Mumbai, Kolkata]
+  IDN: [Indonesian, Jakarta]
+  IRN: [Iranian, Tehran]
+  IRQ: [Iraqi, Baghdad, Mosul, Erbil, UNAMI]
+  IRL: [Irish, Dublin]
+  ISR: [Israeli, Tel Aviv]
+  ITA: [Italian, Rome, Lampedusa]
+  JAM: [Jamaican]
+  JPN: [Japanese, Tokyo, Hiroshima, Nagasaki]
+  JOR: [Jordanian, Amman, Zaatari]
+  KAZ: [Kazakh, Astana, Almaty]
+  KEN: [Kenyan, Nairobi, Kakuma, Dadaab, Mombasa]
+  KIR: [Tarawa]
+  KWT: [Kuwaiti, Kuwait City]
+  KGZ: [Kyrgyz, Bishkek]
+  LAO: [Lao, Laotian, Vientiane]
+  LVA: [Latvian, Riga]
+  LBN: [Lebanese, Beirut, UNIFIL, Bekaa, Tyre, Naqoura]
+  LSO: [Basotho, Maseru]
+  LBR: [Liberian, Monrovia]
+  LBY: [Libyan, Tripoli, Benghazi, UNSMIL, Derna]
+  LTU: [Lithuanian, Vilnius]
+  LUX: [Luxembourgish]
+  MDG: [Malagasy, Antananarivo]
+  MWI: [Malawian, Lilongwe]
+  MYS: [Malaysian, Kuala Lumpur]
+  MDV: [Maldivian]
+  MLI: [Malian, Bamako, Timbuktu]
+  MLT: [Maltese, Valletta]
+  MHL: [Marshallese, Majuro]
+  MRT: [Mauritanian, Nouakchott]
+  MUS: [Mauritian, Port Louis]
+  MEX: [Mexican, Mexico City]
+  MDA: [Moldovan, Chișinău, Chisinau]
+  MNG: [Mongolian, Ulaanbaatar]
+  MNE: [Montenegrin, Podgorica]
+  MAR: [Moroccan, Rabat, Marrakech, Casablanca]
+  MOZ: [Mozambican, Maputo, Cabo Delgado]
+  MMR: [Burmese, Yangon, Naypyidaw, Rakhine, Rohingya]
+  NAM: [Namibian, Windhoek]
+  NPL: [Nepali, Nepalese, Kathmandu]
+  NLD: [Netherlands, Dutch, Amsterdam, The Hague]
+  NZL: [New Zealander, Wellington, Auckland]
+  NIC: [Nicaraguan, Managua]
+  NER: [Nigerien, Niamey]
+  NGA: [Nigerian, Abuja, Lagos, Borno, Maiduguri]
+  MKD: [Macedonian, Skopje]
+  NOR: [Norwegian, Oslo]
+  OMN: [Omani, Muscat]
+  PAK: [Pakistani, Islamabad, Karachi, Lahore]
+  PLW: [Palauan]
+  PAN: [Panamanian, Panama City, Darién, Darien]
+  PNG: [Papua New Guinean, Port Moresby]
+  PRY: [Paraguayan, Asunción, Asuncion]
+  PER: [Peruvian, Lima]
+  PHL: [Filipino, Philippine, Manila, Mindanao]
+  POL: [Polish, Warsaw]
+  PRT: [Lisbon]
+  QAT: [Qatari, Doha]
+  KOR: [South Korean, Seoul]
+  ROU: [Romanian, Bucharest]
+  RUS: [Moscow]
+  RWA: [Rwandan, Kigali]
+  WSM: [Samoan, Apia]
+  STP: [São Tomé, Sao Tome]
+  SAU: [Saudi, Riyadh, Jeddah]
+  SEN: [Senegalese, Dakar]
+  SRB: [Serbian, Belgrade]
+  SYC: [Seychellois]
+  SLE: [Sierra Leonean, Freetown]
+  SGP: [Singaporean]
+  SVK: [Slovak, Bratislava]
+  SVN: [Slovenian, Ljubljana]
+  SLB: [Solomon Islander, Honiara]
+  SOM: [Somali, Mogadishu, Baidoa, UNSOM, Somaliland]
+  ZAF: [South African, Pretoria, Johannesburg, Cape Town, Durban]
+  SSD: [South Sudanese, Juba, UNMISS, Malakal, Bentiu]
+  ESP: [Madrid, Barcelona, Seville]
+  LKA: [Sri Lankan, Colombo]
+  SDN: [Sudanese, Khartoum, Darfur, El Fasher, Port Sudan, Kordofan]
+  SUR: [Surinamese, Paramaribo]
+  SWE: [Swedish, Stockholm]
+  CHE: [Swiss, Bern, Zurich]
+  SYR: [Syrian, Damascus, Aleppo, Idlib, UNDOF, Homs]
+  TJK: [Tajik, Dushanbe]
+  THA: [Thai, Bangkok]
+  TLS: [Timorese, Dili]
+  TGO: [Togolese, Lomé, Lome]
+  TON: [Tongan, "Nuku'alofa"]
+  TTO: [Trinidadian, Port of Spain]
+  TUN: [Tunisian, Tunis]
+  TUR: [Turkish, Ankara, Istanbul, Gaziantep]
+  TKM: [Turkmen, Ashgabat]
+  TUV: [Tuvaluan, Funafuti]
+  UGA: [Ugandan, Kampala]
+  UKR: [Ukrainian, Kyiv, Kharkiv, Odesa, Odessa, Donbas, Zaporizhzhia, Kherson, Mariupol]
+  ARE: [Emirati, Abu Dhabi, Dubai, UAE]
+  GBR: [British, London, Scotland, Wales, England]
+  TZA: [Tanzanian, Dodoma, Dar es Salaam, Zanzibar]
+  USA: [Washington]
+  URY: [Uruguayan, Montevideo]
+  UZB: [Uzbek, Tashkent]
+  VUT: [Ni-Vanuatu, Port Vila]
+  VEN: [Venezuelan, Caracas]
+  VNM: [Vietnamese, Hanoi, Ho Chi Minh City]
+  YEM: [Yemeni, "Sana'a", Sanaa, Aden, Hodeidah, Marib]
+  ZMB: [Zambian, Lusaka]
+  ZWE: [Zimbabwean, Harare]
+  VAT: [Vatican City]
+  PSE: [Palestinian, Palestinians, Gaza, Gaza Strip, West Bank, Ramallah, Rafah, Khan Younis, Khan Yunis, UNRWA, East Jerusalem, Occupied Palestinian Territory]
