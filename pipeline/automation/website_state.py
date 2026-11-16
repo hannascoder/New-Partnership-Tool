@@ -11,6 +11,7 @@ Every check is counted once (by its date), so running this twice changes nothing
 """
 import gzip
 import json
+from datetime import date
 from pathlib import Path
 
 import yaml
@@ -21,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def main():
     auto = (yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8")).get("automation") or {})
     dead = [x.lower() for x in auto.get("dead_errors") or []]
+    gap = auto.get("min_days_between_counted_checks", 30)
     f = ROOT / "cache" / "website_fails.json"
     fails = json.load(open(f, encoding="utf-8")) if f.exists() else {}
     seen = set()
@@ -31,6 +33,9 @@ def main():
             checked = w.get("checked") or ""
             if checked <= last:
                 continue  # this check was counted already
+            is_dead_now = w.get("status") == "error" and any(d in str(w.get("error") or "").lower() for d in dead)
+            if is_dead_now and last and (date.fromisoformat(checked) - date.fromisoformat(last)).days < gap:
+                continue  # dead again only a few days later: "3 in a row" means 3 UPDATES, not 3 checks in one week
             is_dead = w.get("status") == "error" and any(d in str(w.get("error") or "").lower() for d in dead)
             if is_dead:
                 fails[oid] = [n + 1, checked]
