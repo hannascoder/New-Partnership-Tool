@@ -491,6 +491,7 @@ def main():
         "networks": [{"id": k, "label": v} for k, v in NETWORK_FILTER.items()],
         "why": [t for t, _ in sorted(why.items(), key=lambda x: x[1])],
         "codes": codes,
+        "email_templates": yaml.safe_load(open(CFG / "email_templates.yaml", encoding="utf-8")),  # "Send mail"
         "ngo": {k: ngo_cfg[k] for k in ("un_status", "only_ecosoc_label", "hide_registered_label", "hq_only_label",
                                         "geo_scope", "page_hint", "page_title", "all_status_label", "un_partner", "org_kind")}
                | {"gc_status_note": yaml.safe_load(open(CFG / "sources" / "global_compact.yaml", encoding="utf-8"))["status_note"]}

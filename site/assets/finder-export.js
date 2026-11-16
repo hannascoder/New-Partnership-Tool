@@ -57,7 +57,7 @@
   }
   function link(it, key) {
     if (key === "website" && it.website) return it.website;
-    if (key === "contact" && it.contact) return it.contact.includes("@") && !it.contact.startsWith("http") ? "mailto:" + it.contact : it.contact;
+    if (key === "contact" && it.contact) { const c = it.contact.split(" · ")[0]; return c.includes("@") && !c.startsWith("http") ? "mailto:" + c : c; }
     if (key === "social" && it.social && it.social.length) return it.social[0][1];
     return null;
   }
