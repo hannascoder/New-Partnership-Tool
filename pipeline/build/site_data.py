@@ -529,6 +529,10 @@ def main():
         html = idx.read_text(encoding="utf-8")
         html = _re.sub(r'(assets/[a-z\-]+\.(?:js|css))(\?v=[^"]*)?"', lambda m: f'{m.group(1)}?v={ver}"', html)
         idx.write_text(html, encoding="utf-8")
+    # word lists for "Start from a UN text" (config/dropin.yaml -> site/data/dropin.json)
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import dropin
+    dropin.build()
     sizes = ", ".join(f"{f} {(data / f).stat().st_size / 1e6:.1f} MB" for f in files)
     print(f"site/data: {len(out)} outlets in {len(files)} files ({sizes}); {len(ngo_out)} NGOs in {len(nfiles)} files")
 

@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-16 (evening): "Start from a UN mail or text" - stage 1
+- New box above the results on both pages (Media, Organisations & NGOs): paste the text of a UN mail
+  (e.g. a UN VIDEO UPDATE), a press release or a story and press "Suggest partners". The tool reads
+  country, topics, format and language from the text and switches on the normal filters. Every find is
+  shown as a button that can be switched off again; "Why these suggestions?" lists the words it found.
+- No AI service and nothing is sent anywhere: the text is compared in the browser with the country names,
+  the topic keyword lists and a few rules (`config/dropin.yaml`).
+- Media: all outlets of the country that can use the format, those that work on the topic first.
+  NGOs: only organisations that work on the topic. The link "Show matching organisations & NGOs for this
+  text" carries the text to the other page.
+- The language (e.g. "English subtitles") is shown but not switched on by itself.
+- Not yet: "is reporting on this right now" (stage 2, needs a test of the open news database GDELT).
+
 ## 2026-11-16: first automatic update checked, two corrections
 - The first run of "Automatic update" (started by hand on 14.11.) went through in 5 hours and published on
   its own: all sources fetched again, 17,271 websites visited in about 1 hour, 285 new outlets (marked

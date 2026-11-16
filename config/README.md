@@ -10,6 +10,7 @@ change, the check `Check config` runs by itself and tells you if something is wr
 | `countries.csv` | 193 UN member states + 2 observer states (State of Palestine, Holy See), with UN M49 region, subregion and intermediate region, plus everyday names for the search (`aliases`) | Only `aliases`. The rest is generated, see below |
 | `languages.csv` | 7,027 living languages (ISO 639-3). The 9 language buttons have a number in `button` (1-9 = display order) | Only `name` and `button`. The rest is generated |
 | `rules.yaml` | Rules that assign categories ("member of X → topic Y"). Empty until step 4 | Yes |
+| `dropin.yaml` | Rules for "Start from a UN mail or text": lines of a mail to skip, words for each format, extra topic words, place names per country (adjective, capital, regions, UN missions), how many suggestions | Yes |
 | `../overrides.csv` | Hand corrections for single outlets. They always win | Yes |
 
 ## Regions
