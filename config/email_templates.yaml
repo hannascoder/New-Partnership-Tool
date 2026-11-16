@@ -1,0 +1,61 @@
+# E-mail templates for the button "Send mail" on the cards (owner 16.11.2026).
+# - Every recipient is treated as a NEW partner for now (owner).
+# - English only for now.
+# - Text in [square brackets] must be filled in by the sender: it is highlighted in yellow
+#   (in the preview and in the copied text) and stays in brackets in the plain-text mail draft.
+# - Filled in by the tool (not highlighted):
+#     {name}             name of the outlet / organisation
+#     {topic} / {Topic}  the topic chosen in the filter, else the organisation's main topic (lower case / capital first letter)
+#     {language_phrase}  " for your <language>-speaking audience" when the language is known, else nothing
+# - No signature (owner): the mail ends with "Best regards,".
+# Edit these texts freely; keep the {…} names as they are.
+
+media:
+  label: "Media outlet"
+  subject: "{Topic} content from the United Nations for {name}"
+  body: |
+    Dear {name} team,
+
+    With [occasion or news moment, e.g. the International Day of …] coming up, we would like to make sure you have the impactful coverage your audience needs. We are reaching out to share a curated package of United Nations content on {topic} that you can use free of charge.
+
+    We have prepared [number] ready-to-use [videos / articles / podcast episodes / graphics] on [themes]. ([number] are ready to download today, and [number] more will follow by [date].)
+
+    Knowing your focus on {topic}{language_phrase}, I have hand-picked a few that could be a good fit for your coverage:
+    • [Title] ([length]): [one-sentence description]. Preview: [link]
+    • [Title] ([length]): [one-sentence description]. Preview: [link]
+    • [Title] ([length]): [one-sentence description]. Preview: [link]
+
+    I would also like to share [other UN product, e.g. a UN News podcast or series]: [one sentence on why it fits your audience]. We would greatly appreciate any support in sharing it with your audience or on your social channels.
+
+    Next steps: please see the attached overview of all [number] items with preview links. You may use the content across [broadcast, web and social] channels. Everything is available in [languages]. To request files, simply reply with the titles of the items you would like to use, and I will send the download links right away.
+
+    Thank you for considering this, and please let me know if you are looking for any specific content or format.
+
+    Best regards,
+
+organisation:
+  label: "Organisation / NGO"
+  subject: "United Nations content on {topic} for {name}"
+  body: |
+    Dear {name} team,
+
+    With [occasion or news moment, e.g. the International Day of …] coming up, we are reaching out to organisations working on {topic}. We would like to share a curated package of United Nations content that you can use free of charge in your work and on your channels.
+
+    We have prepared [number] ready-to-use [videos / articles / podcast episodes / graphics] on [themes]. ([number] are ready to download today, and [number] more will follow by [date].)
+
+    Knowing your work on {topic}{language_phrase}, I have hand-picked a few that could be useful for your communication, events or newsletters:
+    • [Title] ([length]): [one-sentence description]. Preview: [link]
+    • [Title] ([length]): [one-sentence description]. Preview: [link]
+    • [Title] ([length]): [one-sentence description]. Preview: [link]
+
+    I would also like to share [other UN product, e.g. a UN News podcast or series]: [one sentence on why it fits your community]. We would greatly appreciate any support in sharing it with your members, partners or social channels.
+
+    Next steps: please see the attached overview of all [number] items with preview links. You may use the content on your [website, newsletter, social media and at events]. Everything is available in [languages]. To request files, simply reply with the titles of the items you would like to use, and I will send the download links right away.
+
+    Thank you for considering this, and please let me know if you are looking for any specific content or format.
+
+    Best regards,
+
+# words used for {language_phrase} and when no topic is known
+language_phrase: " for your {language}-speaking audience"
+topic_fallback: "[topic]"

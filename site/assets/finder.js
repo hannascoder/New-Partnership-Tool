@@ -665,7 +665,7 @@
       ${o.ww ? `<p class="row warn">⚠ Website may no longer belong to this outlet: ${esc(o.ww)}</p>` : ""}
       ${site || contact ? `<p class="row">${site ? `<b>Website:</b> ${site}${o.wd ? ' <span class="warn">(did not answer at the last check)</span>' : ""}` : ""}${site && contact ? " · " : ""}${contact ? `<b>Contact:</b> ${contact}` : ""}</p>` : ""}
       ${o._m && o._m.length ? `<span class="matches">Matches: ${esc(o._m.map(([k2, id, s]) => lab(k2 === "tp" ? C.topics : k2 === "au" ? C.audience : C.un_profile, id) + (k2 === "tp" && strengthOf(id, s) ? ` (${strengthOf(id, s)})` : "")).join(", "))}</span>` : ""}
-      <div class="card-foot"><label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label>
+      <div class="card-foot">${o.em && !o.ww ? `<button type="button" class="btn-quiet mail-btn" data-mail="${esc(o.i)}">✉ Send mail</button>` : o.cp && !o.ww ? `<a class="btn-quiet mail-btn" href="${esc(o.cp)}" target="_blank" rel="noopener">Open contact page ↗</a>` : ""}<label class="export-check"><input type="checkbox" class="export-box" data-id="${esc(o.i)}" ${inList ? "checked" : ""}> Export</label>
       <details class="more-info"><summary>Details and reasons</summary>${details}</details></div></li>`;
   }
 
@@ -827,7 +827,7 @@
         topic: topicsOf(o).filter((t) => !topicFilter || !topicFilter.size || topicFilter.has(t)).map((t) => lab(C.topics, t)).join(", "),
         audience: (o.au || []).map((a) => lab(C.audience, a)).join(", "),
         unProfile: [o.pu, o.gc && o.gc[3]].filter(Boolean).join(" "), memberOf: "",
-        website: o.ww ? "" : o.w || "", contact: o.ww ? "" : o.em || o.cp || "",
+        website: o.ww ? "" : o.w || "", contact: o.ww ? "" : [o.em, o.cp].filter(Boolean).join(" · "),
         social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
         notes: flags(o),
       };
@@ -843,7 +843,7 @@
       unProfile: (o.un || []).map((u) => lab(C.un_profile, u)).join(", "),
       memberOf: o.ng ? (o.us || []).map((u) => lab((CFG.ngo || {}).un_status || [], u)).concat((o.nt || []).map((t) => "Type of work: " + lab((CFG.ngo || {}).type_of_work || [], t[0]))).join(", ")
         : (o.nw || []).map((n) => (CFG.networks.find((x) => x.id === n) || {}).label || n).join(", "),
-      website: o.ww ? "" : o.w || "", contact: o.ww ? "" : o.em || o.cp || "",
+      website: o.ww ? "" : o.w || "", contact: o.ww ? "" : [o.em, o.cp].filter(Boolean).join(" · "),
       social: Object.entries(o.so || {}).map(([k2, u]) => [{ youtube: "YouTube", facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok", x: "X", telegram: "Telegram" }[k2] || k2, u]),
       notes: flags(o),
     };
@@ -887,6 +887,70 @@
       more: [["unProfile", "UN profile pages"], ["social", "Social media"], ["notes", "Notes"]] },
     portrait: [["outlet", "NGO", 50], ["reach", "Description & work", 66], ["website", "Website", 26], ["contact", "Contact", 26], ["more", "ECOSOC, social media & notes", 26]],
   };
+  /* -------- "Send mail" (owner 16.11.2026): template from config/email_templates.yaml, gaps in [brackets]
+     highlighted yellow; opens the Outlook app (mailto), Outlook on the web or Gmail with a plain-text draft and
+     copies the same mail with yellow highlights, to paste over the draft -------- */
+  function mailText(o) {
+    const T = CFG.email_templates || {}, tpl = (o.ng ? T.organisation : T.media) || T.media;
+    if (!tpl) return null;
+    const C = CFG.categories;
+    const chosen = [...S.tp].find((t) => tpEntry(o, t));
+    const strongest = (o.tp || []).slice().sort((a, b) => a[1] - b[1])[0];
+    const tid = chosen || (strongest && strongest[0] !== "general_news" ? strongest[0] : null);  // no "General news ..." in a mail
+    let topic = tid ? lab(C.topics, tid) : (T.topic_fallback || "[topic]");
+    const Topic = topic.charAt(0).toUpperCase() + topic.slice(1);
+    if (!/^\[/.test(topic) && !/^[A-Z]{2,}/.test(topic)) topic = topic.charAt(0).toLowerCase() + topic.slice(1);
+    const lang = o.l && o.l.length ? CFG.langName[o.l[0]] : "";
+    const fill = (t) => t.replace(/\{name\}/g, o.n).replace(/\{Topic\}/g, Topic).replace(/\{topic\}/g, topic)
+      .replace(/\{language_phrase\}/g, lang ? (T.language_phrase || " for your {language}-speaking audience").replace("{language}", lang) : "");
+    return { to: o.em, subject: fill(tpl.subject), body: fill(tpl.body).replace(/\s+$/, "") + "\n" };
+  }
+  const markGaps = (t) => esc(t).replace(/\[([^\]]+)\]/g, '<mark style="background:#ffff00">[$1]</mark>');
+  async function copyMail(m) {
+    const html = `<div style="font-family:Calibri,Arial,sans-serif;font-size:11pt">${markGaps(m.body).replace(/\n/g, "<br>")}</div>`;
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ "text/html": new Blob([html], { type: "text/html" }), "text/plain": new Blob([m.body], { type: "text/plain" }) })]);
+      return true;
+    } catch (e) {
+      const box = $("mailPreview"), r = document.createRange(); r.selectNodeContents(box);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      const ok = document.execCommand("copy"); sel.removeAllRanges(); return ok;
+    }
+  }
+  function openMail(o) {
+    const m = mailText(o); if (!m) return;
+    let d = $("mailDialog");
+    if (!d) {
+      d = document.createElement("dialog"); d.id = "mailDialog"; d.className = "mail-dialog";
+      d.innerHTML = `<form method="dialog" class="mail-box"><h2>Send mail</h2>
+        <p class="row"><b>To:</b> <span id="mailTo"></span></p><p class="row"><b>Subject:</b> <span id="mailSubject"></span></p>
+        <div class="mail-preview" id="mailPreview"></div>
+        <p class="hint">Yellow = please fill in or check. Your mail program opens with the text; the same text with the yellow marks is copied – paste it over the draft (Ctrl+V / Cmd+V) to keep the marks.</p>
+        <div class="mail-actions"><button type="button" class="btn-primary" data-open="app">Open in Outlook app</button>
+        <button type="button" class="btn-quiet" data-open="owa">Outlook on the web</button><button type="button" class="btn-quiet" data-open="gmail">Gmail</button>
+        <button type="button" class="btn-quiet" data-open="copy">Copy text</button><button class="btn-quiet" value="close">Close</button></div>
+        <p class="hint" id="mailStatus" role="status"></p></form>`;
+      document.body.append(d);
+      d.addEventListener("click", async (e) => {
+        const b = e.target.closest("[data-open]"); if (!b) return;
+        const mm = d._mail, q = encodeURIComponent, ok = await copyMail(mm);
+        $("mailStatus").textContent = ok ? "Text with yellow marks copied." : "Copying did not work – please select the text above and copy it.";
+        const url = { app: `mailto:${mm.to}?subject=${q(mm.subject)}&body=${q(mm.body.replace(/\n/g, "\r\n"))}`,
+          owa: `https://outlook.office.com/mail/deeplink/compose?to=${q(mm.to)}&subject=${q(mm.subject)}&body=${q(mm.body)}`,
+          gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${q(mm.to)}&su=${q(mm.subject)}&body=${q(mm.body)}` }[b.dataset.open];
+        if (url) { if (b.dataset.open === "app") location.href = url; else window.open(url, "_blank", "noopener"); }
+      });
+    }
+    d._mail = m;
+    $("mailTo").textContent = m.to; $("mailSubject").innerHTML = markGaps(m.subject);
+    $("mailPreview").innerHTML = markGaps(m.body).replace(/\n/g, "<br>"); $("mailStatus").textContent = "";
+    d.showModal();
+  }
+  $("cards").addEventListener("click", (e) => {
+    const b = e.target.closest("button.mail-btn[data-mail]"); if (!b) return;
+    const o = ALL.find((x) => x.i === b.dataset.mail); if (o) openMail(o);
+  });
+
   window.PF = { exportList: buildExportList, all: () => ALL, cfg: () => CFG };
 
   function updateExportCount() {

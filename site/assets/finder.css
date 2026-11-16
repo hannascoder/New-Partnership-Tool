@@ -222,3 +222,12 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .sublabel { font-size: 12px; color: var(--muted); margin: 8px 0 6px; }
 .sublabel:first-child { margin-top: 0; }
 .cdesc { display: block; font-size: 11px; color: var(--muted); margin-top: 1px; line-height: 1.35; }
+/* "Send mail" pop-up (owner 16.11.2026) */
+.card-foot .mail-btn { margin-right: 12px; }
+.mail-dialog { border: 1px solid var(--border); border-radius: 12px; padding: 0; max-width: 760px; width: calc(100% - 32px); }
+.mail-dialog::backdrop { background: rgba(15, 26, 43, 0.4); }
+.mail-box { padding: 20px 24px; }
+.mail-box h2 { margin: 0 0 10px; font-size: 1.15rem; }
+.mail-preview { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; max-height: 45vh; overflow: auto; background: var(--surface); line-height: 1.5; font-size: 0.92rem; }
+.mail-preview mark, #mailSubject mark { background: #ffff00; color: inherit; }
+.mail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-16
+- **Send mail**: every card with an e-mail address has a button "Send mail" (otherwise "Open contact page").
+  It opens a preview with a ready-made mail (one for media, one for organisations); everything to fill in is
+  highlighted yellow. Buttons open the Outlook app, Outlook on the web or Gmail; the text with the yellow marks
+  is copied at the same time. The export now lists both the e-mail and the contact page.
+
 ## 2026-11-14 (night)
 - "More": every box has a short explanation under it (what it does, and what you lose when you tick it).
 - Fixed: a filter chosen in a folded group was missing in the "Active filters" line.
