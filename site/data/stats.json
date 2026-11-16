@@ -1,5 +1,5 @@
 {
- "outlets": 70730,
+ "outlets": 69937,
  "ngos": 18594,
  "sources": {
   "abu_members": 136,
@@ -8,15 +8,15 @@
   "ebu_members": 146,
   "efcsn_signatories": 60,
   "fact_checking_sites": 130,
-  "ifcn_signatories": 175,
-  "iptv_org": 17493,
-  "media_cloud": 27566,
+  "ifcn_signatories": 174,
+  "iptv_org": 17481,
+  "media_cloud": 27552,
   "news_agencies": 189,
   "occrp_network": 60,
-  "radio_browser": 11711,
+  "radio_browser": 10939,
   "sdg_media_compact": 327,
-  "state_media": 864,
-  "wikidata": 27902
+  "state_media": 862,
+  "wikidata": 27851
  },
- "built": "2026-11-15 00:04 UTC"
+ "built": "2026-11-16 15:09 UTC"
 }

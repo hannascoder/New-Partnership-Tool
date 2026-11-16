@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16: first automatic update checked, two corrections
+- The first run of "Automatic update" (started by hand on 14.11.) went through in 5 hours and published on
+  its own: all sources fetched again, 17,271 websites visited in about 1 hour, 285 new outlets (marked
+  "new"), safety brake passed.
+- Correction 1: an outlet that only "disappeared" because it was merged into another entry (e.g. "Welt" ->
+  "Die Welt") is no longer kept as "not found in the sources" - that made duplicates.
+- Correction 2: a website counts as "dead again" only when the checks are at least 30 days apart. The run
+  came 5 days after the first website check and would have counted two failures within one week.
 ## 2026-11-16
 - **Send mail**: every card with an e-mail address has a button "Send mail" (otherwise "Open contact page").
   It opens a preview with a ready-made mail (one for media, one for organisations); everything to fill in is

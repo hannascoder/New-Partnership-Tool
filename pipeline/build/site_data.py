@@ -380,63 +380,80 @@ def main():
         ngo_out.append(e)
     ngo_out.sort(key=lambda e: (e["n"] or "").lower())
     # automatic update: an outlet that is in no source any more stays for one update, with a note
-    # (rules.yaml automation.remove_after_missing_runs). Only counted in the scheduled update
-    # (PF_SCHEDULED=1), so a data run by hand never changes the counters.
+    # (rules.yaml automation.remove_after_missing_runs). The count only goes up in the scheduled update
+    # (PF_SCHEDULED=1); a data run by hand keeps the outlets that are already counted and never starts
+    # a count. An entry that is only "missing" because it was merged into another entry (same website
+    # or same name in the same country, e.g. "Welt" -> "Die Welt") is not kept: it would be a duplicate
+    # (seen at the first real run, 15.11.2026: 1,428 kept, among them such duplicates).
     import os
-    if os.environ.get("PF_SCHEDULED") == "1":
+    scheduled = os.environ.get("PF_SCHEDULED") == "1"
+    mf = ROOT / "cache" / "missing.json"
+    missing = json.load(open(mf, encoding="utf-8")) if mf.exists() else {}
+    old_cfg_file = ROOT / "site" / "data" / "config.json"
+    carried, removed, merged_away = [], [], []
+    if old_cfg_file.exists() and (scheduled or missing):
+        sys.path.insert(0, str(ROOT / "pipeline" / "merge"))
+        from merge import clean_name
         all_ids = {o["id"] for o in json.load(open(ROOT / "work" / "classified.json", encoding="utf-8"))}
-        mf = ROOT / "cache" / "missing.json"
-        missing = json.load(open(mf, encoding="utf-8")) if mf.exists() else {}
         keep_runs = auto.get("remove_after_missing_runs", 2)
-        carried, removed = [], []
-        old_cfg_file = ROOT / "site" / "data" / "config.json"
-        if old_cfg_file.exists():
-            old_cfg = json.load(open(old_cfg_file, encoding="utf-8"))
-            oc, ow_ = old_cfg.get("codes") or {}, old_cfg.get("why") or []
-            for fn in old_cfg.get("outlet_files") or []:
-                for e in json.load(open(ROOT / "site" / "data" / fn, encoding="utf-8")):
-                    if e["i"] in all_ids:
-                        continue
-                    n_ = missing.get(e["i"], 0) + 1
-                    if n_ >= keep_runs:
-                        removed.append(e)
-                        continue
-                    missing[e["i"]] = n_
-                    for k in ("ch", "s", "oa", "nw"):  # undo the short codes of the old file
-                        if k in e:
-                            e[k] = [oc[k][v] if isinstance(v, int) else v for v in e[k]]
-                    for k in ("o", "ow", "sc"):
-                        if k in e:
-                            e[k] = [oc[k][e[k][0]] if isinstance(e[k][0], int) else e[k][0], w(ow_[e[k][1]])]
-                    for t in e.get("tp") or []:
-                        t[2] = w(ow_[t[2]])
-                    for k in ("aw", "uw"):
-                        if k in e:
-                            e[k] = [w(ow_[x]) for x in e[k]]
-                    if "rc" in e:
-                        e["rc"] = {c: w(ow_[x]) for c, x in e["rc"].items()}
-                    e.setdefault("f", oc.get("f"))
-                    origin = re.sub(r"^(https?://[^/]+).*$", r"\1", e.get("w") or "")
-                    if e.get("cp", "").startswith("/"):
-                        e["cp"] = origin + e["cp"]
-                    for t in e.get("tp") or []:
-                        if len(t) >= 5 and str(t[4]).startswith("/"):
-                            t[4] = origin + t[4]
-                    for k, u in list((e.get("so") or {}).items()):
-                        if (oc.get("so") or {}).get(k) and not u.startswith("http"):
-                            e["so"][k] = oc["so"][k].replace("{}", u)
-                    e["ms"] = 1  # not found in the sources at the last update
-                    out.append(e)
-                    carried.append(e)
-        shown_ids = {e["i"] for e in out}
-        missing = {k: v for k, v in missing.items() if k in shown_ids and k not in all_ids}
-        json.dump(missing, open(mf, "w", encoding="utf-8"), sort_keys=True, indent=0)
+        host_n = defaultdict(int)
+        for e in out:
+            host_n[host_of(e.get("w"))] += 1
+        now_hosts = {(e["c"], host_of(e.get("w"))) for e in out if e.get("w") and host_n[host_of(e.get("w"))] <= 20}
+        now_names = {(e["c"], clean_name(e["n"])) for e in out}
+        old_cfg = json.load(open(old_cfg_file, encoding="utf-8"))
+        oc, ow_ = old_cfg.get("codes") or {}, old_cfg.get("why") or []
+        new_missing = {}
+        for fn in old_cfg.get("outlet_files") or []:
+            for e in json.load(open(ROOT / "site" / "data" / fn, encoding="utf-8")):
+                if e["i"] in all_ids:
+                    continue
+                n_ = missing.get(e["i"], 0) + (1 if scheduled else 0)
+                if n_ == 0:
+                    continue  # run by hand and never counted: it went because of a change made by hand
+                if (e["c"], host_of(e.get("w"))) in now_hosts or (e["c"], clean_name(e["n"])) in now_names:
+                    merged_away.append(e)
+                    continue
+                if n_ >= keep_runs:
+                    removed.append(e)
+                    continue
+                new_missing[e["i"]] = n_
+                for k in ("ch", "s", "oa", "nw"):  # undo the short codes of the old file
+                    if k in e:
+                        e[k] = [oc[k][v] if isinstance(v, int) else v for v in e[k]]
+                for k in ("o", "ow", "sc"):
+                    if k in e:
+                        e[k] = [oc[k][e[k][0]] if isinstance(e[k][0], int) else e[k][0], w(ow_[e[k][1]])]
+                for t in e.get("tp") or []:
+                    t[2] = w(ow_[t[2]])
+                for k in ("aw", "uw"):
+                    if k in e:
+                        e[k] = [w(ow_[x]) for x in e[k]]
+                if "rc" in e:
+                    e["rc"] = {c: w(ow_[x]) for c, x in e["rc"].items()}
+                e.setdefault("f", oc.get("f"))
+                origin = re.sub(r"^(https?://[^/]+).*$", r"\1", e.get("w") or "")
+                if e.get("cp", "").startswith("/"):
+                    e["cp"] = origin + e["cp"]
+                for t in e.get("tp") or []:
+                    if len(t) >= 5 and str(t[4]).startswith("/"):
+                        t[4] = origin + t[4]
+                for k, u in list((e.get("so") or {}).items()):
+                    if (oc.get("so") or {}).get(k) and not u.startswith("http"):
+                        e["so"][k] = oc["so"][k].replace("{}", u)
+                e["ms"] = 1  # not found in the sources at the last update
+                out.append(e)
+                carried.append(e)
+        with open(mf, "w", encoding="utf-8") as fh:  # one outlet per line
+            fh.write("{\n" + ",\n".join(f"{json.dumps(k)}: {v}" for k, v in sorted(new_missing.items())) + "\n}\n")
         (ROOT / "reports" / "missing_outlets.md").write_text("\n".join(
             ["# Outlets that are no longer in any source", "",
-             f"Still shown with a note (first update without them): {len(carried)}. Removed now (update no. {keep_runs} without them): {len(removed)}.", "",
+             f"Still shown with a note (one update without them): {len(carried)}. Removed (update no. {keep_runs} without them): {len(removed)}. "
+             f"Not kept because the same outlet is still listed under another entry: {len(merged_away)}.", "",
              "| Id | Name | Country | State |", "|---|---|---|---|"]
             + [f"| {e['i']} | {e['n'][:70]} | {e['c']} | still shown |" for e in carried]
-            + [f"| {e['i']} | {e['n'][:70]} | {e['c']} | removed |" for e in removed]) + "\n", encoding="utf-8")
+            + [f"| {e['i']} | {e['n'][:70]} | {e['c']} | removed |" for e in removed]
+            + [f"| {e['i']} | {e['n'][:70]} | {e['c']} | same outlet still listed |" for e in merged_away]) + "\n", encoding="utf-8")
         out.sort(key=lambda e: (e["n"] or "").lower())
     from collections import Counter as _Counter
     stats = {"outlets": len(out), "ngos": len(ngo_out), "sources": dict(sorted(_Counter(s_ for e in out for s_ in e["s"]).items()))}

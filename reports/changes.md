@@ -1,47 +1,8 @@
 # Changes compared with the published website (branch main) (step 5)
 
-- New outlets: 525
+- New outlets: 239
 - No longer shown: 1,428 (merged into another entry, excluded, or gone from all sources)
-- Changed values: scope 43, ownership 62, type 24
-
-### Examples: scope
-
-- Flemish Radio and Television Broadcasting Organization (pf-000020): unknown → national
-- France Inter (pf-000031): unknown → national
-- UnserDing (pf-000125): national → unknown
-- قناة بي إف إم (pf-000546): unknown → national
-- RTL (pf-001728): unknown → national
-- KXLU (pf-003551): unknown → local
-- Cuac FM (pf-003814): local → unknown
-- CFWN-FM (pf-005601): local → unknown
-- CHKG-FM (pf-005619): unknown → local
-- FBi Radio (pf-006352): unknown → local
-
-### Examples: ownership
-
-- RDP Madeira - Antena 1 (pf-000586): state_controlled → public_service
-- Cameroon radio television (pf-003167): unknown → state_controlled
-- Cuac FM (pf-003814): community_nonprofit → unknown
-- Balapan (pf-004628): unknown → public_service
-- Smooth Radio (pf-004936): private → unknown
-- CFWN-FM (pf-005601): community_nonprofit → unknown
-- FBi Radio (pf-006352): unknown → community_nonprofit
-- KKUP (pf-007700): community_nonprofit → unknown
-- KOTO (pf-007810): community_nonprofit → unknown
-- WDRT (pf-010554): unknown → community_nonprofit
-
-### Examples: type
-
-- KXLU (pf-003551): news_outlet → community_media
-- Cuac FM (pf-003814): community_media → news_outlet
-- CFWN-FM (pf-005601): community_media → news_outlet
-- FBi Radio (pf-006352): news_outlet → community_media
-- KKUP (pf-007700): community_media → news_outlet
-- KOTO (pf-007810): community_media → news_outlet
-- KSMU (pf-007905): community_media → news_outlet
-- KVSC (pf-008039): community_media → news_outlet
-- WDRT (pf-010554): news_outlet → community_media
-- WNHU (pf-010903): community_media → news_outlet
+- Changed values: none
 
 ### Examples: new
 

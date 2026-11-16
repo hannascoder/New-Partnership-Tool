@@ -260,6 +260,25 @@ The owner asked for a complete critique and then for all findings to be correcte
 - Still open from step 9 (CLAUDE.md "Access"): Cloudflare API token, e-mail code login for colleagues,
   list of allowed e-mails as a file. Not built.
 
+## 16.11.2026: first real run of the automatic update - WORKS
+- Run 43630405717 (manual start 14.11. 19:08 UTC, finished 15.11. 00:04 UTC, all jobs green): quick sources
+  21 min, Wikidata 2 h 50 min, texts 23 min, website check 35 + 27 min (17,271 sites: the ones that failed
+  before + new ones; the others were checked less than 50 days ago and skipped), build 18 min.
+  The workflow CAN push to main (no branch protection in the way). Commit "Automatic update 2026-11-15:
+  70,730 outlets, 18,594 organisations". Quality report unchanged (5 % wrong).
+- Not proven yet: (1) that Cloudflare published after the bot's commit - the owner should look at the
+  footer of the live site ("page built 2026-11-15 ..." or later); (2) a FULL website check on GitHub
+  (about 71,000 sites; by the speed seen, 4-5 hours, two parts of 320 minutes are planned) - happens at the
+  first scheduled run in January; (3) the schedule itself (first cron firing: 3 December = "still alive"
+  only, 3 January = full update); (4) ECOSOC / Global Compact from GitHub (both ended in seconds because
+  their data was fresh).
+- Found and corrected (16.11.): merged entries were kept as "missing" duplicates (now compared by website
+  and name); dead-website counts need 30 days between them (rules.yaml automation
+  min_days_between_counted_checks); the counts of the 14.11. run were set back to 1.
+- Observation: Radio Browser changes a lot (about 1,200 of its stations were gone after 5 days, others
+  new). The "stay for one update" rule absorbs this; if the yearly loss looks too high, look at the
+  Radio Browser include rules.
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
