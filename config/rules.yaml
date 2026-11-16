@@ -439,6 +439,9 @@ automation:
   # An outlet is not shown when its website was dead at this many checks in a row; it comes back
   # as soon as the website answers. Listed in reports/hidden_websites.md.
   hide_after_dead_checks: 3
+  # ... and two dead checks only count as two when they are at least this many days apart (the first
+  # real run on 14.11.2026 came 5 days after the first website check and counted "2" at once)
+  min_days_between_counted_checks: 30
   # An outlet that is no longer in any source is still shown at the first update without it
   # (with a note) and removed at this one.
   remove_after_missing_runs: 2

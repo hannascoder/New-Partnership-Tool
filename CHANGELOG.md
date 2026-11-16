@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-16: first automatic update checked, two corrections
+- The first run of "Automatic update" (started by hand on 14.11.) went through in 5 hours and published on
+  its own: all sources fetched again, 17,271 websites visited in about 1 hour, 285 new outlets (marked
+  "new"), safety brake passed.
+- Correction 1: an outlet that only "disappeared" because it was merged into another entry (e.g. "Welt" ->
+  "Die Welt") is no longer kept as "not found in the sources" - that made duplicates.
+- Correction 2: a website counts as "dead again" only when the checks are at least 30 days apart. The run
+  came 5 days after the first website check and would have counted two failures within one week.
+
 ## 2026-11-14 (night)
 - "More": every box has a short explanation under it (what it does, and what you lose when you tick it).
 - Fixed: a filter chosen in a folded group was missing in the "Active filters" line.
