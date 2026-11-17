@@ -22,7 +22,7 @@ from datetime import date, datetime, timedelta, timezone
 import yaml
 
 from common import ROOT, USER_AGENT, get
-from desinfo import fetch_feed_text, feed_items  # noqa: E402 - same folder
+from desinfo import feed_items  # noqa: E402 - same folder
 
 CFG = yaml.safe_load(open(ROOT / "config" / "desinfo.yaml", encoding="utf-8"))["discovery"]
 KNOWN = {f["domain"] for f in yaml.safe_load(open(ROOT / "config" / "factcheck_sources.yaml", encoding="utf-8"))["feeds"]}

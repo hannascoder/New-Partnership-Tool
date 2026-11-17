@@ -16,6 +16,19 @@ from pathlib import Path
 from build import CACHE, CFG, OUT, ROOT, TopicMatcher, load_gz, load_json
 
 
+def write_report(st, meta, n_items):
+    L = ["", "## UN feeds (content-gap check)", f"Fetched: {meta.get('fetched_at', 'not fetched in the last run')} | UN articles in the last 12 months: {n_items}",
+         "", "| Source | Works | Items | Note |", "|---|---|---|---|"]
+    for name, f in st.items():
+        L.append(f"| {name} | {'yes' if f.get('ok') else 'NO'} | {f.get('items', '')} | {f.get('error', '')} |")
+    L.append("")
+    L.append("Sources marked NO: correct the address in `config/un_sources.yaml`.")
+    rp = ROOT / "reports" / "desinfo_sources.md"
+    base = rp.read_text(encoding="utf-8") if rp.exists() else ""
+    base = re.split(r"\n## UN feeds \(content-gap check\)", base)[0]
+    rp.write_text(base.rstrip("\n") + "\n" + "\n".join(L) + "\n", encoding="utf-8")
+
+
 def main():
     atlas = load_gz("desinfo_atlas") or {}
     topics = (atlas.get("topics") or {}).get("topics") or []
@@ -40,6 +53,7 @@ def main():
     st = (meta.get("status") or {})
     if not items:                        # nothing collected yet: the page must not show "no UN article" everywhere
         (OUT / "un_content.json").unlink(missing_ok=True)
+        write_report(st, meta, 0)
         print("no UN articles yet - un_content.json not written")
         return
     d90 = (date.today() - timedelta(days=90)).isoformat()
@@ -57,18 +71,7 @@ def main():
            "languages": sorted({i["lang"] for i in items}),
            "topics": {q: {**v, "langs": dict(v["langs"])} for q, v in per.items()}}
     json.dump(out, open(OUT / "un_content.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-
-    # report section
-    L = ["", "## UN feeds (content-gap check)", f"Fetched: {meta.get('fetched_at', 'unknown')} | UN articles in the last 12 months: {len(items)}",
-         "", "| Source | Works | Items | Note |", "|---|---|---|---|"]
-    for name, f in st.items():
-        L.append(f"| {name} | {'yes' if f.get('ok') else 'NO'} | {f.get('items', '')} | {f.get('error', '')} |")
-    L.append("")
-    L.append("Sources marked NO: correct the address in `config/un_sources.yaml`.")
-    rp = ROOT / "reports" / "desinfo_sources.md"
-    base = rp.read_text(encoding="utf-8") if rp.exists() else ""
-    base = re.split(r"\n## UN feeds \(content-gap check\)", base)[0]
-    rp.write_text(base.rstrip("\n") + "\n" + "\n".join(L) + "\n", encoding="utf-8")
+    write_report(st, meta, len(items))
     print(f"UN articles {len(items)}, topics with UN material {len(per)} of {len(topics)}")
 
 

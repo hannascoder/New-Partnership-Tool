@@ -143,7 +143,12 @@ def local(tag):
 def feed_items(feed):
     body = get(feed["url"], accept="application/rss+xml, application/atom+xml, application/xml, text/xml",
                tries=2, timeout=40)
-    root = ET.fromstring(body.encode("utf-8"))
+    try:
+        root = ET.fromstring(body.encode("utf-8"))
+    except ET.ParseError:       # e.g. "unbound prefix": a feed that uses a namespace prefix without declaring it
+        fixed = re.sub(r"(</?)([A-Za-z0-9]+):", r"\1\2_", body)
+        fixed = re.sub(r"(\s)([A-Za-z0-9]+):([A-Za-z0-9]+=)", r"\1\2_\3", fixed)
+        root = ET.fromstring(fixed.encode("utf-8"))
     out = []
     for el in root.iter():
         if local(el.tag) not in ("item", "entry"):

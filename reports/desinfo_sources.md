@@ -31,3 +31,11 @@ Fetched: 2026-11-17T17:20:01Z  |  items in the site data: 431
 | Cekfakta / Mafindo | yes | 10 |  |
 
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
+
+## UN feeds (content-gap check)
+Fetched: not fetched in the last run | UN articles in the last 12 months: 0
+
+| Source | Works | Items | Note |
+|---|---|---|---|
+
+Sources marked NO: correct the address in `config/un_sources.yaml`.
