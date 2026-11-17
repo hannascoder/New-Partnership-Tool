@@ -1,14 +1,16 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T16:12:56Z",
-  "records": 228,
+  "fetched_at": "2026-11-17T16:39:05Z",
+  "records": 461,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "skipped": "no key"
+      "items": 233,
+      "requests": 1500,
+      "errors": []
     },
     "feeds": {
       "AFP Fact Check": {

@@ -1,11 +1,11 @@
 {
- "items": 187,
- "new_this_run": 32,
- "countries_with_items": 9,
- "unassigned_country": 0,
- "topics_with_items": 15,
+ "items": 407,
+ "new_this_run": 252,
+ "countries_with_items": 19,
+ "unassigned_country": 99,
+ "topics_with_items": 33,
  "topics_total": 183,
- "un_related": 2,
+ "un_related": 4,
  "first_date": "2025-11-17",
  "last_date": "2026-11-17"
 }

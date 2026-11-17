@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-17T16:12:56Z  |  items in the site data: 187
+Fetched: 2026-11-17T16:39:05Z  |  items in the site data: 407
 
 ## Google Fact Check Tools API
-- {'skipped': 'no key'}
+- {'items': 233, 'requests': 1500, 'errors': []}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
