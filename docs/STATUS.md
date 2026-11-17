@@ -297,6 +297,10 @@ pasting text is enough; media and NGOs stay on their two pages.
   (GDELT, open, no key; first test whether it answers reliably from the page / from a workflow).
 - Ideas noted: use headline / contact of the pasted mail in the "Send mail" template.
 
+## 17.11.2026: new page "Disinformation & fake news monitor" - PLAN written, nothing built
+Owner's decisions and the step plan D0-D6: `docs/DESINFO_PLAN.md`. Next: owner answers the open questions, then D1.
+New owner to-dos: free Google API key (Fact Check Tools); apply for Google Trends API alpha (optional).
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
