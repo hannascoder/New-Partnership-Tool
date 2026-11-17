@@ -54,15 +54,15 @@ def google_queries(topics):
             title = (t.get("titles") or {}).get(lang) or (t.get("label_en") if lang == "en" else "")
             if title and (title.lower(), lang) not in seen:
                 seen.add((title.lower(), lang))
-                out.append((title, lang))
-    out += [(q, "en") for q in CFG["google_factcheck"]["un_queries"]]
+                out.append((title, lang, t["qid"]))
+    out += [(q, "en", "UN") for q in CFG["google_factcheck"]["un_queries"]]
     return out
 
 
 def google_items(topics, key):
     g = CFG["google_factcheck"]
     items, errors, requests_made = {}, [], 0
-    for query, lang in google_queries(topics):
+    for query, lang, qid in google_queries(topics):
         if requests_made >= g["max_requests"]:
             errors.append("request limit reached")
             break
@@ -89,7 +89,12 @@ def google_items(topics, key):
         for c in data.get("claims", []):
             for rv in c.get("claimReview", []):
                 url_ = rv.get("url")
-                if not url_ or url_ in items:
+                if url_ in items:                 # same fact-check found by another query: add its topic
+                    if qid != "UN" and qid not in items[url_]["qtopics"]:
+                        items[url_]["qtopics"].append(qid)
+                    items[url_]["unq"] = items[url_]["unq"] or qid == "UN"
+                    continue
+                if not url_:
                     continue
                 pub = rv.get("publisher") or {}
                 items[url_] = {
@@ -97,6 +102,8 @@ def google_items(topics, key):
                     "title": clean(rv.get("title"), 200), "claim": clean(c.get("text"), 200),
                     "rating": clean(rv.get("textualRating"), 60), "lang": rv.get("languageCode") or lang,
                     "publisher": pub.get("name", ""), "domain": (pub.get("site") or "").lower().removeprefix("www."),
+                    # the search engine found it for this topic / UN query (extra evidence for the topic)
+                    "qtopics": [] if qid == "UN" else [qid], "unq": qid == "UN",
                 }
         time.sleep(g["pause_seconds"])
     return list(items.values()), {"requests": requests_made, "errors": errors[:20]}

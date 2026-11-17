@@ -101,19 +101,36 @@ def main():
         raise SystemExit("no topic list (Atlas) - run pipeline/fetch/desinfo.py first")
     matcher = TopicMatcher(topics)
     domain_map = {f["domain"]: f["country"] for f in FEEDS if f["country"]}
+    pub_map = {k.lower(): v for k, v in yaml.safe_load(
+        open(ROOT / "config" / "factcheck_publishers.yaml", encoding="utf-8"))["publishers"].items()}
 
     memory = {i["id"]: i for i in load_json(CACHE / "desinfo_items.json", [])}
     fresh = load_gz("desinfo") or []
     new = 0
     for r in fresh:
         iid = hashlib.sha1(r["url"].encode()).hexdigest()[:12]
-        if iid in memory or not r.get("date"):
+        if iid in memory:               # seen before: add what is new (country rules, topics found by search)
+            m = memory[iid]
+            if not m["country"]:
+                cc, how = country_of(r, domain_map, valid)
+                if not cc and pub_map.get(r["publisher"].lower()) in valid:
+                    cc, how = pub_map[r["publisher"].lower()], "publisher"
+                m["country"], m["country_from"] = cc, how
+            m["topics"] = sorted(set(m["topics"]) | set(matcher.match(r["title"] + " " + r.get("claim", "")))
+                                 | set(r.get("qtopics", [])))
+            m["un"] = m["un"] or un_flag(r["title"] + " " + r.get("claim", "")) or bool(r.get("unq"))
+            continue
+        if not r.get("date"):
             continue
         text = r["title"] + " " + r.get("claim", "")
         cc, how = country_of(r, domain_map, valid)
+        if not cc and pub_map.get(r["publisher"].lower()) in valid:
+            cc, how = pub_map[r["publisher"].lower()], "publisher"
         memory[iid] = {"id": iid, "date": r["date"], "title": r["title"], "url": r["url"],
                        "publisher": r["publisher"], "country": cc, "country_from": how, "lang": r["lang"],
-                       "rating": r.get("rating", ""), "topics": matcher.match(text), "un": un_flag(text),
+                       "rating": r.get("rating", ""),
+                       "topics": sorted(set(matcher.match(text)) | set(r.get("qtopics", []))),
+                       "un": un_flag(text) or bool(r.get("unq")),
                        "src": r["src"]}
         new += 1
     cutoff = (date.today() - timedelta(days=CFG["keep_days"])).isoformat()

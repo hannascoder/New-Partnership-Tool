@@ -1,0 +1,22 @@
+# Country of a fact-checker when its web address does not tell (e.g. .com / .org). Name as shown by the source.
+# Only add what is certain; grow this list from reports/desinfo_coverage.md ("items without a country").
+publishers:
+  "EFE Verifica": ES
+  "AFP Checamos": BR
+  "Fact Crescendo": IN
+  "Fact Crescendo Sri Lanka": LK
+  "Rappler": PH
+  "PTI": IN
+  "PTI Fact Check": IN
+  "विश्वास न्यूज": IN
+  "Vishvas News": IN
+  "Telugu Post": IN
+  "The Quint": IN
+  "THIP Media": IN
+  "Factchequeado": US
+  "Lead Stories": US
+  "StopFake": UA
+  "Cotejo.info": VE
+  "Ecuador Chequea": EC
+  "annie lab": HK
+  "Science Feedback": FR

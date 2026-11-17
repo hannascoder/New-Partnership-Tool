@@ -1,31 +1,35 @@
 # Disinformation monitor: country coverage
 
-Countries with at least one fact-check: **19 of 195**. Items without a country: 99. Topics with items: 33 of 183.
+Countries with at least one fact-check: **23 of 195**. Items without a country: 50. Topics with items: 33 of 183.
 
 ## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)
 
-Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bosnia and Herzegovina, Botswana, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cabo Verde, Cambodia, Cameroon, Canada, Central African Republic, Chad, China, Comoros, Congo, Costa Rica, Croatia, Cuba, Cyprus, Czechia, Côte d'Ivoire, Democratic People's Republic of Korea, Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini, Ethiopia, Fiji, Finland, Gabon, Gambia, Georgia, Germany, Ghana, Greece, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy See, Honduras, Hungary, Iceland, Indonesia, Iran (Islamic Republic of), Iraq, Israel, Italy, Jamaica, Japan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Lao People's Democratic Republic, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Micronesia (Federated States of), Monaco, Mongolia, Montenegro, Morocco, Mozambique, Myanmar, Namibia, Nauru, Nepal, Netherlands (Kingdom of the), New Zealand, Nicaragua, Niger, North Macedonia, Norway, Oman, Pakistan, Palau, Panama, Papua New Guinea, Paraguay, Peru, Poland, Qatar, Republic of Korea, Republic of Moldova, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, South Sudan, Sri Lanka, State of Palestine, Sudan, Suriname, Sweden, Switzerland, Syrian Arab Republic, Tajikistan, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkmenistan, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Republic of Tanzania, Uruguay, Uzbekistan, Vanuatu, Venezuela (Bolivarian Republic of), Viet Nam, Yemen, Zambia, Zimbabwe
+Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bosnia and Herzegovina, Botswana, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cabo Verde, Cambodia, Cameroon, Canada, Central African Republic, Chad, China, Comoros, Congo, Costa Rica, Croatia, Cuba, Cyprus, Czechia, Côte d'Ivoire, Democratic People's Republic of Korea, Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Dominican Republic, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini, Ethiopia, Fiji, Finland, Gabon, Gambia, Georgia, Germany, Ghana, Greece, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy See, Honduras, Hungary, Iceland, Indonesia, Iran (Islamic Republic of), Iraq, Israel, Italy, Jamaica, Japan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Lao People's Democratic Republic, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Mauritania, Mauritius, Micronesia (Federated States of), Monaco, Mongolia, Montenegro, Morocco, Mozambique, Myanmar, Namibia, Nauru, Nepal, Netherlands (Kingdom of the), New Zealand, Nicaragua, Niger, North Macedonia, Norway, Oman, Pakistan, Palau, Panama, Papua New Guinea, Paraguay, Peru, Poland, Qatar, Republic of Korea, Republic of Moldova, Romania, Russian Federation, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, South Sudan, State of Palestine, Sudan, Suriname, Sweden, Switzerland, Syrian Arab Republic, Tajikistan, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkmenistan, Tuvalu, Uganda, United Arab Emirates, United Republic of Tanzania, Uruguay, Uzbekistan, Vanuatu, Viet Nam, Yemen, Zambia, Zimbabwe
 
 ## Items per country
 
-- Spain: 84
-- United States of America: 78
-- Brazil: 34
+- Spain: 98
+- United States of America: 81
+- Brazil: 41
 - Argentina: 19
-- France: 14
+- India: 18
+- France: 15
 - United Kingdom of Great Britain and Northern Ireland: 13
 - Türkiye: 10
 - Nigeria: 10
 - Jordan: 10
 - Thailand: 8
-- India: 7
+- Philippines: 7
 - Bolivia (Plurinational State of): 5
+- Sri Lanka: 5
 - Chile: 5
 - Mexico: 4
 - Australia: 2
-- Philippines: 2
+- Ukraine: 1
 - Ireland: 1
+- Venezuela (Bolivarian Republic of): 1
 - Portugal: 1
+- Ecuador: 1
 - Colombia: 1
 
 ## Topics without any item
