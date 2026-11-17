@@ -4,5 +4,151 @@
   "baseline_days": 28,
   "min_items": 5
  },
- "keep_days": 365
+ "keep_days": 365,
+ "gap": {
+  "red_min_factchecks": 5,
+  "red_max_un": 1,
+  "yellow_min_factchecks": 2,
+  "yellow_max_un": 5
+ },
+ "suggestions": {
+  "default": {
+   "agencies": [
+    "UN Department of Global Communications",
+    "UN Verified"
+   ],
+   "formats": [
+    "Short fact sheet (question and answer)",
+    "Social media card with the verified fact",
+    "30-second vertical video",
+    "Explainer for journalists with sources"
+   ]
+  },
+  "groups": {
+   "health": {
+    "agencies": [
+     "WHO",
+     "UNICEF",
+     "UNAIDS",
+     "UNFPA"
+    ],
+    "formats": [
+     "Q&A fact sheet by a health expert",
+     "Short video with a doctor",
+     "Myth vs fact card"
+    ]
+   },
+   "climate": {
+    "agencies": [
+     "UNEP",
+     "WMO",
+     "UNFCCC",
+     "UNDRR"
+    ],
+    "formats": [
+     "Myth vs fact card with data",
+     "Explainer with charts",
+     "Expert quote pack for journalists"
+    ]
+   },
+   "development": {
+    "agencies": [
+     "UNDP",
+     "World Bank",
+     "FAO",
+     "WFP",
+     "ILO"
+    ],
+    "formats": [
+     "Data explainer",
+     "Case story from the country",
+     "Short fact sheet"
+    ]
+   },
+   "education": {
+    "agencies": [
+     "UNESCO",
+     "UNICEF"
+    ],
+    "formats": [
+     "Fact sheet for teachers",
+     "Short video",
+     "Social media card"
+    ]
+   },
+   "humanitarian": {
+    "agencies": [
+     "OCHA",
+     "UNHCR",
+     "WFP",
+     "IOM",
+     "UNICEF"
+    ],
+    "formats": [
+     "Situation explainer",
+     "Verified photo/video with context",
+     "Q&A for journalists"
+    ]
+   },
+   "peace": {
+    "agencies": [
+     "Department of Peace Operations",
+     "UN Security Council Affairs",
+     "OCHA"
+    ],
+    "formats": [
+     "Plain explainer of the UN role",
+     "Fact check of the specific claim",
+     "Spokesperson statement"
+    ]
+   },
+   "rights": {
+    "agencies": [
+     "OHCHR",
+     "UN Women",
+     "UNICEF"
+    ],
+    "formats": [
+     "Explainer of the legal standard",
+     "Case story",
+     "Myth vs fact card"
+    ]
+   },
+   "institutions": {
+    "agencies": [
+     "UN Department of Global Communications",
+     "Office of the Spokesperson"
+    ],
+    "formats": [
+     "Short 'what the UN does and does not do' explainer",
+     "Spokesperson statement",
+     "FAQ page"
+    ]
+   },
+   "technology": {
+    "agencies": [
+     "ITU",
+     "UNESCO",
+     "OHCHR",
+     "UN Verified"
+    ],
+    "formats": [
+     "How to spot it: short guide",
+     "Explainer video",
+     "Media literacy card"
+    ]
+   },
+   "infrastructure": {
+    "agencies": [
+     "ITU",
+     "UNDP",
+     "UN-Habitat"
+    ],
+    "formats": [
+     "Fact sheet",
+     "Data explainer"
+    ]
+   }
+  }
+ }
 }

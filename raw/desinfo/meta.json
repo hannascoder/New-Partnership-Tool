@@ -1,16 +1,17 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T16:39:05Z",
-  "records": 461,
+  "fetched_at": "2026-11-17T18:11:48Z",
+  "records": 703,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 233,
-      "requests": 1500,
-      "errors": []
+      "items": 240,
+      "requests": 1800,
+      "errors": [],
+      "max_age_days": 14
     },
     "feeds": {
       "AFP Fact Check": {
@@ -59,8 +60,8 @@
         "url": "https://teyit.org/feed"
       },
       "PolitiFact": {
-        "ok": false,
-        "error": "unbound prefix: line 18, column 6",
+        "ok": true,
+        "items": 20,
         "url": "https://www.politifact.com/rss/factchecks/"
       },
       "FactCheck.org": {
@@ -118,6 +119,11 @@
         "items": 10,
         "url": "https://turnbackhoax.id/feed/"
       }
+    },
+    "discovered_feeds": {
+      "ok": 12,
+      "failed": 0,
+      "known": 39
     }
   }
 }
