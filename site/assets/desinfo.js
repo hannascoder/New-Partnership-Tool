@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var D = "data/desinfo/";
-  var S = { topic: "", un: false, region: "", country: "", from: "", to: "", view: "trends", shown: 50, span: 30 };
+  var S = { topic: "", un: false, region: "", country: "", from: "", to: "", view: "trends", shown: 50, span: 30, basis: "publisher" };
   var DATA = {}, map = null, layer = null;
 
   function $(id) { return document.getElementById(id); }
@@ -17,21 +17,31 @@
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : "#"; }
   function day(s) { return new Date(s + "T00:00:00Z").getTime() / 864e5; }
   function iso(n) { return new Date(n * 864e5).toISOString().slice(0, 10); }
-  function load(name) { return fetch(D + name).then(function (r) { if (!r.ok) throw new Error(name); return r.json(); }); }
+  function load(name, optional) {
+    return fetch(D + name).then(function (r) { if (!r.ok) throw new Error(name); return r.json(); })
+      .catch(function (e) { if (optional) return null; throw e; });
+  }
+  function series() { return S.basis === "about" ? DATA.seriesAbout : DATA.series; }
+  function covered() { return S.basis === "about" ? DATA.coveredA : DATA.coveredP; }
 
-  // ---------- filters on rows [date, topic, iso2, un, n] ----------
+  // ---------- filters ----------
   function ok(c, un) {
     if (S.un && !un) return false;
     if (S.country) return c === S.country;
     if (S.region) return !!c && DATA.countries[c] && DATA.countries[c].region === S.region;
     return true;
   }
+  function okItem(i) {
+    if (S.basis !== "about") return ok(i.country, i.un);
+    if (!(S.country || S.region)) return ok("", i.un);
+    return (i.about || []).some(function (c) { return ok(c, i.un); });
+  }
   function inRange(d) { return d >= S.from && d <= S.to; }
 
   function aggregate() {
-    // one pass: per topic range / last7 / base28, per day (all topics), per country (current topic)
+    // one pass: per topic range / last7 / base28, per day, per country (current topic)
     var A = { topics: {}, days: {}, countries: {}, total: 0, unTotal: 0 }, to = day(S.to);
-    DATA.series.forEach(function (r) {
+    series().forEach(function (r) {
       var d = r[0], q = r[1], c = r[2], un = r[3], n = r[4];
       if (!ok(c, un)) return;
       var dd = day(d), t;
@@ -50,9 +60,7 @@
   }
 
   // ---------- timeline ----------
-  function setRange(days) {
-    S.span = days; S.to = DATA.last; S.from = iso(day(DATA.last) - days + 1);
-  }
+  function setRange(days) { S.span = days; S.to = DATA.last; S.from = iso(day(DATA.last) - days + 1); }
   function renderRange(A) {
     var box = $("rangeButtons"); box.textContent = "";
     [["Latest day", 1], ["7 days", 7], ["30 days", 30], ["12 months", 365]].forEach(function (b) {
@@ -130,10 +138,89 @@
     });
   }
 
+  // ---------- UN material and content gaps ----------
+  function unOf(q) { return (DATA.un && DATA.un.topics && DATA.un.topics[q]) || { n12: 0, n90: 0, langs: {}, top: [] }; }
+  function gapStatus(fc, un) {
+    var g = DATA.config.gap;
+    if (fc >= g.red_min_factchecks && un <= g.red_max_un) return "red";
+    if (fc >= g.yellow_min_factchecks && un <= g.yellow_max_un) return "amber";
+    if (fc >= g.yellow_min_factchecks) return "green";
+    return "";
+  }
+  function unLinks(top) {
+    var ul = el("ul");
+    top.forEach(function (x) {
+      ul.appendChild(el("li", {}, [el("a", { href: safeUrl(x.u), target: "_blank", rel: "noopener noreferrer", text: x.t }),
+        document.createTextNode(" — " + x.a + ", " + x.d + " (" + x.l + ")")]));
+    });
+    return ul;
+  }
+  function renderUnBox(A) {
+    var box = $("unBox"); box.textContent = "";
+    if (!S.topic || !DATA.un) { box.hidden = true; return; }
+    box.hidden = false;
+    var u = unOf(S.topic), fc = (A.topics[S.topic] || { range: 0 }).range, st = gapStatus(fc, u.n12);
+    box.appendChild(el("h3", { text: "UN material on “" + topicName(S.topic) + "”" }));
+    var langs = Object.keys(u.langs).map(function (l) { return l + " " + u.langs[l]; }).join(", ");
+    box.appendChild(el("p", { text: u.n12 + " UN article" + (u.n12 === 1 ? "" : "s") + " in the last 12 months (" + u.n90 + " in the last 90 days)" +
+      (langs ? "; languages: " + langs : "") + "." }));
+    if (u.top.length) box.appendChild(unLinks(u.top));
+    else box.appendChild(el("p", { class: "hint", text: "No UN article found on this topic in the sources we read. " +
+      (st === "red" ? "With the fact-checks of this window this is a content gap (see the tab “Content gaps”)." : "") }));
+  }
+  function langCounts(topic) {
+    var out = {};
+    DATA.items.forEach(function (i) {
+      if (!inRange(i.date) || i.topics.indexOf(topic) < 0 || !okItem(i)) return;
+      out[i.lang] = (out[i.lang] || 0) + 1;
+    });
+    return out;
+  }
+  function renderGaps(A) {
+    var rows = [], box = $("gapList"); box.textContent = "";
+    if (DATA.un) box.appendChild(el("p", { class: "hint", text: "Based on " + DATA.un.articles + " UN articles from " + DATA.un.sources_ok + " of " + DATA.un.sources +
+      " sources (last 12 months). If a source did not answer, its articles are missing and a gap may be overstated: see reports/desinfo_sources.md." }));
+    if (!DATA.un) { box.appendChild(el("p", { class: "hint", text: "The UN content has not been collected yet. It appears after the next daily update." })); return; }
+    DATA.topics.forEach(function (t) {
+      var fc = (A.topics[t.qid] || { range: 0 }).range, u = unOf(t.qid), st = gapStatus(fc, u.n12);
+      if (st) rows.push({ t: t, fc: fc, u: u, st: st });
+    });
+    var rank = { red: 0, amber: 1, green: 2 };
+    rows.sort(function (a, b) { return rank[a.st] - rank[b.st] || b.fc - a.fc; });
+    if (!rows.length) { box.appendChild(el("p", { class: "hint", text: "No topic reaches the minimum number of fact-checks in this window and filter. Try a longer window." })); return; }
+    rows.forEach(function (r) {
+      var label = { red: "Gap", amber: "Thin", green: "Covered" }[r.st];
+      var name = el("button", { class: "name", type: "button", text: r.t.label });
+      name.onclick = function () { S.topic = r.t.qid; S.view = "trends"; S.shown = 50; render(); };
+      var head = el("div", { class: "gap-head" }, [name, el("span", { text: r.fc + " fact-checks" }),
+        el("span", { text: r.u.n12 + " UN articles" }), el("span", { class: "badge " + r.st, text: label }), el("span", { class: "langs" })]);
+      // languages of the fact-checks versus UN material in that language
+      var lc = langCounts(r.t.qid), langBox = head.lastChild, uncovered = [];
+      Object.keys(lc).filter(function (l) { return lc[l] >= 2; }).sort(function (a, b) { return lc[b] - lc[a]; }).slice(0, 4).forEach(function (l) {
+        var un = r.u.langs[l] || 0, known = DATA.un.languages.indexOf(l) >= 0;
+        if (!un) uncovered.push(l);
+        langBox.appendChild(el("span", { class: "badge" + (un ? "" : " amber"), title: known ? "UN articles in this language" : "no UN feed in this language",
+          text: l + " " + lc[l] + " · UN " + (known ? un : "n/a") }));
+      });
+      var sug = (DATA.config.suggestions.groups || {})[r.t.group] || DATA.config.suggestions.default;
+      var det = el("details", {}, [el("summary", { text: "What we could do" })]);
+      if (r.st !== "green") {
+        var ul = el("ul");
+        ul.appendChild(el("li", { text: "Responsible UN bodies: " + sug.agencies.join(", ") }));
+        ul.appendChild(el("li", { text: "Formats that usually work: " + sug.formats.join("; ") }));
+        if (uncovered.length) ul.appendChild(el("li", { text: "Languages of the fact-checks with no UN article yet: " + uncovered.join(", ") }));
+        ul.appendChild(el("li", { text: "Start from the fact-checks below (tab “Worldwide trends”, click the topic): they name the claim and the evidence." }));
+        det.appendChild(ul);
+      }
+      if (r.u.top.length) { det.appendChild(el("p", { class: "hint", text: "Existing UN material to reuse:" })); det.appendChild(unLinks(r.u.top)); }
+      box.appendChild(el("div", { class: "gap-row" }, [head, det]));
+    });
+  }
+
   // ---------- map ----------
   var COLORS = ["#E6F4FB", "#B3DDF2", "#66BDE6", "#2E9CD4", "#0072BC", "#003D6B"];
-  function color(n, covered) {
-    if (!covered) return "#C9CED3";                         // no data (grey)
+  function color(n, cov) {
+    if (!cov) return "#C9CED3";                         // no data (grey)
     if (!n) return COLORS[0];
     return COLORS[Math.min(5, 1 + Math.floor(Math.log2(n)))];
   }
@@ -156,23 +243,39 @@
         } }).addTo(map);
     });
   }
+  function trendText(c) {
+    var t = DATA.trends && DATA.trends[c];
+    return t ? t.queries.slice(0, 3).map(function (x) { return x.q; }).join(", ") : "";
+  }
   function renderMap(A) {
+    var cov = covered();
     ensureMap().then(function () {
       if (!layer) return;
       layer.eachLayer(function (l) {
-        var c = l.__iso, n = A.countries[c] || 0, covered = !!DATA.covered[c];
-        l.setStyle({ fillColor: color(n, covered) });
+        var c = l.__iso, n = A.countries[c] || 0, has = !!cov[c];
+        l.setStyle({ fillColor: color(n, has) });
         var name = (DATA.countries[c] && DATA.countries[c].name) || (l.feature.properties.name || c);
-        l.unbindTooltip().bindTooltip(name + ": " + (covered ? n + " fact-check" + (n === 1 ? "" : "s") : "no data"), { sticky: true });
+        l.unbindTooltip().bindTooltip(name + ": " + (has ? n + " fact-check" + (n === 1 ? "" : "s") : "no data"), { sticky: true });
       });
     });
+    // panel for the chosen country: search trends are a substitute signal, clearly marked
+    var p = $("countryPanel"); p.textContent = "";
+    if (!S.country) { p.hidden = true; return; }
+    p.hidden = false;
+    var nm = DATA.countries[S.country].name, n = A.countries[S.country] || 0, tt = DATA.trends && DATA.trends[S.country];
+    p.appendChild(el("b", { text: nm + ": " + (cov[S.country] ? n + " fact-check" + (n === 1 ? "" : "s") + " in this window" : "no fact-checks in the data yet") }));
+    if (!cov[S.country]) p.appendChild(el("p", { class: "hint", text: "No fact-checker of this country is covered yet. The list in reports/desinfo_coverage.md shows which countries are next." }));
+    if (tt) p.appendChild(el("p", { text: "Searched for in " + nm + " right now (Google Trends, not a fact-check): " + tt.queries.map(function (x) { return x.q + " (" + x.t + ")"; }).join(", ") + ". Data source: Google Trends." }));
+    var clear = el("button", { class: "btn-quiet", type: "button", text: "Show all countries" });
+    clear.onclick = function () { S.country = ""; $("f-country").value = ""; render(); };
+    p.appendChild(clear);
   }
 
   // ---------- items ----------
   function matches(i) {
     if (!inRange(i.date)) return false;
     if (S.topic && i.topics.indexOf(S.topic) < 0) return false;
-    return ok(i.country, i.un);
+    return okItem(i);
   }
   function renderItems() {
     var list = DATA.items.filter(matches), box = $("items"); box.textContent = "";
@@ -184,6 +287,7 @@
                  (i.rating ? " · rated: " + i.rating : "") + " · " + i.lang;
       var tags = el("div", { class: "tags" });
       if (i.un) tags.appendChild(el("span", { class: "badge", text: "UN-related" }));
+      (i.about || []).slice(0, 3).forEach(function (c) { if (DATA.countries[c]) tags.appendChild(el("span", { class: "badge", text: "about: " + DATA.countries[c].name })); });
       i.topics.slice(0, 5).forEach(function (q) { tags.appendChild(el("span", { class: "badge", text: topicName(q) })); });
       box.appendChild(el("div", { class: "item" }, [el("div", { class: "meta", text: meta }),
         el("a", { href: safeUrl(i.url), target: "_blank", rel: "noopener noreferrer", text: i.title }), tags]));
@@ -195,17 +299,21 @@
   function render() {
     var A = aggregate();
     renderRange(A); renderTopics(A);
-    var cfgNote = $("notice");
     var base = Object.keys((A.topics[""] || { baseDays: {} }).baseDays).length;
-    cfgNote.hidden = base >= 14;
-    cfgNote.textContent = "The red marker needs at least two weeks of collected data before the selected week; it will appear automatically once the daily archive is long enough.";
+    $("notice").hidden = base >= 14;
+    $("notice").textContent = "The red marker needs at least two weeks of collected data before the selected week; it appears automatically once the daily archive is long enough.";
     $("stats").textContent = "";
     [[A.total, "fact-checks in this window"], [A.unTotal, "UN-related"], [Object.keys(A.countries).length, "countries with fact-checks"]].forEach(function (s) {
       $("stats").appendChild(el("div", { class: "stat" }, [el("b", { text: String(s[0]) }), el("span", { text: s[1] })]));
     });
-    $("view-trends").hidden = S.view !== "trends"; $("view-map").hidden = S.view !== "map";
-    $("tab-trends").setAttribute("aria-selected", String(S.view === "trends")); $("tab-map").setAttribute("aria-selected", String(S.view === "map"));
-    if (S.view === "trends") renderTrends(A); else { renderLegend(); renderMap(A); if (map) setTimeout(function () { map.invalidateSize(); }, 50); }
+    ["trends", "map", "gaps"].forEach(function (v) {
+      $("view-" + v).hidden = S.view !== v;
+      $("tab-" + v).setAttribute("aria-selected", String(S.view === v));
+    });
+    if (S.view === "trends") renderTrends(A);
+    else if (S.view === "gaps") renderGaps(A);
+    else { renderLegend(); renderMap(A); if (map) setTimeout(function () { map.invalidateSize(); }, 50); }
+    renderUnBox(A);
     renderItems();
   }
 
@@ -226,14 +334,18 @@
     $("f-region").value = S.region;
   }
 
-  Promise.all(["items.json", "series.json", "topics.json", "countries.json", "config.json", "summary.json"].map(load)).then(function (r) {
+  Promise.all([load("items.json"), load("series.json"), load("topics.json"), load("countries.json"), load("config.json"),
+               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true)]).then(function (r) {
     DATA.items = r[0]; DATA.series = r[1]; DATA.topics = r[2].topics; DATA.countries = r[3]; DATA.config = r[4];
+    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8];
     DATA.topicById = {}; DATA.topics.forEach(function (t) { DATA.topicById[t.qid] = t; });
-    DATA.covered = {}; var f = "9999", l = "0000";
-    DATA.series.forEach(function (x) { if (x[2]) DATA.covered[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });
+    DATA.coveredP = {}; DATA.coveredA = {}; var f = "9999", l = "0000";
+    DATA.series.forEach(function (x) { if (x[2]) DATA.coveredP[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });
+    DATA.seriesAbout.forEach(function (x) { if (x[2]) DATA.coveredA[x[2]] = 1; });
     DATA.first = f; DATA.last = r[5].last_date || l;
     setRange(30); fillSelects();
     $("f-un").onchange = function () { S.un = this.checked; S.shown = 50; render(); };
+    $("basis-pub").onchange = $("basis-about").onchange = function () { S.basis = $("basis-about").checked ? "about" : "publisher"; S.shown = 50; render(); };
     $("f-topicSearch").oninput = function () { render(); };
     $("dateApply").onclick = function () {
       var a = $("dateFrom").value, b = $("dateTo").value;
@@ -241,6 +353,7 @@
     };
     $("tab-trends").onclick = function () { S.view = "trends"; render(); };
     $("tab-map").onclick = function () { S.view = "map"; render(); };
+    $("tab-gaps").onclick = function () { S.view = "gaps"; render(); };
     $("moreBtn").onclick = function () { S.shown += 50; renderItems(); };
     $("filtersToggle").onclick = function () { var o = $("filters").classList.toggle("open"); this.setAttribute("aria-expanded", String(o)); };
     $("spark").onclick = function (e) {

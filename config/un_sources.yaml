@@ -1,0 +1,34 @@
+# UN content for the "Do we already have something?" check (disinformation monitor, content gaps).
+# Public news feeds of the UN and its agencies. One block per feed. If `url` does not work, the run looks for the
+# feed that the site announces on its home page (`site`). Every run reports which sources worked in
+# reports/desinfo_sources.md; correct or add lines here, no code change needed.
+# lang = language of the feed (the gap check looks at languages), agency = name shown on the page.
+feeds:
+  # UN News (news.un.org) in its 9 languages
+  - {agency: "UN News", lang: en, url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/all/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News", lang: es, url: "https://news.un.org/feed/subscribe/es/news/all/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News", lang: ar, url: "https://news.un.org/feed/subscribe/ar/news/all/rss.xml", site: "https://news.un.org/ar/"}
+  - {agency: "UN News", lang: ru, url: "https://news.un.org/feed/subscribe/ru/news/all/rss.xml", site: "https://news.un.org/ru/"}
+  - {agency: "UN News", lang: zh, url: "https://news.un.org/feed/subscribe/zh/news/all/rss.xml", site: "https://news.un.org/zh/"}
+  - {agency: "UN News", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/all/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News", lang: hi, url: "https://news.un.org/feed/subscribe/hi/news/all/rss.xml", site: "https://news.un.org/hi/"}
+  - {agency: "UN News", lang: sw, url: "https://news.un.org/feed/subscribe/sw/news/all/rss.xml", site: "https://news.un.org/sw/"}
+  # UN initiatives and press
+  - {agency: "UN Verified", lang: en, url: "https://shareverified.org/feed/", site: "https://shareverified.org/"}
+  - {agency: "UN Press", lang: en, url: "https://press.un.org/en/rss.xml", site: "https://press.un.org/en"}
+  # agencies (English; more languages can be added the same way)
+  - {agency: "WHO", lang: en, url: "https://www.who.int/rss-feeds/news-english.xml", site: "https://www.who.int/news"}
+  - {agency: "WHO", lang: es, url: "https://www.who.int/rss-feeds/news-spanish.xml", site: "https://www.who.int/es/news"}
+  - {agency: "WHO", lang: fr, url: "https://www.who.int/rss-feeds/news-french.xml", site: "https://www.who.int/fr/news"}
+  - {agency: "UNICEF", lang: en, url: "https://www.unicef.org/press-releases/rss.xml", site: "https://www.unicef.org/press-releases"}
+  - {agency: "UNHCR", lang: en, url: "https://www.unhcr.org/rss/news.xml", site: "https://www.unhcr.org/news"}
+  - {agency: "FAO", lang: en, url: "https://www.fao.org/newsroom/rss-feed/en/", site: "https://www.fao.org/newsroom/en"}
+  - {agency: "WFP", lang: en, url: "https://www.wfp.org/rss.xml", site: "https://www.wfp.org/news"}
+  - {agency: "UNEP", lang: en, url: "https://www.unep.org/rss.xml", site: "https://www.unep.org/news-and-stories"}
+  - {agency: "UNESCO", lang: en, url: "https://www.unesco.org/en/rss.xml", site: "https://www.unesco.org/en/news"}
+  - {agency: "OHCHR", lang: en, url: "https://www.ohchr.org/en/rss.xml", site: "https://www.ohchr.org/en/news"}
+  - {agency: "UNDP", lang: en, url: "https://www.undp.org/rss.xml", site: "https://www.undp.org/press-releases"}
+  - {agency: "UN Women", lang: en, url: "https://www.unwomen.org/en/rss-feeds/news", site: "https://www.unwomen.org/en/news-stories"}
+  - {agency: "IOM", lang: en, url: "https://www.iom.int/rss.xml", site: "https://www.iom.int/news"}
+  - {agency: "UNFPA", lang: en, url: "https://www.unfpa.org/rss.xml", site: "https://www.unfpa.org/news"}

@@ -37,6 +37,12 @@
         <p class="hint">Fact-checks that name the UN, its agencies, peacekeepers or the Secretary-General.</p>
       </section>
       <section class="fgroup">
+        <h2 class="sect">Which country?</h2>
+        <label class="check"><input type="radio" name="basis" id="basis-pub" checked> Where the fact-checker works</label>
+        <label class="check"><input type="radio" name="basis" id="basis-about"> Country the fact-check is about</label>
+        <p class="hint">“About” is read from country names in the headline and the claim, in many languages. It reaches countries without their own fact-checker.</p>
+      </section>
+      <section class="fgroup">
         <h2 class="sect">Region / Country</h2>
         <label class="field">Region
           <select id="f-region"><option value="">All regions</option></select>
@@ -73,6 +79,7 @@
     <div class="view-switch" role="tablist" aria-label="View">
       <button role="tab" id="tab-trends" aria-selected="true">Worldwide trends</button>
       <button role="tab" id="tab-map" aria-selected="false">Global map</button>
+      <button role="tab" id="tab-gaps" aria-selected="false">Content gaps</button>
     </div>
 
     <div class="stats" id="stats"></div>
@@ -89,8 +96,19 @@
       <p class="hint">Darker = more fact-checks. Grey = <b>no data</b> (no fact-checker covered yet), not “no disinformation”. Click a country for its fact-checks.</p>
       <div id="map" class="map" aria-label="World map of fact-checks"></div>
       <div class="legend" id="legend"></div>
+      <div id="countryPanel" class="card" hidden></div>
       <p class="hint">The boundaries and names shown and the designations used on the map do not imply official endorsement or acceptance by the United Nations. Boundaries: Natural Earth, generalized for display.</p>
     </section>
+
+    <section id="view-gaps" hidden>
+      <h2 class="sect">Content gaps: do we already have something?</h2>
+      <p class="hint">Fact-checks in this window compared with UN articles of the last 12 months (UN News, UN Verified, agencies).
+        <span class="badge red">Gap</span> = many fact-checks and almost no UN article, <span class="badge amber">Thin</span> = little UN material,
+        <span class="badge green">Covered</span> = UN material exists. This is a rough estimate from key words; please check before publishing.</p>
+      <div id="gapList" class="gap-list"></div>
+    </section>
+
+    <section id="unBox" class="card unbox" hidden></section>
 
     <section aria-label="Fact-checks">
       <h2 class="sect" id="itemsTitle">Fact-checks</h2>

@@ -9,12 +9,28 @@ atlas_files: [topics.json, trends/country_searches.json]   # public Atlas data, 
 google_factcheck:
   endpoint: https://factchecktools.googleapis.com/v1alpha1/claims:search
   max_age_days: 14          # each daily run asks for the last 14 days (overlap = safe against missed runs)
+  backfill_age_days: 365    # the one-off "Backfill" run (workflow input) asks for the last 12 months
   page_size: 100
-  max_requests: 1800        # safety limit per run
+  max_pages: 1              # pages per query in a daily run
+  backfill_max_pages: 3     # pages per query in the backfill run
+  max_requests: 2600        # safety limit per run (the free quota is far higher)
   pause_seconds: 0.2
   # topic titles are searched in English and in these languages (title of the topic in that language)
   topic_languages: [en, fr, es, ar, pt, ru, zh, hi, sw]
+  # the other Atlas languages are searched in turns: this many of them per day (every language every ~5 days)
+  rotating_languages: [bn, id, ha, am, ur, fa, tr, vi, th, ja, de, uk, ko]
+  rotating_per_day: 3
   un_queries: ["United Nations", "UN", "UNICEF", "WHO", "UNHCR", "Guterres", "peacekeepers", "UNESCO", "UNDP", "WFP"]
+
+discovery:                  # automatic search for fact-checkers and their feeds (pipeline/fetch/desinfo_discover.py)
+  wikidata_class_labels: ["fact-checking organization", "fact-checking website", "fact-checker", "fact-checking"]
+  discover_max_sites: 250   # sites looked at per weekly run (the rest follows in the next runs)
+
+gap:                        # traffic light of the "Content gaps" view (owner's rule, 17.11.2026)
+  red_min_factchecks: 5     # red: at least this many fact-checks in the window ...
+  red_max_un: 1             # ... and at most this many UN articles in the last 12 months
+  yellow_min_factchecks: 2  # yellow: at least this many fact-checks and at most yellow_max_un UN articles
+  yellow_max_un: 5          # green: more UN articles than that
 
 keep_days: 365              # single items older than this are deleted; the daily counts are kept for good
 red_marker:                 # "strongly rising" topic (owner 17.11.2026)
@@ -29,3 +45,62 @@ un_names: ["United Nations", "Naciones Unidas", "Nations Unies", "Nações Unida
            "الأمم المتحدة", "संयुक्त राष्ट्र", "Umoja wa Mataifa", "World Health Organization",
            "Organisation mondiale de la santé", "Organización Mundial de la Salud", "Guterres",
            "Secretary-General", "blue helmets", "Blue Helmets", "peacekeepers", "casques bleus", "cascos azules"]
+
+# "Country the fact-check is about": country names found in the headline / claim (English names + aliases come from
+# config/countries.csv). Names that are also ordinary words or places elsewhere are skipped; local spellings added here.
+about_skip_names: [georgia, jordan, chad, turkey leg]
+about_aliases:          # ISO2: other names (Spanish, French, Portuguese, German, local); whole words, accents ignored
+  US: [Estados Unidos, Etats-Unis, États-Unis, Vereinigte Staaten, Amerika, "U.S."]
+  GB: [Reino Unido, Royaume-Uni, Vereinigtes Königreich, Inglaterra, England, Scotland, Wales]
+  ES: [España, Espagne, Espanha, Spanien]
+  FR: [Francia, França, Frankreich]
+  DE: [Alemania, Alemanha, Allemagne, Deutschland, Germany]
+  IT: [Italia, Itália, Italie, Italien]
+  PT: [Portugal]
+  BR: [Brasil, Brésil, Brasilien]
+  RU: [Rusia, Rússia, Russie, Russland, Россия]
+  CN: [China, Chine, 中国, Китай, الصين]
+  IN: [India, Índia, Inde, Indien, भारत]
+  MX: [México, Mexique, Mexiko]
+  UA: [Ucrania, Ucrânia, Ukraine, Україна, Украина, أوكرانيا]
+  IL: [Israël, إسرائيل, Израиль]
+  PS: [Palestina, Palestine, Gaza, West Bank, Cisjordania, فلسطين]
+  TR: [Turquía, Turquia, Turquie, Türkiye, Türkei]
+  JP: [Japón, Japão, Japon, Japan, 日本]
+  IR: [Irán, Iran, Irã, إيران, Иран]
+  IQ: [Irak, Iraque, Irak, العراق]
+  SY: [Siria, Síria, Syrie, Syrien, سوريا]
+  EG: [Egipto, Egito, Égypte, Ägypten, مصر]
+  SA: [Arabia Saudita, Arábia Saudita, Arabie saoudite, السعودية]
+  AR: [Argentine, Argentinien]
+  CL: [Chile]
+  CO: [Colombia, Colômbia, Colombie, Kolumbien]
+  VE: [Venezuela]
+  CU: [Cuba]
+  PE: [Perú, Pérou]
+  KR: [Corea del Sur, Coreia do Sul, Corée du Sud, 韩国]
+  KP: [Corea del Norte, Coreia do Norte, Corée du Nord, North Korea]
+  PH: [Filipinas, Philippines, Philippinen]
+  ID: [Indonesia, Indonésia, Indonésie]
+  NG: [Nigeria, Nigéria]
+  ZA: [Sudáfrica, África do Sul, Afrique du Sud, South Africa, Südafrika]
+  CD: [DRC, RDC, RD Congo, República Democrática del Congo, Congo-Kinshasa]
+  SD: [Sudán, Soudan]
+  SS: [Sudán del Sur, Sudão do Sul, Soudan du Sud]
+  ET: [Etiopía, Etiópia, Éthiopie]
+  KE: [Kenia, Quénia, Kenya]
+  AU: [Australia, Austrália, Australie]
+  CA: [Canadá, Canada]
+  NL: [Países Bajos, Países Baixos, Pays-Bas, Holanda, Netherlands]
+  CH: [Suiza, Suíça, Suisse, Schweiz]
+  PL: [Polonia, Polónia, Pologne]
+  AF: [Afganistán, Afeganistão, Afghanistan, Afghanistan]
+  PK: [Pakistán, Paquistão, Pakistan]
+  BD: [Bangladés, Bangladesh]
+  MM: [Birmania, Mianmar, Myanmar, Birmanie]
+  LB: [Líbano, Líbano, Liban]
+  YE: [Yemen, Yémen, Iémen]
+  LY: [Libia, Líbia, Libye]
+  VN: [Vietnam, Viêt Nam]
+  TH: [Tailandia, Tailândia, Thaïlande]
+about_acronyms: {USA: US, "U.S.": US, UK: GB, UAE: AE, DRC: CD, DPRK: KP, ROK: KR, EEUU: US, "EE.UU.": US}
