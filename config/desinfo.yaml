@@ -1,3 +1,4 @@
+# (key added 17.11.2026)
 # Disinformation & fake news monitor (page site/desinfo.html). All settings live here, not in code.
 # Plan: docs/DESINFO_PLAN.md. Everything free and open; the only key is the free Google Fact Check key
 # (GitHub secret GOOGLE_FACTCHECK_API_KEY); without it the run still works with the other sources.
