@@ -1,7 +1,7 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T21:44:45Z",
-  "records": 790,
+  "fetched_at": "2026-11-17T22:17:54Z",
+  "records": 778,
   "status": {
     "atlas": {
       "topics": 183,
@@ -10,7 +10,9 @@
     "google": {
       "items": 242,
       "requests": 1800,
-      "errors": [],
+      "errors": [
+        "HTTP 503 for 'COVID-19'"
+      ],
       "max_age_days": 14
     },
     "feeds": {

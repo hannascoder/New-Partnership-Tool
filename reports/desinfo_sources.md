@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-17T21:44:45Z  |  items in the site data: 6089
+Fetched: 2026-11-17T22:17:54Z  |  items in the site data: 6091
 
 ## Google Fact Check Tools API
-- {'items': 242, 'requests': 1800, 'errors': [], 'max_age_days': 14}
+- {'items': 240, 'requests': 1800, 'errors': ["HTTP 503 for 'COVID-19'"], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -33,7 +33,7 @@ Fetched: 2026-11-17T21:44:45Z  |  items in the site data: 6089
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-17T21:53:18Z | UN articles in the last 12 months: 355
+Fetched: 2026-11-17T22:26:39Z | UN articles in the last 12 months: 357
 
 | Source | Works | Items | Note |
 |---|---|---|---|

@@ -10,9 +10,9 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 
 - Spain: 829
 - India: 776
-- United States of America: 609
+- United States of America: 610
 - Brazil: 439
-- France: 304
+- France: 305
 - Philippines: 178
 - United Kingdom of Great Britain and Northern Ireland: 149
 - Ecuador: 128
