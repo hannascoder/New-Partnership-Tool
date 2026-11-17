@@ -298,7 +298,7 @@ pasting text is enough; media and NGOs stay on their two pages.
 - Ideas noted: use headline / contact of the pasted mail in the "Send mail" template.
 
 ## 17.11.2026: new page "Disinformation & fake news monitor" - PLAN written, nothing built
-Owner's decisions and the step plan D0-D6: `docs/DESINFO_PLAN.md`. Next: owner answers the open questions, then D1.
+Owner's decisions and the step plan D0-D6: `docs/DESINFO_PLAN.md`. Owner answered both question rounds (17.11.2026). Next: D1. Findings (Atlas already has Google Trends + Wikipedia + GDELT daily data): see plan.
 New owner to-dos: free Google API key (Fact Check Tools); apply for Google Trends API alpha (optional).
 
 ## Next steps (agreed order)
