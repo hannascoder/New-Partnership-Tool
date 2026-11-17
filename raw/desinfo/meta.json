@@ -1,14 +1,14 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T17:20:01Z",
-  "records": 479,
+  "fetched_at": "2026-11-17T17:48:01Z",
+  "records": 585,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 251,
+      "items": 242,
       "requests": 1800,
       "errors": [],
       "max_age_days": 14
@@ -60,8 +60,8 @@
         "url": "https://teyit.org/feed"
       },
       "PolitiFact": {
-        "ok": false,
-        "error": "unbound prefix: line 18, column 6",
+        "ok": true,
+        "items": 20,
         "url": "https://www.politifact.com/rss/factchecks/"
       },
       "FactCheck.org": {
@@ -95,8 +95,8 @@
         "url": "https://pesacheck.org/feed"
       },
       "Dubawa": {
-        "ok": true,
-        "items": 10,
+        "ok": false,
+        "error": "failed after 2 tries: https://dubawa.org/feed/ (HTTP Error 415: Unsupported Media Type)",
         "url": "https://dubawa.org/feed/"
       },
       "Fatabyyano": {
@@ -105,8 +105,8 @@
         "url": "https://fatabyyano.net/feed/"
       },
       "Colombiacheck": {
-        "ok": false,
-        "error": "failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden)",
+        "ok": true,
+        "items": 20,
         "url": "https://colombiacheck.com/feed"
       },
       "Chequeado": {
@@ -121,9 +121,9 @@
       }
     },
     "discovered_feeds": {
-      "ok": 0,
+      "ok": 5,
       "failed": 0,
-      "known": 0
+      "known": 12
     }
   }
 }

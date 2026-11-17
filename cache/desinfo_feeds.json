@@ -1,0 +1,129 @@
+{
+"apa.at": {
+"name": "APA-factchecking",
+"site": "https://apa.at/service/faktencheck-2/",
+"country": "AT",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "de",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"cazadoresdefakenews.info": {
+"name": "Cazadores de Fake News",
+"site": "https://www.cazadoresdefakenews.info/",
+"country": "VE",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "es",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"dpa-factchecking.com": {
+"name": "dpa-factchecking",
+"site": "http://dpa-factchecking.com",
+"country": "DE",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"e-farsas.com": {
+"name": "E-farsas",
+"site": "http://www.e-farsas.com",
+"country": "",
+"checked": "2026-11-17",
+"feed": "https://www.e-farsas.com/feed",
+"lang": "pt",
+"status": "ok",
+"fails": 0
+},
+"factograph.info": {
+"name": "Фактограф",
+"site": "https://factograph.info",
+"country": "CZ",
+"checked": "2026-11-17",
+"feed": "https://factograph.info/api/",
+"lang": "ru",
+"status": "ok",
+"fails": 0
+},
+"faktistfakt.com": {
+"name": "Fakt ist Fakt",
+"site": "https://www.faktistfakt.com",
+"country": "",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"faktograf.hr": {
+"name": "Faktograf",
+"site": "http://faktograf.hr",
+"country": "HR",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"mimikama.org": {
+"name": "Mimikama",
+"site": "https://www.mimikama.org/",
+"country": "AT",
+"checked": "2026-11-17",
+"feed": "https://www.mimikama.org/feed/",
+"lang": "de",
+"status": "ok",
+"fails": 0
+},
+"profil.at": {
+"name": "faktiv",
+"site": "https://www.profil.at/faktiv",
+"country": "AT",
+"checked": "2026-11-17",
+"feed": "https://www.profil.at/faktiv/xml/rss",
+"lang": "de",
+"status": "ok",
+"fails": 0
+},
+"rumorscanner.com": {
+"name": "Rumor Scanner Bangladesh",
+"site": "http://rumorscanner.com",
+"country": "BD",
+"checked": "2026-11-17",
+"feed": "https://rumorscanner.com/feed",
+"lang": "bn",
+"status": "ok",
+"fails": 0
+},
+"truthorfiction.org": {
+"name": "TruthOrFiction.com",
+"site": "http://www.truthorfiction.org",
+"country": "",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"verrit.com": {
+"name": "Verrit",
+"site": "https://verrit.com",
+"country": "US",
+"checked": "2026-11-17",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+}
+}
