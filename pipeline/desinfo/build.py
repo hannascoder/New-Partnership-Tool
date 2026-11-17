@@ -138,6 +138,11 @@ def main():
               open(OUT / "topics.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     json.dump(items, open(OUT / "items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(merged, open(OUT / "series.json", "w"), separators=(",", ":"))
+    json.dump({r["iso2"]: {"name": r["name"], "region": r["region"],
+                           "sub": r["intermediate_region"] or r["subregion"]} for r in valid.values()},
+              open(OUT / "countries.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump({"red_marker": CFG["red_marker"], "keep_days": CFG["keep_days"]},
+              open(OUT / "config.json", "w"), indent=1)
     cs = (atlas.get("country_searches") or {})
     json.dump(cs, open(OUT / "trends.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
