@@ -41,6 +41,12 @@ gap:                        # traffic light of the "Content gaps" view (owner's 
   yellow_min_factchecks: 2  # yellow: at least this many fact-checks and at most yellow_max_un UN articles
   yellow_max_un: 5          # green: more UN articles than that
 
+translation:                # automatic English translation of fact-check titles (open source: Argos Translate)
+  max_per_run: 1500         # titles translated per daily run (the rest follows the next day)
+  budget_seconds: 900       # the translation stops by itself after this time (the rest follows in the next run)
+  max_title_chars: 200
+  skip_languages: [en]
+
 keep_days: 365              # single items older than this are deleted; the daily counts are kept for good
 red_marker:                 # "strongly rising" topic (owner 17.11.2026)
   factor: 2.0               # more than 2x the average of the weeks before ...
@@ -113,3 +119,8 @@ about_aliases:          # ISO2: other names (Spanish, French, Portuguese, German
   VN: [Vietnam, Viêt Nam]
   TH: [Tailandia, Tailândia, Thaïlande]
 about_acronyms: {USA: US, "U.S.": US, UK: GB, UAE: AE, DRC: CD, DPRK: KP, ROK: KR, EEUU: US, "EE.UU.": US}
+
+# Link to the Partner Finder (owner 17.11.2026): for a chosen country the page lists local voices that are already in the
+# Partner Finder data: fact-checkers, community media, well-known news outlets, and organisations / NGOs.
+partners:
+  top_n: 6                  # entries shown per group (the link opens the full list in the Partner Finder)

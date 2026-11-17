@@ -40,9 +40,11 @@
 
   function aggregate() {
     // one pass: per topic range / last7 / base28, per day, per country (current topic)
-    var A = { topics: {}, days: {}, countries: {}, total: 0, unTotal: 0 }, to = day(S.to);
+    var A = { topics: {}, days: {}, countries: {}, rank: {}, total: 0, unTotal: 0 }, to = day(S.to);
     series().forEach(function (r) {
       var d = r[0], q = r[1], c = r[2], un = r[3], n = r[4];
+      // the country ranking ignores the region / country filter, so it always shows where to look next
+      if (q === S.topic && c && inRange(d) && (!S.un || un)) A.rank[c] = (A.rank[c] || 0) + n;
       if (!ok(c, un)) return;
       var dd = day(d), t;
       if (!A.topics[q]) A.topics[q] = { range: 0, last7: 0, base: 0, baseDays: {} };
@@ -267,8 +269,53 @@
     if (!cov[S.country]) p.appendChild(el("p", { class: "hint", text: "No fact-checker of this country is covered yet. The list in reports/desinfo_coverage.md shows which countries are next." }));
     if (tt) p.appendChild(el("p", { text: "Searched for in " + nm + " right now (Google Trends, not a fact-check): " + tt.queries.map(function (x) { return x.q + " (" + x.t + ")"; }).join(", ") + ". Data source: Google Trends." }));
     var clear = el("button", { class: "btn-quiet", type: "button", text: "Show all countries" });
-    clear.onclick = function () { S.country = ""; $("f-country").value = ""; render(); };
+    clear.onclick = function () { S.country = ""; render(); };
     p.appendChild(clear);
+  }
+
+  // ---------- local voices already in the Partner Finder ----------
+  var GROUPS = [
+    { k: "fc", title: "Fact-checkers", link: "./#c={iso3}&ot=fact_checker" },
+    { k: "cm", title: "Community media (e.g. community radio)", link: "./#c={iso3}&ot=community_media" },
+    { k: "nw", title: "Well-known news outlets", link: "./#c={iso3}&ot=news_outlet,news_agency,public_service_broadcaster" },
+    { k: "ngo", title: "Organisations & NGOs", link: "ngos.html#c={iso3}" }
+  ];
+  function renderPartners() {
+    var box = $("partnersBox"); box.textContent = "";
+    var p = DATA.partners && S.country && DATA.partners[S.country];
+    if (!p) { box.hidden = true; return; }
+    box.hidden = false;
+    box.appendChild(el("h3", { text: "Local voices in " + DATA.countries[S.country].name + " (already in the Partner Finder)" }));
+    box.appendChild(el("p", { class: "hint", text: "Credible organisations that could carry verified information. Taken from the Partner Finder data; only organisations, no persons. A group with no entry means none is in the Partner Finder yet." }));
+    var grid = el("div", { class: "p-grid" });
+    GROUPS.forEach(function (g) {
+      var d = p[g.k], col = el("div", { class: "p-col" }, [el("h4", { text: g.title + " (" + d.n + ")" })]);
+      if (!d.n) col.appendChild(el("p", { class: "hint", text: "None in the Partner Finder yet." }));
+      else {
+        var ul = el("ul");
+        d.top.forEach(function (x) {
+          var li = el("li");
+          li.appendChild(x.w ? el("a", { href: safeUrl(x.w), target: "_blank", rel: "noopener noreferrer", text: x.n }) : document.createTextNode(x.n));
+          if (x.l && x.l.length) li.appendChild(document.createTextNode(" (" + x.l.join(", ") + ")"));
+          ul.appendChild(li);
+        });
+        col.appendChild(ul);
+        col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3), text: "Open all " + d.n + " in the Partner Finder →" }));
+      }
+      grid.appendChild(col);
+    });
+    box.appendChild(grid);
+  }
+  function renderCountryRank(A) {
+    var box = $("countryRank"); box.textContent = "";
+    var rows = Object.keys(A.rank).sort(function (a, b) { return A.rank[b] - A.rank[a]; }).slice(0, 14);
+    if (!rows.length) { box.appendChild(el("span", { class: "hint", text: "No country with fact-checks in this window." })); return; }
+    rows.forEach(function (c) {
+      if (!DATA.countries[c]) return;
+      var b = el("button", { class: "chip", type: "button", "aria-pressed": String(S.country === c), text: DATA.countries[c].name + " · " + A.rank[c] });
+      b.onclick = function () { S.country = c; S.region = ""; S.shown = 50; render(); };
+      box.appendChild(b);
+    });
   }
 
   // ---------- items ----------
@@ -289,14 +336,19 @@
       if (i.un) tags.appendChild(el("span", { class: "badge", text: "UN-related" }));
       (i.about || []).slice(0, 3).forEach(function (c) { if (DATA.countries[c]) tags.appendChild(el("span", { class: "badge", text: "about: " + DATA.countries[c].name })); });
       i.topics.slice(0, 5).forEach(function (q) { tags.appendChild(el("span", { class: "badge", text: topicName(q) })); });
-      box.appendChild(el("div", { class: "item" }, [el("div", { class: "meta", text: meta }),
-        el("a", { href: safeUrl(i.url), target: "_blank", rel: "noopener noreferrer", text: i.title }), tags]));
+      var kids = [el("div", { class: "meta", text: meta }),
+        el("a", { href: safeUrl(i.url), target: "_blank", rel: "noopener noreferrer", text: i.title })];
+      if (i.title_en && i.title_en.toLowerCase() !== i.title.toLowerCase())
+        kids.push(el("div", { class: "tr", text: "English (automatic translation): " + i.title_en }));
+      kids.push(tags);
+      box.appendChild(el("div", { class: "item" }, kids));
     });
     $("moreBtn").hidden = list.length <= S.shown;
   }
 
   // ---------- render ----------
   function render() {
+    if (DATA.syncSelects) DATA.syncSelects();
     var A = aggregate();
     renderRange(A); renderTopics(A);
     var base = Object.keys((A.topics[""] || { baseDays: {} }).baseDays).length;
@@ -310,10 +362,11 @@
       $("view-" + v).hidden = S.view !== v;
       $("tab-" + v).setAttribute("aria-selected", String(S.view === v));
     });
-    if (S.view === "trends") renderTrends(A);
+    if (S.view === "trends") { renderTrends(A); renderCountryRank(A); }
     else if (S.view === "gaps") renderGaps(A);
     else { renderLegend(); renderMap(A); if (map) setTimeout(function () { map.invalidateSize(); }, 50); }
     renderUnBox(A);
+    renderPartners();
     renderItems();
   }
 
@@ -329,15 +382,16 @@
       sel.value = S.country;
     }
     countries();
+    DATA.syncSelects = function () { $("f-region").value = S.region; countries(); };
     $("f-region").onchange = function () { S.region = this.value; S.country = ""; countries(); S.shown = 50; render(); };
     $("f-country").onchange = function () { S.country = this.value; S.shown = 50; render(); };
     $("f-region").value = S.region;
   }
 
   Promise.all([load("items.json"), load("series.json"), load("topics.json"), load("countries.json"), load("config.json"),
-               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true)]).then(function (r) {
+               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true)]).then(function (r) {
     DATA.items = r[0]; DATA.series = r[1]; DATA.topics = r[2].topics; DATA.countries = r[3]; DATA.config = r[4];
-    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8];
+    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9];
     DATA.topicById = {}; DATA.topics.forEach(function (t) { DATA.topicById[t.qid] = t; });
     DATA.coveredP = {}; DATA.coveredA = {}; var f = "9999", l = "0000";
     DATA.series.forEach(function (x) { if (x[2]) DATA.coveredP[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });

@@ -147,6 +147,7 @@ def main():
         open(ROOT / "config" / "factcheck_publishers.yaml", encoding="utf-8"))["publishers"].items()}
 
     memory = {i["id"]: i for i in load_json(CACHE / "desinfo_items.json", [])}
+    translations = load_json(CACHE / "desinfo_translations.json", {})   # item id -> automatic English title
     fresh = load_gz("desinfo") or []
     new = 0
     for r in fresh:
@@ -173,7 +174,7 @@ def main():
     # topics and UN flag are derived again at EVERY run from title + claim (+ topics the search engine found),
     # so a better rule in config/ improves the whole archive. The claim text stays in cache/ only, never on the site.
     for m in memory.values():
-        text = m["title"] + " " + m.get("claim", "")
+        text = m["title"] + " " + m.get("claim", "") + " " + translations.get(m["id"], "")
         m["topics"] = sorted(set(matcher.match(text)) | set(m.get("qt", [])))
         m["un"] = un_flag(text) or bool(m.get("unq"))
         m["about"] = cmatch.match(text)
@@ -205,7 +206,7 @@ def main():
     json.dump({"generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "topics": topics_site,
                "languages": (atlas.get("topics") or {}).get("languages")},
               open(OUT / "topics.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-    public = [{k: v for k, v in i.items() if k not in ("claim", "qt", "unq")} for i in items]
+    public = [{**{k: v for k, v in i.items() if k not in ("claim", "qt", "unq")}, **({"title_en": translations[i["id"]]} if translations.get(i["id"]) else {})} for i in items]
     json.dump(public, open(OUT / "items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(merged, open(OUT / "series.json", "w"), separators=(",", ":"))
     json.dump(merged_about, open(OUT / "series_about.json", "w"), separators=(",", ":"))
