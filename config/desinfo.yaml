@@ -1,0 +1,30 @@
+# Disinformation & fake news monitor (page site/desinfo.html). All settings live here, not in code.
+# Plan: docs/DESINFO_PLAN.md. Everything free and open; the only key is the free Google Fact Check key
+# (GitHub secret GOOGLE_FACTCHECK_API_KEY); without it the run still works with the other sources.
+
+atlas_base: https://raw.githubusercontent.com/hannascoder/UN-Media-Consumption-Map-copy-2/main/data
+atlas_files: [topics.json, trends/country_searches.json]   # public Atlas data, copied at every run
+
+google_factcheck:
+  endpoint: https://factchecktools.googleapis.com/v1alpha1/claims:search
+  max_age_days: 14          # each daily run asks for the last 14 days (overlap = safe against missed runs)
+  page_size: 100
+  max_requests: 1800        # safety limit per run
+  pause_seconds: 0.2
+  # topic titles are searched in English and in these languages (title of the topic in that language)
+  topic_languages: [en, fr, es, ar, pt, ru, zh, hi, sw]
+  un_queries: ["United Nations", "UN", "UNICEF", "WHO", "UNHCR", "Guterres", "peacekeepers", "UNESCO", "UNDP", "WFP"]
+
+keep_days: 365              # single items older than this are deleted; the daily counts are kept for good
+red_marker:                 # "strongly rising" topic (owner 17.11.2026)
+  factor: 2.0               # more than 2x the average of the weeks before ...
+  baseline_days: 28
+  min_items: 5              # ... and at least this many items in the last 7 days
+
+# Words that mark an item as "UN-related". Acronyms are matched as whole words, case-sensitive.
+un_acronyms: [UN, UNICEF, WHO, UNHCR, UNDP, UNESCO, FAO, WFP, UNFPA, UNEP, ILO, IOM, OCHA, ONU, OMS, OHCHR, IPCC, UNRWA, MONUSCO, UNIFIL, UNMISS, MINUSMA]
+un_names: ["United Nations", "Naciones Unidas", "Nations Unies", "Nações Unidas", "Vereinte Nationen",
+           "Организация Объединённых Наций", "Организации Объединенных Наций", "ООН", "联合国", "聯合國",
+           "الأمم المتحدة", "संयुक्त राष्ट्र", "Umoja wa Mataifa", "World Health Organization",
+           "Organisation mondiale de la santé", "Organización Mundial de la Salud", "Guterres",
+           "Secretary-General", "blue helmets", "Blue Helmets", "peacekeepers", "casques bleus", "cascos azules"]
