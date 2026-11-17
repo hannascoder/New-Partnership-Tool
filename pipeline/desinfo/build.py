@@ -83,6 +83,39 @@ def un_flag(text):
     return any(n.lower() in low for n in CFG["un_names"])
 
 
+class CountryMatcher:
+    """Countries MENTIONED in a text: English names and aliases (config/countries.csv), local spellings
+    (config/desinfo.yaml about_aliases). Longest names first and removed after matching, so "Equatorial Guinea"
+    is not also "Guinea". Short upper-case aliases (USA, UK, UAE ...) are matched case-sensitively."""
+
+    def __init__(self, valid):
+        skip = {norm(x) for x in CFG.get("about_skip_names", [])}
+        names = []                                   # (normalised name, iso2)
+        self.acr = dict(CFG.get("about_acronyms", {}))
+        for iso, r in valid.items():
+            cand = [re.sub(r"\s*\(.*?\)", "", r["name"]).strip()] + [a.strip() for a in r["aliases"].split(";") if a.strip()]
+            cand += [str(a) for a in (CFG.get("about_aliases", {}).get(iso) or [])]
+            for c in cand:
+                if c.isupper() and len(c) <= 4:
+                    self.acr.setdefault(c, iso)
+                elif len(c) >= 4 and norm(c) not in skip:
+                    names.append((norm(c), iso))
+        self.names = sorted(set(names), key=lambda x: -len(x[0]))
+        self.acr_re = [(re.compile(r"(?<![\w.])" + re.escape(a) + r"(?![\w])"), iso) for a, iso in self.acr.items()]
+
+    def match(self, text):
+        found = set()
+        for rx, iso in self.acr_re:
+            if rx.search(text):
+                found.add(iso)
+        n = norm(text)
+        for name, iso in self.names:
+            if name in n:
+                found.add(iso)
+                n = n.replace(name, " ")
+        return sorted(found)[:6]
+
+
 def country_of(item, domain_map, valid):
     if item.get("country") in valid:
         return item["country"], "feed"
@@ -106,7 +139,10 @@ def main():
     if not topics:
         raise SystemExit("no topic list (Atlas) - run pipeline/fetch/desinfo.py first")
     matcher = TopicMatcher(topics)
+    cmatch = CountryMatcher(valid)
     domain_map = {f["domain"]: f["country"] for f in FEEDS if f["country"]}
+    found = load_json(CACHE / "desinfo_feeds.json", {})
+    domain_map.update({d: r["country"] for d, r in found.items() if r.get("status") == "ok" and r.get("country")})
     pub_map = {k.lower(): v for k, v in yaml.safe_load(
         open(ROOT / "config" / "factcheck_publishers.yaml", encoding="utf-8"))["publishers"].items()}
 
@@ -140,19 +176,28 @@ def main():
         text = m["title"] + " " + m.get("claim", "")
         m["topics"] = sorted(set(matcher.match(text)) | set(m.get("qt", [])))
         m["un"] = un_flag(text) or bool(m.get("unq"))
+        m["about"] = cmatch.match(text)
     cutoff = (date.today() - timedelta(days=CFG["keep_days"])).isoformat()
     items = sorted((i for i in memory.values() if i["date"] >= cutoff), key=lambda i: i["date"], reverse=True)
 
     # daily counts are kept for good: rows [date, topic_qid ('' = all topics), iso2, un(0/1), n]
-    series = defaultdict(int)
-    for i in items:
-        for q in (i["topics"] or [""]) + ([""] if i["topics"] else []):
-            series[(i["date"], q, i["country"], 1 if i["un"] else 0)] += 1
-    old = load_json(CACHE / "desinfo_series.json", [])
+    # two views: by the country of the fact-checker ("publisher") and by the country the fact-check is about ("about")
     window = {i["date"] for i in items}
-    merged = [r for r in old if r[0] not in window]           # days no longer in the window stay as they were
-    merged += [[d, q, c, u, n] for (d, q, c, u), n in sorted(series.items())]
-    json.dump(merged, open(CACHE / "desinfo_series.json", "w"), separators=(",", ":"))
+
+    def make_series(name, countries_of):
+        series = defaultdict(int)
+        for i in items:
+            for q in (i["topics"] + [""]):
+                for c in countries_of(i):
+                    series[(i["date"], q, c, 1 if i["un"] else 0)] += 1
+        old = load_json(CACHE / name, [])
+        merged = [r for r in old if r[0] not in window]          # days no longer in the window stay as they were
+        merged += [[d, q, c, u, n] for (d, q, c, u), n in sorted(series.items())]
+        json.dump(merged, open(CACHE / name, "w"), separators=(",", ":"))
+        return merged
+
+    merged = make_series("desinfo_series.json", lambda i: [i["country"]])
+    merged_about = make_series("desinfo_series_about.json", lambda i: i["about"] or [""])
     json.dump(items, open(CACHE / "desinfo_items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
     # site files
@@ -163,19 +208,26 @@ def main():
     public = [{k: v for k, v in i.items() if k not in ("claim", "qt", "unq")} for i in items]
     json.dump(public, open(OUT / "items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(merged, open(OUT / "series.json", "w"), separators=(",", ":"))
+    json.dump(merged_about, open(OUT / "series_about.json", "w"), separators=(",", ":"))
     json.dump({r["iso2"]: {"name": r["name"], "region": r["region"],
                            "sub": r["intermediate_region"] or r["subregion"]} for r in valid.values()},
               open(OUT / "countries.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    json.dump({"red_marker": CFG["red_marker"], "keep_days": CFG["keep_days"]},
+    json.dump({"red_marker": CFG["red_marker"], "keep_days": CFG["keep_days"], "gap": CFG["gap"],
+               "suggestions": yaml.safe_load(open(ROOT / "config" / "desinfo_gap_suggestions.yaml", encoding="utf-8"))},
               open(OUT / "config.json", "w"), indent=1)
-    cs = (atlas.get("country_searches") or {})
-    json.dump(cs, open(OUT / "trends.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # Google Trends per country (Atlas data, attribution "Data source: Google Trends"): only the query text and Google's bucket
+    iso3 = {r["iso3"]: r["iso2"] for r in valid.values()}
+    cs = (atlas.get("country_searches") or {}).get("countries") or {}
+    trends = {iso3[k]: {"date": v.get("date"), "queries": [{"q": x["query"], "t": x.get("traffic", "")} for x in v.get("queries", [])[:6]]}
+              for k, v in cs.items() if k in iso3 and not v.get("unsupported")}
+    json.dump(trends, open(OUT / "trends.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
     # reports
     by_country = Counter(i["country"] for i in items)
     unassigned = by_country.pop("", 0)
     by_topic = Counter(q for i in items for q in i["topics"])
-    summary = {"items": len(items), "new_this_run": new, "countries_with_items": len(by_country),
+    about_n = Counter(c for i in items for c in i["about"])
+    summary = {"countries_mentioned": len(about_n), "items": len(items), "new_this_run": new, "countries_with_items": len(by_country),
                "unassigned_country": unassigned, "topics_with_items": len(by_topic), "topics_total": len(topics),
                "un_related": sum(1 for i in items if i["un"]),
                "first_date": items[-1]["date"] if items else None, "last_date": items[0]["date"] if items else None}

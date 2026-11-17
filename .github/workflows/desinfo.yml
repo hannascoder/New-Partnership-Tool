@@ -1,16 +1,29 @@
 # Disinformation monitor: DAILY update (owner 17.11.2026: free, open source, renews itself).
-#   1. fetch: Google Fact Check API (secret GOOGLE_FACTCHECK_API_KEY, optional), fact-checker feeds, Atlas data
-#   2. build: topics + countries + daily counts -> site/data/desinfo/, reports/desinfo_*.md
+#   0. weekly (Mondays) or on request: look for new fact-checkers worldwide (Wikidata) and their feeds
+#   1. fetch: Google Fact Check API (secret GOOGLE_FACTCHECK_API_KEY), fact-checker feeds, Atlas data, UN news feeds
+#   2. build: topics + countries + daily counts + UN content -> site/data/desinfo/, reports/desinfo_*.md
 #   3. save on the branch it ran on (main -> Cloudflare publishes). If it fails an issue is opened (e-mail).
-# Start by hand: Actions -> "Disinformation monitor" -> Run workflow. Plan: docs/DESINFO_PLAN.md
+# Start by hand: Actions -> "Disinformation monitor" -> Run workflow.
+#   "Backfill" = ask Google for the last 12 months once (fills topics, makes the red marker work at once).
+#   "Discover" = search for new fact-checkers now.
+# Plan: docs/DESINFO_PLAN.md
 name: Disinformation monitor
 on:
   schedule:
     - cron: "41 4 * * *"   # every day 04:41 UTC
   workflow_dispatch:
-  push:   # test runs while the workflow is not yet on main (only changes of the code, never of the data)
+    inputs:
+      backfill:
+        description: "Backfill: ask Google for the last 12 months (about 30 minutes)"
+        type: boolean
+        default: false
+      discover:
+        description: "Discover: look for new fact-checkers and their feeds now"
+        type: boolean
+        default: false
+  push:   # test runs on the development branch (only changes of the code, never of the data)
     branches: ["claude/quirky-albattani-um2yqd"]
-    paths: ["pipeline/fetch/desinfo.py", "pipeline/desinfo/**", "config/desinfo.yaml", "config/factcheck_sources.yaml", ".github/workflows/desinfo.yml"]
+    paths: ["pipeline/fetch/desinfo*.py", "pipeline/fetch/un_content.py", "pipeline/desinfo/**", "config/desinfo*.yaml", "config/factcheck_*.yaml", "config/un_sources.yaml", ".github/workflows/desinfo.yml"]
 permissions:
   contents: write
   issues: write
@@ -22,25 +35,46 @@ env:
 jobs:
   daily:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install pyyaml
+      - name: Find new fact-checkers and feeds (Mondays, or on request)
+        continue-on-error: true
+        timeout-minutes: 40
+        env:
+          DISCOVER: ${{ github.event.inputs.discover }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "$DISCOVER" = "true" ] || [ "$EVENT" = "push" ]; then
+            python pipeline/fetch/desinfo_discover.py
+          else
+            echo "not a Monday: skipped"
+          fi
       - name: Fetch fact-checks and Atlas data
         env:
           GOOGLE_FACTCHECK_API_KEY: ${{ secrets.GOOGLE_FACTCHECK_API_KEY }}
+          DESINFO_BACKFILL: ${{ github.event.inputs.backfill == 'true' && '1' || '0' }}
         run: python pipeline/fetch/desinfo.py
+      - name: Fetch UN news feeds
+        continue-on-error: true
+        run: python pipeline/fetch/un_content.py
       - name: Build site data
-        run: python pipeline/desinfo/build.py
+        run: |
+          python pipeline/desinfo/build.py
+          python pipeline/desinfo/build_un.py
       - name: Save
         run: |
           git config user.name "partner-finder-bot"
           git config user.email "partner-finder-bot@users.noreply.github.com"
-          git add raw/desinfo raw/desinfo_atlas cache/desinfo_items.json cache/desinfo_series.json \
-                  site/data/desinfo reports/desinfo_sources.md reports/desinfo_coverage.md
+          for f in raw/desinfo raw/desinfo_atlas raw/un_content cache/desinfo_items.json cache/desinfo_series.json \
+                   cache/desinfo_series_about.json cache/desinfo_feeds.json cache/un_items.json \
+                   site/data/desinfo reports/desinfo_sources.md reports/desinfo_coverage.md; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -q -m "Disinformation monitor: daily update $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4; do

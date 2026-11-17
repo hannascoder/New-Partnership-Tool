@@ -301,6 +301,7 @@ pasting text is enough; media and NGOs stay on their two pages.
 Owner's decisions and the step plan D0-D6: `docs/DESINFO_PLAN.md`. Owner answered both question rounds (17.11.2026). Next: D1. Findings (Atlas already has Google Trends + Wikipedia + GDELT daily data): see plan.
 D1 (fetch + daily workflow `desinfo.yml`) and D2 (page `site/desinfo.html`, `site/assets/desinfo.js`: trends view, map, timeline, topic list, filters) BUILT 17.11.2026 on branch claude/quirky-albattani-um2yqd; D3 (UN check, gap list) next. Google key: entered by the owner 17.11.2026.
 Topic detection improved 17.11.2026 (`config/desinfo_topic_synonyms.yaml`, ~180 topics with extra words in several languages; topics re-derived at every run from title + claim, claim kept in cache/ only). PR #35 merged 17.11.2026; later work is on the same branch and needs a new PR.
+17.11.2026 evening: backfill, fact-checker discovery, 'about' countries, UN content + content-gap view BUILT (docs/DESINFO_PLAN.md, last section). Next: look at reports/desinfo_sources.md after the first full run (which UN feeds and fact-checker feeds work) and fix addresses.
 Old to-do: free Google API key (Fact Check Tools); apply for Google Trends API alpha (optional).
 
 ## Next steps (agreed order)

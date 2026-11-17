@@ -91,3 +91,18 @@ Not used: Media Bias/Fact Check, Washington Post Fact Checker (US only).
 
 ## Open questions
 Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
+
+## Built 17.11.2026 (second half): all of the owner's answers implemented
+- Backfill run (workflow input "backfill": Google, last 12 months, 3 pages per query) and rotating languages (9 fixed +
+  3 of the other 13 Atlas languages per day).
+- Automatic search for fact-checkers: Wikidata (class labels in `config/desinfo.yaml` `discovery`) -> home page ->
+  the feed the site announces; robots.txt respected, 403 never worked around, result in `cache/desinfo_feeds.json`;
+  weekly (Mondays) or workflow input "discover". Feeds that fail 10 days in a row rest for 30 days.
+- "Country the fact-check is about" (`about`): country names in title + claim, English names + local spellings
+  (`config/desinfo.yaml` about_aliases / about_acronyms / about_skip_names); second series `series_about.json`; switch on the page.
+- Search trends (Atlas, Google Trends per country) shown for a chosen country as a substitute signal, marked as such.
+- Content gaps (D3): UN feeds (`config/un_sources.yaml`, own feed discovery as fallback) -> topics with the same
+  synonyms -> `site/data/desinfo/un_content.json`; traffic light in `config/desinfo.yaml` `gap`; suggestions per topic
+  group in `config/desinfo_gap_suggestions.yaml`; language check (languages of the fact-checks vs UN articles).
+- Known limits: demonyms (Bangladeshi, Venezuelan) are not read as countries; UN feed addresses were guessed and are
+  checked at every run (reports/desinfo_sources.md); "about" and topics are rule based.

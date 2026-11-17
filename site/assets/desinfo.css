@@ -43,3 +43,19 @@
 .item .tags { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
 .disclaimer { margin-top: 24px; }
 @media (max-width: 720px) { .trend-row { grid-template-columns: 1fr 70px; } .trend-bar, .trend-row .rise-col { display: none; } .map { height: 320px; } }
+
+.badge.amber { color: var(--warn); border-color: var(--warn); font-weight: 600; }
+.badge.green { color: var(--positive); border-color: var(--positive); font-weight: 600; }
+.unbox { margin: 8px 0 16px; font-size: 13px; }
+.unbox h3 { margin: 0 0 6px; font-size: 14px; }
+.unbox ul { margin: 6px 0 0; padding-left: 18px; }
+.gap-list { display: grid; gap: 8px; }
+.gap-row { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 14px; font-size: 13px; }
+.gap-head { display: grid; grid-template-columns: minmax(150px, 1.4fr) 110px 110px 80px 1fr; gap: 10px; align-items: center; }
+.gap-head .name { font-weight: 600; cursor: pointer; background: none; border: 0; text-align: left; font: inherit; font-weight: 600; color: var(--un-blue-dark); padding: 0; }
+.gap-row details { margin-top: 6px; }
+.gap-row summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+.gap-row ul { margin: 6px 0 0; padding-left: 18px; }
+.langs .badge { margin-right: 4px; }
+#countryPanel { margin-top: 8px; font-size: 13px; }
+@media (max-width: 720px) { .gap-head { grid-template-columns: 1fr 1fr; } }
