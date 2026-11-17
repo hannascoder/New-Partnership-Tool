@@ -3,6 +3,9 @@
 # reports/desinfo_sources.md saying which feeds worked, so wrong addresses show up by themselves.
 # country = ISO2 code of the country the fact-checker works in (or "" for international); lang = ISO 639-1.
 # Only recognised fact-checkers (IFCN signatories, EDMO, Duke Reporters' Lab). No judgement of our own.
+# NOTE 17.11.2026 (first run): AFP, Africa Check, PesaCheck, Colombiacheck answer "403 Forbidden" to our
+# honest user agent; Vera Files returns a web page, not a feed. We do NOT disguise ourselves to get past that.
+# Their fact-checks reach us through the Google Fact Check API (ClaimReview) once the key is set.
 feeds:
   - {name: "AFP Fact Check",       url: "https://factcheck.afp.com/rss.xml", country: "", lang: en, domain: factcheck.afp.com, verified: false}
   - {name: "Full Fact",            url: "https://fullfact.org/feed/all/", country: GB, lang: en, domain: fullfact.org, verified: false}
@@ -13,7 +16,7 @@ feeds:
   - {name: "BOOM",                url: "https://www.boomlive.in/feed", country: IN, lang: en, domain: boomlive.in, verified: false}
   - {name: "Vera Files",          url: "https://verafiles.org/feed", country: PH, lang: en, domain: verafiles.org, verified: false}
   - {name: "Teyit",               url: "https://teyit.org/feed", country: TR, lang: tr, domain: teyit.org, verified: false}
-  - {name: "PolitiFact",          url: "https://www.politifact.com/rss/all/", country: US, lang: en, domain: politifact.com, verified: false}
+  - {name: "PolitiFact",          url: "https://www.politifact.com/rss/factchecks/", country: US, lang: en, domain: politifact.com, verified: false}
   - {name: "FactCheck.org",       url: "https://www.factcheck.org/feed/", country: US, lang: en, domain: factcheck.org, verified: false}
   - {name: "Snopes",              url: "https://www.snopes.com/feed/", country: US, lang: en, domain: snopes.com, verified: false}
   - {name: "Lead Stories",        url: "https://leadstories.com/atom.xml", country: US, lang: en, domain: leadstories.com, verified: false}
