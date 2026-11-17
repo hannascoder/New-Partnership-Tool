@@ -173,8 +173,14 @@ def host(u):
     return re.sub(r"^www\d?\.", "", urllib.parse.urlsplit(u).netloc.lower())
 
 
-import yaml  # noqa: E402
-WC = (yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8")) or {}).get("website_contact") or {}
+try:
+    import yaml  # noqa: E402
+    WC = (yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8")) or {}).get("website_contact") or {}
+except ImportError:  # pyyaml missing: the usual contact paths still work
+    WC = {"paths": ["/contact", "/contact-us", "/contactus", "/about/contact", "/kontakt", "/contacto", "/contato",
+                    "/contactez-nous", "/nous-contacter", "/contatti", "/contacts", "/contact.html"],
+          "second_level": ["co", "com", "org", "net", "gov", "ac", "edu", "or", "ne", "go"]}
+    print("note: pyyaml not installed, built-in contact paths used")
 
 
 def site_key(h):
