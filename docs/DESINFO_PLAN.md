@@ -106,3 +106,14 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   group in `config/desinfo_gap_suggestions.yaml`; language check (languages of the fact-checks vs UN articles).
 - Known limits: demonyms (Bangladeshi, Venezuelan) are not read as countries; UN feed addresses were guessed and are
   checked at every run (reports/desinfo_sources.md); "about" and topics are rule based.
+
+## Built 17.11.2026 (evening): translation and link to the Partner Finder (D5)
+- Automatic English translation of titles: `pipeline/desinfo/translate.py` (Argos Translate, open source, models cached
+  between runs; memory `cache/desinfo_translations.json`; report `reports/desinfo_translation.md`). Translations also feed
+  topic and country detection.
+- Local voices per country (owner: fact-checkers, community media, well-known news outlets, AND organisations & NGOs):
+  `pipeline/desinfo/partners.py` -> `site/data/desinfo/partners.json` (top 6 per group, `config/desinfo.yaml` `partners`);
+  box on the page for a chosen country with links that open the Partner Finder pre-filtered (`#c=ESP&ot=fact_checker`,
+  `ngos.html#c=ESP`). Country ranking list "Countries with the most fact-checks" on the trends view.
+- Idea left for later: Partner Finder cards could show "much disinformation in this country (topic X)"; topic mapping between
+  the Atlas topics (183) and the Partner Finder topics (38) would be needed for topic-specific links.

@@ -60,3 +60,10 @@
 #countryPanel { margin-top: 8px; font-size: 13px; }
 @media (max-width: 720px) { .gap-head { grid-template-columns: 1fr 1fr; } }
 .item .tr { font-size: 13px; color: var(--muted); margin-top: 2px; font-style: italic; }
+.partners { margin: 8px 0 16px; font-size: 13px; }
+.partners h3 { margin: 0 0 4px; font-size: 15px; }
+.p-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 8px; }
+.p-col h4 { margin: 0 0 4px; font-size: 13px; }
+.p-col ul { margin: 4px 0; padding-left: 16px; }
+.p-col li { margin: 2px 0; }
+.p-col .more { font-size: 12px; }

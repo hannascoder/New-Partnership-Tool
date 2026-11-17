@@ -66,6 +66,7 @@ jobs:
         run: |
           python pipeline/desinfo/build.py
           python pipeline/desinfo/build_un.py
+          python pipeline/desinfo/partners.py
       - name: Cache translation models (Argos Translate)
         uses: actions/cache@v4
         with:
