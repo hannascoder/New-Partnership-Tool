@@ -52,9 +52,11 @@ def norm(s):
 
 
 class TopicMatcher:
-    """Topic titles (all languages in the Atlas list) found as whole words in a text."""
+    """Topic titles (all languages in the Atlas list) plus the extra words of
+    config/desinfo_topic_synonyms.yaml, found as whole words (word* = word start) in a text."""
 
     def __init__(self, topics):
+        syn = yaml.safe_load(open(ROOT / "config" / "desinfo_topic_synonyms.yaml", encoding="utf-8"))["synonyms"]
         self.entries = []   # (qid, [normalised phrase])
         for t in topics:
             phrases = set()
@@ -62,6 +64,10 @@ class TopicMatcher:
                 title = re.sub(r"\s*\(.*?\)\s*", " ", title or "").strip()   # drop "(disambiguation)"
                 if len(title) >= 4 or (title.isupper() and len(title) >= 3):
                     phrases.add(norm(title))
+            for w in syn.get(t.get("label_en"), []):
+                core = norm(w.rstrip("*"))
+                if len(w.rstrip("*").strip()) >= 2:
+                    phrases.add(core.rstrip() if w.endswith("*") else core)
             self.entries.append((t["qid"], sorted(phrases)))
 
     def match(self, text):
@@ -109,30 +115,31 @@ def main():
     new = 0
     for r in fresh:
         iid = hashlib.sha1(r["url"].encode()).hexdigest()[:12]
-        if iid in memory:               # seen before: add what is new (country rules, topics found by search)
-            m = memory[iid]
-            if not m["country"]:
-                cc, how = country_of(r, domain_map, valid)
-                if not cc and pub_map.get(r["publisher"].lower()) in valid:
-                    cc, how = pub_map[r["publisher"].lower()], "publisher"
-                m["country"], m["country_from"] = cc, how
-            m["topics"] = sorted(set(m["topics"]) | set(matcher.match(r["title"] + " " + r.get("claim", "")))
-                                 | set(r.get("qtopics", [])))
-            m["un"] = m["un"] or un_flag(r["title"] + " " + r.get("claim", "")) or bool(r.get("unq"))
-            continue
-        if not r.get("date"):
-            continue
-        text = r["title"] + " " + r.get("claim", "")
         cc, how = country_of(r, domain_map, valid)
         if not cc and pub_map.get(r["publisher"].lower()) in valid:
             cc, how = pub_map[r["publisher"].lower()], "publisher"
+        if iid in memory:               # seen before: keep it, add what is new
+            m = memory[iid]
+            if not m["country"]:
+                m["country"], m["country_from"] = cc, how
+            m["claim"] = r.get("claim", "")
+            m["qt"] = sorted(set(m.get("qt", [])) | set(r.get("qtopics", [])))
+            m["unq"] = bool(m.get("unq") or r.get("unq"))
+            continue
+        if not r.get("date"):
+            continue
         memory[iid] = {"id": iid, "date": r["date"], "title": r["title"], "url": r["url"],
                        "publisher": r["publisher"], "country": cc, "country_from": how, "lang": r["lang"],
-                       "rating": r.get("rating", ""),
-                       "topics": sorted(set(matcher.match(text)) | set(r.get("qtopics", []))),
-                       "un": un_flag(text) or bool(r.get("unq")),
+                       "rating": r.get("rating", ""), "claim": r.get("claim", ""),
+                       "qt": r.get("qtopics", []), "unq": bool(r.get("unq")), "topics": [], "un": False,
                        "src": r["src"]}
         new += 1
+    # topics and UN flag are derived again at EVERY run from title + claim (+ topics the search engine found),
+    # so a better rule in config/ improves the whole archive. The claim text stays in cache/ only, never on the site.
+    for m in memory.values():
+        text = m["title"] + " " + m.get("claim", "")
+        m["topics"] = sorted(set(matcher.match(text)) | set(m.get("qt", [])))
+        m["un"] = un_flag(text) or bool(m.get("unq"))
     cutoff = (date.today() - timedelta(days=CFG["keep_days"])).isoformat()
     items = sorted((i for i in memory.values() if i["date"] >= cutoff), key=lambda i: i["date"], reverse=True)
 
@@ -153,7 +160,8 @@ def main():
     json.dump({"generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "topics": topics_site,
                "languages": (atlas.get("topics") or {}).get("languages")},
               open(OUT / "topics.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-    json.dump(items, open(OUT / "items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    public = [{k: v for k, v in i.items() if k not in ("claim", "qt", "unq")} for i in items]
+    json.dump(public, open(OUT / "items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(merged, open(OUT / "series.json", "w"), separators=(",", ":"))
     json.dump({r["iso2"]: {"name": r["name"], "region": r["region"],
                            "sub": r["intermediate_region"] or r["subregion"]} for r in valid.values()},
