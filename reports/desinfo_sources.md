@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-17T18:11:48Z  |  items in the site data: 667
+Fetched: 2026-11-17T19:09:07Z  |  items in the site data: 6032
 
 ## Google Fact Check Tools API
-- {'items': 240, 'requests': 1800, 'errors': [], 'max_age_days': 14}
+- {'items': 5750, 'requests': 1520, 'errors': ["HTTP 503 for 'تضليل'", "HTTP 503 for 'تعليم عن بعد'", "HTTP 503 for 'Éducation des filles'", "HTTP 503 for 'Flood'", "HTTP 503 for 'Transporte público'", "HTTP 503 for 'Vaccine'"], 'max_age_days': 365}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -26,14 +26,14 @@ Fetched: 2026-11-17T18:11:48Z  |  items in the site data: 667
 | PesaCheck | NO |  | failed after 2 tries: https://pesacheck.org/feed (HTTP Error 403: Forbidden) |
 | Dubawa | yes | 10 |  |
 | Fatabyyano | yes | 10 |  |
-| Colombiacheck | NO |  | failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden) |
+| Colombiacheck | yes | 20 |  |
 | Chequeado | yes | 50 |  |
 | Cekfakta / Mafindo | yes | 10 |  |
 
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-17T18:49:04Z | UN articles in the last 12 months: 336
+Fetched: 2026-11-17T19:42:46Z | UN articles in the last 12 months: 344
 
 | Source | Works | Items | Note |
 |---|---|---|---|
@@ -55,11 +55,11 @@ Fetched: 2026-11-17T18:49:04Z | UN articles in the last 12 months: 336
 | UNHCR (en) | NO | 0 | failed after 2 tries: https://www.unhcr.org/rss/news (HTTP Error 403: Forbidden) |
 | FAO (en) | NO | 0 | failed after 2 tries: https://www.fao.org/rss/news (HTTP Error 404: Not Found) |
 | WFP (en) | NO | 0 | failed after 2 tries: https://www.wfp.org/rss/news (HTTP Error 404: Not Found) |
-| UNEP (en) | NO | 0 | failed after 2 tries: https://www.unep.org/rss/news (HTTP Error 404: Not Found) |
+| UNEP (en) | NO | 0 | failed after 2 tries: https://www.unep.org/rss/news (HTTP Error 403: Forbidden) |
 | UNESCO (en) | NO | 0 | failed after 2 tries: https://www.unesco.org/rss/news (<urlopen error _ssl.c:994: The handshake operation timed out>) |
 | OHCHR (en) | yes | 10 |  |
 | UNDP (en) | NO | 0 | failed after 2 tries: https://www.undp.org/rss/news (HTTP Error 403: Forbidden) |
-| UN Women (en) | NO | 0 | failed after 2 tries: https://www.unwomen.org/rss/news (HTTP Error 403: Forbidden) |
+| UN Women (en) | yes | 50 |  |
 | IOM (en) | NO | 0 | failed after 2 tries: https://www.iom.int/rss/news (HTTP Error 404: Not Found) |
 | UNFPA (en) | yes | 10 |  |
 

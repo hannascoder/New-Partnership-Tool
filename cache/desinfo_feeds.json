@@ -375,6 +375,18 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"thequint.com": {
+"name": "The Quint",
+"site": "https://thequint.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
 "thip.media": {
 "name": "THIP Media",
 "site": "https://thip.media/",

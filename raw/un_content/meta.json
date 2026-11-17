@@ -1,7 +1,7 @@
 {
   "source": "un_content",
-  "fetched_at": "2026-11-17T18:49:04Z",
-  "records": 433,
+  "fetched_at": "2026-11-17T19:42:46Z",
+  "records": 483,
   "status": {
     "UN News (en)": {
       "ok": true,
@@ -115,7 +115,7 @@
       "ok": false,
       "items": 0,
       "url": "https://www.unep.org/rss.xml",
-      "error": "failed after 2 tries: https://www.unep.org/rss/news (HTTP Error 404: Not Found)"
+      "error": "failed after 2 tries: https://www.unep.org/rss/news (HTTP Error 403: Forbidden)"
     },
     "UNESCO (en)": {
       "ok": false,
@@ -136,10 +136,10 @@
       "error": "failed after 2 tries: https://www.undp.org/rss/news (HTTP Error 403: Forbidden)"
     },
     "UN Women (en)": {
-      "ok": false,
-      "items": 0,
+      "ok": true,
+      "items": 50,
       "url": "https://www.unwomen.org/en/rss-feeds/news",
-      "error": "failed after 2 tries: https://www.unwomen.org/rss/news (HTTP Error 403: Forbidden)"
+      "error": ""
     },
     "IOM (en)": {
       "ok": false,
