@@ -1,0 +1,121 @@
+{
+  "source": "desinfo",
+  "fetched_at": "2026-11-17T16:09:23Z",
+  "records": 228,
+  "status": {
+    "atlas": {
+      "topics": 183,
+      "country_searches": true
+    },
+    "google": {
+      "skipped": "no key"
+    },
+    "feeds": {
+      "AFP Fact Check": {
+        "ok": false,
+        "error": "failed after 2 tries: https://factcheck.afp.com/rss.xml (HTTP Error 403: Forbidden)",
+        "url": "https://factcheck.afp.com/rss.xml"
+      },
+      "Full Fact": {
+        "ok": true,
+        "items": 10,
+        "url": "https://fullfact.org/feed/all/"
+      },
+      "Africa Check": {
+        "ok": false,
+        "error": "failed after 2 tries: https://africacheck.org/feed (HTTP Error 403: Forbidden)",
+        "url": "https://africacheck.org/feed"
+      },
+      "Maldita.es": {
+        "ok": true,
+        "items": 50,
+        "url": "https://maldita.es/feed/"
+      },
+      "Newtral": {
+        "ok": true,
+        "items": 10,
+        "url": "https://www.newtral.es/feed/"
+      },
+      "Aos Fatos": {
+        "ok": true,
+        "items": 20,
+        "url": "https://www.aosfatos.org/noticias/feed/"
+      },
+      "BOOM": {
+        "ok": true,
+        "items": 2,
+        "url": "https://www.boomlive.in/feed"
+      },
+      "Vera Files": {
+        "ok": false,
+        "error": "syntax error: line 1, column 0",
+        "url": "https://verafiles.org/feed"
+      },
+      "Teyit": {
+        "ok": true,
+        "items": 10,
+        "url": "https://teyit.org/feed"
+      },
+      "PolitiFact": {
+        "ok": false,
+        "error": "failed after 2 tries: https://www.politifact.com/rss/all/ (HTTP Error 404: Not Found)",
+        "url": "https://www.politifact.com/rss/all/"
+      },
+      "FactCheck.org": {
+        "ok": true,
+        "items": 10,
+        "url": "https://www.factcheck.org/feed/"
+      },
+      "Snopes": {
+        "ok": true,
+        "items": 20,
+        "url": "https://www.snopes.com/feed/"
+      },
+      "Lead Stories": {
+        "ok": true,
+        "items": 15,
+        "url": "https://leadstories.com/atom.xml"
+      },
+      "Correctiv": {
+        "ok": true,
+        "items": 1,
+        "url": "https://correctiv.org/faktencheck/feed/"
+      },
+      "Les Surligneurs / AFP Factuel": {
+        "ok": false,
+        "error": "failed after 2 tries: https://factuel.afp.com/rss.xml (HTTP Error 403: Forbidden)",
+        "url": "https://factuel.afp.com/rss.xml"
+      },
+      "PesaCheck": {
+        "ok": false,
+        "error": "failed after 2 tries: https://pesacheck.org/feed (HTTP Error 403: Forbidden)",
+        "url": "https://pesacheck.org/feed"
+      },
+      "Dubawa": {
+        "ok": true,
+        "items": 10,
+        "url": "https://dubawa.org/feed/"
+      },
+      "Fatabyyano": {
+        "ok": true,
+        "items": 10,
+        "url": "https://fatabyyano.net/feed/"
+      },
+      "Colombiacheck": {
+        "ok": false,
+        "error": "failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden)",
+        "url": "https://colombiacheck.com/feed"
+      },
+      "Chequeado": {
+        "ok": true,
+        "items": 50,
+        "url": "https://chequeado.com/feed/"
+      },
+      "Cekfakta / Mafindo": {
+        "ok": true,
+        "items": 10,
+        "url": "https://turnbackhoax.id/feed/"
+      }
+    }
+  }
+}

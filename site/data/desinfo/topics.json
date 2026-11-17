@@ -1,0 +1,944 @@
+{
+"generated": "2026-11-17T16:09:23Z",
+"topics": [
+{
+"qid": "Q1363408",
+"label": "5G",
+"group": "technology"
+},
+{
+"qid": "Q116291231",
+"label": "AI safety",
+"group": "technology"
+},
+{
+"qid": "Q11451",
+"label": "Agriculture",
+"group": "infrastructure"
+},
+{
+"qid": "Q131123",
+"label": "Air pollution",
+"group": "climate"
+},
+{
+"qid": "Q21698220",
+"label": "Antimicrobial resistance",
+"group": "health"
+},
+{
+"qid": "Q11660",
+"label": "Artificial intelligence",
+"group": "technology"
+},
+{
+"qid": "Q564811",
+"label": "Asylum seeker",
+"group": "humanitarian"
+},
+{
+"qid": "Q47041",
+"label": "Biodiversity",
+"group": "climate"
+},
+{
+"qid": "Q18466271",
+"label": "Biodiversity loss",
+"group": "climate"
+},
+{
+"qid": "Q20514253",
+"label": "Blockchain",
+"group": "technology"
+},
+{
+"qid": "Q174876",
+"label": "Breastfeeding",
+"group": "health"
+},
+{
+"qid": "Q84263196",
+"label": "COVID-19",
+"group": "health"
+},
+{
+"qid": "Q12078",
+"label": "Cancer",
+"group": "health"
+},
+{
+"qid": "Q8454",
+"label": "Capital punishment",
+"group": "rights"
+},
+{
+"qid": "Q208383",
+"label": "Ceasefire",
+"group": "peace"
+},
+{
+"qid": "Q543",
+"label": "Censorship",
+"group": "rights"
+},
+{
+"qid": "Q115564437",
+"label": "ChatGPT",
+"group": "technology"
+},
+{
+"qid": "Q167191",
+"label": "Child abuse",
+"group": "rights"
+},
+{
+"qid": "Q192571",
+"label": "Child labour",
+"group": "humanitarian"
+},
+{
+"qid": "Q1546421",
+"label": "Child marriage",
+"group": "rights"
+},
+{
+"qid": "Q8354948",
+"label": "Children's rights",
+"group": "education"
+},
+{
+"qid": "Q12090",
+"label": "Cholera",
+"group": "health"
+},
+{
+"qid": "Q8465",
+"label": "Civil war",
+"group": "peace"
+},
+{
+"qid": "Q125928",
+"label": "Climate change",
+"group": "climate"
+},
+{
+"qid": "Q260607",
+"label": "Climate change adaptation",
+"group": "climate"
+},
+{
+"qid": "Q898653",
+"label": "Climate change mitigation",
+"group": "climate"
+},
+{
+"qid": "Q3510521",
+"label": "Computer security",
+"group": "technology"
+},
+{
+"qid": "Q122224",
+"label": "Contraception",
+"group": "health"
+},
+{
+"qid": "Q366",
+"label": "Corruption",
+"group": "rights"
+},
+{
+"qid": "Q575619",
+"label": "Cost of living",
+"group": "development"
+},
+{
+"qid": "Q13479982",
+"label": "Cryptocurrency",
+"group": "technology"
+},
+{
+"qid": "Q494348",
+"label": "Cyberbullying",
+"group": "technology"
+},
+{
+"qid": "Q651936",
+"label": "Debt relief",
+"group": "development"
+},
+{
+"qid": "Q49473179",
+"label": "Deepfake",
+"group": "technology"
+},
+{
+"qid": "Q169940",
+"label": "Deforestation",
+"group": "climate"
+},
+{
+"qid": "Q7174",
+"label": "Democracy",
+"group": "rights"
+},
+{
+"qid": "Q30953",
+"label": "Dengue fever",
+"group": "health"
+},
+{
+"qid": "Q183481",
+"label": "Desertification",
+"group": "climate"
+},
+{
+"qid": "Q865909",
+"label": "Development aid",
+"group": "development"
+},
+{
+"qid": "Q12206",
+"label": "Diabetes",
+"group": "health"
+},
+{
+"qid": "Q244752",
+"label": "Digital divide",
+"group": "technology"
+},
+{
+"qid": "Q12131",
+"label": "Disability",
+"group": "rights"
+},
+{
+"qid": "Q331662",
+"label": "Disarmament",
+"group": "peace"
+},
+{
+"qid": "Q169207",
+"label": "Discrimination",
+"group": "rights"
+},
+{
+"qid": "Q189656",
+"label": "Disinformation",
+"group": "rights"
+},
+{
+"qid": "Q159595",
+"label": "Distance education",
+"group": "education"
+},
+{
+"qid": "Q156537",
+"label": "Domestic violence",
+"group": "rights"
+},
+{
+"qid": "Q7892",
+"label": "Drinking water",
+"group": "infrastructure"
+},
+{
+"qid": "Q43059",
+"label": "Drought",
+"group": "climate"
+},
+{
+"qid": "Q1472221",
+"label": "Early childhood education",
+"group": "education"
+},
+{
+"qid": "Q7944",
+"label": "Earthquake",
+"group": "humanitarian"
+},
+{
+"qid": "Q51993",
+"label": "Ebola",
+"group": "health"
+},
+{
+"qid": "Q8434",
+"label": "Education",
+"group": "education"
+},
+{
+"qid": "Q40231",
+"label": "Election",
+"group": "rights"
+},
+{
+"qid": "Q13629441",
+"label": "Electric vehicle",
+"group": "climate"
+},
+{
+"qid": "Q327400",
+"label": "Electronic waste",
+"group": "climate"
+},
+{
+"qid": "Q1341244",
+"label": "Energy poverty",
+"group": "infrastructure"
+},
+{
+"qid": "Q2714378",
+"label": "Extreme poverty",
+"group": "development"
+},
+{
+"qid": "Q1277161",
+"label": "Extreme weather",
+"group": "climate"
+},
+{
+"qid": "Q1192553",
+"label": "Facial recognition system",
+"group": "technology"
+},
+{
+"qid": "Q188485",
+"label": "Fair trade",
+"group": "development"
+},
+{
+"qid": "Q28549308",
+"label": "Fake news",
+"group": "rights"
+},
+{
+"qid": "Q1280670",
+"label": "Family planning",
+"group": "health"
+},
+{
+"qid": "Q168247",
+"label": "Famine",
+"group": "humanitarian"
+},
+{
+"qid": "Q15675634",
+"label": "Female education",
+"group": "education"
+},
+{
+"qid": "Q208373",
+"label": "Female genital mutilation",
+"group": "rights"
+},
+{
+"qid": "Q60852",
+"label": "Financial inclusion",
+"group": "development"
+},
+{
+"qid": "Q8068",
+"label": "Flood",
+"group": "climate"
+},
+{
+"qid": "Q1229911",
+"label": "Food security",
+"group": "humanitarian"
+},
+{
+"qid": "Q12748",
+"label": "Fossil fuel",
+"group": "infrastructure"
+},
+{
+"qid": "Q171899",
+"label": "Freedom of religion",
+"group": "rights"
+},
+{
+"qid": "Q22692",
+"label": "Freedom of speech",
+"group": "rights"
+},
+{
+"qid": "Q22688",
+"label": "Freedom of the press",
+"group": "rights"
+},
+{
+"qid": "Q113453",
+"label": "Gender equality",
+"group": "rights"
+},
+{
+"qid": "Q5531013",
+"label": "Gender pay gap",
+"group": "development"
+},
+{
+"qid": "Q182726",
+"label": "Genetically modified organism",
+"group": "infrastructure"
+},
+{
+"qid": "Q41397",
+"label": "Genocide",
+"group": "peace"
+},
+{
+"qid": "Q12199",
+"label": "HIV/AIDS",
+"group": "health"
+},
+{
+"qid": "Q215864",
+"label": "Heat wave",
+"group": "climate"
+},
+{
+"qid": "Q9166713",
+"label": "Higher education",
+"group": "education"
+},
+{
+"qid": "Q131327",
+"label": "Homelessness",
+"group": "development"
+},
+{
+"qid": "Q177626",
+"label": "Human migration",
+"group": "humanitarian"
+},
+{
+"qid": "Q8458",
+"label": "Human rights",
+"group": "rights"
+},
+{
+"qid": "Q181784",
+"label": "Human trafficking",
+"group": "humanitarian"
+},
+{
+"qid": "Q826745",
+"label": "Humanitarian aid",
+"group": "humanitarian"
+},
+{
+"qid": "Q165947",
+"label": "Hunger",
+"group": "humanitarian"
+},
+{
+"qid": "Q131288",
+"label": "Immigration",
+"group": "humanitarian"
+},
+{
+"qid": "Q103817",
+"label": "Indigenous peoples",
+"group": "rights"
+},
+{
+"qid": "Q35865",
+"label": "Inflation",
+"group": "development"
+},
+{
+"qid": "Q2840",
+"label": "Influenza",
+"group": "health"
+},
+{
+"qid": "Q944235",
+"label": "Informal economy",
+"group": "development"
+},
+{
+"qid": "Q456632",
+"label": "Information privacy",
+"group": "technology"
+},
+{
+"qid": "Q1145466",
+"label": "Internally displaced person",
+"group": "humanitarian"
+},
+{
+"qid": "Q7801",
+"label": "International Court of Justice",
+"group": "institutions"
+},
+{
+"qid": "Q47488",
+"label": "International Criminal Court",
+"group": "institutions"
+},
+{
+"qid": "Q7804",
+"label": "International Monetary Fund",
+"group": "institutions"
+},
+{
+"qid": "Q2061202",
+"label": "International sanctions",
+"group": "peace"
+},
+{
+"qid": "Q1472399",
+"label": "Internet access",
+"group": "technology"
+},
+{
+"qid": "Q22696",
+"label": "Internet censorship",
+"group": "technology"
+},
+{
+"qid": "Q17898",
+"label": "LGBTQ rights",
+"group": "rights"
+},
+{
+"qid": "Q178795",
+"label": "Land mine",
+"group": "humanitarian"
+},
+{
+"qid": "Q8236",
+"label": "Literacy",
+"group": "education"
+},
+{
+"qid": "Q2539",
+"label": "Machine learning",
+"group": "technology"
+},
+{
+"qid": "Q12156",
+"label": "Malaria",
+"group": "health"
+},
+{
+"qid": "Q12167",
+"label": "Malnutrition",
+"group": "health"
+},
+{
+"qid": "Q6786626",
+"label": "Maternal health",
+"group": "health"
+},
+{
+"qid": "Q79793",
+"label": "Measles",
+"group": "health"
+},
+{
+"qid": "Q317309",
+"label": "Mental health",
+"group": "health"
+},
+{
+"qid": "Q926217",
+"label": "Microfinance",
+"group": "development"
+},
+{
+"qid": "Q186228",
+"label": "Minimum wage",
+"group": "development"
+},
+{
+"qid": "Q13579947",
+"label": "Misinformation",
+"group": "rights"
+},
+{
+"qid": "Q382370",
+"label": "Mpox",
+"group": "health"
+},
+{
+"qid": "Q8065",
+"label": "Natural disaster",
+"group": "humanitarian"
+},
+{
+"qid": "Q12739",
+"label": "Nuclear power",
+"group": "infrastructure"
+},
+{
+"qid": "Q12802",
+"label": "Nuclear weapon",
+"group": "peace"
+},
+{
+"qid": "Q12174",
+"label": "Obesity",
+"group": "health"
+},
+{
+"qid": "Q855711",
+"label": "Ocean acidification",
+"group": "climate"
+},
+{
+"qid": "Q331828",
+"label": "Overfishing",
+"group": "infrastructure"
+},
+{
+"qid": "Q12184",
+"label": "Pandemic",
+"group": "health"
+},
+{
+"qid": "Q21707860",
+"label": "Paris Agreement",
+"group": "climate"
+},
+{
+"qid": "Q2632158",
+"label": "Peacebuilding",
+"group": "peace"
+},
+{
+"qid": "Q3354958",
+"label": "Peacekeeping",
+"group": "peace"
+},
+{
+"qid": "Q7202090",
+"label": "Plastic pollution",
+"group": "climate"
+},
+{
+"qid": "Q12195",
+"label": "Polio",
+"group": "health"
+},
+{
+"qid": "Q439112",
+"label": "Population ageing",
+"group": "development"
+},
+{
+"qid": "Q386191",
+"label": "Population growth",
+"group": "development"
+},
+{
+"qid": "Q10294",
+"label": "Poverty",
+"group": "development"
+},
+{
+"qid": "Q178512",
+"label": "Public transport",
+"group": "infrastructure"
+},
+{
+"qid": "Q8461",
+"label": "Racism",
+"group": "rights"
+},
+{
+"qid": "Q132580",
+"label": "Recycling",
+"group": "climate"
+},
+{
+"qid": "Q131572",
+"label": "Refugee",
+"group": "humanitarian"
+},
+{
+"qid": "Q96482266",
+"label": "Regulation of artificial intelligence",
+"group": "technology"
+},
+{
+"qid": "Q1351807",
+"label": "Remittance",
+"group": "development"
+},
+{
+"qid": "Q12705",
+"label": "Renewable energy",
+"group": "climate"
+},
+{
+"qid": "Q1147899",
+"label": "Road traffic safety",
+"group": "infrastructure"
+},
+{
+"qid": "Q44918",
+"label": "Rule of law",
+"group": "rights"
+},
+{
+"qid": "Q17422",
+"label": "Same-sex marriage",
+"group": "rights"
+},
+{
+"qid": "Q949149",
+"label": "Sanitation",
+"group": "infrastructure"
+},
+{
+"qid": "Q1195832",
+"label": "School meal",
+"group": "education"
+},
+{
+"qid": "Q841083",
+"label": "Sea level rise",
+"group": "climate"
+},
+{
+"qid": "Q8463",
+"label": "Slavery",
+"group": "rights"
+},
+{
+"qid": "Q202833",
+"label": "Social media",
+"group": "technology"
+},
+{
+"qid": "Q7551332",
+"label": "Social protection",
+"group": "development"
+},
+{
+"qid": "Q1483757",
+"label": "Solar power",
+"group": "climate"
+},
+{
+"qid": "Q223050",
+"label": "Statelessness",
+"group": "humanitarian"
+},
+{
+"qid": "Q506572",
+"label": "Submarine communications cable",
+"group": "technology"
+},
+{
+"qid": "Q3298118",
+"label": "Suicide prevention",
+"group": "health"
+},
+{
+"qid": "Q334401",
+"label": "Surveillance",
+"group": "technology"
+},
+{
+"qid": "Q7649586",
+"label": "Sustainable Development Goals",
+"group": "development"
+},
+{
+"qid": "Q2751054",
+"label": "Sustainable agriculture",
+"group": "infrastructure"
+},
+{
+"qid": "Q7283",
+"label": "Terrorism",
+"group": "peace"
+},
+{
+"qid": "Q7212330",
+"label": "Tobacco smoking",
+"group": "health"
+},
+{
+"qid": "Q132781",
+"label": "Torture",
+"group": "rights"
+},
+{
+"qid": "Q8092",
+"label": "Tropical cyclone",
+"group": "humanitarian"
+},
+{
+"qid": "Q8070",
+"label": "Tsunami",
+"group": "humanitarian"
+},
+{
+"qid": "Q12204",
+"label": "Tuberculosis",
+"group": "health"
+},
+{
+"qid": "Q7809",
+"label": "UNESCO",
+"group": "institutions"
+},
+{
+"qid": "Q740308",
+"label": "UNICEF",
+"group": "institutions"
+},
+{
+"qid": "Q846656",
+"label": "UNRWA",
+"group": "institutions"
+},
+{
+"qid": "Q41171",
+"label": "Unemployment",
+"group": "development"
+},
+{
+"qid": "Q1065",
+"label": "United Nations",
+"group": "institutions"
+},
+{
+"qid": "Q7888355",
+"label": "United Nations Climate Change conference",
+"group": "institutions"
+},
+{
+"qid": "Q47423",
+"label": "United Nations General Assembly",
+"group": "institutions"
+},
+{
+"qid": "Q132551",
+"label": "United Nations High Commissioner for Refugees",
+"group": "institutions"
+},
+{
+"qid": "Q37470",
+"label": "United Nations Security Council",
+"group": "institutions"
+},
+{
+"qid": "Q7813",
+"label": "Universal Declaration of Human Rights",
+"group": "institutions"
+},
+{
+"qid": "Q678522",
+"label": "Universal basic income",
+"group": "development"
+},
+{
+"qid": "Q161078",
+"label": "Urbanization",
+"group": "infrastructure"
+},
+{
+"qid": "Q192995",
+"label": "Vaccination",
+"group": "health"
+},
+{
+"qid": "Q134808",
+"label": "Vaccine",
+"group": "health"
+},
+{
+"qid": "Q1800556",
+"label": "Violence against women",
+"group": "rights"
+},
+{
+"qid": "Q6869278",
+"label": "Vocational education",
+"group": "education"
+},
+{
+"qid": "Q198",
+"label": "War",
+"group": "peace"
+},
+{
+"qid": "Q135010",
+"label": "War crime",
+"group": "peace"
+},
+{
+"qid": "Q2408310",
+"label": "Wartime sexual violence",
+"group": "peace"
+},
+{
+"qid": "Q5376358",
+"label": "Water scarcity",
+"group": "climate"
+},
+{
+"qid": "Q169950",
+"label": "Wildfire",
+"group": "climate"
+},
+{
+"qid": "Q43302",
+"label": "Wind power",
+"group": "climate"
+},
+{
+"qid": "Q223569",
+"label": "Women's rights",
+"group": "rights"
+},
+{
+"qid": "Q320863",
+"label": "World Bank",
+"group": "institutions"
+},
+{
+"qid": "Q204344",
+"label": "World Food Programme",
+"group": "institutions"
+},
+{
+"qid": "Q7817",
+"label": "World Health Organization",
+"group": "institutions"
+},
+{
+"qid": "Q4261734",
+"label": "Youth unemployment",
+"group": "development"
+}
+],
+"languages": [
+"en",
+"fr",
+"es",
+"ar",
+"pt",
+"ru",
+"zh",
+"hi",
+"bn",
+"id",
+"sw",
+"ha",
+"am",
+"ur",
+"fa",
+"tr",
+"vi",
+"th",
+"ja",
+"de",
+"uk",
+"ko"
+]
+}
