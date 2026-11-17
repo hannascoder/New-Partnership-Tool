@@ -1,6 +1,6 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-17T16:09:23Z  |  items in the site data: 186
+Fetched: 2026-11-17T16:12:56Z  |  items in the site data: 187
 
 ## Google Fact Check Tools API
 - {'skipped': 'no key'}
@@ -17,7 +17,7 @@ Fetched: 2026-11-17T16:09:23Z  |  items in the site data: 186
 | BOOM | yes | 2 |  |
 | Vera Files | NO |  | syntax error: line 1, column 0 |
 | Teyit | yes | 10 |  |
-| PolitiFact | NO |  | failed after 2 tries: https://www.politifact.com/rss/all/ (HTTP Error 404: Not Found) |
+| PolitiFact | NO |  | unbound prefix: line 18, column 6 |
 | FactCheck.org | yes | 10 |  |
 | Snopes | yes | 20 |  |
 | Lead Stories | yes | 15 |  |

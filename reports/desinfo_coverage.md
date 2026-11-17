@@ -12,7 +12,7 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Au
 - United States of America: 45
 - Brazil: 20
 - Argentina: 19
-- United Kingdom of Great Britain and Northern Ireland: 10
+- United Kingdom of Great Britain and Northern Ireland: 11
 - Türkiye: 10
 - Nigeria: 10
 - Jordan: 10

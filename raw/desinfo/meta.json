@@ -1,6 +1,6 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T16:09:23Z",
+  "fetched_at": "2026-11-17T16:12:56Z",
   "records": 228,
   "status": {
     "atlas": {
@@ -58,8 +58,8 @@
       },
       "PolitiFact": {
         "ok": false,
-        "error": "failed after 2 tries: https://www.politifact.com/rss/all/ (HTTP Error 404: Not Found)",
-        "url": "https://www.politifact.com/rss/all/"
+        "error": "unbound prefix: line 18, column 6",
+        "url": "https://www.politifact.com/rss/factchecks/"
       },
       "FactCheck.org": {
         "ok": true,
