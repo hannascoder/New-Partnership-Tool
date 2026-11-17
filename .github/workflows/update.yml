@@ -168,6 +168,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - run: pip install pyyaml  # contact search reads config/rules.yaml website_contact
       - name: Website check
         continue-on-error: true
         timeout-minutes: 335
@@ -188,6 +189,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - run: pip install pyyaml  # contact search reads config/rules.yaml website_contact
       - name: Website check
         continue-on-error: true
         timeout-minutes: 335
