@@ -66,12 +66,25 @@ jobs:
         run: |
           python pipeline/desinfo/build.py
           python pipeline/desinfo/build_un.py
+      - name: Cache translation models (Argos Translate)
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/argos-translate
+          key: argos-translate-models-v1
+      - name: Translate titles to English (open source, optional)
+        continue-on-error: true
+        timeout-minutes: 40
+        run: |
+          pip install argostranslate
+          python pipeline/desinfo/translate.py
+          python pipeline/desinfo/build.py
+          python pipeline/desinfo/build_un.py
       - name: Save
         run: |
           git config user.name "partner-finder-bot"
           git config user.email "partner-finder-bot@users.noreply.github.com"
           for f in raw/desinfo raw/desinfo_atlas raw/un_content cache/desinfo_items.json cache/desinfo_series.json \
-                   cache/desinfo_series_about.json cache/desinfo_feeds.json cache/un_items.json \
+                   cache/desinfo_series_about.json cache/desinfo_feeds.json cache/un_items.json cache/desinfo_translations.json reports/desinfo_translation.md \
                    site/data/desinfo reports/desinfo_sources.md reports/desinfo_coverage.md; do
             if [ -e "$f" ]; then git add "$f"; fi
           done

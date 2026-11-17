@@ -289,8 +289,12 @@
       if (i.un) tags.appendChild(el("span", { class: "badge", text: "UN-related" }));
       (i.about || []).slice(0, 3).forEach(function (c) { if (DATA.countries[c]) tags.appendChild(el("span", { class: "badge", text: "about: " + DATA.countries[c].name })); });
       i.topics.slice(0, 5).forEach(function (q) { tags.appendChild(el("span", { class: "badge", text: topicName(q) })); });
-      box.appendChild(el("div", { class: "item" }, [el("div", { class: "meta", text: meta }),
-        el("a", { href: safeUrl(i.url), target: "_blank", rel: "noopener noreferrer", text: i.title }), tags]));
+      var kids = [el("div", { class: "meta", text: meta }),
+        el("a", { href: safeUrl(i.url), target: "_blank", rel: "noopener noreferrer", text: i.title })];
+      if (i.title_en && i.title_en.toLowerCase() !== i.title.toLowerCase())
+        kids.push(el("div", { class: "tr", text: "English (automatic translation): " + i.title_en }));
+      kids.push(tags);
+      box.appendChild(el("div", { class: "item" }, kids));
     });
     $("moreBtn").hidden = list.length <= S.shown;
   }

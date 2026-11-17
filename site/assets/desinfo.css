@@ -59,3 +59,4 @@
 .langs .badge { margin-right: 4px; }
 #countryPanel { margin-top: 8px; font-size: 13px; }
 @media (max-width: 720px) { .gap-head { grid-template-columns: 1fr 1fr; } }
+.item .tr { font-size: 13px; color: var(--muted); margin-top: 2px; font-style: italic; }
