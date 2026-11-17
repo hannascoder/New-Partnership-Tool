@@ -7,7 +7,9 @@ Report: reports/desinfo_translation.md. A language without a model is listed the
 If Argos cannot be installed or started, the run goes on without translation (nothing else depends on it).
 """
 import json
+import signal
 import sys
+import time
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -62,12 +64,17 @@ def translator_for(lang, pkg, tr, available, cache):
     return fn
 
 
-def run(items, memory, get_translator, max_per_run, max_chars, skip):
-    """Translate the newest untranslated titles. get_translator(lang) -> function or None. Returns (done, unsupported)."""
+def run(items, memory, get_translator, max_per_run, max_chars, skip, deadline=None, on_progress=None):
+    """Translate the newest untranslated titles. get_translator(lang) -> function or None. Returns (done, unsupported).
+    Stops (cleanly) when the deadline (time.time() value) has passed; on_progress() is called every 25 titles."""
     todo = [i for i in items if i["id"] not in memory and lang2(i["lang"]) not in skip and i.get("title")]
     todo.sort(key=lambda i: i["date"], reverse=True)
     done, unsupported = Counter(), Counter()
-    for i in todo[:max_per_run]:
+    for n, i in enumerate(todo[:max_per_run]):
+        if deadline and time.time() > deadline:
+            break
+        if on_progress and n and n % 25 == 0:
+            on_progress()
         lang = lang2(i["lang"])
         fn = get_translator(lang)
         if fn == "error":
@@ -85,35 +92,75 @@ def run(items, memory, get_translator, max_per_run, max_chars, skip):
     return done, unsupported
 
 
+STAGES = []          # [(stage, seconds, note)] written into the report as we go
+
+
+def write_report(memory, items, done, unsupported, status):
+    waiting = sum(1 for i in items if i["id"] not in memory and lang2(i["lang"]) not in CFG["skip_languages"])
+    L = ["# Disinformation monitor: automatic English translation", "",
+         f"Run: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')} | Argos Translate (open source) | status: {status}", "",
+         f"Translated in this run: {sum(done.values())} | in memory: {sum(1 for v in memory.values() if v)} | waiting: {waiting}", "",
+         "## Time per stage", ""] + [f"- {n}: {sec:.0f} s {note}" for n, sec, note in STAGES] + [
+         "", "| Language | Translated now | Without a model (left untranslated) |", "|---|---|---|"]
+    for lang in sorted(set(done) | set(unsupported)):
+        L.append(f"| {lang} | {done.get(lang, 0)} | {unsupported.get(lang, 0)} |")
+    L += ["", "Only titles are translated, by machine; the original is always shown first on the page."]
+    REPORT.write_text("\n".join(L) + "\n", encoding="utf-8")
+
+
+def save_memory(memory):
+    json.dump(memory, open(MEMORY, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+
+
 def main():
     if not ITEMS.exists():
         print("no items yet")
         return
+    t0 = time.time()
     items = json.load(open(ITEMS, encoding="utf-8"))
     memory = json.load(open(MEMORY, encoding="utf-8")) if MEMORY.exists() else {}
     ids = {i["id"] for i in items}
     memory = {k: v for k, v in memory.items() if k in ids}           # forget what left the 12-month window
     if datetime.now(timezone.utc).day == 1:       # models appear over time: ask again once a month
         memory = {k: v for k, v in memory.items() if v}
-    status = "ok"
+    done, unsupported, status = Counter(), Counter(), "started"
+    # if the job is stopped from outside (time limit), keep what we have and say so in the report
+    def on_term(signum, frame):
+        STAGES.append(("stopped from outside", time.time() - t0, "(time limit of the job)"))
+        save_memory(memory)
+        write_report(memory, items, done, unsupported, "stopped by the time limit of the job")
+        sys.exit(0)
+    signal.signal(signal.SIGTERM, on_term)
     try:
+        t1 = time.time()
         pkg, tr, available = load_argos()
+        STAGES.append(("start Argos and read the model index", time.time() - t1, f"({len(available)} models listed)"))
+        write_report(memory, items, done, unsupported, "running")
         cache = {}
-        done, unsupported = run(items, memory, lambda l: translator_for(l, pkg, tr, available, cache),
-                                CFG["max_per_run"], CFG["max_title_chars"], set(CFG["skip_languages"]))
+
+        def get_translator(lang):
+            t2 = time.time()
+            known = lang in cache
+            fn = translator_for(lang, pkg, tr, available, cache)
+            if not known:
+                STAGES.append((f"model {lang} -> en", time.time() - t2, "(ready)" if callable(fn) else f"({fn})"))
+            return fn
+
+        def progress():
+            save_memory(memory)
+            write_report(memory, items, done_now, unsupported_now, "running")
+
+        done_now, unsupported_now = Counter(), Counter()
+        deadline = time.time() + CFG["budget_seconds"]
+        t3 = time.time()
+        done, unsupported = run(items, memory, get_translator, CFG["max_per_run"], CFG["max_title_chars"],
+                                set(CFG["skip_languages"]), deadline, progress)
+        STAGES.append(("translate titles", time.time() - t3, f"({sum(done.values())} titles)"))
+        status = "ok" if time.time() <= deadline else "stopped at the time budget (the rest follows in the next run)"
     except Exception as e:  # noqa: BLE001 - translation is optional
         status = f"not available in this run: {type(e).__name__}: {e}"
-        done, unsupported = Counter(), Counter()
-    json.dump(memory, open(MEMORY, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    waiting = sum(1 for i in items if i["id"] not in memory and lang2(i["lang"]) not in CFG["skip_languages"])
-    L = ["# Disinformation monitor: automatic English translation", "",
-         f"Run: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')} | Argos Translate (open source) | status: {status}", "",
-         f"Translated in this run: {sum(done.values())} | in memory: {sum(1 for v in memory.values() if v)} | waiting: {waiting}", "",
-         "| Language | Translated now | Without a model (left untranslated) |", "|---|---|---|"]
-    for lang in sorted(set(done) | set(unsupported)):
-        L.append(f"| {lang} | {done.get(lang, 0)} | {unsupported.get(lang, 0)} |")
-    L += ["", "Only titles are translated, by machine; the original is always shown first on the page."]
-    REPORT.write_text("\n".join(L) + "\n", encoding="utf-8")
+    save_memory(memory)
+    write_report(memory, items, done, unsupported, status)
     print(f"translated {sum(done.values())}, no model for {dict(unsupported)}, status {status}")
 
 

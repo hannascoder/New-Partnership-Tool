@@ -43,6 +43,7 @@ gap:                        # traffic light of the "Content gaps" view (owner's 
 
 translation:                # automatic English translation of fact-check titles (open source: Argos Translate)
   max_per_run: 1500         # titles translated per daily run (the rest follows the next day)
+  budget_seconds: 900       # the translation stops by itself after this time (the rest follows in the next run)
   max_title_chars: 200
   skip_languages: [en]
 

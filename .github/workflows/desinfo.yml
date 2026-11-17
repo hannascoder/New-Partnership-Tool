@@ -72,14 +72,18 @@ jobs:
         with:
           path: ~/.local/share/argos-translate
           key: argos-translate-models-v1
+      - name: Install the translation software (Argos Translate)
+        continue-on-error: true
+        timeout-minutes: 15
+        run: pip install argostranslate
       - name: Translate titles to English (open source, optional)
         continue-on-error: true
-        timeout-minutes: 40
+        timeout-minutes: 35
         run: |
-          pip install argostranslate
           python pipeline/desinfo/translate.py
           python pipeline/desinfo/build.py
           python pipeline/desinfo/build_un.py
+          python pipeline/desinfo/partners.py
       - name: Save
         run: |
           git config user.name "partner-finder-bot"
