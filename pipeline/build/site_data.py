@@ -367,7 +367,9 @@ def main():
             e["ca"] = o["active_in"]  # countries of activity (ECOSOC "Activities" tab)
         if o.get("geo_scope"):
             e["gs"] = o["geo_scope"]
-        e["ok"] = o.get("org_kind") or "ngo"  # organisation type (config/ngo.yaml org_kind)
+        e["ok"] = o.get("org_kind") or "ngo"
+        if o.get("optional_type"):
+            e["xt"] = 1  # other ECOSOC type: shown only with "Include other ECOSOC organisation types"  # organisation type (config/ngo.yaml org_kind)
         if o.get("un_partner"):
             e["up"] = 1  # existing UN partner (config/ngo.yaml un_partner)
         if o.get("global_compact"):
@@ -493,7 +495,8 @@ def main():
         "codes": codes,
         "email_templates": yaml.safe_load(open(CFG / "email_templates.yaml", encoding="utf-8")),  # "Send mail"
         "ngo": {k: ngo_cfg[k] for k in ("un_status", "only_ecosoc_label", "hide_registered_label", "hq_only_label",
-                                        "geo_scope", "page_hint", "page_title", "all_status_label", "un_partner", "org_kind")}
+                                        "geo_scope", "page_hint", "page_title", "all_status_label", "un_partner", "org_kind",
+                                        "optional_types_label", "optional_types_hint")}
                | {"gc_status_note": yaml.safe_load(open(CFG / "sources" / "global_compact.yaml", encoding="utf-8"))["status_note"]}
                | {"type_of_work": [{"id": t["id"], "label": t["label"]} for t in ngo_cfg["type_of_work"]],
                   "count": len(ngo_out)},
