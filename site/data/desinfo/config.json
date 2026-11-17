@@ -1,0 +1,8 @@
+{
+ "red_marker": {
+  "factor": 2.0,
+  "baseline_days": 28,
+  "min_items": 5
+ },
+ "keep_days": 365
+}

@@ -1,0 +1,45 @@
+/* Disinformation monitor: page-specific layout; tokens come from atlas.css */
+.timeline { margin-bottom: 12px; }
+.tl-top { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.tl-label { font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); }
+.tl-dates { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-top: 8px; font-size: 13px; }
+.tl-dates input[type=date] { font: inherit; padding: 4px 6px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); }
+.spark { margin-top: 8px; height: 64px; }
+.spark svg { width: 100%; height: 64px; display: block; }
+.spark .bar { fill: var(--border); }
+.spark .bar.in { fill: var(--un-blue); }
+.view-switch { display: inline-flex; border: 1px solid var(--border); border-radius: var(--r-pill); overflow: hidden; margin: 4px 0 12px; background: var(--surface); }
+.view-switch button { border: 0; background: transparent; padding: 7px 16px; font: inherit; font-size: 14px; cursor: pointer; color: var(--ink); }
+.view-switch button[aria-selected="true"] { background: var(--un-blue-dark); color: #fff; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 14px; min-width: 120px; }
+.stat b { display: block; font-size: 22px; }
+.stat span { font-size: 12px; color: var(--muted); }
+.notice { background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; font-size: 13px; margin-bottom: 12px; }
+.topic-list { max-height: 55vh; overflow: auto; margin-top: 8px; }
+.topic-list details { border-top: 1px solid var(--border-soft); }
+.topic-list summary { cursor: pointer; font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); padding: 6px 0; }
+.topic-btn { display: flex; justify-content: space-between; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; font: inherit; font-size: 13px; padding: 4px 6px; border-radius: var(--r-sm); cursor: pointer; color: var(--ink); }
+.topic-btn:hover { background: var(--accent-soft); }
+.topic-btn[aria-pressed="true"] { background: var(--un-blue-dark); color: #fff; }
+.topic-btn .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.topic-btn[aria-pressed="true"] .n { color: #fff; }
+.topic-btn.zero { opacity: .55; }
+.rise { color: var(--danger); font-weight: 600; }
+.trend-list { display: grid; gap: 6px; }
+.trend-row { display: grid; grid-template-columns: minmax(140px, 1.2fr) 3fr 70px 90px; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 12px; font-size: 13px; cursor: pointer; text-align: left; font-family: inherit; color: var(--ink); width: 100%; }
+.trend-row:hover { border-color: var(--un-blue); }
+.trend-bar { height: 10px; background: var(--border-soft); border-radius: 5px; overflow: hidden; }
+.trend-bar i { display: block; height: 100%; background: var(--un-blue); }
+.badge { display: inline-block; font-size: 11px; border-radius: var(--r-pill); padding: 1px 8px; border: 1px solid var(--border); }
+.badge.red { color: var(--danger); border-color: var(--danger); font-weight: 600; }
+.map { height: 460px; border: 1px solid var(--border); border-radius: var(--radius); background: #D4DADC; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; margin: 8px 0; align-items: center; }
+.legend i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; border: 1px solid var(--border); }
+.items { display: grid; gap: 8px; margin-bottom: 12px; }
+.item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; }
+.item .meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.item a { color: var(--un-blue-dark); font-size: 15px; }
+.item .tags { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.disclaimer { margin-top: 24px; }
+@media (max-width: 720px) { .trend-row { grid-template-columns: 1fr 70px; } .trend-bar, .trend-row .rise-col { display: none; } .map { height: 320px; } }

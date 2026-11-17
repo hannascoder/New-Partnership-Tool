@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Disinformation monitor</title>
+<link rel="stylesheet" href="assets/atlas.css">
+<link rel="stylesheet" href="assets/finder.css">
+<link rel="stylesheet" href="assets/vendor/leaflet-1.9.4/leaflet.css">
+<link rel="stylesheet" href="assets/desinfo.css">
+</head>
+<body data-mode="desinfo">
+<a class="skip-link" href="#main">Skip to results</a>
+<header class="site">
+  <div class="brand">
+    <img class="logo" src="assets/un_emblem.png" alt="United Nations emblem" width="40" height="33">
+    <div>
+      <div class="un">United Nations · DGC Partnerships</div>
+      <h1 class="title">Disinformation monitor</h1>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <nav class="mode-switch" aria-label="Choose a page">
+    <a href="./">Media</a><a href="ngos.html">Organisations &amp; NGOs</a><a href="desinfo.html" aria-current="page">Disinformation</a>
+  </nav>
+  <span class="preview-badge">Preview</span>
+</header>
+
+<div class="layout">
+  <aside class="filters" id="filters" aria-label="Filters">
+    <button class="btn-quiet filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filterBody">Filters</button>
+    <div id="filterBody" class="filter-body">
+      <section class="fgroup">
+        <h2 class="sect">Scope</h2>
+        <label class="check"><input type="checkbox" id="f-un"> UN-related only</label>
+        <p class="hint">Fact-checks that name the UN, its agencies, peacekeepers or the Secretary-General.</p>
+      </section>
+      <section class="fgroup">
+        <h2 class="sect">Region / Country</h2>
+        <label class="field">Region
+          <select id="f-region"><option value="">All regions</option></select>
+        </label>
+        <label class="field">Country
+          <select id="f-country"><option value="">All countries</option></select>
+        </label>
+      </section>
+      <section class="fgroup">
+        <h2 class="sect">Topics</h2>
+        <label class="field">Find a topic
+          <input type="search" id="f-topicSearch" placeholder="e.g. vaccines, elections">
+        </label>
+        <div id="topicList" class="topic-list"></div>
+      </section>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="card timeline" aria-label="Time window">
+      <div class="tl-top">
+        <span class="tl-label">Trend window</span>
+        <div class="chips" id="rangeButtons"></div>
+      </div>
+      <div class="tl-dates">
+        <label>from <input type="date" id="dateFrom"></label>
+        <label>to <input type="date" id="dateTo"></label>
+        <button class="btn-quiet" id="dateApply">Apply</button>
+        <span class="hint" id="rangeInfo"></span>
+      </div>
+      <div id="spark" class="spark" role="img" aria-label="Fact-checks per day"></div>
+    </section>
+
+    <div class="view-switch" role="tablist" aria-label="View">
+      <button role="tab" id="tab-trends" aria-selected="true">Worldwide trends</button>
+      <button role="tab" id="tab-map" aria-selected="false">Global map</button>
+    </div>
+
+    <div class="stats" id="stats"></div>
+    <div class="notice" id="notice" hidden></div>
+
+    <section id="view-trends">
+      <h2 class="sect">Topics in this window</h2>
+      <p class="hint">Number of fact-checks per topic. “Rising” = more than twice the usual weekly number (see the note on the red marker).</p>
+      <div id="trendList" class="trend-list"></div>
+    </section>
+
+    <section id="view-map" hidden>
+      <h2 class="sect">Countries</h2>
+      <p class="hint">Darker = more fact-checks. Grey = <b>no data</b> (no fact-checker covered yet), not “no disinformation”. Click a country for its fact-checks.</p>
+      <div id="map" class="map" aria-label="World map of fact-checks"></div>
+      <div class="legend" id="legend"></div>
+      <p class="hint">The boundaries and names shown and the designations used on the map do not imply official endorsement or acceptance by the United Nations. Boundaries: Natural Earth, generalized for display.</p>
+    </section>
+
+    <section aria-label="Fact-checks">
+      <h2 class="sect" id="itemsTitle">Fact-checks</h2>
+      <div id="items" class="items"></div>
+      <button class="btn-quiet" id="moreBtn" hidden>Show more</button>
+    </section>
+
+    <p class="hint disclaimer">Automatic evaluation of fact-checks published by independent fact-checkers; please check the original before using it. Topics and countries are assigned by rules, not by hand. The claims themselves are not reproduced here. Search trends: Data source: Google Trends.</p>
+  </main>
+</div>
+
+<script src="assets/vendor/leaflet-1.9.4/leaflet.js"></script>
+<script src="assets/desinfo.js"></script>
+</body>
+</html>

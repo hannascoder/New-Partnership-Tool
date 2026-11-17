@@ -31,7 +31,7 @@
   fetch("data/config.json", { cache: "no-cache" }).then((r) => r.json())
     .then((cfg) => Promise.all((MODE === "ngo" ? cfg.ngo_files || [] : cfg.outlet_files || ["outlets.json"]).map((f) => fetch("data/" + f + "?v=" + encodeURIComponent(cfg.built || "")).then((r) => r.json())))
       .then((parts) => [cfg, [].concat(...parts)]))
-    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); openActiveGroups(); hideLoader(); })
+    .then(([cfg, outlets]) => { CFG = cfg; ALL = expand(outlets, cfg.codes || {}); init(); restoreHash(); apply(); openActiveGroups(); hideLoader(); document.dispatchEvent(new Event("pf-ready")); })
     .catch(() => {
       const msg = "The data could not be loaded. Please reload the page.";
       $("counter").textContent = msg;
@@ -601,6 +601,7 @@
     draw(true, note);
     drawActive();
     updateAddAll();
+    document.dispatchEvent(new Event("pf-applied"));  // finder-dropin.js keeps its summary in step
   }
 
   const row = (label, html) => (html ? `<p class="row"><b>${label}:</b> ${html}</p>` : "");
@@ -953,7 +954,10 @@
     const o = ALL.find((x) => x.i === b.dataset.mail); if (o) openMail(o);
   });
 
-  window.PF = { exportList: buildExportList, all: () => ALL, cfg: () => CFG };
+  window.PF = { exportList: buildExportList, all: () => ALL, cfg: () => CFG,
+    // for finder-dropin.js ("Start from a UN text"): the filter state and a way to change several filters at once
+    state: S, mode: MODE, apply, drawChosenCountries, drawOtherLangs,
+    batch(fn) { restoring = true; try { fn(); } finally { restoring = false; } apply(); } };
 
   function updateExportCount() {
     const n = exportList.size;

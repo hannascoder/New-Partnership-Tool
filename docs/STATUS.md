@@ -279,6 +279,30 @@ The owner asked for a complete critique and then for all findings to be correcte
   new). The "stay for one update" rule absorbs this; if the yearly loss looks too high, look at the
   Radio Browser include rules.
 
+## 16.11.2026 (evening): "Start from a UN mail or text" - stage 1 BUILT, owner tests it
+Owner's request: paste a UN mail (UN VIDEO UPDATE etc.) and get suggested media / NGOs. Answers:
+pasting text is enough; media and NGOs stay on their two pages.
+- Rules: `config/dropin.yaml` (limits, lines to skip, formats, extra topic words, place names per
+  country). Build: `pipeline/build/dropin.py` -> `site/data/dropin.json` (also called by
+  `site_data.py`, so the automatic update keeps it current). Page: `site/assets/finder-dropin.js`
+  (`PartnerDropin.analyse(text, rules)` can be tested with node), box in `index.html` / `ngos.html`,
+  hooks in `finder.js` (`window.PF.state / batch / apply`, events `pf-ready`, `pf-applied`).
+- Choices made while building (owner may change them, all in `config/dropin.yaml`): media list = all
+  outlets of the country + format, topic matches first, weak matches counted (with "only matches" the
+  Lebanon test mail gave 2 outlets, now 97 with 6 matches first); NGO list = topic matches only (50);
+  language found but not switched on; Jerusalem is not assigned to a country.
+- Tested in the browser with the owner's sample mail and 5 invented texts. **Open:** the owner sends
+  3-5 more real mails -> tune `skip_lines`, `places`, `extra_topic_words`.
+- **Stage 2 (next, after the owner's test):** mark outlets that reported on the subject in the last days
+  (GDELT, open, no key; first test whether it answers reliably from the page / from a workflow).
+- Ideas noted: use headline / contact of the pasted mail in the "Send mail" template.
+
+## 17.11.2026: new page "Disinformation & fake news monitor" - PLAN written, nothing built
+Owner's decisions and the step plan D0-D6: `docs/DESINFO_PLAN.md`. Owner answered both question rounds (17.11.2026). Next: D1. Findings (Atlas already has Google Trends + Wikipedia + GDELT daily data): see plan.
+D1 (fetch + daily workflow `desinfo.yml`) and D2 (page `site/desinfo.html`, `site/assets/desinfo.js`: trends view, map, timeline, topic list, filters) BUILT 17.11.2026 on branch claude/quirky-albattani-um2yqd; D3 (UN check, gap list) next. Google key: entered by the owner 17.11.2026.
+Topic detection improved 17.11.2026 (`config/desinfo_topic_synonyms.yaml`, ~180 topics with extra words in several languages; topics re-derived at every run from title + claim, claim kept in cache/ only). PR #35 merged 17.11.2026; later work is on the same branch and needs a new PR.
+Old to-do: free Google API key (Fact Check Tools); apply for Google Trends API alpha (optional).
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:
