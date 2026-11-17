@@ -1,24 +1,19 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T19:09:07Z",
-  "records": 6233,
+  "fetched_at": "2026-11-17T20:15:29Z",
+  "records": 778,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 5750,
-      "requests": 1520,
+      "items": 240,
+      "requests": 1800,
       "errors": [
-        "HTTP 503 for 'تضليل'",
-        "HTTP 503 for 'تعليم عن بعد'",
-        "HTTP 503 for 'Éducation des filles'",
-        "HTTP 503 for 'Flood'",
-        "HTTP 503 for 'Transporte público'",
-        "HTTP 503 for 'Vaccine'"
+        "HTTP 503 for 'Fake news'"
       ],
-      "max_age_days": 365
+      "max_age_days": 14
     },
     "feeds": {
       "AFP Fact Check": {
@@ -112,8 +107,8 @@
         "url": "https://fatabyyano.net/feed/"
       },
       "Colombiacheck": {
-        "ok": true,
-        "items": 20,
+        "ok": false,
+        "error": "failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden)",
         "url": "https://colombiacheck.com/feed"
       },
       "Chequeado": {
@@ -128,9 +123,9 @@
       }
     },
     "discovered_feeds": {
-      "ok": 12,
-      "failed": 0,
-      "known": 40
+      "ok": 18,
+      "failed": 1,
+      "known": 81
     }
   }
 }

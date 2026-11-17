@@ -1,7 +1,7 @@
 {
   "source": "un_content",
-  "fetched_at": "2026-11-17T19:42:46Z",
-  "records": 483,
+  "fetched_at": "2026-11-17T20:42:45Z",
+  "records": 433,
   "status": {
     "UN News (en)": {
       "ok": true,
@@ -115,13 +115,13 @@
       "ok": false,
       "items": 0,
       "url": "https://www.unep.org/rss.xml",
-      "error": "failed after 2 tries: https://www.unep.org/rss/news (HTTP Error 403: Forbidden)"
+      "error": "failed after 2 tries: https://www.unep.org/rss/news (HTTP Error 404: Not Found)"
     },
     "UNESCO (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unesco.org/en/rss.xml",
-      "error": "failed after 2 tries: https://www.unesco.org/rss/news (<urlopen error _ssl.c:994: The handshake operation timed out>)"
+      "error": "failed after 2 tries: https://www.unesco.org/rss/news (Remote end closed connection without response)"
     },
     "OHCHR (en)": {
       "ok": true,
@@ -136,10 +136,10 @@
       "error": "failed after 2 tries: https://www.undp.org/rss/news (HTTP Error 403: Forbidden)"
     },
     "UN Women (en)": {
-      "ok": true,
-      "items": 50,
+      "ok": false,
+      "items": 0,
       "url": "https://www.unwomen.org/en/rss-feeds/news",
-      "error": ""
+      "error": "failed after 2 tries: https://www.unwomen.org/rss/news (HTTP Error 403: Forbidden)"
     },
     "IOM (en)": {
       "ok": false,

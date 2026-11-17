@@ -1,6 +1,6 @@
 # Disinformation monitor: country coverage
 
-Countries with at least one fact-check: **34 of 195**. Items without a country: 1346. Topics with items: 170 of 183.
+Countries with at least one fact-check: **34 of 195**. Items without a country: 1363. Topics with items: 170 of 183.
 
 ## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)
 
@@ -10,7 +10,7 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 
 - Spain: 829
 - India: 776
-- United States of America: 605
+- United States of America: 606
 - Brazil: 439
 - France: 304
 - Philippines: 178
@@ -20,8 +20,8 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 - Bolivia (Plurinational State of): 120
 - Portugal: 115
 - Syrian Arab Republic: 107
-- Ukraine: 92
-- Mexico: 89
+- Ukraine: 102
+- Mexico: 90
 - Colombia: 88
 - Venezuela (Bolivarian Republic of): 84
 - Thailand: 82
@@ -29,17 +29,17 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 - Sri Lanka: 56
 - Malta: 45
 - Austria: 40
+- Bangladesh: 34
 - Argentina: 31
-- Bangladesh: 24
+- Czechia: 25
 - Germany: 24
-- Czechia: 22
 - Jordan: 20
+- Ghana: 13
 - Nigeria: 11
 - Türkiye: 10
 - Indonesia: 7
 - Ireland: 4
 - South Africa: 4
-- Ghana: 3
 - Canada: 2
 - Greece: 1
 
