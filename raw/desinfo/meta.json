@@ -1,14 +1,14 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T17:48:01Z",
-  "records": 585,
+  "fetched_at": "2026-11-17T18:11:48Z",
+  "records": 703,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 242,
+      "items": 240,
       "requests": 1800,
       "errors": [],
       "max_age_days": 14
@@ -95,8 +95,8 @@
         "url": "https://pesacheck.org/feed"
       },
       "Dubawa": {
-        "ok": false,
-        "error": "failed after 2 tries: https://dubawa.org/feed/ (HTTP Error 415: Unsupported Media Type)",
+        "ok": true,
+        "items": 10,
         "url": "https://dubawa.org/feed/"
       },
       "Fatabyyano": {
@@ -105,8 +105,8 @@
         "url": "https://fatabyyano.net/feed/"
       },
       "Colombiacheck": {
-        "ok": true,
-        "items": 20,
+        "ok": false,
+        "error": "failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden)",
         "url": "https://colombiacheck.com/feed"
       },
       "Chequeado": {
@@ -121,9 +121,9 @@
       }
     },
     "discovered_feeds": {
-      "ok": 5,
+      "ok": 12,
       "failed": 0,
-      "known": 12
+      "known": 39
     }
   }
 }

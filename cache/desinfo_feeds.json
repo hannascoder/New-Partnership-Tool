@@ -1,4 +1,16 @@
 {
+"aap.com.au": {
+"name": "AAP",
+"site": "https://aap.com.au/",
+"country": "AU",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
 "apa.at": {
 "name": "APA-factchecking",
 "site": "https://apa.at/service/faktencheck-2/",
@@ -10,6 +22,17 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"boliviaverifica.bo": {
+"name": "Bolivia Verifica",
+"site": "https://boliviaverifica.bo/",
+"country": "BO",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://boliviaverifica.bo/feed/",
+"lang": "es",
+"status": "ok",
+"fails": 0
+},
 "cazadoresdefakenews.info": {
 "name": "Cazadores de Fake News",
 "site": "https://www.cazadoresdefakenews.info/",
@@ -20,6 +43,30 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"checamos.afp.com": {
+"name": "AFP Checamos",
+"site": "https://checamos.afp.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"cotejo.info": {
+"name": "Cotejo.info",
+"site": "https://cotejo.info/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
 },
 "dpa-factchecking.com": {
 "name": "dpa-factchecking",
@@ -42,6 +89,63 @@
 "status": "ok",
 "fails": 0
 },
+"english.factcrescendo.com": {
+"name": "Fact Crescendo",
+"site": "https://english.factcrescendo.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://english.factcrescendo.com/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"estadao.com.br": {
+"name": "Estadão",
+"site": "https://estadao.com.br/",
+"country": "BR",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "pt",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"factcheckarabic.afp.com": {
+"name": "في ميزان فرانس برس",
+"site": "https://factcheckarabic.afp.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"factchequeado.com": {
+"name": "Factchequeado",
+"site": "https://factchequeado.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://factchequeado.com/feed",
+"lang": "es",
+"status": "ok",
+"fails": 0
+},
+"factly.in": {
+"name": "FACTLY",
+"site": "https://factly.in/",
+"country": "IN",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://factly.in/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "factograph.info": {
 "name": "Фактограф",
 "site": "https://factograph.info",
@@ -51,6 +155,18 @@
 "lang": "ru",
 "status": "ok",
 "fails": 0
+},
+"factual.afp.com": {
+"name": "AFP Factual",
+"site": "https://factual.afp.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
 },
 "faktistfakt.com": {
 "name": "Fakt ist Fakt",
@@ -74,6 +190,54 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"fastcheck.cl": {
+"name": "Fast Check",
+"site": "https://fastcheck.cl/",
+"country": "CL",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "es",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"franceinfo.fr": {
+"name": "franceinfo",
+"site": "https://franceinfo.fr/",
+"country": "FR",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "fr",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"grupoanimal.mx": {
+"name": "Animal Político",
+"site": "https://grupoanimal.mx/",
+"country": "MX",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "es",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"indiatoday.in": {
+"name": "India Today",
+"site": "https://indiatoday.in/",
+"country": "IN",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
 "mimikama.org": {
 "name": "Mimikama",
 "site": "https://www.mimikama.org/",
@@ -83,6 +247,54 @@
 "lang": "de",
 "status": "ok",
 "fails": 0
+},
+"misbar.com": {
+"name": "موقع مسبار",
+"site": "https://misbar.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "ar",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"noticias.uol.com.br": {
+"name": "UOL Notícias",
+"site": "https://noticias.uol.com.br/",
+"country": "BR",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"observador.pt": {
+"name": "Observador",
+"site": "https://observador.pt/",
+"country": "PT",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "pt",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"poligraph.fr": {
+"name": "Poligraph",
+"site": "https://poligraph.fr/",
+"country": "FR",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
 },
 "profil.at": {
 "name": "faktiv",
@@ -94,6 +306,30 @@
 "status": "ok",
 "fails": 0
 },
+"ptinews.com": {
+"name": "PTI",
+"site": "https://ptinews.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"rappler.com": {
+"name": "Rappler",
+"site": "https://rappler.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "en",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
 "rumorscanner.com": {
 "name": "Rumor Scanner Bangladesh",
 "site": "http://rumorscanner.com",
@@ -103,6 +339,53 @@
 "lang": "bn",
 "status": "ok",
 "fails": 0
+},
+"srilanka.factcrescendo.com": {
+"name": "Fact Crescendo Sri Lanka",
+"site": "https://srilanka.factcrescendo.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://srilanka.factcrescendo.com/comments/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"tf1info.fr": {
+"name": "TF1 Info",
+"site": "https://tf1info.fr/",
+"country": "FR",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "fr",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
+"thaipbs.or.th": {
+"name": "Thai PBS",
+"site": "https://thaipbs.or.th/",
+"country": "TH",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "th",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-17"
+},
+"thip.media": {
+"name": "THIP Media",
+"site": "https://thip.media/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-15"
 },
 "truthorfiction.org": {
 "name": "TruthOrFiction.com",
@@ -115,6 +398,29 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"verifica.efe.com": {
+"name": "EFE Verifica",
+"site": "https://verifica.efe.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://verifica.efe.com/feed/",
+"lang": "es",
+"status": "ok",
+"fails": 0
+},
+"verify-sy.com": {
+"name": "تأكد",
+"site": "https://verify-sy.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "",
+"lang": "ar",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-15"
+},
 "verrit.com": {
 "name": "Verrit",
 "site": "https://verrit.com",
@@ -125,5 +431,16 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"vishvasnews.com": {
+"name": "विश्वास न्यूज",
+"site": "https://vishvasnews.com/",
+"country": "",
+"checked": "2026-11-17",
+"origin": "google",
+"feed": "https://www.vishvasnews.com/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
 }
 }

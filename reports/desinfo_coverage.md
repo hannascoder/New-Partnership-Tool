@@ -1,6 +1,6 @@
 # Disinformation monitor: country coverage
 
-Countries with at least one fact-check: **27 of 195**. Items without a country: 66. Topics with items: 82 of 183.
+Countries with at least one fact-check: **27 of 195**. Items without a country: 66. Topics with items: 87 of 183.
 
 ## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)
 
@@ -8,26 +8,26 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 
 ## Items per country
 
-- United States of America: 103
-- Spain: 101
+- United States of America: 152
+- Spain: 122
+- India: 50
 - Brazil: 43
 - Austria: 40
-- India: 22
 - Colombia: 21
-- Czechia: 20
+- Czechia: 21
 - Argentina: 19
 - France: 16
 - United Kingdom of Great Britain and Northern Ireland: 14
+- Bolivia (Plurinational State of): 13
 - Türkiye: 10
 - Nigeria: 10
 - Jordan: 10
 - Bangladesh: 10
 - Thailand: 8
+- Sri Lanka: 7
 - Philippines: 7
 - Indonesia: 7
 - Chile: 6
-- Bolivia (Plurinational State of): 5
-- Sri Lanka: 5
 - Australia: 4
 - Mexico: 4
 - Portugal: 2
@@ -38,4 +38,4 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 
 ## Topics without any item
 
-5G, AI safety, Air pollution, Antimicrobial resistance, Biodiversity, Biodiversity loss, Blockchain, Breastfeeding, Ceasefire, Child abuse, Child labour, Child marriage, Cholera, Civil war, Climate change adaptation, Climate change mitigation, Cyberbullying, Debt relief, Dengue fever, Desertification, Development aid, Digital divide, Disability, Disarmament, Distance education, Domestic violence, Drought, Earthquake, Electric vehicle, Electronic waste, Extreme poverty, Facial recognition system, Famine, Female education, Female genital mutilation, Freedom of speech, Gender pay gap, Genetically modified organism, HIV/AIDS, Heat wave, Higher education, Human trafficking, Influenza, Information privacy, Internally displaced person, International Court of Justice, International Monetary Fund, Internet access, Internet censorship, LGBTQ rights, Land mine, Literacy, Malaria, Malnutrition, Maternal health, Measles, Mental health, Microfinance, Minimum wage, Nuclear power, Obesity, Ocean acidification, Overfishing, Pandemic, Peacebuilding, Peacekeeping, Polio, Public transport, Racism, Regulation of artificial intelligence, Remittance, Road traffic safety, Same-sex marriage, School meal, Sea level rise, Slavery, Solar power, Statelessness, Submarine communications cable, Suicide prevention, Surveillance, Sustainable Development Goals, Sustainable agriculture, Tsunami, Tuberculosis, UNESCO, UNICEF, UNRWA, United Nations General Assembly, United Nations High Commissioner for Refugees, Universal Declaration of Human Rights, Universal basic income, Urbanization, Violence against women, Vocational education, War crime, Wartime sexual violence, Water scarcity, Wind power, World Bank, World Food Programme
+5G, AI safety, Air pollution, Antimicrobial resistance, Biodiversity, Biodiversity loss, Blockchain, Breastfeeding, Ceasefire, Child abuse, Child labour, Child marriage, Civil war, Climate change adaptation, Climate change mitigation, Cyberbullying, Debt relief, Dengue fever, Desertification, Development aid, Disability, Disarmament, Distance education, Domestic violence, Drought, Earthquake, Electric vehicle, Electronic waste, Extreme poverty, Facial recognition system, Famine, Female education, Female genital mutilation, Freedom of speech, Gender pay gap, Genetically modified organism, HIV/AIDS, Heat wave, Human trafficking, Influenza, Information privacy, Internally displaced person, International Court of Justice, International Monetary Fund, Internet censorship, LGBTQ rights, Land mine, Literacy, Malaria, Malnutrition, Maternal health, Mental health, Microfinance, Minimum wage, Nuclear power, Obesity, Ocean acidification, Overfishing, Pandemic, Peacebuilding, Peacekeeping, Polio, Public transport, Racism, Regulation of artificial intelligence, Remittance, Road traffic safety, Same-sex marriage, School meal, Sea level rise, Slavery, Solar power, Statelessness, Submarine communications cable, Suicide prevention, Surveillance, Sustainable Development Goals, Sustainable agriculture, Tsunami, Tuberculosis, UNESCO, UNICEF, UNRWA, United Nations General Assembly, United Nations High Commissioner for Refugees, Universal Declaration of Human Rights, Universal basic income, Urbanization, Violence against women, Vocational education, War crime, Wartime sexual violence, Water scarcity, Wind power, World Bank, World Food Programme
