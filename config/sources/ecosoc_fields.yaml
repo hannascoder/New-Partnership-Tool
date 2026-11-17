@@ -145,5 +145,13 @@ fields:
 
 # ECOSOC organisation types (the list an organisation is in). Owner 10.11.2026: classic NGOs first.
 types_included: ["Non-governmental organization"]
+# Other ECOSOC organisation types (owner 17.11.2026): in the tool too, but only shown when the box
+# "Include other ECOSOC organisation types" is ticked. Type label in ECOSOC -> organisation type id
+# (config/ngo.yaml org_kind).
+types_optional:
+  "Association": association
+  "Foundation": foundation
+  "Indigenous Peoples Organizations": indigenous
+  "Disability, Development and Rights Organizations": disability
 # kept for later (phase 2b): Association, Foundation, Indigenous Peoples Organizations,
 # Disability, Development and Rights Organizations

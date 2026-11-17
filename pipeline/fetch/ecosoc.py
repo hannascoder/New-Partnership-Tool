@@ -35,7 +35,9 @@ import urllib.parse
 import urllib.request
 from datetime import date, datetime, timezone
 
-from common import RAW, USER_AGENT, save
+import yaml
+
+from common import RAW, ROOT, USER_AGENT, save
 
 BASE = "https://esango.un.org/civilsociety/"
 INDEX_PAGES = {
@@ -295,8 +297,11 @@ def main():
         store("orgs.json.gz", orgs)
     # 2. profiles of NGOs (type list "Non-governmental organization"; all orgs if that list is missing)
     ngo_codes = set()
+    # NGOs + the other ECOSOC types of config/sources/ecosoc_fields.yaml types_optional (owner 17.11.2026)
+    want = {NGO_TYPE.lower()} | {t.lower() for t in (yaml.safe_load(open(ROOT / "config" / "sources" / "ecosoc_fields.yaml",
+                                                   encoding="utf-8")).get("types_optional") or {})}
     for m in lists.values():
-        if m["kind"] == "type" and NGO_TYPE.lower() in m["label"].lower():
+        if m["kind"] == "type" and m["label"].lower() in want:
             ngo_codes |= set(m.get("codes") or [])
     targets = sorted(ngo_codes or set(orgs), key=int)
     done = 0
