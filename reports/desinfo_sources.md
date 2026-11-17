@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-17T17:01:44Z  |  items in the site data: 407
+Fetched: 2026-11-17T17:20:01Z  |  items in the site data: 431
 
 ## Google Fact Check Tools API
-- {'items': 233, 'requests': 1500, 'errors': ["HTTP 503 for 'COVID-19'"]}
+- {'items': 251, 'requests': 1800, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -31,12 +31,3 @@ Fetched: 2026-11-17T17:01:44Z  |  items in the site data: 407
 | Cekfakta / Mafindo | yes | 10 |  |
 
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
-
-## UN feeds (content-gap check)
-Fetched: 2026-11-17T16:52:31Z | UN articles in the last 12 months: 6
-
-| Source | Works | Items | Note |
-|---|---|---|---|
-| UN News (en) | yes | 6 |  |
-
-Sources marked NO: correct the address in `config/un_sources.yaml`.

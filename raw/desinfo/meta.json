@@ -1,18 +1,17 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T17:01:44Z",
-  "records": 461,
+  "fetched_at": "2026-11-17T17:20:01Z",
+  "records": 479,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 233,
-      "requests": 1500,
-      "errors": [
-        "HTTP 503 for 'COVID-19'"
-      ]
+      "items": 251,
+      "requests": 1800,
+      "errors": [],
+      "max_age_days": 14
     },
     "feeds": {
       "AFP Fact Check": {
@@ -120,6 +119,11 @@
         "items": 10,
         "url": "https://turnbackhoax.id/feed/"
       }
+    },
+    "discovered_feeds": {
+      "ok": 0,
+      "failed": 0,
+      "known": 0
     }
   }
 }
