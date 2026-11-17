@@ -15,20 +15,46 @@ from desinfo_discover import allowed, feed_links, home_page
 SOURCES = yaml.safe_load(open(ROOT / "config" / "un_sources.yaml", encoding="utf-8"))["feeds"]
 
 
+COMMON_PATHS = ["/feed", "/feed/", "/rss", "/rss.xml", "/news/rss.xml", "/rss/news"]
+
+
+def candidate_feeds(src):
+    """The configured address, then the feed the site announces on its pages (section page, then home page),
+    then the usual feed locations on the site's own domain. All politely (robots.txt), in this order."""
+    seen, out = set(), []
+
+    def add(u):
+        if u not in seen:
+            seen.add(u)
+            out.append(u)
+
+    add(src["url"])
+    root = "/".join(src["site"].split("/")[:3])
+    for page in dict.fromkeys([src["site"], root + "/"]):
+        html, st = home_page(page)
+        if st == "ok":
+            for link in feed_links(html, page)[:2]:
+                add(link)
+    for path in COMMON_PATHS:
+        add(root + path)
+    return out
+
+
 def fetch_source(src):
     feed = {"url": src["url"], "lang": src["lang"], "name": src["agency"], "domain": "", "country": ""}
     try:
         return feed_items(feed), src["url"], ""
-    except Exception as e:  # noqa: BLE001 - try the feed announced on the site
+    except Exception as e:  # noqa: BLE001 - try the feeds the site announces
         err = str(e)[:120]
-    html, st = home_page(src["site"])
-    if st == "ok":
-        for link in feed_links(html, src["site"])[:2]:
-            if allowed(link):
-                try:
-                    return feed_items({**feed, "url": link}), link, ""
-                except Exception as e:  # noqa: BLE001
-                    err = str(e)[:120]
+    for link in candidate_feeds(src)[1:]:
+        if not allowed(link):
+            continue
+        try:
+            got = feed_items({**feed, "url": link})
+            if got:
+                return got, link, "(address found automatically)"
+        except Exception as e:  # noqa: BLE001
+            err = str(e)[:120]
     return [], src["url"], err
 
 

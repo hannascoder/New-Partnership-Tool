@@ -10,6 +10,7 @@ Rules of politeness: our own honest user agent only; robots.txt is respected; a 
 NOT retried for 90 days and never worked around; at most `discover_max_sites` sites per run, one request per second.
 Settings: config/desinfo.yaml section `discovery`.
 """
+import csv
 import json
 import re
 import time
@@ -56,9 +57,36 @@ def wikidata_sites():
         d = domain_of(site)
         if not d or d in KNOWN or d in out:
             continue
-        out[d] = {"name": r["itemLabel"]["value"], "site": site,
+        out[d] = {"name": r["itemLabel"]["value"], "site": site, "origin": "wikidata",
                   "country": (r.get("iso") or r.get("iso2") or {}).get("value", "")}
     return out
+
+
+def google_domains():
+    """Web sites named as publisher of fact-checks in our own archive (cache/desinfo_items.json): {domain: (name, count)}."""
+    path = ROOT / "cache" / "desinfo_items.json"
+    if not path.exists():
+        return {}
+    skip = set(CFG["skip_domains"])
+    names, count = {}, {}
+    for i in json.load(open(path, encoding="utf-8")):
+        if i.get("src") != "google":
+            continue
+        d = domain_of(i["url"])
+        if not d or d in KNOWN or any(d == s or d.endswith("." + s) for s in skip):
+            continue
+        count[d] = count.get(d, 0) + 1
+        names.setdefault(d, i.get("publisher") or d)
+    return {d: (names[d], n) for d, n in count.items() if n >= CFG["google_min_items"]}
+
+
+def looks_like_factchecks(items):
+    """Share of the feed's items (title + short text) that contain a fact-check cue word."""
+    if not items:
+        return 0.0
+    cues = [str(c).lower() for c in CFG["cue_words"]]
+    hit = sum(1 for i in items if any(c in (i["title"] + " " + i.get("claim", "")).lower() for c in cues))
+    return hit / len(items)
 
 
 _robots = {}
@@ -114,6 +142,16 @@ def main():
         print("Wikidata query failed:", e)
         sites = {}
     print(f"Wikidata: {len(sites)} fact-checking websites (not in the hand list)")
+    valid = {r["iso2"] for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
+    n_g = 0
+    for d, (name, n) in google_domains().items():
+        if d in sites:
+            continue
+        tld = d.rsplit(".", 1)[-1].upper()
+        tld = {"UK": "GB"}.get(tld, tld)
+        sites[d] = {"name": name, "site": "https://" + d + "/", "origin": "google", "country": tld if tld in valid else ""}
+        n_g += 1
+    print(f"Google: {n_g} more web sites named as publisher of fact-checks")
     today = date.today()
     todo = []
     for d, info in sites.items():
@@ -123,12 +161,12 @@ def main():
         if c and c.get("status") == "ok":
             continue
         todo.append((d, info))
-    todo.sort(key=lambda x: (x[1]["country"] == "", x[1]["country"]))   # countries first, then unknown
+    todo.sort(key=lambda x: (x[1]["origin"] != "wikidata", x[1]["country"] == "", x[1]["country"]))
     n_ok = 0
     for d, info in todo[:CFG["discover_max_sites"]]:
         html, st = home_page(info["site"])
         rec = {"name": info["name"], "site": info["site"], "country": info["country"], "checked": today.isoformat(),
-               "feed": "", "lang": "", "status": st, "fails": 0}
+               "origin": info["origin"], "feed": "", "lang": "", "status": st, "fails": 0}
         if st == "ok":
             m = re.search(r"<html[^>]*\blang=[\"']?([a-zA-Z]{2})", html)
             rec["lang"] = m.group(1).lower() if m else ""
@@ -141,12 +179,14 @@ def main():
                                       "country": info["country"]})
                 except Exception:  # noqa: BLE001
                     got = []
-                if got:
+                if got and (info["origin"] == "wikidata" or looks_like_factchecks(got) >= CFG["cue_min_ratio"]):
                     rec.update(feed=link, status="ok")
                     n_ok += 1
                     break
+                if got:
+                    rec["status"] = "not_factcheck_feed"
         if rec["status"] != "ok":
-            days = 90 if rec["status"] == "blocked" else 30
+            days = 90 if rec["status"] in ("blocked", "not_factcheck_feed") else 30
             rec["retry_after"] = (today + timedelta(days=days)).isoformat()
         cache[d] = rec
         time.sleep(1)

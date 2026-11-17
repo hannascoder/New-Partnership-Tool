@@ -25,6 +25,15 @@ google_factcheck:
 discovery:                  # automatic search for fact-checkers and their feeds (pipeline/fetch/desinfo_discover.py)
   wikidata_class_labels: ["fact-checking organization", "fact-checking website", "fact-checker", "fact-checking"]
   discover_max_sites: 250   # sites looked at per weekly run (the rest follows in the next runs)
+  # second source of candidates: every web site that Google names as publisher of a fact-check (grows by itself)
+  google_min_items: 2       # at least this many fact-checks from the site in our archive
+  skip_domains: [facebook.com, twitter.com, x.com, youtube.com, instagram.com, tiktok.com, t.me, wikipedia.org, google.com]
+  # A feed found for a site that is not a known fact-checker only counts when most of its items look like fact-checks:
+  cue_min_ratio: 0.5
+  cue_words: [fact, check, verif, verific, falso, falsa, "false", faux, fausse, fake, hoax, bulo, boato, desmentid, démenti,
+              rumor, rumour, mislead, engañ, enganos, myth, mito, mythe, intox, "is it true", "es cierto", "é verdade",
+              "est-ce vrai", "no es", "não é", "não, ", "no, ", "non, ", "نفي", "فيديو", "ادعاء", "تحقق", "ложь", "фейк", "проверка",
+              "假", "辟谣", "核查", "झूठ", "फर्जी", "uongo", "feki"]
 
 gap:                        # traffic light of the "Content gaps" view (owner's rule, 17.11.2026)
   red_min_factchecks: 5     # red: at least this many fact-checks in the window ...
