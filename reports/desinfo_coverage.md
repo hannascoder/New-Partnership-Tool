@@ -10,7 +10,7 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 
 - Spain: 829
 - India: 776
-- United States of America: 606
+- United States of America: 609
 - Brazil: 439
 - France: 304
 - Philippines: 178
@@ -31,7 +31,7 @@ Afghanistan, Albania, Algeria, Andorra, Angola, Antigua and Barbuda, Armenia, Az
 - Austria: 40
 - Bangladesh: 34
 - Argentina: 31
-- Czechia: 25
+- Czechia: 27
 - Germany: 24
 - Jordan: 20
 - Ghana: 13

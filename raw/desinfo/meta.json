@@ -1,18 +1,16 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-17T20:15:29Z",
-  "records": 778,
+  "fetched_at": "2026-11-17T21:44:45Z",
+  "records": 790,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 240,
+      "items": 242,
       "requests": 1800,
-      "errors": [
-        "HTTP 503 for 'Fake news'"
-      ],
+      "errors": [],
       "max_age_days": 14
     },
     "feeds": {
@@ -123,8 +121,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 18,
-      "failed": 1,
+      "ok": 19,
+      "failed": 0,
       "known": 81
     }
   }

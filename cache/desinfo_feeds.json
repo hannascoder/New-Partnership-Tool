@@ -620,10 +620,10 @@
 "checked": "2026-11-17",
 "origin": "google",
 "feed": "",
-"lang": "pt",
-"status": "not_factcheck_feed",
+"lang": "",
+"status": "error",
 "fails": 0,
-"retry_after": "2027-02-15"
+"retry_after": "2026-12-17"
 },
 "provereno.media": {
 "name": "Проверено.Медиа",
