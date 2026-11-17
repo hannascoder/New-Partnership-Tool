@@ -1,7 +1,7 @@
 # Changes compared with the published website (branch main) (step 5)
 
 - New outlets: 239
-- No longer shown: 1,428 (merged into another entry, excluded, or gone from all sources)
+- No longer shown: 635 (merged into another entry, excluded, or gone from all sources)
 - Changed values: none
 
 ### Examples: new
@@ -24,18 +24,18 @@
 
 ### Examples: no longer shown
 
-- # 100 GREATEST JAZZ LOUNGE BAR (CAN, pf-028666)
 - // aNONradio // (USA, pf-028664)
 - 100% Radio (FRA, pf-022611)
-- 100,5 Das Hitradio (BEL, pf-028690)
-- 100.1 La Sanmarqueña (Aguascalientes) - 100.1 FM - XHARZ-FM - Grupo Radiofónico ZER - Aguascalientes, Aguascalientes (MEX, pf-028691)
-- 100.1 Radio Fórmula (Poza Rica) - 100.1 FM - XHXK-FM - Grupo Fórmula - Poza Rica, Veracruz (MEX, pf-028692)
-- 100.1 Radio Vida (Ciudad Obregón) - 100.1 FM - XHCSAE-FM - Radio Vida MX - Ciudad Obregon, Sonora (MEX, pf-028693)
-- 100.1 Radiotec (Saltillo) - 100.1 FM - XHINS-FM - Instituto Tecnológico de Saltillo - Saltillo, Coahuila (MEX, pf-028694)
 - 100.1 W Radio (San Luis Potosí) - 100.1 FM - XHPM-FM - GlobalMedia - San Luis Potosí, San Luis Potosí (MEX, pf-028695)
-- 100.3 Aztlán Radio (Tepic) - 100.3 FM - XHTNY-FM - Sistema de Radio y Televisión de Nayarit - Tepic, Nayarit (MEX, pf-028696)
-- 100.3 El Heraldo Radio (GDL) - 100.3 FM - XHAV-FM - Heraldo Media Group - Guadalajara, Jalisco (MEX, pf-028697)
 - 100.3 RTQ Radio (Querétaro) - 100.3 FM - XHQUE-FM - RTQ (Radio Televisión Querétaro) - Querétaro, Querétaro (MEX, pf-028699)
 - 100.5 Expresiones FM (Chalco) - 100.5 FM - XHSCFE-FM - Enlace de Expresiones Comunitarias FM, A.C. - Chalco, Estado de México (MEX, pf-028700)
-- 100.5 Radio Universidad (Durango) - 100.5 FM - XHHD-FM - Universidad Juárez del Estado de Durango (UJED) - Durango, Durango (MEX, pf-028701)
 - 100.7 WMMS - Cleveland, Ohio (USA, pf-028702)
+- 1000 W Radio (Tapachula) - 1000 AM - XETAC-AM - Grupo Radio Cañón - Tapachula, Chiapas (MEX, pf-028705)
+- 101.5 BiG SOUND FM - DWWG (PHL, pf-028714)
+- 101.7 Your Love FM (SAU, pf-028721)
+- 102 FM VOKS Radio Bali (IDN, pf-028726)
+- 1020 W Radio (Cañitas de Felipe Pescador) - 1020 AM - XECCCG-AM - Grupo Radio Cañón - Cañitas de Felipe Pescador, Zacatecas (MEX, pf-028736)
+- 104.9 W Radio (Zacatecas y Guadalupe) - 104.9 FM - XHCCFL-FM - Grupo Radio Cañón - Zacatecas, Zacatecas (MEX, pf-028762)
+- 105.5 SKY ABC RADIO (SAU, pf-028771)
+- 106.7 Party Mix (Mexicali) - 106.7 FM - XEWV-FM - Esquina 32 Radio - Mexicali, Baja California (MEX, pf-028778)
+- 106.7 True FM - DWET (PHL, pf-028780)

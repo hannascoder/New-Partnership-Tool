@@ -1,5 +1,12 @@
 # Changelog
 
+
+## 2026-11-17
+- Contact search: contact pages on the same site (e.g. help.nytimes.com) count, the usual contact addresses
+  (/contact, /contact-us ...) are tried, and the contact page is read for organisation e-mail addresses.
+  6,865 new contact pages; outlets with an e-mail address 6,003 -> 10,114. Top 10 per country without any
+  contact: 862 -> 669. Part of every automatic website check from now on.
+- The e-mail address on a card opens the "Send mail" pop-up (a plain link gave an empty mail).
 ## 2026-11-16 (evening): "Start from a UN mail or text" - stage 1
 - New box above the results on both pages (Media, Organisations & NGOs): paste the text of a UN mail
   (e.g. a UN VIDEO UPDATE), a press release or a story and press "Suggest partners". The tool reads
