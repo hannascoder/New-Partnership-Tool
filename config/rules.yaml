@@ -446,3 +446,12 @@ automation:
   # (with a note) and removed at this one.
   remove_after_missing_runs: 2
 
+
+# Contact page search of the website check (owner 16.11.2026: big outlets such as BBC, NYT had no contact).
+# 1) contact links on the same site count too (help.nytimes.com for nytimes.com),
+# 2) when the home page shows no contact link, these paths are tried (first one that answers with a page
+#    that looks like a contact page wins); the contact page is then read for organisation e-mail addresses.
+website_contact:
+  paths: [/contact, /contact-us, /contactus, /contact/, /about/contact, /about-us/contact, /info/contact,
+          /kontakt, /contacto, /contato, /contactez-nous, /nous-contacter, /contatti, /contacts, /contact.html]
+  second_level: [co, com, org, net, gov, ac, edu, or, ne, go]  # example.co.uk -> same site as news.example.co.uk

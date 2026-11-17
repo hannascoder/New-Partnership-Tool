@@ -629,7 +629,8 @@
     const typeLine = o.ng
       ? (o.ok && o.ok !== "ngo" ? esc(lab(N.org_kind || [], o.ok)) + " · " : "") + (esc((o.us || []).map((u) => lab(N.un_status || [], u)).join(", ")) || "<span class='pending'>no UN status</span>")
       : esc((C.org_type.find((x) => x.id === (o.o || [])[0]) || {}).label || (o.o || [])[0] || "") + (o.ow && o.ow[0] === "state_controlled" ? ' · <span class="warn">State-controlled</span>' : "");
-    const contact = o.ww ? "" : (o.em ? `<a href="mailto:${esc(o.em)}">${esc(o.em)}</a>` : "") + (o.em && o.cp ? " · " : "") + (o.cp ? `<a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : "");
+    // the address opens the same "Send mail" pop-up as the button (owner 16.11.2026: a bare mailto link gave an empty mail)
+    const contact = o.ww ? "" : (o.em ? `<a href="mailto:${esc(o.em)}" class="mail-link" data-mail="${esc(o.i)}">${esc(o.em)}</a>` : "") + (o.em && o.cp ? " · " : "") + (o.cp ? `<a href="${esc(o.cp)}" target="_blank" rel="noopener">contact page ↗</a>` : "");
     // a website that seems to belong to someone else now (betting, adult content) is named but not linked
     const site = !o.w ? "" : o.ww ? `<span class="pending">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))} (not linked)</span>`
       : `<a href="${esc(o.w)}" target="_blank" rel="noopener">${esc(o.w.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>`;
@@ -927,7 +928,7 @@
         <p class="row"><b>To:</b> <span id="mailTo"></span></p><p class="row"><b>Subject:</b> <span id="mailSubject"></span></p>
         <div class="mail-preview" id="mailPreview"></div>
         <p class="hint">Yellow = please fill in or check. Your mail program opens with the text; the same text with the yellow marks is copied – paste it over the draft (Ctrl+V / Cmd+V) to keep the marks.</p>
-        <div class="mail-actions"><button type="button" class="btn-primary" data-open="app">Open in Outlook app</button>
+        <div class="mail-actions"><button type="button" class="btn-primary" data-open="app" title="Opens the mail program set as default on this computer (e.g. Outlook or Apple Mail)">Open in mail app</button>
         <button type="button" class="btn-quiet" data-open="owa">Outlook on the web</button><button type="button" class="btn-quiet" data-open="gmail">Gmail</button>
         <button type="button" class="btn-quiet" data-open="copy">Copy text</button><button class="btn-quiet" value="close">Close</button></div>
         <p class="hint" id="mailStatus" role="status"></p></form>`;
@@ -948,7 +949,8 @@
     d.showModal();
   }
   $("cards").addEventListener("click", (e) => {
-    const b = e.target.closest("button.mail-btn[data-mail]"); if (!b) return;
+    const b = e.target.closest("button.mail-btn[data-mail], a.mail-link[data-mail]"); if (!b) return;
+    e.preventDefault();
     const o = ALL.find((x) => x.i === b.dataset.mail); if (o) openMail(o);
   });
 

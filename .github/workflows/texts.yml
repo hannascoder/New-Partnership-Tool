@@ -10,6 +10,9 @@ on:
       max_rank:
         description: "Check websites of the top N outlets per country (100000 = all)"
         default: "100000"
+      contact_only:
+        description: "Only search contact pages / e-mails of checked sites that have none (1 = yes)"
+        default: "0"
   push:
     branches: ["claude/**", "step-*"]
     paths: ["pipeline/fetch/texts.py", "pipeline/fetch/website_check.py", ".github/workflows/texts.yml"]
@@ -44,6 +47,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - run: pip install pyyaml
       - name: Website check
         continue-on-error: true
         timeout-minutes: 175
@@ -52,6 +56,7 @@ jobs:
           # so a run that hits the time limit continues on the next run
           WEBSITE_MAX_RANK: ${{ inputs.max_rank || '100000' }}
           WEBSITE_MINUTES: "165"
+          WEBSITE_CONTACT_ONLY: ${{ inputs.contact_only || '0' }}
         run: python pipeline/fetch/website_check.py
       - name: Save raw data
         if: always()

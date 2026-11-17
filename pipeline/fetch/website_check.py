@@ -173,6 +173,72 @@ def host(u):
     return re.sub(r"^www\d?\.", "", urllib.parse.urlsplit(u).netloc.lower())
 
 
+try:
+    import yaml  # noqa: E402
+    WC = (yaml.safe_load(open(ROOT / "config" / "rules.yaml", encoding="utf-8")) or {}).get("website_contact") or {}
+except ImportError:  # pyyaml missing: the usual contact paths still work
+    WC = {"paths": ["/contact", "/contact-us", "/contactus", "/about/contact", "/kontakt", "/contacto", "/contato",
+                    "/contactez-nous", "/nous-contacter", "/contatti", "/contacts", "/contact.html"],
+          "second_level": ["co", "com", "org", "net", "gov", "ac", "edu", "or", "ne", "go"]}
+    print("note: pyyaml not installed, built-in contact paths used")
+
+
+def site_key(h):
+    """registrable part of a host name: help.nytimes.com -> nytimes.com, news.bbc.co.uk -> bbc.co.uk"""
+    parts = h.split(":")[0].split(".")
+    if len(parts) >= 3 and len(parts[-1]) == 2 and parts[-2] in set(WC.get("second_level") or []):
+        return ".".join(parts[-3:])
+    return ".".join(parts[-2:])
+
+
+def contact_search(final, res):
+    """owner 16.11.2026: try the usual contact paths when the home page shows none, and read the contact
+    page for e-mail addresses (config/rules.yaml website_contact). Changes res in place."""
+    tried = []
+    if not res.get("contact_url"):
+        base = "{0.scheme}://{0.netloc}".format(urllib.parse.urlsplit(final))
+        for path in WC.get("paths") or []:
+            url = base + path
+            try:
+                if not allowed(url):
+                    continue
+                got, html = fetch(url)
+            except Exception:
+                tried.append(path)
+                continue
+            gp = urllib.parse.urlsplit(got).path
+            if gp in ("", "/") or site_key(host(got)) != site_key(host(final)):
+                continue  # sent back to the home page or elsewhere: no contact page
+            q = Page()
+            try:
+                q.feed(html)
+            except Exception:
+                pass
+            if CONTACT.search(q.title or "") or CONTACT.search(gp) or CONTACT.search(" ".join(q.heads[:10])):
+                res["contact_url"], res["contact_found"] = got, "path"
+                res["_contact_page"] = q
+                break
+    if res.get("contact_url") and len(res.get("emails") or []) < 8:
+        q = res.pop("_contact_page", None)
+        if q is None:
+            try:
+                if allowed(res["contact_url"]):
+                    _, html = fetch(res["contact_url"])
+                    q = Page()
+                    q.feed(html)
+            except Exception:
+                q = None
+        if q is not None:
+            found = [h[7:].split("?")[0].strip() for _, h, _ in q.links if h.startswith("mailto:")]
+            found += EMAIL.findall(" ".join(q.paras))
+            for e in found:
+                if EMAIL.fullmatch(e) and e not in res.setdefault("emails", []) and len(res["emails"]) < 8 \
+                        and not e.lower().endswith((".png", ".jpg")):
+                    res["emails"].append(e)
+    res.pop("_contact_page", None)
+    res["contact_search"] = date.today().isoformat()
+
+
 def check(outlet):
     """never raises: a problem with one site is stored as status "error" """
     try:
@@ -222,6 +288,9 @@ def _check(outlet):
                 and (h == home or "creativecommons.org" in h):
             extra.append([" ".join((text or "").split())[:60], full[:200]])
         if h != home:
+            # contact page on another part of the same site (help.nytimes.com), owner 16.11.2026
+            if contact is None and site_key(h) == site_key(home) and (CONTACT.search(text or "") or CONTACT.search(full)):
+                contact = full
             continue
         path = urllib.parse.urlsplit(full).path
         if is_nav and text and (text, path) not in seen and len(nav) < 120:
@@ -239,6 +308,7 @@ def _check(outlet):
                 "v": VERSION, "extra": extra})
     if contact:
         res["contact_url"] = contact
+    contact_search(final, res)
     dates = [d for d in p.dates if re.match(r"\d{4}-\d{2}-\d{2}$", d)]
     if res["feeds"]:  # date of the latest article from the RSS / Atom feed
         try:
@@ -281,6 +351,41 @@ def save_shards(shards):
             json.dump(s, f, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
 
+def contact_only(todo, shards):
+    """WEBSITE_CONTACT_ONLY=1 (owner 16.11.2026): only the contact search, for checked sites without a contact
+    page or e-mail, without checking the whole site again"""
+    entries = {i: (c, v) for c, s in shards.items() for i, v in s.items()}
+    jobs = [(o, entries[o["i"]]) for o in todo if o["i"] in entries and entries[o["i"]][1].get("status") == "ok"
+            and not entries[o["i"]][1].get("contact_search")
+            and not (entries[o["i"]][1].get("contact_url") and entries[o["i"]][1].get("emails"))]
+    print(f"contact search: {len(jobs)} websites")
+    t0, n, found = time.time(), 0, 0
+
+    def run(job):
+        o, (c, v) = job
+        res = dict(v)
+        try:
+            contact_search(v.get("final_url") or v["url"], res)
+        except Exception as e:  # noqa: BLE001
+            res["contact_search"] = date.today().isoformat()
+            res["contact_error"] = str(e)[:80]
+        return o["i"], c, res
+    with ThreadPoolExecutor(WORKERS) as ex:
+        for fut in as_completed([ex.submit(run, j) for j in jobs]):
+            oid, c, res = fut.result()
+            found += bool(res.get("contact_url")) and not shards[c][oid].get("contact_url")
+            shards[c][oid] = res
+            n += 1
+            if n % 500 == 0:
+                print(f"{n} searched, {found} new contact pages, {time.time() - t0:.0f}s", flush=True)
+                save_shards(shards)
+            if time.time() - t0 > MINUTES * 60:
+                print("time limit reached")
+                break
+    save_shards(shards)
+    print(f"contact search done: {n} sites, {found} new contact pages")
+
+
 def main():
     outlets = []  # website data files (site/data/outlets-N.json, older: outlets.json)
     for f in sorted((ROOT / "site" / "data").glob("outlets*.json")) + sorted((ROOT / "site" / "data").glob("ngos*.json")):
@@ -290,6 +395,8 @@ def main():
     shards = {}
     for f in OUT.glob("*.json.gz"):
         shards[f.name[:3]] = json.load(gzip.open(f, "rt", encoding="utf-8"))
+    if os.environ.get("WEBSITE_CONTACT_ONLY") == "1":
+        return contact_only(todo, shards)
     cutoff = (date.today() - timedelta(days=RECHECK_DAYS)).isoformat()
     done = {i for s in shards.values() for i, v in s.items() if v.get("checked", "") >= cutoff and v.get("v", 1) >= VERSION}
     todo = [o for o in todo if o["i"] not in done]

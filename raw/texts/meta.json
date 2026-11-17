@@ -1,7 +1,7 @@
 {
   "source": "texts",
-  "fetched_at": "2026-11-14T22:38:58Z",
-  "records": 28409,
+  "fetched_at": "2026-11-17T15:04:27Z",
+  "records": 28536,
   "languages": [
     "en",
     "fr",
@@ -13,8 +13,8 @@
     "pt",
     "sw"
   ],
-  "items": 28409,
-  "with_intro": 16544,
+  "items": 28536,
+  "with_intro": 16648,
   "urls": [
     "https://www.wikidata.org/w/api.php",
     "https://<lang>.wikipedia.org/w/api.php"
