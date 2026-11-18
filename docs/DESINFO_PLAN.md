@@ -148,3 +148,13 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   LGBTQ rights and Same-sex marriage also gender_equality/gender_identity): the link selects the first OR the second topic (`&tp=a,b&off=a:...;b:...`).
 - "Population growth" -> cities. UN institution topics (WHO, UNICEF ...) stay on the subject topic (owner: no UN-profile filter).
 - Excel has columns F-I (topic, sub-topic, second topic, sub-topic of the second topic; "none" removes the second topic); importer updated and tested.
+
+## 18.11.2026 (late): health and climate second topics (owner: "alles ja", also COVID-19 and Pandemic)
+- 24 more second topics in `config/desinfo_partner_topics.yaml` (37 in total): vaccines/COVID-19/pandemic also "Access to health care",
+  contraception/family planning also SRHR, obesity also nutrition, malnutrition also maternal/child health; extreme weather, floods, wildfire,
+  water scarcity also climate adaptation; renewable energy, solar, wind, EV also climate change; plastic, recycling, e-waste, biodiversity,
+  deforestation, desertification also environment in general; ocean acidification also climate change.
+- Data model: a topic's Partner Finder selection is now a list `[[topic, [sub-topics]], ...]`; two sub-topics of the SAME topic are merged
+  (COVID-19 = health / infectious diseases + health systems).
+- Data check (18.11.2026): COVID-19, pandemic and vaccine topics = 317 of 6,174 fact-checks in 12 months (5 %), 18 of 1,084 in the last 30 days (1.7 %);
+  election is by far the top topic. Caveat: topic detection is by key words and the archive before 17.11.2026 is incomplete.
