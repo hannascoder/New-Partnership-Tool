@@ -52,8 +52,8 @@ translation:                # automatic English translation of fact-check titles
 international_publishers: [afp.com]
 
 keep_days: 365              # single items older than this are deleted; the daily counts are kept for good
-red_marker:                 # "strongly rising" topic (owner 17.11.2026)
-  factor: 2.0               # more than 2x the average of the weeks before ...
+red_marker:                 # "strongly rising" topic (owner 17.11.2026; refined 18.11.2026: SHARES, not counts)
+  factor: 2.0               # share of all fact-checks in the last 7 days > 2x its share in the weeks before ...
   baseline_days: 28
   min_items: 5              # ... and at least this many items in the last 7 days
 

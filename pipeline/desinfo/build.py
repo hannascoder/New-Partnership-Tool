@@ -265,7 +265,9 @@ def main():
             print(f"WARNING: sub-topic '{sub}' of '{t['label_en']}' does not belong to the Partner Finder topic '{tp}': ignored")
             sub = ""
         ptop[t["qid"]] = [tp, sub]
-    json.dump({"topics": ptop, "subs": pf}, open(OUT / "partner_topics.json", "w", encoding="utf-8"), separators=(",", ":"))
+    sublabels = {x["id"]: x["label"].split(" (")[0] for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])
+                 for x in t.get("subtopics", [])}          # short name of each sub-topic for the switch on the page
+    json.dump({"topics": ptop, "subs": pf, "sublabels": sublabels}, open(OUT / "partner_topics.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     cs = (atlas.get("country_searches") or {}).get("countries") or {}
     trends = {iso3[k]: {"date": v.get("date"), "queries": [{"q": x["query"], "t": x.get("traffic", "")} for x in v.get("queries", [])[:6]]}
               for k, v in cs.items() if k in iso3 and not v.get("unsupported")}

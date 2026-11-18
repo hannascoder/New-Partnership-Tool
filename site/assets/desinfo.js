@@ -2,8 +2,8 @@
 (function () {
   "use strict";
   var D = "data/desinfo/";
-  var S = { topic: "", un: false, region: "", country: "", from: "", to: "", view: "trends", shown: 50, span: 30, basis: "publisher" };
-  var DATA = {}, map = null, layer = null;
+  var S = { topic: "", un: false, region: "", country: "", from: "", to: "", view: "trends", shown: 50, span: 30, basis: "publisher", narrow: true };
+  var DATA = {}, map = null, layer = null, HIST = 0, TOTS = null;    // HIST: days with data in the 4 weeks before the last week (whole archive, any filter)
 
   function $(id) { return document.getElementById(id); }
   function el(tag, attrs, kids) {
@@ -40,9 +40,10 @@
 
   function aggregate() {
     // one pass: per topic range / last7 / base28, per day, per country (current topic)
-    var A = { topics: {}, days: {}, countries: {}, rank: {}, total: 0, unTotal: 0 }, to = day(S.to);
+    var A = { topics: {}, days: {}, countries: {}, rank: {}, total: 0, unTotal: 0 }, to = day(S.to), hist = {};
     series().forEach(function (r) {
       var d = r[0], q = r[1], c = r[2], un = r[3], n = r[4];
+      if (day(d) > to - 35 && day(d) <= to - 7) hist[d] = 1;
       // the country ranking ignores the region / country filter, so it always shows where to look next
       if (q === S.topic && c && inRange(d) && (!S.un || un)) A.rank[c] = (A.rank[c] || 0) + n;
       if (!ok(c, un)) return;
@@ -58,6 +59,7 @@
         if (inRange(d)) { A.total += n; if (un) A.unTotal += n; }
       }
     });
+    HIST = Object.keys(hist).length; TOTS = A.topics[""] || null;
     return A;
   }
 
@@ -88,10 +90,12 @@
   // ---------- topics ----------
   function topicName(q) { var t = DATA.topicById[q]; return t ? t.label : q; }
   function rising(t) {
+    // "Rising" = the topic's SHARE of all fact-checks in the last 7 days is more than `factor` times its share in the 4 weeks before
+    // (and at least `min_items` this week). Shares keep it fair when the amount of collected data changes (e.g. after the backfill).
     var cfg = DATA.config.red_marker;
-    if (!t || Object.keys(t.baseDays).length < 14) return null;        // not enough history yet
-    var weekly = t.base / 4;
-    return { red: t.last7 >= cfg.min_items && t.last7 > cfg.factor * weekly, ratio: weekly ? t.last7 / weekly : null };
+    if (!t || HIST < 14 || !TOTS || !TOTS.last7 || !TOTS.base) return null;     // not enough collected history yet (whole archive)
+    var now = t.last7 / TOTS.last7, before = t.base / TOTS.base;
+    return { red: t.last7 >= cfg.min_items && (before ? now / before > cfg.factor : true), ratio: before ? now / before : null };
   }
   function renderTopics(A) {
     var box = $("topicList"); box.textContent = "";
@@ -288,6 +292,18 @@
     box.hidden = false;
     box.appendChild(el("h3", { text: "Local voices in " + DATA.countries[S.country].name + " (already in the Partner Finder)" }));
     box.appendChild(el("p", { class: "hint", text: "Credible organisations that could carry verified information. Taken from the Partner Finder data; only organisations, no persons. A group with no entry means none is in the Partner Finder yet." }));
+    var mm = S.topic && DATA.ptopics[S.topic];
+    if (mm && mm[1]) {                                  // a sub-topic exists: the user can filter broad or narrow
+      var sw = el("div", { class: "view-switch" }), sub = (DATA.psubs[mm[0]] || []);
+      var subLabel = (DATA.psubLabels && DATA.psubLabels[mm[1]]) || mm[1];
+      [["Broad: whole topic", false], ["Narrow: " + subLabel, true]].forEach(function (o) {
+        var b = el("button", { type: "button", role: "tab", "aria-selected": String(S.narrow === o[1]), text: o[0] });
+        b.onclick = function () { S.narrow = o[1]; renderPartners(); };
+        sw.appendChild(b);
+      });
+      box.appendChild(el("p", { class: "hint", text: "Topic filter in the Partner Finder links:" }));
+      box.appendChild(sw);
+    }
     var grid = el("div", { class: "p-grid" });
     GROUPS.forEach(function (g) {
       var d = p[g.k];
@@ -308,13 +324,13 @@
         var tail = "";
         if (m) {
           tail = "&tp=" + m[0];
-          if (m[1]) {                                  // only this sub-topic: the others of the topic are switched off
+          if (m[1] && S.narrow) {                      // narrow: only this sub-topic, the others of the topic are switched off
             var off = (DATA.psubs[m[0]] || []).filter(function (x) { return x !== m[1]; });
             if (off.length) tail += "&off=" + m[0] + ":" + off.join("|");
           }
         }
         col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + tail,
-          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + ")" : "") + " →" }));
+          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + (m[1] && S.narrow ? ", narrow" : "") + ")" : "") + " →" }));
       }
       grid.appendChild(col);
     });
@@ -378,7 +394,7 @@
         var rs = rising(r.x);
         return [r.t.label, r.t.group, String(r.x.range), String(r.x.last7), rs ? (rs.red ? "Rising" : (rs.ratio ? "x" + rs.ratio.toFixed(1) : "new")) : "not enough history"];
       });
-    tables.push({ title: "Topics", note: "Fact-checks per topic in the window. “Rising” = more than twice the usual weekly number.",
+    tables.push({ title: "Topics", note: "Fact-checks per topic in the window. “Rising” = the topic’s share of all fact-checks this week is more than twice its share in the 4 weeks before (at least 5 this week).",
       cols: [["Topic", 30], ["Group", 16], ["Fact-checks", 12], ["Last 7 days", 12], ["Trend", 14]], rows: trows });
     // 2. countries
     var crows = Object.keys(A.rank).sort(function (a, b) { return A.rank[b] - A.rank[a]; }).slice(0, 30).filter(function (c) { return DATA.countries[c]; })
@@ -444,8 +460,7 @@
     if (DATA.syncSelects) DATA.syncSelects();
     var A = aggregate();
     renderRange(A); renderTopics(A);
-    var base = Object.keys((A.topics[""] || { baseDays: {} }).baseDays).length;
-    $("notice").hidden = base >= 14;
+    $("notice").hidden = HIST >= 14;
     $("notice").textContent = "The red marker needs at least two weeks of collected data before the selected week; it appears automatically once the daily archive is long enough.";
     $("stats").textContent = "";
     [[A.total, "fact-checks in this window"], [A.unTotal, "UN-related"], [Object.keys(A.countries).length, "countries with fact-checks"]].forEach(function (s) {
@@ -484,7 +499,7 @@
   Promise.all([load("items.json"), load("series.json"), load("topics.json"), load("countries.json"), load("config.json"),
                load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true), load("partner_topics.json", true)]).then(function (r) {
     DATA.items = r[0]; DATA.series = r[1]; DATA.topics = r[2].topics; DATA.countries = r[3]; DATA.config = r[4];
-    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = (r[10] && r[10].topics) || {}; DATA.psubs = (r[10] && r[10].subs) || {};
+    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = (r[10] && r[10].topics) || {}; DATA.psubs = (r[10] && r[10].subs) || {}; DATA.psubLabels = (r[10] && r[10].sublabels) || {};
     DATA.topicById = {}; DATA.topics.forEach(function (t) { DATA.topicById[t.qid] = t; });
     DATA.coveredP = {}; DATA.coveredA = {}; var f = "9999", l = "0000";
     DATA.series.forEach(function (x) { if (x[2]) DATA.coveredP[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });
