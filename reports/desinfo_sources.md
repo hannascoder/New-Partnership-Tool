@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-18T16:02:53Z  |  items in the site data: 6207
+Fetched: 2026-11-18T16:36:43Z  |  items in the site data: 6221
 
 ## Google Fact Check Tools API
-- {'items': 204, 'requests': 1952, 'errors': [], 'max_age_days': 14}
+- {'items': 210, 'requests': 1952, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -33,7 +33,7 @@ Fetched: 2026-11-18T16:02:53Z  |  items in the site data: 6207
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-18T16:09:05Z | UN articles in the last 12 months: 386
+Fetched: 2026-11-18T16:42:23Z | UN articles in the last 12 months: 392
 
 | Source | Works | Items | Note |
 |---|---|---|---|
@@ -56,9 +56,9 @@ Fetched: 2026-11-18T16:09:05Z | UN articles in the last 12 months: 386
 | FAO (en) | NO | 0 | failed after 2 tries: https://www.fao.org/newsroom/rss-feed/en/ (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
 | WFP (en) | NO | 0 | failed after 2 tries: https://www.wfp.org/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
 | UNEP (en) | NO | 0 | failed after 2 tries: https://www.unep.org/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
-| UNESCO (en) | NO | 0 | failed after 2 tries: https://www.unesco.org/rss (Remote end closed connection without response) |
+| UNESCO (en) | NO | 0 | failed after 2 tries: https://www.unesco.org/en/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
 | OHCHR (en) | yes | 10 |  |
-| UNDP (en) | NO | 0 | failed after 2 tries: https://www.undp.org/rss.xml (HTTP Error 403: Forbidden) (searched on -, next search later) |
+| UNDP (en) | NO | 0 | failed after 2 tries: https://www.undp.org/rss (HTTP Error 403: Forbidden) |
 | UN Women (en) | NO | 0 | failed after 2 tries: https://www.unwomen.org/en/rss-feeds/news (HTTP Error 403: Forbidden) (searched on -, next search later) |
 | IOM (en) | NO | 0 | failed after 2 tries: https://www.iom.int/rss.xml (HTTP Error 404: Not Found) (searched on -, next search later) |
 | UNFPA (en) | yes | 10 |  |

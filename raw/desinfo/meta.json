@@ -1,14 +1,14 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-18T16:02:53Z",
-  "records": 698,
+  "fetched_at": "2026-11-18T16:36:43Z",
+  "records": 714,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 204,
+      "items": 210,
       "requests": 1952,
       "errors": [],
       "max_age_days": 14
@@ -121,8 +121,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 16,
-      "failed": 3,
+      "ok": 17,
+      "failed": 2,
       "known": 84
     }
   }
