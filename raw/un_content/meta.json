@@ -1,7 +1,7 @@
 {
   "source": "un_content",
-  "fetched_at": "2026-11-18T16:42:23Z",
-  "records": 433,
+  "fetched_at": "2026-11-18T18:32:39Z",
+  "records": 1873,
   "status": {
     "UN News (en)": {
       "ok": true,
@@ -133,13 +133,13 @@
       "ok": false,
       "items": 0,
       "url": "https://www.undp.org/rss.xml",
-      "error": "failed after 2 tries: https://www.undp.org/rss (HTTP Error 403: Forbidden)"
+      "error": "failed after 2 tries: https://www.undp.org/rss.xml (HTTP Error 403: Forbidden) (searched on 2026-11-18, next search later)"
     },
     "UN Women (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unwomen.org/en/rss-feeds/news",
-      "error": "failed after 2 tries: https://www.unwomen.org/en/rss-feeds/news (HTTP Error 403: Forbidden) (searched on -, next search later)"
+      "error": "failed after 2 tries: https://www.unwomen.org/rss (HTTP Error 403: Forbidden)"
     },
     "IOM (en)": {
       "ok": false,
@@ -151,6 +151,294 @@
       "ok": true,
       "items": 10,
       "url": "https://www.unfpa.org/rss.xml",
+      "error": ""
+    },
+    "UN News: climate-change (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/climate-change/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: health (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/health/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: humanitarian-aid (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/humanitarian-aid/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: migrants-and-refugees (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/migrants-and-refugees/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: peace-and-security (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: human-rights (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/human-rights/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: women (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/women/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: economic-development (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/economic-development/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: law-and-crime-prevention (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/law-and-crime-prevention/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: culture-and-education (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/culture-and-education/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: un-affairs (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/un-affairs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: sdgs (en)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/en/news/topic/sdgs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: climate-change (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/climate-change/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: health (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/health/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: humanitarian-aid (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/humanitarian-aid/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: migrants-and-refugees (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/migrants-and-refugees/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: peace-and-security (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/peace-and-security/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: human-rights (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/human-rights/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: women (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/women/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: economic-development (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/economic-development/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: law-and-crime-prevention (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/law-and-crime-prevention/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: culture-and-education (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/culture-and-education/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: un-affairs (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/un-affairs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: sdgs (es)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/es/news/topic/sdgs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: climate-change (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/climate-change/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: health (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/health/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: humanitarian-aid (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/humanitarian-aid/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: migrants-and-refugees (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/migrants-and-refugees/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: peace-and-security (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/peace-and-security/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: human-rights (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/human-rights/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: women (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/women/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: economic-development (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/economic-development/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: law-and-crime-prevention (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/law-and-crime-prevention/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: culture-and-education (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/culture-and-education/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: un-affairs (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/un-affairs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: sdgs (fr)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/fr/news/topic/sdgs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: climate-change (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/climate-change/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: health (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/health/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: humanitarian-aid (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/humanitarian-aid/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: migrants-and-refugees (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/migrants-and-refugees/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: peace-and-security (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/peace-and-security/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: human-rights (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/human-rights/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: women (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/women/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: economic-development (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/economic-development/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: law-and-crime-prevention (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/law-and-crime-prevention/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: culture-and-education (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/culture-and-education/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: un-affairs (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/un-affairs/feed/rss.xml",
+      "error": ""
+    },
+    "UN News: sdgs (pt)": {
+      "ok": true,
+      "items": 30,
+      "url": "https://news.un.org/feed/subscribe/pt/news/topic/sdgs/feed/rss.xml",
       "error": ""
     }
   }
