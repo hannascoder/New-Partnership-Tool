@@ -114,7 +114,7 @@
 "feed": "https://boliviaverifica.bo/feed/",
 "lang": "es",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "cazadoresdefakenews.info": {
 "name": "Cazadores de Fake News",
@@ -275,7 +275,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "estadao.com.br": {
 "name": "Estadão",
@@ -962,7 +962,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "yoopyup.com": {
 "name": "يوب يوب",

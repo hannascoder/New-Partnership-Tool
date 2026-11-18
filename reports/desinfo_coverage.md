@@ -1,18 +1,18 @@
 # Disinformation monitor: country coverage
 
-Countries with at least one fact-check: **69 of 195**. Items without a country: 1005. Topics with items: 170 of 183.
+Countries with at least one fact-check: **70 of 195**. Items without a country: 1002. Topics with items: 170 of 183.
 
 ## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)
 
-Afghanistan, Albania, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas, Bahrain, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bosnia and Herzegovina, Botswana, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cabo Verde, Cambodia, Cameroon, Central African Republic, Chad, Comoros, Congo, Croatia, Cuba, Cyprus, Côte d'Ivoire, Democratic People's Republic of Korea, Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Dominican Republic, Equatorial Guinea, Eritrea, Estonia, Eswatini, Finland, Gabon, Gambia, Georgia, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy See, Honduras, Hungary, Iceland, Italy, Kazakhstan, Kiribati, Kyrgyzstan, Lao People's Democratic Republic, Latvia, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Maldives, Mali, Marshall Islands, Mauritania, Mauritius, Micronesia (Federated States of), Monaco, Mongolia, Montenegro, Morocco, Mozambique, Namibia, Nauru, Netherlands (Kingdom of the), Nicaragua, Niger, North Macedonia, Norway, Palau, Papua New Guinea, Paraguay, Poland, Qatar, Republic of Moldova, Romania, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Somalia, South Sudan, Suriname, Switzerland, Tajikistan, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkmenistan, Tuvalu, United Arab Emirates, United Republic of Tanzania, Uzbekistan, Vanuatu, Yemen, Zimbabwe
+Afghanistan, Albania, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas, Bahrain, Barbados, Belarus, Belgium, Belize, Benin, Bhutan, Bosnia and Herzegovina, Botswana, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cabo Verde, Cambodia, Cameroon, Central African Republic, Chad, Comoros, Congo, Croatia, Cuba, Cyprus, Côte d'Ivoire, Democratic People's Republic of Korea, Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Equatorial Guinea, Eritrea, Estonia, Eswatini, Finland, Gabon, Gambia, Georgia, Grenada, Guatemala, Guinea, Guinea-Bissau, Guyana, Haiti, Holy See, Honduras, Hungary, Iceland, Italy, Kazakhstan, Kiribati, Kyrgyzstan, Lao People's Democratic Republic, Latvia, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Maldives, Mali, Marshall Islands, Mauritania, Mauritius, Micronesia (Federated States of), Monaco, Mongolia, Montenegro, Morocco, Mozambique, Namibia, Nauru, Netherlands (Kingdom of the), Nicaragua, Niger, North Macedonia, Norway, Palau, Papua New Guinea, Paraguay, Poland, Qatar, Republic of Moldova, Romania, Rwanda, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Senegal, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Somalia, South Sudan, Suriname, Switzerland, Tajikistan, Timor-Leste, Togo, Tonga, Trinidad and Tobago, Tunisia, Turkmenistan, Tuvalu, United Arab Emirates, United Republic of Tanzania, Uzbekistan, Vanuatu, Yemen, Zimbabwe
 
 ## Items per country
 
-- Spain: 878
+- Spain: 884
 - India: 789
 - United States of America: 644
 - Brazil: 444
-- France: 309
+- France: 308
 - Philippines: 186
 - United Kingdom of Great Britain and Northern Ireland: 150
 - Ecuador: 128
@@ -28,10 +28,10 @@ Afghanistan, Albania, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan,
 - Chile: 81
 - Sri Lanka: 59
 - Bangladesh: 58
-- Austria: 53
-- Czechia: 47
+- Austria: 54
+- Czechia: 49
 - Malta: 45
-- Argentina: 32
+- Argentina: 34
 - Nepal: 29
 - Indonesia: 28
 - Japan: 26
@@ -49,8 +49,8 @@ Afghanistan, Albania, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan,
 - South Africa: 5
 - Ireland: 4
 - Saudi Arabia: 4
+- State of Palestine: 4
 - Pakistan: 3
-- State of Palestine: 3
 - Republic of Korea: 3
 - Egypt: 3
 - Costa Rica: 3
@@ -73,6 +73,7 @@ Afghanistan, Albania, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan,
 - El Salvador: 1
 - Kuwait: 1
 - Oman: 1
+- Dominican Republic: 1
 - Viet Nam: 1
 - Greece: 1
 - Serbia: 1
