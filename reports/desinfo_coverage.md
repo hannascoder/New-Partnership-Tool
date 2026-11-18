@@ -10,7 +10,7 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 
 - Spain: 891
 - India: 846
-- United States of America: 647
+- United States of America: 648
 - Brazil: 458
 - France: 309
 - Philippines: 186
@@ -28,10 +28,10 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Chile: 81
 - Bangladesh: 69
 - Sri Lanka: 59
+- Czechia: 58
 - Austria: 58
-- Czechia: 57
 - Republic of Korea: 53
-- Ireland: 51
+- Ireland: 52
 - Malta: 45
 - Japan: 41
 - Greece: 41
@@ -49,12 +49,13 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Guatemala: 21
 - Peru: 20
 - Türkiye: 18
+- Tunisia: 15
 - North Macedonia: 15
 - Iran (Islamic Republic of): 15
 - Tunisia: 14
 - State of Palestine: 14
 - Ghana: 13
-- Canada: 11
+- Canada: 12
 - Togo: 10
 - Cyprus: 10
 - Slovenia: 10

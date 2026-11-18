@@ -1,6 +1,6 @@
 {
   "source": "un_content",
-  "fetched_at": "2026-11-18T21:50:55Z",
+  "fetched_at": "2026-11-18T22:24:33Z",
   "records": 1873,
   "status": {
     "UN News (en)": {
@@ -121,7 +121,7 @@
       "ok": false,
       "items": 0,
       "url": "https://www.unesco.org/en/rss.xml",
-      "error": "failed after 2 tries: https://www.unesco.org/en/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later)"
+      "error": "failed after 2 tries: https://www.unesco.org/en/rss.xml (Remote end closed connection without response) (searched on 2026-11-18, next search later)"
     },
     "OHCHR (en)": {
       "ok": true,

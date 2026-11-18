@@ -930,7 +930,7 @@
 "feed": "https://www.globes.co.il/webservice/rss/rssfeeder.asmx/FeederNode?iID=585",
 "lang": "he",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "greenefact.sapo.pt": {
 "name": "Encosta no Horizonte, Lda | Green eFact",
