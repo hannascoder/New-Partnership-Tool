@@ -175,6 +175,18 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"digital.undp.org": {
+"name": "iVerify Zambia",
+"site": "https://digital.undp.org/iVerify-Zambia",
+"country": "ZM",
+"checked": "2026-11-18",
+"origin": "iverify",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-16"
+},
 "dpa-factchecking.com": {
 "name": "dpa-factchecking",
 "site": "http://dpa-factchecking.com",
@@ -358,6 +370,18 @@
 "status": "ok",
 "fails": 0
 },
+"factnameh.com": {
+"name": "فکت‌نامه",
+"site": "https://factnameh.com/",
+"country": "",
+"checked": "2026-11-18",
+"origin": "google",
+"feed": "",
+"lang": "fa",
+"status": "not_factcheck_feed",
+"fails": 0,
+"retry_after": "2027-02-16"
+},
 "factograph.info": {
 "name": "Фактограф",
 "site": "https://factograph.info",
@@ -496,6 +520,18 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"malawi.i-verify.org": {
+"name": "iVerify Malawi",
+"site": "https://malawi.i-verify.org/",
+"country": "MW",
+"checked": "2026-11-18",
+"origin": "iverify",
+"feed": "",
+"lang": "",
+"status": "error",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "medicaldialogues.in": {
 "name": "Medical Dialogues",
