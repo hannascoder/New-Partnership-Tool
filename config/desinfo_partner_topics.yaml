@@ -323,15 +323,39 @@ sub:
 # The link selects the first OR the second topic (broader). Format: label: {topic: <id>, sub: <id, optional>}
 also:
   "Air pollution": {topic: health, sub: pollution_health}
+  "Biodiversity": {topic: climate, sub: environment_general}
+  "Biodiversity loss": {topic: climate, sub: environment_general}
+  "COVID-19": {topic: health, sub: health_systems}
   "Censorship": {topic: human_rights, sub: civil_political_rights}
   "Child labour": {topic: work_economy, sub: forced_child_labour}
+  "Contraception": {topic: gender_equality, sub: srhr}
   "Deepfake": {topic: fact_checking}
+  "Deforestation": {topic: climate, sub: environment_general}
+  "Desertification": {topic: climate, sub: environment_general}
   "Drought": {topic: climate, sub: climate_adaptation}
+  "Electric vehicle": {topic: climate, sub: climate_change}
+  "Electronic waste": {topic: climate, sub: environment_general}
+  "Extreme weather": {topic: climate, sub: climate_adaptation}
+  "Family planning": {topic: gender_equality, sub: srhr}
   "Famine": {topic: humanitarian, sub: humanitarian_crises}
+  "Flood": {topic: climate, sub: climate_adaptation}
   "Fossil fuel": {topic: climate, sub: climate_change}
   "Heat wave": {topic: climate, sub: climate_adaptation}
   "Human trafficking": {topic: peace_justice, sub: justice_rule_of_law}
   "LGBTQ rights": {topic: gender_equality, sub: gender_identity}
+  "Malnutrition": {topic: health, sub: maternal_child_health}
+  "Obesity": {topic: hunger_food, sub: nutrition}
+  "Ocean acidification": {topic: climate, sub: climate_change}
+  "Pandemic": {topic: health, sub: health_systems}
+  "Plastic pollution": {topic: climate, sub: environment_general}
+  "Recycling": {topic: climate, sub: environment_general}
   "Refugee": {topic: humanitarian, sub: displacement_camps}
+  "Renewable energy": {topic: climate, sub: climate_change}
   "Same-sex marriage": {topic: gender_equality, sub: gender_identity}
+  "Solar power": {topic: climate, sub: climate_change}
+  "Vaccination": {topic: health, sub: health_systems}
+  "Vaccine": {topic: health, sub: health_systems}
   "Wartime sexual violence": {topic: gender_equality, sub: gender_violence}
+  "Water scarcity": {topic: climate, sub: climate_adaptation}
+  "Wildfire": {topic: climate, sub: climate_adaptation}
+  "Wind power": {topic: climate, sub: climate_change}

@@ -275,7 +275,16 @@ def main():
             continue
         a = also.get(lab) or {}
         tp2, sub2 = check(lab, a.get("topic"), a.get("sub", "")) if a else (None, "")
-        ptop[t["qid"]] = [tp, sub] + ([tp2, sub2] if tp2 and tp2 != tp else [])
+        # selections: [[topic, [sub-topics]], ...]; an empty list = the whole topic; the same topic twice is merged
+        sel = [[tp, [sub] if sub else []]]
+        if tp2:
+            for e in sel:
+                if e[0] == tp2:
+                    e[1] = [] if (not e[1] or not sub2) else e[1] + [sub2]
+                    break
+            else:
+                sel.append([tp2, [sub2] if sub2 else []])
+        ptop[t["qid"]] = sel
     sublabels = {x["id"]: x["label"].split(" (")[0] for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])
                  for x in t.get("subtopics", [])}          # short name of each sub-topic for the switch on the page
     json.dump({"topics": ptop, "subs": pf, "sublabels": sublabels}, open(OUT / "partner_topics.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

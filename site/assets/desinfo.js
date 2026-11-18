@@ -287,9 +287,9 @@
   ];
   // narrow = only the sub-topic: the user's choice for this topic, else automatic (narrow if the sub-topic has enough media worldwide)
   function narrowOn(m) {
-    if (!m || !m[1]) return false;
+    if (!m || !m[0][1].length) return false;                // m = [[topic, [sub-topics]], ...]; no sub-topic = whole topic
     if (S.narrowFor === S.topic && S.narrow !== null) return S.narrow;
-    return (DATA.psizes[m[0] + "/" + m[1]] || 0) >= (DATA.config.partner_narrow_min || 0);
+    return (DATA.psizes[m[0][0] + "/" + m[0][1][0]] || 0) >= (DATA.config.partner_narrow_min || 0);
   }
   function renderPartners() {
     var box = $("partnersBox"); box.textContent = "";
@@ -299,16 +299,16 @@
     box.appendChild(el("h3", { text: "Local voices in " + DATA.countries[S.country].name + " (already in the Partner Finder)" }));
     box.appendChild(el("p", { class: "hint", text: "Credible organisations that could carry verified information. Taken from the Partner Finder data; only organisations, no persons. A group with no entry means none is in the Partner Finder yet." }));
     var mm = S.topic && DATA.ptopics[S.topic];
-    if (mm && mm[1]) {                                  // a sub-topic exists: the user can filter broad or narrow
+    if (mm && mm[0][1].length) {                        // a sub-topic exists: the user can filter broad or narrow
       var sw = el("div", { class: "view-switch" }), on = narrowOn(mm);
-      var subLabel = ((DATA.psubLabels && DATA.psubLabels[mm[1]]) || mm[1]) + (mm[2] ? " (+ second topic)" : "");
+      var subLabel = mm[0][1].map(function (x) { return (DATA.psubLabels && DATA.psubLabels[x]) || x; }).join(" + ") + (mm.length > 1 ? " (+ second topic)" : "");
       [["Broad: whole topic", false], ["Narrow: " + subLabel, true]].forEach(function (o) {
         var b = el("button", { type: "button", role: "tab", "aria-selected": String(on === o[1]), text: o[0] });
         b.onclick = function () { S.narrow = o[1]; S.narrowFor = S.topic; renderPartners(); };
         sw.appendChild(b);
       });
-      var n = DATA.psizes[mm[0] + "/" + mm[1]];
-      box.appendChild(el("p", { class: "hint", text: "Topic filter in the Partner Finder links" + (n != null ? " (" + n + " media in the Partner Finder have this sub-topic" +
+      var n = DATA.psizes[mm[0][0] + "/" + mm[0][1][0]];
+      box.appendChild(el("p", { class: "hint", text: "Topic filter in the Partner Finder links" + (n != null ? " (" + n + " media in the Partner Finder have the first sub-topic" +
         (S.narrowFor !== S.topic && n < DATA.config.partner_narrow_min ? "; that is few, so the list starts broad" : "") + ")" : "") + ":" }));
       box.appendChild(sw);
     }
@@ -331,19 +331,19 @@
         var m = S.topic && DATA.ptopics[S.topic];      // the chosen topic (and optional second topic) goes along to the Partner Finder
         var tail = "";
         if (m) {
-          var tps = [m[0]].concat(m[2] ? [m[2]] : []), offs = [];
-          tail = "&tp=" + tps.join(",");
-          if (narrowOn(m)) {                           // narrow: only the sub-topic(s), the other sub-topics of the topic are switched off
-            [[m[0], m[1]], [m[2], m[3]]].forEach(function (pair) {
-              if (!pair[0] || !pair[1]) return;
-              var off = (DATA.psubs[pair[0]] || []).filter(function (x) { return x !== pair[1]; });
-              if (off.length) offs.push(pair[0] + ":" + off.join("|"));
+          var offs = [];
+          tail = "&tp=" + m.map(function (x) { return x[0]; }).join(",");
+          if (narrowOn(m)) {                           // narrow: only the chosen sub-topics, the other sub-topics of the topic are switched off
+            m.forEach(function (x) {
+              if (!x[1].length) return;
+              var off = (DATA.psubs[x[0]] || []).filter(function (y) { return x[1].indexOf(y) < 0; });
+              if (off.length) offs.push(x[0] + ":" + off.join("|"));
             });
           }
           if (offs.length) tail += "&off=" + offs.join(";");
         }
         col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + tail,
-          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + (m[1] && narrowOn(m) ? ", narrow" : "") + ")" : "") + " →" }));
+          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + (narrowOn(m) ? ", narrow" : "") + ")" : "") + " →" }));
       }
       grid.appendChild(col);
     });
