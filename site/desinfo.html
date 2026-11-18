@@ -40,7 +40,7 @@
         <h2 class="sect">Which country?</h2>
         <label class="check"><input type="radio" name="basis" id="basis-pub" checked> Where the fact-checker works</label>
         <label class="check"><input type="radio" name="basis" id="basis-about"> Country the fact-check is about</label>
-        <p class="hint">“About” is read from country names in the headline and the claim, in many languages. It reaches countries without their own fact-checker.</p>
+        <p class="hint">“About” is read from country names in the headline and the claim, in many languages. It reaches countries without their own fact-checker. For international services such as AFP, the one country named in the text counts as the fact-checker's country.</p>
       </section>
       <section class="fgroup">
         <h2 class="sect">Region / Country</h2>
@@ -83,6 +83,13 @@
     </div>
 
     <div class="stats" id="stats"></div>
+    <div class="export-row" id="exportRow">
+      <span class="tl-label">Export this view</span>
+      <button class="btn-quiet" type="button" data-fmt="pdf">PDF</button>
+      <button class="btn-quiet" type="button" data-fmt="docx">Word</button>
+      <button class="btn-quiet" type="button" data-fmt="xlsx">Excel</button>
+      <span class="hint" id="exportMsg">Topics, countries, content gaps, fact-checks and local voices for the chosen window and filters.</span>
+    </div>
     <div class="notice" id="notice" hidden></div>
 
     <section id="view-trends">
@@ -126,6 +133,7 @@
 </div>
 
 <script src="assets/vendor/leaflet-1.9.4/leaflet.js"></script>
+<script src="assets/desinfo-export.js"></script>
 <script src="assets/desinfo.js"></script>
 </body>
 </html>

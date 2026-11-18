@@ -300,7 +300,9 @@
           ul.appendChild(li);
         });
         col.appendChild(ul);
-        col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3), text: "Open all " + d.n + " in the Partner Finder →" }));
+        var tp = S.topic && DATA.ptopics[S.topic];     // the chosen topic goes along as a Partner Finder topic
+        col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + (tp ? "&tp=" + tp : ""),
+          text: "Open all " + d.n + " in the Partner Finder" + (tp ? " (topic: " + topicName(S.topic) + ")" : "") + " →" }));
       }
       grid.appendChild(col);
     });
@@ -333,6 +335,7 @@
       var meta = i.date + " · " + i.publisher + (i.country && DATA.countries[i.country] ? " · " + DATA.countries[i.country].name : "") +
                  (i.rating ? " · rated: " + i.rating : "") + " · " + i.lang;
       var tags = el("div", { class: "tags" });
+      if (i.net === "iverify") tags.appendChild(el("span", { class: "badge", title: "Published on a UNDP iVerify country site", text: "iVerify (UNDP)" }));
       if (i.un) tags.appendChild(el("span", { class: "badge", text: "UN-related" }));
       (i.about || []).slice(0, 3).forEach(function (c) { if (DATA.countries[c]) tags.appendChild(el("span", { class: "badge", text: "about: " + DATA.countries[c].name })); });
       i.topics.slice(0, 5).forEach(function (q) { tags.appendChild(el("span", { class: "badge", text: topicName(q) })); });
@@ -344,6 +347,84 @@
       box.appendChild(el("div", { class: "item" }, kids));
     });
     $("moreBtn").hidden = list.length <= S.shown;
+  }
+
+  // ---------- export (PDF, Word, Excel) ----------
+  function buildReport(format) {
+    var A = aggregate(), latin = /^[\u0000-\u024F\u2000-\u206F\u20A0-\u20CF]*$/;
+    var scope = [S.topic ? "Topic: " + topicName(S.topic) : "All topics"];
+    if (S.country) scope.push("Country: " + DATA.countries[S.country].name); else if (S.region) scope.push("Region: " + S.region);
+    scope.push(S.basis === "about" ? "Country = the country the fact-check is about" : "Country = where the fact-checker works");
+    if (S.un) scope.push("UN-related only");
+    var info = [["Exported", new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })],
+      ["Data as of", DATA.last], ["Window", S.from + " to " + S.to], ["Filters", scope.join(" · ")],
+      ["Totals", A.total + " fact-checks in this window, " + A.unTotal + " UN-related, " + Object.keys(A.countries).length + (Object.keys(A.countries).length === 1 ? " country" : " countries")]];
+    var tables = [];
+    // 1. topics
+    var trows = DATA.topics.map(function (t) { return { t: t, x: A.topics[t.qid] }; }).filter(function (r) { return r.x && r.x.range > 0; })
+      .sort(function (a, b) { return b.x.range - a.x.range; }).slice(0, 60).map(function (r) {
+        var rs = rising(r.x);
+        return [r.t.label, r.t.group, String(r.x.range), String(r.x.last7), rs ? (rs.red ? "Rising" : (rs.ratio ? "x" + rs.ratio.toFixed(1) : "new")) : "not enough history"];
+      });
+    tables.push({ title: "Topics", note: "Fact-checks per topic in the window. “Rising” = more than twice the usual weekly number.",
+      cols: [["Topic", 30], ["Group", 16], ["Fact-checks", 12], ["Last 7 days", 12], ["Trend", 14]], rows: trows });
+    // 2. countries
+    var crows = Object.keys(A.rank).sort(function (a, b) { return A.rank[b] - A.rank[a]; }).slice(0, 30).filter(function (c) { return DATA.countries[c]; })
+      .map(function (c) { return [DATA.countries[c].name, DATA.countries[c].region, String(A.rank[c])]; });
+    tables.push({ title: "Countries with the most fact-checks", note: "Countries without any fact-checker covered yet are not listed: grey on the map means “no data”, not “no disinformation”.",
+      cols: [["Country", 30], ["Region", 20], ["Fact-checks", 12]], rows: crows });
+    // 3. content gaps
+    var grows = [];
+    if (DATA.un) {
+      var rank = { red: 0, amber: 1, green: 2 }, list = [];
+      DATA.topics.forEach(function (t) {
+        var fc = (A.topics[t.qid] || { range: 0 }).range, u = unOf(t.qid), st = gapStatus(fc, u.n12);
+        if (st) list.push({ t: t, fc: fc, u: u, st: st });
+      });
+      list.sort(function (a, b) { return rank[a.st] - rank[b.st] || b.fc - a.fc; });
+      list.slice(0, 60).forEach(function (r) {
+        var lc = langCounts(r.t.qid), langs = Object.keys(lc).filter(function (l) { return lc[l] >= 2; }).sort(function (a, b) { return lc[b] - lc[a]; }).slice(0, 4)
+          .map(function (l) { return l + " " + lc[l] + " (UN " + (DATA.un.languages.indexOf(l) >= 0 ? (r.u.langs[l] || 0) : "n/a") + ")"; }).join(", ");
+        var sug = (DATA.config.suggestions.groups || {})[r.t.group] || DATA.config.suggestions.default, top = r.u.top[0];
+        grows.push([r.t.label, String(r.fc), String(r.u.n12), { red: "Gap", amber: "Thin", green: "Covered" }[r.st], langs,
+          r.st === "green" ? "" : sug.agencies.join(", "), r.st === "green" ? "" : sug.formats.join("; "),
+          top ? { t: top.t + " (" + top.a + ", " + top.d + ")", url: top.u } : ""]);
+      });
+    }
+    tables.push({ title: "Content gaps: do we already have something?", note: DATA.un ? "Fact-checks in the window compared with UN articles of the last 12 months (" + DATA.un.articles + " articles from " + DATA.un.sources_ok + " of " + DATA.un.sources + " sources). Rough estimate from key words: please check before publishing." : "",
+      cols: [["Topic", 20], ["Fact-checks", 9], ["UN articles (12 mo)", 10], ["Status", 8], ["Languages (UN articles in it)", 22], ["Responsible UN bodies", 20], ["Formats that usually work", 28], ["UN material to reuse", 30]], rows: grows });
+    // 4. fact-checks
+    var items = DATA.items.filter(matches).slice(0, 300);
+    var irows = items.map(function (i) {
+      var title = i.title, en = i.title_en && i.title_en.toLowerCase() !== i.title.toLowerCase() ? i.title_en : "";
+      if (format === "pdf" && !latin.test(title)) { title = en || "(title in another script: see the link)"; en = ""; }   // the PDF font has no Arabic, Hindi or Chinese letters
+      return [i.date, i.publisher + (i.net === "iverify" ? " (iVerify, UNDP)" : ""), i.country && DATA.countries[i.country] ? DATA.countries[i.country].name : "",
+        { t: title, url: i.url }, en, i.rating || "", i.topics.slice(0, 4).map(topicName).join(", ")];
+    });
+    tables.push({ title: "Fact-checks (" + Math.min(items.length, 300) + " newest of " + DATA.items.filter(matches).length + ")",
+      note: "Headline of the fact-check by independent fact-checkers; the claims themselves are not reproduced. English = automatic machine translation of the title.",
+      cols: [["Date", 9], ["Fact-checker", 16], ["Country", 13], ["Title (link)", 40], ["English (automatic)", 34], ["Rating", 10], ["Topics", 18]], rows: irows });
+    // 5. local voices
+    var vrows = [], pv = DATA.partners && S.country && DATA.partners[S.country];
+    if (pv) GROUPS.forEach(function (g) { pv[g.k].top.forEach(function (x) { vrows.push([g.title, { t: x.n, url: x.w }, (x.l || []).join(", ")]); }); });
+    tables.push({ title: "Local voices in " + (S.country ? DATA.countries[S.country].name : "") + " (already in the Partner Finder)",
+      note: "Organisations only. The full lists are in the Partner Finder.", cols: [["Group", 22], ["Name (link)", 50], ["Languages", 14]], rows: vrows });
+    return { title: "Disinformation monitor", info: info, tables: tables,
+      note: "Automatic evaluation of fact-checks published by independent fact-checkers; please check the original before using it. Topics and countries are assigned by rules, not by hand. Sources: Google Fact Check Tools, fact-checker feeds, UN News and UN agency feeds, Wikipedia-based topic list of the Audience Intelligence Atlas, Google Trends (Data source: Google Trends)." };
+  }
+  function setupExport() {
+    var row = $("exportRow");
+    row.querySelectorAll("button").forEach(function (b) {
+      b.onclick = function () {
+        if (!window.DesinfoExport) return;
+        var msg = $("exportMsg"), old = msg.textContent;
+        row.querySelectorAll("button").forEach(function (x) { x.disabled = true; });
+        msg.textContent = "Preparing the file…";
+        window.DesinfoExport.download(b.dataset.fmt, buildReport(b.dataset.fmt)).then(function () { msg.textContent = old; })
+          .catch(function (e) { msg.textContent = "The export did not work: " + e.message; })
+          .then(function () { row.querySelectorAll("button").forEach(function (x) { x.disabled = false; }); });
+      };
+    });
   }
 
   // ---------- render ----------
@@ -389,9 +470,9 @@
   }
 
   Promise.all([load("items.json"), load("series.json"), load("topics.json"), load("countries.json"), load("config.json"),
-               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true)]).then(function (r) {
+               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true), load("partner_topics.json", true)]).then(function (r) {
     DATA.items = r[0]; DATA.series = r[1]; DATA.topics = r[2].topics; DATA.countries = r[3]; DATA.config = r[4];
-    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9];
+    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = r[10] || {};
     DATA.topicById = {}; DATA.topics.forEach(function (t) { DATA.topicById[t.qid] = t; });
     DATA.coveredP = {}; DATA.coveredA = {}; var f = "9999", l = "0000";
     DATA.series.forEach(function (x) { if (x[2]) DATA.coveredP[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });
@@ -409,6 +490,7 @@
     $("tab-map").onclick = function () { S.view = "map"; render(); };
     $("tab-gaps").onclick = function () { S.view = "gaps"; render(); };
     $("moreBtn").onclick = function () { S.shown += 50; renderItems(); };
+    setupExport();
     $("filtersToggle").onclick = function () { var o = $("filters").classList.toggle("open"); this.setAttribute("aria-expanded", String(o)); };
     $("spark").onclick = function (e) {
       var rc = this.getBoundingClientRect(), i = Math.floor((e.clientX - rc.left) / rc.width * 120);

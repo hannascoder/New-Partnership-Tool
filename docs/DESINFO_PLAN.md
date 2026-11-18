@@ -117,3 +117,18 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   `ngos.html#c=ESP`). Country ranking list "Countries with the most fact-checks" on the trends view.
 - Idea left for later: Partner Finder cards could show "much disinformation in this country (topic X)"; topic mapping between
   the Atlas topics (183) and the Partner Finder topics (38) would be needed for topic-specific links.
+
+## Built 18.11.2026: export, topic links, AFP country, iVerify (owner: "a ok, b sehr gut, c ok, iVerify einbauen")
+- **Export (c):** buttons PDF / Word / Excel on the page (`site/assets/desinfo-export.js`, same look as the Partner Finder export,
+  runs in the browser): topics, countries, content gaps with suggestions and UN links, fact-checks (newest 300, English translation),
+  local voices of a chosen country, filters, data date, disclaimer. In the PDF, titles in scripts the font lacks (Arabic, Hindi,
+  Chinese ...) show the English translation; Word and Excel keep the original.
+- **Topic links (a):** `config/desinfo_partner_topics.yaml` maps 182 of the 183 Atlas topics to a Partner Finder topic (first proposal, owner to review);
+  "Open all ... in the Partner Finder" adds `&tp=<topic>`.
+- **Country of international services (b):** `international_publishers` in `config/desinfo.yaml` (AFP): when the text names exactly one country it is
+  used as the fact-checker's country (countries by fact-checker: 34 -> 67).
+- **UNDP iVerify:** each country runs its own instance (open source, digital public good). `config/iverify_sites.yaml` lists the instances
+  (so far Malawi and Zambia, from public sources); the weekly discovery looks for the feed the site announces; items from these sites get the badge
+  "iVerify (UNDP)" and the instance's country. Open: the UNDP iVerify team knows which instances are live and public; every line added
+  there is picked up without code. No RSS or API for iVerify is documented in public sources (checked 18.11.2026; UNDP and DPG registry pages
+  were not reachable from the dev sandbox).

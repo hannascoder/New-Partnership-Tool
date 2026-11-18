@@ -67,3 +67,5 @@
 .p-col ul { margin: 4px 0; padding-left: 16px; }
 .p-col li { margin: 2px 0; }
 .p-col .more { font-size: 12px; }
+.export-row { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; margin: 0 0 12px; }
+.export-row button[disabled] { opacity: .5; cursor: progress; }

@@ -116,6 +116,25 @@ class CountryMatcher:
         return sorted(found)[:6]
 
 
+def iverify_matcher():
+    """Items published on a UNDP iVerify country instance (config/iverify_sites.yaml): (host, path prefix, ISO2)."""
+    import urllib.parse
+    sites = yaml.safe_load(open(ROOT / "config" / "iverify_sites.yaml", encoding="utf-8")).get("sites", [])
+    rules = []
+    for x in sites:
+        u = urllib.parse.urlparse(x["site"])
+        rules.append((u.netloc.lower().removeprefix("www."), u.path.rstrip("/").lower(), x["country"]))
+
+    def match(url):
+        u = urllib.parse.urlparse(url)
+        host, path = u.netloc.lower().removeprefix("www."), u.path.lower()
+        for h, p, iso in rules:
+            if host == h and path.startswith(p):
+                return iso
+        return None
+    return match
+
+
 def country_of(item, domain_map, valid):
     if item.get("country") in valid:
         return item["country"], "feed"
@@ -140,6 +159,12 @@ def main():
         raise SystemExit("no topic list (Atlas) - run pipeline/fetch/desinfo.py first")
     matcher = TopicMatcher(topics)
     cmatch = CountryMatcher(valid)
+    iv_match = iverify_matcher()
+    intl_domains = [d.lower() for d in CFG.get("international_publishers", [])]
+
+    def intl(url):
+        host = re.sub(r"^https?://", "", url.lower()).split("/")[0]
+        return any(host == d or host.endswith("." + d) for d in intl_domains)
     domain_map = {f["domain"]: f["country"] for f in FEEDS if f["country"]}
     found = load_json(CACHE / "desinfo_feeds.json", {})
     domain_map.update({d: r["country"] for d, r in found.items() if r.get("status") == "ok" and r.get("country")})
@@ -178,6 +203,13 @@ def main():
         m["topics"] = sorted(set(matcher.match(text)) | set(m.get("qt", [])))
         m["un"] = un_flag(text) or bool(m.get("unq"))
         m["about"] = cmatch.match(text)
+        if not m["country"] and len(m["about"]) == 1 and intl(m["url"]):     # AFP etc.: the one country named in the text
+            m["country"], m["country_from"] = m["about"][0], "about"
+        iso = iv_match(m["url"])
+        if iso:                                   # published on a UNDP iVerify instance
+            m["net"] = "iverify"
+            if not m["country"] and iso in valid:
+                m["country"], m["country_from"] = iso, "iverify"
     cutoff = (date.today() - timedelta(days=CFG["keep_days"])).isoformat()
     items = sorted((i for i in memory.values() if i["date"] >= cutoff), key=lambda i: i["date"], reverse=True)
 
@@ -218,6 +250,10 @@ def main():
               open(OUT / "config.json", "w"), indent=1)
     # Google Trends per country (Atlas data, attribution "Data source: Google Trends"): only the query text and Google's bucket
     iso3 = {r["iso3"]: r["iso2"] for r in valid.values()}
+    # Atlas topic -> Partner Finder topic (config/desinfo_partner_topics.yaml), keyed by topic id
+    pmap = yaml.safe_load(open(ROOT / "config" / "desinfo_partner_topics.yaml", encoding="utf-8")).get("map", {})
+    json.dump({t["qid"]: pmap[t["label_en"]] for t in topics if t["label_en"] in pmap},
+              open(OUT / "partner_topics.json", "w", encoding="utf-8"), separators=(",", ":"))
     cs = (atlas.get("country_searches") or {}).get("countries") or {}
     trends = {iso3[k]: {"date": v.get("date"), "queries": [{"q": x["query"], "t": x.get("traffic", "")} for x in v.get("queries", [])[:6]]}
               for k, v in cs.items() if k in iso3 and not v.get("unsupported")}
