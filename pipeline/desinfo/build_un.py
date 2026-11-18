@@ -36,7 +36,7 @@ def main():
         raise SystemExit("no topic list (Atlas) - run pipeline/fetch/desinfo.py first")
     matcher = TopicMatcher(topics)
     memory = {i["id"]: i for i in load_json(CACHE / "un_items.json", [])}
-    for r in load_gz("un_content") or []:
+    for r in (load_gz("un_content") or []) + (load_gz("un_archive") or []):
         iid = hashlib.sha1(r["url"].encode()).hexdigest()[:12]
         if iid in memory or not r.get("date"):
             continue

@@ -163,3 +163,11 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
 - A whole topic group can be chosen ("All health topics" at the top of each group in the topic list). The series has an extra row per group
   (`q = "g:<group>"`, a fact-check counts ONCE per group, built in `build.py` `make_series`). Trends, map, content gaps (only the group's topics)
   and the export (PDF/Word/Excel) work for the group. The UN box and partner links need one topic and are hidden for a group.
+
+## 18.11.2026 (night): deeper UN archive, fact-checkers from the Partner Finder (owner: yes, yes)
+- UN archive: (1) 48 UN News topic feeds (12 topics x en/es/fr/pt) in `config/un_sources.yaml`; (2) one-off `pipeline/fetch/un_archive.py`
+  (workflow `un-archive.yml`, manual): reads old copies of the UN feeds (UN News 6 languages, topic feeds, WHO) from the Internet Archive
+  (Wayback Machine), 1 request per second, capped; result `raw/un_archive/`, read by `build_un.py` and kept in `cache/un_items.json`.
+  The archive is a sample (copies every 6-12 days), not complete.
+- Fact-checkers: the discovery now also takes every fact-checker with a website from the Partner Finder data (111 not yet known, 14 of them in India,
+  3 in Nigeria ...) and searches countries WITHOUT fact-checks first (`discover_max_sites` 400).

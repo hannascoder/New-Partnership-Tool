@@ -32,3 +32,52 @@ feeds:
   - {agency: "UN Women", lang: en, url: "https://www.unwomen.org/en/rss-feeds/news", site: "https://www.unwomen.org/en/news-stories"}
   - {agency: "IOM", lang: en, url: "https://www.iom.int/rss.xml", site: "https://www.iom.int/news"}
   - {agency: "UNFPA", lang: en, url: "https://www.unfpa.org/rss.xml", site: "https://www.unfpa.org/news"}
+  # UN News topic feeds (each reaches back weeks instead of one day; added 18.11.2026, addresses follow UN News' feed pattern and are checked at every run)
+  - {agency: "UN News: climate-change", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/climate-change/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: health", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/health/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: humanitarian-aid", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/humanitarian-aid/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: migrants-and-refugees", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/migrants-and-refugees/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: peace-and-security", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: human-rights", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/human-rights/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: women", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/women/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: economic-development", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/economic-development/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: law-and-crime-prevention", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/law-and-crime-prevention/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: culture-and-education", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/culture-and-education/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: un-affairs", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/un-affairs/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: sdgs", lang: en, url: "https://news.un.org/feed/subscribe/en/news/topic/sdgs/feed/rss.xml", site: "https://news.un.org/en/"}
+  - {agency: "UN News: climate-change", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/climate-change/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: health", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/health/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: humanitarian-aid", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/humanitarian-aid/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: migrants-and-refugees", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/migrants-and-refugees/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: peace-and-security", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/peace-and-security/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: human-rights", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/human-rights/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: women", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/women/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: economic-development", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/economic-development/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: law-and-crime-prevention", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/law-and-crime-prevention/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: culture-and-education", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/culture-and-education/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: un-affairs", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/un-affairs/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: sdgs", lang: es, url: "https://news.un.org/feed/subscribe/es/news/topic/sdgs/feed/rss.xml", site: "https://news.un.org/es/"}
+  - {agency: "UN News: climate-change", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/climate-change/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: health", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/health/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: humanitarian-aid", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/humanitarian-aid/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: migrants-and-refugees", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/migrants-and-refugees/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: peace-and-security", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/peace-and-security/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: human-rights", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/human-rights/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: women", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/women/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: economic-development", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/economic-development/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: law-and-crime-prevention", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/law-and-crime-prevention/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: culture-and-education", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/culture-and-education/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: un-affairs", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/un-affairs/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: sdgs", lang: fr, url: "https://news.un.org/feed/subscribe/fr/news/topic/sdgs/feed/rss.xml", site: "https://news.un.org/fr/"}
+  - {agency: "UN News: climate-change", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/climate-change/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: health", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/health/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: humanitarian-aid", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/humanitarian-aid/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: migrants-and-refugees", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/migrants-and-refugees/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: peace-and-security", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/peace-and-security/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: human-rights", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/human-rights/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: women", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/women/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: economic-development", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/economic-development/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: law-and-crime-prevention", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/law-and-crime-prevention/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: culture-and-education", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/culture-and-education/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: un-affairs", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/un-affairs/feed/rss.xml", site: "https://news.un.org/pt/"}
+  - {agency: "UN News: sdgs", lang: pt, url: "https://news.un.org/feed/subscribe/pt/news/topic/sdgs/feed/rss.xml", site: "https://news.un.org/pt/"}
