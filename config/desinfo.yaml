@@ -47,6 +47,10 @@ translation:                # automatic English translation of fact-check titles
   max_title_chars: 200
   skip_languages: [en]
 
+# International fact-checking services work in many countries: when the text names exactly ONE country, that country is
+# also used as the country of the fact-check for the map "where the fact-checker works" (marked country_from = about).
+international_publishers: [afp.com]
+
 keep_days: 365              # single items older than this are deleted; the daily counts are kept for good
 red_marker:                 # "strongly rising" topic (owner 17.11.2026)
   factor: 2.0               # more than 2x the average of the weeks before ...

@@ -21,6 +21,7 @@ Decisions made after the briefing was written (these win over the briefing):
 
 - **Start from a UN mail or text** (owner, 16.11.2026): box above the results on both pages; pasted text (UN VIDEO UPDATE, press release) -> country, topics, format, language are read in the browser by rules (`config/dropin.yaml` + topic keywords, no AI, text never leaves the browser) and the normal filters are set. Text only (no mail files); media and NGOs stay on separate pages. Stage 1 built 16.11.2026; stage 2 ("reporting on it right now", GDELT) comes after the owner's test with more real mails. Details: docs/STATUS.md.
 
+- **Disinformation monitor** (owner, 17.11.2026): own page `site/desinfo.html`, daily workflow `.github/workflows/desinfo.yml`, everything free and open (Google Fact Check API key in the GitHub secret `GOOGLE_FACTCHECK_API_KEY`, fact-checker feeds, UN feeds, Argos Translate). Plan, decisions and what is built: `docs/DESINFO_PLAN.md`. Settings in `config/desinfo*.yaml`, `config/factcheck_*.yaml`, `config/un_sources.yaml`, `config/iverify_sites.yaml`. Never disguise the crawler to get past a block (403); report it instead.
 - **Topic keywords** (owner, 09.11.2026): every topic button must work. Hidden keyword lists per topic (`config/topic_keywords.yaml`, 9 UN News languages only), three strengths Focus / Desk / Covers; plan T1-T6 in docs/STATUS.md.
 
 - **Export feature:** built 06.11.2026 after the owner approved sample files (all 15 columns; PDF/Word landscape + portrait). Spec: `docs/EXPORT_SPEC.md`.

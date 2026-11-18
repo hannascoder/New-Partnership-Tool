@@ -160,6 +160,11 @@ def main():
     matcher = TopicMatcher(topics)
     cmatch = CountryMatcher(valid)
     iv_match = iverify_matcher()
+    intl_domains = [d.lower() for d in CFG.get("international_publishers", [])]
+
+    def intl(url):
+        host = re.sub(r"^https?://", "", url.lower()).split("/")[0]
+        return any(host == d or host.endswith("." + d) for d in intl_domains)
     domain_map = {f["domain"]: f["country"] for f in FEEDS if f["country"]}
     found = load_json(CACHE / "desinfo_feeds.json", {})
     domain_map.update({d: r["country"] for d, r in found.items() if r.get("status") == "ok" and r.get("country")})
@@ -198,6 +203,8 @@ def main():
         m["topics"] = sorted(set(matcher.match(text)) | set(m.get("qt", [])))
         m["un"] = un_flag(text) or bool(m.get("unq"))
         m["about"] = cmatch.match(text)
+        if not m["country"] and len(m["about"]) == 1 and intl(m["url"]):     # AFP etc.: the one country named in the text
+            m["country"], m["country_from"] = m["about"][0], "about"
         iso = iv_match(m["url"])
         if iso:                                   # published on a UNDP iVerify instance
             m["net"] = "iverify"
@@ -243,6 +250,10 @@ def main():
               open(OUT / "config.json", "w"), indent=1)
     # Google Trends per country (Atlas data, attribution "Data source: Google Trends"): only the query text and Google's bucket
     iso3 = {r["iso3"]: r["iso2"] for r in valid.values()}
+    # Atlas topic -> Partner Finder topic (config/desinfo_partner_topics.yaml), keyed by topic id
+    pmap = yaml.safe_load(open(ROOT / "config" / "desinfo_partner_topics.yaml", encoding="utf-8")).get("map", {})
+    json.dump({t["qid"]: pmap[t["label_en"]] for t in topics if t["label_en"] in pmap},
+              open(OUT / "partner_topics.json", "w", encoding="utf-8"), separators=(",", ":"))
     cs = (atlas.get("country_searches") or {}).get("countries") or {}
     trends = {iso3[k]: {"date": v.get("date"), "queries": [{"q": x["query"], "t": x.get("traffic", "")} for x in v.get("queries", [])[:6]]}
               for k, v in cs.items() if k in iso3 and not v.get("unsupported")}
