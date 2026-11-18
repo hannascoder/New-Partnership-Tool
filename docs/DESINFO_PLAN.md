@@ -132,3 +132,11 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   "iVerify (UNDP)" and the instance's country. Open: the UNDP iVerify team knows which instances are live and public; every line added
   there is picked up without code. No RSS or API for iVerify is documented in public sources (checked 18.11.2026; UNDP and DPG registry pages
   were not reachable from the dev sandbox).
+
+## 18.11.2026 (evening): topic mapping down to sub-topics
+- `config/desinfo_partner_topics.yaml` now has `map` (Atlas topic -> Partner Finder topic, 182 of 183) and `sub` (130 of them also a sub-topic).
+  The link on the page selects only that sub-topic (`&tp=<topic>&off=<topic>:<other sub-topics>`; checked: the Partner Finder takes it).
+  The build checks that a sub-topic belongs to its topic and writes `site/data/desinfo/partner_topics.json`.
+- Excel for the owner: `python pipeline/desinfo/make_topic_mapping_xlsx.py` -> `docs/desinfo_topic_mapping.xlsx` (yellow columns E/F with drop-downs);
+  `python pipeline/desinfo/import_topic_mapping.py [file]` reads the choices back.
+- Owner's remark: the five Partner Finder groups (People, Planet, ...) are too coarse, so the Excel no longer shows them; topics and sub-topics are shown instead.

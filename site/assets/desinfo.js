@@ -304,9 +304,17 @@
         });
         col.appendChild(ul);
         if (!g.link) { grid.appendChild(col); return; }
-        var tp = S.topic && DATA.ptopics[S.topic];     // the chosen topic goes along as a Partner Finder topic
-        col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + (tp ? "&tp=" + tp : ""),
-          text: "Open all " + d.n + " in the Partner Finder" + (tp ? " (topic: " + topicName(S.topic) + ")" : "") + " →" }));
+        var m = S.topic && DATA.ptopics[S.topic];      // the chosen topic goes along as a Partner Finder topic (and sub-topic)
+        var tail = "";
+        if (m) {
+          tail = "&tp=" + m[0];
+          if (m[1]) {                                  // only this sub-topic: the others of the topic are switched off
+            var off = (DATA.psubs[m[0]] || []).filter(function (x) { return x !== m[1]; });
+            if (off.length) tail += "&off=" + m[0] + ":" + off.join("|");
+          }
+        }
+        col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + tail,
+          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + ")" : "") + " →" }));
       }
       grid.appendChild(col);
     });
@@ -476,7 +484,7 @@
   Promise.all([load("items.json"), load("series.json"), load("topics.json"), load("countries.json"), load("config.json"),
                load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true), load("partner_topics.json", true)]).then(function (r) {
     DATA.items = r[0]; DATA.series = r[1]; DATA.topics = r[2].topics; DATA.countries = r[3]; DATA.config = r[4];
-    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = r[10] || {};
+    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = (r[10] && r[10].topics) || {}; DATA.psubs = (r[10] && r[10].subs) || {};
     DATA.topicById = {}; DATA.topics.forEach(function (t) { DATA.topicById[t.qid] = t; });
     DATA.coveredP = {}; DATA.coveredA = {}; var f = "9999", l = "0000";
     DATA.series.forEach(function (x) { if (x[2]) DATA.coveredP[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });
