@@ -1,6 +1,14 @@
 {
+"FAO|en": {
+"checked": "2026-11-18",
+"ok": false
+},
 "UN Verified|en": {
 "checked": "2026-11-17",
+"ok": false
+},
+"UNEP|en": {
+"checked": "2026-11-18",
 "ok": false
 },
 "UNHCR|en": {
@@ -9,6 +17,10 @@
 },
 "UNICEF|en": {
 "checked": "2026-11-17",
+"ok": false
+},
+"WFP|en": {
+"checked": "2026-11-18",
 "ok": false
 }
 }

@@ -1,7 +1,7 @@
 {
   "source": "un_content",
-  "fetched_at": "2026-11-17T21:53:18Z",
-  "records": 433,
+  "fetched_at": "2026-11-18T13:50:34Z",
+  "records": 483,
   "status": {
     "UN News (en)": {
       "ok": true,
@@ -61,7 +61,7 @@
       "ok": false,
       "items": 0,
       "url": "https://shareverified.org/feed/",
-      "error": "failed after 2 tries: https://shareverified.org/rss (<urlopen error [Errno -2] Name or service not known>)"
+      "error": "failed after 2 tries: https://shareverified.org/feed/ (<urlopen error [Errno -2] Name or service not known>) (searched on 2026-11-17, next search later)"
     },
     "UN Press (en)": {
       "ok": true,
@@ -91,37 +91,37 @@
       "ok": false,
       "items": 0,
       "url": "https://www.unicef.org/press-releases/rss.xml",
-      "error": "failed after 2 tries: https://www.unicef.org/rss (HTTP Error 404: Not Found)"
+      "error": "failed after 2 tries: https://www.unicef.org/press-releases/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-17, next search later)"
     },
     "UNHCR (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unhcr.org/rss/news.xml",
-      "error": "failed after 2 tries: https://www.unhcr.org/rss (HTTP Error 403: Forbidden)"
+      "error": "failed after 2 tries: https://www.unhcr.org/rss/news.xml (HTTP Error 403: Forbidden) (searched on 2026-11-17, next search later)"
     },
     "FAO (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.fao.org/newsroom/rss-feed/en/",
-      "error": "failed after 2 tries: https://www.fao.org/newsroom/rss-feed/en/ (HTTP Error 404: Not Found) (searched on -, next search later)"
+      "error": "failed after 2 tries: https://www.fao.org/rss (HTTP Error 404: Not Found)"
     },
     "WFP (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.wfp.org/rss.xml",
-      "error": "failed after 2 tries: https://www.wfp.org/rss.xml (HTTP Error 404: Not Found) (searched on -, next search later)"
+      "error": "failed after 2 tries: https://www.wfp.org/rss (HTTP Error 404: Not Found)"
     },
     "UNEP (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unep.org/rss.xml",
-      "error": "failed after 2 tries: https://www.unep.org/rss.xml (HTTP Error 404: Not Found) (searched on -, next search later)"
+      "error": "failed after 2 tries: https://www.unep.org/rss (HTTP Error 403: Forbidden)"
     },
     "UNESCO (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unesco.org/en/rss.xml",
-      "error": "failed after 2 tries: https://www.unesco.org/en/rss.xml (Remote end closed connection without response) (searched on -, next search later)"
+      "error": "failed after 2 tries: https://www.unesco.org/en/rss.xml (HTTP Error 404: Not Found) (searched on -, next search later)"
     },
     "OHCHR (en)": {
       "ok": true,
@@ -136,10 +136,10 @@
       "error": "failed after 2 tries: https://www.undp.org/rss.xml (HTTP Error 403: Forbidden) (searched on -, next search later)"
     },
     "UN Women (en)": {
-      "ok": false,
-      "items": 0,
+      "ok": true,
+      "items": 50,
       "url": "https://www.unwomen.org/en/rss-feeds/news",
-      "error": "failed after 2 tries: https://www.unwomen.org/en/rss-feeds/news (HTTP Error 403: Forbidden) (searched on -, next search later)"
+      "error": ""
     },
     "IOM (en)": {
       "ok": false,
