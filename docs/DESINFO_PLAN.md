@@ -158,3 +158,8 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   (COVID-19 = health / infectious diseases + health systems).
 - Data check (18.11.2026): COVID-19, pandemic and vaccine topics = 317 of 6,174 fact-checks in 12 months (5 %), 18 of 1,084 in the last 30 days (1.7 %);
   election is by far the top topic. Caveat: topic detection is by key words and the archive before 17.11.2026 is incomplete.
+
+## 18.11.2026 (late): topic groups as a view
+- A whole topic group can be chosen ("All health topics" at the top of each group in the topic list). The series has an extra row per group
+  (`q = "g:<group>"`, a fact-check counts ONCE per group, built in `build.py` `make_series`). Trends, map, content gaps (only the group's topics)
+  and the export (PDF/Word/Excel) work for the group. The UN box and partner links need one topic and are hidden for a group.

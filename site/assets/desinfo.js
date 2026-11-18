@@ -88,7 +88,10 @@
   }
 
   // ---------- topics ----------
-  function topicName(q) { var t = DATA.topicById[q]; return t ? t.label : q; }
+  function isGroup(q) { return typeof q === "string" && q.indexOf("g:") === 0; }
+  function topicName(q) { if (isGroup(q)) return "All " + q.slice(2) + " topics"; var t = DATA.topicById[q]; return t ? t.label : q; }
+  // the topics that the lists show: all of them, or only those of the chosen group
+  function topicsInScope() { return isGroup(S.topic) ? DATA.topics.filter(function (t) { return t.group === S.topic.slice(2); }) : DATA.topics; }
   function rising(t) {
     // "Rising" = the topic's SHARE of all fact-checks in the last 7 days is more than `factor` times its share in the 4 weeks before
     // (and at least `min_items` this week). Shares keep it fair when the amount of collected data changes (e.g. after the backfill).
@@ -115,7 +118,9 @@
     });
     Object.keys(groups).sort().forEach(function (g) {
       var det = el("details", {}, [el("summary", { text: g })]);
-      if (q || groups[g].some(function (t) { return t.qid === S.topic; })) det.open = true;
+      if (q || S.topic === "g:" + g || groups[g].some(function (t) { return t.qid === S.topic; })) det.open = true;
+      var gx = A.topics["g:" + g], gr = rising(gx);
+      det.appendChild(btn("g:" + g, "All " + g + " topics", gx ? gx.range : 0, gr && gr.red));
       groups[g].sort(function (a, b) {
         return ((A.topics[b.qid] || { range: 0 }).range - (A.topics[a.qid] || { range: 0 }).range) || a.label.localeCompare(b.label);
       }).forEach(function (t) {
@@ -126,7 +131,7 @@
     });
   }
   function renderTrends(A) {
-    var rows = DATA.topics.map(function (t) { return { t: t, x: A.topics[t.qid] || { range: 0, last7: 0, base: 0, baseDays: {} } }; })
+    var rows = topicsInScope().map(function (t) { return { t: t, x: A.topics[t.qid] || { range: 0, last7: 0, base: 0, baseDays: {} } }; })
       .filter(function (r) { return r.x.range > 0; })
       .sort(function (a, b) { return b.x.range - a.x.range; });
     var box = $("trendList"); box.textContent = "";
@@ -163,7 +168,7 @@
   }
   function renderUnBox(A) {
     var box = $("unBox"); box.textContent = "";
-    if (!S.topic || !DATA.un) { box.hidden = true; return; }
+    if (!S.topic || isGroup(S.topic) || !DATA.un) { box.hidden = true; return; }
     box.hidden = false;
     var u = unOf(S.topic), fc = (A.topics[S.topic] || { range: 0 }).range, st = gapStatus(fc, u.n12);
     box.appendChild(el("h3", { text: "UN material on “" + topicName(S.topic) + "”" }));
@@ -187,7 +192,7 @@
     if (DATA.un) box.appendChild(el("p", { class: "hint", text: "Based on " + DATA.un.articles + " UN articles from " + DATA.un.sources_ok + " of " + DATA.un.sources +
       " sources (last 12 months). If a source did not answer, its articles are missing and a gap may be overstated: see reports/desinfo_sources.md." }));
     if (!DATA.un) { box.appendChild(el("p", { class: "hint", text: "The UN content has not been collected yet. It appears after the next daily update." })); return; }
-    DATA.topics.forEach(function (t) {
+    topicsInScope().forEach(function (t) {
       var fc = (A.topics[t.qid] || { range: 0 }).range, u = unOf(t.qid), st = gapStatus(fc, u.n12);
       if (st) rows.push({ t: t, fc: fc, u: u, st: st });
     });
@@ -364,7 +369,10 @@
   // ---------- items ----------
   function matches(i) {
     if (!inRange(i.date)) return false;
-    if (S.topic && i.topics.indexOf(S.topic) < 0) return false;
+    if (S.topic) {
+      if (isGroup(S.topic)) { if (!i.topics.some(function (q) { var t = DATA.topicById[q]; return t && t.group === S.topic.slice(2); })) return false; }
+      else if (i.topics.indexOf(S.topic) < 0) return false;
+    }
     return okItem(i);
   }
   function renderItems() {
@@ -402,7 +410,7 @@
       ["Totals", A.total + " fact-checks in this window, " + A.unTotal + " UN-related, " + Object.keys(A.countries).length + (Object.keys(A.countries).length === 1 ? " country" : " countries")]];
     var tables = [];
     // 1. topics
-    var trows = DATA.topics.map(function (t) { return { t: t, x: A.topics[t.qid] }; }).filter(function (r) { return r.x && r.x.range > 0; })
+    var trows = topicsInScope().map(function (t) { return { t: t, x: A.topics[t.qid] }; }).filter(function (r) { return r.x && r.x.range > 0; })
       .sort(function (a, b) { return b.x.range - a.x.range; }).slice(0, 60).map(function (r) {
         var rs = rising(r.x);
         return [r.t.label, r.t.group, String(r.x.range), String(r.x.last7), rs ? (rs.red ? "Rising" : (rs.ratio ? "x" + rs.ratio.toFixed(1) : "new")) : "not enough history"];
@@ -418,7 +426,7 @@
     var grows = [];
     if (DATA.un) {
       var rank = { red: 0, amber: 1, green: 2 }, list = [];
-      DATA.topics.forEach(function (t) {
+      topicsInScope().forEach(function (t) {
         var fc = (A.topics[t.qid] || { range: 0 }).range, u = unOf(t.qid), st = gapStatus(fc, u.n12);
         if (st) list.push({ t: t, fc: fc, u: u, st: st });
       });
