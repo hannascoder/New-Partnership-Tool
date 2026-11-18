@@ -90,6 +90,26 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Viet Nam: 1
 - Jamaica: 1
 
+## Coverage by region (UN M49)
+
+| Region | Countries | With fact-checks by a fact-checker of the country | Named in fact-checks | No data at all |
+|---|---|---|---|---|
+| Africa | 54 | 15 | 33 | 21 |
+| Americas | 35 | 17 | 24 | 11 |
+| Asia | 48 | 26 | 38 | 9 |
+| Europe | 44 | 19 | 28 | 12 |
+| Oceania | 14 | 4 | 6 | 8 |
+
+**Africa: countries with no data at all:** Botswana, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Comoros, Djibouti, Equatorial Guinea, Eswatini, Gabon, Guinea-Bissau, Lesotho, Malawi, Mali, Mauritius, Sao Tome and Principe, Seychelles, South Sudan, United Republic of Tanzania, Zimbabwe
+
+**Americas: countries with no data at all:** Antigua and Barbuda, Barbados, Belize, Dominica, Guyana, Nicaragua, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago
+
+**Asia: countries with no data at all:** Brunei Darussalam, Georgia, Lao People's Democratic Republic, Mongolia, Singapore, Tajikistan, Timor-Leste, Turkmenistan, Uzbekistan
+
+**Europe: countries with no data at all:** Andorra, Belarus, Bosnia and Herzegovina, Iceland, Liechtenstein, Lithuania, Luxembourg, Monaco, Montenegro, Norway, San Marino, Slovakia
+
+**Oceania: countries with no data at all:** Kiribati, Marshall Islands, Micronesia, Palau, Samoa, Tonga, Tuvalu, Vanuatu
+
 ## Topics without any item
 
 Biodiversity loss, Blockchain, Cyberbullying, Desertification, Distance education, Electronic waste, Female genital mutilation, International Court of Justice, Microfinance, Ocean acidification, United Nations High Commissioner for Refugees, Universal Declaration of Human Rights

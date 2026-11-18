@@ -307,11 +307,11 @@ def main():
                "un_related": sum(1 for i in items if i["un"]),
                "first_date": items[-1]["date"] if items else None, "last_date": items[0]["date"] if items else None}
     json.dump(summary, open(OUT / "summary.json", "w"), indent=1)
-    write_reports(valid, by_country, by_topic, topics, summary)
+    write_reports(valid, by_country, by_topic, topics, summary, items)
     print(json.dumps(summary))
 
 
-def write_reports(valid, by_country, by_topic, topics, summary):
+def write_reports(valid, by_country, by_topic, topics, summary, about_items):
     meta = load_json(ROOT / "raw" / "desinfo" / "meta.json", {})
     st = meta.get("status") or load_json(ROOT / "raw" / "desinfo" / "last_failed_status.json", {})
     L = ["# Disinformation monitor: sources of the last run", "",
@@ -333,6 +333,22 @@ def write_reports(valid, by_country, by_topic, topics, summary):
          "## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)", ""]
     L += [", ".join(r["name"] for r in pop_rank if r["iso2"] not in by_country), "", "## Items per country", ""]
     L += [f"- {valid[c]['name']}: {n}" for c, n in by_country.most_common()]
+    # coverage by UN region (M49): how many countries have fact-checks (by the fact-checker's country / named in the text)
+    about_n = Counter(c for i in about_items for c in i["about"])
+    reg = {}
+    for iso, r in valid.items():
+        x = reg.setdefault(r["region"], {"n": 0, "pub": 0, "about": 0, "none": []})
+        x["n"] += 1
+        x["pub"] += iso in by_country
+        x["about"] += iso in about_n
+        if iso not in by_country and iso not in about_n:
+            x["none"].append(r["name"].split(" (")[0])
+    L += ["", "## Coverage by region (UN M49)", "", "| Region | Countries | With fact-checks by a fact-checker of the country | Named in fact-checks | No data at all |", "|---|---|---|---|---|"]
+    for name, x in sorted(reg.items()):
+        L.append(f"| {name} | {x['n']} | {x['pub']} | {x['about']} | {len(x['none'])} |")
+    for name, x in sorted(reg.items()):
+        if x["none"]:
+            L += ["", f"**{name}: countries with no data at all:** " + ", ".join(sorted(x["none"]))]
     L += ["", "## Topics without any item", ""]
     L += [", ".join(t["label_en"] for t in topics if t["qid"] not in by_topic), ""]
     (ROOT / "reports" / "desinfo_coverage.md").write_text("\n".join(L), encoding="utf-8")
