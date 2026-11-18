@@ -250,10 +250,22 @@ def main():
               open(OUT / "config.json", "w"), indent=1)
     # Google Trends per country (Atlas data, attribution "Data source: Google Trends"): only the query text and Google's bucket
     iso3 = {r["iso3"]: r["iso2"] for r in valid.values()}
-    # Atlas topic -> Partner Finder topic (config/desinfo_partner_topics.yaml), keyed by topic id
-    pmap = yaml.safe_load(open(ROOT / "config" / "desinfo_partner_topics.yaml", encoding="utf-8")).get("map", {})
-    json.dump({t["qid"]: pmap[t["label_en"]] for t in topics if t["label_en"] in pmap},
-              open(OUT / "partner_topics.json", "w", encoding="utf-8"), separators=(",", ":"))
+    # Atlas topic -> Partner Finder topic and optional sub-topic (config/desinfo_partner_topics.yaml), keyed by topic id.
+    # Checked against the Partner Finder topics (site/data/config.json): a wrong id or a sub-topic of another topic is dropped.
+    pm = yaml.safe_load(open(ROOT / "config" / "desinfo_partner_topics.yaml", encoding="utf-8"))
+    pf = {t["id"]: [x["id"] for x in t.get("subtopics", [])]
+          for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])}
+    ptop = {}
+    for t in topics:
+        tp = (pm.get("map") or {}).get(t["label_en"])
+        if tp not in pf:
+            continue
+        sub = (pm.get("sub") or {}).get(t["label_en"], "")
+        if sub and sub not in pf[tp]:
+            print(f"WARNING: sub-topic '{sub}' of '{t['label_en']}' does not belong to the Partner Finder topic '{tp}': ignored")
+            sub = ""
+        ptop[t["qid"]] = [tp, sub]
+    json.dump({"topics": ptop, "subs": pf}, open(OUT / "partner_topics.json", "w", encoding="utf-8"), separators=(",", ":"))
     cs = (atlas.get("country_searches") or {}).get("countries") or {}
     trends = {iso3[k]: {"date": v.get("date"), "queries": [{"q": x["query"], "t": x.get("traffic", "")} for x in v.get("queries", [])[:6]]}
               for k, v in cs.items() if k in iso3 and not v.get("unsupported")}
