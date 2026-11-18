@@ -54,12 +54,18 @@ def main():
         for o in json.load(open(DATA / name, encoding="utf-8")):
             put(o["c"], "ngo", [o["p"], o["n"], o.get("w", ""), o["i"], []])
 
+    # UNDP iVerify country sites (config/iverify_sites.yaml): shown as links, whether or not the tool may read them
+    iv = {}
+    for x in yaml.safe_load(open(ROOT / "config" / "iverify_sites.yaml", encoding="utf-8")).get("sites", []):
+        iv.setdefault(x["country"], []).append({"n": x["name"], "w": x["site"], "i": "", "l": []})
     out = {}
     for iso2, g in sorted(groups.items()):
         rec = {"iso3": g["iso3"]}
         for k in ("fc", "cm", "nw", "ngo"):
             rows = sorted(g.get(k, []), key=lambda e: (-e[0], e[1].lower()))
             rec[k] = {"n": len(rows), "top": [{"n": e[1], "w": e[2], "i": e[3], "l": e[4]} for e in rows[:TOP]]}
+        if iso2 in iv:
+            rec["iv"] = {"n": len(iv[iso2]), "top": iv[iso2]}
         out[iso2] = rec
     (DATA / "desinfo").mkdir(exist_ok=True)
     json.dump(out, open(DATA / "desinfo" / "partners.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"), sort_keys=True)

@@ -278,7 +278,8 @@
     { k: "fc", title: "Fact-checkers", link: "./#c={iso3}&ot=fact_checker" },
     { k: "cm", title: "Community media (e.g. community radio)", link: "./#c={iso3}&ot=community_media" },
     { k: "nw", title: "Well-known news outlets", link: "./#c={iso3}&ot=news_outlet,news_agency,public_service_broadcaster" },
-    { k: "ngo", title: "Organisations & NGOs", link: "ngos.html#c={iso3}" }
+    { k: "ngo", title: "Organisations & NGOs", link: "ngos.html#c={iso3}" },
+    { k: "iv", title: "UNDP iVerify (UN fact-checking platform)", link: null, onlyIfPresent: true }
   ];
   function renderPartners() {
     var box = $("partnersBox"); box.textContent = "";
@@ -289,7 +290,9 @@
     box.appendChild(el("p", { class: "hint", text: "Credible organisations that could carry verified information. Taken from the Partner Finder data; only organisations, no persons. A group with no entry means none is in the Partner Finder yet." }));
     var grid = el("div", { class: "p-grid" });
     GROUPS.forEach(function (g) {
-      var d = p[g.k], col = el("div", { class: "p-col" }, [el("h4", { text: g.title + " (" + d.n + ")" })]);
+      var d = p[g.k];
+      if (!d && g.onlyIfPresent) return;
+      var col = el("div", { class: "p-col" }, [el("h4", { text: g.title + " (" + d.n + ")" })]);
       if (!d.n) col.appendChild(el("p", { class: "hint", text: "None in the Partner Finder yet." }));
       else {
         var ul = el("ul");
@@ -300,6 +303,7 @@
           ul.appendChild(li);
         });
         col.appendChild(ul);
+        if (!g.link) { grid.appendChild(col); return; }
         var tp = S.topic && DATA.ptopics[S.topic];     // the chosen topic goes along as a Partner Finder topic
         col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + (tp ? "&tp=" + tp : ""),
           text: "Open all " + d.n + " in the Partner Finder" + (tp ? " (topic: " + topicName(S.topic) + ")" : "") + " →" }));
@@ -406,7 +410,7 @@
       cols: [["Date", 9], ["Fact-checker", 16], ["Country", 13], ["Title (link)", 40], ["English (automatic)", 34], ["Rating", 10], ["Topics", 18]], rows: irows });
     // 5. local voices
     var vrows = [], pv = DATA.partners && S.country && DATA.partners[S.country];
-    if (pv) GROUPS.forEach(function (g) { pv[g.k].top.forEach(function (x) { vrows.push([g.title, { t: x.n, url: x.w }, (x.l || []).join(", ")]); }); });
+    if (pv) GROUPS.forEach(function (g) { (pv[g.k] ? pv[g.k].top : []).forEach(function (x) { vrows.push([g.title, { t: x.n, url: x.w }, (x.l || []).join(", ")]); }); });
     tables.push({ title: "Local voices in " + (S.country ? DATA.countries[S.country].name : "") + " (already in the Partner Finder)",
       note: "Organisations only. The full lists are in the Partner Finder.", cols: [["Group", 22], ["Name (link)", 50], ["Languages", 14]], rows: vrows });
     return { title: "Disinformation monitor", info: info, tables: tables,
