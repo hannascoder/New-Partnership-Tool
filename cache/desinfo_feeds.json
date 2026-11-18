@@ -506,7 +506,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 2
+"fails": 3
 },
 "estadao.com.br": {
 "name": "Estadão",
@@ -1337,7 +1337,7 @@
 "feed": "https://poligrafo.sapo.pt/rss.xml",
 "lang": "pt",
 "status": "ok",
-"fails": 1
+"fails": 2
 },
 "poligraph.fr": {
 "name": "Poligraph",
@@ -1918,7 +1918,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 2
+"fails": 3
 },
 "yoopyup.com": {
 "name": "يوب يوب",

@@ -10,14 +10,14 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 
 - Spain: 891
 - India: 846
-- United States of America: 645
-- Brazil: 455
+- United States of America: 647
+- Brazil: 458
 - France: 309
 - Philippines: 186
 - United Kingdom of Great Britain and Northern Ireland: 151
+- Bolivia (Plurinational State of): 128
 - Ecuador: 128
 - Australia: 127
-- Bolivia (Plurinational State of): 125
 - Portugal: 115
 - Colombia: 112
 - Venezuela (Bolivarian Republic of): 110
@@ -29,10 +29,10 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Bangladesh: 69
 - Sri Lanka: 59
 - Austria: 58
-- Czechia: 53
+- Czechia: 57
 - Republic of Korea: 53
+- Ireland: 51
 - Malta: 45
-- Ireland: 44
 - Japan: 41
 - Greece: 41
 - Nepal: 41
@@ -42,19 +42,19 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Argentina: 34
 - Indonesia: 32
 - Serbia: 31
+- Israel: 25
 - Germany: 25
-- Israel: 24
 - Jordan: 22
 - Sweden: 21
-- Guatemala: 20
+- Guatemala: 21
 - Peru: 20
 - Türkiye: 18
 - North Macedonia: 15
 - Iran (Islamic Republic of): 15
+- Tunisia: 14
 - State of Palestine: 14
 - Ghana: 13
 - Canada: 11
-- Tunisia: 10
 - Togo: 10
 - Cyprus: 10
 - Slovenia: 10
@@ -97,7 +97,7 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 | Africa | 54 | 15 | 33 | 21 |
 | Americas | 35 | 17 | 24 | 11 |
 | Asia | 48 | 26 | 38 | 9 |
-| Europe | 44 | 19 | 28 | 12 |
+| Europe | 44 | 19 | 29 | 11 |
 | Oceania | 14 | 4 | 6 | 8 |
 
 **Africa: countries with no data at all:** Botswana, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Comoros, Djibouti, Equatorial Guinea, Eswatini, Gabon, Guinea-Bissau, Lesotho, Malawi, Mali, Mauritius, Sao Tome and Principe, Seychelles, South Sudan, United Republic of Tanzania, Zimbabwe
@@ -106,7 +106,7 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 
 **Asia: countries with no data at all:** Brunei Darussalam, Georgia, Lao People's Democratic Republic, Mongolia, Singapore, Tajikistan, Timor-Leste, Turkmenistan, Uzbekistan
 
-**Europe: countries with no data at all:** Andorra, Belarus, Bosnia and Herzegovina, Iceland, Liechtenstein, Lithuania, Luxembourg, Monaco, Montenegro, Norway, San Marino, Slovakia
+**Europe: countries with no data at all:** Andorra, Belarus, Bosnia and Herzegovina, Iceland, Liechtenstein, Lithuania, Luxembourg, Monaco, Norway, San Marino, Slovakia
 
 **Oceania: countries with no data at all:** Kiribati, Marshall Islands, Micronesia, Palau, Samoa, Tonga, Tuvalu, Vanuatu
 
