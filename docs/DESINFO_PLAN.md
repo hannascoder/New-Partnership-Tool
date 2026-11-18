@@ -171,3 +171,10 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   The archive is a sample (copies every 6-12 days), not complete.
 - Fact-checkers: the discovery now also takes every fact-checker with a website from the Partner Finder data (111 not yet known, 14 of them in India,
   3 in Nigeria ...) and searches countries WITHOUT fact-checks first (`discover_max_sites` 400).
+
+## 18.11.2026 (night): case study tool, coverage by region
+- `pipeline/desinfo/case_study.py` + `tools/print_pdf.js`: a case study (HTML -> PDF with the pre-installed Chromium) for one country and topic, built only from the monitor's
+  data (timeline, claim types by key words, fact-checkers, languages, UN articles that name the country, rule-based recommendations).
+  First one: `docs/case_study_nepal_floods.pdf` (148 fact-checks, first 26.08.2026, peak 03.09.2026 = 20 in one day; 10 UN articles, none in Hindi).
+- `reports/desinfo_coverage.md` now has "Coverage by region (UN M49)" and lists the countries with no data at all per region (Africa: 15 of 54 countries
+  with fact-checks by a fact-checker of the country, 33 named in fact-checks, 21 with no data).
