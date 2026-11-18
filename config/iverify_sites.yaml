@@ -3,6 +3,9 @@
 # discovery, robots.txt respected), reads it every day and marks the fact-checks "iVerify (UNDP)" on the page.
 # country = ISO2 code of the country the instance works for. Add or correct lines here, no code change needed.
 # Which instances are live is known to the UNDP iVerify team; the list below is what public sources named (17.11.2026).
+# fetch: false = the site blocks automated access (robots.txt or 403, checked 18.11.2026): it is only SHOWN as a link,
+# never read by the tool. Official data access would have to come from the UNDP iVerify team.
 sites:
   - {country: MW, name: "iVerify Malawi",       site: "https://malawi.i-verify.org/"}          # launched March 2025 with MISA Malawi
   - {country: ZM, name: "iVerify Zambia",       site: "https://digital.undp.org/iVerify-Zambia"} # address from the Digital Public Goods Registry, to be checked
+  - {country: KE, name: "iVerify Kenya",       site: "https://www.iverify.or.ke/", fetch: false}   # linked from digitalx.undp.org/iverify_1.html; blocks automated access

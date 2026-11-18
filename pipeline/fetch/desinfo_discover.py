@@ -67,6 +67,8 @@ def iverify_sites():
     path = ROOT / "config" / "iverify_sites.yaml"
     out = {}
     for x in yaml.safe_load(open(path, encoding="utf-8")).get("sites", []):
+        if x.get("fetch") is False:               # blocks automated access: shown as a link only
+            continue
         d = domain_of(x["site"])
         out[d] = {"name": x["name"], "site": x["site"], "origin": "iverify", "country": x["country"]}
     return out
