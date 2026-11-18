@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-18T13:43:19Z  |  items in the site data: 6186
+Fetched: 2026-11-18T15:14:19Z  |  items in the site data: 6198
 
 ## Google Fact Check Tools API
-- {'items': 202, 'requests': 1952, 'errors': [], 'max_age_days': 14}
+- {'items': 203, 'requests': 1952, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -26,7 +26,7 @@ Fetched: 2026-11-18T13:43:19Z  |  items in the site data: 6186
 | PesaCheck | NO |  | failed after 2 tries: https://pesacheck.org/feed (HTTP Error 403: Forbidden) |
 | Dubawa | yes | 10 |  |
 | Fatabyyano | yes | 10 |  |
-| Colombiacheck | yes | 20 |  |
+| Colombiacheck | NO |  | failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden) |
 | Chequeado | yes | 50 |  |
 | Cekfakta / Mafindo | yes | 10 |  |
 

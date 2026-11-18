@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var D = "data/desinfo/";
-  var S = { topic: "", un: false, region: "", country: "", from: "", to: "", view: "trends", shown: 50, span: 30, basis: "publisher", narrow: true };
+  var S = { topic: "", un: false, region: "", country: "", from: "", to: "", view: "trends", shown: 50, span: 30, basis: "publisher", narrow: null, narrowFor: "" };
   var DATA = {}, map = null, layer = null, HIST = 0, TOTS = null;    // HIST: days with data in the 4 weeks before the last week (whole archive, any filter)
 
   function $(id) { return document.getElementById(id); }
@@ -285,6 +285,12 @@
     { k: "ngo", title: "Organisations & NGOs", link: "ngos.html#c={iso3}" },
     { k: "iv", title: "UNDP iVerify (UN fact-checking platform)", link: null, onlyIfPresent: true }
   ];
+  // narrow = only the sub-topic: the user's choice for this topic, else automatic (narrow if the sub-topic has enough media worldwide)
+  function narrowOn(m) {
+    if (!m || !m[1]) return false;
+    if (S.narrowFor === S.topic && S.narrow !== null) return S.narrow;
+    return (DATA.psizes[m[0] + "/" + m[1]] || 0) >= (DATA.config.partner_narrow_min || 0);
+  }
   function renderPartners() {
     var box = $("partnersBox"); box.textContent = "";
     var p = DATA.partners && S.country && DATA.partners[S.country];
@@ -294,14 +300,16 @@
     box.appendChild(el("p", { class: "hint", text: "Credible organisations that could carry verified information. Taken from the Partner Finder data; only organisations, no persons. A group with no entry means none is in the Partner Finder yet." }));
     var mm = S.topic && DATA.ptopics[S.topic];
     if (mm && mm[1]) {                                  // a sub-topic exists: the user can filter broad or narrow
-      var sw = el("div", { class: "view-switch" }), sub = (DATA.psubs[mm[0]] || []);
-      var subLabel = (DATA.psubLabels && DATA.psubLabels[mm[1]]) || mm[1];
+      var sw = el("div", { class: "view-switch" }), on = narrowOn(mm);
+      var subLabel = ((DATA.psubLabels && DATA.psubLabels[mm[1]]) || mm[1]) + (mm[2] ? " (+ second topic)" : "");
       [["Broad: whole topic", false], ["Narrow: " + subLabel, true]].forEach(function (o) {
-        var b = el("button", { type: "button", role: "tab", "aria-selected": String(S.narrow === o[1]), text: o[0] });
-        b.onclick = function () { S.narrow = o[1]; renderPartners(); };
+        var b = el("button", { type: "button", role: "tab", "aria-selected": String(on === o[1]), text: o[0] });
+        b.onclick = function () { S.narrow = o[1]; S.narrowFor = S.topic; renderPartners(); };
         sw.appendChild(b);
       });
-      box.appendChild(el("p", { class: "hint", text: "Topic filter in the Partner Finder links:" }));
+      var n = DATA.psizes[mm[0] + "/" + mm[1]];
+      box.appendChild(el("p", { class: "hint", text: "Topic filter in the Partner Finder links" + (n != null ? " (" + n + " media in the Partner Finder have this sub-topic" +
+        (S.narrowFor !== S.topic && n < DATA.config.partner_narrow_min ? "; that is few, so the list starts broad" : "") + ")" : "") + ":" }));
       box.appendChild(sw);
     }
     var grid = el("div", { class: "p-grid" });
@@ -320,17 +328,22 @@
         });
         col.appendChild(ul);
         if (!g.link) { grid.appendChild(col); return; }
-        var m = S.topic && DATA.ptopics[S.topic];      // the chosen topic goes along as a Partner Finder topic (and sub-topic)
+        var m = S.topic && DATA.ptopics[S.topic];      // the chosen topic (and optional second topic) goes along to the Partner Finder
         var tail = "";
         if (m) {
-          tail = "&tp=" + m[0];
-          if (m[1] && S.narrow) {                      // narrow: only this sub-topic, the others of the topic are switched off
-            var off = (DATA.psubs[m[0]] || []).filter(function (x) { return x !== m[1]; });
-            if (off.length) tail += "&off=" + m[0] + ":" + off.join("|");
+          var tps = [m[0]].concat(m[2] ? [m[2]] : []), offs = [];
+          tail = "&tp=" + tps.join(",");
+          if (narrowOn(m)) {                           // narrow: only the sub-topic(s), the other sub-topics of the topic are switched off
+            [[m[0], m[1]], [m[2], m[3]]].forEach(function (pair) {
+              if (!pair[0] || !pair[1]) return;
+              var off = (DATA.psubs[pair[0]] || []).filter(function (x) { return x !== pair[1]; });
+              if (off.length) offs.push(pair[0] + ":" + off.join("|"));
+            });
           }
+          if (offs.length) tail += "&off=" + offs.join(";");
         }
         col.appendChild(el("a", { class: "more", href: g.link.replace("{iso3}", p.iso3) + tail,
-          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + (m[1] && S.narrow ? ", narrow" : "") + ")" : "") + " →" }));
+          text: "Open all " + d.n + " in the Partner Finder" + (m ? " (topic: " + topicName(S.topic) + (m[1] && narrowOn(m) ? ", narrow" : "") + ")" : "") + " →" }));
       }
       grid.appendChild(col);
     });
@@ -497,9 +510,9 @@
   }
 
   Promise.all([load("items.json"), load("series.json"), load("topics.json"), load("countries.json"), load("config.json"),
-               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true), load("partner_topics.json", true)]).then(function (r) {
+               load("summary.json"), load("series_about.json", true), load("un_content.json", true), load("trends.json", true), load("partners.json", true), load("partner_topics.json", true), load("partner_topic_sizes.json", true)]).then(function (r) {
     DATA.items = r[0]; DATA.series = r[1]; DATA.topics = r[2].topics; DATA.countries = r[3]; DATA.config = r[4];
-    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = (r[10] && r[10].topics) || {}; DATA.psubs = (r[10] && r[10].subs) || {}; DATA.psubLabels = (r[10] && r[10].sublabels) || {};
+    DATA.seriesAbout = r[6] || r[1]; DATA.un = r[7]; DATA.trends = r[8]; DATA.partners = r[9]; DATA.ptopics = (r[10] && r[10].topics) || {}; DATA.psubs = (r[10] && r[10].subs) || {}; DATA.psubLabels = (r[10] && r[10].sublabels) || {}; DATA.psizes = r[11] || {};
     DATA.topicById = {}; DATA.topics.forEach(function (t) { DATA.topicById[t.qid] = t; });
     DATA.coveredP = {}; DATA.coveredA = {}; var f = "9999", l = "0000";
     DATA.series.forEach(function (x) { if (x[2]) DATA.coveredP[x[2]] = 1; if (x[0] < f) f = x[0]; if (x[0] > l) l = x[0]; });

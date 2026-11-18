@@ -1,7 +1,7 @@
 {
   "source": "un_content",
-  "fetched_at": "2026-11-18T13:50:34Z",
-  "records": 483,
+  "fetched_at": "2026-11-18T15:20:25Z",
+  "records": 433,
   "status": {
     "UN News (en)": {
       "ok": true,
@@ -103,25 +103,25 @@
       "ok": false,
       "items": 0,
       "url": "https://www.fao.org/newsroom/rss-feed/en/",
-      "error": "failed after 2 tries: https://www.fao.org/rss (HTTP Error 404: Not Found)"
+      "error": "failed after 2 tries: https://www.fao.org/newsroom/rss-feed/en/ (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later)"
     },
     "WFP (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.wfp.org/rss.xml",
-      "error": "failed after 2 tries: https://www.wfp.org/rss (HTTP Error 404: Not Found)"
+      "error": "failed after 2 tries: https://www.wfp.org/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later)"
     },
     "UNEP (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unep.org/rss.xml",
-      "error": "failed after 2 tries: https://www.unep.org/rss (HTTP Error 403: Forbidden)"
+      "error": "failed after 2 tries: https://www.unep.org/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later)"
     },
     "UNESCO (en)": {
       "ok": false,
       "items": 0,
       "url": "https://www.unesco.org/en/rss.xml",
-      "error": "failed after 2 tries: https://www.unesco.org/en/rss.xml (HTTP Error 404: Not Found) (searched on -, next search later)"
+      "error": "failed after 2 tries: https://www.unesco.org/rss (HTTP Error 403: Forbidden)"
     },
     "OHCHR (en)": {
       "ok": true,
@@ -136,10 +136,10 @@
       "error": "failed after 2 tries: https://www.undp.org/rss.xml (HTTP Error 403: Forbidden) (searched on -, next search later)"
     },
     "UN Women (en)": {
-      "ok": true,
-      "items": 50,
+      "ok": false,
+      "items": 0,
       "url": "https://www.unwomen.org/en/rss-feeds/news",
-      "error": ""
+      "error": "failed after 2 tries: https://www.unwomen.org/en/rss-feeds/news (HTTP Error 403: Forbidden) (searched on -, next search later)"
     },
     "IOM (en)": {
       "ok": false,

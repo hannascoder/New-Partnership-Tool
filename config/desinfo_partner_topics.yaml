@@ -128,6 +128,7 @@ map:
   "Plastic pollution": consumption
   "Polio": health
   "Population ageing": older_persons
+  "Population growth": cities
   "Poverty": poverty
   "Public transport": cities
   "Racism": inequalities
@@ -318,3 +319,19 @@ sub:
   "Women's rights": women_rights
   "World Bank": business_finance
   "Youth unemployment": decent_jobs
+# Second Partner Finder topic (and optional sub-topic) for Atlas topics that belong to two topics (owner 18.11.2026).
+# The link selects the first OR the second topic (broader). Format: label: {topic: <id>, sub: <id, optional>}
+also:
+  "Air pollution": {topic: health, sub: pollution_health}
+  "Censorship": {topic: human_rights, sub: civil_political_rights}
+  "Child labour": {topic: work_economy, sub: forced_child_labour}
+  "Deepfake": {topic: fact_checking}
+  "Drought": {topic: climate, sub: climate_adaptation}
+  "Famine": {topic: humanitarian, sub: humanitarian_crises}
+  "Fossil fuel": {topic: climate, sub: climate_change}
+  "Heat wave": {topic: climate, sub: climate_adaptation}
+  "Human trafficking": {topic: peace_justice, sub: justice_rule_of_law}
+  "LGBTQ rights": {topic: gender_equality, sub: gender_identity}
+  "Refugee": {topic: humanitarian, sub: displacement_camps}
+  "Same-sex marriage": {topic: gender_equality, sub: gender_identity}
+  "Wartime sexual violence": {topic: gender_equality, sub: gender_violence}

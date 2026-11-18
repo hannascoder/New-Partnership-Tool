@@ -28,6 +28,7 @@ def main():
         for r in csv.DictReader(f):
             iso3_to_2[r["iso3"]] = r["iso2"]
     groups = {}                          # iso2 -> group -> [entries]
+    sizes = {}                           # Partner Finder topic / sub-topic -> number of media worldwide (for broad/narrow default)
 
     def put(iso3, group, entry):
         iso2 = iso3_to_2.get(iso3)
@@ -38,6 +39,13 @@ def main():
         for o in json.load(open(DATA / name, encoding="utf-8")):
             if o.get("nn"):                          # pure sports / music / children's / religious channel
                 continue
+            seen = set()
+            for e in o.get("tp") or []:
+                seen.add(e[0])
+                for sub in (e[3] if len(e) > 3 and isinstance(e[3], list) else []):
+                    seen.add(e[0] + "/" + sub)
+            for k in seen:
+                sizes[k] = sizes.get(k, 0) + 1
             t = (o.get("o") or [None])[0]
             if t == t_of["fact_checker"]:
                 g = "fc"
@@ -69,6 +77,7 @@ def main():
         out[iso2] = rec
     (DATA / "desinfo").mkdir(exist_ok=True)
     json.dump(out, open(DATA / "desinfo" / "partners.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+    json.dump(sizes, open(DATA / "desinfo" / "partner_topic_sizes.json", "w", encoding="utf-8"), sort_keys=True, separators=(",", ":"))
     tot = {k: sum(r[k]["n"] for r in out.values()) for k in ("fc", "cm", "nw", "ngo")}
     print(f"{len(out)} countries; entries in the Partner Finder: {tot}")
 

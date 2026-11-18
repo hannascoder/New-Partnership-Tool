@@ -128,3 +128,4 @@ about_acronyms: {USA: US, "U.S.": US, UK: GB, UAE: AE, DRC: CD, DPRK: KP, ROK: K
 # Partner Finder data: fact-checkers, community media, well-known news outlets, and organisations / NGOs.
 partners:
   top_n: 6                  # entries shown per group (the link opens the full list in the Partner Finder)
+  narrow_min_outlets: 150   # a sub-topic with fewer media in the Partner Finder worldwide starts on "broad" (the user can switch)
