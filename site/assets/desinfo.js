@@ -333,6 +333,7 @@
       var meta = i.date + " · " + i.publisher + (i.country && DATA.countries[i.country] ? " · " + DATA.countries[i.country].name : "") +
                  (i.rating ? " · rated: " + i.rating : "") + " · " + i.lang;
       var tags = el("div", { class: "tags" });
+      if (i.net === "iverify") tags.appendChild(el("span", { class: "badge", title: "Published on a UNDP iVerify country site", text: "iVerify (UNDP)" }));
       if (i.un) tags.appendChild(el("span", { class: "badge", text: "UN-related" }));
       (i.about || []).slice(0, 3).forEach(function (c) { if (DATA.countries[c]) tags.appendChild(el("span", { class: "badge", text: "about: " + DATA.countries[c].name })); });
       i.topics.slice(0, 5).forEach(function (q) { tags.appendChild(el("span", { class: "badge", text: topicName(q) })); });

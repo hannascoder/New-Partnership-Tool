@@ -1,0 +1,8 @@
+# UNDP iVerify (open-source fact-checking tool, digital public good): every country runs its own instance with its own
+# public web site. One line per instance; the daily run finds the feed that the site itself announces (standard feed
+# discovery, robots.txt respected), reads it every day and marks the fact-checks "iVerify (UNDP)" on the page.
+# country = ISO2 code of the country the instance works for. Add or correct lines here, no code change needed.
+# Which instances are live is known to the UNDP iVerify team; the list below is what public sources named (17.11.2026).
+sites:
+  - {country: MW, name: "iVerify Malawi",       site: "https://malawi.i-verify.org/"}          # launched March 2025 with MISA Malawi
+  - {country: ZM, name: "iVerify Zambia",       site: "https://digital.undp.org/iVerify-Zambia"} # address from the Digital Public Goods Registry, to be checked

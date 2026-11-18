@@ -62,6 +62,16 @@ def wikidata_sites():
     return out
 
 
+def iverify_sites():
+    """UNDP iVerify country instances from config/iverify_sites.yaml (home page address, country)."""
+    path = ROOT / "config" / "iverify_sites.yaml"
+    out = {}
+    for x in yaml.safe_load(open(path, encoding="utf-8")).get("sites", []):
+        d = domain_of(x["site"])
+        out[d] = {"name": x["name"], "site": x["site"], "origin": "iverify", "country": x["country"]}
+    return out
+
+
 def google_domains():
     """Web sites named as publisher of fact-checks in our own archive (cache/desinfo_items.json): {domain: (name, count)}."""
     path = ROOT / "cache" / "desinfo_items.json"
@@ -142,6 +152,8 @@ def main():
         print("Wikidata query failed:", e)
         sites = {}
     print(f"Wikidata: {len(sites)} fact-checking websites (not in the hand list)")
+    for d, info in iverify_sites().items():       # UNDP iVerify instances first; like Wikidata ones, no cue filter
+        sites.setdefault(d, info)
     valid = {r["iso2"] for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
     n_g = 0
     for d, (name, n) in google_domains().items():
@@ -161,7 +173,7 @@ def main():
         if c and c.get("status") == "ok":
             continue
         todo.append((d, info))
-    todo.sort(key=lambda x: (x[1]["origin"] != "wikidata", x[1]["country"] == "", x[1]["country"]))
+    todo.sort(key=lambda x: (x[1]["origin"] not in ("iverify", "wikidata"), x[1]["country"] == "", x[1]["country"]))
     n_ok = 0
     for d, info in todo[:CFG["discover_max_sites"]]:
         html, st = home_page(info["site"])
