@@ -24,7 +24,7 @@ google_factcheck:
 
 discovery:                  # automatic search for fact-checkers and their feeds (pipeline/fetch/desinfo_discover.py)
   wikidata_class_labels: ["fact-checking organization", "fact-checking website", "fact-checker", "fact-checking"]
-  discover_max_sites: 250   # sites looked at per weekly run (the rest follows in the next runs)
+  discover_max_sites: 400   # sites looked at per weekly run (the rest follows in the next runs; countries without fact-checks first)
   # second source of candidates: every web site that Google names as publisher of a fact-check (grows by itself)
   google_min_items: 2       # at least this many fact-checks from the site in our archive
   skip_domains: [facebook.com, twitter.com, x.com, youtube.com, instagram.com, tiktok.com, t.me, wikipedia.org, google.com]

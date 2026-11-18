@@ -1,4 +1,16 @@
 {
+"15min.lt": {
+"name": "Patikrinta 15min",
+"site": "https://www.15min.lt/projektas/patikrinta-15min",
+"country": "LT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "lt",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "20minutes.fr": {
 "name": "20 Minutes",
 "site": "https://20minutes.fr/",
@@ -11,6 +23,17 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"211check.org": {
+"name": "211 Check",
+"site": "https://211check.org",
+"country": "SS",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.211check.org/blog-feed.xml",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "aap.com.au": {
 "name": "AAP",
 "site": "https://aap.com.au/",
@@ -22,6 +45,29 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"agenciaocote.com": {
+"name": "Agencia Ocote",
+"site": "https://www.agenciaocote.com/proyectos/factica/",
+"country": "GT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.agenciaocote.com/feed/",
+"lang": "es",
+"status": "ok",
+"fails": 0
+},
+"akhbarmeter.org": {
+"name": "AkhbarMeter",
+"site": "https://akhbarmeter.org/",
+"country": "EG",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "aletheiafact.org": {
 "name": "AletheiaFact.org",
@@ -70,6 +116,18 @@
 "status": "ok",
 "fails": 0
 },
+"annir.ly": {
+"name": "Annir",
+"site": "https://annir.ly/",
+"country": "LY",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "ar",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "apa.at": {
 "name": "APA-factchecking",
 "site": "https://apa.at/service/faktencheck-2/",
@@ -93,6 +151,17 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"balobakicheck.com": {
+"name": "BALOBAKI CHECK",
+"site": "https://www.balobakicheck.com",
+"country": "CD",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://balobakicheck.com/feed/",
+"lang": "fr",
+"status": "ok",
+"fails": 0
+},
 "bhasha.ptinews.com": {
 "name": "Press Trust of India - PTI",
 "site": "https://bhasha.ptinews.com/",
@@ -113,6 +182,17 @@
 "origin": "google",
 "feed": "https://boliviaverifica.bo/feed/",
 "lang": "es",
+"status": "ok",
+"fails": 0
+},
+"businessnews.com.tn": {
+"name": "BNCHECK",
+"site": "https://www.businessnews.com.tn/bncheck",
+"country": "TN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://businessnews.com.tn/feed/",
+"lang": "fr",
 "status": "ok",
 "fails": 0
 },
@@ -163,6 +243,29 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"danbinews.com": {
+"name": "Danbi Fact Check",
+"site": "https://www.danbinews.com/news/articleList.html?sc_section_code=S1N14&view_type=sm",
+"country": "KR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://cdn.danbinews.com/rss/gn_rss_allArticle.xml",
+"lang": "ko",
+"status": "ok",
+"fails": 0
+},
+"data-check.org": {
+"name": "DataCheckOrg",
+"site": "https://www.data-check.org",
+"country": "CM",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "defacto-observatoire.fr": {
 "name": "defacto-observatoire.fr",
 "site": "https://defacto-observatoire.fr/",
@@ -175,6 +278,41 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"demagog.cz": {
+"name": "Demagog.cz",
+"site": "http://demagog.cz",
+"country": "CZ",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "cs",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"demagog.org.pl": {
+"name": "Demagog Association",
+"site": "https://demagog.org.pl",
+"country": "PL",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://demagog.org.pl/feed/",
+"lang": "pl",
+"status": "ok",
+"fails": 0
+},
+"demagog.sk": {
+"name": "Demagog.sk",
+"site": "https://demagog.sk/",
+"country": "SK",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "digital.undp.org": {
 "name": "iVerify Zambia",
 "site": "https://digital.undp.org/iVerify-Zambia",
@@ -186,6 +324,53 @@
 "status": "blocked",
 "fails": 0,
 "retry_after": "2027-02-16"
+},
+"digiteye.in": {
+"name": "Digiteye",
+"site": "https://digiteye.in",
+"country": "IN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://digiteye.in/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"doblecheck.cr": {
+"name": "Doble Check",
+"site": "https://doblecheck.cr",
+"country": "CR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "es",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"dogrula.org": {
+"name": "Doğrula",
+"site": "https://www.dogrula.org/",
+"country": "TR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "tr",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"dogrulukpayi.com": {
+"name": "Doğruluk Payı",
+"site": "http://www.dogrulukpayi.com",
+"country": "TR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "tr",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "dpa-factchecking.com": {
 "name": "dpa-factchecking",
@@ -232,6 +417,40 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"efe.com": {
+"name": "EFE Verifica",
+"site": "https://www.efe.com/efe/espana/efeverifica/50001435",
+"country": "ES",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "es",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"elezafact.cd": {
+"name": "Eleza Fact",
+"site": "https://elezafact.cd/",
+"country": "CD",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://elezafact.cd/feed/",
+"lang": "fr",
+"status": "ok",
+"fails": 0
+},
+"ellinikahoaxes.gr": {
+"name": "Ellinika Hoaxes (Greek Hoaxes)",
+"site": "https://www.ellinikahoaxes.gr/",
+"country": "GR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.ellinikahoaxes.gr/feed/",
+"lang": "el",
+"status": "ok",
+"fails": 0
+},
 "en.dismislab.com": {
 "name": "Dismislab",
 "site": "https://en.dismislab.com/",
@@ -266,6 +485,18 @@
 "status": "ok",
 "fails": 0
 },
+"epl.delfi.ee": {
+"name": "Delfi Faktikontroll",
+"site": "https://epl.delfi.ee/faktikontrollid/",
+"country": "EE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "et",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "espanol.leadstories.com": {
 "name": "Lead Stories",
 "site": "https://espanol.leadstories.com/",
@@ -275,7 +506,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 0
+"fails": 2
 },
 "estadao.com.br": {
 "name": "Estadão",
@@ -301,6 +532,76 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"fact-watch.org": {
+"name": "FactWatch",
+"site": "https://www.fact-watch.org/web/",
+"country": "BD",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.fact-watch.org/feed/",
+"lang": "bn",
+"status": "ok",
+"fails": 0
+},
+"facta.news": {
+"name": "Facta",
+"site": "https://facta.news/",
+"country": "IT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "it",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"factcheck.kz": {
+"name": "Factcheck.kz",
+"site": "http://factcheck.kz",
+"country": "KZ",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "ru",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"factcheck.thecable.ng": {
+"name": "CableCheck",
+"site": "https://factcheck.thecable.ng/",
+"country": "NG",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"factcheck.vlaanderen": {
+"name": "factcheck.vlaanderen",
+"site": "https://factcheck.vlaanderen/",
+"country": "BE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"factcheckafrica.net": {
+"name": "FactCheckAfrica",
+"site": "https://factcheckafrica.net/",
+"country": "NG",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://factcheckafrica.net/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "factcheckarabic.afp.com": {
 "name": "في ميزان فرانس برس",
 "site": "https://factcheckarabic.afp.com/",
@@ -313,6 +614,39 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"factcheckcenter.jp": {
+"name": "Japan Fact-check Center",
+"site": "https://factcheckcenter.jp/",
+"country": "JP",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.factcheckcenter.jp/rss/",
+"lang": "ja",
+"status": "ok",
+"fails": 0
+},
+"factcheckcyprus.org": {
+"name": "Fact Check Cyprus",
+"site": "https://factcheckcyprus.org/",
+"country": "CY",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://factcheckcyprus.org/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"factchecker.gr": {
+"name": "Greece Fact Check",
+"site": "https://www.factchecker.gr",
+"country": "GR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.factchecker.gr/feed/",
+"lang": "el",
+"status": "ok",
+"fails": 0
+},
 "factcheckhindi.afp.com": {
 "name": "फ़ैक्ट चेक",
 "site": "https://factcheckhindi.afp.com/",
@@ -324,6 +658,29 @@
 "status": "blocked",
 "fails": 0,
 "retry_after": "2027-02-15"
+},
+"factcheckhub.com": {
+"name": "FactCheckHub[International Centre for Investigative Reporting]",
+"site": "https://factcheckhub.com/",
+"country": "NG",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://factcheckhub.com/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"factcheckni.org": {
+"name": "FactCheckNI",
+"site": "http://factcheckni.org",
+"country": "GB",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "factchequeado.com": {
 "name": "Factchequeado",
@@ -404,6 +761,17 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"factreview.gr": {
+"name": "FactReview",
+"site": "https://factreview.gr/",
+"country": "GR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://factreview.gr/feed/",
+"lang": "el",
+"status": "ok",
+"fails": 0
+},
 "factual.afp.com": {
 "name": "AFP Factual",
 "site": "https://factual.afp.com/",
@@ -415,6 +783,52 @@
 "status": "blocked",
 "fails": 0,
 "retry_after": "2027-02-15"
+},
+"factual.ro": {
+"name": "Funky Citizens",
+"site": "https://www.factual.ro/",
+"country": "RO",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-16"
+},
+"fakenews.pl": {
+"name": "Fundacja \"Przeciwdziałamy Dezinformacji\"",
+"site": "https://fakenews.pl",
+"country": "PL",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://fakenews.pl/feed/",
+"lang": "pl",
+"status": "ok",
+"fails": 0
+},
+"fakenews.rs": {
+"name": "FakeNews Tragač",
+"site": "https://fakenews.rs/",
+"country": "RS",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://fakenews.rs/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"faktisk.no": {
+"name": "Faktisk.no",
+"site": "https://www.faktisk.no",
+"country": "NO",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "nb",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "faktistfakt.com": {
 "name": "Fakt ist Fakt",
@@ -438,6 +852,17 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"faktoje.al": {
+"name": "Faktoje.al",
+"site": "https://faktoje.al/",
+"country": "AL",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://faktoje.al/feed/",
+"lang": "sq",
+"status": "ok",
+"fails": 0
+},
 "fastcheck.cl": {
 "name": "Fast Check",
 "site": "https://fastcheck.cl/",
@@ -449,6 +874,17 @@
 "status": "not_factcheck_feed",
 "fails": 0,
 "retry_after": "2027-02-15"
+},
+"firstcheck.in": {
+"name": "First Check",
+"site": "https://firstcheck.in/",
+"country": "IN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://firstcheck.in/rss.xml",
+"lang": "en",
+"status": "ok",
+"fails": 0
 },
 "fitchef.com": {
 "name": "FitChef",
@@ -485,6 +921,28 @@
 "status": "ok",
 "fails": 0
 },
+"globes.co.il": {
+"name": "The Whistle",
+"site": "https://www.globes.co.il/news/home.aspx?fid=10559",
+"country": "IL",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.globes.co.il/webservice/rss/rssfeeder.asmx/FeederNode?iID=585",
+"lang": "he",
+"status": "ok",
+"fails": 0
+},
+"greenefact.sapo.pt": {
+"name": "Encosta no Horizonte, Lda | Green eFact",
+"site": "https://greenefact.sapo.pt/",
+"country": "PT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://greenefact.sapo.pt/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "grupoanimal.mx": {
 "name": "Animal Político",
 "site": "https://grupoanimal.mx/",
@@ -496,6 +954,18 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"gwaramedia.com": {
+"name": "GWARA MEDIA",
+"site": "https://gwaramedia.com/",
+"country": "UA",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "uk",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "hindi.boomlive.in": {
 "name": "Boom Live",
@@ -521,6 +991,144 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"investigatebel.org": {
+"name": "Belarusian Investigative Center",
+"site": "https://investigatebel.org/",
+"country": "CZ",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-16"
+},
+"istinomer.rs": {
+"name": "Istinomer",
+"site": "http://www.istinomer.rs",
+"country": "RS",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.istinomer.rs/feed/",
+"lang": "sr",
+"status": "ok",
+"fails": 0
+},
+"kallkritikbyran.se": {
+"name": "Källkritikbyrån",
+"site": "https://kallkritikbyran.se/",
+"country": "SE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://kallkritikbyran.se/feed/",
+"lang": "sv",
+"status": "ok",
+"fails": 0
+},
+"kashif.ps": {
+"name": "Palestinian platform for Fact-checking and Media Literacy \"Kashif\"",
+"site": "https://kashif.ps/",
+"country": "PS",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://kashif.ps/feed/",
+"lang": "ar",
+"status": "ok",
+"fails": 0
+},
+"knack.be": {
+"name": "Knack Magazine, Roularta Media Group",
+"site": "https://www.knack.be/nieuws/factchecker/",
+"country": "BE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "error",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"lakmusz.hu": {
+"name": "Lakmusz.hu - Magyar Jeti Zrt.",
+"site": "https://www.lakmusz.hu/",
+"country": "HU",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "hu",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"lighthousejournalism.com": {
+"name": "Lighthousejournalism.com",
+"site": "https://www.lighthousejournalism.com",
+"country": "IN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"litmus-factcheck.jp": {
+"name": "Litmus",
+"site": "https://litmus-factcheck.jp/",
+"country": "JP",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "ja",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"localvoicesliberia.com": {
+"name": "Local Voices Media Network",
+"site": "https://localvoicesliberia.com/",
+"country": "LR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://localvoicesliberia.com/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"lupa.news": {
+"name": "Agência Lupa",
+"site": "https://www.lupa.news",
+"country": "BR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.agencialupa.org/feed/",
+"lang": "pt",
+"status": "ok",
+"fails": 0
+},
+"mafindo.or.id": {
+"name": "MAFINDO",
+"site": "http://www.mafindo.or.id",
+"country": "ID",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://mafindo.or.id/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"maharat-news.com": {
+"name": "Maharat-news Fact-o-meter",
+"site": "http://maharat-news.com/",
+"country": "LB",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "malawi.i-verify.org": {
 "name": "iVerify Malawi",
 "site": "https://malawi.i-verify.org/",
@@ -545,6 +1153,18 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"mfcc.mn": {
+"name": "Nest center for Journalism Innovation and Development NGO",
+"site": "http://www.mfcc.mn/",
+"country": "MN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "mimikama.org": {
 "name": "Mimikama",
 "site": "https://www.mimikama.org/",
@@ -566,6 +1186,53 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"mythdetector.com": {
+"name": "Myth Detector",
+"site": "https://mythdetector.com/",
+"country": "GE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "ka",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"nepalfactcheck.org": {
+"name": "NepalFactCheck.org",
+"site": "https://www.nepalfactcheck.org/",
+"country": "NP",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://nepalfactcheck.org/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"news.abs-cbn.com": {
+"name": "ABS-CBN Fact Check",
+"site": "https://news.abs-cbn.com/factcheck",
+"country": "PH",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-16"
+},
+"newschecker.in": {
+"name": "Newschecker",
+"site": "http://www.newschecker.in",
+"country": "IN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "newsmeter.in": {
 "name": "NewsMeter",
@@ -615,6 +1282,63 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"observers.france24.com": {
+"name": "France 24 - Les Observateurs",
+"site": "http://observers.france24.com/fr/",
+"country": "FR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://observers.france24.com/fr/rss",
+"lang": "fr",
+"status": "ok",
+"fails": 0
+},
+"ostro.si": {
+"name": "Oštro, center for investigative journalism in the Adriatic region",
+"site": "https://www.ostro.si/si/o-projektu-razkrinkavanje",
+"country": "SI",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://ostro.si/feed/",
+"lang": "sl",
+"status": "ok",
+"fails": 0
+},
+"pagellapolitica.it": {
+"name": "Pagella Politica",
+"site": "https://pagellapolitica.it/",
+"country": "IT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "it",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"pigafirimbi.africauncensored.net": {
+"name": "Piga Firimbi",
+"site": "https://pigafirimbi.africauncensored.net",
+"country": "KE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "error",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"poligrafo.sapo.pt": {
+"name": "Polígrafo",
+"site": "https://poligrafo.sapo.pt",
+"country": "PT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://poligrafo.sapo.pt/rss.xml",
+"lang": "pt",
+"status": "ok",
+"fails": 1
+},
 "poligraph.fr": {
 "name": "Poligraph",
 "site": "https://poligraph.fr/",
@@ -626,6 +1350,53 @@
 "status": "blocked",
 "fails": 0,
 "retry_after": "2027-02-15"
+},
+"politica.estadao.com.br": {
+"name": "Estadão Verifica",
+"site": "https://politica.estadao.com.br/blogs/estadao-verifica/",
+"country": "BR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/geral/?body=%7B%22layout%22:%22google-news%22%7D",
+"lang": "pt",
+"status": "ok",
+"fails": 0
+},
+"poynter.org": {
+"name": "MediaWise",
+"site": "https://www.poynter.org/mediawise/",
+"country": "US",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"pravda.org.pl": {
+"name": "Pravda",
+"site": "https://www.pravda.org.pl",
+"country": "PL",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "error",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"pressone.ph": {
+"name": "PressOne.PH",
+"site": "https://pressone.ph/",
+"country": "PH",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "prod-ss.aap.com.au": {
 "name": "AAP",
@@ -709,6 +1480,40 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"raskrikavanje.rs": {
+"name": "Raskrikavanje",
+"site": "https://www.raskrikavanje.rs/",
+"country": "RS",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://raskrikavanje.rs/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
+"raskrinkavanje.me": {
+"name": "Raskrinkavanje.me",
+"site": "https://www.raskrinkavanje.me/",
+"country": "ME",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"rebaltica.lv": {
+"name": "Re:Baltica",
+"site": "https://rebaltica.lv/",
+"country": "LV",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://rebaltica.lv/feed/",
+"lang": "lv",
+"status": "ok",
+"fails": 0
+},
 "rumorscanner.com": {
 "name": "Rumor Scanner Bangladesh",
 "site": "http://rumorscanner.com",
@@ -718,6 +1523,18 @@
 "lang": "bn",
 "status": "ok",
 "fails": 0
+},
+"sawablb.com": {
+"name": "Sawab",
+"site": "https://www.sawablb.com",
+"country": "LB",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "ar",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "science.feedback.org": {
 "name": "Science Feedback",
@@ -742,6 +1559,29 @@
 "status": "error",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"shechecks.net": {
+"name": "Heya tatahaqaq",
+"site": "https://Www.shechecks.net",
+"country": "LY",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://shechecks.net/feed/",
+"lang": "ar",
+"status": "ok",
+"fails": 0
+},
+"sochfactcheck.com": {
+"name": "Soch Videos",
+"site": "https://www.sochfactcheck.com/",
+"country": "PK",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "spunt.mt": {
 "name": "Spunt.mt",
@@ -788,6 +1628,18 @@
 "lang": "en",
 "status": "ok",
 "fails": 0
+},
+"stopfals.md": {
+"name": "Stopfals.md",
+"site": "https://stopfals.md/",
+"country": "MD",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "ro",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 },
 "t4p.co": {
 "name": "التقنية من اجل السلام",
@@ -837,6 +1689,29 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"thedispatch.com": {
+"name": "The Dispatch Fact Check",
+"site": "https://thedispatch.com/",
+"country": "US",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"thejournal.ie": {
+"name": "The Journal FactCheck",
+"site": "http://www.thejournal.ie/factcheck/news/",
+"country": "IE",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "http://www.thejournal.ie/feed/",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "thelallantop.com": {
 "name": "The Lallantop",
 "site": "https://thelallantop.com/",
@@ -873,6 +1748,17 @@
 "fails": 0,
 "retry_after": "2027-02-15"
 },
+"togocheck.com": {
+"name": "TOGOCHECK",
+"site": "https://www.togocheck.com/",
+"country": "TG",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://www.togocheck.com/feed/",
+"lang": "fr",
+"status": "ok",
+"fails": 0
+},
 "truthorfiction.org": {
 "name": "TruthOrFiction.com",
 "site": "http://www.truthorfiction.org",
@@ -883,6 +1769,30 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"tsmliberia.com": {
+"name": "The Stage Media -Liberia",
+"site": "https://tsmliberia.com/",
+"country": "LR",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"univision.com": {
+"name": "El Detector / Univision Noticias",
+"site": "https://www.univision.com/eldetector",
+"country": "US",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-16"
 },
 "verifica.efe.com": {
 "name": "EFE Verifica",
@@ -942,6 +1852,18 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"viralcheck.pt": {
+"name": "Viral Check",
+"site": "https://viralcheck.pt/",
+"country": "PT",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "pt",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
 "vishvasnews.com": {
 "name": "विश्वास न्यूज",
 "site": "https://vishvasnews.com/",
@@ -950,6 +1872,40 @@
 "origin": "google",
 "feed": "https://www.vishvasnews.com/feed/",
 "lang": "en",
+"status": "ok",
+"fails": 0
+},
+"vistinomer.mk": {
+"name": "Metamorphosis Foundation",
+"site": "http://www.vistinomer.mk",
+"country": "MK",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://vistinomer.mk/feed/",
+"lang": "mk",
+"status": "ok",
+"fails": 0
+},
+"voxukraine.org": {
+"name": "Vox Ukraine",
+"site": "https://voxukraine.org/uk/voxcheck/",
+"country": "UA",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "uk",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
+},
+"wojownicyklawiatury.pl": {
+"name": "Wojownicy Klawiatury",
+"site": "https://wojownicyklawiatury.pl",
+"country": "PL",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "https://wojownicyklawiatury.pl/feed/",
+"lang": "pl",
 "status": "ok",
 "fails": 0
 },
@@ -962,7 +1918,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 0
+"fails": 2
 },
 "yoopyup.com": {
 "name": "يوب يوب",
@@ -975,5 +1931,17 @@
 "status": "no_feed",
 "fails": 0,
 "retry_after": "2026-12-17"
+},
+"youturn.in": {
+"name": "Youturn",
+"site": "https://youturn.in/",
+"country": "IN",
+"checked": "2026-11-18",
+"origin": "partnerfinder",
+"feed": "",
+"lang": "en",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-18"
 }
 }
