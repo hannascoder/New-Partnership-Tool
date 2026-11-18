@@ -217,10 +217,14 @@ def main():
     # two views: by the country of the fact-checker ("publisher") and by the country the fact-check is about ("about")
     window = {i["date"] for i in items}
 
+    group_of = {t["qid"]: t["category"] for t in topics}
+
     def make_series(name, countries_of):
         series = defaultdict(int)
         for i in items:
-            for q in (i["topics"] + [""]):
+            # one row per topic, one for all topics (""), and one per topic GROUP ("g:health"): a fact-check counts once per group
+            groups = sorted({"g:" + group_of[q] for q in i["topics"] if q in group_of})
+            for q in (i["topics"] + [""] + groups):
                 for c in countries_of(i):
                     series[(i["date"], q, c, 1 if i["un"] else 0)] += 1
         old = load_json(CACHE / name, [])
