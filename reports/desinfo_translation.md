@@ -1,32 +1,32 @@
 # Disinformation monitor: automatic English translation
 
-Run: 2026-11-18T15:37:18Z | Argos Translate (open source) | status: stopped at the time budget (the rest follows in the next run)
+Run: 2026-11-18T16:45:18Z | Argos Translate (open source) | status: ok
 
-Translated in this run: 636 | in memory: 3604 | waiting: 258
+Translated in this run: 256 | in memory: 3860 | waiting: 21
 
 ## Time per stage
 
-- start Argos and read the model index: 3 s (100 models listed)
+- start Argos and read the model index: 2 s (100 models listed)
 - model bn -> en: 0 s (ready)
+- model ar -> en: 0 s (ready)
 - model es -> en: 0 s (ready)
+- model pt -> en: 0 s (ready)
 - model ru -> en: 0 s (ready)
 - model de -> en: 0 s (ready)
 - model fr -> en: 0 s (ready)
-- model ar -> en: 0 s (ready)
-- model pt -> en: 0 s (ready)
 - model hi -> en: 0 s (ready)
 - model zh -> en: 0 s (ready)
-- translate titles: 902 s (636 titles)
+- translate titles: 71 s (256 titles)
 
 | Language | Translated now | Without a model (left untranslated) |
 |---|---|---|
-| ar | 130 | 0 |
-| de | 4 | 0 |
-| es | 292 | 0 |
-| fr | 69 | 0 |
-| hi | 30 | 0 |
-| pt | 86 | 0 |
-| ru | 22 | 0 |
-| zh | 3 | 0 |
+| ar | 29 | 0 |
+| de | 2 | 0 |
+| es | 110 | 0 |
+| fr | 23 | 0 |
+| hi | 39 | 0 |
+| pt | 42 | 0 |
+| ru | 10 | 0 |
+| zh | 1 | 0 |
 
 Only titles are translated, by machine; the original is always shown first on the page.
