@@ -140,3 +140,11 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
 - Excel for the owner: `python pipeline/desinfo/make_topic_mapping_xlsx.py` -> `docs/desinfo_topic_mapping.xlsx` (yellow columns E/F with drop-downs);
   `python pipeline/desinfo/import_topic_mapping.py [file]` reads the choices back.
 - Owner's remark: the five Partner Finder groups (People, Planet, ...) are too coarse, so the Excel no longer shows them; topics and sub-topics are shown instead.
+
+## 18.11.2026 (night): owner's answers on the topic mapping
+- Narrow/broad default by size: a sub-topic with fewer than `partners.narrow_min_outlets` (150) media in the Partner Finder worldwide starts on
+  "broad" (`site/data/desinfo/partner_topic_sizes.json`, written by `partners.py`); the user can switch.
+- Second topic (`also:` in `config/desinfo_partner_topics.yaml`, 13 entries, e.g. Air pollution = climate + health/pollution_health; Deepfake also fact_checking;
+  LGBTQ rights and Same-sex marriage also gender_equality/gender_identity): the link selects the first OR the second topic (`&tp=a,b&off=a:...;b:...`).
+- "Population growth" -> cities. UN institution topics (WHO, UNICEF ...) stay on the subject topic (owner: no UN-profile filter).
+- Excel has columns F-I (topic, sub-topic, second topic, sub-topic of the second topic; "none" removes the second topic); importer updated and tested.

@@ -246,6 +246,7 @@ def main():
                            "sub": r["intermediate_region"] or r["subregion"]} for r in valid.values()},
               open(OUT / "countries.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump({"red_marker": CFG["red_marker"], "keep_days": CFG["keep_days"], "gap": CFG["gap"],
+               "partner_narrow_min": CFG["partners"]["narrow_min_outlets"],
                "suggestions": yaml.safe_load(open(ROOT / "config" / "desinfo_gap_suggestions.yaml", encoding="utf-8"))},
               open(OUT / "config.json", "w"), indent=1)
     # Google Trends per country (Atlas data, attribution "Data source: Google Trends"): only the query text and Google's bucket
@@ -256,15 +257,25 @@ def main():
     pf = {t["id"]: [x["id"] for x in t.get("subtopics", [])]
           for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])}
     ptop = {}
-    for t in topics:
-        tp = (pm.get("map") or {}).get(t["label_en"])
+    also = pm.get("also") or {}
+
+    def check(label, tp, sub):
+        """(topic, sub) if valid in the Partner Finder, else (None, '')."""
         if tp not in pf:
-            continue
-        sub = (pm.get("sub") or {}).get(t["label_en"], "")
+            return None, ""
         if sub and sub not in pf[tp]:
-            print(f"WARNING: sub-topic '{sub}' of '{t['label_en']}' does not belong to the Partner Finder topic '{tp}': ignored")
+            print(f"WARNING: sub-topic '{sub}' of '{label}' does not belong to the Partner Finder topic '{tp}': ignored")
             sub = ""
-        ptop[t["qid"]] = [tp, sub]
+        return tp, sub or ""
+
+    for t in topics:
+        lab = t["label_en"]
+        tp, sub = check(lab, (pm.get("map") or {}).get(lab), (pm.get("sub") or {}).get(lab, ""))
+        if not tp:
+            continue
+        a = also.get(lab) or {}
+        tp2, sub2 = check(lab, a.get("topic"), a.get("sub", "")) if a else (None, "")
+        ptop[t["qid"]] = [tp, sub] + ([tp2, sub2] if tp2 and tp2 != tp else [])
     sublabels = {x["id"]: x["label"].split(" (")[0] for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])
                  for x in t.get("subtopics", [])}          # short name of each sub-topic for the switch on the page
     json.dump({"topics": ptop, "subs": pf, "sublabels": sublabels}, open(OUT / "partner_topics.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
