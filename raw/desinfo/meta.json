@@ -1,14 +1,14 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-19T14:09:02Z",
-  "records": 1390,
+  "fetched_at": "2026-11-19T16:31:35Z",
+  "records": 1363,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 216,
+      "items": 219,
       "requests": 1969,
       "errors": [],
       "max_age_days": 14
@@ -105,8 +105,8 @@
         "url": "https://fatabyyano.net/feed/"
       },
       "Colombiacheck": {
-        "ok": true,
-        "items": 20,
+        "ok": false,
+        "error": "failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden)",
         "url": "https://colombiacheck.com/feed"
       },
       "Chequeado": {
@@ -121,8 +121,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 58,
-      "failed": 1,
+      "ok": 57,
+      "failed": 2,
       "known": 168
     }
   }
