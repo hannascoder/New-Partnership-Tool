@@ -178,3 +178,9 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   First one: `docs/case_study_nepal_floods.pdf` (148 fact-checks, first 26.08.2026, peak 03.09.2026 = 20 in one day; 10 UN articles, none in Hindi).
 - `reports/desinfo_coverage.md` now has "Coverage by region (UN M49)" and lists the countries with no data at all per region (Africa: 15 of 54 countries
   with fact-checks by a fact-checker of the country, 33 named in fact-checks, 21 with no data).
+
+## 18.11.2026 (night): US elections case study, request to African fact-checkers
+- `case_study.py --profile elections` (claim types for elections; UN articles matched to the TOPIC); `docs/case_study_us_elections.pdf` (144 fact-checks since 01.10.2026,
+  peak 04.11.2026 = 24, 26 fact-checkers; Spanish as large as English; 6 UN articles on elections in the period, none in Spanish about the US).
+  Rule: an item that names other countries only is not counted for the country, even if its fact-checker sits there.
+- `docs/anfrage_faktenchecker_afrika.md`: draft (English, placeholders) of a request to Africa Check, PesaCheck and others for a feed, API or written permission.
