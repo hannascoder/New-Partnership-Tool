@@ -21,6 +21,10 @@ on:
         description: "Discover: look for new fact-checkers and their feeds now"
         type: boolean
         default: false
+      brief:
+        description: "Brief: make the weekly brief now (and send it by e-mail if the secrets are set)"
+        type: boolean
+        default: false
   push:   # test runs on the development branch (only changes of the code, never of the data)
     branches: ["claude/quirky-albattani-um2yqd"]
     paths: ["pipeline/fetch/desinfo*.py", "pipeline/fetch/un_content.py", "pipeline/desinfo/**", "config/desinfo*.yaml", "config/factcheck_*.yaml", "config/un_sources.yaml", ".github/workflows/desinfo.yml"]
@@ -84,13 +88,23 @@ jobs:
           python pipeline/desinfo/build.py
           python pipeline/desinfo/build_un.py
           python pipeline/desinfo/partners.py
+      - name: Weekly brief (Mondays, or on request)
+        continue-on-error: true
+        env:
+          BRIEF: ${{ github.event.inputs.brief }}
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "$BRIEF" = "true" ]; then
+            python pipeline/desinfo/weekly_brief.py > /dev/null
+          else
+            echo "not a Monday: no brief"
+          fi
       - name: Save
         run: |
           git config user.name "partner-finder-bot"
           git config user.email "partner-finder-bot@users.noreply.github.com"
           for f in raw/desinfo raw/desinfo_atlas raw/un_content cache/desinfo_items.json cache/desinfo_series.json \
                    cache/desinfo_series_about.json cache/desinfo_feeds.json cache/un_items.json cache/un_feeds.json cache/desinfo_translations.json reports/desinfo_translation.md \
-                   site/data/desinfo reports/desinfo_sources.md reports/desinfo_coverage.md; do
+                   site/data/desinfo reports/desinfo_sources.md reports/desinfo_coverage.md reports/weekly_brief.md site/brief.html; do
             if [ -e "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
@@ -101,6 +115,20 @@ jobs:
             sleep $((i * 10))
           done
           echo "could not push" >&2; exit 1
+      - name: Send the weekly brief by e-mail (Mondays, only if the secrets are set)
+        continue-on-error: true
+        env:
+          BRIEF: ${{ github.event.inputs.brief }}
+          BRIEF_SMTP_HOST: ${{ secrets.BRIEF_SMTP_HOST }}
+          BRIEF_SMTP_PORT: ${{ secrets.BRIEF_SMTP_PORT }}
+          BRIEF_SMTP_USER: ${{ secrets.BRIEF_SMTP_USER }}
+          BRIEF_SMTP_PASS: ${{ secrets.BRIEF_SMTP_PASS }}
+          BRIEF_FROM: ${{ secrets.BRIEF_FROM }}
+          BRIEF_TO: ${{ secrets.BRIEF_TO }}
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "$BRIEF" = "true" ]; then
+            python pipeline/desinfo/send_brief.py
+          fi
       - name: Open an issue if it failed
         if: failure()
         env:

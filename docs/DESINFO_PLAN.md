@@ -184,3 +184,13 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   peak 04.11.2026 = 24, 26 fact-checkers; Spanish as large as English; 6 UN articles on elections in the period, none in Spanish about the US).
   Rule: an item that names other countries only is not counted for the country, even if its fact-checker sits there.
 - `docs/anfrage_faktenchecker_afrika.md`: draft (English, placeholders) of a request to Africa Check, PesaCheck and others for a feed, API or written permission.
+
+## 19.11.2026: weekly brief (owner: "c" = automatic weekly short report for the team)
+- `pipeline/desinfo/weekly_brief.py` writes `reports/weekly_brief.md`, `site/brief.html` (button "Weekly brief" on the monitor page) and `site/data/desinfo/brief.json`:
+  week numbers, most fact-checked topics, rising topics (share rule, same sources only), where / languages, "in focus" topic with 3 examples, content gaps of the week
+  with possible UN contacts, data health (feeds working, new sources, warnings if the data looks stopped).
+- A comparison with earlier weeks is shown only 8 weeks after the first complete daily collection (`brief:` in `config/desinfo.yaml`; from 13.01.2027):
+  the archive before 18.11.2026 is incomplete and adding sources makes every week look like an explosion.
+- It runs on Mondays inside the daily workflow (or with the workflow input "brief"). E-mail: `pipeline/desinfo/send_brief.py` sends text + html by SMTP
+  if the secrets BRIEF_SMTP_HOST, BRIEF_SMTP_PORT, BRIEF_SMTP_USER, BRIEF_SMTP_PASS, BRIEF_FROM, BRIEF_TO are set (recipients in a secret, never in the public repository);
+  without them nothing is sent and the run still succeeds. Owner still to decide: which sending account / channel.
