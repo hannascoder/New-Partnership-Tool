@@ -506,7 +506,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 3
+"fails": 0
 },
 "estadao.com.br": {
 "name": "Estadão",
@@ -930,7 +930,7 @@
 "feed": "https://www.globes.co.il/webservice/rss/rssfeeder.asmx/FeederNode?iID=585",
 "lang": "he",
 "status": "ok",
-"fails": 1
+"fails": 0
 },
 "greenefact.sapo.pt": {
 "name": "Encosta no Horizonte, Lda | Green eFact",
@@ -1918,7 +1918,7 @@
 "feed": "https://leadstories.com/atom.xml",
 "lang": "en",
 "status": "ok",
-"fails": 3
+"fails": 0
 },
 "yoopyup.com": {
 "name": "يوب يوب",

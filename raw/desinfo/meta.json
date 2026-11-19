@@ -1,15 +1,15 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-18T22:18:31Z",
-  "records": 1299,
+  "fetched_at": "2026-11-19T14:09:02Z",
+  "records": 1390,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 206,
-      "requests": 1952,
+      "items": 216,
+      "requests": 1969,
       "errors": [],
       "max_age_days": 14
     },
@@ -46,7 +46,7 @@
       },
       "BOOM": {
         "ok": true,
-        "items": 3,
+        "items": 4,
         "url": "https://www.boomlive.in/feed"
       },
       "Vera Files": {
@@ -75,8 +75,8 @@
         "url": "https://www.snopes.com/feed/"
       },
       "Lead Stories": {
-        "ok": false,
-        "error": "XML or text declaration not at start of entity: line 65, column 0",
+        "ok": true,
+        "items": 15,
         "url": "https://leadstories.com/atom.xml"
       },
       "Correctiv": {
@@ -105,8 +105,8 @@
         "url": "https://fatabyyano.net/feed/"
       },
       "Colombiacheck": {
-        "ok": false,
-        "error": "failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden)",
+        "ok": true,
+        "items": 20,
         "url": "https://colombiacheck.com/feed"
       },
       "Chequeado": {
@@ -121,8 +121,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 55,
-      "failed": 4,
+      "ok": 58,
+      "failed": 1,
       "known": 168
     }
   }

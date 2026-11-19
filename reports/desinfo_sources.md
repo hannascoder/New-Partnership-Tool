@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-18T22:18:31Z  |  items in the site data: 6781
+Fetched: 2026-11-19T14:09:02Z  |  items in the site data: 6932
 
 ## Google Fact Check Tools API
-- {'items': 206, 'requests': 1952, 'errors': [], 'max_age_days': 14}
+- {'items': 216, 'requests': 1969, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -14,26 +14,26 @@ Fetched: 2026-11-18T22:18:31Z  |  items in the site data: 6781
 | Maldita.es | yes | 50 |  |
 | Newtral | yes | 10 |  |
 | Aos Fatos | yes | 20 |  |
-| BOOM | yes | 3 |  |
+| BOOM | yes | 4 |  |
 | Vera Files | NO |  | syntax error: line 1, column 0 |
 | Teyit | yes | 10 |  |
 | PolitiFact | yes | 20 |  |
 | FactCheck.org | yes | 10 |  |
 | Snopes | yes | 20 |  |
-| Lead Stories | NO |  | XML or text declaration not at start of entity: line 65, column 0 |
+| Lead Stories | yes | 15 |  |
 | Correctiv | yes | 1 |  |
 | Les Surligneurs / AFP Factuel | NO |  | failed after 2 tries: https://factuel.afp.com/rss.xml (HTTP Error 403: Forbidden) |
 | PesaCheck | NO |  | failed after 2 tries: https://pesacheck.org/feed (HTTP Error 403: Forbidden) |
 | Dubawa | yes | 10 |  |
 | Fatabyyano | yes | 10 |  |
-| Colombiacheck | NO |  | failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden) |
+| Colombiacheck | yes | 20 |  |
 | Chequeado | yes | 50 |  |
 | Cekfakta / Mafindo | yes | 10 |  |
 
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-18T22:24:33Z | UN articles in the last 12 months: 1897
+Fetched: 2026-11-19T14:15:08Z | UN articles in the last 12 months: 1925
 
 | Source | Works | Items | Note |
 |---|---|---|---|
@@ -52,11 +52,11 @@ Fetched: 2026-11-18T22:24:33Z | UN articles in the last 12 months: 1897
 | WHO (es) | yes | 25 |  |
 | WHO (fr) | yes | 25 |  |
 | UNICEF (en) | NO | 0 | failed after 2 tries: https://www.unicef.org/press-releases/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-17, next search later) |
-| UNHCR (en) | NO | 0 | failed after 2 tries: https://www.unhcr.org/rss/news.xml (HTTP Error 403: Forbidden) (searched on 2026-11-17, next search later) |
+| UNHCR (en) | NO | 0 | failed after 2 tries: https://www.unhcr.org/rss/news.xml (HTTP Error 404: Not Found) (searched on 2026-11-17, next search later) |
 | FAO (en) | NO | 0 | failed after 2 tries: https://www.fao.org/newsroom/rss-feed/en/ (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
 | WFP (en) | NO | 0 | failed after 2 tries: https://www.wfp.org/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
 | UNEP (en) | NO | 0 | failed after 2 tries: https://www.unep.org/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
-| UNESCO (en) | NO | 0 | failed after 2 tries: https://www.unesco.org/en/rss.xml (Remote end closed connection without response) (searched on 2026-11-18, next search later) |
+| UNESCO (en) | NO | 0 | failed after 2 tries: https://www.unesco.org/en/rss.xml (HTTP Error 404: Not Found) (searched on 2026-11-18, next search later) |
 | OHCHR (en) | yes | 10 |  |
 | UNDP (en) | NO | 0 | failed after 2 tries: https://www.undp.org/rss.xml (HTTP Error 403: Forbidden) (searched on 2026-11-18, next search later) |
 | UN Women (en) | NO | 0 | failed after 2 tries: https://www.unwomen.org/en/rss-feeds/news (HTTP Error 403: Forbidden) (searched on 2026-11-18, next search later) |
