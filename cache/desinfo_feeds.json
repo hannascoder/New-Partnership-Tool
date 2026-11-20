@@ -183,7 +183,7 @@
 "feed": "https://boliviaverifica.bo/feed/",
 "lang": "es",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "businessnews.com.tn": {
 "name": "BNCHECK",
@@ -1337,7 +1337,7 @@
 "feed": "https://poligrafo.sapo.pt/rss.xml",
 "lang": "pt",
 "status": "ok",
-"fails": 2
+"fails": 3
 },
 "poligraph.fr": {
 "name": "Poligraph",
