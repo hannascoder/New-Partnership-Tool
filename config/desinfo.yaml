@@ -51,6 +51,10 @@ translation:                # automatic English translation of fact-check titles
 # also used as the country of the fact-check for the map "where the fact-checker works" (marked country_from = about).
 international_publishers: [afp.com]
 
+brief:                      # weekly brief (pipeline/desinfo/weekly_brief.py)
+  daily_collection_start: 2026-11-18   # the first day with complete daily collection (earlier weeks of the archive are incomplete)
+  min_weeks_for_comparison: 8          # the comparison with earlier weeks is shown only after this many weeks of daily collection
+
 keep_days: 365              # single items older than this are deleted; the daily counts are kept for good
 red_marker:                 # "strongly rising" topic (owner 17.11.2026; refined 18.11.2026: SHARES, not counts)
   factor: 2.0               # share of all fact-checks in the last 7 days > 2x its share in the weeks before ...
