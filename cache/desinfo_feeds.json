@@ -151,6 +151,17 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"atonibai.net": {
+"name": "Paraluman News",
+"site": "https://www.atonibai.net",
+"country": "PH",
+"checked": "2026-11-23",
+"origin": "wikidata",
+"feed": "https://www.atonibai.net/blog-feed.xml",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "balobakicheck.com": {
 "name": "BALOBAKI CHECK",
 "site": "https://www.balobakicheck.com",
@@ -183,7 +194,7 @@
 "feed": "https://boliviaverifica.bo/feed/",
 "lang": "es",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "businessnews.com.tn": {
 "name": "BNCHECK",
@@ -818,6 +829,18 @@
 "status": "ok",
 "fails": 0
 },
+"faktencheck.afp.com": {
+"name": "AFP Faktencheck",
+"site": "https://faktencheck.afp.com/",
+"country": "",
+"checked": "2026-11-23",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-21"
+},
 "faktisk.no": {
 "name": "Faktisk.no",
 "site": "https://www.faktisk.no",
@@ -1187,6 +1210,17 @@
 "fails": 0,
 "retry_after": "2026-12-17"
 },
+"myparaluman.ph": {
+"name": "Paraluman News",
+"site": "https://www.myparaluman.ph",
+"country": "PH",
+"checked": "2026-11-23",
+"origin": "wikidata",
+"feed": "https://www.myparaluman.ph/blog-feed.xml",
+"lang": "en",
+"status": "ok",
+"fails": 0
+},
 "mythdetector.com": {
 "name": "Myth Detector",
 "site": "https://mythdetector.com/",
@@ -1293,6 +1327,18 @@
 "status": "ok",
 "fails": 0
 },
+"ohmynews.com": {
+"name": "오마이뉴스",
+"site": "https://ohmynews.com/",
+"country": "",
+"checked": "2026-11-23",
+"origin": "google",
+"feed": "",
+"lang": "ko",
+"status": "no_feed",
+"fails": 0,
+"retry_after": "2026-12-23"
+},
 "ostro.si": {
 "name": "Oštro, center for investigative journalism in the Adriatic region",
 "site": "https://www.ostro.si/si/o-projektu-razkrinkavanje",
@@ -1316,6 +1362,18 @@
 "fails": 0,
 "retry_after": "2026-12-18"
 },
+"periksafakta.afp.com": {
+"name": "Periksa Fakta",
+"site": "https://periksafakta.afp.com/",
+"country": "",
+"checked": "2026-11-23",
+"origin": "google",
+"feed": "",
+"lang": "",
+"status": "blocked",
+"fails": 0,
+"retry_after": "2027-02-21"
+},
 "pigafirimbi.africauncensored.net": {
 "name": "Piga Firimbi",
 "site": "https://pigafirimbi.africauncensored.net",
@@ -1337,7 +1395,7 @@
 "feed": "https://poligrafo.sapo.pt/rss.xml",
 "lang": "pt",
 "status": "ok",
-"fails": 5
+"fails": 6
 },
 "poligraph.fr": {
 "name": "Poligraph",
@@ -1521,6 +1579,17 @@
 "checked": "2026-11-17",
 "feed": "https://rumorscanner.com/feed",
 "lang": "bn",
+"status": "ok",
+"fails": 0
+},
+"saristorynetwork.com": {
+"name": "Paraluman News",
+"site": "https://www.saristorynetwork.com",
+"country": "PH",
+"checked": "2026-11-23",
+"origin": "wikidata",
+"feed": "https://www.saristorynetwork.com/blog-feed.xml",
+"lang": "en",
 "status": "ok",
 "fails": 0
 },

@@ -1,65 +1,29 @@
 {
- "from": "2026-11-13",
- "to": "2026-11-19",
- "week": 869,
- "prev_avg": 217.2,
- "rising": [
-  [
-   "Freedom of the press",
-   6,
-   5.523305084745763
-  ],
-  [
-   "Energy poverty",
-   11,
-   5.063029661016949
-  ],
-  [
-   "United Nations",
-   7,
-   4.29590395480226
-  ],
-  [
-   "Corruption",
-   5,
-   3.068502824858757
-  ],
-  [
-   "United Nations Climate Change conference",
-   5,
-   3.068502824858757
-  ],
-  [
-   "Children's rights",
-   13,
-   2.6593691148775895
-  ],
-  [
-   "Disinformation",
-   28,
-   2.454802259887006
-  ],
-  [
-   "Misinformation",
-   23,
-   2.228702051739518
-  ]
- ],
+ "from": "2026-11-17",
+ "to": "2026-11-23",
+ "week": 1299,
+ "prev_avg": 279.8,
+ "rising": [],
  "gaps": [
   [
    "Misinformation",
-   25,
+   30,
    0
   ],
   [
    "Energy poverty",
-   13,
-   0
+   10,
+   1
   ],
   [
    "Fake news",
-   6,
+   8,
    1
+  ],
+  [
+   "ChatGPT",
+   5,
+   0
   ]
  ],
  "warnings": []
