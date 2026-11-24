@@ -70,3 +70,9 @@ Without the Sheet the page shows DEMO data (example.org). One mail per selected 
 group in BCC, reminder switch, deadline = today + days. Not yet tested on Cloudflare (Worker deploy + Access on /api).
 Next: F1b (Google Cloud service account, share Sheet, Cloudflare secrets GOOGLE_SERVICE_ACCOUNT_JSON and
 FEEDBACK_SHEET_ID) and the Model UN suggestion list into the Sheet.
+
+## Model UN starter list (24.11.2026)
+`config/feedback_sheet_modelun.csv` (24 entries, import into the Sheet tab "Contacts"). Public organisation addresses read
+from the group websites for Zeppelin (mun@zeppelin-university.net), FU Berlin (programme office) and Münster (MUIMUN).
+Bamberg, LMU, Jena: only university-wide addresses -> not copied. Erfurt, CBS: page not reachable. Rest: no address yet.
+Note: the cloud session's network allow-list (environment "New-Partnership-Tool") got the German university hosts added.
