@@ -40,7 +40,7 @@
         <h2 class="sect">Which country?</h2>
         <label class="check"><input type="radio" name="basis" id="basis-pub" checked> Where the fact-checker works</label>
         <label class="check"><input type="radio" name="basis" id="basis-about"> Country the fact-check is about</label>
-        <p class="hint">“About” is read from country names in the headline and the claim, in many languages. It reaches countries without their own fact-checker.</p>
+        <p class="hint">“About” is read from country names in the headline and the claim, in many languages. It reaches countries without their own fact-checker. For international services such as AFP, the one country named in the text counts as the fact-checker's country.</p>
       </section>
       <section class="fgroup">
         <h2 class="sect">Region / Country</h2>
@@ -83,12 +83,23 @@
     </div>
 
     <div class="stats" id="stats"></div>
+    <div class="export-row" id="exportRow">
+      <span class="tl-label">Export this view</span>
+      <button class="btn-quiet" type="button" data-fmt="pdf">PDF</button>
+      <button class="btn-quiet" type="button" data-fmt="docx">Word</button>
+      <button class="btn-quiet" type="button" data-fmt="xlsx">Excel</button>
+      <a class="btn-quiet" href="brief.html" style="text-decoration:none">Weekly brief</a>
+      <span class="hint" id="exportMsg">Topics, countries, content gaps, fact-checks and local voices for the chosen window and filters.</span>
+    </div>
     <div class="notice" id="notice" hidden></div>
 
     <section id="view-trends">
       <h2 class="sect">Topics in this window</h2>
-      <p class="hint">Number of fact-checks per topic. “Rising” = more than twice the usual weekly number (see the note on the red marker).</p>
+      <p class="hint">Number of fact-checks per topic. “Rising” = the topic’s share of all fact-checks this week is more than twice its share in the 4 weeks before (and at least 5 this week). Using shares keeps it fair when the amount of collected data changes.</p>
       <div id="trendList" class="trend-list"></div>
+      <h2 class="sect" style="margin-top:20px">Countries with the most fact-checks in this window</h2>
+      <p class="hint">Click a country to see its fact-checks and the local voices already in the Partner Finder.</p>
+      <div id="countryRank" class="chips"></div>
     </section>
 
     <section id="view-map" hidden>
@@ -110,6 +121,8 @@
 
     <section id="unBox" class="card unbox" hidden></section>
 
+    <section id="partnersBox" class="card partners" hidden aria-label="Local voices in the Partner Finder"></section>
+
     <section aria-label="Fact-checks">
       <h2 class="sect" id="itemsTitle">Fact-checks</h2>
       <div id="items" class="items"></div>
@@ -121,6 +134,7 @@
 </div>
 
 <script src="assets/vendor/leaflet-1.9.4/leaflet.js"></script>
+<script src="assets/desinfo-export.js"></script>
 <script src="assets/desinfo.js"></script>
 </body>
 </html>

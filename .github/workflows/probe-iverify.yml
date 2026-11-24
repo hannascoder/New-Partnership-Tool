@@ -1,0 +1,35 @@
+# One-off look at the UNDP iVerify public pages and the country sites they lead to (owner's request 18.11.2026).
+# Result: reports/iverify_probe.md. Start by hand: Actions -> "Probe iVerify" -> Run workflow.
+name: Probe iVerify
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/quirky-albattani-um2yqd"]
+    paths: [".github/workflows/probe-iverify.yml", "pipeline/fetch/iverify_probe.py"]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Look at the pages
+        run: cd pipeline/fetch && python iverify_probe.py
+      - name: Save the report
+        run: |
+          git config user.name "partner-finder-bot"
+          git config user.email "partner-finder-bot@users.noreply.github.com"
+          git add reports/iverify_probe.md
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "iVerify probe report $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4; do
+            git pull -q --rebase -X theirs origin "$GITHUB_REF_NAME" && git push -q origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 10))
+          done
+          exit 1

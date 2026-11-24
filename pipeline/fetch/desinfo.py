@@ -143,6 +143,10 @@ def local(tag):
 def feed_items(feed):
     body = get(feed["url"], accept="application/rss+xml, application/atom+xml, application/xml, text/xml",
                tries=2, timeout=40)
+    return feed_items_from_text(body, feed)
+
+
+def feed_items_from_text(body, feed):
     try:
         root = ET.fromstring(body.encode("utf-8"))
     except ET.ParseError:       # e.g. "unbound prefix": a feed that uses a namespace prefix without declaring it

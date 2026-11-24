@@ -106,3 +106,91 @@ Answered by the owner on 17.11.2026 (see above). Remaining: see chat.
   group in `config/desinfo_gap_suggestions.yaml`; language check (languages of the fact-checks vs UN articles).
 - Known limits: demonyms (Bangladeshi, Venezuelan) are not read as countries; UN feed addresses were guessed and are
   checked at every run (reports/desinfo_sources.md); "about" and topics are rule based.
+
+## Built 17.11.2026 (evening): translation and link to the Partner Finder (D5)
+- Automatic English translation of titles: `pipeline/desinfo/translate.py` (Argos Translate, open source, models cached
+  between runs; memory `cache/desinfo_translations.json`; report `reports/desinfo_translation.md`). Translations also feed
+  topic and country detection.
+- Local voices per country (owner: fact-checkers, community media, well-known news outlets, AND organisations & NGOs):
+  `pipeline/desinfo/partners.py` -> `site/data/desinfo/partners.json` (top 6 per group, `config/desinfo.yaml` `partners`);
+  box on the page for a chosen country with links that open the Partner Finder pre-filtered (`#c=ESP&ot=fact_checker`,
+  `ngos.html#c=ESP`). Country ranking list "Countries with the most fact-checks" on the trends view.
+- Idea left for later: Partner Finder cards could show "much disinformation in this country (topic X)"; topic mapping between
+  the Atlas topics (183) and the Partner Finder topics (38) would be needed for topic-specific links.
+
+## Built 18.11.2026: export, topic links, AFP country, iVerify (owner: "a ok, b sehr gut, c ok, iVerify einbauen")
+- **Export (c):** buttons PDF / Word / Excel on the page (`site/assets/desinfo-export.js`, same look as the Partner Finder export,
+  runs in the browser): topics, countries, content gaps with suggestions and UN links, fact-checks (newest 300, English translation),
+  local voices of a chosen country, filters, data date, disclaimer. In the PDF, titles in scripts the font lacks (Arabic, Hindi,
+  Chinese ...) show the English translation; Word and Excel keep the original.
+- **Topic links (a):** `config/desinfo_partner_topics.yaml` maps 182 of the 183 Atlas topics to a Partner Finder topic (first proposal, owner to review);
+  "Open all ... in the Partner Finder" adds `&tp=<topic>`.
+- **Country of international services (b):** `international_publishers` in `config/desinfo.yaml` (AFP): when the text names exactly one country it is
+  used as the fact-checker's country (countries by fact-checker: 34 -> 67).
+- **UNDP iVerify:** each country runs its own instance (open source, digital public good). `config/iverify_sites.yaml` lists the instances
+  (so far Malawi and Zambia, from public sources); the weekly discovery looks for the feed the site announces; items from these sites get the badge
+  "iVerify (UNDP)" and the instance's country. Open: the UNDP iVerify team knows which instances are live and public; every line added
+  there is picked up without code. No RSS or API for iVerify is documented in public sources (checked 18.11.2026; UNDP and DPG registry pages
+  were not reachable from the dev sandbox).
+
+## 18.11.2026 (evening): topic mapping down to sub-topics
+- `config/desinfo_partner_topics.yaml` now has `map` (Atlas topic -> Partner Finder topic, 182 of 183) and `sub` (130 of them also a sub-topic).
+  The link on the page selects only that sub-topic (`&tp=<topic>&off=<topic>:<other sub-topics>`; checked: the Partner Finder takes it).
+  The build checks that a sub-topic belongs to its topic and writes `site/data/desinfo/partner_topics.json`.
+- Excel for the owner: `python pipeline/desinfo/make_topic_mapping_xlsx.py` -> `docs/desinfo_topic_mapping.xlsx` (yellow columns E/F with drop-downs);
+  `python pipeline/desinfo/import_topic_mapping.py [file]` reads the choices back.
+- Owner's remark: the five Partner Finder groups (People, Planet, ...) are too coarse, so the Excel no longer shows them; topics and sub-topics are shown instead.
+
+## 18.11.2026 (night): owner's answers on the topic mapping
+- Narrow/broad default by size: a sub-topic with fewer than `partners.narrow_min_outlets` (150) media in the Partner Finder worldwide starts on
+  "broad" (`site/data/desinfo/partner_topic_sizes.json`, written by `partners.py`); the user can switch.
+- Second topic (`also:` in `config/desinfo_partner_topics.yaml`, 13 entries, e.g. Air pollution = climate + health/pollution_health; Deepfake also fact_checking;
+  LGBTQ rights and Same-sex marriage also gender_equality/gender_identity): the link selects the first OR the second topic (`&tp=a,b&off=a:...;b:...`).
+- "Population growth" -> cities. UN institution topics (WHO, UNICEF ...) stay on the subject topic (owner: no UN-profile filter).
+- Excel has columns F-I (topic, sub-topic, second topic, sub-topic of the second topic; "none" removes the second topic); importer updated and tested.
+
+## 18.11.2026 (late): health and climate second topics (owner: "alles ja", also COVID-19 and Pandemic)
+- 24 more second topics in `config/desinfo_partner_topics.yaml` (37 in total): vaccines/COVID-19/pandemic also "Access to health care",
+  contraception/family planning also SRHR, obesity also nutrition, malnutrition also maternal/child health; extreme weather, floods, wildfire,
+  water scarcity also climate adaptation; renewable energy, solar, wind, EV also climate change; plastic, recycling, e-waste, biodiversity,
+  deforestation, desertification also environment in general; ocean acidification also climate change.
+- Data model: a topic's Partner Finder selection is now a list `[[topic, [sub-topics]], ...]`; two sub-topics of the SAME topic are merged
+  (COVID-19 = health / infectious diseases + health systems).
+- Data check (18.11.2026): COVID-19, pandemic and vaccine topics = 317 of 6,174 fact-checks in 12 months (5 %), 18 of 1,084 in the last 30 days (1.7 %);
+  election is by far the top topic. Caveat: topic detection is by key words and the archive before 17.11.2026 is incomplete.
+
+## 18.11.2026 (late): topic groups as a view
+- A whole topic group can be chosen ("All health topics" at the top of each group in the topic list). The series has an extra row per group
+  (`q = "g:<group>"`, a fact-check counts ONCE per group, built in `build.py` `make_series`). Trends, map, content gaps (only the group's topics)
+  and the export (PDF/Word/Excel) work for the group. The UN box and partner links need one topic and are hidden for a group.
+
+## 18.11.2026 (night): deeper UN archive, fact-checkers from the Partner Finder (owner: yes, yes)
+- UN archive: (1) 48 UN News topic feeds (12 topics x en/es/fr/pt) in `config/un_sources.yaml`; (2) one-off `pipeline/fetch/un_archive.py`
+  (workflow `un-archive.yml`, manual): reads old copies of the UN feeds (UN News 6 languages, topic feeds, WHO) from the Internet Archive
+  (Wayback Machine), 1 request per second, capped; result `raw/un_archive/`, read by `build_un.py` and kept in `cache/un_items.json`.
+  The archive is a sample (copies every 6-12 days), not complete.
+- Fact-checkers: the discovery now also takes every fact-checker with a website from the Partner Finder data (111 not yet known, 14 of them in India,
+  3 in Nigeria ...) and searches countries WITHOUT fact-checks first (`discover_max_sites` 400).
+
+## 18.11.2026 (night): case study tool, coverage by region
+- `pipeline/desinfo/case_study.py` + `tools/print_pdf.js`: a case study (HTML -> PDF with the pre-installed Chromium) for one country and topic, built only from the monitor's
+  data (timeline, claim types by key words, fact-checkers, languages, UN articles that name the country, rule-based recommendations).
+  First one: `docs/case_study_nepal_floods.pdf` (148 fact-checks, first 26.08.2026, peak 03.09.2026 = 20 in one day; 10 UN articles, none in Hindi).
+- `reports/desinfo_coverage.md` now has "Coverage by region (UN M49)" and lists the countries with no data at all per region (Africa: 15 of 54 countries
+  with fact-checks by a fact-checker of the country, 33 named in fact-checks, 21 with no data).
+
+## 18.11.2026 (night): US elections case study, request to African fact-checkers
+- `case_study.py --profile elections` (claim types for elections; UN articles matched to the TOPIC); `docs/case_study_us_elections.pdf` (144 fact-checks since 01.10.2026,
+  peak 04.11.2026 = 24, 26 fact-checkers; Spanish as large as English; 6 UN articles on elections in the period, none in Spanish about the US).
+  Rule: an item that names other countries only is not counted for the country, even if its fact-checker sits there.
+- `docs/anfrage_faktenchecker_afrika.md`: draft (English, placeholders) of a request to Africa Check, PesaCheck and others for a feed, API or written permission.
+
+## 19.11.2026: weekly brief (owner: "c" = automatic weekly short report for the team)
+- `pipeline/desinfo/weekly_brief.py` writes `reports/weekly_brief.md`, `site/brief.html` (button "Weekly brief" on the monitor page) and `site/data/desinfo/brief.json`:
+  week numbers, most fact-checked topics, rising topics (share rule, same sources only), where / languages, "in focus" topic with 3 examples, content gaps of the week
+  with possible UN contacts, data health (feeds working, new sources, warnings if the data looks stopped).
+- A comparison with earlier weeks is shown only 8 weeks after the first complete daily collection (`brief:` in `config/desinfo.yaml`; from 13.01.2027):
+  the archive before 18.11.2026 is incomplete and adding sources makes every week look like an explosion.
+- It runs on Mondays inside the daily workflow (or with the workflow input "brief"). E-mail: `pipeline/desinfo/send_brief.py` sends text + html by SMTP
+  if the secrets BRIEF_SMTP_HOST, BRIEF_SMTP_PORT, BRIEF_SMTP_USER, BRIEF_SMTP_PASS, BRIEF_FROM, BRIEF_TO are set (recipients in a secret, never in the public repository);
+  without them nothing is sent and the run still succeeds. Owner still to decide: which sending account / channel.

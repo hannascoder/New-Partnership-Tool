@@ -1,0 +1,350 @@
+{
+  "source": "un_archive",
+  "fetched_at": "2026-11-18T18:52:08Z",
+  "records": 684,
+  "status": {
+    "UN News (en)": {
+      "ok": true,
+      "copies": 12,
+      "items": 150,
+      "error": ""
+    },
+    "UN News (fr)": {
+      "ok": true,
+      "copies": 4,
+      "items": 60,
+      "error": ""
+    },
+    "UN News (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News (ar)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News (pt)": {
+      "ok": false,
+      "copies": 1,
+      "items": 0,
+      "error": ""
+    },
+    "UN News (hi)": {
+      "ok": true,
+      "copies": 1,
+      "items": 30,
+      "error": ""
+    },
+    "WHO (en)": {
+      "ok": true,
+      "copies": 31,
+      "items": 25,
+      "error": ""
+    },
+    "WHO (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "WHO (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: climate-change (en)": {
+      "ok": true,
+      "copies": 11,
+      "items": 58,
+      "error": ""
+    },
+    "UN News: health (en)": {
+      "ok": true,
+      "copies": 2,
+      "items": 26,
+      "error": ""
+    },
+    "UN News: humanitarian-aid (en)": {
+      "ok": false,
+      "copies": 1,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: migrants-and-refugees (en)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: peace-and-security (en)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+    },
+    "UN News: human-rights (en)": {
+      "ok": true,
+      "copies": 2,
+      "items": 59,
+      "error": ""
+    },
+    "UN News: women (en)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: economic-development (en)": {
+      "ok": true,
+      "copies": 2,
+      "items": 29,
+      "error": ""
+    },
+    "UN News: law-and-crime-prevention (en)": {
+      "ok": true,
+      "copies": 4,
+      "items": 30,
+      "error": ""
+    },
+    "UN News: culture-and-education (en)": {
+      "ok": false,
+      "copies": 2,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: un-affairs (en)": {
+      "ok": true,
+      "copies": 6,
+      "items": 71,
+      "error": ""
+    },
+    "UN News: sdgs (en)": {
+      "ok": true,
+      "copies": 2,
+      "items": 19,
+      "error": ""
+    },
+    "UN News: climate-change (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: health (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: humanitarian-aid (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+    },
+    "UN News: migrants-and-refugees (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: peace-and-security (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: human-rights (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: women (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: economic-development (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: law-and-crime-prevention (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: culture-and-education (es)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: un-affairs (es)": {
+      "ok": false,
+      "copies": 1,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: sdgs (es)": {
+      "ok": true,
+      "copies": 3,
+      "items": 30,
+      "error": ""
+    },
+    "UN News: climate-change (fr)": {
+      "ok": false,
+      "copies": 1,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: health (fr)": {
+      "ok": false,
+      "copies": 1,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: humanitarian-aid (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: migrants-and-refugees (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: peace-and-security (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: human-rights (fr)": {
+      "ok": false,
+      "copies": 1,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: women (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: economic-development (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+    },
+    "UN News: law-and-crime-prevention (fr)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: culture-and-education (fr)": {
+      "ok": true,
+      "copies": 1,
+      "items": 28,
+      "error": ""
+    },
+    "UN News: un-affairs (fr)": {
+      "ok": true,
+      "copies": 2,
+      "items": 44,
+      "error": ""
+    },
+    "UN News: sdgs (fr)": {
+      "ok": true,
+      "copies": 2,
+      "items": 25,
+      "error": ""
+    },
+    "UN News: climate-change (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: health (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: humanitarian-aid (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: migrants-and-refugees (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: peace-and-security (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: human-rights (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: women (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: economic-development (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: law-and-crime-prevention (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: culture-and-education (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    },
+    "UN News: un-affairs (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": ""
+    },
+    "UN News: sdgs (pt)": {
+      "ok": false,
+      "copies": 0,
+      "items": 0,
+      "error": "<urlopen error timed out>"
+    }
+  },
+  "fetches": 93
+}

@@ -1,0 +1,30 @@
+{
+ "from": "2026-11-17",
+ "to": "2026-11-23",
+ "week": 1299,
+ "prev_avg": 279.8,
+ "rising": [],
+ "gaps": [
+  [
+   "Misinformation",
+   30,
+   0
+  ],
+  [
+   "Energy poverty",
+   10,
+   1
+  ],
+  [
+   "Fake news",
+   8,
+   1
+  ],
+  [
+   "ChatGPT",
+   5,
+   0
+  ]
+ ],
+ "warnings": []
+}

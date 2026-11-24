@@ -1,0 +1,29 @@
+# Makes the weekly brief from the data that is already in the repository and sends it by e-mail RIGHT NOW (also a quick test of the e-mail setup).
+# Start by hand: Actions -> "Send the weekly brief now" -> Run workflow. Needs the secrets BRIEF_SMTP_HOST, BRIEF_SMTP_PORT, BRIEF_SMTP_USER,
+# BRIEF_SMTP_PASS, BRIEF_FROM, BRIEF_TO (see docs/DESINFO_PLAN.md). Takes about one minute; changes nothing in the repository.
+name: Send the weekly brief now
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Make the brief
+        run: python pipeline/desinfo/weekly_brief.py > /dev/null
+      - name: Send it
+        env:
+          BRIEF_SMTP_HOST: ${{ secrets.BRIEF_SMTP_HOST }}
+          BRIEF_SMTP_PORT: ${{ secrets.BRIEF_SMTP_PORT }}
+          BRIEF_SMTP_USER: ${{ secrets.BRIEF_SMTP_USER }}
+          BRIEF_SMTP_PASS: ${{ secrets.BRIEF_SMTP_PASS }}
+          BRIEF_FROM: ${{ secrets.BRIEF_FROM }}
+          BRIEF_TO: ${{ secrets.BRIEF_TO }}
+        run: python pipeline/desinfo/send_brief.py

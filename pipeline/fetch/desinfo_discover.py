@@ -62,6 +62,37 @@ def wikidata_sites():
     return out
 
 
+def iverify_sites():
+    """UNDP iVerify country instances from config/iverify_sites.yaml (home page address, country)."""
+    path = ROOT / "config" / "iverify_sites.yaml"
+    out = {}
+    for x in yaml.safe_load(open(path, encoding="utf-8")).get("sites", []):
+        if x.get("fetch") is False:               # blocks automated access: shown as a link only
+            continue
+        d = domain_of(x["site"])
+        out[d] = {"name": x["name"], "site": x["site"], "origin": "iverify", "country": x["country"]}
+    return out
+
+
+def partnerfinder_sites():
+    """Fact-checkers that are already in the Partner Finder (site/data/outlets-*.json, organisation type fact_checker) with their website."""
+    cfg_path = ROOT / "site" / "data" / "config.json"
+    if not cfg_path.exists():
+        return {}
+    cfg = json.load(open(cfg_path, encoding="utf-8"))
+    ft = cfg["codes"]["o"].index("fact_checker")
+    iso3 = {r["iso3"]: r["iso2"] for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
+    out = {}
+    for name in cfg.get("outlet_files", []):
+        for o in json.load(open(ROOT / "site" / "data" / name, encoding="utf-8")):
+            if (o.get("o") or [None])[0] != ft or not o.get("w"):
+                continue
+            d = domain_of(o["w"])
+            if d and d not in KNOWN and d not in out:
+                out[d] = {"name": o["n"], "site": o["w"], "origin": "partnerfinder", "country": iso3.get(o["c"], "")}
+    return out
+
+
 def google_domains():
     """Web sites named as publisher of fact-checks in our own archive (cache/desinfo_items.json): {domain: (name, count)}."""
     path = ROOT / "cache" / "desinfo_items.json"
@@ -142,6 +173,10 @@ def main():
         print("Wikidata query failed:", e)
         sites = {}
     print(f"Wikidata: {len(sites)} fact-checking websites (not in the hand list)")
+    for d, info in partnerfinder_sites().items():     # fact-checkers of the Partner Finder: every country, Africa included
+        sites.setdefault(d, info)
+    for d, info in iverify_sites().items():       # UNDP iVerify instances first; like Wikidata ones, no cue filter
+        sites.setdefault(d, info)
     valid = {r["iso2"] for r in csv.DictReader(open(ROOT / "config" / "countries.csv", encoding="utf-8"))}
     n_g = 0
     for d, (name, n) in google_domains().items():
@@ -161,7 +196,12 @@ def main():
         if c and c.get("status") == "ok":
             continue
         todo.append((d, info))
-    todo.sort(key=lambda x: (x[1]["origin"] != "wikidata", x[1]["country"] == "", x[1]["country"]))
+    covered = set()                               # countries that already have fact-checks: the others are searched first
+    items_path = ROOT / "cache" / "desinfo_items.json"
+    if items_path.exists():
+        covered = {i["country"] for i in json.load(open(items_path, encoding="utf-8")) if i.get("country")}
+    todo.sort(key=lambda x: (x[1]["origin"] not in ("iverify", "wikidata", "partnerfinder"), x[1]["country"] in covered,
+                             x[1]["country"] == "", x[1]["country"]))
     n_ok = 0
     for d, info in todo[:CFG["discover_max_sites"]]:
         html, st = home_page(info["site"])
@@ -179,7 +219,7 @@ def main():
                                       "country": info["country"]})
                 except Exception:  # noqa: BLE001
                     got = []
-                if got and (info["origin"] == "wikidata" or looks_like_factchecks(got) >= CFG["cue_min_ratio"]):
+                if got and (info["origin"] in ("wikidata", "partnerfinder") or looks_like_factchecks(got) >= CFG["cue_min_ratio"]):
                     rec.update(feed=link, status="ok")
                     n_ok += 1
                     break

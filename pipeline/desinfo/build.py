@@ -116,6 +116,25 @@ class CountryMatcher:
         return sorted(found)[:6]
 
 
+def iverify_matcher():
+    """Items published on a UNDP iVerify country instance (config/iverify_sites.yaml): (host, path prefix, ISO2)."""
+    import urllib.parse
+    sites = yaml.safe_load(open(ROOT / "config" / "iverify_sites.yaml", encoding="utf-8")).get("sites", [])
+    rules = []
+    for x in sites:
+        u = urllib.parse.urlparse(x["site"])
+        rules.append((u.netloc.lower().removeprefix("www."), u.path.rstrip("/").lower(), x["country"]))
+
+    def match(url):
+        u = urllib.parse.urlparse(url)
+        host, path = u.netloc.lower().removeprefix("www."), u.path.lower()
+        for h, p, iso in rules:
+            if host == h and path.startswith(p):
+                return iso
+        return None
+    return match
+
+
 def country_of(item, domain_map, valid):
     if item.get("country") in valid:
         return item["country"], "feed"
@@ -140,6 +159,12 @@ def main():
         raise SystemExit("no topic list (Atlas) - run pipeline/fetch/desinfo.py first")
     matcher = TopicMatcher(topics)
     cmatch = CountryMatcher(valid)
+    iv_match = iverify_matcher()
+    intl_domains = [d.lower() for d in CFG.get("international_publishers", [])]
+
+    def intl(url):
+        host = re.sub(r"^https?://", "", url.lower()).split("/")[0]
+        return any(host == d or host.endswith("." + d) for d in intl_domains)
     domain_map = {f["domain"]: f["country"] for f in FEEDS if f["country"]}
     found = load_json(CACHE / "desinfo_feeds.json", {})
     domain_map.update({d: r["country"] for d, r in found.items() if r.get("status") == "ok" and r.get("country")})
@@ -147,6 +172,7 @@ def main():
         open(ROOT / "config" / "factcheck_publishers.yaml", encoding="utf-8"))["publishers"].items()}
 
     memory = {i["id"]: i for i in load_json(CACHE / "desinfo_items.json", [])}
+    translations = load_json(CACHE / "desinfo_translations.json", {})   # item id -> automatic English title
     fresh = load_gz("desinfo") or []
     new = 0
     for r in fresh:
@@ -173,10 +199,17 @@ def main():
     # topics and UN flag are derived again at EVERY run from title + claim (+ topics the search engine found),
     # so a better rule in config/ improves the whole archive. The claim text stays in cache/ only, never on the site.
     for m in memory.values():
-        text = m["title"] + " " + m.get("claim", "")
+        text = m["title"] + " " + m.get("claim", "") + " " + translations.get(m["id"], "")
         m["topics"] = sorted(set(matcher.match(text)) | set(m.get("qt", [])))
         m["un"] = un_flag(text) or bool(m.get("unq"))
         m["about"] = cmatch.match(text)
+        if not m["country"] and len(m["about"]) == 1 and intl(m["url"]):     # AFP etc.: the one country named in the text
+            m["country"], m["country_from"] = m["about"][0], "about"
+        iso = iv_match(m["url"])
+        if iso:                                   # published on a UNDP iVerify instance
+            m["net"] = "iverify"
+            if not m["country"] and iso in valid:
+                m["country"], m["country_from"] = iso, "iverify"
     cutoff = (date.today() - timedelta(days=CFG["keep_days"])).isoformat()
     items = sorted((i for i in memory.values() if i["date"] >= cutoff), key=lambda i: i["date"], reverse=True)
 
@@ -184,10 +217,14 @@ def main():
     # two views: by the country of the fact-checker ("publisher") and by the country the fact-check is about ("about")
     window = {i["date"] for i in items}
 
+    group_of = {t["qid"]: t["category"] for t in topics}
+
     def make_series(name, countries_of):
         series = defaultdict(int)
         for i in items:
-            for q in (i["topics"] + [""]):
+            # one row per topic, one for all topics (""), and one per topic GROUP ("g:health"): a fact-check counts once per group
+            groups = sorted({"g:" + group_of[q] for q in i["topics"] if q in group_of})
+            for q in (i["topics"] + [""] + groups):
                 for c in countries_of(i):
                     series[(i["date"], q, c, 1 if i["un"] else 0)] += 1
         old = load_json(CACHE / name, [])
@@ -205,7 +242,7 @@ def main():
     json.dump({"generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "topics": topics_site,
                "languages": (atlas.get("topics") or {}).get("languages")},
               open(OUT / "topics.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-    public = [{k: v for k, v in i.items() if k not in ("claim", "qt", "unq")} for i in items]
+    public = [{**{k: v for k, v in i.items() if k not in ("claim", "qt", "unq")}, **({"title_en": translations[i["id"]]} if translations.get(i["id"]) else {})} for i in items]
     json.dump(public, open(OUT / "items.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(merged, open(OUT / "series.json", "w"), separators=(",", ":"))
     json.dump(merged_about, open(OUT / "series_about.json", "w"), separators=(",", ":"))
@@ -213,10 +250,48 @@ def main():
                            "sub": r["intermediate_region"] or r["subregion"]} for r in valid.values()},
               open(OUT / "countries.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump({"red_marker": CFG["red_marker"], "keep_days": CFG["keep_days"], "gap": CFG["gap"],
+               "partner_narrow_min": CFG["partners"]["narrow_min_outlets"],
                "suggestions": yaml.safe_load(open(ROOT / "config" / "desinfo_gap_suggestions.yaml", encoding="utf-8"))},
               open(OUT / "config.json", "w"), indent=1)
     # Google Trends per country (Atlas data, attribution "Data source: Google Trends"): only the query text and Google's bucket
     iso3 = {r["iso3"]: r["iso2"] for r in valid.values()}
+    # Atlas topic -> Partner Finder topic and optional sub-topic (config/desinfo_partner_topics.yaml), keyed by topic id.
+    # Checked against the Partner Finder topics (site/data/config.json): a wrong id or a sub-topic of another topic is dropped.
+    pm = yaml.safe_load(open(ROOT / "config" / "desinfo_partner_topics.yaml", encoding="utf-8"))
+    pf = {t["id"]: [x["id"] for x in t.get("subtopics", [])]
+          for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])}
+    ptop = {}
+    also = pm.get("also") or {}
+
+    def check(label, tp, sub):
+        """(topic, sub) if valid in the Partner Finder, else (None, '')."""
+        if tp not in pf:
+            return None, ""
+        if sub and sub not in pf[tp]:
+            print(f"WARNING: sub-topic '{sub}' of '{label}' does not belong to the Partner Finder topic '{tp}': ignored")
+            sub = ""
+        return tp, sub or ""
+
+    for t in topics:
+        lab = t["label_en"]
+        tp, sub = check(lab, (pm.get("map") or {}).get(lab), (pm.get("sub") or {}).get(lab, ""))
+        if not tp:
+            continue
+        a = also.get(lab) or {}
+        tp2, sub2 = check(lab, a.get("topic"), a.get("sub", "")) if a else (None, "")
+        # selections: [[topic, [sub-topics]], ...]; an empty list = the whole topic; the same topic twice is merged
+        sel = [[tp, [sub] if sub else []]]
+        if tp2:
+            for e in sel:
+                if e[0] == tp2:
+                    e[1] = [] if (not e[1] or not sub2) else e[1] + [sub2]
+                    break
+            else:
+                sel.append([tp2, [sub2] if sub2 else []])
+        ptop[t["qid"]] = sel
+    sublabels = {x["id"]: x["label"].split(" (")[0] for t in load_json(OUT.parent / "config.json", {}).get("categories", {}).get("topics", [])
+                 for x in t.get("subtopics", [])}          # short name of each sub-topic for the switch on the page
+    json.dump({"topics": ptop, "subs": pf, "sublabels": sublabels}, open(OUT / "partner_topics.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     cs = (atlas.get("country_searches") or {}).get("countries") or {}
     trends = {iso3[k]: {"date": v.get("date"), "queries": [{"q": x["query"], "t": x.get("traffic", "")} for x in v.get("queries", [])[:6]]}
               for k, v in cs.items() if k in iso3 and not v.get("unsupported")}
@@ -232,11 +307,11 @@ def main():
                "un_related": sum(1 for i in items if i["un"]),
                "first_date": items[-1]["date"] if items else None, "last_date": items[0]["date"] if items else None}
     json.dump(summary, open(OUT / "summary.json", "w"), indent=1)
-    write_reports(valid, by_country, by_topic, topics, summary)
+    write_reports(valid, by_country, by_topic, topics, summary, items)
     print(json.dumps(summary))
 
 
-def write_reports(valid, by_country, by_topic, topics, summary):
+def write_reports(valid, by_country, by_topic, topics, summary, about_items):
     meta = load_json(ROOT / "raw" / "desinfo" / "meta.json", {})
     st = meta.get("status") or load_json(ROOT / "raw" / "desinfo" / "last_failed_status.json", {})
     L = ["# Disinformation monitor: sources of the last run", "",
@@ -258,6 +333,22 @@ def write_reports(valid, by_country, by_topic, topics, summary):
          "## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)", ""]
     L += [", ".join(r["name"] for r in pop_rank if r["iso2"] not in by_country), "", "## Items per country", ""]
     L += [f"- {valid[c]['name']}: {n}" for c, n in by_country.most_common()]
+    # coverage by UN region (M49): how many countries have fact-checks (by the fact-checker's country / named in the text)
+    about_n = Counter(c for i in about_items for c in i["about"])
+    reg = {}
+    for iso, r in valid.items():
+        x = reg.setdefault(r["region"], {"n": 0, "pub": 0, "about": 0, "none": []})
+        x["n"] += 1
+        x["pub"] += iso in by_country
+        x["about"] += iso in about_n
+        if iso not in by_country and iso not in about_n:
+            x["none"].append(r["name"].split(" (")[0])
+    L += ["", "## Coverage by region (UN M49)", "", "| Region | Countries | With fact-checks by a fact-checker of the country | Named in fact-checks | No data at all |", "|---|---|---|---|---|"]
+    for name, x in sorted(reg.items()):
+        L.append(f"| {name} | {x['n']} | {x['pub']} | {x['about']} | {len(x['none'])} |")
+    for name, x in sorted(reg.items()):
+        if x["none"]:
+            L += ["", f"**{name}: countries with no data at all:** " + ", ".join(sorted(x["none"]))]
     L += ["", "## Topics without any item", ""]
     L += [", ".join(t["label_en"] for t in topics if t["qid"] not in by_topic), ""]
     (ROOT / "reports" / "desinfo_coverage.md").write_text("\n".join(L), encoding="utf-8")

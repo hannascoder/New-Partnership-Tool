@@ -11,6 +11,7 @@
   "yellow_min_factchecks": 2,
   "yellow_max_un": 5
  },
+ "partner_narrow_min": 150,
  "suggestions": {
   "default": {
    "agencies": [

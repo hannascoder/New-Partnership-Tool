@@ -1,0 +1,361 @@
+# Which Partner Finder topic (id from config/categories.yaml) each Atlas topic of the disinformation monitor belongs to.
+# The page uses it so that "Open all ... in the Partner Finder" also takes the chosen topic along (#tp=<id>).
+# Key = English label of the Atlas topic, value = Partner Finder topic id. A topic without a line gets no topic in the link.
+# Please review: this is a first proposal (17.11.2026), one Partner Finder topic per Atlas topic.
+map:
+  "5G": technology
+  "AI safety": technology
+  "Agriculture": agriculture
+  "Air pollution": climate
+  "Antimicrobial resistance": health
+  "Artificial intelligence": technology
+  "Asylum seeker": migration
+  "Biodiversity": life_on_land
+  "Biodiversity loss": life_on_land
+  "Blockchain": technology
+  "Breastfeeding": health
+  "COVID-19": health
+  "Cancer": health
+  "Capital punishment": human_rights
+  "Ceasefire": conflict_security
+  "Censorship": media_freedom
+  "ChatGPT": technology
+  "Child abuse": children_youth
+  "Child labour": children_youth
+  "Child marriage": children_youth
+  "Children's rights": children_youth
+  "Cholera": health
+  "Civil war": conflict_security
+  "Climate change": climate
+  "Climate change adaptation": climate
+  "Climate change mitigation": climate
+  "Computer security": technology
+  "Contraception": health
+  "Corruption": peace_justice
+  "Cost of living": work_economy
+  "Cryptocurrency": work_economy
+  "Cyberbullying": technology
+  "Debt relief": partnerships
+  "Deepfake": technology
+  "Deforestation": life_on_land
+  "Democracy": elections
+  "Dengue fever": health
+  "Desertification": life_on_land
+  "Development aid": partnerships
+  "Diabetes": health
+  "Digital divide": technology
+  "Disability": disability
+  "Disarmament": conflict_security
+  "Discrimination": inequalities
+  "Disinformation": fact_checking
+  "Distance education": education
+  "Domestic violence": gender_equality
+  "Drinking water": water_sanitation
+  "Drought": disasters
+  "Early childhood education": education
+  "Earthquake": disasters
+  "Ebola": health
+  "Education": education
+  "Election": elections
+  "Electric vehicle": energy
+  "Electronic waste": consumption
+  "Energy poverty": energy
+  "Extreme poverty": poverty
+  "Extreme weather": disasters
+  "Facial recognition system": technology
+  "Fair trade": work_economy
+  "Fake news": fact_checking
+  "Family planning": health
+  "Famine": hunger_food
+  "Female education": gender_equality
+  "Female genital mutilation": gender_equality
+  "Financial inclusion": work_economy
+  "Flood": disasters
+  "Food security": hunger_food
+  "Fossil fuel": energy
+  "Freedom of religion": religion
+  "Freedom of speech": media_freedom
+  "Freedom of the press": media_freedom
+  "Gender equality": gender_equality
+  "Gender pay gap": gender_equality
+  "Genetically modified organism": agriculture
+  "Genocide": human_rights
+  "HIV/AIDS": health
+  "Heat wave": disasters
+  "Higher education": education
+  "Homelessness": cities
+  "Human migration": migration
+  "Human rights": human_rights
+  "Human trafficking": human_rights
+  "Humanitarian aid": humanitarian
+  "Hunger": hunger_food
+  "Immigration": migration
+  "Indigenous peoples": indigenous
+  "Inflation": work_economy
+  "Influenza": health
+  "Informal economy": work_economy
+  "Information privacy": technology
+  "Internally displaced person": humanitarian
+  "International Court of Justice": peace_justice
+  "International Criminal Court": peace_justice
+  "International Monetary Fund": work_economy
+  "International sanctions": conflict_security
+  "Internet access": technology
+  "Internet censorship": media_freedom
+  "LGBTQ rights": inequalities
+  "Land mine": conflict_security
+  "Literacy": education
+  "Machine learning": technology
+  "Malaria": health
+  "Malnutrition": hunger_food
+  "Maternal health": health
+  "Measles": health
+  "Mental health": health
+  "Microfinance": poverty
+  "Minimum wage": work_economy
+  "Misinformation": fact_checking
+  "Mpox": health
+  "Natural disaster": disasters
+  "Nuclear power": energy
+  "Nuclear weapon": conflict_security
+  "Obesity": health
+  "Ocean acidification": life_below_water
+  "Overfishing": life_below_water
+  "Pandemic": health
+  "Paris Agreement": climate
+  "Peacebuilding": peace_justice
+  "Peacekeeping": conflict_security
+  "Plastic pollution": consumption
+  "Polio": health
+  "Population ageing": older_persons
+  "Population growth": cities
+  "Poverty": poverty
+  "Public transport": cities
+  "Racism": inequalities
+  "Recycling": consumption
+  "Refugee": migration
+  "Regulation of artificial intelligence": technology
+  "Remittance": migration
+  "Renewable energy": energy
+  "Road traffic safety": cities
+  "Rule of law": peace_justice
+  "Same-sex marriage": inequalities
+  "Sanitation": water_sanitation
+  "School meal": education
+  "Sea level rise": climate
+  "Slavery": human_rights
+  "Social media": technology
+  "Social protection": poverty
+  "Solar power": energy
+  "Statelessness": migration
+  "Submarine communications cable": technology
+  "Suicide prevention": health
+  "Surveillance": technology
+  "Sustainable Development Goals": partnerships
+  "Sustainable agriculture": agriculture
+  "Terrorism": conflict_security
+  "Tobacco smoking": health
+  "Torture": human_rights
+  "Tropical cyclone": disasters
+  "Tsunami": disasters
+  "Tuberculosis": health
+  "UNESCO": partnerships
+  "UNICEF": children_youth
+  "UNRWA": humanitarian
+  "Unemployment": work_economy
+  "United Nations": partnerships
+  "United Nations Climate Change conference": climate
+  "United Nations General Assembly": partnerships
+  "United Nations High Commissioner for Refugees": migration
+  "United Nations Security Council": peace_justice
+  "Universal Declaration of Human Rights": human_rights
+  "Universal basic income": poverty
+  "Urbanization": cities
+  "Vaccination": health
+  "Vaccine": health
+  "Violence against women": gender_equality
+  "Vocational education": education
+  "War": conflict_security
+  "War crime": peace_justice
+  "Wartime sexual violence": conflict_security
+  "Water scarcity": water_sanitation
+  "Wildfire": disasters
+  "Wind power": energy
+  "Women's rights": gender_equality
+  "World Bank": work_economy
+  "World Food Programme": hunger_food
+  "World Health Organization": health
+  "Youth unemployment": work_economy
+# Sub-topic (optional) of the Partner Finder topic above: the link then selects only this sub-topic
+# (a sub-topic id from config/categories.yaml; it must belong to the topic of the same label).
+sub:
+  "Air pollution": environment_general
+  "Antimicrobial resistance": infectious_diseases
+  "Asylum seeker": refugees_asylum
+  "Biodiversity": biodiversity
+  "Biodiversity loss": biodiversity
+  "Breastfeeding": maternal_child_health
+  "COVID-19": infectious_diseases
+  "Cancer": ncd_mental_health
+  "Capital punishment": civil_political_rights
+  "Ceasefire": peace_operations
+  "Cholera": infectious_diseases
+  "Civil war": war_conflict
+  "Climate change": climate_change
+  "Climate change adaptation": climate_adaptation
+  "Climate change mitigation": climate_change
+  "Contraception": health_systems
+  "Corruption": corruption_institutions
+  "Cryptocurrency": business_finance
+  "Debt relief": development_finance
+  "Deforestation": forests
+  "Dengue fever": infectious_diseases
+  "Desertification": forests
+  "Development aid": development_finance
+  "Diabetes": ncd_mental_health
+  "Disarmament": war_conflict
+  "Discrimination": discrimination
+  "Distance education": skills_higher_ed
+  "Domestic violence": gender_violence
+  "Drinking water": drinking_water
+  "Drought": natural_disasters
+  "Early childhood education": school_access
+  "Earthquake": natural_disasters
+  "Ebola": infectious_diseases
+  "Electric vehicle": renewable_energy
+  "Electronic waste": waste_plastic
+  "Energy poverty": energy_access
+  "Extreme poverty": extreme_poverty
+  "Extreme weather": natural_disasters
+  "Fair trade": business_finance
+  "Family planning": health_systems
+  "Famine": hunger_famine
+  "Female education": women_rights
+  "Female genital mutilation": harmful_practices
+  "Financial inclusion": growth
+  "Flood": natural_disasters
+  "Food security": hunger_famine
+  "Gender equality": women_rights
+  "Gender pay gap": women_leadership
+  "HIV/AIDS": infectious_diseases
+  "Heat wave": natural_disasters
+  "Higher education": skills_higher_ed
+  "Homelessness": housing
+  "Human migration": migrants
+  "Humanitarian aid": humanitarian_crises
+  "Hunger": hunger_famine
+  "Immigration": migrants
+  "Inflation": business_finance
+  "Influenza": infectious_diseases
+  "Informal economy": decent_jobs
+  "Internally displaced person": displacement_camps
+  "International Court of Justice": justice_rule_of_law
+  "International Criminal Court": justice_rule_of_law
+  "International Monetary Fund": business_finance
+  "LGBTQ rights": discrimination
+  "Land mine": war_conflict
+  "Literacy": school_access
+  "Malaria": infectious_diseases
+  "Malnutrition": nutrition
+  "Maternal health": maternal_child_health
+  "Measles": infectious_diseases
+  "Mental health": ncd_mental_health
+  "Microfinance": resilience_poor
+  "Minimum wage": decent_jobs
+  "Mpox": infectious_diseases
+  "Natural disaster": natural_disasters
+  "Nuclear weapon": war_conflict
+  "Obesity": ncd_mental_health
+  "Ocean acidification": ocean_health
+  "Overfishing": fisheries
+  "Pandemic": infectious_diseases
+  "Paris Agreement": climate_change
+  "Peacebuilding": violence_peace
+  "Peacekeeping": peace_operations
+  "Plastic pollution": waste_plastic
+  "Polio": infectious_diseases
+  "Public transport": urban_mobility
+  "Racism": discrimination
+  "Recycling": waste_plastic
+  "Refugee": refugees_asylum
+  "Remittance": migrants
+  "Renewable energy": renewable_energy
+  "Road traffic safety": urban_mobility
+  "Rule of law": justice_rule_of_law
+  "Same-sex marriage": discrimination
+  "Sanitation": drinking_water
+  "School meal": school_access
+  "Sea level rise": climate_adaptation
+  "Social protection": social_protection
+  "Solar power": renewable_energy
+  "Statelessness": refugees_asylum
+  "Suicide prevention": ncd_mental_health
+  "Sustainable Development Goals": global_cooperation
+  "Terrorism": war_conflict
+  "Tobacco smoking": ncd_mental_health
+  "Torture": civil_political_rights
+  "Tropical cyclone": natural_disasters
+  "Tsunami": natural_disasters
+  "Tuberculosis": infectious_diseases
+  "UNESCO": global_cooperation
+  "UNRWA": humanitarian_crises
+  "Unemployment": decent_jobs
+  "United Nations": global_cooperation
+  "United Nations Climate Change conference": climate_change
+  "United Nations General Assembly": global_cooperation
+  "United Nations High Commissioner for Refugees": refugees_asylum
+  "Universal basic income": social_protection
+  "Urbanization": urban_mobility
+  "Vaccination": infectious_diseases
+  "Vaccine": infectious_diseases
+  "Violence against women": gender_violence
+  "Vocational education": skills_higher_ed
+  "War": war_conflict
+  "War crime": justice_rule_of_law
+  "Wartime sexual violence": war_conflict
+  "Water scarcity": water_resources
+  "Wildfire": natural_disasters
+  "Wind power": renewable_energy
+  "Women's rights": women_rights
+  "World Bank": business_finance
+  "Youth unemployment": decent_jobs
+# Second Partner Finder topic (and optional sub-topic) for Atlas topics that belong to two topics (owner 18.11.2026).
+# The link selects the first OR the second topic (broader). Format: label: {topic: <id>, sub: <id, optional>}
+also:
+  "Air pollution": {topic: health, sub: pollution_health}
+  "Biodiversity": {topic: climate, sub: environment_general}
+  "Biodiversity loss": {topic: climate, sub: environment_general}
+  "COVID-19": {topic: health, sub: health_systems}
+  "Censorship": {topic: human_rights, sub: civil_political_rights}
+  "Child labour": {topic: work_economy, sub: forced_child_labour}
+  "Contraception": {topic: gender_equality, sub: srhr}
+  "Deepfake": {topic: fact_checking}
+  "Deforestation": {topic: climate, sub: environment_general}
+  "Desertification": {topic: climate, sub: environment_general}
+  "Drought": {topic: climate, sub: climate_adaptation}
+  "Electric vehicle": {topic: climate, sub: climate_change}
+  "Electronic waste": {topic: climate, sub: environment_general}
+  "Extreme weather": {topic: climate, sub: climate_adaptation}
+  "Family planning": {topic: gender_equality, sub: srhr}
+  "Famine": {topic: humanitarian, sub: humanitarian_crises}
+  "Flood": {topic: climate, sub: climate_adaptation}
+  "Fossil fuel": {topic: climate, sub: climate_change}
+  "Heat wave": {topic: climate, sub: climate_adaptation}
+  "Human trafficking": {topic: peace_justice, sub: justice_rule_of_law}
+  "LGBTQ rights": {topic: gender_equality, sub: gender_identity}
+  "Malnutrition": {topic: health, sub: maternal_child_health}
+  "Obesity": {topic: hunger_food, sub: nutrition}
+  "Ocean acidification": {topic: climate, sub: climate_change}
+  "Pandemic": {topic: health, sub: health_systems}
+  "Plastic pollution": {topic: climate, sub: environment_general}
+  "Recycling": {topic: climate, sub: environment_general}
+  "Refugee": {topic: humanitarian, sub: displacement_camps}
+  "Renewable energy": {topic: climate, sub: climate_change}
+  "Same-sex marriage": {topic: gender_equality, sub: gender_identity}
+  "Solar power": {topic: climate, sub: climate_change}
+  "Vaccination": {topic: health, sub: health_systems}
+  "Vaccine": {topic: health, sub: health_systems}
+  "Wartime sexual violence": {topic: gender_equality, sub: gender_violence}
+  "Water scarcity": {topic: climate, sub: climate_adaptation}
+  "Wildfire": {topic: climate, sub: climate_adaptation}
+  "Wind power": {topic: climate, sub: climate_change}
