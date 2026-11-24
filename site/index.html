@@ -31,17 +31,6 @@
     <div id="filterBody" class="filter-body">
       <!-- the search bar is left out of v1 for now (decision 06.11.2026); space kept here -->
 
-      <section class="fgroup">
-        <h2 class="sect">Reach &amp; size</h2>
-        <p class="sublabel">Where does it reach?</p>
-        <div class="chips" id="f-scopeGroups"></div>
-        <div class="chips" id="f-scope"></div>
-        <p class="sublabel">How well-known is it?</p>
-        <div class="chips" id="f-tier"></div>
-        <p class="hint" id="tierNote"></p>
-        <p class="hint">“Unknown” = no information on the reach in the sources; some are estimated from other hints (marked “estimate” on the card). Local and province/state outlets are mostly the small ones that are not yet known.</p>
-      </section>
-
       <!-- "My material" and "Channel" are one group since 14.11.2026 (two ways to ask the same question) -->
       <section class="fgroup">
         <h2 class="sect">Format &amp; channel</h2>
@@ -85,6 +74,17 @@
         <h2 class="sect">Organisation type</h2>
         <div class="chips" id="f-orgType"></div>
         <details class="explain"><summary>What do these types mean?</summary><dl id="orgTypeHelp"></dl></details>
+      </section>
+
+      <section class="fgroup" data-open="1">
+        <h2 class="sect">Reach &amp; size</h2>
+        <p class="sublabel">Where does it reach?</p>
+        <div class="chips" id="f-scopeGroups"></div>
+        <div class="chips" id="f-scope"></div>
+        <p class="sublabel">How well-known is it?</p>
+        <div class="chips" id="f-tier"></div>
+        <p class="hint" id="tierNote"></p>
+        <p class="hint">“Unknown” = no information on the reach in the sources; some are estimated from other hints (marked “estimate” on the card). Local and province/state outlets are mostly the small ones that are not yet known.</p>
       </section>
 
       <!-- Ownership buttons removed (owner, 09.11.2026): only 11 % of outlets have a known owner.

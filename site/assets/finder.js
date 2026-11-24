@@ -166,7 +166,7 @@
       const body = document.createElement("div"); body.className = "fbody";
       while (h.nextSibling) body.append(h.nextSibling);
       g.append(body);
-      const open = title in saved ? saved[title] : i < 3;
+      const open = title in saved ? saved[title] : (i < 3 || g.dataset.open === "1");  // "Reach & size" is always open at first
       h.innerHTML = `<button type="button" class="fhead" aria-expanded="${open}"><span class="ftitle">${esc(title)}</span><span class="fcount" hidden></span><span class="farrow" aria-hidden="true"></span></button>`;
       body.hidden = !open;
       h.firstChild.addEventListener("click", () => setOpen(g, body.hidden, true));
