@@ -53,6 +53,13 @@ org_kind:
   - {id: city, label: "City / local government"}
   - {id: labour, label: "Labour organisation"}
   - {id: business_association, label: "Business association"}
+  - {id: association, label: "Association (ECOSOC)"}
+  - {id: indigenous, label: "Indigenous peoples' organisation"}
+  - {id: disability, label: "Disability organisation"}
+
+# Other ECOSOC organisation types (owner 17.11.2026): in the data, shown only with this box ticked
+optional_types_label: "Include other ECOSOC organisation types"
+optional_types_hint: "Associations, foundations, indigenous peoples' and disability organisations that ECOSOC does not list as NGOs."
 
 only_ecosoc_label: "Only NGOs with ECOSOC consultative status"
 
