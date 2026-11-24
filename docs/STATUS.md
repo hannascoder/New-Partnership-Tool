@@ -2,6 +2,9 @@
 
 Read this together with `CLAUDE.md`, `docs/BRIEFING.md`, `docs/KATEGORIEN.md`, `docs/BACKLOG.md`.
 
+## Next feature (24.11.2026): Get feedback
+Plan and decisions: `docs/FEEDBACK_PLAN.md`. Steps F1 (page, list, mail), F1b (private Sheet + Worker), F2 (survey), F3 (evaluation). Waiting for owner's go for F1.
+
 ## Live
 https://new-partnership-tool.hannacstevens.workers.dev (Cloudflare Access login). Every merge to `main`
 is published automatically (only the PR *preview* builds fail; harmless).
