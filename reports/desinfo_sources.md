@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-23T15:43:51Z  |  items in the site data: 7597
+Fetched: 2026-11-24T15:37:51Z  |  items in the site data: 7826
 
 ## Google Fact Check Tools API
-- {'items': 234, 'requests': 1954, 'errors': [], 'max_age_days': 14}
+- {'items': 223, 'requests': 2014, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -14,7 +14,7 @@ Fetched: 2026-11-23T15:43:51Z  |  items in the site data: 7597
 | Maldita.es | yes | 50 |  |
 | Newtral | yes | 10 |  |
 | Aos Fatos | yes | 20 |  |
-| BOOM | yes | 2 |  |
+| BOOM | yes | 3 |  |
 | Vera Files | NO |  | syntax error: line 1, column 0 |
 | Teyit | yes | 10 |  |
 | PolitiFact | yes | 20 |  |
@@ -33,7 +33,7 @@ Fetched: 2026-11-23T15:43:51Z  |  items in the site data: 7597
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-23T15:49:28Z | UN articles in the last 12 months: 2067
+Fetched: 2026-11-24T15:43:29Z | UN articles in the last 12 months: 2130
 
 | Source | Works | Items | Note |
 |---|---|---|---|

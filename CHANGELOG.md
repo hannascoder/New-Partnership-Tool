@@ -27,6 +27,14 @@
   (`config/ngo.yaml` `scope_estimate`). Marked as estimate.
 
 
+
+## 2026-11-24
+- Page "Organisations & NGOs": box **"Include other ECOSOC organisation types"** (off by default) and new
+  organisation types: Association, Indigenous peoples' organisation, Disability organisation (Foundation existed).
+  Organisations that ECOSOC lists only as one of these types are shown only with the box ticked; when another
+  list (UN Geneva, Global Compact) calls them an NGO they are always shown, with their exact type.
+- The data of the 1,727 organisations of these types (country, website, fields of activity) follows when the
+  ECOSOC database is back from maintenance (down since 17.11.2026), at the latest with the automatic update.
 ## 2026-11-17
 - Contact search: contact pages on the same site (e.g. help.nytimes.com) count, the usual contact addresses
   (/contact, /contact-us ...) are tried, and the contact page is read for organisation e-mail addresses.

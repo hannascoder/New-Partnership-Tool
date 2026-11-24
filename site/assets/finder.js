@@ -13,7 +13,7 @@
   const S = { scope: new Set(), tier: new Set(), reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", countries: new Set(),
               channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, allMatches: false, weak: false, checks: new Set(), sort: "auto",
               ngoStatus: new Set(), ngoType: new Set(), ngoEcosoc: false, ngoHideReg: false, hqOnly: false, 
-              orgKind: new Set(), sector: new Set(), ngoAll: false, unPartner: false, q: "", qAll: false };
+              orgKind: new Set(), sector: new Set(), ngoAll: false, unPartner: false, inclExtra: false, q: "", qAll: false };
   let CFG, ALL = [], shown = 0, current = [], nMatch = 0, DEFAULT_CHECKS = new Set();
   const exportList = new Set(loadList());
   let filterSets = loadSets();  // every distinct filter combination active when items were added
@@ -104,7 +104,7 @@
   /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
   const SETS = { m: "material", l: "langs", sc: "scope", sz: "tier", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", pl: "platforms", ns: "ngoStatus", nt: "ngoType", ok: "orgKind", se: "sector" };
   const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
-  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", ww: "f-worldwide", om: "f-onlyMatches", am: "f-allMatches", wk: "f-weak", ne: "f-ngoEcosoc", nr: "f-ngoHideReg", hq: "f-hqOnly", na: "f-ngoAll", up: "f-unPartner" };  // saved when different from the default
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", ww: "f-worldwide", om: "f-onlyMatches", am: "f-allMatches", wk: "f-weak", ne: "f-ngoEcosoc", nr: "f-ngoHideReg", hq: "f-hqOnly", na: "f-ngoAll", up: "f-unPartner", xt: "f-inclExtra" };  // saved when different from the default
   let restoring = false;
   function saveHash() {
     if (restoring) return;
@@ -453,6 +453,13 @@
     $("unPartnerHint").textContent = UP.explanation || "";
     $("f-ngoAll").addEventListener("change", (e) => { S.ngoAll = e.target.checked; apply(); });
     $("f-unPartner").addEventListener("change", (e) => { S.unPartner = e.target.checked; apply(); });
+    if ($("f-inclExtra")) {
+      const nx = ALL.filter((o) => o.xt).length;
+      $("inclExtraLabel").textContent = (N.optional_types_label || "Include other ECOSOC organisation types") + ` (${nx.toLocaleString("en")})`;
+      $("inclExtraHint").textContent = N.optional_types_hint || "";
+      if (!nx) $("f-inclExtra").closest("label").classList.add("pending");
+      $("f-inclExtra").addEventListener("change", (e) => { S.inclExtra = e.target.checked; apply(); });
+    }
   }
 
   function drawOtherLangs() {
@@ -538,6 +545,8 @@
       if (S.qAll) return T;  // "search all": the name alone decides
     }
     if (MODE === "ngo") {
+      // other ECOSOC types (associations, foundations ...): only with the box (owner 17.11.2026)
+      if (!S.inclExtra) T.push(["inclExtra", (o) => !o.xt]);
       if (S.ngoStatus.size) T.push(["ngoStatus", (o) => (S.ngoAll ? [...S.ngoStatus].every((u) => (o.us || []).includes(u)) : (o.us || []).some((u) => S.ngoStatus.has(u)))]);
       if (S.orgKind.size) T.push(["orgKind", (o) => S.orgKind.has(o.ok || "ngo")]);
       if (S.sector.size) T.push(["sector", (o) => !!(o.gc && S.sector.has(o.gc[2]))]);

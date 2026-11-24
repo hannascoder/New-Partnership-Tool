@@ -176,15 +176,19 @@ def ecosoc():
             elif kind == "dpi":
                 r["dgc"] = True
     ngo_type = set(FIELDS.get("types_included") or [])
+    optional = FIELDS.get("types_optional") or {}  # owner 17.11.2026: shown only with the box ticked
+    allowed = ngo_type | set(optional)
     type_lists_known = any(m.get("kind") == "type" and m.get("complete") for m in lists.values())
     out = []
     for code, o in orgs.items():
         r = member[code]
         prof = parse_profile(profiles.get(code) or {})
-        if type_lists_known and not (r["types"] & ngo_type):
-            continue  # not of type "Non-governmental organization" (owner: classic NGOs first)
-        if prof.get("type") and prof["type"] not in ngo_type:
+        if type_lists_known and not (r["types"] & allowed):
+            continue  # other ECOSOC types (e.g. intergovernmental) are not taken in
+        if prof.get("type") and prof["type"] not in allowed:
             continue
+        is_ngo = bool(r["types"] & ngo_type) or prof.get("type") in ngo_type
+        ecosoc_kind = None if is_ngo else next((optional[t] for t in sorted(r["types"] | ({prof["type"]} if prof.get("type") else set())) if t in optional), None)
         status = r["status"]
         if not status:  # accreditations column, e.g. "Special 2016"
             for a in o.get("accreditations") or []:
@@ -204,7 +208,7 @@ def ecosoc():
             "email": prof.get("email"), "social": {},
             "fields": sorted(set(r["fields"]) | set(act["fields"])), "un_status": us,
             "description": act["mission"] or prof.get("mission") or "",
-            "active_in": active_in, "geo_scope": act["scope"],
+            "active_in": active_in, "geo_scope": act["scope"], "ecosoc_kind": ecosoc_kind,
             "profile_url": f"https://esango.un.org/civilsociety/showProfileDetail.do?method=showProfileDetails&profileCode={code}",
         })
     return out
@@ -282,8 +286,12 @@ def global_compact():
 
 
 def org_kind(name, members):
-    """organisation type for the filter (config/ngo.yaml org_kind): from the Global Compact type, else from
-    words in the name (config/sources/global_compact.yaml kind_words), else NGO"""
+    """organisation type for the filter (config/ngo.yaml org_kind): from the ECOSOC type (associations,
+    foundations ...), else the Global Compact type, else words in the name (config/sources/global_compact.yaml
+    kind_words), else NGO"""
+    kinds = [m["ecosoc_kind"] for m in members if m.get("ecosoc_kind")]
+    if kinds and not any(m["source"] == "ecosoc" and not m.get("ecosoc_kind") for m in members):
+        return kinds[0]
     for m in members:
         t = (m.get("gc") or {}).get("type", "")
         if t == "Labour Organization":
@@ -574,6 +582,8 @@ def main():
             "active_in": sorted({c for m in ms for c in m.get("active_in") or []} - {country}),
             "geo_scope": geo, "geo_scope_why": geo_why,
             "org_kind": org_kind(name, ms),
+            # only listed as another ECOSOC type (no other source calls it an NGO): shown only with the box
+            "optional_type": all(m["source"] == "ecosoc" and m.get("ecosoc_kind") for m in ms),
             "global_compact": ({"since": min((g["since"] for g in gcs if g["since"]), default=None),
                                 "status": gcs[0]["status"], "sector": next((g["sector"] for g in gcs if g["sector"]), ""),
                                 "url": gcs[0]["url"]} if gcs else None),
