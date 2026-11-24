@@ -26,9 +26,9 @@ Listed as public service broadcaster AND news outlet (private owner): 2
 
 | Scope | Outlets | Main sources |
 |---|---|---|
-| international | 275 | iptv-org 109; Estimate: the name contains 87; list of international broadcasters 53; Wikidata: international broadcasting 14 |
+| international | 1116 | Estimate: Wikipedia articles in 3 world languages 399; Estimate: Wikipedia articles in 4 world languages 162; Estimate: Wikipedia articles in 5 world languages 110; iptv-org 109 |
 | regional | 467 | iptv-org 467 |
-| national | 30191 | iptv-org broadcast area: whole country 14557; Media Cloud collection 13232; Estimate: Wikipedia article in 3 languages 789; Estimate: Wikipedia article in 4 languages 445 |
+| national | 29350 | iptv-org broadcast area: whole country 14557; Media Cloud collection 13232; Estimate: Wikipedia article in 3 languages 709; Estimate: Wikipedia article in 4 languages 356 |
 | subnational | 496 | iptv-org broadcast area: province / state 496 |
 | local | 17852 | Media Cloud collection 13649; Radio Browser tag 1993; iptv-org broadcast area: city 1577; Wikidata: student newspaper 250 |
 | unknown | 20651 | no scope information in the sources 20651 |

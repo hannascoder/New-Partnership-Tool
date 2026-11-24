@@ -50,6 +50,9 @@ size_tier:
   - id: small
     label: Small / lesser-known
     description: "Few sources and no Wikipedia presence: typically local or niche outlets."
+  - id: mini
+    label: Mini
+    description: "Only one source and nothing else known (no Wikipedia, no recent articles): typically a very small local or community outlet."
 size_tier_note: >-
   An estimate from public signals (Wikipedia language versions, number of independent sources, working website,
   recent articles), not a measured audience. Use it to find outlets that are not yet well-known.

@@ -143,7 +143,8 @@ def wikidata():
             "email": (r.get("email") or [None])[0],
             "wikipedia": (r.get("wikipedia_titles") or {}).get("enwiki"),
             "wikipedia_languages": r.get("wikipedia_languages", 0),
-            "raw": {"classes": [labels.get(c) or c for c in classes],
+            "raw": {"wikipedia_wikis": sorted((r.get("wikipedia_titles") or {}).keys()),  # world-language Wikipedias with an article (scope estimate)
+                    "classes": [labels.get(c) or c for c in classes],
                     "owned_by": [labels.get(c) or c for c in r.get("owned_by", [])],
                     "parent": [labels.get(c) or c for c in r.get("parent_organization", [])],
                     "member_of": [labels.get(c) or c for c in r.get("member_of", [])],

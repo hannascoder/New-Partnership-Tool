@@ -276,6 +276,12 @@ def scope_and_reach(o, rules, reach, intl, org):
             w = next((w for w in (est.get("name_words") or {}).get(sc, []) if f" {str(w).lower()} " in low), None)
             if w:
                 return val(sc, "estimate", f'Estimate: the name contains "{w}"'), audience
+        # an article in several WORLD languages (English, French, Spanish ...) = reaches beyond its country;
+        # articles only in languages of its own country = national (owner, 24.11.2026)
+        wikis = {w for k, m in o["raw"].items() if k.startswith("wd:") for w in m.get("raw", {}).get("wikipedia_wikis", [])}
+        if len(wikis) >= est.get("international_min_world_wikipedias", 99):
+            names = ", ".join(sorted(w[:-4] for w in wikis))
+            return val("international", "estimate", f"Estimate: Wikipedia articles in {len(wikis)} world languages ({names})"), audience
         if (o.get("wikipedia_languages") or 0) >= est.get("national_min_wikipedia_languages", 99):
             return val("national", "estimate", f"Estimate: Wikipedia article in {o['wikipedia_languages']} languages (not a local outlet)"), audience
         return val("unknown", "default", "no scope information in the sources"), audience

@@ -74,7 +74,7 @@
   const SOFT = ["tp", "sub", "au", "un"];
   const countsNow = (e) => S.weak || e[1] < 3 || e[0] === "general_news";
   /* a button that is not offered on this page (categories.yaml hide_on: the same list as another filter) */
-  const TIERS = [null, "well_known", "mid", "small"];  // outlet field sz (pipeline/build/site_data.py)
+  const TIERS = [null, "well_known", "mid", "small", "mini"];  // outlet field sz (pipeline/build/site_data.py)
   const TIER_LABEL = {}; // filled from config in init
   const scopeKnown = (o) => !!(o.sc && o.sc[0] !== "unknown");
   const scopeEstimated = (o) => scopeKnown(o) && /^Estimate/.test(CFG.why[o.sc[1]] || "");

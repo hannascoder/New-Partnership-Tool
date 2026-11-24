@@ -148,7 +148,11 @@ scope:
       national: [national, nationale, nacional, nazionale, "национальный", "الوطني", "国家", "राष्ट्रीय", "taifa"]
       local: [local, locale, community, communautaire, comunitaria, comunitário, campus, student, students, school, college, university,
               universidad, université, universidade, "местное", "المحلي", "社区", "स्थानीय", "mtaa"]
-    # an outlet with this many Wikipedia language versions and no other evidence is at least national
+    # an outlet with an article in this many of the 7 world-language Wikipedias (en, fr, es, ar, ru, zh, pt)
+    # and no other evidence reaches beyond its country = international (owner, 24.11.2026: three Indian
+    # languages = national, English + French + Spanish = international)
+    international_min_world_wikipedias: 3
+    # an outlet with this many Wikipedia language versions (any language) and no other evidence is at least national
     national_min_wikipedia_languages: 3
 
 # ---------------------------------------------------------------- 4d
@@ -341,8 +345,9 @@ prominence:
 
 # Size / how well-known (owner, 24.11.2026): the score above, tier per outlet. well_known = score at
 # least `well_known_score`, or among the first `well_known_rank` of its country with at least
-# `well_known_rank_min_score`; mid = score at least `mid_score` or among the first `mid_rank`; the rest = small.
+# `well_known_rank_min_score`; mid = score at least `mid_score` or among the first `mid_rank`; below `mini_score` = mini; the rest = small.
 size_tier:
+  mini_score: 2                # below this (one source, nothing else known) = "Mini" (owner, 24.11.2026)
   well_known_score: 15
   well_known_rank: 10
   well_known_rank_min_score: 5

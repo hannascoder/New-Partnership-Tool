@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-24 (later): owner's feedback on "Reach & size"
+- New fourth level "Mini" in "How well-known is it?" (one source and nothing else known, score below 2;
+  about 16,000 outlets); "Small" is now the band above it. `config/rules.yaml` `size_tier.mini_score`.
+- Scope estimate from Wikipedia now follows the languages: an article in 3 or more of the 7 world-language
+  Wikipedias (English, French, Spanish, Arabic, Russian, Chinese, Portuguese) = International; articles only
+  in other languages (e.g. three Indian languages) = National. Estimated scope "International" 275 -> 1,064.
+  (`config/rules.yaml` `scope.estimate.international_min_world_wikipedias`.)
+
 ## 2026-11-24: "Reach & size" filter (owner's colleagues wanted to find outlets that are not yet well-known)
 - New block "Reach & size", first in the filter list on both pages. Level 1: "In one country" / "Several
   countries / worldwide" (a button selects all its values); level 2: Local, Province / state (new), National,

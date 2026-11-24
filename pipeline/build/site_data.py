@@ -229,15 +229,16 @@ def main():
         for i, o in enumerate(lst, 1):
             o["_rank"] = i
 
-    # size tier ("Well-known / Mid-size / Small"): config/rules.yaml size_tier; 1 / 2 / 3 in the data (sz)
+    # size tier ("Well-known / Mid-size / Small"): config/rules.yaml size_tier; 1 well-known / 2 mid / 3 small / 4 mini in the data (sz)
     st = rules.get("size_tier") or {}
+    def tier_of(score, rank):
+        if score >= st.get("well_known_score", 15) or (rank <= st.get("well_known_rank", 10) and score >= st.get("well_known_rank_min_score", 5)):
+            return 1
+        if score >= st.get("mid_score", 6) or rank <= st.get("mid_rank", 50):
+            return 2
+        return 4 if score < st.get("mini_score", 0) else 3
     for o in outlets:
-        if o["_score"] >= st.get("well_known_score", 15) or (o["_rank"] <= st.get("well_known_rank", 10) and o["_score"] >= st.get("well_known_rank_min_score", 5)):
-            o["_tier"] = 1
-        elif o["_score"] >= st.get("mid_score", 6) or o["_rank"] <= st.get("mid_rank", 50):
-            o["_tier"] = 2
-        else:
-            o["_tier"] = 3
+        o["_tier"] = tier_of(o["_score"], o["_rank"])
 
     # a name in another script than the outlet's languages -> a name in Latin letters (rules.yaml name_scripts)
     SCRIPT_RX = {"Arabic": r"[\u0600-\u06FF]", "Cyrillic": r"[\u0400-\u04FF]", "CJK": r"[\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]",
@@ -454,6 +455,7 @@ def main():
                     if (oc.get("so") or {}).get(k) and not u.startswith("http"):
                         e["so"][k] = oc["so"][k].replace("{}", u)
                 e["ms"] = 1  # not found in the sources at the last update
+                e.setdefault("sz", tier_of(e["p"], e["r"]))  # outlets kept from the last update
                 out.append(e)
                 carried.append(e)
         with open(mf, "w", encoding="utf-8") as fh:  # one outlet per line
