@@ -1,10 +1,15 @@
 // Cloudflare settings for this website.
 // Cloudflare publishes everything in the folder "site/" and nothing else,
 // so configuration, raw data and pipeline code are never online.
+// Exception (24.11.2026): the small Worker in worker/index.js answers /api/* (the private contact list of the
+// "Get feedback" page). Its secrets are stored in Cloudflare, never in this repository.
 {
   "name": "new-partnership-tool",
+  "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
   "assets": {
-    "directory": "./site"
+    "directory": "./site",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }

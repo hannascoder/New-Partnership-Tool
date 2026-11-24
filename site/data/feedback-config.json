@@ -1,0 +1,104 @@
+{
+ "sheet_tab": "Contacts",
+ "columns": [
+  "name",
+  "type",
+  "country",
+  "place",
+  "language",
+  "topic",
+  "age_group",
+  "description",
+  "contact_name",
+  "contact_email",
+  "general_email",
+  "extra_emails",
+  "send_mode",
+  "group_code",
+  "website",
+  "notes"
+ ],
+ "send_modes": [
+  {
+   "id": "main",
+   "label": "Only the main contact"
+  },
+  {
+   "id": "general",
+   "label": "Only the general address"
+  },
+  {
+   "id": "all",
+   "label": "Main contact + all other addresses"
+  }
+ ],
+ "types": [
+  "Model UN group",
+  "Model UN conference / network",
+  "Student organisation",
+  "Youth organisation",
+  "School / teachers",
+  "University department",
+  "NGO / civil society",
+  "Media outlet",
+  "Other"
+ ],
+ "age_groups": [
+  "under 18",
+  "18-25",
+  "26-35",
+  "36-50",
+  "over 50",
+  "mixed"
+ ],
+ "products": [
+  {
+   "id": "un_news_today",
+   "label": "UN News Today (podcast)",
+   "kind": "podcast"
+  },
+  {
+   "id": "un_interviews",
+   "label": "UN Interviews (podcast)",
+   "kind": "podcast"
+  },
+  {
+   "id": "lid_is_on",
+   "label": "The Lid Is On (podcast)",
+   "kind": "podcast"
+  },
+  {
+   "id": "awake_at_night",
+   "label": "Awake at Night (podcast)",
+   "kind": "podcast"
+  },
+  {
+   "id": "video",
+   "label": "UN video",
+   "kind": "video"
+  },
+  {
+   "id": "article",
+   "label": "UN article / story",
+   "kind": "article"
+  },
+  {
+   "id": "graphic",
+   "label": "UN graphic / infographic",
+   "kind": "graphic"
+  },
+  {
+   "id": "other",
+   "label": "[name of the product]",
+   "kind": "other"
+  }
+ ],
+ "response_days": 7,
+ "reminder_after_days": 4,
+ "mail": {
+  "subject": "5 minutes: your feedback on {product}",
+  "body": "Dear {name} team,\n\nWe are developing {product} at the United Nations and would very much like to hear what you think. [One sentence: what it is and who it is for.]\n\nCould you take about [5-10] minutes to answer a short anonymous survey?\n{link}\n\nThe survey is open until {deadline}. At the end you will find a box where you can also tell us how we could improve the survey itself, and a box for ideas on what we should make next.\n\nYou are welcome to share the link with other members of your group. [Optional: we will send you a short summary of the results.]\n\nIf you would rather not receive requests like this, just reply and we will take you off our list.\n\nThank you very much for your time!\n\nBest regards,\n"
+ },
+ "reminder_subject": "Reminder: your feedback on {product} (open until {deadline})",
+ "reminder_intro": "A short reminder: the survey below is still open until {deadline}. If you have already answered, thank you, and please ignore this mail.\n\n"
+}

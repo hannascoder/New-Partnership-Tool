@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Partner Finder – Get feedback</title>
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-24">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-24">
+<link rel="stylesheet" href="assets/feedback.css?v=2026-11-24">
+</head>
+<body data-mode="feedback">
+<header class="site">
+  <div class="brand">
+    <img class="logo" src="assets/un_emblem.png" alt="United Nations emblem" width="40" height="33">
+    <div>
+      <div class="un">United Nations · DGC Partnerships</div>
+      <h1 class="title">Partner Finder</h1>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <nav class="mode-switch" aria-label="Choose a page">
+    <a href="./">Media</a><a href="ngos.html">Organisations &amp; NGOs</a><a href="desinfo.html">Disinformation</a><a href="feedback.html" aria-current="page">Get feedback</a>
+  </nav>
+  <span class="preview-badge">Preview</span>
+</header>
+
+<main class="fb-wrap">
+  <h2 style="margin-top:0">Get feedback on a UN product</h2>
+  <p class="hint">Choose the groups you want to ask, choose the product, and the tool prepares the mail with the survey link. You send the mail yourself. Contacts come from your private Google Sheet.</p>
+  <div id="fbBanner"></div>
+
+  <h2>1. Product and survey</h2>
+  <div class="fb-steps">
+    <div><label for="fbProduct">UN product</label><select id="fbProduct"></select></div>
+    <div><label for="fbLink">Survey link (Google Forms)</label><input id="fbLink" type="url" placeholder="https://forms.gle/…  (add {group} where the group code goes)">
+      <p class="hint">Kept in this browser only. The group code of each group is added, so you can see which group answered (not who).</p></div>
+    <div><label for="fbDays">Days to answer</label><input id="fbDays" type="number" min="1" max="60"><p class="hint" id="fbDeadline"></p></div>
+  </div>
+
+  <h2>2. Who do you want to ask?</h2>
+  <div class="fb-filters" id="fbFilters"></div>
+  <p class="hint" id="fbCount"></p>
+  <div class="fb-table-wrap"><table class="fb-table" id="fbTable"></table></div>
+</main>
+
+<div class="fb-bar">
+  <span id="fbSel">0 selected</span>
+  <button class="btn-primary" id="fbWrite" disabled>Write mails (one per group)</button>
+  <label><input type="checkbox" id="fbRemind"> This is a reminder</label>
+  <span class="hint">The mail sending mode (main contact / general address / all) can be changed per row; to keep a change, edit it in the Sheet.</span>
+</div>
+<script src="assets/feedback.js?v=2026-11-24"></script>
+</body>
+</html>

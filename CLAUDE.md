@@ -26,6 +26,8 @@ Decisions made after the briefing was written (these win over the briefing):
 
 - **Export feature:** built 06.11.2026 after the owner approved sample files (all 15 columns; PDF/Word landscape + portrait). Spec: `docs/EXPORT_SPEC.md`.
 
+- **Get feedback** (owner, 24.11.2026): new page `site/feedback.html` to ask groups (start: Model UN) for feedback on UN products by mail + Google Forms survey, evaluated automatically. Private contact list = owner's Google Sheet read via Google service account + small Cloudflare Worker; never put private contacts in the repo. Plan and steps F1-F3: `docs/FEEDBACK_PLAN.md`.
+
 - **Principle (owner, 06.11.2026): everything open source, self-maintaining and completely free.** Only open data sources, no paid services or keys that cost money, no server; GitHub Actions free tier + Cloudflare free plan.
 - **Very right-wing media are not shown** (owner, 06.11.2026): excluded by open, documented evidence (Wikidata political ideology, Wikipedia "far-right" categories), listed in a report for review; see config/rules.yaml.
 - **Automation every 2 months** (owner, 06.11.2026): re-fetch, re-merge, re-classify; new outlets marked "New" for 4 months; websites hidden after 3 failed checks in a row (come back when they answer); outlets missing from all sources hidden after the 2nd run without them; safety brake (>10 % drop) + error mail. To be built in step 9.
