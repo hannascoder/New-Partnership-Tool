@@ -305,6 +305,16 @@ Topic detection improved 17.11.2026 (`config/desinfo_topic_synonyms.yaml`, ~180 
 18.11.2026: export (PDF/Word/Excel), topic links to the Partner Finder, AFP country rule and UNDP iVerify seeds built (docs/DESINFO_PLAN.md, last section). Next: owner reviews the topic mapping; UNDP iVerify team to name the live instances.
 Old to-do: free Google API key (Fact Check Tools); apply for Google Trends API alpha (optional).
 
+## 24.11.2026: "Reach & size" filter BUILT (owner's colleagues: find less well-known outlets and NGOs)
+Owner's answers: scope better visible + also a well-known/size estimate; two levels (in one country /
+several countries - worldwide, then local - province - national ...); "Unknown" button + estimate;
+NGOs: local / national / international matter most; Excel/PDF/Word get a column "Size" (media).
+Built: block "Reach & size" first in the filter list (both pages); new scope value `subnational`
+(province / state); `size_tier` (config/categories.yaml, rules in config/rules.yaml) stored as `sz` 1/2/3;
+estimates for unknown scope (config/rules.yaml `scope`, config/ngo.yaml `scope_estimate`), marked "Estimate".
+To check by the owner: the thresholds of "Well-known / Mid-size / Small" (see numbers in CHANGELOG) and the
+estimated scopes on a few cards. NGOs have no "Size" (no open figure); only scope.
+
 ## Next steps (agreed order)
 1. ~~4d topics + UN profile~~ (built, owner checks it).
 2. **Topic keywords T1-T6** (above); the website check is part T3. **Website check** (owner prefers it as the long-term core): top 50 per country first, no AI:

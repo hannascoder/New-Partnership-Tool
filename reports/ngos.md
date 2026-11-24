@@ -1,6 +1,6 @@
 # NGOs (phase 2)
 
-Built 2026-11-17. Sources: ecosoc 12838, global_compact 2331, wikidata_ngo 58399, un_geneva 1471, iati 1340
+Built 2026-11-24. Sources: ecosoc 12838, global_compact 2331, wikidata_ngo 58399, un_geneva 1471, iati 1340
 
 **18,594 NGOs** shown on the NGO page, 1,903 not shown (reports/ngos_excluded.md).
 

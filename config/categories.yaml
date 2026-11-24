@@ -14,16 +14,45 @@
 scope:
   - id: local
     label: Local
-    description: A city or district.
+    description: A city, town or district.
+  - id: subnational
+    label: Province / state
+    description: A region inside one country (a province, state or county).
   - id: national
     label: National
-    description: One country.
+    description: One country as a whole.
   - id: regional
-    label: Regional (multi-country)
+    label: Several countries
     description: Several countries, e.g. East Africa or the Arab world.
   - id: international
     label: International
     description: Worldwide or many regions.
+
+# Two levels in the "Reach & size" block (owner, 24.11.2026): first "in one country" or "several countries /
+# worldwide", then the single values. A group button selects all its values.
+scope_groups:
+  - id: one_country
+    label: In one country
+    members: [local, subnational, national]
+  - id: many_countries
+    label: Several countries / worldwide
+    members: [regional, international]
+
+# How well-known an outlet is (owner, 24.11.2026; rules in config/rules.yaml size_tier). An estimate from
+# the best-known ranking, NOT a measured audience figure. Only on the media page.
+size_tier:
+  - id: well_known
+    label: Well-known
+    description: Among the best-known outlets of its country (many Wikipedia versions, many sources).
+  - id: mid
+    label: Mid-size
+    description: Known beyond its own town, but not among the best-known.
+  - id: small
+    label: Small / lesser-known
+    description: "Few sources and no Wikipedia presence: typically local or niche outlets."
+size_tier_note: >-
+  An estimate from public signals (Wikipedia language versions, number of independent sources, working website,
+  recent articles), not a measured audience. Use it to find outlets that are not yet well-known.
 
 # Why an outlet counts as reaching a country (field audience_basis).
 audience_basis:
@@ -407,6 +436,8 @@ methods:
     label: Stated by the source
   - id: membership
     label: Network membership
+  - id: estimate
+    label: Estimated from other hints
   - id: website_check
     label: Found on the outlet's website
   - id: ai_classification

@@ -10,9 +10,9 @@
   const MODE = document.body.dataset.mode === "ngo" ? "ngo" : "media";
   const WORD = MODE === "ngo" ? ["organisation", "organisations"] : ["outlet", "outlets"];
   const KEY = MODE === "ngo" ? "pf-ngo-export" : "pf-export";
-  const S = { scope: new Set(), scopeUnknown: false, reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", countries: new Set(),
+  const S = { scope: new Set(), tier: new Set(), reach: true, worldwide: false, own: new Set(), ownUnknown: false, nets: new Set(), orgType: new Set(), material: new Set(), langs: new Set(), noLang: false, region: "", countries: new Set(),
               channel: new Set(), size: "all", tp: new Set(), subOff: {}, platforms: new Set(), chUnknown: false, au: new Set(), un: new Set(), onlyMatches: false, allMatches: false, weak: false, checks: new Set(), sort: "auto",
-              ngoStatus: new Set(), ngoType: new Set(), ngoEcosoc: false, ngoHideReg: false, hqOnly: false, gscope: new Set(),
+              ngoStatus: new Set(), ngoType: new Set(), ngoEcosoc: false, ngoHideReg: false, hqOnly: false, 
               orgKind: new Set(), sector: new Set(), ngoAll: false, unPartner: false, q: "", qAll: false };
   let CFG, ALL = [], shown = 0, current = [], nMatch = 0, DEFAULT_CHECKS = new Set();
   const exportList = new Set(loadList());
@@ -65,7 +65,7 @@
   const FACET = {
     scope: (o) => [o.sc ? o.sc[0] : "unknown"], orgType: (o) => (o.o ? [o.o[0]].concat(o.oa || []) : []), channel: (o) => o.ch || [],
     platform: (o) => Object.keys(o.so || {}), nets: (o) => o.nw || [], langs: (o) => o.l || [],
-    ngoStatus: (o) => o.us || [], ngoType: (o) => (o.nt || []).map((t) => t[0]), gscope: (o) => (o.gs ? [o.gs] : []),
+    ngoStatus: (o) => o.us || [], ngoType: (o) => (o.nt || []).map((t) => t[0]), tier: (o) => [TIERS[o.sz] || "small"],
     orgKind: (o) => [o.ok || "ngo"], sector: (o) => (o.gc && o.gc[2] ? [o.gc[2]] : []),
     // topics: weak "Reports on it" matches only count when the box "Also count weak matches" is ticked
     tp: (o) => (o.tp ? o.tp.filter(countsNow).map((e) => e[0]) : ["general_news"]),
@@ -74,6 +74,11 @@
   const SOFT = ["tp", "sub", "au", "un"];
   const countsNow = (e) => S.weak || e[1] < 3 || e[0] === "general_news";
   /* a button that is not offered on this page (categories.yaml hide_on: the same list as another filter) */
+  const TIERS = [null, "well_known", "mid", "small"];  // outlet field sz (pipeline/build/site_data.py)
+  const TIER_LABEL = {}; // filled from config in init
+  const scopeKnown = (o) => !!(o.sc && o.sc[0] !== "unknown");
+  const scopeEstimated = (o) => scopeKnown(o) && /^Estimate/.test(CFG.why[o.sc[1]] || "");
+  const scopeText = (o) => lab(CFG.categories.scope, o.sc[0]) + (scopeEstimated(o) ? " (estimate)" : "");
   const offered = (x) => !(x.hide_on || []).includes(MODE);
   function totals(group) { const c = {}; ALL.forEach((o) => FACET[group](o).forEach((v) => { c[v] = (c[v] || 0) + 1; })); return c; }
   function counted(group, value, label) {  // button label with a number that apply() keeps up to date
@@ -97,9 +102,9 @@
     fn._set = set; fn._v = value; return fn;
   }
   /* -------- shareable link: the chosen filters are kept in the page address (#...) -------- */
-  const SETS = { m: "material", l: "langs", sc: "scope", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", pl: "platforms", ns: "ngoStatus", nt: "ngoType", gs: "gscope", ok: "orgKind", se: "sector" };
+  const SETS = { m: "material", l: "langs", sc: "scope", sz: "tier", ot: "orgType", ch: "channel", ow: "own", nw: "nets", tp: "tp", au: "au", un: "un", pl: "platforms", ns: "ngoStatus", nt: "ngoType", ok: "orgKind", se: "sector" };
   const SETNAME = new Map(Object.entries(SETS).map(([k, v]) => [S[v], k]));
-  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", su: "f-scopeUnknown", ww: "f-worldwide", om: "f-onlyMatches", am: "f-allMatches", wk: "f-weak", ne: "f-ngoEcosoc", nr: "f-ngoHideReg", hq: "f-hqOnly", na: "f-ngoAll", up: "f-unPartner" };  // saved when different from the default
+  const FLAGS = { cu: "f-chUnknown", nl: "f-noLang", ww: "f-worldwide", om: "f-onlyMatches", am: "f-allMatches", wk: "f-weak", ne: "f-ngoEcosoc", nr: "f-ngoHideReg", hq: "f-hqOnly", na: "f-ngoAll", up: "f-unPartner" };  // saved when different from the default
   let restoring = false;
   function saveHash() {
     if (restoring) return;
@@ -178,7 +183,7 @@
   /* every active choice of one filter group: [label, undo()] (chips, selects, radios, checkboxes changed from their default) */
   function controlsOf(g) {
     const out = [];
-    g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub)').forEach((c) => out.push([c.childNodes[0].textContent.replace(" ✕", "").trim(), () => c.click()]));
+    g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub):not(.chip-group)').forEach((c) => out.push([c.childNodes[0].textContent.replace(" ✕", "").trim(), () => c.click()]));
     g.querySelectorAll('.chip.sub[aria-pressed="false"]').forEach((c) => { if (!c.closest("[hidden]:not(.fbody)")) out.push(["without: " + c.childNodes[0].textContent.trim(), () => c.click()]); });
     g.querySelectorAll("select").forEach((sel) => { if (sel.value && !sel.dataset.adder) out.push([sel.selectedOptions[0].textContent.trim(), () => { sel.value = ""; sel.dispatchEvent(new Event("change")); }]); });
     g.querySelectorAll('input[type="radio"]:checked').forEach((r) => { if (!r.defaultChecked) out.push([r.parentElement.textContent.trim(), () => { const d = g.querySelector('input[type="radio"][name="' + r.name + '"]'); const def = [...g.querySelectorAll('input[type="radio"]')].find((x) => x.defaultChecked) || d; def.checked = true; def.dispatchEvent(new Event("change")); }]); });
@@ -232,9 +237,8 @@
     $("f-country").dataset.adder = "1";  // several countries can be chosen, one after the other (review 13.11.2026)
     $("f-country").addEventListener("change", (e) => { if (e.target.value) { S.countries.add(e.target.value); drawChosenCountries(); apply(); } e.target.value = ""; });
     drawCountries();
-    if ($("f-scope")) {
-    C.scope.forEach((s) => $("f-scope").append(chip(counted("scope", s.id, esc(s.label)), false, toggle(S.scope, s.id), { title: s.description || "" })));
-    $("f-scopeUnknown").addEventListener("change", (e) => { S.scopeUnknown = e.target.checked; apply(); });
+    if ($("f-scope")) buildReachAndSize();
+    if ($("f-reach")) {
     $("f-reach").addEventListener("change", (e) => { S.reach = e.target.checked; apply(); });
     $("f-worldwide").addEventListener("change", (e) => { S.worldwide = e.target.checked; apply(); });
     }
@@ -388,6 +392,40 @@
     updateExportCount();
   }
 
+  /* -------- "Reach & size" block (owner, 24.11.2026): scope in two levels, "Unknown" as a button, how well-known (media only) -------- */
+  function buildReachAndSize() {
+    const C = CFG.categories, T = {}; T.scope = totals("scope"); T.tier = totals("tier");
+    C.size_tier.forEach((t) => { TIER_LABEL[t.id] = t.label; });
+    const vals = C.scope.filter((s) => (MODE === "ngo" ? s.id !== "subnational" : true));
+    const sync = () => {  // a group button is pressed when all its values are
+      document.querySelectorAll("#f-scopeGroups .chip[data-grp]").forEach((b) => {
+        const m = b.dataset.grp.split(","); b.setAttribute("aria-pressed", m.length && m.every((x) => S.scope.has(x)) ? "true" : "false");
+      });
+    };
+    $("f-scopeGroups").replaceChildren();
+    (C.scope_groups || []).forEach((g) => {
+      const members = g.members.filter((m) => vals.some((v) => v.id === m));
+      const b = chip(esc(g.label), false, () => {
+        const all = members.every((m) => S.scope.has(m));
+        members.forEach((m) => { all ? S.scope.delete(m) : S.scope.add(m); const c = document.querySelector(`#f-scope .chip[data-f="sc"][data-v="${m}"]`); if (c) c.setAttribute("aria-pressed", S.scope.has(m)); });
+        sync(); apply();
+      }, { title: members.map((m) => lab(C.scope, m)).join(", ") });
+      b.dataset.grp = members.join(","); b.classList.add("chip-group");
+      $("f-scopeGroups").append(b);
+    });
+    vals.forEach((s) => {
+      const t = toggle(S.scope, s.id), fn = (b) => { t(b); sync(); };
+      fn._set = t._set; fn._v = t._v;
+      $("f-scope").append(chip(counted("scope", s.id, esc(s.label)), false, fn, { title: s.description || "", disabled: !T.scope[s.id] }));
+    });
+    const tu = toggle(S.scope, "unknown"), fu = (b) => { tu(b); sync(); }; fu._set = tu._set; fu._v = tu._v;
+    $("f-scope").append(chip(counted("scope", "unknown", "Unknown"), false, fu, { title: "No information on the reach in the sources. Some of these are estimated from other hints (see the card)." }));
+    if ($("f-tier")) {
+      C.size_tier.forEach((t) => $("f-tier").append(chip(counted("tier", t.id, esc(t.label)), false, toggle(S.tier, t.id), { title: t.description || "" })));
+      $("tierNote").textContent = C.size_tier_note || "";
+    }
+  }
+
   /* -------- NGO page (config/ngo.yaml): UN status, type of work, geographic scope, based in / active in -------- */
   const ECOSOC_STATUS = ["ecosoc_general", "ecosoc_special", "ecosoc_roster"];
   function initNgo(T) {
@@ -400,8 +438,6 @@
     N.un_status.forEach((u) => $("f-ngoStatus").append(chip(counted("ngoStatus", u.id, esc(u.label)), false, toggle(S.ngoStatus, u.id),
       T.ngoStatus[u.id] ? { title: u.note || "" } : { disabled: true, title: "No NGO with this status in the sources yet" })));
     N.type_of_work.forEach((t) => $("f-ngoType").append(chip(counted("ngoType", t.id, esc(t.label)), false, toggle(S.ngoType, t.id))));
-    (N.geo_scope || []).forEach((g) => $("f-gscope").append(chip(counted("gscope", g.id, esc(g.label)), false, toggle(S.gscope, g.id),
-      T.gscope[g.id] ? {} : { disabled: true, title: "Not read from the ECOSOC profiles yet" })));
     $("f-ngoEcosoc").addEventListener("change", (e) => { S.ngoEcosoc = e.target.checked; apply(); });
     $("f-ngoHideReg").addEventListener("change", (e) => { S.ngoHideReg = e.target.checked; apply(); });
     $("f-hqOnly").addEventListener("change", (e) => { S.hqOnly = e.target.checked; apply(); });
@@ -507,12 +543,12 @@
       if (S.sector.size) T.push(["sector", (o) => !!(o.gc && S.sector.has(o.gc[2]))]);
       if (S.unPartner || S.ngoEcosoc || S.ngoHideReg) T.push(["ngoChecks", (o) => !(S.unPartner && !o.up) && !(S.ngoEcosoc && !(o.us || []).some((u) => ECOSOC_STATUS.includes(u))) && !(S.ngoHideReg && o.ro)]);
       if (S.ngoType.size) T.push(["ngoType", (o) => (o.nt || []).some((t) => S.ngoType.has(t[0]))]);
-      if (S.gscope.size) T.push(["gscope", (o) => S.gscope.has(o.gs)]);
     }
     const activeIn = (o) => !S.hqOnly && o.ca;  // NGO page: countries of activity count unless "only based in"
     if (S.countries.size) T.push(["geo", (o) => S.countries.has(o.c) || (S.reach && [...S.countries].some((c) => reachesTarget(o, c))) || !!(activeIn(o) && o.ca.some((c) => S.countries.has(c)))]);
     else if (S.region) T.push(["geo", (o) => inRegion(o.c) || !!(activeIn(o) && o.ca.some(inRegion))]);
-    if (S.scope.size) T.push(["scope", (o) => { const v = o.sc ? o.sc[0] : "unknown"; return S.scope.has(v) || (v === "unknown" && S.scopeUnknown); }]);
+    if (S.scope.size) T.push(["scope", (o) => S.scope.has(o.sc ? o.sc[0] : "unknown")]);
+    if (S.tier.size) T.push(["tier", (o) => S.tier.has(TIERS[o.sz] || "small")]);
     if (S.material.size) {
       const mc = new Set(), mt = new Set(), mp = new Set();
       C.material.filter((m) => S.material.has(m.id)).forEach((m) => { m.channels.forEach((c) => mc.add(c)); (m.also_org_types || []).forEach((t) => mt.add(t)); (m.platforms || []).forEach((t) => mp.add(t)); });
@@ -642,7 +678,7 @@
       ${o.o && !o.ng ? `<p class="row"><b>Type:</b> ${esc((C.org_type.find((x) => x.id === o.o[0]) || {}).label || o.o[0])} ${reason(CFG.why[o.o[1]])}</p>` : ""}
       ${o.oa ? row("Also listed as", esc(o.oa.map((t) => (C.org_type.find((x) => x.id === t) || {}).label || t).join(", "))) : ""}
       ${ownRow}
-      ${o.sc && o.sc[0] !== "unknown" ? `<p class="row"><b>Scope:</b> ${esc((C.scope.find((x) => x.id === o.sc[0]) || {}).label || o.sc[0])} ${reason(CFG.why[o.sc[1]])}</p>` : ""}
+      ${o.sc && o.sc[0] !== "unknown" ? `<p class="row"><b>Scope:</b> ${esc(scopeText(o))} ${reason(CFG.why[o.sc[1]])}</p>` : ""}${!o.ng && o.sz ? `<p class="row"><b>Size:</b> ${esc(TIER_LABEL[TIERS[o.sz]] || "")} <span class="why">(estimate from public signals)</span></p>` : ""}
       ${o.ng && o.pu ? `<p class="row"><b>ECOSOC:</b> <a href="${esc(o.pu)}" target="_blank" rel="noopener">ECOSOC profile ↗</a></p>` : ""}
       ${gcRow}
       ${o.ng && o.nt ? `<p class="row"><b>Type of work:</b></p><ul class="reasons">${o.nt.map((t) => `<li><b>${esc(lab(N.type_of_work || [], t[0]))}</b> ${reason(CFG.why[t[1]] || "")}</li>`).join("")}</ul>` : ""}
@@ -655,7 +691,7 @@
       ${o.lp ? `<p class="row pending">Latest article seen on the website: ${esc(o.lp)}${o.lp < activeSince() ? " (no recent article found)" : ""}</p>` : ""}
       <p class="row pending">Sources: ${esc(src)} · id ${esc(o.i)} · <a href="${esc(reportLink(o))}" target="_blank" rel="noopener">Report an error</a></p>`;
     return `<li class="card${inList ? " selected" : ""}${o.ng ? " is-ngo" : ""}" data-id="${esc(o.i)}"><div class="card-top"><h3>${esc(o.n)}</h3>${o.up ? `<span class="badge partner" title="${esc(((N.un_partner || {}).explanation) || "")}">${esc((N.un_partner || {}).label || "Existing UN partner")}</span>` : ""}${verified}</div>
-      <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")})${o.ng ? (activeText(o) ? " · " + activeText(o) : "") : " · " + reachText(o)}${!o.ng && o.sc && o.sc[0] !== "unknown" ? ` · ${esc((C.scope.find((x) => x.id === o.sc[0]) || {}).label || o.sc[0])}` : ""}</p>
+      <p class="meta">Based in: <b>${esc(k.name || o.c)}</b> (${esc(k.subregion || "")})${o.ng ? (activeText(o) ? " · " + activeText(o) : "") : " · " + reachText(o)}${!o.ng && scopeKnown(o) ? ` · ${esc(scopeText(o))}` : ""}</p>
       ${o.ng && o.ds ? `<p class="row desc">${esc(o.ds.length > 220 ? o.ds.slice(0, 220).replace(/\s+\S*$/, "") + " …" : o.ds)}</p>` : ""}
       <p class="row"><b>${o.ng ? "UN status" : "Type"}:</b> ${typeLine} · <b>Languages:</b> ${langs}${o.ng ? "" : ` · <b>Channels:</b> ${esc(chans) || "<span class='pending'>no information</span>"}`}</p>
       ${o.ro ? `<p class="row warn">ⓘ ${esc(((N.un_status || []).find((u) => u.id === "ecosoc_registered") || {}).note || "Only registered in the ECOSOC database.")}</p>` : ""}
@@ -680,7 +716,7 @@
   }
   function activeText(o) {
     const C = CFG.countryName, N = CFG.ngo || {};
-    const gs = o.gs ? "Scope: " + esc(lab(N.geo_scope || [], o.gs)) : "";
+    const gs = scopeKnown(o) ? "Scope: " + esc(scopeText(o)) : "";
     if (!o.ca || !o.ca.length) return gs;
     const names = o.ca.map((c) => (C[c] || {}).name || c);
     const via = viaCountry(o), vname = via ? (C[via] || {}).name : "";
@@ -746,7 +782,7 @@
     const out = [];
     document.querySelectorAll("#filterBody .fgroup").forEach((g) => {
       const label = g.dataset.title || "";
-      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub)')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
+      const chips = [...g.querySelectorAll('.chip[aria-pressed="true"]:not(.sub):not(.chip-group)')].map((c) => c.childNodes[0].textContent.replace(" ✕", "").trim());
       // a select is named by its own label ("Country: Kenya"), chips and radios by the group heading
       g.querySelectorAll("select").forEach((sel) => {
         const own = sel.closest("label"); const name = own ? own.childNodes[0].textContent.trim() : label;
@@ -822,7 +858,7 @@
         type: [o.up ? (N.un_partner || {}).label || "Existing UN partner" : ""].concat((o.us || []).map((u) => lab(N.un_status || [], u) + (u === "un_global_compact" && o.gc && o.gc[0] ? " since " + o.gc[0] : ""))).filter(Boolean).join(", "),
         country: k.name || o.c,
         reaches: (o.ca || []).map((c) => (K[c] || {}).name || c).join(", "),
-        scope: o.gs ? lab(N.geo_scope || [], o.gs) : "",
+        scope: scopeKnown(o) ? scopeText(o) : "",
         languages: (o.l || []).map((l) => CFG.langName[l] || l).join(", "),
         channels: (o.nt || []).map((t) => lab(N.type_of_work || [], t[0])).join(", "),
         ownership: o.ds || "",
@@ -836,7 +872,7 @@
     }
     return {
       name: o.n, type: types.join(" / "), country: k.name || o.c, reaches,
-      scope: o.sc && o.sc[0] !== "unknown" ? lab(C.scope, o.sc[0]) : "",
+      scope: scopeKnown(o) ? scopeText(o) : "", size: TIER_LABEL[TIERS[o.sz]] || "",
       languages: (o.l || []).map((l) => CFG.langName[l] || l).join(", "),
       channels: (o.ch || []).map((c) => lab(C.channel, c)).join(", "),
       ownership: o.ng ? "" : (o.ow ? lab(C.ownership, o.ow[0]) : "Unknown") + (o.on ? " (" + o.on.join(", ") + ")" : ""),

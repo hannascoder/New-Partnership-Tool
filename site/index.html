@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Partner Finder</title>
-<link rel="stylesheet" href="assets/atlas.css?v=2026-11-171756UTC">
-<link rel="stylesheet" href="assets/finder.css?v=2026-11-171756UTC">
+<link rel="stylesheet" href="assets/atlas.css?v=2026-11-241557UTC">
+<link rel="stylesheet" href="assets/finder.css?v=2026-11-241557UTC">
 </head>
 <body data-mode="media">
 <a class="skip-link" href="#results">Skip to results</a>
@@ -30,6 +30,17 @@
     <button class="btn-quiet filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filterBody">Filters</button>
     <div id="filterBody" class="filter-body">
       <!-- the search bar is left out of v1 for now (decision 06.11.2026); space kept here -->
+
+      <section class="fgroup">
+        <h2 class="sect">Reach &amp; size</h2>
+        <p class="sublabel">Where does it reach?</p>
+        <div class="chips" id="f-scopeGroups"></div>
+        <div class="chips" id="f-scope"></div>
+        <p class="sublabel">How well-known is it?</p>
+        <div class="chips" id="f-tier"></div>
+        <p class="hint" id="tierNote"></p>
+        <p class="hint">“Unknown” = no information on the reach in the sources; some are estimated from other hints (marked “estimate” on the card). Local and province/state outlets are mostly the small ones that are not yet known.</p>
+      </section>
 
       <!-- "My material" and "Channel" are one group since 14.11.2026 (two ways to ask the same question) -->
       <section class="fgroup">
@@ -57,7 +68,7 @@
       </section>
 
       <section class="fgroup">
-        <h2 class="sect">Region / Country / Scope</h2>
+        <h2 class="sect">Region / Country</h2>
         <label class="field">Region
           <select id="f-region"><option value="">All regions</option></select>
         </label>
@@ -65,8 +76,6 @@
           <select id="f-country"><option value="">All countries</option></select>
         </label>
         <div class="chips" id="f-countryChosen"></div>
-        <div class="chips" id="f-scope"></div>
-        <label class="check"><input type="checkbox" id="f-scopeUnknown"> Also show outlets without scope information</label>
         <label class="check"><input type="checkbox" id="f-reach" checked> Include outlets that reach this country</label>
         <label class="check"><input type="checkbox" id="f-worldwide"> Also show worldwide broadcasters</label>
         <p class="hint">“Reach” adds outlets based elsewhere that broadcast to the chosen country, e.g. BBC Afrique for DR Congo. Broadcasters that are only listed as “worldwide” (no service aimed at that country) are added with the second box.</p>
@@ -193,8 +202,8 @@
   <span id="dataInfo"></span> ·
   <a href="https://github.com/hannascoder/New-Partnership-Tool/issues/new" target="_blank" rel="noopener">Report an error / suggest an outlet</a>
 </footer>
-<script src="assets/finder.js?v=2026-11-171756UTC"></script>
-<script src="assets/finder-dropin.js?v=2026-11-171756UTC"></script>
-<script src="assets/finder-export.js?v=2026-11-171756UTC"></script>
+<script src="assets/finder.js?v=2026-11-241557UTC"></script>
+<script src="assets/finder-dropin.js?v=2026-11-241557UTC"></script>
+<script src="assets/finder-export.js?v=2026-11-241557UTC"></script>
 </body>
 </html>

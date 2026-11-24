@@ -28,7 +28,7 @@ def ids(name, cats):
 
 cats = yaml.safe_load(open(CONFIG / "categories.yaml", encoding="utf-8"))
 lists = ["scope", "audience_basis", "material", "org_type", "channel", "social_platform",
-         "ownership", "topic_groups", "topics", "audience", "un_profile", "size", "checkboxes", "sort", "methods"]
+         "ownership", "topic_groups", "topics", "audience", "un_profile", "size", "size_tier", "checkboxes", "sort", "methods"]
 known = {}
 for name in lists:
     if name not in cats:

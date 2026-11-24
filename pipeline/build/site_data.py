@@ -229,6 +229,16 @@ def main():
         for i, o in enumerate(lst, 1):
             o["_rank"] = i
 
+    # size tier ("Well-known / Mid-size / Small"): config/rules.yaml size_tier; 1 / 2 / 3 in the data (sz)
+    st = rules.get("size_tier") or {}
+    for o in outlets:
+        if o["_score"] >= st.get("well_known_score", 15) or (o["_rank"] <= st.get("well_known_rank", 10) and o["_score"] >= st.get("well_known_rank_min_score", 5)):
+            o["_tier"] = 1
+        elif o["_score"] >= st.get("mid_score", 6) or o["_rank"] <= st.get("mid_rank", 50):
+            o["_tier"] = 2
+        else:
+            o["_tier"] = 3
+
     # a name in another script than the outlet's languages -> a name in Latin letters (rules.yaml name_scripts)
     SCRIPT_RX = {"Arabic": r"[\u0600-\u06FF]", "Cyrillic": r"[\u0400-\u04FF]", "CJK": r"[\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]",
                  "Hebrew": r"[\u0590-\u05FF]", "Greek": r"[\u0370-\u03FF]", "Devanagari": r"[\u0900-\u097F]", "Thai": r"[\u0E00-\u0E7F]"}
@@ -319,6 +329,8 @@ def main():
             e["ow"] = [cat["ownership"]["value"], w(cat["ownership"]["source"])]
         if cat.get("scope"):
             e["sc"] = [cat["scope"]["value"], w(cat["scope"]["source"])]
+        if o.get("_tier"):
+            e["sz"] = o["_tier"]
         aud = {c: b for c, b in (cat.get("audience") or {}).items() if c != o["country"]}
         if aud:
             e["rc"] = {c: w(b) for c, b in aud.items()}
@@ -365,8 +377,8 @@ def main():
             e["pu"] = o["profile_url"]
         if o.get("active_in"):
             e["ca"] = o["active_in"]  # countries of activity (ECOSOC "Activities" tab)
-        if o.get("geo_scope"):
-            e["gs"] = o["geo_scope"]
+        if o.get("geo_scope"):  # same field as the media: filter "Reach & size"
+            e["sc"] = [o["geo_scope"], w(o.get("geo_scope_why") or "ECOSOC profile: geographic scope")]
         e["ok"] = o.get("org_kind") or "ngo"  # organisation type (config/ngo.yaml org_kind)
         if o.get("un_partner"):
             e["up"] = 1  # existing UN partner (config/ngo.yaml un_partner)
@@ -477,7 +489,9 @@ def main():
         "languages": sorted(({"code": c, "name": langs_all[c]["name"]} for c in used_langs if c in langs_all),
                             key=lambda x: x["name"]),
         "categories": {k: cats[k] for k in ("material", "org_type", "channel", "ownership", "scope",
-                                             "topic_groups", "topics", "audience", "un_profile", "social_platform", "size", "checkboxes", "sort")},
+                                             "topic_groups", "topics", "audience", "un_profile", "social_platform", "size", "checkboxes", "sort",
+                                             "scope_groups", "size_tier")},
+        "size_tier_note": cats.get("size_tier_note"),
         "size_note": cats.get("size_note"),
         "new_months": cats.get("new_months", 4),
         "active_months": cats.get("active_months", 3),

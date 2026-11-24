@@ -26,11 +26,12 @@ Listed as public service broadcaster AND news outlet (private owner): 2
 
 | Scope | Outlets | Main sources |
 |---|---|---|
-| international | 176 | iptv-org 109; list of international broadcasters 53; Wikidata: international broadcasting 14 |
+| international | 275 | iptv-org 109; Estimate: the name contains 87; list of international broadcasters 53; Wikidata: international broadcasting 14 |
 | regional | 467 | iptv-org 467 |
-| national | 27797 | iptv-org broadcast area: whole country 14564; Media Cloud collection 13233 |
-| local | 16541 | Media Cloud collection 13649; iptv-org broadcast area: city / region 2073; organisation type community media 307; Wikidata: student newspaper 250 |
-| unknown | 24951 | no scope information in the sources 24951 |
+| national | 30191 | iptv-org broadcast area: whole country 14557; Media Cloud collection 13232; Estimate: Wikipedia article in 3 languages 789; Estimate: Wikipedia article in 4 languages 445 |
+| subnational | 496 | iptv-org broadcast area: province / state 496 |
+| local | 17852 | Media Cloud collection 13649; Radio Browser tag 1993; iptv-org broadcast area: city 1577; Wikidata: student newspaper 250 |
+| unknown | 20651 | no scope information in the sources 20651 |
 
 Outlets that reach more than their home country: 1120
 International broadcasters not found in the data: Radio Martí

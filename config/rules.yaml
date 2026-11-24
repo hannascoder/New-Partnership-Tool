@@ -127,11 +127,29 @@ scope:
   regional_min_other_countries: 2
   wikidata_classes:
     international: [international broadcasting]
+    national: [national newspaper, national radio station, national television channel, national news agency]
     local: [local newspaper, local radio station, local TV channel, community newspaper, regional weekly,
             community radio, campus radio, student newspaper, school newspaper, local television station]
   # Community media without other evidence are local
   org_types:
     local: [community_media]
+  # Radio Browser tags (the station's own tags) that say the station is local
+  radio_browser_tags:
+    local: [community radio, local radio, local news, local, community, university radio, college radio, campus radio,
+            student radio, noticias locales, local information, radio comunitaria, radio communautaire, rádio comunitária]
+  # Wikidata "operating area" = worldwide -> international
+  operating_area_worldwide: [worldwide, world, global, international]
+  # Estimates (owner, 24.11.2026): only for outlets WITHOUT any evidence above; shown as "Estimate: ..."
+  # on the card and in the export. Words in the NAME (9 UN News languages), checked as whole words.
+  estimate:
+    name_words:
+      international: [international, internationale, internacional, internazionale, global, worldwide, mondial, mundial,
+                      "международный", "العالم", "الدولي", "国际", "世界", "अंतरराष्ट्रीय", "kimataifa"]
+      national: [national, nationale, nacional, nazionale, "национальный", "الوطني", "国家", "राष्ट्रीय", "taifa"]
+      local: [local, locale, community, communautaire, comunitaria, comunitário, campus, student, students, school, college, university,
+              universidad, université, universidade, "местное", "المحلي", "社区", "स्थानीय", "mtaa"]
+    # an outlet with this many Wikipedia language versions and no other evidence is at least national
+    national_min_wikipedia_languages: 3
 
 # ---------------------------------------------------------------- 4d
 # Topics: SEVERAL per outlet. Topics never hide an outlet, they only change
@@ -320,6 +338,16 @@ prominence:
     website_ok: 1
     social_media: 1
     public_contact: 1
+
+# Size / how well-known (owner, 24.11.2026): the score above, tier per outlet. well_known = score at
+# least `well_known_score`, or among the first `well_known_rank` of its country with at least
+# `well_known_rank_min_score`; mid = score at least `mid_score` or among the first `mid_rank`; the rest = small.
+size_tier:
+  well_known_score: 15
+  well_known_rank: 10
+  well_known_rank_min_score: 5
+  mid_score: 6
+  mid_rank: 50
 
 # Names in another script (review 13.11.2026: "ARD" was shown in Arabic): when the name has no Latin
 # letter and none of the outlet's languages is written in that script, a name in Latin letters is used.
