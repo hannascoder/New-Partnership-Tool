@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-24 (evening)
+- "Reach & size" moved directly under "Organisation type" on both pages (owner); it is open when the page is first opened.
+
 ## 2026-11-24 (later): owner's feedback on "Reach & size"
 - New fourth level "Mini" in "How well-known is it?" (one source and nothing else known, score below 2;
   about 16,000 outlets); "Small" is now the band above it. `config/rules.yaml` `size_tier.mini_score`.
