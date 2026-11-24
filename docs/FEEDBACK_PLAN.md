@@ -38,6 +38,8 @@ represented? 10. Free text: what should we improve? + one box "suggest a better 
 Lesson from the Berkeley deck: topic question was open text (unreadable pie chart) -> closed list;
 sample was very US / STEM -> contact groups from many countries.
 
+## Owner 24.11.2026 (later): all contacts in ONE place = the private Google Sheet (also the Model UN suggestion list, no split with the repo). Group code in the survey link: yes (anonymous per person, visible per group).
+
 ## Open design point (architecture)
 The site is static and published from a PUBLIC repository, so a private Sheet cannot be read at build time and
 committed. Plan: a very small **Cloudflare Worker** (free plan, behind the same Cloudflare Access login) reads the
@@ -59,3 +61,12 @@ Public organisation data (e.g. the Model UN suggestion list from open sources) m
 Mail-merge limits: the tool only opens a draft; the owner clicks "send". Personalised mails go one by one.
 GDPR: organisation addresses only; add an opt-out line to the template; owner may want to ask the UN data
 protection office (not decided by the tool).
+
+## Status F1 (built 24.11.2026, waiting for the owner's check)
+`site/feedback.html` + `assets/feedback.js` (menu entry on all pages), settings `config/feedback.yaml`
+(-> `python pipeline/build/feedback_config.py` -> `site/data/feedback-config.json`), Sheet template
+`config/feedback_sheet_template.csv`, Worker `worker/index.js` (+ `wrangler.jsonc` main/ASSETS/run_worker_first).
+Without the Sheet the page shows DEMO data (example.org). One mail per selected group, several addresses of a
+group in BCC, reminder switch, deadline = today + days. Not yet tested on Cloudflare (Worker deploy + Access on /api).
+Next: F1b (Google Cloud service account, share Sheet, Cloudflare secrets GOOGLE_SERVICE_ACCOUNT_JSON and
+FEEDBACK_SHEET_ID) and the Model UN suggestion list into the Sheet.

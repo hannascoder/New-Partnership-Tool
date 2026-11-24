@@ -1,0 +1,19 @@
+/* "Get feedback" page: builds on atlas.css and finder.css (mail pop-up styles) */
+.fb-wrap { max-width: 1180px; margin: 0 auto; padding: 20px 16px 80px; }
+.fb-wrap h2 { font-size: 1.05rem; margin: 22px 0 8px; }
+.fb-banner { background: #fff6d6; border: 1px solid #e6cf7a; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+.fb-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.fb-steps > div { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: var(--surface); }
+.fb-steps label { display: block; font-weight: 600; margin-bottom: 6px; }
+.fb-steps input, .fb-steps select { width: 100%; padding: 7px 8px; border: 1px solid var(--border); border-radius: 6px; font: inherit; }
+.fb-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 12px; align-items: end; }
+.fb-filters label { font-size: 0.82rem; display: flex; flex-direction: column; gap: 3px; }
+.fb-filters select, .fb-filters input { padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; font: inherit; min-width: 140px; }
+.fb-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.fb-table th, .fb-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.fb-table th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted, #556); }
+.fb-table .nomail { color: #a33; font-size: 0.82rem; }
+.fb-table select { font: inherit; padding: 3px 4px; max-width: 170px; }
+.fb-bar { position: sticky; bottom: 0; background: var(--surface); border-top: 1px solid var(--border); padding: 10px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.fb-table-wrap { overflow-x: auto; }
+.mail-queue { font-size: 0.85rem; margin: 0 0 8px; }
