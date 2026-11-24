@@ -385,6 +385,29 @@ UN_ACCREDITED = {"ecosoc_general", "ecosoc_special", "ecosoc_roster", "un_geneva
 UN_PARTNER = set()  # filled from config/ngo.yaml un_partner (owner 13.11.2026)
 
 
+def estimate_scope(name, ms, country, us):
+    """Geographic scope for NGOs without an ECOSOC profile value (owner, 24.11.2026): an estimate from open
+    hints, marked "Estimate: ..." on the card. Rules: config/ngo.yaml scope_estimate. Returns (scope, why) or (None, None)."""
+    rules = CFG.get("scope_estimate") or {}
+    hint = next((m["scope_hint"] for m in ms if m.get("scope_hint")), None)  # IATI organisation type
+    if hint:
+        return hint, "Estimate: IATI organisation type"
+    others = {c for m in ms for c in m.get("active_in") or []} - {country}
+    if others:
+        n = len(others) + (1 if country else 0)
+        if n >= rules.get("international_min_countries", 5):
+            return "international", f"Estimate: active in {n} countries (ECOSOC)"
+        return "regional", f"Estimate: active in {n} countries (ECOSOC)"
+    low = " " + re.sub(r"[^\w]+", " ", (name or "").lower()) + " "
+    for sc in ("international", "regional", "national", "local"):
+        w = next((w for w in rules.get("name_words", {}).get(sc, []) if f" {w} " in low), None)
+        if w:
+            return sc, f'Estimate: the name contains "{w}"'
+    if "ecosoc_general" in us:
+        return "international", "Estimate: ECOSOC general consultative status (large international organisations)"
+    return None, None
+
+
 def main():
     UN_PARTNER.update(CFG["un_partner"]["statuses"])
     recs = ecosoc() + global_compact() + wikidata() + geneva() + iati_ngos()
@@ -538,6 +561,11 @@ def main():
                 social.setdefault(k, v)
         wl = max([m.get("wikipedia_languages") or 0 for m in ms])
         first_seen.setdefault(nid, TODAY)
+        geo = next((g["id"] for m in ms if m.get("geo_scope") for g in CFG.get("geo_scope") or []
+                    if m["geo_scope"].lower().startswith(g["id"][:6])), None)  # config/ngo.yaml geo_scope
+        geo_why = "ECOSOC profile: geographic scope" if geo else None
+        if not geo:
+            geo, geo_why = estimate_scope(name, ms, country, us)
         out.append({
             "id": nid, "name": name, "country": country, "kind": "ngo",
             "alt_names": sorted({a for m in ms for a in [m["name"]] + (m.get("alt_names") or []) if a != name})[:5],
@@ -552,8 +580,7 @@ def main():
             "profile_url": first(ms, "profile_url"),
             "description": (desc or "")[:600],
             "active_in": sorted({c for m in ms for c in m.get("active_in") or []} - {country}),
-            "geo_scope": next((g["id"] for m in ms if m.get("geo_scope") for g in CFG.get("geo_scope") or []
-                               if m["geo_scope"].lower().startswith(g["id"][:6])), None),  # config/ngo.yaml geo_scope
+            "geo_scope": geo, "geo_scope_why": geo_why,
             "org_kind": org_kind(name, ms),
             # only listed as another ECOSOC type (no other source calls it an NGO): shown only with the box
             "optional_type": all(m["source"] == "ecosoc" and m.get("ecosoc_kind") for m in ms),

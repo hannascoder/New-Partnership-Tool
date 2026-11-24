@@ -2,7 +2,20 @@
 
 - New outlets: 239
 - No longer shown: 635 (merged into another entry, excluded, or gone from all sources)
-- Changed values: none
+- Changed values: scope 4,658
+
+### Examples: scope
+
+- Mikrobitti (pf-000003): unknown → national
+- British Broadcasting Corporation (pf-000005): unknown → international
+- Berliner Zeitung (pf-000008): unknown → international
+- Berliner Kurier (pf-000011): unknown → international
+- France 3 Régions (pf-000012): unknown → national
+- The Guardian (pf-000015): unknown → international
+- Libération (pf-000023): unknown → international
+- Franceinfo (pf-000030): unknown → international
+- France Musique (pf-000034): unknown → international
+- bermuda.funk (pf-000040): unknown → national
 
 ### Examples: new
 

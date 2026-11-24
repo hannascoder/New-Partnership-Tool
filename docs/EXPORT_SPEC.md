@@ -74,3 +74,7 @@ text), so filters added later automatically appear in the export without code ch
   changing filters, download all three formats, untick, clear list, no console errors,
   no horizontal scrolling at 390 px width. Render the PDF pages (and Excel/Word via
   LibreOffice) to images and check them before showing them to me.
+
+
+## 24.11.2026: column "Size" (media only)
+New column "Size" (Well-known / Mid-size / Small / lesser-known) directly after "Scope", also in the portrait layouts. An estimated scope is written "National (estimate)". The NGO files have no such column. 16 columns for media.

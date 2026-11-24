@@ -165,7 +165,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: local (iptv-org broadcast area: city / region)
+- Scope: local (iptv-org broadcast area: city)
 - Languages: spa, glg · Channels: tv, website, social_media
 - Topics: work_economy (Reports on it: website headlines: "huelga", "sindicatos"); general_news (Specialist: iptv-org category "news"); culture (Has a section on it: website section "Cultura"); community_local (Specialist: scope local)
 - Target audience: -
@@ -217,7 +217,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Sources: wikidata
 - Type: news_agency (Wikidata: news agency)
 - Ownership: state_controlled (Wikidata: owner Council of Ministers of the Republic of Belarus (executive branch))
-- Scope: unknown (no scope information in the sources)
+- Scope: international (Estimate: Wikipedia articles in 4 world languages (en, es, ru, zh))
 - Languages: rus, bel, eng, deu, spa, zho · Channels: website, social_media
 - Topics: work_economy (Has a section on it: website section "Экономика"); general_news (Specialist: Wikidata: news agency); culture (Has a section on it: website section "Культура"); community_local (Has a section on it: website section /regions/); technology (Has a section on it: website section "Технологии"); sports (Has a section on it: website section "Спорт")
 - Target audience: minority_language (in German: not an official language of the country)
@@ -243,7 +243,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Sources: radio_browser
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: unknown (no scope information in the sources)
+- Scope: local (Radio Browser tag "community")
 - Languages: eng · Channels: radio, website, social_media
 - Topics: health (Reports on it: website About page: "covid", "covid 19"); culture (Reports on it: website About page: "theatre"); community_local (Specialist: Radio Browser tag "community"); disasters (Specialist: website About page: "earthquakes", "floods", "landslides")
 - Target audience: local_communities (description mentions "community radio")
@@ -386,7 +386,7 @@ Wrong? Tell Claude the id, or note it in overrides.csv.
 - Sources: iptv_org
 - Type: news_outlet (no evidence for another type)
 - Ownership: unknown (no ownership information in the sources)
-- Scope: local (iptv-org broadcast area: city / region)
+- Scope: local (iptv-org broadcast area: city)
 - Languages: ell · Channels: tv, website, social_media
 - Topics: general_news (Specialist: iptv-org category "general"); community_local (Specialist: scope local)
 - Target audience: -

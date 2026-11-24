@@ -229,6 +229,17 @@ def main():
         for i, o in enumerate(lst, 1):
             o["_rank"] = i
 
+    # size tier ("Well-known / Mid-size / Small"): config/rules.yaml size_tier; 1 well-known / 2 mid / 3 small / 4 mini in the data (sz)
+    st = rules.get("size_tier") or {}
+    def tier_of(score, rank):
+        if score >= st.get("well_known_score", 15) or (rank <= st.get("well_known_rank", 10) and score >= st.get("well_known_rank_min_score", 5)):
+            return 1
+        if score >= st.get("mid_score", 6) or rank <= st.get("mid_rank", 50):
+            return 2
+        return 4 if score < st.get("mini_score", 0) else 3
+    for o in outlets:
+        o["_tier"] = tier_of(o["_score"], o["_rank"])
+
     # a name in another script than the outlet's languages -> a name in Latin letters (rules.yaml name_scripts)
     SCRIPT_RX = {"Arabic": r"[\u0600-\u06FF]", "Cyrillic": r"[\u0400-\u04FF]", "CJK": r"[\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]",
                  "Hebrew": r"[\u0590-\u05FF]", "Greek": r"[\u0370-\u03FF]", "Devanagari": r"[\u0900-\u097F]", "Thai": r"[\u0E00-\u0E7F]"}
@@ -319,6 +330,8 @@ def main():
             e["ow"] = [cat["ownership"]["value"], w(cat["ownership"]["source"])]
         if cat.get("scope"):
             e["sc"] = [cat["scope"]["value"], w(cat["scope"]["source"])]
+        if o.get("_tier"):
+            e["sz"] = o["_tier"]
         aud = {c: b for c, b in (cat.get("audience") or {}).items() if c != o["country"]}
         if aud:
             e["rc"] = {c: w(b) for c, b in aud.items()}
@@ -365,11 +378,11 @@ def main():
             e["pu"] = o["profile_url"]
         if o.get("active_in"):
             e["ca"] = o["active_in"]  # countries of activity (ECOSOC "Activities" tab)
-        if o.get("geo_scope"):
-            e["gs"] = o["geo_scope"]
-        e["ok"] = o.get("org_kind") or "ngo"
+        if o.get("geo_scope"):  # same field as the media: filter "Reach & size"
+            e["sc"] = [o["geo_scope"], w(o.get("geo_scope_why") or "ECOSOC profile: geographic scope")]
+        e["ok"] = o.get("org_kind") or "ngo"  # organisation type (config/ngo.yaml org_kind)
         if o.get("optional_type"):
-            e["xt"] = 1  # other ECOSOC type: shown only with "Include other ECOSOC organisation types"  # organisation type (config/ngo.yaml org_kind)
+            e["xt"] = 1  # other ECOSOC type: shown only with "Include other ECOSOC organisation types"
         if o.get("un_partner"):
             e["up"] = 1  # existing UN partner (config/ngo.yaml un_partner)
         if o.get("global_compact"):
@@ -444,6 +457,7 @@ def main():
                     if (oc.get("so") or {}).get(k) and not u.startswith("http"):
                         e["so"][k] = oc["so"][k].replace("{}", u)
                 e["ms"] = 1  # not found in the sources at the last update
+                e.setdefault("sz", tier_of(e["p"], e["r"]))  # outlets kept from the last update
                 out.append(e)
                 carried.append(e)
         with open(mf, "w", encoding="utf-8") as fh:  # one outlet per line
@@ -479,7 +493,9 @@ def main():
         "languages": sorted(({"code": c, "name": langs_all[c]["name"]} for c in used_langs if c in langs_all),
                             key=lambda x: x["name"]),
         "categories": {k: cats[k] for k in ("material", "org_type", "channel", "ownership", "scope",
-                                             "topic_groups", "topics", "audience", "un_profile", "social_platform", "size", "checkboxes", "sort")},
+                                             "topic_groups", "topics", "audience", "un_profile", "social_platform", "size", "checkboxes", "sort",
+                                             "scope_groups", "size_tier")},
+        "size_tier_note": cats.get("size_tier_note"),
         "size_note": cats.get("size_note"),
         "new_months": cats.get("new_months", 4),
         "active_months": cats.get("active_months", 3),

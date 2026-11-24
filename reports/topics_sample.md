@@ -240,15 +240,15 @@ or add a line to overrides.csv: `<id>,topics_remove,<topic id>,<why>`.
 | pf-059357 | TriCounty News | USA | covers it | website headlines: "catholic", "faith" |
 | pf-004251 | VisionTV | CAN | covers it | Wikipedia: "faith" |
 
-## Community & local — 21,610 outlets
+## Community & local — 21,499 outlets
 
 | Id | Name | Country | Strength | Reason |
 |---|---|---|---|---|
-| pf-057025 | Avare Noticias | BRA | main focus | scope local |
-| pf-056764 | Observatorio Independente | BRA | main focus | scope local |
-| pf-071561 | Musiq'3 | BEL | own section | website section "Régions" |
-| pf-057830 | nismedia.co.za | ZAF | own section | website section "Community News" |
-| pf-068444 | edgenews.co.za | ZAF | covers it | description mentions "community news" |
+| pf-057236 | dhytecno.ar | ARG | main focus | scope local |
+| pf-057069 | Cada Minuto: O portal de notícias de Alagoas e Maceió | Jorn | BRA | main focus | scope local |
+| pf-071367 | Newsmeter (Fifth Estate Digital Private Limited) | IND | own section | website section "REGIONAL" |
+| pf-057826 | diecourant.co.za | ZAF | own section | website section "Community" |
+| pf-068466 | listen2myshow.com | ZAF | covers it | description mentions "community radio" |
 | pf-017041 | Local Now | USA | covers it | description mentions "local news" |
 
 ## Humanitarian aid — 277 outlets

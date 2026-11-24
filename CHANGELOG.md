@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-11-24 (later): owner's feedback on "Reach & size"
+- New fourth level "Mini" in "How well-known is it?" (one source and nothing else known, score below 2;
+  about 16,000 outlets); "Small" is now the band above it. `config/rules.yaml` `size_tier.mini_score`.
+- Scope estimate from Wikipedia now follows the languages: an article in 3 or more of the 7 world-language
+  Wikipedias (English, French, Spanish, Arabic, Russian, Chinese, Portuguese) = International; articles only
+  in other languages (e.g. three Indian languages) = National. Estimated scope "International" 275 -> 1,064.
+  (`config/rules.yaml` `scope.estimate.international_min_world_wikipedias`.)
+
+## 2026-11-24: "Reach & size" filter (owner's colleagues wanted to find outlets that are not yet well-known)
+- New block "Reach & size", first in the filter list on both pages. Level 1: "In one country" / "Several
+  countries / worldwide" (a button selects all its values); level 2: Local, Province / state (new), National,
+  Several countries, International, and an "Unknown" button (replaces the "also show outlets without scope
+  information" box). The scope buttons moved here out of "Region / Country".
+- Media: new filter "How well-known is it?" (Well-known / Mid-size / Small / lesser-known). An estimate from
+  the best-known ranking (Wikipedia versions, sources, working website, recent articles, social media), not an
+  audience figure. Thresholds: `config/rules.yaml` `size_tier`. Shown on the card ("Size") and as a new
+  Excel/PDF/Word column "Size" next to "Scope" (media only).
+- Fewer outlets with unknown scope (36 % -> about 29 %): Radio Browser tags ("community radio", "local" ...),
+  Wikidata operating area "worldwide", and clearly marked estimates ("Estimate: ..." on the card and
+  "(estimate)" in the export): words in the name (9 UN languages) or a Wikipedia article in 3+ languages
+  (= not a local outlet). Rules: `config/rules.yaml` `scope`.
+- iptv-org broadcast areas: a province / state is now "Province / state", a city stays "Local".
+- NGOs: Scope uses the same filter; for NGOs without an ECOSOC value: IATI organisation type, number of
+  countries of activity (5+ = international), a word in the name, ECOSOC general status
+  (`config/ngo.yaml` `scope_estimate`). Marked as estimate.
+
 
 
 ## 2026-11-24

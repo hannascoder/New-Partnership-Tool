@@ -173,3 +173,14 @@ exclude:
 # topics or more ticked "everything"; a field alone then only counts as "Reports on it" (not "Has a
 # section on it"). "Specialist" always needs the topic in the name or 2 clear words in its own description.
 many_fields: 10
+
+# Geographic scope estimate (owner, 24.11.2026). Used only when the ECOSOC profile has no "Geographic
+# scope"; the card then says "Estimate: ...". Order: IATI organisation type, number of countries of
+# activity (ECOSOC), a word in the name, ECOSOC general consultative status.
+scope_estimate:
+  international_min_countries: 5   # active in this many countries or more = international, 2 to 4 = regional
+  name_words:
+    international: [international, internationale, internacional, internazionale, global, globale, world, worldwide, mondial, mondiale, mundial, universal, sans frontières, without borders, sin fronteras]
+    regional: [african, africa, european, europe, asian, asia, caribbean, pacific, arab, nordic, baltic, latin american, mediterranean]
+    national: [national, nationale, nacional, nazionale]
+    local: [local, community, village, district, neighbourhood, neighborhood, municipal, parish, comunitaria, communautaire, locale]

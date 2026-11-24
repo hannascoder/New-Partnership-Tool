@@ -157,7 +157,7 @@ def ownership(o, rules, owners, rsf, org, owner_idx=None):
     return None
 
 
-SCOPE_ORDER = ["international", "regional", "national", "local"]
+SCOPE_ORDER = ["international", "regional", "national", "subnational", "local"]
 
 
 class Reach:
@@ -238,8 +238,10 @@ def scope_and_reach(o, rules, reach, intl, org):
             evidence.append(("regional", "source_field", "iptv-org broadcast area " + ", ".join(sorted(regions) or sorted(cs))))
         elif home in cs:  # the home country (+ at most one neighbour, e.g. CNN: USA and Canada)
             evidence.append(("national", "source_field", "iptv-org broadcast area: whole country"))
-        elif any(a.startswith(("s/", "ct/")) for a in areas):
-            evidence.append(("local", "source_field", "iptv-org broadcast area: city / region"))
+        elif any(a.startswith("s/") for a in areas):
+            evidence.append(("subnational", "source_field", "iptv-org broadcast area: province / state"))
+        elif any(a.startswith("ct/") for a in areas):
+            evidence.append(("local", "source_field", "iptv-org broadcast area: city"))
         if len(cs) <= 60:  # worldwide feeds do not list every country as "reached"
             for c in cs:
                 audience.setdefault(c, "broadcast_area")
@@ -258,7 +260,30 @@ def scope_and_reach(o, rules, reach, intl, org):
     for sc, types in rules.get("org_types", {}).items():
         if org in types:
             evidence.append((sc, "rule", "organisation type " + org.replace("_", " ")))
+    # 5. Radio Browser tags, Wikidata "operating area" worldwide
+    rb_tags = {t for k, m in o["raw"].items() if k.startswith("rb:") for t in m.get("raw", {}).get("tags", [])}
+    for sc, tags in (rules.get("radio_browser_tags") or {}).items():
+        hit = rb_tags & set(tags)
+        if hit:
+            evidence.append((sc, "source_field", f"Radio Browser tag \"{sorted(hit)[0]}\""))
+    for k, m in o["raw"].items():
+        if k.startswith("wd:") and set(a.lower() for a in m.get("raw", {}).get("operating_area", [])) & set(rules.get("operating_area_worldwide") or []):
+            evidence.append(("international", "source_field", "Wikidata: operating area worldwide"))
     if not evidence:
+        est = rules.get("estimate") or {}
+        low = " " + re.sub(r"[^\w]+", " ", (o["name"] or "").lower()) + " "
+        for sc in ("international", "national", "local"):
+            w = next((w for w in (est.get("name_words") or {}).get(sc, []) if f" {str(w).lower()} " in low), None)
+            if w:
+                return val(sc, "estimate", f'Estimate: the name contains "{w}"'), audience
+        # an article in several WORLD languages (English, French, Spanish ...) = reaches beyond its country;
+        # articles only in languages of its own country = national (owner, 24.11.2026)
+        wikis = {w for k, m in o["raw"].items() if k.startswith("wd:") for w in m.get("raw", {}).get("wikipedia_wikis", [])}
+        if len(wikis) >= est.get("international_min_world_wikipedias", 99):
+            names = ", ".join(sorted(w[:-4] for w in wikis))
+            return val("international", "estimate", f"Estimate: Wikipedia articles in {len(wikis)} world languages ({names})"), audience
+        if (o.get("wikipedia_languages") or 0) >= est.get("national_min_wikipedia_languages", 99):
+            return val("national", "estimate", f"Estimate: Wikipedia article in {o['wikipedia_languages']} languages (not a local outlet)"), audience
         return val("unknown", "default", "no scope information in the sources"), audience
     methods = ["override", "source_field", "membership", "rule"]
     evidence.sort(key=lambda e: (SCOPE_ORDER.index(e[0]), methods.index(e[1])))

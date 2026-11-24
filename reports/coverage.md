@@ -11,10 +11,10 @@ Share of outlets that have this information. A filter only finds outlets with a 
 | Channel | **99 %** (68,879) | 99 % | 100 % | 98 % | 99 % | 99 % |
 | Organisation type (not just 'news outlet' by default) | **3 %** (1,944) | 2 % | 3 % | 3 % | 3 % | 3 % |
 | Ownership known | **12 %** (8,217) | 7 % | 11 % | 14 % | 13 % | 13 % |
-| Scope known | **65 %** (44,856) | 80 % | 72 % | 65 % | 48 % | 39 % |
+| Scope known | **70 %** (49,021) | 84 % | 76 % | 70 % | 58 % | 59 % |
 | Reaches other countries | **2 %** (1,117) | 1 % | 1 % | 2 % | 2 % | 1 % |
-| Topic (other than general news) | **68 %** (47,413) | 63 % | 75 % | 58 % | 64 % | 67 % |
-| Topic: Specialist or own section | **65 %** (45,062) | 59 % | 73 % | 54 % | 60 % | 63 % |
+| Topic (other than general news) | **68 %** (47,283) | 63 % | 75 % | 58 % | 63 % | 67 % |
+| Topic: Specialist or own section | **65 %** (44,908) | 59 % | 72 % | 54 % | 59 % | 63 % |
 | Target audience | **20 %** (13,598) | 30 % | 20 % | 18 % | 17 % | 26 % |
 | UN profile | **9 %** (6,454) | 15 % | 7 % | 13 % | 9 % | 6 % |
 | Public contact (e-mail or contact page) | **46 %** (31,777) | 42 % | 49 % | 33 % | 49 % | 47 % |
@@ -39,7 +39,7 @@ Average of: topic, language, public contact, ownership known.
 | China | 1,780 | 44 % | 88 % | 17 % | 9 % |
 | Brunei Darussalam | 20 | 30 % | 55 % | 20 % | 55 % |
 | Finland | 478 | 46 % | 95 % | 13 % | 6 % |
-| Indonesia | 880 | 43 % | 90 % | 17 % | 12 % |
+| Indonesia | 880 | 42 % | 90 % | 17 % | 12 % |
 | Somalia | 80 | 39 % | 81 % | 38 % | 5 % |
 | Iceland | 67 | 58 % | 90 % | 9 % | 7 % |
 | South Sudan | 27 | 30 % | 89 % | 44 % | 4 % |

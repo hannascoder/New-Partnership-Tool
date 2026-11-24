@@ -1,6 +1,6 @@
 # Step 4d: topics, target audience and UN profile
 
-Topic matches by strength: main focus 66,930 · own section 83,569 · covers it 23,694
+Topic matches by strength: main focus 66,821 · own section 83,570 · covers it 23,691
 
 69,541 outlets shown on the website. An outlet can have several topics and profiles.
 Topics and UN profiles never hide an outlet; they only change the order (unless the user
@@ -29,13 +29,13 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Sustainable cities & communities (SDG 11) | 1,417 | 0 | 0 | 0 | 32 | 0 | website section "Housing" (237); website section "Cidades" (183); website section "Transport" (99) |
 | Peace, justice & strong institutions (SDG 16) | 2,225 | 22 | 60 | 0 | 147 | 0 | website section "Courts" (160); website section "Investigations" (158); website section "Justice" (141) |
 | Partnerships for the goals (SDG 17) | 514 | 0 | 0 | 0 | 24 | 0 | website section "Development" (60); website About page: "imf", "international monetary fund" (32); website section "SDGs" (15) |
-| General news | 36,597 | 26,266 | 0 | 0 | 0 | 0 | no topic in the sources: general news (9,936); Wikidata: newspaper (9,740); iptv-org category "general" (6,942) |
+| General news | 36,590 | 26,266 | 0 | 0 | 0 | 0 | no topic in the sources: general news (9,929); Wikidata: newspaper (9,740); iptv-org category "general" (6,942) |
 | Fact-checking & misinformation | 756 | 38 | 267 | 0 | 77 | 0 | IFCN (150); Wikipedia list of fact-checking websites (96); description mentions "verification" (55) |
 | Science | 3,797 | 148 | 0 | 0 | 500 | 0 | website section "Science" (296); website section "Ciencia" (148); website section "Ciencia y Tecnología" (136) |
 | Business & economy | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | Culture | 18,586 | 1,255 | 0 | 0 | 3,029 | 0 | website section "Entertainment" (1,851); website section "Cultura" (1,259); website section "Culture" (795) |
 | Religion | 6,617 | 3,514 | 0 | 0 | 598 | 0 | iptv-org category "religious" (1,906); Radio Browser tag "christian" (754); website section "Religion" (301) |
-| Community & local | 21,610 | 2,116 | 0 | 16,074 | 542 | 0 | scope local (15,453); Radio Browser tag "community radio" (665); organisation type community media (621) |
+| Community & local | 21,499 | 2,116 | 0 | 15,979 | 514 | 0 | scope local (15,358); Radio Browser tag "community radio" (665); organisation type community media (621) |
 | Humanitarian aid | 277 | 0 | 0 | 0 | 15 | 0 | website section "Relaxation & Stress Relief" (17); website headlines: "relief", "shelter" (13); website headlines: "humanitarian", "humanitarian aid" (8) |
 | Human rights | 706 | 7 | 0 | 0 | 109 | 0 | website section "Human Rights" (42); website section "Derechos Humanos" (34); website section "Direitos Humanos" (22) |
 | Migration & refugees | 805 | 0 | 0 | 0 | 39 | 0 | website section "Immigration" (147); website section "Inmigración" (40); website headlines: "inmigracion", "migrantes" (30) |
@@ -52,7 +52,7 @@ Methods: **source** = the source's own category/tag/subject (config/sources/*.ya
 | Diaspora | 359 | 15 | 0 | 0 | 72 | 0 | website section "Diaspora" (70); description mentions "diaspora" (37); website About page: "diaspora" (16) |
 | Older persons & ageing | 674 | 0 | 0 | 0 | 43 | 0 | website section "Seniors" (110); website section "Aging Untold" (68); website headlines: "alzheimer", "alzheimer s" (38) |
 
-Outlets with no topic in any source (shown as "General news" by default): 9,826 (14 %)
+Outlets with no topic in any source (shown as "General news" by default): 9,819 (14 %)
 
 ## UN profile
 

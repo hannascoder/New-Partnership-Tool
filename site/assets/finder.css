@@ -244,3 +244,6 @@ dialog { border: 1px solid var(--border); border-radius: var(--radius); box-shad
 .dropin-kind { opacity: 0.75; font-weight: 400; }
 .dropin-why { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--muted); }
 .dropin-other { margin: 10px 0 0; font-size: 13px; }
+
+/* "Reach & size" block: the group buttons ("In one country") stand out from the single values */
+.chip-group { font-weight: 600; }
