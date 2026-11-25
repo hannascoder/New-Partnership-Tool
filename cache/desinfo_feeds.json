@@ -194,7 +194,7 @@
 "feed": "https://boliviaverifica.bo/feed/",
 "lang": "es",
 "status": "ok",
-"fails": 2
+"fails": 3
 },
 "businessnews.com.tn": {
 "name": "BNCHECK",
@@ -449,7 +449,7 @@
 "feed": "https://elezafact.cd/feed/",
 "lang": "fr",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "ellinikahoaxes.gr": {
 "name": "Ellinika Hoaxes (Greek Hoaxes)",
@@ -1395,7 +1395,7 @@
 "feed": "https://poligrafo.sapo.pt/rss.xml",
 "lang": "pt",
 "status": "ok",
-"fails": 7
+"fails": 8
 },
 "poligraph.fr": {
 "name": "Poligraph",

@@ -1,16 +1,19 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-24T15:37:51Z",
-  "records": 1372,
+  "fetched_at": "2026-11-25T15:21:17Z",
+  "records": 1308,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 223,
-      "requests": 2014,
-      "errors": [],
+      "items": 209,
+      "requests": 2008,
+      "errors": [
+        "HTTP 503 for 'Climate change adaptation'",
+        "HTTP 503 for 'UN'"
+      ],
       "max_age_days": 14
     },
     "feeds": {
@@ -40,8 +43,8 @@
         "url": "https://www.newtral.es/feed/"
       },
       "Aos Fatos": {
-        "ok": true,
-        "items": 20,
+        "ok": false,
+        "error": "failed after 2 tries: https://www.aosfatos.org/noticias/feed/ (HTTP Error 404: Not Found)",
         "url": "https://www.aosfatos.org/noticias/feed/"
       },
       "BOOM": {
@@ -51,7 +54,7 @@
       },
       "Vera Files": {
         "ok": false,
-        "error": "syntax error: line 1, column 0",
+        "error": "failed after 2 tries: https://verafiles.org/feed (HTTP Error 429: Too Many Requests)",
         "url": "https://verafiles.org/feed"
       },
       "Teyit": {
@@ -121,8 +124,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 60,
-      "failed": 2,
+      "ok": 59,
+      "failed": 3,
       "known": 174
     }
   }
