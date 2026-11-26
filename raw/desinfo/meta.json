@@ -1,19 +1,16 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-25T15:21:17Z",
-  "records": 1308,
+  "fetched_at": "2026-11-26T14:47:30Z",
+  "records": 1278,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 209,
-      "requests": 2008,
-      "errors": [
-        "HTTP 503 for 'Climate change adaptation'",
-        "HTTP 503 for 'UN'"
-      ],
+      "items": 191,
+      "requests": 1742,
+      "errors": [],
       "max_age_days": 14
     },
     "feeds": {
@@ -49,12 +46,12 @@
       },
       "BOOM": {
         "ok": true,
-        "items": 3,
+        "items": 4,
         "url": "https://www.boomlive.in/feed"
       },
       "Vera Files": {
         "ok": false,
-        "error": "failed after 2 tries: https://verafiles.org/feed (HTTP Error 429: Too Many Requests)",
+        "error": "syntax error: line 1, column 0",
         "url": "https://verafiles.org/feed"
       },
       "Teyit": {
@@ -98,8 +95,8 @@
         "url": "https://pesacheck.org/feed"
       },
       "Dubawa": {
-        "ok": true,
-        "items": 10,
+        "ok": false,
+        "error": "failed after 2 tries: https://dubawa.org/feed/ (HTTP Error 415: Unsupported Media Type)",
         "url": "https://dubawa.org/feed/"
       },
       "Fatabyyano": {
@@ -124,8 +121,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 59,
-      "failed": 3,
+      "ok": 57,
+      "failed": 5,
       "known": 174
     }
   }

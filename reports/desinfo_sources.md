@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-25T15:21:17Z  |  items in the site data: 8013
+Fetched: 2026-11-26T14:47:30Z  |  items in the site data: 8222
 
 ## Google Fact Check Tools API
-- {'items': 209, 'requests': 2008, 'errors': ["HTTP 503 for 'Climate change adaptation'", "HTTP 503 for 'UN'"], 'max_age_days': 14}
+- {'items': 191, 'requests': 1742, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -14,8 +14,8 @@ Fetched: 2026-11-25T15:21:17Z  |  items in the site data: 8013
 | Maldita.es | yes | 50 |  |
 | Newtral | yes | 10 |  |
 | Aos Fatos | NO |  | failed after 2 tries: https://www.aosfatos.org/noticias/feed/ (HTTP Error 404: Not Found) |
-| BOOM | yes | 3 |  |
-| Vera Files | NO |  | failed after 2 tries: https://verafiles.org/feed (HTTP Error 429: Too Many Requests) |
+| BOOM | yes | 4 |  |
+| Vera Files | NO |  | syntax error: line 1, column 0 |
 | Teyit | yes | 10 |  |
 | PolitiFact | yes | 20 |  |
 | FactCheck.org | yes | 10 |  |
@@ -24,7 +24,7 @@ Fetched: 2026-11-25T15:21:17Z  |  items in the site data: 8013
 | Correctiv | yes | 1 |  |
 | Les Surligneurs / AFP Factuel | NO |  | failed after 2 tries: https://factuel.afp.com/rss.xml (HTTP Error 403: Forbidden) |
 | PesaCheck | NO |  | failed after 2 tries: https://pesacheck.org/feed (HTTP Error 403: Forbidden) |
-| Dubawa | yes | 10 |  |
+| Dubawa | NO |  | failed after 2 tries: https://dubawa.org/feed/ (HTTP Error 415: Unsupported Media Type) |
 | Fatabyyano | yes | 10 |  |
 | Colombiacheck | NO |  | failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden) |
 | Chequeado | yes | 50 |  |
@@ -33,7 +33,7 @@ Fetched: 2026-11-25T15:21:17Z  |  items in the site data: 8013
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-25T15:26:52Z | UN articles in the last 12 months: 2179
+Fetched: 2026-11-26T14:53:06Z | UN articles in the last 12 months: 2218
 
 | Source | Works | Items | Note |
 |---|---|---|---|
