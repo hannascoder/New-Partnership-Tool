@@ -942,7 +942,7 @@
 "feed": "https://ghanafact.com/feed/",
 "lang": "en",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "globes.co.il": {
 "name": "The Whistle",
@@ -964,7 +964,7 @@
 "feed": "https://greenefact.sapo.pt/feed/",
 "lang": "en",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "grupoanimal.mx": {
 "name": "Animal Político",
@@ -1046,7 +1046,7 @@
 "feed": "https://kallkritikbyran.se/feed/",
 "lang": "sv",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "kashif.ps": {
 "name": "Palestinian platform for Fact-checking and Media Literacy \"Kashif\"",
@@ -1348,7 +1348,7 @@
 "feed": "https://ostro.si/feed/",
 "lang": "sl",
 "status": "ok",
-"fails": 0
+"fails": 1
 },
 "pagellapolitica.it": {
 "name": "Pagella Politica",

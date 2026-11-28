@@ -1,9 +1,9 @@
 # Disinformation monitor: sources of the last run
 
-Fetched: 2026-11-27T14:37:31Z  |  items in the site data: 8457
+Fetched: 2026-11-28T13:53:50Z  |  items in the site data: 8602
 
 ## Google Fact Check Tools API
-- {'items': 249, 'requests': 1995, 'errors': ["HTTP 503 for 'ЮНЕСКО'"], 'max_age_days': 14}
+- {'items': 268, 'requests': 1980, 'errors': [], 'max_age_days': 14}
 
 ## Fact-checker feeds
 | Feed | Works | Items | Note |
@@ -13,7 +13,7 @@ Fetched: 2026-11-27T14:37:31Z  |  items in the site data: 8457
 | Africa Check | NO |  | failed after 2 tries: https://africacheck.org/feed (HTTP Error 403: Forbidden) |
 | Maldita.es | yes | 50 |  |
 | Newtral | yes | 10 |  |
-| Aos Fatos | yes | 20 |  |
+| Aos Fatos | NO |  | failed after 2 tries: https://www.aosfatos.org/noticias/feed/ (HTTP Error 404: Not Found) |
 | BOOM | yes | 9 |  |
 | Vera Files | NO |  | syntax error: line 1, column 0 |
 | Teyit | yes | 10 |  |
@@ -24,7 +24,7 @@ Fetched: 2026-11-27T14:37:31Z  |  items in the site data: 8457
 | Correctiv | yes | 1 |  |
 | Les Surligneurs / AFP Factuel | NO |  | failed after 2 tries: https://factuel.afp.com/rss.xml (HTTP Error 403: Forbidden) |
 | PesaCheck | NO |  | failed after 2 tries: https://pesacheck.org/feed (HTTP Error 403: Forbidden) |
-| Dubawa | yes | 10 |  |
+| Dubawa | NO |  | failed after 2 tries: https://dubawa.org/feed/ (HTTP Error 415: Unsupported Media Type) |
 | Fatabyyano | yes | 10 |  |
 | Colombiacheck | NO |  | failed after 2 tries: https://colombiacheck.com/feed (HTTP Error 403: Forbidden) |
 | Chequeado | yes | 50 |  |
@@ -33,7 +33,7 @@ Fetched: 2026-11-27T14:37:31Z  |  items in the site data: 8457
 Feeds marked NO: correct or remove the address in `config/factcheck_sources.yaml`.
 
 ## UN feeds (content-gap check)
-Fetched: 2026-11-27T14:43:04Z | UN articles in the last 12 months: 2227
+Fetched: 2026-11-28T13:59:29Z | UN articles in the last 12 months: 2246
 
 | Source | Works | Items | Note |
 |---|---|---|---|

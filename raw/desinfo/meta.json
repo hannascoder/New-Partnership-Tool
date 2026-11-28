@@ -1,18 +1,16 @@
 {
   "source": "desinfo",
-  "fetched_at": "2026-11-27T14:37:31Z",
-  "records": 1414,
+  "fetched_at": "2026-11-28T13:53:50Z",
+  "records": 1360,
   "status": {
     "atlas": {
       "topics": 183,
       "country_searches": true
     },
     "google": {
-      "items": 249,
-      "requests": 1995,
-      "errors": [
-        "HTTP 503 for 'ЮНЕСКО'"
-      ],
+      "items": 268,
+      "requests": 1980,
+      "errors": [],
       "max_age_days": 14
     },
     "feeds": {
@@ -42,8 +40,8 @@
         "url": "https://www.newtral.es/feed/"
       },
       "Aos Fatos": {
-        "ok": true,
-        "items": 20,
+        "ok": false,
+        "error": "failed after 2 tries: https://www.aosfatos.org/noticias/feed/ (HTTP Error 404: Not Found)",
         "url": "https://www.aosfatos.org/noticias/feed/"
       },
       "BOOM": {
@@ -97,8 +95,8 @@
         "url": "https://pesacheck.org/feed"
       },
       "Dubawa": {
-        "ok": true,
-        "items": 10,
+        "ok": false,
+        "error": "failed after 2 tries: https://dubawa.org/feed/ (HTTP Error 415: Unsupported Media Type)",
         "url": "https://dubawa.org/feed/"
       },
       "Fatabyyano": {
@@ -123,8 +121,8 @@
       }
     },
     "discovered_feeds": {
-      "ok": 61,
-      "failed": 1,
+      "ok": 57,
+      "failed": 4,
       "known": 174
     }
   }

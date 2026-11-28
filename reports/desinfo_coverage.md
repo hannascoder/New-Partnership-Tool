@@ -1,6 +1,6 @@
 # Disinformation monitor: country coverage
 
-Countries with at least one fact-check: **81 of 195**. Items without a country: 1020. Topics with items: 174 of 183.
+Countries with at least one fact-check: **81 of 195**. Items without a country: 1019. Topics with items: 174 of 183.
 
 ## Countries WITHOUT data (to be covered: add fact-checker feeds in `config/factcheck_sources.yaml`)
 
@@ -8,34 +8,34 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 
 ## Items per country
 
-- Spain: 1086
-- India: 901
-- United States of America: 744
-- Brazil: 493
-- Ireland: 373
-- France: 321
-- Czechia: 229
-- Philippines: 198
+- Spain: 1109
+- India: 903
+- United States of America: 755
+- Brazil: 497
+- Ireland: 411
+- France: 323
+- Czechia: 249
+- Philippines: 197
 - Bangladesh: 177
-- United Kingdom of Great Britain and Northern Ireland: 167
-- Austria: 145
-- Bolivia (Plurinational State of): 141
-- Australia: 134
+- United Kingdom of Great Britain and Northern Ireland: 172
+- Austria: 151
+- Bolivia (Plurinational State of): 142
+- Australia: 135
 - Israel: 133
 - Ecuador: 130
-- Ukraine: 121
+- Ukraine: 126
 - Colombia: 117
 - Venezuela (Bolivarian Republic of): 113
 - Portugal: 112
-- Syrian Arab Republic: 109
+- Tunisia: 110
+- Syrian Arab Republic: 110
 - Mexico: 107
-- Tunisia: 100
-- Thailand: 96
-- Nigeria: 90
-- Republic of Korea: 88
-- Chile: 82
+- Thailand: 101
+- Nigeria: 91
+- Republic of Korea: 89
+- Chile: 83
 - Sri Lanka: 68
-- Serbia: 62
+- Serbia: 63
 - Greece: 60
 - Japan: 49
 - Democratic Republic of the Congo: 46
@@ -43,12 +43,12 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Poland: 45
 - Malta: 45
 - North Macedonia: 43
-- Türkiye: 34
+- Türkiye: 36
+- Albania: 36
 - Argentina: 34
+- Jordan: 33
 - Indonesia: 33
-- Jordan: 32
-- Albania: 32
-- Guatemala: 31
+- Guatemala: 32
 - Germany: 24
 - Sweden: 23
 - State of Palestine: 23
@@ -56,14 +56,14 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 - Ghana: 18
 - Slovenia: 17
 - Latvia: 17
-- Togo: 15
+- Togo: 16
 - Iran (Islamic Republic of): 15
 - Cyprus: 14
 - Canada: 10
 - Liberia: 10
-- Libya: 8
+- Libya: 9
 - Malaysia: 8
-- China: 7
+- China: 6
 - Saudi Arabia: 5
 - Egypt: 4
 - South Africa: 4
@@ -97,7 +97,7 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 | Africa | 54 | 15 | 34 | 20 |
 | Americas | 35 | 17 | 25 | 10 |
 | Asia | 48 | 26 | 40 | 7 |
-| Europe | 44 | 19 | 32 | 10 |
+| Europe | 44 | 19 | 33 | 9 |
 | Oceania | 14 | 4 | 6 | 8 |
 
 **Africa: countries with no data at all:** Angola, Botswana, Burundi, Cabo Verde, Central African Republic, Chad, Comoros, Djibouti, Equatorial Guinea, Eswatini, Gabon, Guinea-Bissau, Lesotho, Malawi, Mauritius, Namibia, Sao Tome and Principe, Seychelles, United Republic of Tanzania, Zimbabwe
@@ -106,7 +106,7 @@ Afghanistan, Andorra, Angola, Antigua and Barbuda, Armenia, Azerbaijan, Bahamas,
 
 **Asia: countries with no data at all:** Brunei Darussalam, Georgia, Lao People's Democratic Republic, Mongolia, Singapore, Timor-Leste, Turkmenistan
 
-**Europe: countries with no data at all:** Belarus, Bosnia and Herzegovina, Iceland, Liechtenstein, Lithuania, Luxembourg, Monaco, Montenegro, San Marino, Slovakia
+**Europe: countries with no data at all:** Bosnia and Herzegovina, Iceland, Liechtenstein, Lithuania, Luxembourg, Monaco, Montenegro, San Marino, Slovakia
 
 **Oceania: countries with no data at all:** Kiribati, Marshall Islands, Micronesia, Palau, Samoa, Tonga, Tuvalu, Vanuatu
 
